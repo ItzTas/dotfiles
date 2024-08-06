@@ -150,8 +150,3 @@ if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
 		tmux attach-session -t default
 	fi
 fi
-echo -e "wanto sync dotfiles?(y/n)\n"
-read -r -t 5 answer
-if [[ $answer == "y" || $answer == "Y" ]]; then
-	syncyadm
-fi
