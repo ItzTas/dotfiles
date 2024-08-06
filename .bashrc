@@ -152,6 +152,5 @@ if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
 fi
 read -t 5 -p "wanto sync dotfiles?(y/n)" answer
 if [[ $answer == "y" || $answer == "Y" ]]; then
-	echo "Syncing dotfiles..."
-	# Adicione o comando para sincronizar os dotfiles aqui
+	syncyadm
 fi
