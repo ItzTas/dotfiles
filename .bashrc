@@ -151,7 +151,7 @@ if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
 	fi
 fi
 echo -e "wanto sync dotfiles?(y/n)\n"
-read -r -t 5 -p "wanto sync dotfiles?(y/n)\n" answer
+read -r -t 5 answer
 if [[ $answer == "y" || $answer == "Y" ]]; then
 	syncyadm
 fi
