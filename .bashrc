@@ -151,4 +151,4 @@ if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
 fi
 
 chmod +x "$HOME"/.dotfiles/scripts/save_dot_files.sh
-# nohup "$HOME"/.dotfiles/scripts/save_dot_files.sh &
+nohup "$HOME"/.dotfiles/scripts/save_dot_files.sh &
