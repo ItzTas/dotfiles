@@ -150,4 +150,5 @@ if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
 		tmux attach-session -t default
 	fi
 fi
-read -t 5 -p "wanto sync dotfiles?(y/n)"
+read -t 5 -p "wanto sync dotfiles?(y/n)" answer
+if 
