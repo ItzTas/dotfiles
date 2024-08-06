@@ -152,4 +152,4 @@ fi
 
 sudo logrotate /etc/logrotate.d/dotslogs
 chmod +x "$HOME"/.dotfiles/scripts/save_dot_files.sh
-nohup "$HOME"/.dotfiles/scripts/save_dot_files.sh &
+nohup "$HOME"/.dotfiles/scripts/save_dot_files.sh 2 >"$HOME/.dotfiles/logs/save_dot_files.log" 2>&1 &
