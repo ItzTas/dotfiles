@@ -1,5 +1,7 @@
 tap "homebrew/bundle"
 tap "jandedobbeleer/oh-my-posh"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # GNU compiler collection
 brew "gcc"
 # Language Server for the Lua language
