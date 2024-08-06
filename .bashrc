@@ -125,6 +125,7 @@ alias vim='nvim'
 alias cat='bat --paging=never'
 alias renderMarkdown='grip'
 alias syncyadm='yadm bootstrap'
+alias tattach='tmux attach'
 
 export PATH=$PATH:$HOME/go/bin
 
