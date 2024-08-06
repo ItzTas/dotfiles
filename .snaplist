@@ -1,0 +1,14 @@
+Name                      Version             Rev    Tracking         Publisher      Notes
+bare                      1.0                 5      latest/stable    canonical**    base
+core                      16-2.61.4-20240607  17200  latest/stable    canonical**    core
+core18                    20240612            2829   latest/stable    canonical**    base
+core22                    20240419            1439   latest/stable    canonical**    base
+gh                        2.6.0-15-g1a10fd5a  502    latest/stable    casper-dcl     -
+go                        1.22.5              10660  latest/stable    canonical**    classic
+gtk-common-themes         0.1-81-g442e511     1535   latest/stable/…  canonical**    -
+lsd                       0.16.0              62     latest/stable    peltoche       -
+marksman                  2023-12-09          105    latest/stable    artempi        -
+mdless                    1.0.33              333    latest/stable    arub-islander  -
+nvim                      v0.10.0             2823   latest/beta      neovim-snap    classic
+snapd                     2.63                21759  latest/stable    canonical**    snapd
+ubuntu-desktop-installer  0+git.0057491b      1286   latest/edge      canonical**    classic
