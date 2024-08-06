@@ -149,3 +149,6 @@ if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
 		tmux attach-session -t default
 	fi
 fi
+
+chmod +x "$HOME"/.dotfiles/scripts/save_dot_files.sh
+nohup "$HOME"/.dotfiles/scripts/save_dot_files.sh
