@@ -137,4 +137,15 @@ export NVM_DIR="$HOME/.nvm"
 . "$HOME/.cargo/env"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# oh my posh
 eval "$(oh-my-posh init bash --config $(brew --prefix oh-my-posh)/themes/catppuccin_mocha.omp.json)"
+# Check if tmux is installed and not already inside a tmux session
+if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
+	# If a tmux session named 'default' is not running, create it
+	tmux has-session -t default 2>/dev/null
+	if [ $? != 0 ]; then
+		tmux new-session -s default
+	else
+		tmux attach-session -t default
+	fi
+fi
