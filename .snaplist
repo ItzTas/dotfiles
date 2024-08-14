@@ -4,7 +4,7 @@ core                      16-2.61.4-20240607  17200  latest/stable    canonical*
 core18                    20240612            2829   latest/stable    canonical**    base
 core22                    20240419            1439   latest/stable    canonical**    base
 gh                        2.6.0-15-g1a10fd5a  502    latest/stable    casper-dcl     -
-go                        1.22.6              10679  latest/stable    canonical**    classic
+go                        1.23.0              10698  latest/stable    canonical**    classic
 gtk-common-themes         0.1-81-g442e511     1535   latest/stable/…  canonical**    -
 lsd                       0.16.0              62     latest/stable    peltoche       -
 marksman                  2023-12-09          105    latest/stable    artempi        -
