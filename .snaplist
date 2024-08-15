@@ -12,3 +12,4 @@ mdless                    1.0.33              333    latest/stable    arub-islan
 nvim                      v0.10.0             2823   latest/beta      neovim-snap    classic
 snapd                     2.63                21759  latest/stable    canonical**    snapd
 ubuntu-desktop-installer  0+git.0057491b      1286   latest/edge      canonical**    classic
+yamlfmt                   1.0.5               15     latest/stable    devopsjonas    -
