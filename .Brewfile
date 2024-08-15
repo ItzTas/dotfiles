@@ -1,5 +1,7 @@
 tap "homebrew/bundle"
 tap "jandedobbeleer/oh-my-posh"
+# Lightning-fast linter for .env files written in Rust
+brew "dotenv-linter"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU compiler collection
