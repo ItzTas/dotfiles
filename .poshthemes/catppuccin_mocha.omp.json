@@ -19,7 +19,8 @@
           "properties": {
             "fetch_virtual_env": true,
             "fetch_version": false,
-            "display_default": false
+            "display_default": false,
+            "folder_name_fallback": false
           }
         },
         {
