@@ -141,16 +141,19 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # oh my posh
 eval "$(oh-my-posh init bash --config $(brew --prefix oh-my-posh)/themes/catppuccin_mocha.omp.json)"
 
-if command -v tmux &>/dev/null; then
-	if [ -z "$TMUX" ]; then
-		if tmux ls &>/dev/null; then
-			tmux attach
+# Check if tmux is installed and not already inside a tmux session
+if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
+	if [ "$(tmux list-sessions 2>/dev/null | wc -l)" -gt 0 ]; then
+		tmux attach
+	else
+		tmux has-session -t default 2>/dev/null
+		if [ $? != 0 ]; then
+			tmux new-session -s default
 		else
-			tmux -s default
+			tmux attach-session -t default
 		fi
 	fi
 fi
-
 eval "$(fzf --bash)"
 fcd() {
 	local dir
