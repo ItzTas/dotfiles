@@ -1,10 +1,9 @@
-[user]
-	name = ItzTas
-	email = talessabini2@gmail.com
-[core]
-	editor = vim
-[pull]
-	rebase = true
 [credential "https://github.com"]
 	helper = 
-	helper = !/usr/bin/gh auth git-credential
+	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+[user]
+	email = talessabini2@gmail.com
+	name = ItzTas
