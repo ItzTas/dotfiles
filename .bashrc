@@ -151,7 +151,6 @@ if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
 		fi
 	fi
 fi
-eval "$(fzf --bash)"
 
 f() {
 	local dir
