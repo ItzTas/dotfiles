@@ -132,11 +132,9 @@ export PATH=$PATH:$HOME/go/bin
 
 export EDITOR='nvim'
 
-. "$HOME/.cargo/env"
-
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # oh my posh
-eval "$(oh-my-posh init bash --config $(brew --prefix oh-my-posh)/themes/catppuccin_mocha.omp.json)"
+eval "$(oh-my-posh init bash --config $(brew --prefix oh-my-posh)/themes/amro.omp.json)"
 
 # Check if tmux is installed and not already inside a tmux session
 if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
