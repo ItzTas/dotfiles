@@ -2,6 +2,8 @@ tap "homebrew/bundle"
 tap "jandedobbeleer/oh-my-posh"
 # GNU compiler collection
 brew "gcc"
+# GitHub command-line tool
+brew "gh"
 # Yet Another Dotfiles Manager
 brew "yadm"
 # Prompt theme engine for any shell
