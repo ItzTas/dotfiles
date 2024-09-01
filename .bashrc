@@ -173,8 +173,9 @@ ft() {
 	while ! tmux has-session -t "$s" 2>/dev/null; do
 		sleep 0.2
 	done
-	tmux send-keys -t "$s" 'cd && fv' C-m
+	tmux send-keys -t "$s" 'cd && fv && clear' C-m
 	tmux switch-client -t "$s"
+    clear
 }
 # bun
 export BUN_INSTALL="$HOME/.bun"
