@@ -1,7 +1,7 @@
 Name                       Version          Rev    Tracking         Publisher    Notes
 bare                       1.0              5      latest/stable    canonical**  base
 canonical-livepatch        10.8.3           282    latest/stable    canonical**  -
-core22                     20240731         1564   latest/stable    canonical**  base
+core22                     20240809         1586   latest/stable    canonical**  base
 firefox                    129.0.2-1        4793   latest/stable/…  mozilla**    -
 firmware-updater           0+git.5007558    127    1/stable/…       canonical**  -
 gnome-42-2204              0+git.510a601    176    latest/stable/…  canonical**  -
