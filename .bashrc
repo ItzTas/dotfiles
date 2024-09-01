@@ -116,6 +116,7 @@ if ! shopt -oq posix; then
 fi
 
 # my aliases
+alias fs='tmux switch-client -t $(tmux list-sessions -F "#{session_name}" | fzf)'
 alias python='python3'
 alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
 alias ls='lsd'
