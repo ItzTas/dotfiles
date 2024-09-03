@@ -170,6 +170,10 @@ fv() {
 }
 
 fr() {
+    cd "$HOME" && f
+}
+
+frv() {
     cd "$HOME" && fv
 }
 
@@ -189,7 +193,7 @@ ft() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
-export PATH="/home/talinux/.bun/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
@@ -200,3 +204,5 @@ export PATH=$PATH:/usr/local/go/bin
 export IGNOREEOF=999
 
 neofetch
+
+
