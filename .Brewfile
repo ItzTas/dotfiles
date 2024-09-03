@@ -11,3 +11,4 @@ brew "yadm"
 brew "codecrafters-io/tap/codecrafters"
 # Prompt theme engine for any shell
 brew "jandedobbeleer/oh-my-posh/oh-my-posh"
+vscode "vscodevim.vim"
