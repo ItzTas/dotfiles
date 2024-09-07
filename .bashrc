@@ -116,6 +116,7 @@ if ! shopt -oq posix; then
 fi
 
 # my aliases
+alias screenkey='screenkey -p fixed --geometry 440x70+1200+120'
 alias fs='tmux switch-client -t "$(tmux list-sessions -F "#{session_name}" | fzf)"'
 alias python='python3'
 alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
@@ -190,6 +191,32 @@ ft() {
 	tmux switch-client -t "$s"
 	clear
 }
+
+replace_in_files() {
+	if [ "$#" -ne 2 ]; then
+		echo "Usage: replace_in_files <old_name> <new_name>"
+		return 1
+	fi
+
+	old_name=$1
+	new_name=$2
+	project_path=$(pwd)
+
+	if [ -z "$old_name" ]; then
+		echo "Old name cannot be empty."
+		return 1
+	fi
+
+	if [ -z "$new_name" ]; then
+		echo "New name cannot be empty."
+		return 1
+	fi
+
+	find "$project_path" -type f -exec sed -i "s/$old_name/$new_name/g" {} +
+
+	echo "Replacement complete."
+}
+
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
@@ -203,4 +230,3 @@ export PATH=$PATH:/usr/local/go/bin
 
 export IGNOREEOF=999
 
-neofetch
