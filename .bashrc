@@ -116,6 +116,7 @@ if ! shopt -oq posix; then
 fi
 
 # my aliases
+alias bat='batcat'
 alias screenkey='screenkey -p fixed --geometry 440x70+1200+120'
 alias fs='tmux switch-client -t "$(tmux list-sessions -F "#{session_name}" | fzf)"'
 alias python='python3'
@@ -124,7 +125,7 @@ alias ls='lsd'
 alias fd='fdfind'
 alias grep='grep --color=always'
 alias vim='nvim'
-alias cat='bat --paging=never'
+alias cat='batcat --paging=never'
 alias renderMarkdown='grip'
 alias syncyadm='yadm bootstrap'
 alias tattach='tmux attach'
