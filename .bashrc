@@ -137,7 +137,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # oh my posh
 eval "$(oh-my-posh init bash --config $(brew --prefix oh-my-posh)/themes/amro.omp.json)"
 
-manage_tmux_sessions_sessionizerr_notCallable() {
+manage_tmux_session() {
     # Check if tmux is installed and not already inside a tmux session
     if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
         if tmux has-session -t nop 2>/dev/null; then
@@ -158,7 +158,9 @@ manage_tmux_sessions_sessionizerr_notCallable() {
     fi
 }
 
-manage_tmux_sessions_sessionizerr_notCallable
+manage_tmux_session
+
+unset -f manage_tmux_session
 
 fgs() {
 	local b
