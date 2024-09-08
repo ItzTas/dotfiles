@@ -137,19 +137,28 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # oh my posh
 eval "$(oh-my-posh init bash --config $(brew --prefix oh-my-posh)/themes/amro.omp.json)"
 
-# Check if tmux is installed and not already inside a tmux session
-if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
-	if [ "$(tmux list-sessions 2>/dev/null | wc -l)" -gt 0 ]; then
-		tmux attach
-	else
-		tmux has-session -t default 2>/dev/null
-		if [ $? != 0 ]; then
-			tmux new-session -s default
-		else
-			tmux attach-session -t default
-		fi
-	fi
-fi
+manage_tmux_sessions_sessionizerr_notCallable() {
+    # Check if tmux is installed and not already inside a tmux session
+    if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
+        if tmux has-session -t nop 2>/dev/null; then
+            echo "nop session"
+            return 0
+        fi
+
+        if [ "$(tmux list-sessions 2>/dev/null | wc -l)" -gt 0 ]; then
+            tmux attach
+        else
+            tmux has-session -t default 2>/dev/null
+            if [ $? != 0 ]; then
+                tmux new-session -s default
+            else
+                tmux attach-session -t default
+            fi
+        fi
+    fi
+}
+
+manage_tmux_sessions_sessionizerr_notCallable
 
 fgs() {
 	local b
