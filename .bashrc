@@ -231,4 +231,4 @@ export PATH=$GOROOT/bin:$PATH
 export GOPATH=~/go
 export PATH=$GOPATH/bin:$PATH
 
-
+neofetch
