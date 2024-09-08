@@ -1,7 +1,7 @@
 Name                       Version          Rev    Tracking         Publisher    Notes
 bare                       1.0              5      latest/stable    canonical**  base
 canonical-livepatch        10.8.3           282    latest/stable    canonical**  -
-core22                     20240731         1564   latest/stable    canonical**  base
+core22                     20240823         1612   latest/stable    canonical**  base
 firmware-updater           0+git.5007558    127    1/stable/…       canonical**  -
 gnome-42-2204              0+git.510a601    176    latest/stable/…  canonical**  -
 gtk-common-themes          0.1-81-g442e511  1535   latest/stable/…  canonical**  -
@@ -9,4 +9,4 @@ nvim                       v0.10.0          2823   latest/stable    neovim-snap 
 snap-store                 0+git.e3dd562    1173   2/stable/…       canonical**  -
 snapd                      2.63             21759  latest/stable    canonical**  snapd
 snapd-desktop-integration  0.9              178    latest/stable/…  canonical**  -
-thunderbird                128.1.0esr-1     507    latest/stable/…  canonical**  -
+thunderbird                128.2.0esr-1     509    latest/stable/…  canonical**  -

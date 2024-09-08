@@ -131,8 +131,6 @@ alias syncyadm='yadm bootstrap'
 alias tattach='tmux attach'
 alias v='nvim .'
 
-export PATH=$PATH:$HOME/go/bin
-
 export EDITOR='nvim'
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -214,8 +212,6 @@ replace_in_files() {
 	fi
 
 	find "$project_path" -type f -exec sed -i "s/$old_name/$new_name/g" {} +
-
-	echo "Replacement complete."
 }
 
 # bun
@@ -227,7 +223,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-export PATH=$PATH:/usr/local/go/bin
-
 export IGNOREEOF=999
+
+export GOROOT=~/go
+export PATH=$GOROOT/bin:$PATH
+
+export GOPATH=~/go
+export PATH=$GOPATH/bin:$PATH
+
 
