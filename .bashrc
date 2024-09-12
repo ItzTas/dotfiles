@@ -266,3 +266,5 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 eval "$(fzf --bash)"
+
+eval "$(zoxide init bash)"
