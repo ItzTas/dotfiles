@@ -116,8 +116,9 @@ if ! shopt -oq posix; then
 fi
 
 # my aliases
+alias ksee='kitty +kitten icat'
 alias bat='batcat'
-alias screenkey='screenkey -p fixed --geometry 440x70+1200+120'
+alias screenK='screenkey -p fixed --geometry 500x70+1200+120 -f "JetBrains Mono" -s small '
 alias fs='tmux switch-client -t "$(tmux list-sessions -F "#{session_name}" | fzf)"'
 alias python='python3'
 alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
@@ -125,9 +126,8 @@ alias ls='lsd'
 alias fd='fdfind'
 alias grep='grep --color=always'
 alias vim='nvim'
-alias cat='batcat --paging=never'
+alias c='batcat --paging=never'
 alias renderMarkdown='grip'
-alias syncyadm='yadm bootstrap'
 alias tattach='tmux attach'
 alias v='nvim .'
 
@@ -162,7 +162,7 @@ manage_tmux_session
 
 unset -f manage_tmux_session
 
-fgs() {
+fe() {
 	local b
 	b="$(git branch -a | grep -v '\->' | sed 's|remotes/origin/||' | sed 's|^\* ||' | sed 's/^ *//;s/ *$//' | sort -u)"
 	local toB
@@ -236,10 +236,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export IGNOREEOF=999
 
-export GOROOT=~/go
-export PATH=$GOROOT/bin:$PATH
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
-export GOPATH=~/go
-export PATH=$GOPATH/bin:$PATH
-
-neofetch
