@@ -122,7 +122,6 @@ alias screenK='screenkey -p fixed --geometry 500x70+1200+120 -f "JetBrains Mono"
 alias python='python3'
 alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
 alias ls='lsd'
-alias fd='fdfind'
 alias grep='grep --color=always'
 alias vim='nvim'
 alias c='batcat --paging=never'
@@ -247,11 +246,9 @@ replace_in_files() {
 }
 
 # my binds
-bind -x '"\C-a":fs'
-bind -x '"\C-n":ft'
 bind -x '"\C-f":f'
+# bind -x '"\C-a":fs'
 bind -x '"\C-e":fe'
-bind -x '"\C-k":fvv'
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -267,6 +264,20 @@ export IGNOREEOF=999
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+eval "$(zoxide init --cmd cd bash)"
+
 eval "$(fzf --bash)"
 
-eval "$(zoxide init --cmd cd bash)"
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type d --hidden --strip-cwd-prefix --exclude .git"
+
+_fzf_compgen_path(){
+    fd --hidden --exclude .git . "$1"
+}
+
+_fzf_compgen_dir(){
+    fd --type d --hidden --exclude .git . "$1"
+}
+
+source ~/fzf-git.sh/fzf-git.sh
