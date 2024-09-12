@@ -136,10 +136,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # oh my posh
 eval "$(oh-my-posh init bash --config $(brew --prefix oh-my-posh)/themes/amro.omp.json)"
 
-function fs() {
-	local session=$(tmux list-sessions -F "#{session_name}" | fzf)
-	tmux switch-client -t "$session"
-}
 
 manage_tmux_session() {
 	# Check if tmux is installed and not already inside a tmux session
@@ -166,6 +162,12 @@ manage_tmux_session
 
 unset -f manage_tmux_session
 
+function fs() {
+    local session=$(tmux list-sessions -F "#{session_name}" | fzf)
+    tmux switch-client -t "$session"
+}
+
+
 fe() {
 	local b
 	b="$(git branch -a | grep -v '\->' | sed 's|remotes/origin/||' | sed 's|^\* ||' | sed 's/^ *//;s/ *$//' | sort -u)"
@@ -174,14 +176,27 @@ fe() {
 	git switch "$toB"
 }
 
+
 f() {
 	local dir
 	dir=$(find . -type d | fzf) && builtin cd "$dir"
 }
 
+
 fv() {
 	local dir
 	dir=$(find . -type d | fzf) && builtin cd "$dir" && nvim .
+}
+
+fvv() {
+    local file="$(find . -type f | fzf --preview 'batcat --style=numbers --color=always {}')" 
+    file="${file##*( )}"
+    file="${file%%*( )}"
+    if [[ -z "$file" ]]; then
+        return 0
+    fi
+
+    nvim "$file"
 }
 
 fr() {
@@ -228,6 +243,13 @@ replace_in_files() {
 
 	find "$project_path" -type f -exec sed -i "s/$old_name/$new_name/g" {} +
 }
+
+# my binds
+bind -x '"\C-a":fs'
+bind -x '"\C-n":ft'
+bind -x '"\C-f":f'
+bind -x '"\C-e":fe'
+bind -x '"\C-k":fvv'
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
