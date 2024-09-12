@@ -119,7 +119,6 @@ fi
 alias ksee='kitty +kitten icat'
 alias bat='batcat'
 alias screenK='screenkey -p fixed --geometry 500x70+1200+120 -f "JetBrains Mono" -s small '
-alias fs='tmux switch-client -t "$(tmux list-sessions -F "#{session_name}" | fzf)"'
 alias python='python3'
 alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
 alias ls='lsd'
@@ -137,25 +136,30 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # oh my posh
 eval "$(oh-my-posh init bash --config $(brew --prefix oh-my-posh)/themes/amro.omp.json)"
 
-manage_tmux_session() {
-    # Check if tmux is installed and not already inside a tmux session
-    if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
-        if tmux has-session -t nop 2>/dev/null; then
-            echo "nop session"
-            return 0
-        fi
+function fs() {
+	local session=$(tmux list-sessions -F "#{session_name}" | fzf)
+	tmux switch-client -t "$session"
+}
 
-        if [ "$(tmux list-sessions 2>/dev/null | wc -l)" -gt 0 ]; then
-            tmux attach
-        else
-            tmux has-session -t default 2>/dev/null
-            if [ $? != 0 ]; then
-                tmux new-session -s default
-            else
-                tmux attach-session -t default
-            fi
-        fi
-    fi
+manage_tmux_session() {
+	# Check if tmux is installed and not already inside a tmux session
+	if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
+		if tmux has-session -t nop 2>/dev/null; then
+			echo "nop session"
+			return 0
+		fi
+
+		if [ "$(tmux list-sessions 2>/dev/null | wc -l)" -gt 0 ]; then
+			tmux attach
+		else
+			tmux has-session -t default 2>/dev/null
+			if [ $? != 0 ]; then
+				tmux new-session -s default
+			else
+				tmux attach-session -t default
+			fi
+		fi
+	fi
 }
 
 manage_tmux_session
@@ -239,3 +243,4 @@ export IGNOREEOF=999
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+eval "$(fzf --bash)"
