@@ -267,4 +267,4 @@ export PATH=$PATH:$GOPATH/bin
 
 eval "$(fzf --bash)"
 
-eval "$(zoxide init bash)"
+eval "$(zoxide init --cmd cd bash)"
