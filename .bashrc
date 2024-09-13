@@ -277,9 +277,9 @@ new_ss() {
 
 # my binds
 bind -x '"\C-f":new_ss'
-bind -x '"\C-a":f'
+bind -x '"\C-b":f'
 # bind -x '"\C-a":fs'
-bind -x '"\C-e":fe'
+bind -x '"\C-o":fe'
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
