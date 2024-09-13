@@ -9,6 +9,8 @@ brew "fzf"
 brew "lf"
 # Prompt theme engine for any shell
 brew "oh-my-posh"
+# Programmatically correct mistyped console commands
+brew "thefuck"
 # Yet Another Dotfiles Manager
 brew "yadm"
 # CodeCrafters CLI
