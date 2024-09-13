@@ -210,20 +210,6 @@ frv() {
     cd "$HOME" && fv
 }
 
-ft() {
-    local s
-    printf "(new-session) "
-    read -r s
-
-    tmux new-session -d -s "$s"
-    while ! tmux has-session -t "$s" 2>/dev/null; do
-        sleep 0.2
-    done
-    tmux send-keys -t "$s" 'cd && fv && clear' C-m
-    tmux switch-client -t "$s"
-    clear
-}
-
 replace_in_files() {
     if [ "$#" -ne 2 ]; then
         echo "Usage: replace_in_files <old_name> <new_name>"
@@ -247,8 +233,35 @@ replace_in_files() {
     fd "$project_path" --type f -exec sed -i "s/$old_name/$new_name/g" {} +
 }
 
+ft() {
+    local s
+    printf "(new-session) "
+    read -r s
+
+    tmux new-session -d -s "$s"
+    while ! tmux has-session -t "$s" 2>/dev/null; do
+        sleep 0.2
+    done
+    tmux send-keys -t "$s" 'cd && f && clear' C-m
+    tmux switch-client -t "$s"
+    clear
+}
+
+new_ss() {
+    f
+    local dir
+    dir="$(basename "$(pwd)")"
+
+    tmux new-session -d -s "$dir"
+    while ! tmux has-session -t "$dir"; do
+        sleep 0.01
+    done
+    tmux switch-client -t "$dir"
+}
+
 # my binds
-bind -x '"\C-f":f'
+bind -x '"\C-f":new_ss'
+bind -x '"\C-a":f'
 # bind -x '"\C-a":fs'
 bind -x '"\C-e":fe'
 
