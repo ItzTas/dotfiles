@@ -161,12 +161,14 @@ manage_tmux_session
 unset -f manage_tmux_session
 
 function fs() {
+    g
     local session
     session=$(tmux list-sessions -F "#{session_name}" | fzf)
     tmux switch-client -t "$session"
 }
 
 fe() {
+    g
     local b
     b="$(git branch -a | grep -v '\->' | sed 's|remotes/origin/||' | sed 's|^\* ||' | sed 's/^ *//;s/ *$//' | sort -u)"
 
@@ -181,18 +183,21 @@ fe() {
 }
 
 f() {
+    g
     local dir
-    dir=$(fd . --type d | fzf --preview 'lsd --tree --depth=2 -1F {}') && builtin cd "$dir"
+    dir=$(find . -type d | fzf --preview 'lsd --tree --depth=2 -1F {}') && builtin cd "$dir" || return
 }
 
 fv() {
+    g
     f
     nvim .
 }
 
 fvv() {
+    g
     local file
-    file="$(fd . --type f | fzf --preview 'batcat --style=numbers --color=always {}')"
+    file="$(find . -type f | fzf --preview 'batcat --style=numbers --color=always {}')"
     file="${file##*( )}"
     file="${file%%*( )}"
     if [[ -z "$file" ]]; then
@@ -203,10 +208,12 @@ fvv() {
 }
 
 fr() {
+    g
     cd "$HOME" && f
 }
 
 frv() {
+    g
     cd "$HOME" && fv
 }
 
@@ -230,7 +237,7 @@ replace_in_files() {
         return 1
     fi
 
-    fd "$project_path" --type f -exec sed -i "s/$old_name/$new_name/g" {} +
+    find "$project_path" -type f -exec sed -i "s/$old_name/$new_name/g" {} +
 }
 
 ft() {
@@ -248,15 +255,28 @@ ft() {
 }
 
 new_ss() {
-    f
-    local dir
-    dir="$(basename "$(pwd)")"
+    local direc
+    direc=$(find "$HOME" -type d | fzf --preview 'lsd --tree --depth=2 -1F {}')
 
-    tmux new-session -d -s "$dir"
-    while ! tmux has-session -t "$dir"; do
+    direc="${direc##*( )}"
+    direc="${direc%%*( )}"
+    if [[ -z "$direc" ]]; then
+        return 0
+    fi
+
+    builtin cd "$direc" || return
+
+    local d
+    d="$(basename "$(pwd)")"
+    if [[ d == "$USER" ]]; then
+        return 0
+    fi
+
+    tmux new-session -d -s "$d"
+    while ! tmux has-session -t "$d"; do
         sleep 0.01
     done
-    tmux switch-client -t "$dir"
+    tmux switch-client -t "$d"
 }
 
 # my binds
