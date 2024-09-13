@@ -182,7 +182,7 @@ fe() {
 
 f() {
     local dir
-    dir=$(find . -type d | fzf --preview 'lsd --tree --depth=2 -1F {}') && builtin cd "$dir"
+    dir=$(fd . --type d | fzf --preview 'lsd --tree --depth=2 -1F {}') && builtin cd "$dir"
 }
 
 fv() {
@@ -192,7 +192,7 @@ fv() {
 
 fvv() {
     local file
-    file="$(find . -type f | fzf --preview 'batcat --style=numbers --color=always {}')"
+    file="$(fd . --type f | fzf --preview 'batcat --style=numbers --color=always {}')"
     file="${file##*( )}"
     file="${file%%*( )}"
     if [[ -z "$file" ]]; then
@@ -244,7 +244,7 @@ replace_in_files() {
         return 1
     fi
 
-    find "$project_path" -type f -exec sed -i "s/$old_name/$new_name/g" {} +
+    fd "$project_path" --type f -exec sed -i "s/$old_name/$new_name/g" {} +
 }
 
 # my binds
