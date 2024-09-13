@@ -182,7 +182,7 @@ fe() {
 
 f() {
 	local dir
-	dir=$(find . -type d | fzf --preview 'lsd -1F {}') && builtin cd "$dir"
+	dir=$(find . -type d | fzf --preview 'lsd --tree --depth=2 -1F {}') && builtin cd "$dir"
 }
 
 fv() {
@@ -284,14 +284,14 @@ _fzf_compgen_dir() {
 source ~/fzf-git.sh/fzf-git.sh
 
 export FZF_CTRL_T_OPTS="--preview 'batcat -n --color=always --line-range :500 {}'"
-export FZF_ALT_C_OPTS="--preview 'lsd -1F {}'"
+export FZF_ALT_C_OPTS="--preview 'lsd --tree --depth=2 -1F {}'"
 
 _fzf_comprun() {
 	local command=$1
 	shift
 
 	case "$command" in
-	cd) fzf --preview 'lsd -1F {}' ;;
+	cd) fzf --preview 'lsd --tree --depth=2 -1F {}' ;;
 	export | unset) fzf --preview "eval 'echo \$' {}" "$@" ;;
 	ssh) fzf --preview 'dig {}' "$@" ;;
 	*) fzf --preview "--preview 'bat -n --color=aways --line-range :500 {}'" "$@" ;;
