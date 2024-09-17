@@ -117,14 +117,13 @@ fi
 
 # my aliases
 alias ksee='kitty +kitten icat'
-alias bat='batcat'
 alias screenK='screenkey -p fixed --geometry 500x70+1200+120 -f "JetBrains Mono" -s small '
 alias python='python3'
 alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
 alias ls='lsd'
 alias grep='grep --color=always'
 alias vim='nvim'
-alias c='batcat --paging=never'
+alias c='bat--paging=never'
 alias renderMarkdown='grip'
 alias tattach='tmux attach'
 alias v='nvim .'
@@ -193,7 +192,7 @@ fv() {
 fvv() {
 	g
 	local file
-	file="$(find . -type f | fzf --preview 'batcat --style=numbers --color=always {}')"
+	file="$(find . -type f | fzf --preview 'bat--style=numbers --color=always {}')"
 	file="${file##*( )}"
 	file="${file%%*( )}"
 	if [[ -z "$file" ]]; then
@@ -251,6 +250,9 @@ ft() {
 }
 
 new_ss() {
+	local last_dir
+	last_dir="$(pwd)"
+
 	local direc
 	direc=$(find "$HOME" -type d | fzf --preview 'lsd --tree --depth=2 -1F {}')
 
@@ -272,7 +274,11 @@ new_ss() {
 	while ! tmux has-session -t "$d"; do
 		sleep 0.01
 	done
+
+	cd "$last_dir" || return
+
 	tmux switch-client -t "$d"
+
 }
 
 # my binds
@@ -311,7 +317,7 @@ _fzf_compgen_dir() {
 
 source ~/fzf-git.sh/fzf-git.sh
 
-export FZF_CTRL_T_OPTS="--preview 'batcat -n --color=always --line-range :500 {}'"
+export FZF_CTRL_T_OPTS="--preview 'bat-n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'lsd --tree --depth=2 -1F {}'"
 
 _fzf_comprun() {
@@ -327,4 +333,4 @@ _fzf_comprun() {
 }
 
 eval "$(thefuck --alias fk)"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
