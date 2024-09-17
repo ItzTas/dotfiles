@@ -291,8 +291,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export IGNOREEOF=999
 
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin
 
 eval "$(zoxide init --cmd cd bash)"
 
@@ -328,3 +327,4 @@ _fzf_comprun() {
 }
 
 eval "$(thefuck --alias fk)"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
