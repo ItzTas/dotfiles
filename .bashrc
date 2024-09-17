@@ -123,7 +123,7 @@ alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --c
 alias ls='lsd'
 alias grep='grep --color=always'
 alias vim='nvim'
-alias c='bat--paging=never'
+alias c='bat --paging=never'
 alias renderMarkdown='grip'
 alias tattach='tmux attach'
 alias v='nvim .'
@@ -192,7 +192,7 @@ fv() {
 fvv() {
 	g
 	local file
-	file="$(find . -type f | fzf --preview 'bat--style=numbers --color=always {}')"
+	file="$(find . -type f | fzf --preview 'bat --style=numbers --color=always {}')"
 	file="${file##*( )}"
 	file="${file%%*( )}"
 	if [[ -z "$file" ]]; then
@@ -317,7 +317,7 @@ _fzf_compgen_dir() {
 
 source ~/fzf-git.sh/fzf-git.sh
 
-export FZF_CTRL_T_OPTS="--preview 'bat-n --color=always --line-range :500 {}'"
+export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'lsd --tree --depth=2 -1F {}'"
 
 _fzf_comprun() {
