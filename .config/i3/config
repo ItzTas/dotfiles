@@ -13,7 +13,6 @@ exec --no-startup-id clipman
 
 set $mod Mod1
 
-exec --no-startup-id i3-resurrect restore
 exec --no-startup-id picom
 exec_always feh --bg-scale ~/Pictures/.backgrounds/Wokong-top.jpg 
 
@@ -109,7 +108,7 @@ bindsym $mod+Control+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+bindsym $mod+Control+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -235,3 +234,39 @@ client.background        $base
 # bar {
 #         status_command i3status
 # }
+
+set $i3_resurrect i3-resurrect
+
+# Save workspace mode.
+mode "save" {
+  bindsym 1 exec $i3_resurrect save -w 1
+  bindsym 2 exec $i3_resurrect save -w 2
+  bindsym 3 exec $i3_resurrect save -w 3
+  bindsym 4 exec $i3_resurrect save -w 4
+  bindsym 5 exec $i3_resurrect save -w 5
+  bindsym 6 exec $i3_resurrect save -w 6
+  bindsym 7 exec $i3_resurrect save -w 7
+  bindsym 8 exec $i3_resurrect save -w 8
+  bindsym 9 exec $i3_resurrect save -w 9
+  bindsym 0 exec $i3_resurrect save -w 0
+
+  # Back to normal: Enter, Escape, or s
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym s mode "default"
+  bindsym $mod+s mode "default"
+}
+
+bindsym $mod+s mode "save"
+
+exec --no-process-id $i3_resurrect restore -w 1
+exec --no-process-id $i3_resurrect restore -w 2
+exec --no-process-id $i3_resurrect restore -w 3
+exec --no-process-id $i3_resurrect restore -w 4
+exec --no-process-id $i3_resurrect restore -w 5
+exec --no-process-id $i3_resurrect restore -w 6
+exec --no-process-id $i3_resurrect restore -w 7
+exec --no-process-id $i3_resurrect restore -w 8
+exec --no-process-id $i3_resurrect restore -w 9
+exec --no-process-id $i3_resurrect restore -w 0
+
