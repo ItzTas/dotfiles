@@ -32,7 +32,7 @@ shopt -s checkwinsize
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-	debian_chroot=$(cat /etc/debian_chroot)
+    debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
@@ -46,41 +46,41 @@ esac
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-	if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-		# We have color support; assume it's compliant with Ecma-48
-		# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-		# a case would tend to support setf rather than setaf.)
-		color_prompt=yes
-	else
-		color_prompt=
-	fi
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
+    else
+        color_prompt=
+    fi
 fi
 
 if [ "$color_prompt" = yes ]; then
-	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm* | rxvt*)
-	PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-	;;
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
 *) ;;
 esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-	alias ls='ls --color=auto'
-	#alias dir='dir --color=auto'
-	#alias vdir='vdir --color=auto'
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
 
-	alias grep='grep --color=auto'
-	alias fgrep='fgrep --color=auto'
-	alias egrep='egrep --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
 
 # colored GCC warnings and errors
@@ -101,18 +101,18 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
+    . ~/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-	if [ -f /usr/share/bash-completion/bash_completion ]; then
-		. /usr/share/bash-completion/bash_completion
-	elif [ -f /etc/bash_completion ]; then
-		. /etc/bash_completion
-	fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 fi
 
 # my aliases
@@ -135,24 +135,24 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(oh-my-posh init bash --config "$(brew --prefix oh-my-posh)"/themes/amro.omp.json)"
 
 manage_tmux_session() {
-	# Check if tmux is installed and not already inside a tmux session
-	if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
-		if tmux has-session -t nop 2>/dev/null; then
-			echo "nop session"
-			return 0
-		fi
+    # Check if tmux is installed and not already inside a tmux session
+    if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
+        if tmux has-session -t nop 2>/dev/null; then
+            echo "nop session"
+            return 0
+        fi
 
-		if [ "$(tmux list-sessions 2>/dev/null | wc -l)" -gt 0 ]; then
-			tmux attach
-		else
-			tmux has-session -t default 2>/dev/null
-			if [ $? != 0 ]; then
-				tmux new-session -s default
-			else
-				tmux attach-session -t default
-			fi
-		fi
-	fi
+        if [ "$(tmux list-sessions 2>/dev/null | wc -l)" -gt 0 ]; then
+            tmux attach
+        else
+            tmux has-session -t default 2>/dev/null
+            if [ $? != 0 ]; then
+                tmux new-session -s default
+            else
+                tmux attach-session -t default
+            fi
+        fi
+    fi
 }
 
 manage_tmux_session
@@ -160,127 +160,124 @@ manage_tmux_session
 unset -f manage_tmux_session
 
 function fs() {
-	local session
-	session=$(tmux list-sessions -F "#{session_name}" | fzf)
-	tmux switch-client -t "$session"
+    local session
+    session=$(tmux list-sessions -F "#{session_name}" | fzf)
+    tmux switch-client -t "$session"
 }
 
 fe() {
-	local b
-	b="$(git branch -a | grep -v '\->' | sed 's|remotes/origin/||' | sed 's|^\* ||' | sed 's/^ *//;s/ *$//' | sort -u)"
+    local b
+    b="$(git branch -a | grep -v '\->' | sed 's|remotes/origin/||' | sed 's|^\* ||' | sed 's/^ *//;s/ *$//' | sort -u)"
 
-	local toB
-	toB="$(echo "$b" | fzf)"
-	toB="${toB##*( )}"
-	toB="${toB%%*( )}"
-	if [[ -z "$toB" ]]; then
-		return 0
-	fi
-	git switch "$toB"
+    local toB
+    toB="$(echo "$b" | fzf)"
+    toB="${toB##*( )}"
+    toB="${toB%%*( )}"
+    if [[ -z "$toB" ]]; then
+        return 0
+    fi
+    git switch "$toB"
 }
 
 f() {
-	local dir
-	dir=$(find . -type d | fzf --preview 'lsd --tree --depth=2 -1F {}') && builtin cd "$dir" || return
+    local dir
+    dir=$(find . -type d | fzf --preview 'lsd --tree --depth=2 -1F {}') && builtin cd "$dir" || return
 }
 
 fv() {
-	f
-	nvim .
+    f
+    nvim .
 }
 
 fvv() {
-	g
-	local file
-	file="$(find . -type f | fzf --preview 'bat --style=numbers --color=always {}')"
-	file="${file##*( )}"
-	file="${file%%*( )}"
-	if [[ -z "$file" ]]; then
-		return 0
-	fi
+    local file
+    file="$(find . -type f | fzf --preview 'bat --style=numbers --color=always {}')"
+    file="${file##*( )}"
+    file="${file%%*( )}"
+    if [[ -z "$file" ]]; then
+        return 0
+    fi
 
-	nvim "$file"
+    nvim "$file"
 }
 
 fr() {
-	g
-	cd "$HOME" && f
+    cd "$HOME" && f
 }
 
 frv() {
-	g
-	cd "$HOME" && fv
+    cd "$HOME" && fv
 }
 
 replace_in_files() {
-	if [ "$#" -ne 2 ]; then
-		echo "Usage: replace_in_files <old_name> <new_name>"
-		return 1
-	fi
+    if [ "$#" -ne 2 ]; then
+        echo "Usage: replace_in_files <old_name> <new_name>"
+        return 1
+    fi
 
-	old_name=$1
-	new_name=$2
-	project_path=$(pwd)
+    old_name=$1
+    new_name=$2
+    project_path=$(pwd)
 
-	if [ -z "$old_name" ]; then
-		echo "Old name cannot be empty."
-		return 1
-	fi
+    if [ -z "$old_name" ]; then
+        echo "Old name cannot be empty."
+        return 1
+    fi
 
-	if [ -z "$new_name" ]; then
-		echo "New name cannot be empty."
-		return 1
-	fi
+    if [ -z "$new_name" ]; then
+        echo "New name cannot be empty."
+        return 1
+    fi
 
-	find "$project_path" -type f -exec sed -i "s/$old_name/$new_name/g" {} +
+    find "$project_path" -type f -exec sed -i "s/$old_name/$new_name/g" {} +
 }
 
 ft() {
-	local s
-	printf "(new-session) "
-	read -r s
+    local s
+    printf "(new-session) "
+    read -r s
 
-	tmux new-session -d -s "$s"
-	while ! tmux has-session -t "$s" 2>/dev/null; do
-		sleep 0.2
-	done
-	tmux send-keys -t "$s" 'cd && f && clear' C-m
-	tmux switch-client -t "$s"
-	clear
+    tmux new-session -d -s "$s"
+    while ! tmux has-session -t "$s" 2>/dev/null; do
+        sleep 0.2
+    done
+    tmux send-keys -t "$s" 'cd && f && clear' C-m
+    tmux switch-client -t "$s"
+    clear
 }
 
 new_ss() {
-	local last_dir
-	last_dir="$(pwd)"
+    local last_dir
+    last_dir="$(pwd)"
 
-	local direc
-	direc=$(find "$HOME" -type d | fzf --preview 'lsd --tree --depth=2 -1F {}')
+    local direc
+    direc=$(find "$HOME" -type d | fzf --preview 'lsd --tree --depth=2 -1F {}')
 
-	direc="${direc##*( )}"
-	direc="${direc%%*( )}"
-	if [[ -z "$direc" ]]; then
-		return 0
-	fi
+    direc="${direc##*( )}"
+    direc="${direc%%*( )}"
+    if [[ -z "$direc" ]]; then
+        return 0
+    fi
 
-	builtin cd "$direc" || return
+    builtin cd "$direc" || return
 
-	local d
-	d="$(basename "$(pwd)")"
+    local d
+    d="$(basename "$(pwd)")"
 
-	d="${d//./_}"
+    d="${d//./_}"
 
-	if [[ d == "$USER" ]]; then
-		return 0
-	fi
+    if [[ d == "$USER" ]]; then
+        return 0
+    fi
 
-	tmux new-session -d -s "$d"
-	while ! tmux has-session -t "$d"; do
-		sleep 0.01
-	done
+    tmux new-session -d -s "$d"
+    while ! tmux has-session -t "$d"; do
+        sleep 0.01
+    done
 
-	cd "$last_dir" || return
+    cd "$last_dir" || return
 
-	tmux switch-client -t "$d"
+    tmux switch-client -t "$d"
 
 }
 
@@ -311,11 +308,11 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type d --hidden --strip-cwd-prefix --exclude .git"
 
 _fzf_compgen_path() {
-	fd --hidden --exclude .git . "$1"
+    fd --hidden --exclude .git . "$1"
 }
 
 _fzf_compgen_dir() {
-	fd --type d --hidden --exclude .git . "$1"
+    fd --type d --hidden --exclude .git . "$1"
 }
 
 source ~/fzf-git.sh/fzf-git.sh
@@ -324,15 +321,15 @@ export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'lsd --tree --depth=2 -1F {}'"
 
 _fzf_comprun() {
-	local command=$1
-	shift
+    local command=$1
+    shift
 
-	case "$command" in
-	cd) fzf --preview 'lsd --tree --depth=2 -1F {}' ;;
-	export | unset) fzf --preview "eval 'echo \$' {}" "$@" ;;
-	ssh) fzf --preview 'dig {}' "$@" ;;
-	*) fzf --preview "--preview 'bat -n --color=aways --line-range :500 {}'" "$@" ;;
-	esac
+    case "$command" in
+    cd) fzf --preview 'lsd --tree --depth=2 -1F {}' ;;
+    export | unset) fzf --preview "eval 'echo \$' {}" "$@" ;;
+    ssh) fzf --preview 'dig {}' "$@" ;;
+    *) fzf --preview "--preview 'bat -n --color=aways --line-range :500 {}'" "$@" ;;
+    esac
 }
 
 eval "$(thefuck --alias fk)"
