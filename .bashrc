@@ -266,6 +266,9 @@ new_ss() {
 
 	local d
 	d="$(basename "$(pwd)")"
+
+	d="${d//./_}"
+
 	if [[ d == "$USER" ]]; then
 		return 0
 	fi
