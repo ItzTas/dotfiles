@@ -115,6 +115,9 @@ if ! shopt -oq posix; then
     fi
 fi
 
+MY_PROJECT_PATH="$(pwd)"
+export MY_PROJECT_PATH
+
 # my aliases
 alias ksee='kitty +kitten icat'
 alias screenK='screenkey -p fixed --geometry 500x70+1200+120 -f "JetBrains Mono" -s small '
@@ -159,10 +162,14 @@ manage_tmux_session
 
 unset -f manage_tmux_session
 
-function fs() {
+fs() {
     local session
     session=$(tmux list-sessions -F "#{session_name}" | fzf)
     tmux switch-client -t "$session"
+}
+
+p() {
+    cd "$MY_PROJECT_PATH" || return
 }
 
 fe() {
@@ -181,7 +188,7 @@ fe() {
 
 f() {
     local dir
-    dir=$(find . -type d | fzf --preview 'lsd --tree --depth=2 -1F {}') && builtin cd "$dir" || return
+    dir=$(find . -type d | fzf --preview 'lsd --tree --depth=2 -1F {}') && cd "$dir" || return
 }
 
 fv() {
@@ -281,7 +288,13 @@ new_ss() {
 
 }
 
+pf() {
+    p
+    f
+}
+
 # my binds
+bind -x '"\eb":"pf"'
 bind -x '"\C-f":new_ss'
 bind -x '"\C-b":f'
 # bind -x '"\C-a":fs'
@@ -334,3 +347,5 @@ _fzf_comprun() {
 
 eval "$(thefuck --alias fk)"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+export PATH=$PATH:/var/lib/snapd/snap/bin
