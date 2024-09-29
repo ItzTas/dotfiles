@@ -14,11 +14,13 @@ exec --no-startup-id clipman
 set $mod Mod1
 
 exec --no-startup-id picom
-exec_always feh --bg-scale ~/Pictures/.backgrounds/Wokong-top.jpg 
+exec_always feh --bg-scale ~/Pictures/.backgrounds/waifu-pink-look.png
 
 exec --no-startup-id ~/.config/i3-resurrect/restore_sessions.sh
 
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
+
+bindsym $mod+Shift+p exec --no-startup-id "killall -q polybar" 
 
 exec --no-startup-id xset s off          # Desativa o protetor de tela
 exec --no-startup-id xset -dpms          # Desativa o DPMS (Energy Star) monitor
