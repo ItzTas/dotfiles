@@ -15,13 +15,17 @@ set $mod Mod1
 
 exec --no-startup-id picom
 
-exec_always feh --bg-scale ~/Pictures/.backgrounds/nier-automata-waifu.png
+exec_always feh --bg-scale ~/Pictures/.backgrounds/red-kill.png
 
 exec --no-startup-id ~/.config/i3-resurrect/restore_sessions.sh
 
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 
 bindsym $mod+Shift+p exec --no-startup-id "killall -q polybar" 
+
+bindsym Print exec flameshot gui
+
+bindsym Shift+Print exec killall flameshot
 
 exec --no-startup-id xset s off          # Desativa o protetor de tela
 exec --no-startup-id xset -dpms          # Desativa o DPMS (Energy Star) monitor
