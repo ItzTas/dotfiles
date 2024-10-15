@@ -23,9 +23,8 @@ exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 
 bindsym $mod+Shift+p exec --no-startup-id "killall -q polybar" 
 
-bindsym Print exec flameshot gui
-
-bindsym Shift+Print exec killall flameshot
+bindsym Print exec scrot ~/Pictures/screenshots/$(date +%Y-%m-%d-%T)-screenshot.png
+bindsym Shift+Print exec maim -s ~/Pictures/screenshots/$(date +%Y-%m-%d-%T)-screenshot.png
 
 exec --no-startup-id xset s off          # Desativa o protetor de tela
 exec --no-startup-id xset -dpms          # Desativa o DPMS (Energy Star) monitor
