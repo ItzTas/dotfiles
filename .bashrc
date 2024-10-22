@@ -130,6 +130,7 @@ alias c='bat --paging=never'
 alias renderMarkdown='grip'
 alias tattach='tmux attach'
 alias v='nvim .'
+alias tds='tmux new-session -s default'
 
 export EDITOR='nvim'
 
@@ -137,30 +138,26 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # oh my posh
 eval "$(oh-my-posh init bash --config "$(brew --prefix oh-my-posh)"/themes/amro.omp.json)"
 
-manage_tmux_session() {
-	# Check if tmux is installed and not already inside a tmux session
-	if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
-		if tmux has-session -t nop 2>/dev/null; then
-			echo "nop session"
-			return 0
-		fi
-
-		if [ "$(tmux list-sessions 2>/dev/null | wc -l)" -gt 0 ]; then
-			tmux attach
-		else
-			tmux has-session -t default 2>/dev/null
-			if [ $? != 0 ]; then
-				tmux new-session -s default
-			else
-				tmux attach-session -t default
-			fi
-		fi
-	fi
-}
-
-manage_tmux_session
-
-unset -f manage_tmux_session
+# manage_tmux_session() {
+#     # Check if tmux is installed and not already inside a tmux session
+#     if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
+#         if tmux has-session -t nop 2>/dev/null; then
+#             echo "nop session"
+#             return 0
+#         fi
+#
+#         if [ "$(tmux list-sessions 2>/dev/null | wc -l)" -gt 0 ]; then
+#             tmux attach
+#         else
+#             tmux has-session -t default 2>/dev/null
+#             if [ $? != 0 ]; then
+#                 tmux new-session -s default
+#             else
+#                 tmux attach-session -t default
+#             fi
+#         fi
+#     fi
+# }
 
 fs() {
 	local session
