@@ -347,3 +347,5 @@ eval "$(thefuck --alias fk)"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 export PATH=$PATH:/var/lib/snapd/snap/bin
+export PATH="$PATH:/home/talinux/.dotnet/tools"
+export PATH=$PATH:~/Unity/Hub/Editor/6000.0.23f1/Editor
