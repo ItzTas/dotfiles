@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Gather Desktop
+Exec=/home/talinux/GatherDesktop-linux-x64/GatherDesktop
+Icon=/home/talinux/GatherDesktop-linux-x64/resources/app/icon.png
+Type=Application
+Categories=Network;
+
