@@ -1,11 +1,22 @@
 # Prettyfi 
 set colored-stats On
 set colored-completion-prefix On
+set mark-directories On
 
 # Completion settings
 set show-all-if-ambiguous on
 set completion-ignore-case on
 set completion-query-items 1000
+set visible-stats On
+set print-completions-horizontally On
+set mark-modified-lines On
+set match-hidden-files On
+set mark-symlinked-directories On
+set history-size 1000
+set history-preserve-point On
+
+# no bell
+set bell-style none
 
 # ^C no longer shows on C-c keypress
 set echo-control-characters off
