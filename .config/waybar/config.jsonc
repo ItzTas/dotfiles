@@ -12,6 +12,7 @@
     ],
     "modules-right": [
         "tray",
+        "cpu",
         "memory",
         "network",
         "wireplumber",
@@ -55,6 +56,10 @@
         "interval": 5,
         "format": "󰍛 {}%",
         "max-length": 10
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true
     },
     "tray": {
         "spacing": 10
