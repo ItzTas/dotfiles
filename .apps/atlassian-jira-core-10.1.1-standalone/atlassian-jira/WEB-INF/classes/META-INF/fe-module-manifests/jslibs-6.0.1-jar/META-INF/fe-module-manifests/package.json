@@ -1,0 +1,264 @@
+{
+  "name": "atlassian-jslibs",
+  "description": "Collection of 3rd party JavaScript libraries used by other plugins",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/atlassian/atlassian-jslibs.git"
+  },
+  "author": "Atlassian Pty Ltd.",
+  "license": "BSD-3-Clause",
+  "homepage": "https://bitbucket.org/atlassian/atlassian-jslibs#readme",
+  "scripts": {
+    "build": "npm run",
+    "postinstall": "patch-package --error-on-fail --error-on-warn && copy-files-from-to"
+  },
+  "dependencies": {
+    "backbone-1.0.0": "npm:backbone@1.0.0",
+    "backbone-1.3.3": "npm:backbone@1.3.3",
+    "backbone-1.4.1": "npm:backbone@1.4.1",
+    "backbone-1.6.0": "npm:backbone@1.6.0",
+    "backbone.brace-1.1.0": "https://bitbucket.org/atlassian/backbone-brace/src/1.1.0/",
+    "backbone.cocktail": "file:src/main/frontend/cocktail/0.3.0",
+    "backbone.marionette-1.4.1": "file:src/main/frontend/marionette/1.4.1",
+    "backbone.marionette-1.6.4": "npm:backbone.marionette@1.6.4",
+    "backbone.marionette-2.1.0": "npm:backbone.marionette@2.1.0",
+    "backbone.marionette-3.1.0": "npm:backbone.marionette@3.1.0",
+    "backbone.marionette-4.1.2": "npm:backbone.marionette@4.1.2",
+    "backbone.paginator-2.0.2": "npm:backbone.paginator@2.0.2",
+    "backbone.radio": "2.0.0",
+    "bluebird": "2.3.6",
+    "chance": "0.5.4",
+    "d3-3.5.5": "npm:d3@3.5.5",
+    "dompurify": "3.0.11",
+    "echarts": "4.6.0",
+    "eve": "0.2.4",
+    "flot": "file:src/main/frontend/jquery.flot/0.7",
+    "jquery-aop": "file:src/main/frontend/jquery-aop/1.3",
+    "jquery.dragtable": "file:src/main/frontend/jquery.dragtable/2.0.4",
+    "jquery-pjax": "file:src/main/frontend/jquery.pjax/2011.07.10",
+    "javascript-detect-element-resize": "file:src/main/frontend/javascript-detect-element-resize/0.5.1",
+    "jquery.scrollintoview": "file:src/main/frontend/jquery.scrollintoview/1.8",
+    "jquery-misc": "file:src/main/frontend/jquery.serializeobject/0.2",
+    "jquery.text-overflow": "file:src/main/frontend/jquery.text-overflow/0.7.4",
+    "jquery-ui": "file:src/main/frontend/jquery.effects/1.8rc3",
+    "keymaster": "1.6.2",
+    "lazyload": "file:src/main/frontend/jquery.lazyload/1.8.0",
+    "marionette.approuter": "1.0.1",
+    "moment-2.29.4": "npm:moment@2.29.4",
+    "raphael": "2.1.0",
+    "react-16.8.6": "npm:react@16.8.6",
+    "react-18.3": "npm:react@18.3.1",
+    "react-dom-16.8.6": "npm:react-dom@16.8.6",
+    "react-dom-18.3": "npm:react-dom@18.3.1",
+    "shifty": "file:src/main/frontend/shifty/0.6.1",
+    "skatejs-0.12.5": "npm:skatejs@0.12.5",
+    "skatejs-0.12.6": "npm:skatejs@0.12.6",
+    "skatejs-0.12.7": "npm:skatejs@0.12.7",
+    "skatejs-0.13.17": "npm:skatejs@0.13.17",
+    "skatejs-0.14.0": "npm:skatejs@0.14.0",
+    "underscore-1.13": "npm:underscore@1.13.6",
+    "underscore-1.4.4": "npm:underscore@1.4.4",
+    "underscore-1.5.2": "npm:underscore@1.5.2",
+    "underscore-1.8.3": "npm:underscore@1.8.3",
+    "urijs": "file:src/main/frontend/uri/1.14.1"
+  },
+  "devDependencies": {
+    "copy-files-from-to": "3.11.0",
+    "patch-package": "8.0.0"
+  },
+  "copyFilesSettings": {
+    "minifyJs": false,
+    "whenFileExists": "overwrite"
+  },
+  "copyFiles": [
+    {
+      "from": "node_modules/backbone-1.0.0/backbone.js",
+      "to": "src/main/resources/factories/backbone/1.0.0/backbone-1.0.0-factory.js"
+    },
+    {
+      "from": "node_modules/backbone-1.3.3/backbone.js",
+      "to": "src/main/resources/factories/backbone/1.3.3/backbone-1.3.3-factory.js"
+    },
+    {
+      "from": "node_modules/backbone-1.4.1/backbone.js",
+      "to": "src/main/resources/factories/backbone/1.4/backbone-1.4.1-factory.js"
+    },
+    {
+      "from": "node_modules/backbone.paginator-2.0.2/lib/backbone.paginator.js",
+      "to": "src/main/resources/factories/backbone.paginator/2.0.2/backbone.paginator-2.0.2-factory.js"
+    },
+    {
+      "from": "node_modules/backbone.radio/build/backbone.radio.js",
+      "to": "src/main/resources/factories/backbone.radio/2.0.0/backbone.radio-2.0.0-factory.js"
+    },
+    {
+      "from": "node_modules/backbone.brace-1.1.0/dist/backbone.brace.js",
+      "to": "src/main/resources/factories/brace/1.1.0/brace-1.1.0-factory.js"
+    },
+    {
+      "from": "node_modules/backbone.marionette-1.4.1/src/*",
+      "to": "src/main/resources/factories/marionette/1.4.1"
+    },
+    {
+      "from": "node_modules/backbone.marionette-1.6.4/lib/backbone.marionette.js",
+      "to": "src/main/resources/factories/marionette/1.6.4/marionette-1.6.4-factory.js"
+    },
+    {
+      "from": "node_modules/backbone.marionette-2.1.0/lib/backbone.marionette.js",
+      "to": "src/main/resources/factories/marionette/2.1.0/marionette-2.1.0-factory.js"
+    },
+    {
+      "from": "node_modules/backbone.marionette-3.1.0/lib/backbone.marionette.js",
+      "to": "src/main/resources/factories/marionette/3.1.0/marionette-3.1.0-factory.js"
+    },
+    {
+      "from": "node_modules/backbone.marionette-4.1.2/lib/backbone.marionette.js",
+      "to": "src/main/resources/factories/marionette/4.1.2/marionette-4.1.2-factory.js"
+    },
+    {
+      "from": "node_modules/marionette.approuter/lib/marionette.approuter.js",
+      "to": "src/main/resources/factories/marionette.approuter.1.0/marionette.approuter-1.0.1-factory.js"
+    },
+    {
+      "from": "node_modules/raphael/raphael.js",
+      "to": "src/main/resources/factories/raphael/2.1.0/raphael-2.1.0-factory.js"
+    },
+    {
+      "from": "node_modules/react-dom-16.8.6/umd/react-dom.production.min.js",
+      "to": "src/main/resources/factories/react-dom/16.8.6/react-dom-16.8.6-factory.js"
+    },
+    {
+      "from": "node_modules/react-dom-18.3/umd/react-dom.production.min.js",
+      "to": "src/main/resources/factories/react-dom/18.3/react-dom-18.3-factory.js"
+    },
+    {
+      "from": "node_modules/jquery-aop/src/aop.js",
+      "to": "src/main/resources/jquery-plugins/jquery.aop/1.3/aop.js"
+    },
+    {
+      "from": "node_modules/jquery.dragtable/src/*",
+      "to": "src/main/resources/jquery-plugins/jquery.dragtable/2.0.4"
+    },
+    {
+      "from": "node_modules/jquery-ui/src/*",
+      "to": "src/main/resources/jquery-plugins/jquery.effects/1.8rc3"
+    },
+    {
+      "from": "node_modules/flot/src/*",
+      "to": "src/main/resources/jquery-plugins/jquery.flot/0.7"
+    },
+    {
+      "from": "node_modules/lazyload/src/*",
+      "to": "src/main/resources/jquery-plugins/jquery.lazyload/1.8.0"
+    },
+    {
+      "from": "node_modules/jquery-pjax/src/*",
+      "to": "src/main/resources/jquery-plugins/jquery.pjax/2011.07.10"
+    },
+    {
+      "from": "node_modules/javascript-detect-element-resize/src/*",
+      "to": "src/main/resources/jquery-plugins/jquery.resize/0.5.1"
+    },
+    {
+      "from": "node_modules/jquery.scrollintoview/src/*",
+      "to": "src/main/resources/jquery-plugins/jquery.scrollintoview/1.8"
+    },
+    {
+      "from": "node_modules/jquery-misc/src/*",
+      "to": "src/main/resources/jquery-plugins/jquery.serializeobject/0.2"
+    },
+    {
+      "from": "node_modules/jquery.text-overflow/src/*",
+      "to": "src/main/resources/jquery-plugins/jquery.textoverflow/0.7.4"
+    },
+    {
+      "from": "node_modules/bluebird/js/browser/bluebird.js",
+      "to": "src/main/resources/libs/bluebird/2.3.6/bluebird-2.3.6.js"
+    },
+    {
+      "from": "node_modules/chance/chance.js",
+      "to": "src/main/resources/libs/chance/0.5.4/chance-0.5.4.js"
+    },
+    {
+      "from": "node_modules/backbone.cocktail/src/*",
+      "to": "src/main/resources/libs/cocktail/0.3.0"
+    },
+    {
+      "from": "node_modules/d3-3.5.5/d3.js",
+      "to": "src/main/resources/libs/d3/3.5.5/d3-3.5.5.js"
+    },
+    {
+      "from": "node_modules/dompurify/dist/purify.js",
+      "to": "src/main/resources/libs/dompurify/3.0.11/dompurify-3.0.11.js"
+    },
+    {
+      "from": "node_modules/echarts/dist/echarts.min.js",
+      "to": "src/main/resources/libs/echarts/4.6.0/echarts-4.6.0.js"
+    },
+    {
+      "from": "node_modules/eve/eve.js",
+      "to": "src/main/resources/libs/eve/0.2.4/eve-0.2.4.js"
+    },
+    {
+      "from": "node_modules/keymaster/keymaster.js",
+      "to": "src/main/resources/libs/keymaster/1.6.2/keymaster-1.6.2.js"
+    },
+    {
+      "from": "node_modules/moment-2.29.4/dist/moment.js",
+      "to": "src/main/resources/libs/moment/2.29.4/moment-2.29.4.js"
+    },
+    {
+      "from": "node_modules/react-16.8.6/umd/react.production.min.js",
+      "to": "src/main/resources/libs/react/16.8.6/react-16.8.6.js"
+    },
+    {
+      "from": "node_modules/react-18.3/umd/react.production.min.js",
+      "to": "src/main/resources/libs/react/18.3/react-18.3.js"
+    },
+    {
+      "from": "node_modules/shifty/src/*",
+      "to": "src/main/resources/libs/shifty/0.6.1"
+    },
+    {
+      "from": "node_modules/skatejs-0.12.5/dist/skate.js",
+      "to": "src/main/resources/libs/skate/0.12.5/skate-0.12.5.js"
+    },
+    {
+      "from": "node_modules/skatejs-0.12.6/dist/skate.js",
+      "to": "src/main/resources/libs/skate/0.12.6/skate-0.12.6.js"
+    },
+    {
+      "from": "node_modules/skatejs-0.12.7/dist/skate.js",
+      "to": "src/main/resources/libs/skate/0.12.7/skate-0.12.7.js"
+    },
+    {
+      "from": "node_modules/skatejs-0.13.17/dist/skate.js",
+      "to": "src/main/resources/libs/skate/0.13.17/skate-0.13.17.js"
+    },
+    {
+      "from": "node_modules/skatejs-0.14.0/dist/index.js",
+      "to": "src/main/resources/libs/skate/0.14.0/skate-0.14.0.js"
+    },
+    {
+      "from": "node_modules/underscore-1.4.4/underscore.js",
+      "to": "src/main/resources/libs/underscore/1.4.4/underscore-1.4.4.js"
+    },
+    {
+      "from": "node_modules/underscore-1.5.2/underscore.js",
+      "to": "src/main/resources/libs/underscore/1.5.2/underscore-1.5.2.js"
+    },
+    {
+      "from": "node_modules/underscore-1.8.3/underscore.js",
+      "to": "src/main/resources/libs/underscore/1.8.3/underscore-1.8.3.js"
+    },
+    {
+      "from": "node_modules/underscore-1.13/underscore.js",
+      "to": "src/main/resources/libs/underscore/1.13/underscore-1.13.6.js"
+    },
+    {
+      "from": "node_modules/urijs/src/*",
+      "to": "src/main/resources/libs/uri/1.14.1"
+    }
+  ]
+}

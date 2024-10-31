@@ -1,0 +1,27 @@
+{
+  "name": "pulp-page",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "@atlassian/post-upgrade-landing-page": "1.1.1",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "atlassian-webresource-webpack-plugin": "^4.1.0",
+    "babel-loader": "^8.0.5",
+    "babel-preset-react-app": "^7.0.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-sources": "^1.1.0",
+    "js-yaml": "^3.14.1"
+  },
+  "resolutions": {
+    "lodash": "^4.17.21",
+    "chokidar": "^3.5.3",
+    "semver": "^7.5.2"
+  }
+}

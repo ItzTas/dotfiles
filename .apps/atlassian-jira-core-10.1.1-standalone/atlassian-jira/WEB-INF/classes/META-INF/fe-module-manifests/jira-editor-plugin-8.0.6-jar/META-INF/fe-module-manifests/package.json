@@ -1,0 +1,25 @@
+{
+  "name": "@atlassian/dc.jira.jira-editor-plugin",
+  "//": "These versions are also defined in the root pom.xml and other package.json files. Keep them in sync!",
+  "engines": {
+    "node": ">= 16",
+    "yarn": "~1"
+  },
+  "author": "Atlassian",
+  "private": true,
+  "dependencies": {
+    "tinymce": "^5.10.9"
+  },
+  "devDependencies": {
+    "@atlassian/eslint-config-jira-fecq": "^4.1.0",
+    "eslint": "^7.27.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@stash.atlassian.com:7997/jira/jira-editor-plugin.git",
+    "directory": "plugin"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ."
+  }
+}

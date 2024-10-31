@@ -1,0 +1,10 @@
+{
+    "name": "@atlassian/dc.jira.jira-invite-user-plugin",
+    "private": true,
+    "version": "3.0.7",
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@stash.atlassian.com:7997/jiraserver/jira-invite-user-plugin.git",
+        "directory": "jira-invite-user-plugin"
+    }
+}

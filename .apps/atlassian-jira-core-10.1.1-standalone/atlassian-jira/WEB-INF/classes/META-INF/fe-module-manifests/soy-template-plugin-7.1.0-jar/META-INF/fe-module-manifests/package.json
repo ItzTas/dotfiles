@@ -1,0 +1,27 @@
+{
+  "name": "@atlassian/dc.atlassian-soy-templates.soy-template-plugin",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.org/atlassian/atlassian-soy-templates.git",
+    "directory": "plugin"
+  },
+  "scripts": {
+    "build": "copy-files-from-to"
+  },
+  "copyFiles": [
+    {
+      "from": "node_modules/@atlassian/dc.shared.closure-templates/soyutils.js",
+      "to": "target/classes/js/soyutils.js"
+    }
+  ],
+  "copyFilesSettings": {
+    "minifyJs": true
+  },
+  "devDependencies": {
+    "copy-files-from-to": "^3.9.1"
+  },
+  "dependencies": {
+    "@atlassian/dc.shared.closure-templates": "file:src/main/frontend/closure-templates"
+  }
+}

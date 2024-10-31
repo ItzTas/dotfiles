@@ -1,0 +1,30 @@
+{
+    "name": "@atlassian/dc.jira.jira-onboarding-assets-plugin",
+    "author": "Atlassian",
+    "private": true,
+    "version": "10.0.1",
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@stash.atlassian.com:7997/jiraserver/jira.git",
+        "directory": "jira-components/jira-plugins/jira-onboarding-assets-plugin"
+    },
+    "dependencies": {
+        "bluebird": "file:./src/main/frontend/lib/bluebird/2.3.6"
+    },
+    "devDependencies": {
+        "copy-files-from-to": "3.9.0"
+    },
+    "scripts": {
+        "build": "copy-files-from-to"
+    },
+    "copyFiles": [
+        {
+            "from": "node_modules/bluebird/src/bluebird.js",
+            "to": "src/main/resources/lib/bluebird.js"
+        }
+    ],
+    "copyFilesSettings": {
+        "minifyJs": false,
+        "whenFileExists": "overwrite"
+    }
+}

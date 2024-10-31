@@ -1,0 +1,7 @@
+# yarn lockfile v1
+
+"c3@file:./frontend/c3":
+  version "0.0.0"
+
+"jquery.resize@file:./frontend/javascript-detect-element-resize":
+  version "0.5.3"

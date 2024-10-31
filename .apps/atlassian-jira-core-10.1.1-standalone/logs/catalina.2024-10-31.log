@@ -1,0 +1,846 @@
+31-Oct-2024 12:45:31.493 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.95
+31-Oct-2024 12:45:31.495 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 13 2024 18:07:47 UTC
+31-Oct-2024 12:45:31.495 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.95.0
+31-Oct-2024 12:45:31.495 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+31-Oct-2024 12:45:31.495 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.10.13-3-MANJARO
+31-Oct-2024 12:45:31.495 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+31-Oct-2024 12:45:31.495 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+31-Oct-2024 12:45:31.495 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.12+7
+31-Oct-2024 12:45:31.495 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+31-Oct-2024 12:45:31.495 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:45:31.495 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:45:31.500 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 12:45:31.500 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 12:45:31.500 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 12:45:31.500 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 12:45:31.500 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+31-Oct-2024 12:45:31.500 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/conf/logging.properties
+31-Oct-2024 12:45:31.500 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Oct-2024 12:45:31.500 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 12:45:31.500 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+31-Oct-2024 12:45:31.500 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.nio.file=ALL-UNNAMED
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/javax.crypto=ALL-UNNAMED
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.management/javax.management=ALL-UNNAMED
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.desktop/sun.font=ALL-UNNAMED
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/sun.reflect.generics.parser=ALL-UNNAMED
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.time=ALL-UNNAMED
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.util.calendar=ALL-UNNAMED
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.security.action=ALL-UNNAMED
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.xml/jdk.xml.internal=ALL-UNNAMED
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms384m
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx2048m
+31-Oct-2024 12:45:31.501 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:InitialCodeCacheSize=32m
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:ReservedCodeCacheSize=512m
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.contextSelector=org.apache.logging.log4j.core.selector.BasicContextSelector
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.disableJmx=true
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.garbagefree.threadContextMap=true
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.isWebapp=false
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.awt.headless=true
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.standalone=JIRA
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dmail.mime.decodeparameters=true
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.dom4j.factory=com.atlassian.core.xml.InterningDocumentFactory
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.connector.RECYCLE_FACADES=false
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djavax.servlet.request.encoding=UTF8
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.jnu.encoding=UTF-8
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:-OmitStackTraceInFastThrow
+31-Oct-2024 12:45:31.502 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.locale.providers=COMPAT
+31-Oct-2024 12:45:31.503 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.plugins.startup.options=
+31-Oct-2024 12:45:31.503 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+31-Oct-2024 12:45:31.503 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Oct-2024 12:45:31.503 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+31-Oct-2024 12:45:31.503 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xlog:gc*:file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/logs/atlassian-jira-gc-%t.log:tags,time,uptime,level:filecount=5,filesize=20M
+31-Oct-2024 12:45:31.503 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+ExplicitGCInvokesConcurrent
+31-Oct-2024 12:45:31.503 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+31-Oct-2024 12:45:31.503 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:45:31.503 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:45:31.503 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/temp
+31-Oct-2024 12:45:31.504 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+31-Oct-2024 12:45:31.733 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:45:31.742 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [388] milliseconds
+31-Oct-2024 12:45:31.752 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+31-Oct-2024 12:45:31.752 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.95]
+31-Oct-2024 12:45:34.277 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:45:34.288 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [2546] milliseconds
+31-Oct-2024 12:45:41.032 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.95
+31-Oct-2024 12:45:41.034 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 13 2024 18:07:47 UTC
+31-Oct-2024 12:45:41.034 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.95.0
+31-Oct-2024 12:45:41.034 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+31-Oct-2024 12:45:41.034 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.10.13-3-MANJARO
+31-Oct-2024 12:45:41.034 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+31-Oct-2024 12:45:41.035 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+31-Oct-2024 12:45:41.035 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.12+7
+31-Oct-2024 12:45:41.035 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+31-Oct-2024 12:45:41.035 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:45:41.035 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:45:41.039 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 12:45:41.039 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 12:45:41.039 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 12:45:41.039 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/conf/logging.properties
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.nio.file=ALL-UNNAMED
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/javax.crypto=ALL-UNNAMED
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.management/javax.management=ALL-UNNAMED
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.desktop/sun.font=ALL-UNNAMED
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/sun.reflect.generics.parser=ALL-UNNAMED
+31-Oct-2024 12:45:41.040 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.time=ALL-UNNAMED
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.util.calendar=ALL-UNNAMED
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.security.action=ALL-UNNAMED
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.xml/jdk.xml.internal=ALL-UNNAMED
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms384m
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx2048m
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:InitialCodeCacheSize=32m
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:ReservedCodeCacheSize=512m
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.contextSelector=org.apache.logging.log4j.core.selector.BasicContextSelector
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.disableJmx=true
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.garbagefree.threadContextMap=true
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.isWebapp=false
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.awt.headless=true
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.standalone=JIRA
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dmail.mime.decodeparameters=true
+31-Oct-2024 12:45:41.041 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.dom4j.factory=com.atlassian.core.xml.InterningDocumentFactory
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.connector.RECYCLE_FACADES=false
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djavax.servlet.request.encoding=UTF8
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.jnu.encoding=UTF-8
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:-OmitStackTraceInFastThrow
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.locale.providers=COMPAT
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.plugins.startup.options=-fg
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xlog:gc*:file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/logs/atlassian-jira-gc-%t.log:tags,time,uptime,level:filecount=5,filesize=20M
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+ExplicitGCInvokesConcurrent
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:45:41.042 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/temp
+31-Oct-2024 12:45:41.043 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+31-Oct-2024 12:45:41.260 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:45:41.270 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [379] milliseconds
+31-Oct-2024 12:45:41.282 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+31-Oct-2024 12:45:41.282 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.95]
+31-Oct-2024 12:45:43.898 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:45:43.903 GRAVE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to start component [Connector["http-nio-8080"]]
+	org.apache.catalina.LifecycleException: Protocol handler start failed
+		at org.apache.catalina.connector.Connector.startInternal(Connector.java:1058)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: java.net.BindException: Endereço já em uso
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:268)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:223)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1373)
+		at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1459)
+		at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:674)
+		at org.apache.catalina.connector.Connector.startInternal(Connector.java:1055)
+		... 12 more
+31-Oct-2024 12:45:43.904 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [2633] milliseconds
+31-Oct-2024 12:45:43.906 GRAVE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Endereço já em uso
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:648)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:388)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:537)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:825)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:773)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+31-Oct-2024 12:45:43.906 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:45:43.906 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+31-Oct-2024 12:45:44.356 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:45:44.357 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:46:30.245 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.95
+31-Oct-2024 12:46:30.246 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 13 2024 18:07:47 UTC
+31-Oct-2024 12:46:30.246 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.95.0
+31-Oct-2024 12:46:30.247 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+31-Oct-2024 12:46:30.247 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.10.13-3-MANJARO
+31-Oct-2024 12:46:30.247 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+31-Oct-2024 12:46:30.247 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+31-Oct-2024 12:46:30.247 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.12+7
+31-Oct-2024 12:46:30.247 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+31-Oct-2024 12:46:30.247 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:46:30.247 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:46:30.251 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 12:46:30.252 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 12:46:30.252 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 12:46:30.252 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 12:46:30.252 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+31-Oct-2024 12:46:30.252 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/conf/logging.properties
+31-Oct-2024 12:46:30.252 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Oct-2024 12:46:30.252 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 12:46:30.252 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+31-Oct-2024 12:46:30.252 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 12:46:30.252 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 12:46:30.252 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+31-Oct-2024 12:46:30.252 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 12:46:30.252 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.nio.file=ALL-UNNAMED
+31-Oct-2024 12:46:30.253 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/javax.crypto=ALL-UNNAMED
+31-Oct-2024 12:46:30.253 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.management/javax.management=ALL-UNNAMED
+31-Oct-2024 12:46:30.253 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.desktop/sun.font=ALL-UNNAMED
+31-Oct-2024 12:46:30.253 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/sun.reflect.generics.parser=ALL-UNNAMED
+31-Oct-2024 12:46:30.253 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.time=ALL-UNNAMED
+31-Oct-2024 12:46:30.253 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED
+31-Oct-2024 12:46:30.253 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.util.calendar=ALL-UNNAMED
+31-Oct-2024 12:46:30.253 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.security.action=ALL-UNNAMED
+31-Oct-2024 12:46:30.253 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.xml/jdk.xml.internal=ALL-UNNAMED
+31-Oct-2024 12:46:30.253 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms384m
+31-Oct-2024 12:46:30.253 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx2048m
+31-Oct-2024 12:46:30.254 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:InitialCodeCacheSize=32m
+31-Oct-2024 12:46:30.254 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:ReservedCodeCacheSize=512m
+31-Oct-2024 12:46:30.254 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.contextSelector=org.apache.logging.log4j.core.selector.BasicContextSelector
+31-Oct-2024 12:46:30.254 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.disableJmx=true
+31-Oct-2024 12:46:30.254 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.garbagefree.threadContextMap=true
+31-Oct-2024 12:46:30.254 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.isWebapp=false
+31-Oct-2024 12:46:30.254 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.awt.headless=true
+31-Oct-2024 12:46:30.254 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.standalone=JIRA
+31-Oct-2024 12:46:30.254 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true
+31-Oct-2024 12:46:30.254 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dmail.mime.decodeparameters=true
+31-Oct-2024 12:46:30.254 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.dom4j.factory=com.atlassian.core.xml.InterningDocumentFactory
+31-Oct-2024 12:46:30.254 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.connector.RECYCLE_FACADES=false
+31-Oct-2024 12:46:30.254 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djavax.servlet.request.encoding=UTF8
+31-Oct-2024 12:46:30.255 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.jnu.encoding=UTF-8
+31-Oct-2024 12:46:30.255 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+31-Oct-2024 12:46:30.255 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:-OmitStackTraceInFastThrow
+31-Oct-2024 12:46:30.255 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.locale.providers=COMPAT
+31-Oct-2024 12:46:30.255 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.plugins.startup.options=-fg
+31-Oct-2024 12:46:30.255 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+31-Oct-2024 12:46:30.255 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Oct-2024 12:46:30.255 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+31-Oct-2024 12:46:30.255 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xlog:gc*:file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/logs/atlassian-jira-gc-%t.log:tags,time,uptime,level:filecount=5,filesize=20M
+31-Oct-2024 12:46:30.255 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+ExplicitGCInvokesConcurrent
+31-Oct-2024 12:46:30.255 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+31-Oct-2024 12:46:30.255 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:46:30.256 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:46:30.256 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/temp
+31-Oct-2024 12:46:30.257 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+31-Oct-2024 12:46:30.459 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:46:30.470 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [378] milliseconds
+31-Oct-2024 12:46:30.480 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+31-Oct-2024 12:46:30.481 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.95]
+31-Oct-2024 12:46:32.986 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:46:33.000 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [2529] milliseconds
+31-Oct-2024 12:47:21.900 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:47:21.901 INFORMAÇÕES [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+31-Oct-2024 12:47:21.948 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:47:21.950 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:58:12.648 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.95
+31-Oct-2024 12:58:12.650 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 13 2024 18:07:47 UTC
+31-Oct-2024 12:58:12.650 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.95.0
+31-Oct-2024 12:58:12.650 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+31-Oct-2024 12:58:12.650 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.10.13-3-MANJARO
+31-Oct-2024 12:58:12.650 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+31-Oct-2024 12:58:12.650 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+31-Oct-2024 12:58:12.651 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.12+7
+31-Oct-2024 12:58:12.651 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+31-Oct-2024 12:58:12.651 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:58:12.651 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:58:12.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 12:58:12.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 12:58:12.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 12:58:12.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 12:58:12.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+31-Oct-2024 12:58:12.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/conf/logging.properties
+31-Oct-2024 12:58:12.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Oct-2024 12:58:12.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 12:58:12.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+31-Oct-2024 12:58:12.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 12:58:12.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 12:58:12.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+31-Oct-2024 12:58:12.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 12:58:12.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.nio.file=ALL-UNNAMED
+31-Oct-2024 12:58:12.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/javax.crypto=ALL-UNNAMED
+31-Oct-2024 12:58:12.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.management/javax.management=ALL-UNNAMED
+31-Oct-2024 12:58:12.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.desktop/sun.font=ALL-UNNAMED
+31-Oct-2024 12:58:12.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/sun.reflect.generics.parser=ALL-UNNAMED
+31-Oct-2024 12:58:12.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.time=ALL-UNNAMED
+31-Oct-2024 12:58:12.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED
+31-Oct-2024 12:58:12.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.util.calendar=ALL-UNNAMED
+31-Oct-2024 12:58:12.659 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.security.action=ALL-UNNAMED
+31-Oct-2024 12:58:12.659 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.xml/jdk.xml.internal=ALL-UNNAMED
+31-Oct-2024 12:58:12.659 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms384m
+31-Oct-2024 12:58:12.659 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx2048m
+31-Oct-2024 12:58:12.659 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:InitialCodeCacheSize=32m
+31-Oct-2024 12:58:12.659 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:ReservedCodeCacheSize=512m
+31-Oct-2024 12:58:12.659 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.contextSelector=org.apache.logging.log4j.core.selector.BasicContextSelector
+31-Oct-2024 12:58:12.659 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.disableJmx=true
+31-Oct-2024 12:58:12.659 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.garbagefree.threadContextMap=true
+31-Oct-2024 12:58:12.659 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.isWebapp=false
+31-Oct-2024 12:58:12.659 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.awt.headless=true
+31-Oct-2024 12:58:12.660 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.standalone=JIRA
+31-Oct-2024 12:58:12.660 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true
+31-Oct-2024 12:58:12.660 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dmail.mime.decodeparameters=true
+31-Oct-2024 12:58:12.660 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.dom4j.factory=com.atlassian.core.xml.InterningDocumentFactory
+31-Oct-2024 12:58:12.660 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.connector.RECYCLE_FACADES=false
+31-Oct-2024 12:58:12.660 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djavax.servlet.request.encoding=UTF8
+31-Oct-2024 12:58:12.660 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.jnu.encoding=UTF-8
+31-Oct-2024 12:58:12.660 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+31-Oct-2024 12:58:12.660 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:-OmitStackTraceInFastThrow
+31-Oct-2024 12:58:12.660 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.locale.providers=COMPAT
+31-Oct-2024 12:58:12.660 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.plugins.startup.options=-fg
+31-Oct-2024 12:58:12.660 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+31-Oct-2024 12:58:12.661 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Oct-2024 12:58:12.661 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+31-Oct-2024 12:58:12.661 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xlog:gc*:file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/logs/atlassian-jira-gc-%t.log:tags,time,uptime,level:filecount=5,filesize=20M
+31-Oct-2024 12:58:12.661 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+ExplicitGCInvokesConcurrent
+31-Oct-2024 12:58:12.661 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+31-Oct-2024 12:58:12.661 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:58:12.661 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:58:12.661 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/temp
+31-Oct-2024 12:58:12.662 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+31-Oct-2024 12:58:12.868 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:58:12.878 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [368] milliseconds
+31-Oct-2024 12:58:12.888 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+31-Oct-2024 12:58:12.888 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.95]
+31-Oct-2024 12:58:15.639 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:58:15.650 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [2772] milliseconds
+31-Oct-2024 12:58:33.059 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:58:33.060 INFORMAÇÕES [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+31-Oct-2024 12:58:33.108 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@356a7ba6]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@6c690f9b]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 12:58:33.108 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@356a7ba6]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@925fa34]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 12:58:33.108 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@356a7ba6]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@43e72d36]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 12:58:33.109 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@356a7ba6]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@65b59b24]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 12:58:33.109 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@356a7ba6]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@294a514c]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 12:58:33.112 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:58:33.115 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:58:38.105 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.95
+31-Oct-2024 12:58:38.107 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 13 2024 18:07:47 UTC
+31-Oct-2024 12:58:38.107 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.95.0
+31-Oct-2024 12:58:38.107 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+31-Oct-2024 12:58:38.107 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.10.13-3-MANJARO
+31-Oct-2024 12:58:38.107 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+31-Oct-2024 12:58:38.107 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+31-Oct-2024 12:58:38.107 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.12+7
+31-Oct-2024 12:58:38.107 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+31-Oct-2024 12:58:38.108 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:58:38.108 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:58:38.112 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 12:58:38.112 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 12:58:38.112 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 12:58:38.112 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 12:58:38.112 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/conf/logging.properties
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.nio.file=ALL-UNNAMED
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/javax.crypto=ALL-UNNAMED
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.management/javax.management=ALL-UNNAMED
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.desktop/sun.font=ALL-UNNAMED
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/sun.reflect.generics.parser=ALL-UNNAMED
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.time=ALL-UNNAMED
+31-Oct-2024 12:58:38.113 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.util.calendar=ALL-UNNAMED
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.security.action=ALL-UNNAMED
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.xml/jdk.xml.internal=ALL-UNNAMED
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms384m
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx2048m
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:InitialCodeCacheSize=32m
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:ReservedCodeCacheSize=512m
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.contextSelector=org.apache.logging.log4j.core.selector.BasicContextSelector
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.disableJmx=true
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.garbagefree.threadContextMap=true
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.isWebapp=false
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.awt.headless=true
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.standalone=JIRA
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dmail.mime.decodeparameters=true
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.dom4j.factory=com.atlassian.core.xml.InterningDocumentFactory
+31-Oct-2024 12:58:38.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.connector.RECYCLE_FACADES=false
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djavax.servlet.request.encoding=UTF8
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.jnu.encoding=UTF-8
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:-OmitStackTraceInFastThrow
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.locale.providers=COMPAT
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.plugins.startup.options=-fg
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xlog:gc*:file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/logs/atlassian-jira-gc-%t.log:tags,time,uptime,level:filecount=5,filesize=20M
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+ExplicitGCInvokesConcurrent
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 12:58:38.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/temp
+31-Oct-2024 12:58:38.116 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+31-Oct-2024 12:58:38.331 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:58:38.342 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [375] milliseconds
+31-Oct-2024 12:58:38.352 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+31-Oct-2024 12:58:38.352 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.95]
+31-Oct-2024 12:58:40.991 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 12:58:41.002 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [2659] milliseconds
+31-Oct-2024 13:01:17.966 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:01:17.967 INFORMAÇÕES [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+31-Oct-2024 13:01:18.020 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4712da63]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@10c15b46]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:01:18.020 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4712da63]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@3c08126b]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:01:18.020 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4712da63]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@71e6e4d3]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:01:18.020 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4712da63]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@2db04d48]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:01:18.020 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4712da63]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@2917cf18]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:01:18.020 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4712da63]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@6f117695]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:01:18.021 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4712da63]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@581fe0ec]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:01:18.021 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4712da63]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@77ea2caa]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:01:18.021 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4712da63]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@60125240]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:01:18.021 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4712da63]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@4d32509]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:01:18.021 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4712da63]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@23ecbdff]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:01:18.021 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4712da63]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@5c54a54]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:01:18.021 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4712da63]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@2c944b8c]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:01:18.024 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:01:18.027 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:01:19.322 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.95
+31-Oct-2024 13:01:19.324 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 13 2024 18:07:47 UTC
+31-Oct-2024 13:01:19.324 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.95.0
+31-Oct-2024 13:01:19.324 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+31-Oct-2024 13:01:19.324 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.10.13-3-MANJARO
+31-Oct-2024 13:01:19.324 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+31-Oct-2024 13:01:19.325 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+31-Oct-2024 13:01:19.325 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.12+7
+31-Oct-2024 13:01:19.325 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+31-Oct-2024 13:01:19.325 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 13:01:19.325 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 13:01:19.330 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 13:01:19.330 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 13:01:19.330 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 13:01:19.330 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 13:01:19.330 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+31-Oct-2024 13:01:19.330 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/conf/logging.properties
+31-Oct-2024 13:01:19.330 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Oct-2024 13:01:19.330 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 13:01:19.330 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+31-Oct-2024 13:01:19.330 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 13:01:19.330 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 13:01:19.330 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+31-Oct-2024 13:01:19.330 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.nio.file=ALL-UNNAMED
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/javax.crypto=ALL-UNNAMED
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.management/javax.management=ALL-UNNAMED
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.desktop/sun.font=ALL-UNNAMED
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/sun.reflect.generics.parser=ALL-UNNAMED
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.time=ALL-UNNAMED
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.util.calendar=ALL-UNNAMED
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.security.action=ALL-UNNAMED
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.xml/jdk.xml.internal=ALL-UNNAMED
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms384m
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx2048m
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:InitialCodeCacheSize=32m
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:ReservedCodeCacheSize=512m
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.contextSelector=org.apache.logging.log4j.core.selector.BasicContextSelector
+31-Oct-2024 13:01:19.331 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.disableJmx=true
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.garbagefree.threadContextMap=true
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.isWebapp=false
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.awt.headless=true
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.standalone=JIRA
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dmail.mime.decodeparameters=true
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.dom4j.factory=com.atlassian.core.xml.InterningDocumentFactory
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.connector.RECYCLE_FACADES=false
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djavax.servlet.request.encoding=UTF8
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.jnu.encoding=UTF-8
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:-OmitStackTraceInFastThrow
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.locale.providers=COMPAT
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.plugins.startup.options=-fg
+31-Oct-2024 13:01:19.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+31-Oct-2024 13:01:19.333 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Oct-2024 13:01:19.333 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+31-Oct-2024 13:01:19.333 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xlog:gc*:file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/logs/atlassian-jira-gc-%t.log:tags,time,uptime,level:filecount=5,filesize=20M
+31-Oct-2024 13:01:19.333 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+ExplicitGCInvokesConcurrent
+31-Oct-2024 13:01:19.333 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+31-Oct-2024 13:01:19.333 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 13:01:19.333 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 13:01:19.333 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/temp
+31-Oct-2024 13:01:19.334 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+31-Oct-2024 13:01:19.540 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:01:19.550 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [367] milliseconds
+31-Oct-2024 13:01:19.561 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+31-Oct-2024 13:01:19.561 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.95]
+31-Oct-2024 13:01:22.207 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:01:22.217 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [2667] milliseconds
+31-Oct-2024 13:02:07.441 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:02:07.442 INFORMAÇÕES [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+31-Oct-2024 13:02:07.498 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4e99ea4e]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@50211774]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:07.498 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4e99ea4e]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@58b37fe]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:07.499 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4e99ea4e]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@14a92446]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:07.499 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4e99ea4e]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@df8d377]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:07.499 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4e99ea4e]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@4a8d6eb7]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:07.499 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4e99ea4e]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@16e584df]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:07.499 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4e99ea4e]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@4b330951]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:07.499 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4e99ea4e]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@9b182b]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:07.499 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@4e99ea4e]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@21c23659]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:07.503 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:02:07.506 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:02:10.955 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.95
+31-Oct-2024 13:02:10.957 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 13 2024 18:07:47 UTC
+31-Oct-2024 13:02:10.957 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.95.0
+31-Oct-2024 13:02:10.957 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+31-Oct-2024 13:02:10.957 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.10.13-3-MANJARO
+31-Oct-2024 13:02:10.957 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+31-Oct-2024 13:02:10.957 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+31-Oct-2024 13:02:10.957 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.12+7
+31-Oct-2024 13:02:10.958 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+31-Oct-2024 13:02:10.958 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 13:02:10.958 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 13:02:10.963 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 13:02:10.963 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 13:02:10.963 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 13:02:10.963 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 13:02:10.963 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+31-Oct-2024 13:02:10.963 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/conf/logging.properties
+31-Oct-2024 13:02:10.963 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Oct-2024 13:02:10.963 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 13:02:10.963 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+31-Oct-2024 13:02:10.963 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 13:02:10.963 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 13:02:10.963 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.nio.file=ALL-UNNAMED
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/javax.crypto=ALL-UNNAMED
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.management/javax.management=ALL-UNNAMED
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.desktop/sun.font=ALL-UNNAMED
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/sun.reflect.generics.parser=ALL-UNNAMED
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.time=ALL-UNNAMED
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.util.calendar=ALL-UNNAMED
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.security.action=ALL-UNNAMED
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.xml/jdk.xml.internal=ALL-UNNAMED
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms384m
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx2048m
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:InitialCodeCacheSize=32m
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:ReservedCodeCacheSize=512m
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.contextSelector=org.apache.logging.log4j.core.selector.BasicContextSelector
+31-Oct-2024 13:02:10.964 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.disableJmx=true
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.garbagefree.threadContextMap=true
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.isWebapp=false
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.awt.headless=true
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.standalone=JIRA
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dmail.mime.decodeparameters=true
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.dom4j.factory=com.atlassian.core.xml.InterningDocumentFactory
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.connector.RECYCLE_FACADES=false
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djavax.servlet.request.encoding=UTF8
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.jnu.encoding=UTF-8
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:-OmitStackTraceInFastThrow
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.locale.providers=COMPAT
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.plugins.startup.options=-fg
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+31-Oct-2024 13:02:10.965 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Oct-2024 13:02:10.966 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+31-Oct-2024 13:02:10.966 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xlog:gc*:file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/logs/atlassian-jira-gc-%t.log:tags,time,uptime,level:filecount=5,filesize=20M
+31-Oct-2024 13:02:10.966 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+ExplicitGCInvokesConcurrent
+31-Oct-2024 13:02:10.966 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+31-Oct-2024 13:02:10.966 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 13:02:10.966 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 13:02:10.966 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/temp
+31-Oct-2024 13:02:10.967 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+31-Oct-2024 13:02:11.177 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:02:11.188 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [373] milliseconds
+31-Oct-2024 13:02:11.198 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+31-Oct-2024 13:02:11.198 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.95]
+31-Oct-2024 13:02:13.987 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:02:14.000 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [2812] milliseconds
+31-Oct-2024 13:02:22.847 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:02:22.847 INFORMAÇÕES [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+31-Oct-2024 13:02:22.869 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@54137475]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@599dc0d]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:22.869 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [org.picocontainer.DefaultPicoContainer.IntoThreadLocal] (value [org.picocontainer.DefaultPicoContainer$IntoThreadLocal@4e53e103]) and a value of type [java.lang.Class] (value [class org.picocontainer.ComponentAdapter$NOTHING]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:22.869 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@54137475]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@688e7030]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:22.869 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@54137475]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@132584c4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:22.869 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@54137475]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@1d61988c]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:22.870 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@54137475]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@2758a5c2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:22.870 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@54137475]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@3ccc4ee9]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:22.870 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@54137475]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@370ee10]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:02:22.873 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:02:22.875 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:02:37.423 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.95
+31-Oct-2024 13:02:37.424 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 13 2024 18:07:47 UTC
+31-Oct-2024 13:02:37.424 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.95.0
+31-Oct-2024 13:02:37.424 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+31-Oct-2024 13:02:37.425 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.10.13-3-MANJARO
+31-Oct-2024 13:02:37.425 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+31-Oct-2024 13:02:37.425 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+31-Oct-2024 13:02:37.425 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.12+7
+31-Oct-2024 13:02:37.425 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+31-Oct-2024 13:02:37.425 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 13:02:37.425 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 13:02:37.429 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 13:02:37.430 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 13:02:37.430 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 13:02:37.430 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 13:02:37.430 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+31-Oct-2024 13:02:37.430 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/conf/logging.properties
+31-Oct-2024 13:02:37.430 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Oct-2024 13:02:37.430 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 13:02:37.430 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+31-Oct-2024 13:02:37.430 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 13:02:37.430 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 13:02:37.430 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+31-Oct-2024 13:02:37.430 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 13:02:37.430 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.nio.file=ALL-UNNAMED
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/javax.crypto=ALL-UNNAMED
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.management/javax.management=ALL-UNNAMED
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.desktop/sun.font=ALL-UNNAMED
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/sun.reflect.generics.parser=ALL-UNNAMED
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.time=ALL-UNNAMED
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.util.calendar=ALL-UNNAMED
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.base/sun.security.action=ALL-UNNAMED
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-exports=java.xml/jdk.xml.internal=ALL-UNNAMED
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms384m
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx2048m
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:InitialCodeCacheSize=32m
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:ReservedCodeCacheSize=512m
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.contextSelector=org.apache.logging.log4j.core.selector.BasicContextSelector
+31-Oct-2024 13:02:37.431 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.disableJmx=true
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.garbagefree.threadContextMap=true
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dlog4j2.isWebapp=false
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.awt.headless=true
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.standalone=JIRA
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dmail.mime.decodeparameters=true
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.dom4j.factory=com.atlassian.core.xml.InterningDocumentFactory
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.connector.RECYCLE_FACADES=false
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djavax.servlet.request.encoding=UTF8
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.jnu.encoding=UTF-8
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:-OmitStackTraceInFastThrow
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.locale.providers=COMPAT
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Datlassian.plugins.startup.options=-fg
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+31-Oct-2024 13:02:37.432 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Oct-2024 13:02:37.433 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+31-Oct-2024 13:02:37.433 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xlog:gc*:file=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/logs/atlassian-jira-gc-%t.log:tags,time,uptime,level:filecount=5,filesize=20M
+31-Oct-2024 13:02:37.433 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:+ExplicitGCInvokesConcurrent
+31-Oct-2024 13:02:37.433 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+31-Oct-2024 13:02:37.433 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 13:02:37.433 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone
+31-Oct-2024 13:02:37.433 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/talinux/Downloads/atlassian-jira-core-10.1.1-standalone/temp
+31-Oct-2024 13:02:37.434 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+31-Oct-2024 13:02:37.642 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:02:37.653 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [370] milliseconds
+31-Oct-2024 13:02:37.664 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+31-Oct-2024 13:02:37.664 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.95]
+31-Oct-2024 13:02:40.322 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:02:40.332 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [2679] milliseconds
+31-Oct-2024 13:03:25.251 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:03:25.251 INFORMAÇÕES [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+31-Oct-2024 13:03:25.294 ADVERTÊNCIA [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [ThreadPoolAsyncTaskExecutor::Thread 1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+31-Oct-2024 13:03:25.294 ADVERTÊNCIA [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [ThreadPoolAsyncTaskExecutor::Thread 2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+31-Oct-2024 13:03:25.294 ADVERTÊNCIA [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [ThreadPoolAsyncTaskExecutor::Thread 3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+31-Oct-2024 13:03:25.294 ADVERTÊNCIA [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [ThreadPoolAsyncTaskExecutor::Thread 4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+31-Oct-2024 13:03:25.295 ADVERTÊNCIA [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [ThreadPoolAsyncTaskExecutor::Thread 5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+31-Oct-2024 13:03:25.295 ADVERTÊNCIA [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [ThreadPoolAsyncTaskExecutor::Thread 6] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+31-Oct-2024 13:03:25.295 ADVERTÊNCIA [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [ThreadPoolAsyncTaskExecutor::Thread 7] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+31-Oct-2024 13:03:25.296 ADVERTÊNCIA [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [ThreadPoolAsyncTaskExecutor::Thread 8] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+31-Oct-2024 13:03:25.296 ADVERTÊNCIA [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [plugin-transaction-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1674)
+ java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+31-Oct-2024 13:03:25.296 ADVERTÊNCIA [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [JIRA-EventThread-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+31-Oct-2024 13:03:25.296 ADVERTÊNCIA [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [JIRA-EventThread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+31-Oct-2024 13:03:25.296 ADVERTÊNCIA [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [JIRA-EventThread-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+31-Oct-2024 13:03:25.296 ADVERTÊNCIA [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [JIRA-EventThread-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+31-Oct-2024 13:03:25.297 ADVERTÊNCIA [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [JIRA-EventThread-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+31-Oct-2024 13:03:25.297 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.298 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@1a20f1fe]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.298 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.298 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [org.picocontainer.DefaultPicoContainer.IntoThreadLocal] (value [org.picocontainer.DefaultPicoContainer$IntoThreadLocal@ade0c73]) and a value of type [java.lang.Class] (value [class org.picocontainer.ComponentAdapter$NOTHING]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.298 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@2945f377]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.298 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.298 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@1bd0f646]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.298 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.298 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@3165d5d6]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.298 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.298 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@530bb4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.299 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.299 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@4bc1d755]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.299 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.299 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@3d0bbe94]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.299 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [org.picocontainer.DefaultPicoContainer.IntoThreadLocal] (value [org.picocontainer.DefaultPicoContainer$IntoThreadLocal@ade0c73]) and a value of type [java.lang.Class] (value [class org.picocontainer.ComponentAdapter$NOTHING]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.299 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.299 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@225f0786]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.299 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.299 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@1f684bd5]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.300 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.300 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@45d10c89]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.300 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.300 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@32d94dd7]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.300 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.300 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@70413c10]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.300 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.300 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@2daaf72e]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.300 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.300 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@60d20356]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.300 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.300 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@189d5d6e]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@61c543d1]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@1baccb40]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@6b14a3d0]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@1990e5f1]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@5280f6d9]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@2f8bd102]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@61cffd00]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.301 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.302 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@7fee23a5]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.302 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.302 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@5b7ff33d]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.302 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@41838648]) and a value of type [com.atlassian.jira.tenancy.JiraTenantImpl] (value [JiraTenantImpl{id='fakeTenantId'}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.302 GRAVE [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [webwork.action.ActionContext$1] (value [webwork.action.ActionContext$1@47cc9e89]) and a value of type [webwork.action.ActionContext] (value [webwork.action.ActionContext@454622af]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+31-Oct-2024 13:03:25.305 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 13:03:25.309 INFORMAÇÕES [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

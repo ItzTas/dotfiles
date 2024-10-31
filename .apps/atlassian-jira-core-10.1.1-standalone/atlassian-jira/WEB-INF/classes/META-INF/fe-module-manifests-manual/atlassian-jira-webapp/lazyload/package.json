@@ -1,0 +1,7 @@
+{
+  "name": "lazyload",
+  "private": true,
+  "version": "1.8.0",
+  "license": "MIT",
+  "homepage": "https://www.appelsiini.net/projects/lazyload/"
+}

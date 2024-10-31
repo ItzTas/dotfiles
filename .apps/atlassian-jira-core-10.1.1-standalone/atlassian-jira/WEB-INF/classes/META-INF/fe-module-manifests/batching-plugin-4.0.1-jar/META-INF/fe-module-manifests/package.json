@@ -1,0 +1,10 @@
+{
+  "name": "@atlassian/dc.jira.jira-inform-plugin",
+  "private": true,
+  "version": "4.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:atlassian/jira-inform-plugin.git",
+    "directory": "batching-plugin/src/main/resources/"
+  }
+}

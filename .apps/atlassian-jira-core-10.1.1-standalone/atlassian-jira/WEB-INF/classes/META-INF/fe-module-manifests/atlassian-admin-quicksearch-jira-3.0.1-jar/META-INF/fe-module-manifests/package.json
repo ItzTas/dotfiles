@@ -1,0 +1,15 @@
+{
+  "name": "@atlassian/dc.jira.atlassian-admin-quicksearch.atlassian-admin-quicksearch-jira",
+  "version": "3.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/atlassian/atlassian-admin-quicksearch.git",
+    "directory": "atlassian-admin-quicksearch-jira"
+  },
+  "author": "Atlassian",
+  "bugs": {
+    "url": "https://bitbucket.org/atlassian/atlassian-admin-quicksearch/issues"
+  },
+  "homepage": "https://bitbucket.org/atlassian/atlassian-admin-quicksearch#readme"
+}

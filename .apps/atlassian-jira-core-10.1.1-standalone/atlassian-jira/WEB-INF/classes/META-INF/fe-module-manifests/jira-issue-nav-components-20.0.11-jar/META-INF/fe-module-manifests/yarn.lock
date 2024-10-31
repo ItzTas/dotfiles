@@ -1,0 +1,7 @@
+# yarn lockfile v1
+
+"jquery-hoverIntent@file:src/main/frontend/jquery-hoverIntent/1.7.0":
+  version "1.7.0"
+
+"jquery-scrollintoView@file:src/main/frontend/jquery-scrollIntoView/1.8.0":
+  version "1.8.0"

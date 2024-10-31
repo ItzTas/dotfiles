@@ -1,0 +1,12 @@
+{
+  "name": "@atlassian/dc.confluence-jira-integration-plugins.mywork-common-plugin",
+  "author": "Atlassian",
+  "private": true,
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://stash.atlassian.com/projects/CONFSERVER/repos/confluence-jira-integration-plugins",
+    "directory": "/myworkday/mywork-common-plugin"
+  }
+}

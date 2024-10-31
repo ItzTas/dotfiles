@@ -1,0 +1,1 @@
+define("jira/util/events/types",require("jira/api/events/types"));AJS.namespace("JIRA.Events",null,require("jira/util/events/types"));

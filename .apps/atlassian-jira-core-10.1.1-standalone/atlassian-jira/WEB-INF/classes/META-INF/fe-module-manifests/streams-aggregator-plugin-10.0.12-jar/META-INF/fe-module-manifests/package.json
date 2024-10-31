@@ -1,0 +1,75 @@
+{
+  "name": "@atlassian/dc.shared.atlassian-streams.aggregator-plugin",
+  "author": "Atlassian",
+  "private": true,
+  "version": "10.0.7-SNAPSHOT",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:atlassian/atlassian-streams.git",
+    "directory": "aggregator-plugin"
+  },
+  "scripts": {
+    "postinstall": "patch-package --error-on-fail --error-on-warn",
+    "build": "copy-files-from-to && gulp"
+  },
+  "dependencies": {
+    "chosen-js": "file:js-vendor/chosen-js",
+    "jquery-ui": "1.12.1",
+    "jquery.waitforimages": "file:js-vendor/jquery.waitforimages"
+  },
+  "devDependencies": {
+    "copy-files-from-to": "3.11.0",
+    "gulp": "5.0.0",
+    "gulp-concat": "2.6.1",
+    "patch-package": "8.0.0"
+  },
+  "copyFiles": [
+    {
+      "from": "node_modules/chosen-js/chosen.jquery.js",
+      "to": "target/classes/js/chosen.jquery.js"
+    },
+    {
+      "from": "node_modules/chosen-js/chosen.jquery.js",
+      "to": {
+        "default": {
+          "dest": "target/classes/js/chosen.jquery-min.js",
+          "minifyJS": true
+        }
+      }
+    },
+    {
+      "from": "node_modules/chosen-js/chosen.css",
+      "to": "target/classes/css/streams/chosen.css"
+    },
+    {
+      "from": "node_modules/jquery.waitforimages/jquery.waitforimages.js",
+      "to": "target/classes/js/external/jquery.waitforimages.js"
+    },
+    {
+      "from": "node_modules/jquery.waitforimages/jquery.waitforimages.js",
+      "to": {
+        "default": {
+          "dest": "target/classes/js/external/jquery.waitforimages-min.js",
+          "minifyJS": true
+        }
+      }
+    },
+    {
+      "from": "node_modules/jquery-ui/ui/widgets/datepicker.js",
+      "to": "target/classes/js/jquery-ui/jquery.ui.datepicker.js"
+    },
+    {
+      "from": "node_modules/jquery-ui/ui/widgets/datepicker.js",
+      "to": {
+        "default": {
+          "dest": "target/classes/js/jquery-ui/jquery.ui.datepicker-min.js",
+          "minifyJS": true
+        }
+      }
+    },
+    {
+      "from": "node_modules/jquery-ui/themes/base/images/ui-icons_*.png",
+      "to": "target/classes/images/"
+    }
+  ]
+}
