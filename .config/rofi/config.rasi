@@ -1,5 +1,5 @@
 configuration{
-    modi: "run,window,combi";
+    modi: "run,window,combi,drun";
     icon-theme: "Oranchelo";
     show-icons: true;
     terminal: "kitty";
@@ -14,3 +14,4 @@ configuration{
 }
 
 @theme "catppuccin-mocha"
+
