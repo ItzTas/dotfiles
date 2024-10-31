@@ -1,0 +1,28 @@
+{namespace JIRA.Templates.Issue.Tabs}
+
+
+/**
+ * Used for the current tab
+ *
+ * @param id
+ * @param text
+ * @param ariaControls
+ */
+{template .label}
+    <a role="tab" aria-controls="{$ariaControls}" id="{$id}" aria-selected="true" tabindex="0">{$text}</a>
+{/template}
+
+/**
+ * Used for the tabs that can be navigated to
+ *
+ * @param id
+ * @param href
+ * @param linkClass
+ * @param text
+ * @param ariaControls
+ */
+{template .tab}
+    <a role="tab" aria-selected="false" aria-controls="{$ariaControls}" id="{$id}" href="{$href}" tabindex="-1" class="{$linkClass}">
+        {$text}
+    </a>
+{/template}

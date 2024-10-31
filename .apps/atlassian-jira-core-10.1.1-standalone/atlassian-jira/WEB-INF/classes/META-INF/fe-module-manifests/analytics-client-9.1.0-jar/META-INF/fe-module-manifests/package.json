@@ -1,0 +1,9 @@
+{
+  "name": "@atlassian/dc.shared.atlassian-analytics.analytics-client",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:atlassian/atlassian-analytics.git",
+    "directory": "./analytics-client"
+  }
+}

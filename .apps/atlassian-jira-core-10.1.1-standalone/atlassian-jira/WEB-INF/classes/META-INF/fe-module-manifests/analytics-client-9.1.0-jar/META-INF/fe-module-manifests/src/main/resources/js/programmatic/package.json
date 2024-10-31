@@ -1,0 +1,41 @@
+{
+  "name": "@atlassian/dc.shared.atlassian-analytics.programmatic-analytics",
+  "version": "1.0.0",
+  "author": "Atlassian",
+  "devDependencies": {
+    "@atlassian/experiment-analytics": "4.4.4",
+    "@atlassian/experiment-cli-helper": "4.0.1",
+    "@atlassian/experiment-cloud-core": "4.0.6",
+    "@atlassian/experiment-jira-core": "4.4.4",
+    "@atlassian/experiment-logger": "4.4.4",
+    "babel-core": "5.8.38",
+    "babel-loader": "5.4.2",
+    "file-loader": "0.8.5",
+    "gulp": "3.9.1",
+    "html-loader": "0.3.0",
+    "json-loader": "0.5.7",
+    "natives": "^1.1.6",
+    "node-libs-browser": "0.5.3",
+    "raw-loader": "0.5.1",
+    "style-loader": "0.13.2"
+  },
+  "engines": {
+    "node": ">=10.24.1",
+    "npm": ">=6.14.12"
+  },
+  "scripts": {
+    "build-dev": "./node_modules/.bin/gulp build-dev",
+    "build-release": "./node_modules/.bin/gulp build-release",
+    "watch": "./node_modules/.bin/gulp watch-dev",
+    "audit-dependencies": "./node_modules/.bin/gulp audit-dependencies"
+  },
+  "dependencies": {
+    "@atlassian/experiment-cloud-core": "4.0.6",
+    "@atlassian/experiment-common-core": "4.4.4",
+    "@atlassian/experiment-jira-core": "4.4.4",
+    "@atlassian/experiment-logger": "4.4.4",
+    "rx": "4.0.7",
+    "yaku": "0.7.12"
+  },
+  "description": "Programmatic analytics for the analytics plugin"
+}

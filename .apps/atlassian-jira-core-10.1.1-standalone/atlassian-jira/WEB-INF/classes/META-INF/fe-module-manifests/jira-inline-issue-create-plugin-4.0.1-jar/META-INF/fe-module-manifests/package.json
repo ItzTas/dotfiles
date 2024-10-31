@@ -1,0 +1,11 @@
+{
+  "name": "@atlassian/dc.jira.jira-inline-issue-create.jira-inline-issue-create-plugin",
+  "private": true,
+  "author": "Atlassian",
+  "version": "4.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@stash.atlassian.com:7997/jiraserver/jira-inline-issue-create-plugin.git",
+    "directory": "plugin"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "@atlassian/dc.atlassian-wallboard-plugin",
+  "author": "Atlassian",
+  "private": true,
+  "version": "7.0.3",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.org/atlassian/atlassian-wallboard-plugin.git",
+    "directory": ""
+  },
+  "devDependencies": {
+    "copy-files-from-to": "^3.11.0",
+    "minify": "^11.4.0",
+    "patch-package": "^8.0.0"
+  },
+  "dependencies": {
+    "jquery-cycle": "./src/main/frontend/jquery-cycle"
+  },
+  "scripts": {
+    "//delink-jquery-cycle": "npm creates a symlink, but we want patch-package to leave the src folder alone",
+    "delink-jquery-cycle": "rm -rf node_modules/jquery-cycle && cp -r src/main/frontend/jquery-cycle node_modules/jquery-cycle",
+    "postinstall": "npm run delink-jquery-cycle && patch-package --error-on-fail --error-on-warn && minify node_modules/jquery-cycle/jquery.cycle.all.js > node_modules/jquery-cycle/jquery.cycle.all-min.js && copy-files-from-to"
+  },
+  "copyFiles": [
+    {
+      "from": "node_modules/jquery-cycle/jquery.cycle.all.js",
+      "to": "target/classes/script/jquery.cycle.all.js"
+    },
+    {
+      "from": "node_modules/jquery-cycle/jquery.cycle.all-min.js",
+      "to": "target/classes/script/jquery.cycle.all-min.js"
+    }
+  ]
+}

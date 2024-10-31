@@ -1,0 +1,4 @@
+# yarn lockfile v1
+
+"bluebird@file:./src/main/frontend/lib/bluebird/2.3.6":
+  version "0.0.0"

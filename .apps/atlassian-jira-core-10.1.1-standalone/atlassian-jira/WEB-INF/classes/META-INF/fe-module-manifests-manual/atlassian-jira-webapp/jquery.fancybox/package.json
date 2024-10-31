@@ -1,0 +1,7 @@
+{
+    "name": "jquery.fancybox",
+    "version": "1.3.4",
+    "homepage": "http://fancybox.net/",
+    "license": "MIT GPL",
+    "private": "true"
+}

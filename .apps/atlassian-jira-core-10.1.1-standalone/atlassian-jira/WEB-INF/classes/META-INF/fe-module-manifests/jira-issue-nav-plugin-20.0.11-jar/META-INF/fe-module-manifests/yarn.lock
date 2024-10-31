@@ -1,0 +1,4 @@
+# yarn lockfile v1
+
+"jquery-simulate@file:src/main/frontend/jquery-simulate/0.0.1":
+  version "0.0.1"

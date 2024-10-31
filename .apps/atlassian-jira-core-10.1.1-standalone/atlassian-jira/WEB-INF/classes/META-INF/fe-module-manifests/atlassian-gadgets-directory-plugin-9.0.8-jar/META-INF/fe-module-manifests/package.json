@@ -1,0 +1,9 @@
+{
+  "name": "@atlassian/dc.atlassian-gadgets.directory-plugin",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "bitbucket.org:atlassian/atlassian-gadgets.git",
+    "directory": "directory-plugin"
+  }
+}

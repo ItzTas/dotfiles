@@ -1,0 +1,1 @@
+define("jira/util/version",["jira/api/version"],(function(i){"use strict";return i}));AJS.namespace("JIRA.Version",null,require("jira/util/version"));

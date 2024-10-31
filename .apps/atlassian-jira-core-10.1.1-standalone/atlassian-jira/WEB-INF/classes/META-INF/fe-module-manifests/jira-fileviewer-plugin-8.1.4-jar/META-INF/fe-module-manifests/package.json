@@ -1,0 +1,103 @@
+{
+  "name": "@atlassian/dc.jira.jira-fileviewer-plugin",
+  "private": true,
+  "version": "8.1.4",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.atlassian.com:7997/jiraserver/jira-fileviewer-plugin.git",
+    "directory": ""
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/patch-package --error-on-fail --error-on-warn",
+    "build": "copy-files-from-to"
+  },
+  "engines": {
+    "node": ">=14.16.0"
+  },
+  "dependencies": {
+    "@atlassian/fileviewer": "1.5.1",
+    "pdfjs-dist": "1.6.210"
+  },
+  "devDependencies": {
+    "patch-package": "^8.0.0",
+    "copy-files-from-to": "^3.9.1"
+  },
+  "copyFilesSettings": {
+    "minifyJs": false,
+    "whenFileExists": "overwrite"
+  },
+  "copyFiles": [
+    {
+      "from": "node_modules/@atlassian/fileviewer/lib/i18n/translations-en.properties",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/lib/i18n/translations-en.properties"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/lib/analytics-whitelist.json",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/lib/analytics-whitelist.json"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/dist/fileviewer-styles.css",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/dist/fileviewer-styles.css"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/dist/fileviewer-templates.js",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/dist/fileviewer-templates.js"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/dist/fileviewer.js",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/dist/fileviewer.js"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/dist/fileviewer-image-styles.css",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/dist/fileviewer-image-styles.css"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/dist/fileviewer-image-templates.js",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/dist/fileviewer-image-templates.js"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/dist/fileviewer-image.js",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/dist/fileviewer-image.js"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/dist/fileviewer-minimode-styles.css",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/dist/fileviewer-minimode-styles.css"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/dist/fileviewer-minimode-templates.js",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/dist/fileviewer-minimode-templates.js"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/dist/fileviewer-minimode.js",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/dist/fileviewer-minimode.js"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/vendor/pdfjs/compatibility.js",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/vendor/pdfjs/compatibility.js"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/vendor/pdfjs/pdf.min.js",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/vendor/pdfjs/pdf.min.js"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/dist/fileviewer-document-styles.css",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/dist/fileviewer-document-styles.css"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/dist/fileviewer-document-templates.js",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/dist/fileviewer-document-templates.js"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/dist/fileviewer-document.js",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/dist/fileviewer-document.js"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/vendor/pdfjs/pdf.worker.min.js",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/vendor/pdfjs/pdf.worker.min.js"
+    },
+    {
+      "from": "node_modules/@atlassian/fileviewer/vendor/pdfjs/bcmaps/*",
+      "to": "target/classes/node_modules/@atlassian/fileviewer/vendor/pdfjs/bcmaps/"
+    }
+  ]
+}

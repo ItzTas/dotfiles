@@ -1,0 +1,10 @@
+{
+  "name": "@atlassian/dc.shared.upm-server.upm-application-plugin",
+  "author": "Atlassian",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://stash.atlassian.com/scm/ecoserver/upm-server.git",
+    "directory": "upm-application-plugin"
+  }
+}

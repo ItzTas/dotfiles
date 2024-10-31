@@ -1,0 +1,1 @@
+define("jira/util/events/reasons",require("jira/api/events/reasons"));AJS.namespace("JIRA.CONTENT_ADDED_REASON",null,require("jira/util/events/reasons"));

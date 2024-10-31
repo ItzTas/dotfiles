@@ -1,0 +1,33 @@
+{
+  "name": "@atlassian/dc.atlassian-gadgets.publisher-plugin",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "bitbucket.org:atlassian/atlassian-gadgets.git",
+    "directory": "publisher-plugin"
+  },
+  "scripts": {
+    "build": "copy-files-from-to"
+  },
+  "dependencies": {
+    "google-closure-templates": "file:src/main/frontend/unhosted/google-closure-templates",
+    "jquery-aop": "file:src/main/frontend/unhosted/jquery-aop"
+  },
+  "devDependencies": {
+    "copy-files-from-to": "^3.9.1",
+    "patch-package": "^8.0.0"
+  },
+  "copyFiles": [
+    {
+      "from": "node_modules/jquery-aop/src/aop.js",
+      "to": "target/classes/lib/vendor/jquery.aop.js"
+    },
+    {
+      "from": "node_modules/google-closure-templates/javascript/soyutils.js",
+      "to": "target/classes/templates/soyutils.js"
+    }
+  ],
+  "copyFilesSettings": {
+    "minifyJs": true
+  }
+}

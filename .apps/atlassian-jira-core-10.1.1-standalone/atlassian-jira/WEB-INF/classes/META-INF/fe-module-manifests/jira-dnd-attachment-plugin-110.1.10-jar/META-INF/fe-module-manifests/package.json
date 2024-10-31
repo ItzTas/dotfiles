@@ -1,0 +1,11 @@
+{
+  "name": "@atlassian/dc.jira.jira-drag-drop-attachments-plugin",
+  "author": "Atlassian",
+  "private": true,
+  "version": "7.0.4",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.org:atlassian/jira-drag-drop-attachments-plugin.git",
+    "directory": "plugin"
+  }
+}

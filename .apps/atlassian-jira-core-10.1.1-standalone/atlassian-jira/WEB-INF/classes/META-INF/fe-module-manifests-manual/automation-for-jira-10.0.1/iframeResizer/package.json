@@ -1,0 +1,11 @@
+{
+  "name": "iframe-resizer",
+  "description": "Keep iFrames sized to their content.",
+  "homepage": "https://iframe-resizer.com",
+    "author": {
+        "name": "David J. Bradshaw",
+        "email": "info@iframe-resizer.com"
+    },
+  "repository": {"type": "git", "url": "https://github.com/davidjbradshaw/iframe-resizer"},
+  "version": "3.5.5"
+}

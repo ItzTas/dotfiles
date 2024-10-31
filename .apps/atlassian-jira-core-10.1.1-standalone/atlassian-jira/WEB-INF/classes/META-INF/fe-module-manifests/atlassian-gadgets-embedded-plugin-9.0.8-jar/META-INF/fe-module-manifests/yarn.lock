@@ -1,0 +1,4 @@
+# yarn lockfile v1
+
+"json-js@file:src/main/frontend/unhosted/json-js":
+  version "0.0.1"
