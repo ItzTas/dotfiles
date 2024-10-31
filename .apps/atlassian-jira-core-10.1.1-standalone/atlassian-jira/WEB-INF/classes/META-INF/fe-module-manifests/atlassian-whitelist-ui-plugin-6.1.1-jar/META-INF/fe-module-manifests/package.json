@@ -1,0 +1,11 @@
+{
+  "name": "@atlassian/dc.shared.atlassian-whitelist.ui-plugin",
+  "author": "Atlassian",
+  "private": true,
+  "version": "6.0.2",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:atlassian/atlassian-whitelist.git",
+    "directory": "atlassian-whitelist-ui-plugin"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@atlassian/dc.jira.project-templates-plugin",
+  "author": "Atlassian",
+  "private": true,
+  "version": "9.0.4",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.atlassian.com:7997/jiraserver/jira-project-templates-plugin.git",
+    "directory": "project-templates-plugin"
+  },
+  "scripts": {
+    "build": "copy-files-from-to"
+  },
+  "copyFiles": [
+    {
+      "from": "node_modules/jquery.dotdotdot/src/jquery.dotdotdot-1.5.7.js",
+      "to": "target/classes/js/lib/jquery.dotdotdot-1.5.7.js"
+    }
+  ],
+  "copyFilesSettings": {
+    "minifyJs": true,
+    "whenFileExists": "overwrite"
+  },
+  "dependencies": {
+    "jquery.dotdotdot": "file:./src/main/frontend/js/lib/jquery.dotdotdot/1.5.7"
+  },
+  "devDependencies": {
+    "copy-files-from-to": "3.9.0"
+  }
+}

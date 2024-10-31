@@ -1,0 +1,166 @@
+{
+  "name": "@atlassian/dc.shared.business-insights.core-plugin",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.atlassian.com:7997/dcq/business-insights.git",
+    "directory": "core-plugin"
+  },
+  "scripts": {
+    "analyze": "NODE_ENV=production atlas-fe build && webpack-bundle-analyzer report/stats.json ../target/classes/",
+    "analyze:dev": "NODE_ENV=development atlas-fe build && webpack-bundle-analyzer report/stats.json ../target/classes/",
+    "build": "atlas-fe build",
+    "cilint": "npm-run-all2 --parallel cilint:*",
+    "cilint:es": "eslint \"src/**/*.{ts,tsx,js}\"",
+    "cilint:format": "prettier --check \"src/**/*.{ts,tsx,js,json}\"",
+    "cilint:license": "solicitorio .",
+    "cilint:lockfile": "lockfile-lint --path yarn.lock --allowed-hosts packages.atlassian.com --validate-https",
+    "cilint:package": "sort-package-json --check",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,json}\" && sort-package-json",
+    "lint": "eslint \"src/**/*.{ts,tsx,js}\" --fix",
+    "lint-staged:license": "solicitorio . && :",
+    "lockfile-lint": "lockfile-lint --path yarn.lock --allowed-hosts packages.atlassian.com --validate-https",
+    "start": "NODE_ENV=development atlas-fe start",
+    "start:prepare": "cd .. && NODE_ENV=development mvn package -U -DwatchMode -DskipFeTests",
+    "start:watch": "NODE_ENV=development atlas-fe watch",
+    "start:watch-prepare": "NODE_ENV=development atlas-fe watch-prepare",
+    "test": "yarn lockfile-lint && yarn-deduplicate --list --fail && eslint --max-warnings=0 && jest --verbose"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "eslint --max-warnings=0"
+    ],
+    "*.{ts,tsx,js,json}": [
+      "prettier --write"
+    ],
+    "package.json": "sort-package-json",
+    "yarn.lock": "yarn lockfile-lint",
+    "(package.json|yarn.lock)": "yarn run lint-staged:license"
+  },
+  "babel": {
+    "presets": [
+      "module:@atlassian/atlas-fe/presets/babel",
+      "module:@atlassian/atlas-fe-typescript/presets/babel",
+      "module:@atlassian/atlas-fe-react/presets/babel"
+    ]
+  },
+  "browserslist": [
+    "extends @atlassian/browserslist-config-server"
+  ],
+  "prettier": "@atlassian/atlas-fe/presets/prettier",
+  "eslintConfig": {
+    "extends": [
+      "@atlassian/eslint-config-atlas-fe/javascript",
+      "@atlassian/eslint-config-atlas-fe/react",
+      "@atlassian/eslint-config-atlas-fe/typescript",
+      "@atlassian/eslint-config-atlas-fe/prettier",
+      "plugin:jsx-a11y/recommended",
+      "plugin:jest/recommended"
+    ],
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": [
+        "error",
+        {
+          "allowExpressions": true
+        }
+      ]
+    },
+    "root": true
+  },
+  "jest": {
+    "automock": false,
+    "clearMocks": true,
+    "moduleNameMapper": {
+      "^wrm/format$": "@atlassian/wrm-react-i18n/format.js"
+    },
+    "setupFiles": [
+      "./src/test/setup/setupJest.ts"
+    ],
+    "setupFilesAfterEnv": [
+      "./src/test/setup/setupJestAfterEnv.ts"
+    ]
+  },
+  "resolutions": {
+    "atlassian-webresource-webpack-plugin": "^4.10.0",
+    "chokidar": "^3.6.0",
+    "fsevents": "^2.2.1",
+    "lodash": "^4.17.21",
+    "ua-parser-js": "^0.7.31"
+  },
+  "dependencies": {
+    "@atlaskit/button": "^16.18.1",
+    "@atlaskit/checkbox": "^12.3.4",
+    "@atlaskit/code": "^14.3.1",
+    "@atlaskit/css-reset": "^6.10.1",
+    "@atlaskit/datetime-picker": "^11.1.11",
+    "@atlaskit/dropdown-menu": "^11.0.3",
+    "@atlaskit/dynamic-table": "^14.4.4",
+    "@atlaskit/empty-state": "^7.11.3",
+    "@atlaskit/flag": "^14.7.3",
+    "@atlaskit/form": "^8.11.13",
+    "@atlaskit/icon": "^21.9.1",
+    "@atlaskit/locale": "^2.8.0",
+    "@atlaskit/lozenge": "^11.10.1",
+    "@atlaskit/menu": "^1.2.1",
+    "@atlaskit/modal-dialog": "^12.15.6",
+    "@atlaskit/page": "^12.6.0",
+    "@atlaskit/page-header": "^10.9.2",
+    "@atlaskit/section-message": "^6.6.4",
+    "@atlaskit/textfield": "^5.6.8",
+    "@atlaskit/theme": "^12.12.0",
+    "@atlassian/wrm-react-i18n": "^2.0.1",
+    "date-fns": "^2.30.0",
+    "date-fns-tz": "^1.1.6",
+    "mixin-deep": "^2.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0",
+    "styled-components": "^5.3.3",
+    "when-dom-ready": "^1.2.12"
+  },
+  "devDependencies": {
+    "@atlassian/atlas-fe": "^0.3.3",
+    "@atlassian/atlas-fe-clientside-extensions": "^0.3.3",
+    "@atlassian/atlas-fe-react": "^0.3.3",
+    "@atlassian/atlas-fe-typescript": "^0.3.3",
+    "@atlassian/solicitorio": "^3.2.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest-when": "^2.7.3",
+    "@types/react": "^17.0.80",
+    "@types/react-dom": "^17.0.25",
+    "@types/react-router-dom": "^5.1.9",
+    "@types/styled-components": "^5.1.15",
+    "@types/when-dom-ready": "^1.2.0",
+    "atlassian-webresource-webpack-plugin": "^4.10.0",
+    "css-loader": "^5.2.7",
+    "eslint-plugin-jest": "^24.4.3",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "husky": "^4.3.8",
+    "jest": "^26.6.3",
+    "jest-fetch-mock": "^3.0.3",
+    "jest-when": "^3.2.1",
+    "lint-staged": "^10.5.4",
+    "lockfile-lint": "^4.6.2",
+    "npm-run-all2": "^6.1.2",
+    "sort-package-json": "^1.49.0",
+    "style-loader": "^2.0.0",
+    "typescript": "^4.2.4",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-deduplication-plugin": "^0.0.8",
+    "yarn-deduplicate": "^3.1.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.2.1"
+  },
+  "engines": {
+    "node": ">=16.13.2",
+    "yarn": ">=1.22.19"
+  }
+}

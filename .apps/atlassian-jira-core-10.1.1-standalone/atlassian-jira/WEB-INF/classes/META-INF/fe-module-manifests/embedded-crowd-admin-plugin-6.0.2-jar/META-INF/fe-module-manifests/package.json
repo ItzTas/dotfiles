@@ -1,0 +1,12 @@
+{
+  "name": "@atlassian/dc.embedded-crowd.embedded-crowd-admin-plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Atlassian",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@stash.atlassian.com:7997/cwd/atlassian-embedded-crowd.git",
+    "directory": "embedded-crowd-admin-plugin"
+  }
+}

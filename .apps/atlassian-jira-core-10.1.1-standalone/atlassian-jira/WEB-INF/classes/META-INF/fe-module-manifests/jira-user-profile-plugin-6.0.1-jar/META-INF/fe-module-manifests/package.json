@@ -1,0 +1,10 @@
+{
+    "name": "@atlassian/dc.jira.jira-user-profile-plugin",
+    "private": true,
+    "version": "6.0.0",
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@bitbucket.org:atlassian/jira-user-profile-plugin.git",
+        "directory": "src"
+    }
+}

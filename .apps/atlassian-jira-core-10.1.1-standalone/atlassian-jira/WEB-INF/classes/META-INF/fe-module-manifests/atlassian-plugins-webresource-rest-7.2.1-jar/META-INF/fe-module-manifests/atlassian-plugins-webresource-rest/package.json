@@ -1,0 +1,34 @@
+{
+  "name": "atlassian-plugins-webresource-rest",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "13.1.3",
+    "@rollup/plugin-terser": "0.4.3",
+    "@rollup/plugin-typescript": "8.3.4",
+    "@types/jest": "27.5.2",
+    "jest": "27.5.1",
+    "jest-extended": "2.0.0",
+    "jest-junit": "13.0.0",
+    "jquery": "3.6.2",
+    "rollup": "2.70.2",
+    "ts-jest": "27.1.5",
+    "tslib": "2.3.1",
+    "typescript": "4.6.4"
+  },
+  "resolutions": {
+    "serialize-javascript": "6.0.2"
+  },
+  "scripts": {
+    "build": "rollup --config --failAfterWarnings",
+    "test": "jest",
+    "test:ci": "jest --coverage"
+  },
+  "jest-junit": {
+    "suiteName": "atlassian-plugin-webresource-rest",
+    "suiteNameTemplate": "{filename}",
+    "outputDirectory": "target/surefire-reports",
+    "outputName": "jest.xml",
+    "uniqueOutputName": "false"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@atlassian/dc.jira.jira-mobile-server-rest",
+  "private": true,
+  "version": "5.0.0",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.atlassian.com:7997/ms/jira-mobile-server-rest.git",
+    "directory": "jira-mobile-rest"
+  }
+}

@@ -1,0 +1,48 @@
+define('jira/dialog/user-profile-dialog', ['jira/dialog/form-dialog2', 'jquery'], function (FormDialog2, jQuery) {
+  'use strict';
+
+  /**
+   * @class UserProfileDialog
+   * @extends FormDialog2
+   */
+  return FormDialog2.extend({
+    _getDefaultOptions: function _getDefaultOptions() {
+      return jQuery.extend(this._super(), {
+        notifier: "#userdetails-notify"
+      });
+    },
+    _handleSubmitResponse: function _handleSubmitResponse() {
+      if (this.serverIsDone) {
+        if (this.options.autoClose) {
+          this.hide();
+        }
+        this._reloadOrNotify();
+      }
+    },
+    _reload: function _reload() {
+      return false;
+    },
+    show: function show() {
+      this._super();
+      this._hideNotifier();
+    },
+    _reloadOrNotify: function _reloadOrNotify() {
+      if (this._reload()) {
+        window.location.reload();
+      } else {
+        this._showNotifier();
+      }
+    },
+    _showNotifier: function _showNotifier() {
+      jQuery(this.options.notifier).removeClass("hidden");
+    },
+    _hideNotifier: function _hideNotifier() {
+      jQuery(this.options.notifier).addClass("hidden");
+    }
+  });
+});
+
+/** Preserve legacy namespace
+    @deprecated AJS.FormPopup */
+AJS.namespace("AJS.UserProfilePopup", null, require('jira/dialog/user-profile-dialog'));
+AJS.namespace('JIRA.UserProfileDialog', null, require('jira/dialog/user-profile-dialog'));

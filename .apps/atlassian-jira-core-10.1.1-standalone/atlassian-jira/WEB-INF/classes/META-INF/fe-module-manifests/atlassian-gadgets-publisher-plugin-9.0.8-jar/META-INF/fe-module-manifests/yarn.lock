@@ -1,0 +1,7 @@
+# yarn lockfile v1
+
+"google-closure-templates@file:src/main/frontend/unhosted/google-closure-templates":
+  version "20100422.0.0"
+
+"jquery-aop@file:src/main/frontend/unhosted/jquery-aop":
+  version "1.3.0"

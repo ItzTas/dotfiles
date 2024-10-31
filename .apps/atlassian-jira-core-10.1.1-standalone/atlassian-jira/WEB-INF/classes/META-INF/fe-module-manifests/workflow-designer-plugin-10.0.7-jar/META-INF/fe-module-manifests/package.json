@@ -1,0 +1,61 @@
+{
+  "scripts": {
+    "postinstall": "npm run delink-cocktail && npm run delink-jshint && patch-package --error-on-fail --error-on-warn && copy-files-from-to",
+    "//delink-*": "npm creates a symlink, but we want patch-package to leave the src folder alone",
+    "delink-cocktail": "rm -rf node_modules/backbone.cocktail && cp -r src/main/frontend/cocktail/0.3.0 node_modules/backbone.cocktail",
+    "delink-jshint": "rm -rf node_modules/jshint && cp -r src/main/frontend/jshint/1.0.0 node_modules/jshint"
+  },
+  "name": "jira-workflow-designer",
+  "private": true,
+  "version": "10.0.5",
+  "dependencies": {
+    "backbone.cocktail": "file:src/main/frontend/cocktail/0.3.0",
+    "draw2d": "file:src/main/frontend/draw2d/0.2013.5/",
+    "eve": "0.2.4",
+    "jshint": "file:src/main/frontend/jshint/1.0.0",
+    "raphael": "2.1.0",
+    "shifty": "file:src/main/frontend/shifty/0.6.1"
+  },
+  "devDependencies": {
+    "casperjs": "~1.1.3",
+    "copy-files-from-to": "^3.11.0",
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.9",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-jsdoc": "~0.4.0",
+    "grunt-notify": "~0.2.13",
+    "grunt-shell": "~0.4.0",
+    "patch-package": "^8.0.0"
+  },
+  "copyFilesSettings": {
+    "minifyJs": false,
+    "whenFileExists": "overwrite"
+  },
+  "copyFiles": [
+    {
+      "from": "node_modules/jshint/src/jshint-junit-xml-formatter.js",
+      "to": "etc/jshint-junit-xml-formatter/jshint-junit-xml-formatter.js"
+    },
+    {
+      "from": "node_modules/draw2d/src/**",
+      "to": "src/main/resources/js/lib/draw2d/"
+    },
+    {
+      "from": "node_modules/backbone.cocktail/src/cocktail-0.3.0.js",
+      "to": "src/main/resources/js/lib/cocktail-0.3.0.js"
+    },
+    {
+      "from": "node_modules/eve/eve.js",
+      "to": "src/main/resources/js/lib/eve-0.2.4.js"
+    },
+    {
+      "from": "node_modules/raphael/raphael.js",
+      "to": "src/main/resources/js/lib/raphael-2.1.0.js"
+    },
+    {
+      "from": "node_modules/shifty/src/shifty-0.6.1.js",
+      "to": "src/main/resources/js/lib/shifty-0.6.1.js"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@atlassian/dc.jira.jira-tzdetect-plugin",
+  "version": "4.1.2",
+  "description": "used for detecting a user timezone via their browser",
+  "main": "src/main/resources/userprofile/tzdetect-checker.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/atlassian/jira-tzdetect-plugin.git"
+  },
+  "author": "Atlassian",
+  "private": true,
+  "homepage": "https://bitbucket.org/atlassian/jira-tzdetect-plugin#readme"
+}

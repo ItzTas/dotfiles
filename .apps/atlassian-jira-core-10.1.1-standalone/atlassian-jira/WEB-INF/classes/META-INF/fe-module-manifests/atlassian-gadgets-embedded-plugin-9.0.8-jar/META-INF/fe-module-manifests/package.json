@@ -1,0 +1,29 @@
+{
+  "name": "@atlassian/dc.atlassian-gadgets.embedded-plugin",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "bitbucket.org:atlassian/atlassian-gadgets.git",
+    "directory": "embedded-plugin"
+  },
+  "scripts": {
+    "postinstall": "patch-package",
+    "build": "copy-files-from-to"
+  },
+  "dependencies": {
+    "json-js": "file:src/main/frontend/unhosted/json-js"
+  },
+  "devDependencies": {
+    "copy-files-from-to": "^3.9.1",
+    "patch-package": "^8.0.0"
+  },
+  "copyFiles": [
+    {
+      "from": "node_modules/json-js/json2.js",
+      "to": "target/classes/js/json.js"
+    }
+  ],
+  "copyFilesSettings": {
+    "minifyJs": true
+  }
+}

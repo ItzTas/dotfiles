@@ -1,0 +1,11 @@
+{
+  "name": "@atlassian/dc.shared.atlassian-nav-links.atlassian-nav-links-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "license": "",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.org/atlassian/atlassian-nav-links.git",
+    "directory": "atlassian-nav-links-plugin"
+  }
+}

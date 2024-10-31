@@ -1,0 +1,11 @@
+{
+    "name": "@atlassian/dc.jira.jira-lookandfeel-plugin",
+    "author": "Atlassian",
+    "private": true,
+    "version": "10.0.1",
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@stash.atlassian.com:7997/jiraserver/jira.git",
+        "directory": "jira-components/jira-plugins/jira-lookandfeel-plugin"
+    }
+}
