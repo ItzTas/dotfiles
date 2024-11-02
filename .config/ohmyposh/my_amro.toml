@@ -167,11 +167,11 @@ version = 2
     foreground = "#007ACC"
     template = "   "
 
-  [[blocks.segments]]
-    type = "bun"
-    style = "plain"
-    foreground = "#3C82F6"
-    template = " 🥟 "
+  # [[blocks.segments]]
+  #   type = "bun"
+  #   style = "plain"
+  #   foreground = "#3C82F6"
+  #   template = " 🥟 "
 
   # [[blocks.segments]]
   #   type = "docker"
