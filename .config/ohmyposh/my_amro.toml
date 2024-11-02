@@ -338,6 +338,13 @@ version = 2
       [blocks.segments.properties]
           extensions = ["*.ttf", "*.otf", "*.woff"]
 
+    [[blocks.segments]]
+      type = "node"
+      style = "plain"
+      foreground = "#3B82F6"
+      template = "  "
+      [blocks.segments.properties]
+          extensions = [".pkg.tar.zst", ".pkg.tar.xz", ".pkg.tar.gz", "*.pacman"]
 
   # end Personalized
 
