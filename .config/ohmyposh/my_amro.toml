@@ -141,7 +141,39 @@ version = 2
     type = "dotnet"
     style = "plain"
     foreground = "#007ACC"
-    template = "    "
+    template = "   "
+
+  [[blocks.segments]]
+    type = "angular"
+    style = "plain"
+    foreground = "#D9534F"
+    template = "  "
+
+  [[blocks.segments]]
+    type = "react"
+    style = "plain"
+    foreground = "#61DAFB"
+    template = "  "
+    [blocks.segments.properties]
+        extensions = ["*.jsx"]
+
+  [[blocks.segments]]
+    type = "cmake"
+    style = "plain"
+    foreground = "#007ACC"
+    template = "   "
+
+  [[blocks.segments]]
+    type = "bun"
+    style = "plain"
+    foreground = "#3C82F6"
+    template = " 🥟 "
+
+  # [[blocks.segments]]
+  #   type = "docker"
+  #   style = "plain"
+  #   foreground = "#00BFFF"
+  #   template = "  "
 
   [[blocks.segments]]
     type = "ocaml"
