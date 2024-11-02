@@ -18,18 +18,21 @@ version = 2
 
     [blocks.segments.properties]
       folder_separator_icon = '/'
-      style = 'full'
+      style = 'agnoster'
 
   [[blocks.segments]]
     type = 'git'
     style = 'plain'
     powerline_symbol = ''
-    template = '{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
+    template = '{{ .UpstreamIcon }}{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{end}}{{ if gt .Behind 0}}↓{{end}}{{ if gt .Ahead 0 }}↑{{end}}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
     foreground = '#14A5AE'
 
     [blocks.segments.properties]
       fetch_stash_count = true
       fetch_upstream_icon = true
+      branch_icon = ''
+      commit_icon = '@'
+      fetch_status = true
 
   [[blocks.segments]]
     type = 'python'
@@ -49,7 +52,7 @@ version = 2
   [[blocks.segments]]
     type = 'time'
     style = 'plain'
-    template = '{{ .CurrentDate | date "02-Jan 15:04:05" }}'
+    template = '{{ .CurrentDate | date "15:04:05" }}'
     foreground = '#B8C4C7'
 
   [[blocks.segments]]
