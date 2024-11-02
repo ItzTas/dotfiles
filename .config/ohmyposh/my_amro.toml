@@ -155,7 +155,8 @@ version = 2
     foreground = "#61DAFB"
     template = "  "
     [blocks.segments.properties]
-        extensions = ["*.jsx"]
+        extensions = ["*.jsx", "*.tsx"]
+
 
   [[blocks.segments]]
     type = "cmake"
@@ -221,7 +222,124 @@ version = 2
     type = "lua"
     style = "plain"
     foreground = "#56B6C2"
-    template = "   "
+    template = "  "
+
+  # Personalized
+  [[blocks.segments]]
+    type = "node"
+    style = "plain"
+    foreground = "#F7DF1E"
+    template = "  "
+    [blocks.segments.properties]
+        extensions = ["*.js", "*.cjs", "*.mjs"]
+
+  [[blocks.segments]]
+    type = "node"
+    style = "plain"
+    foreground = "#007ACC"
+    template = "  "
+    [blocks.segments.properties]
+        extensions = ["*.ts", "*.cts", "*.mts"]
+ 
+  [[blocks.segments]]
+    type = "node"
+    style = "plain"
+    foreground = "#E5A50A"
+    template = "  "
+    [blocks.segments.properties]
+        extensions = ["*.sh", ".bashrc", "*.bash"]
+        folders = ["*.sh"]
+
+    [[blocks.segments]]
+      type = "node"
+      style = "plain"
+      foreground = "#FFCC00"
+      template = "   "
+      [blocks.segments.properties]
+          extensions = ["*.md", "*.markdown", "*.rst"]
+
+    [[blocks.segments]]
+      type = "node"
+      style = "plain"
+      foreground = "#4479A1"
+      template = "  "
+      [blocks.segments.properties]
+          extensions = ["*.sql", "*.db", "*.sqlite"]
+
+    [[blocks.segments]]
+      type = "node"
+      style = "plain"
+      foreground = "#0db7ed"
+      template = "  "
+      [blocks.segments.properties]
+          extensions = ["Dockerfile", "docker-compose.yml", "*Dockerfile*"]
+
+    [[blocks.segments]]
+      type = "node"
+      style = "plain"
+      foreground = "#ff79c6"
+      template = "  "
+      [blocks.segments.properties]
+          extensions = [".zshrc", ".vimrc", ".editorconfig", "*.conf", "*.toml"]
+
+    [[blocks.segments]]
+      type = "node"
+      style = "plain"
+      foreground = "#e34c26"
+      template = "  "
+      [blocks.segments.properties]
+          extensions = ["*.html"]
+
+    [[blocks.segments]]
+      type = "node"
+      style = "plain"
+      foreground = "#563d7c"
+      template = "  "
+      [blocks.segments.properties]
+          extensions = ["*.css", "*.scss", "*.sass"]
+
+    [[blocks.segments]]
+      type = "node"
+      style = "plain"
+      foreground = "#FFD700"
+      template = "  "
+      [blocks.segments.properties]
+          extensions = ["*.png", "*.jpg", "*.jpeg", "*.gif", "*.svg"]
+
+    [[blocks.segments]]
+      type = "node"
+      style = "plain"
+      foreground = "#FF4500"
+      template = " 🎬 "
+      [blocks.segments.properties]
+          extensions = ["*.mp4", "*.mkv", "*.avi", "*.mov", "*.wmv"]
+
+    [[blocks.segments]]
+      type = "node"
+      style = "plain"
+      foreground = "#2980B9"
+      template = "  "
+      [blocks.segments.properties]
+          extensions = ["*.mp3", "*.wav", "*.flac"]
+
+    [[blocks.segments]]
+      type = "node"
+      style = "plain"
+      foreground = "#8E44AD"
+      template = "  "
+      [blocks.segments.properties]
+          extensions = ["*.zip", "*.tar", "*.gz", "*.rar", "*.7p"]
+
+    [[blocks.segments]]
+      type = "node"
+      style = "plain"
+      foreground = "#F39C12"
+      template = "  "
+      [blocks.segments.properties]
+          extensions = ["*.ttf", "*.otf", "*.woff"]
+
+
+  # end Personalized
 
   [[blocks.segments]]
     type = 'text'
