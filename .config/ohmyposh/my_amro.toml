@@ -72,7 +72,7 @@ version = 2
   [[blocks.segments]]
     type = "python"
     style = "plain"
-    foreground = "#1DB954"
+    foreground = "#50C878"
     template = "   "
     [blocks.segments.properties]
         display_mode = "context"
