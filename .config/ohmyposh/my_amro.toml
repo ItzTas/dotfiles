@@ -1,0 +1,203 @@
+version = 2
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    type = 'session'
+    style = 'plain'
+    template = ' {{ .UserName }} on'
+    foreground = '#45F1C2'
+
+  [[blocks.segments]]
+    type = 'path'
+    style = 'plain'
+    template = '  {{ .Path }} '
+    foreground = '#0CA0D8'
+
+    [blocks.segments.properties]
+      folder_separator_icon = '/'
+      style = 'full'
+
+  [[blocks.segments]]
+    type = 'git'
+    style = 'plain'
+    powerline_symbol = ''
+    template = '{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
+    foreground = '#14A5AE'
+
+    [blocks.segments.properties]
+      fetch_stash_count = true
+      fetch_upstream_icon = true
+
+  [[blocks.segments]]
+    type = 'python'
+    style = 'plain'
+    template = '(  {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} ){{ end }}{{ end }}'
+    foreground = '#BF3B30'
+
+    [blocks.segments.properties]
+        display_mode = 'environment'
+        fetch_virtual_env = true
+        folder_name_fallback = false
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'right'
+
+  [[blocks.segments]]
+    type = 'time'
+    style = 'plain'
+    template = '{{ .CurrentDate | date "02-Jan 15:04:05" }}'
+    foreground = '#B8C4C7'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'root'
+    style = 'plain'
+    template = ' '
+    foreground = '#cd5e42'
+
+  [[blocks.segments]]
+    type = 'text'
+    style = "plain"
+    template = "["
+    foreground = '#CD4277'
+
+  [[blocks.segments]]
+    type = "python"
+    style = "plain"
+    foreground = "#1DB954"
+    template = "   "
+    [blocks.segments.properties]
+        display_mode = "context"
+
+  [[blocks.segments]]
+    type = 'go'
+    style = "plain"
+    foreground = "#7FD5EA"
+    template = " ‭ﳑ "
+
+  [[blocks.segments]]
+    type = "node"
+    style = "plain"
+    foreground = "#6CA35E"
+    template = "  "
+
+  [[blocks.segments]]
+    type = "rust"
+    style = "plain"
+    foreground = "#D3672C"
+    template = "  "
+
+  [[blocks.segments]]
+    type = "elixir"
+    style = "plain"
+    foreground = "#422251"
+    template = "  "
+
+  [[blocks.segments]]
+    type = "java"
+    style = "plain"
+    foreground = "#A51C30"
+    template = "  "
+
+  [[blocks.segments]]
+    type = "php"
+    style = "plain"
+    foreground = "#75715E"
+    template = "  "
+
+  [[blocks.segments]]
+    type = "kotlin"
+    style = "plain"
+    foreground = "#906cff"
+    template = " <b>K</b> "
+
+  [[blocks.segments]]
+    type = "ruby"
+    style = "plain"
+    foreground = "#D32F2F"
+    template = "  "
+
+  [[blocks.segments]]
+    type = "haskell"
+    style = "plain"
+    foreground = "#8A3FFC"
+    template = "   "
+
+  [[blocks.segments]]
+    type = "dotnet"
+    style = "plain"
+    foreground = "#007ACC"
+    template = "    "
+
+  [[blocks.segments]]
+    type = "ocaml"
+    style = "plain"
+    foreground = "#d08770"
+    template = "  "
+
+  [[blocks.segments]]
+    type = "perl"
+    style = "plain"
+    foreground = "#4063D8"
+    template = "  "
+
+  [[blocks.segments]]
+    type = "r"
+    style = "plain"
+    foreground = "lightblue"
+    template = " R "
+
+  [[blocks.segments]]
+    type = "vala"
+    style = "plain"
+    foreground = "#1E90FF"
+    template = "  "
+
+  [[blocks.segments]]
+    type = "dart"
+    style = "plain"
+    foreground = "#FFD700"
+    template = "  "
+
+  [[blocks.segments]]
+    type = "swift"
+    style = "plain"
+    foreground = "#FFA500"
+    template = "  "
+
+  [[blocks.segments]]
+    type = "julia"
+    style = "plain"
+    foreground = "#8A2BE2"
+    template = "  "
+
+  [[blocks.segments]]
+    type = "lua"
+    style = "plain"
+    foreground = "#56B6C2"
+    template = "   "
+
+  [[blocks.segments]]
+    type = 'text'
+    style = "plain"
+    template = "]  "
+    foreground = '#CD4277'
+
+  # [[blocks.segments]]
+  #   type = 'text'
+  #   style = 'plain'
+  #   template = '# '
+  #   foreground = '#CD4277'
+
+[transient_prompt]
+  foreground = '#CD4277'
+  template = '# '
+
