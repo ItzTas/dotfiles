@@ -412,3 +412,4 @@ export PATH="$PATH:/home/talinux/.dotnet/tools"
 export PATH=$PATH:~/Unity/Hub/Editor/6000.0.23f1/Editor
 . "$HOME/.cargo/env"
 export PATH=$PATH:~/.cargo/env
+export PATH="$PATH:/usr/local/bin/tmux"

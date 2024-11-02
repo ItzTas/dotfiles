@@ -253,13 +253,13 @@ version = 2
         extensions = ["*.sh", ".bashrc", "*.bash"]
         folders = ["*.sh"]
 
-    [[blocks.segments]]
-      type = "node"
-      style = "plain"
-      foreground = "#FFCC00"
-      template = "  "
-      [blocks.segments.properties]
-          extensions = ["*.md", "*.markdown", "*.rst"]
+    # [[blocks.segments]]
+    #   type = "node"
+    #   style = "plain"
+    #   foreground = "#FFCC00"
+    #   template = "  "
+    #   [blocks.segments.properties]
+    #       extensions = ["*.md", "*.markdown", "*.rst"]
 
     [[blocks.segments]]
       type = "node"
