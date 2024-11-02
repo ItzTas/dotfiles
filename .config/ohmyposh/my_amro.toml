@@ -232,7 +232,7 @@ version = 2
     type = "node"
     style = "plain"
     foreground = "#F7DF1E"
-    template = "  "
+    template = " "
     [blocks.segments.properties]
         extensions = ["*.js", "*.cjs", "*.mjs"]
 
