@@ -254,7 +254,7 @@ version = 2
       type = "node"
       style = "plain"
       foreground = "#FFCC00"
-      template = "   "
+      template = "  "
       [blocks.segments.properties]
           extensions = ["*.md", "*.markdown", "*.rst"]
 
