@@ -1,65 +1,76 @@
-version = 2
+version = 3
+
+[transient_prompt]
+  template = '# '
+  foreground = '#CD4277'
+  background = ''
 
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
 
   [[blocks.segments]]
-    type = 'session'
     style = 'plain'
     template = ' {{ .UserName }} on'
     foreground = '#45F1C2'
+    background = ''
+    type = 'session'
 
   [[blocks.segments]]
-    type = 'path'
     style = 'plain'
     template = '  {{ .Path }} '
     foreground = '#0CA0D8'
+    background = ''
+    type = 'path'
 
     [blocks.segments.properties]
       folder_separator_icon = '/'
       style = 'agnoster'
 
   [[blocks.segments]]
-    type = 'git'
     style = 'plain'
-    powerline_symbol = ''
     template = '{{ .UpstreamIcon }}{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{end}}{{ if gt .Behind 0}}↓{{end}}{{ if gt .Ahead 0 }}↑{{end}}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
     foreground = '#14A5AE'
+    powerline_symbol = ''
+    background = ''
+    type = 'git'
 
     [blocks.segments.properties]
-      fetch_stash_count = true
-      fetch_upstream_icon = true
       branch_icon = ''
       commit_icon = '@'
+      fetch_stash_count = true
       fetch_status = true
+      fetch_upstream_icon = true
 
   [[blocks.segments]]
-    type = 'python'
     style = 'plain'
     template = '(  {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} ){{ end }}{{ end }}'
     foreground = '#BF3B30'
+    background = ''
+    type = 'python'
 
     [blocks.segments.properties]
-        display_mode = 'environment'
-        fetch_virtual_env = true
-        folder_name_fallback = false
+      display_mode = 'environment'
+      fetch_virtual_env = true
+      folder_name_fallback = false
 
 [[blocks]]
   type = 'prompt'
   alignment = 'right'
 
   [[blocks.segments]]
-    type = 'time'
     style = 'plain'
     template = '{{ .CurrentDate | date "15:04:05" }}'
     foreground = '#B8C4C7'
+    background = ''
+    type = 'time'
 
   [[blocks.segments]]
-    type = 'os'
     style = 'plain'
+    template = ' {{.Icon}} '
     foreground = '#D8BFD8'
-    template = " {{.Icon}} "
+    background = ''
+    type = 'os'
 
 [[blocks]]
   type = 'prompt'
@@ -67,303 +78,323 @@ version = 2
   newline = true
 
   [[blocks.segments]]
-    type = 'root'
     style = 'plain'
     template = ' '
     foreground = '#cd5e42'
+    background = ''
+    type = 'root'
 
   [[blocks.segments]]
-    type = 'text'
-    style = "plain"
-    template = "["
+    style = 'plain'
+    template = '['
     foreground = '#CD4277'
+    background = ''
+    type = 'text'
 
   [[blocks.segments]]
-    type = "python"
-    style = "plain"
-    foreground = "#50C878"
-    template = "   "
+    style = 'plain'
+    template = '   '
+    foreground = '#50C878'
+    background = ''
+    type = 'python'
+
     [blocks.segments.properties]
-        display_mode = "context"
+      display_mode = 'context'
 
   [[blocks.segments]]
+    style = 'plain'
+    template = ' ‭ﳑ '
+    foreground = '#7FD5EA'
+    background = ''
     type = 'go'
-    style = "plain"
-    foreground = "#7FD5EA"
-    template = " ‭ﳑ "
 
   [[blocks.segments]]
-    type = "node"
-    style = "plain"
-    foreground = "#6CA35E"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#6CA35E'
+    background = ''
+    type = 'node'
 
   [[blocks.segments]]
-    type = "rust"
-    style = "plain"
-    foreground = "#D3672C"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#D3672C'
+    background = ''
+    type = 'rust'
 
   [[blocks.segments]]
-    type = "elixir"
-    style = "plain"
-    foreground = "#422251"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#422251'
+    background = ''
+    type = 'elixir'
 
   [[blocks.segments]]
-    type = "java"
-    style = "plain"
-    foreground = "#A51C30"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#A51C30'
+    background = ''
+    type = 'java'
 
   [[blocks.segments]]
-    type = "php"
-    style = "plain"
-    foreground = "#75715E"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#75715E'
+    background = ''
+    type = 'php'
 
   [[blocks.segments]]
-    type = "kotlin"
-    style = "plain"
-    foreground = "#906cff"
-    template = " <b>K</b> "
+    style = 'plain'
+    template = ' <b>K</b> '
+    foreground = '#906cff'
+    background = ''
+    type = 'kotlin'
 
   [[blocks.segments]]
-    type = "ruby"
-    style = "plain"
-    foreground = "#D32F2F"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#D32F2F'
+    background = ''
+    type = 'ruby'
 
   [[blocks.segments]]
-    type = "haskell"
-    style = "plain"
-    foreground = "#8A3FFC"
-    template = "   "
+    style = 'plain'
+    template = '   '
+    foreground = '#8A3FFC'
+    background = ''
+    type = 'haskell'
 
   [[blocks.segments]]
-    type = "dotnet"
-    style = "plain"
-    foreground = "#007ACC"
-    template = "   "
+    style = 'plain'
+    template = '   '
+    foreground = '#007ACC'
+    background = ''
+    type = 'dotnet'
 
   [[blocks.segments]]
-    type = "angular"
-    style = "plain"
-    foreground = "#D9534F"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#D9534F'
+    background = ''
+    type = 'angular'
 
   [[blocks.segments]]
-    type = "react"
-    style = "plain"
-    foreground = "#61DAFB"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#61DAFB'
+    background = ''
+    type = 'react'
+
     [blocks.segments.properties]
-        extensions = ["*.jsx", "*.tsx"]
-
-
-  [[blocks.segments]]
-    type = "cmake"
-    style = "plain"
-    foreground = "#007ACC"
-    template = "   "
-
-  # [[blocks.segments]]
-  #   type = "bun"
-  #   style = "plain"
-  #   foreground = "#3C82F6"
-  #   template = " 🥟 "
-
-  # [[blocks.segments]]
-  #   type = "docker"
-  #   style = "plain"
-  #   foreground = "#00BFFF"
-  #   template = "  "
+      extensions = ['*.jsx', '*.tsx']
 
   [[blocks.segments]]
-    type = "ocaml"
-    style = "plain"
-    foreground = "#d08770"
-    template = "  "
+    style = 'plain'
+    template = '   '
+    foreground = '#007ACC'
+    background = ''
+    type = 'cmake'
 
   [[blocks.segments]]
-    type = "perl"
-    style = "plain"
-    foreground = "#4063D8"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#d08770'
+    background = ''
+    type = 'ocaml'
 
   [[blocks.segments]]
-    type = "r"
-    style = "plain"
-    foreground = "lightblue"
-    template = " R "
+    style = 'plain'
+    template = '  '
+    foreground = '#4063D8'
+    background = ''
+    type = 'perl'
 
   [[blocks.segments]]
-    type = "vala"
-    style = "plain"
-    foreground = "#1E90FF"
-    template = "  "
+    style = 'plain'
+    template = ' R '
+    foreground = 'lightblue'
+    background = ''
+    type = 'r'
 
   [[blocks.segments]]
-    type = "dart"
-    style = "plain"
-    foreground = "#FFD700"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#1E90FF'
+    background = ''
+    type = 'vala'
 
   [[blocks.segments]]
-    type = "swift"
-    style = "plain"
-    foreground = "#FFA500"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#FFD700'
+    background = ''
+    type = 'dart'
 
   [[blocks.segments]]
-    type = "julia"
-    style = "plain"
-    foreground = "#8A2BE2"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#FFA500'
+    background = ''
+    type = 'swift'
 
   [[blocks.segments]]
-    type = "lua"
-    style = "plain"
-    foreground = "#56B6C2"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#8A2BE2'
+    background = ''
+    type = 'julia'
 
-  # Personalized
   [[blocks.segments]]
-    type = "node"
-    style = "plain"
-    foreground = "#F7DF1E"
-    template = " "
+    style = 'plain'
+    template = '  '
+    foreground = '#56B6C2'
+    background = ''
+    type = 'lua'
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = ' '
+    foreground = '#F7DF1E'
+    background = ''
+    type = 'node'
+
     [blocks.segments.properties]
-        extensions = ["*.js", "*.cjs", "*.mjs"]
+      extensions = ['*.js', '*.cjs', '*.mjs']
 
   [[blocks.segments]]
-    type = "node"
-    style = "plain"
-    foreground = "#007ACC"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#007ACC'
+    background = ''
+    type = 'node'
+
     [blocks.segments.properties]
-        extensions = ["*.ts", "*.cts", "*.mts"]
- 
+      extensions = ['*.ts', '*.cts', '*.mts']
+
   [[blocks.segments]]
-    type = "node"
-    style = "plain"
-    foreground = "#E5A50A"
-    template = "  "
+    style = 'plain'
+    template = '  '
+    foreground = '#E5A50A'
+    background = ''
+    type = 'node'
+
     [blocks.segments.properties]
-        extensions = ["*.sh", ".bashrc", "*.bash"]
-        folders = ["*.sh"]
-
-    # [[blocks.segments]]
-    #   type = "node"
-    #   style = "plain"
-    #   foreground = "#FFCC00"
-    #   template = "  "
-    #   [blocks.segments.properties]
-    #       extensions = ["*.md", "*.markdown", "*.rst"]
-
-    [[blocks.segments]]
-      type = "node"
-      style = "plain"
-      foreground = "#4479A1"
-      template = "  "
-      [blocks.segments.properties]
-          extensions = ["*.sql", "*.db", "*.sqlite"]
-
-    [[blocks.segments]]
-      type = "node"
-      style = "plain"
-      foreground = "#0db7ed"
-      template = "  "
-      [blocks.segments.properties]
-          extensions = ["Dockerfile", "docker-compose.yml", "*Dockerfile*"]
-
-    [[blocks.segments]]
-      type = "node"
-      style = "plain"
-      foreground = "#ff79c6"
-      template = "  "
-      [blocks.segments.properties]
-          extensions = [".zshrc", ".vimrc", ".editorconfig", "*.conf", "*.toml"]
-
-    [[blocks.segments]]
-      type = "node"
-      style = "plain"
-      foreground = "#e34c26"
-      template = "  "
-      [blocks.segments.properties]
-          extensions = ["*.html"]
-
-    [[blocks.segments]]
-      type = "node"
-      style = "plain"
-      foreground = "#563d7c"
-      template = "  "
-      [blocks.segments.properties]
-          extensions = ["*.css", "*.scss", "*.sass"]
-
-    [[blocks.segments]]
-      type = "node"
-      style = "plain"
-      foreground = "#FFD700"
-      template = "  "
-      [blocks.segments.properties]
-          extensions = ["*.png", "*.jpg", "*.jpeg", "*.gif", "*.svg"]
-
-    [[blocks.segments]]
-      type = "node"
-      style = "plain"
-      foreground = "#FF4500"
-      template = " 🎬 "
-      [blocks.segments.properties]
-          extensions = ["*.mp4", "*.mkv", "*.avi", "*.mov", "*.wmv"]
-
-    [[blocks.segments]]
-      type = "node"
-      style = "plain"
-      foreground = "#2980B9"
-      template = "  "
-      [blocks.segments.properties]
-          extensions = ["*.mp3", "*.wav", "*.flac"]
-
-    [[blocks.segments]]
-      type = "node"
-      style = "plain"
-      foreground = "#8E44AD"
-      template = "  "
-      [blocks.segments.properties]
-          extensions = ["*.zip", "*.tar", "*.gz", "*.rar", "*.7p"]
-
-    [[blocks.segments]]
-      type = "node"
-      style = "plain"
-      foreground = "#F39C12"
-      template = "  "
-      [blocks.segments.properties]
-          extensions = ["*.ttf", "*.otf", "*.woff"]
-
-    [[blocks.segments]]
-      type = "node"
-      style = "plain"
-      foreground = "#3B82F6"
-      template = "  "
-      [blocks.segments.properties]
-          extensions = [".pkg.tar.zst", ".pkg.tar.xz", ".pkg.tar.gz", "*.pacman"]
-
-  # end Personalized
+      extensions = ['*.sh', '.bashrc', '*.bash']
+      folders = ['*.sh']
 
   [[blocks.segments]]
-    type = 'text'
-    style = "plain"
-    template = "]  "
+    style = 'plain'
+    template = '  '
+    foreground = '#4479A1'
+    background = ''
+    type = 'node'
+
+    [blocks.segments.properties]
+      extensions = ['*.sql', '*.db', '*.sqlite']
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = '  '
+    foreground = '#0db7ed'
+    background = ''
+    type = 'node'
+
+    [blocks.segments.properties]
+      extensions = ['Dockerfile', 'docker-compose.yml', '*Dockerfile*']
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = '  '
+    foreground = '#ff79c6'
+    background = ''
+    type = 'node'
+
+    [blocks.segments.properties]
+      extensions = ['.zshrc', '.vimrc', '.editorconfig', '*.conf', '*.toml']
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = '  '
+    foreground = '#e34c26'
+    background = ''
+    type = 'node'
+
+    [blocks.segments.properties]
+      extensions = ['*.html']
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = '  '
+    foreground = '#563d7c'
+    background = ''
+    type = 'node'
+
+    [blocks.segments.properties]
+      extensions = ['*.css', '*.scss', '*.sass']
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = '  '
+    foreground = '#FFD700'
+    background = ''
+    type = 'node'
+
+    [blocks.segments.properties]
+      extensions = ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.svg']
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = ' 🎬 '
+    foreground = '#FF4500'
+    background = ''
+    type = 'node'
+
+    [blocks.segments.properties]
+      extensions = ['*.mp4', '*.mkv', '*.avi', '*.mov', '*.wmv']
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = '  '
+    foreground = '#2980B9'
+    background = ''
+    type = 'node'
+
+    [blocks.segments.properties]
+      extensions = ['*.mp3', '*.wav', '*.flac']
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = '  '
+    foreground = '#8E44AD'
+    background = ''
+    type = 'node'
+
+    [blocks.segments.properties]
+      extensions = ['*.zip', '*.tar', '*.gz', '*.rar', '*.7p']
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = '  '
+    foreground = '#F39C12'
+    background = ''
+    type = 'node'
+
+    [blocks.segments.properties]
+      extensions = ['*.ttf', '*.otf', '*.woff']
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = '  '
+    foreground = '#3B82F6'
+    background = ''
+    type = 'node'
+
+    [blocks.segments.properties]
+      extensions = ['.pkg.tar.zst', '.pkg.tar.xz', '.pkg.tar.gz', '*.pacman']
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = ']  '
     foreground = '#CD4277'
-
-  # [[blocks.segments]]
-  #   type = 'text'
-  #   style = 'plain'
-  #   template = '# '
-  #   foreground = '#CD4277'
-
-[transient_prompt]
-  foreground = '#CD4277'
-  template = '# '
-
+    background = ''
+    type = 'text'
