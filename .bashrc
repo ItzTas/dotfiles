@@ -32,7 +32,7 @@ shopt -s checkwinsize
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
+	debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
@@ -46,41 +46,41 @@ esac
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-        # We have color support; assume it's compliant with Ecma-48
-        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-        # a case would tend to support setf rather than setaf.)
-        color_prompt=yes
-    else
-        color_prompt=
-    fi
+	if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+		# We have color support; assume it's compliant with Ecma-48
+		# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+		# a case would tend to support setf rather than setaf.)
+		color_prompt=yes
+	else
+		color_prompt=
+	fi
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm* | rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
+	PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+	;;
 *) ;;
 esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='lsd'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+	alias ls='lsd'
+	#alias dir='dir --color=auto'
+	#alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+	alias grep='grep --color=auto'
+	alias fgrep='fgrep --color=auto'
+	alias egrep='egrep --color=auto'
 fi
 
 # colored GCC warnings and errors
@@ -101,16 +101,16 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+	. ~/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
+	. /usr/share/bash-completion/bash_completion
 elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+	. /etc/bash_completion
 fi
 
 MY_PROJECT_PATH="$(pwd)"
@@ -161,31 +161,31 @@ eval "$(oh-my-posh init bash --config "$HOME"/.config/ohmyposh/my_amro.toml)"
 ###------------------- PROMPT -----------------------###
 
 function parse_git_dirty {
-    STATUS="$(git status 2>/dev/null)"
-    if [[ $? -ne 0 ]]; then
-        printf ""
-        return
-    else printf " ["; fi
-    if echo "${STATUS}" | grep -c "renamed:" &>/dev/null; then printf " >"; else printf ""; fi
-    if echo "${STATUS}" | grep -c "branch is ahead:" &>/dev/null; then printf " !"; else printf ""; fi
-    if echo "${STATUS}" | grep -c "new file::" &>/dev/null; then printf " +"; else printf ""; fi
-    if echo "${STATUS}" | grep -c "Untracked files:" &>/dev/null; then printf " ?"; else printf ""; fi
-    if echo "${STATUS}" | grep -c "modified:" &>/dev/null; then printf " *"; else printf ""; fi
-    if echo "${STATUS}" | grep -c "deleted:" &>/dev/null; then printf " -"; else printf ""; fi
-    printf " ]"
+	STATUS="$(git status 2>/dev/null)"
+	if [[ $? -ne 0 ]]; then
+		printf ""
+		return
+	else printf " ["; fi
+	if echo "${STATUS}" | grep -c "renamed:" &>/dev/null; then printf " >"; else printf ""; fi
+	if echo "${STATUS}" | grep -c "branch is ahead:" &>/dev/null; then printf " !"; else printf ""; fi
+	if echo "${STATUS}" | grep -c "new file::" &>/dev/null; then printf " +"; else printf ""; fi
+	if echo "${STATUS}" | grep -c "Untracked files:" &>/dev/null; then printf " ?"; else printf ""; fi
+	if echo "${STATUS}" | grep -c "modified:" &>/dev/null; then printf " *"; else printf ""; fi
+	if echo "${STATUS}" | grep -c "deleted:" &>/dev/null; then printf " -"; else printf ""; fi
+	printf " ]"
 }
 
 parse_git_branch() {
-    # Long form
-    git rev-parse --abbrev-ref HEAD 2>/dev/null
-    # Short form
-    # git rev-parse --abbrev-ref HEAD 2> /dev/null | sed -e 's/.*\/\(.*\)/\1/'
+	# Long form
+	git rev-parse --abbrev-ref HEAD 2>/dev/null
+	# Short form
+	# git rev-parse --abbrev-ref HEAD 2> /dev/null | sed -e 's/.*\/\(.*\)/\1/'
 }
 
 prompt_comment() {
-    DIR="$HOME/.local/share/promptcomments/"
-    MESSAGE="$(find "$DIR"/*.txt | shuf -n1)"
-    cat "$MESSAGE"
+	DIR="$HOME/.local/share/promptcomments/"
+	MESSAGE="$(find "$DIR"/*.txt | shuf -n1)"
+	cat "$MESSAGE"
 }
 
 #PS1="\e[00;36m\]┌─[ \e[00;37m\]\T \d \e[00;36m\]]──\e[00;31m\]>\e[00;37m\] \u\e[00;31m\]@\e[00;37m\]\h\n\e[00;36m\]|\n\e[00;36m\]└────\e[00;31m\]> \e[00;37m\]\w \e[00;31m\]\$ \e[01;37m\]"
@@ -197,175 +197,180 @@ prompt_comment() {
 ###---------- ARCHIVE EXTRACT ----------###
 
 ex() {
-    if [ -f $1 ]; then
-        case $1 in
-        *.tar.bz2) tar xjf $1 ;;
-        *.tar.gz) tar xzf $1 ;;
-        *.bz2) bunzip2 $1 ;;
-        *.rar) unrar x $1 ;;
-        *.gz) gunzip $1 ;;
-        *.tar) tar xf $1 ;;
-        *.tbz2) tar xjf $1 ;;
-        *.tgz) tar xzf $1 ;;
-        *.zip) unzip $1 ;;
-        *.Z) uncompress $1 ;;
-        *.7z) 7za e x $1 ;;
-        *.deb) ar x $1 ;;
-        *.tar.xz) tar xf $1 ;;
-        *.tar.zst) unzstd $1 ;;
-        *) echo "'$1' cannot be extracted via ex()" ;;
-        esac
-    else
-        echo "'$1' is not a valid file"
-    fi
+	if [ -f $1 ]; then
+		case $1 in
+		*.tar.bz2) tar xjf $1 ;;
+		*.tar.gz) tar xzf $1 ;;
+		*.bz2) bunzip2 $1 ;;
+		*.rar) unrar x $1 ;;
+		*.gz) gunzip $1 ;;
+		*.tar) tar xf $1 ;;
+		*.tbz2) tar xjf $1 ;;
+		*.tgz) tar xzf $1 ;;
+		*.zip) unzip $1 ;;
+		*.Z) uncompress $1 ;;
+		*.7z) 7za e x $1 ;;
+		*.deb) ar x $1 ;;
+		*.tar.xz) tar xf $1 ;;
+		*.tar.zst) unzstd $1 ;;
+		*) echo "'$1' cannot be extracted via ex()" ;;
+		esac
+	else
+		echo "'$1' is not a valid file"
+	fi
 }
 
 fs() {
-    local session
-    session=$(tmux list-sessions -F "#{session_name}" | fzf)
-    tmux switch-client -t "$session"
+	local session
+	session=$(tmux list-sessions -F "#{session_name}" | fzf)
+	tmux switch-client -t "$session"
 }
 
 p() {
-    cd "$MY_PROJECT_PATH" || return
+	cd "$MY_PROJECT_PATH" || return
 }
 
 fe() {
-    local b
-    b="$(git branch -a | grep -v '\->' | sed 's|remotes/origin/||' | sed 's|^\* ||' | sed 's/^ *//;s/ *$//' | sort -u)"
+	if ! git rev-parse --is-inside-work-tree &>/dev/null; then
+		echo "Erro: não está dentro de um repositório Git."
+		return 1
+	fi
 
-    local toB
-    toB="$(echo "$b" | fzf)"
-    toB="${toB##*( )}"
-    toB="${toB%%*( )}"
-    if [[ -z "$toB" ]]; then
-        return 0
-    fi
-    git switch "$toB"
+	local b
+	b="$(git branch -a | grep -v '\->' | sed 's|remotes/origin/||' | sed 's|^\* ||' | sed 's/^ *//;s/ *$//' | sort -u)"
+
+	local toB
+	toB="$(echo "$b" | fzf)"
+	toB="${toB##*( )}"
+	toB="${toB%%*( )}"
+	if [[ -z "$toB" ]]; then
+		return 0
+	fi
+	git switch "$toB"
 }
 
 f() {
-    local dir
-    dir=$(find . -type d | fzf --preview 'lsd --tree --depth=2 -1F {}') && cd "$dir" || return
+	local dir
+	dir=$(find . -type d | fzf --preview 'lsd --tree --depth=2 -1F {}') && cd "$dir" || return
 }
 
 fv() {
-    f
-    nvim .
+	f
+	nvim .
 }
 
 fvv() {
-    local file
-    file="$(find . -type f | fzf --preview 'bat --style=numbers --color=always {}')"
-    file="${file##*( )}"
-    file="${file%%*( )}"
-    if [[ -z "$file" ]]; then
-        return 0
-    fi
+	local file
+	file="$(find . -type f | fzf --preview 'bat --style=numbers --color=always {}')"
+	file="${file##*( )}"
+	file="${file%%*( )}"
+	if [[ -z "$file" ]]; then
+		return 0
+	fi
 
-    nvim "$file"
+	nvim "$file"
 }
 
 fr() {
-    cd "$HOME" && f
+	cd "$HOME" && f
 }
 
 frv() {
-    cd "$HOME" && fv
+	cd "$HOME" && fv
 }
 
 replace_in_files() {
-    if [ "$#" -ne 2 ]; then
-        echo "Usage: replace_in_files <old_name> <new_name>"
-        return 1
-    fi
+	if [ "$#" -ne 2 ]; then
+		echo "Usage: replace_in_files <old_name> <new_name>"
+		return 1
+	fi
 
-    old_name=$1
-    new_name=$2
-    project_path=$(pwd)
+	old_name=$1
+	new_name=$2
+	project_path=$(pwd)
 
-    if [ -z "$old_name" ]; then
-        echo "Old name cannot be empty."
-        return 1
-    fi
+	if [ -z "$old_name" ]; then
+		echo "Old name cannot be empty."
+		return 1
+	fi
 
-    if [ -z "$new_name" ]; then
-        echo "New name cannot be empty."
-        return 1
-    fi
+	if [ -z "$new_name" ]; then
+		echo "New name cannot be empty."
+		return 1
+	fi
 
-    find "$project_path" -type f -exec sed -i "s/$old_name/$new_name/g" {} +
+	find "$project_path" -type f -exec sed -i "s/$old_name/$new_name/g" {} +
 }
 
 ft() {
-    local s
-    printf "(new-session) "
-    read -r s
+	local s
+	printf "(new-session) "
+	read -r s
 
-    tmux new-session -d -s "$s"
-    while ! tmux has-session -t "$s" 2>/dev/null; do
-        sleep 0.2
-    done
-    tmux send-keys -t "$s" 'cd && f && clear' C-m
-    tmux switch-client -t "$s"
-    clear
+	tmux new-session -d -s "$s"
+	while ! tmux has-session -t "$s" 2>/dev/null; do
+		sleep 0.2
+	done
+	tmux send-keys -t "$s" 'cd && f && clear' C-m
+	tmux switch-client -t "$s"
+	clear
 }
 
 new_ss() {
-    local last_dir
-    last_dir="$(pwd)"
+	local last_dir
+	last_dir="$(pwd)"
 
-    local direc
-    direc=$(find "$HOME" -type d | fzf --preview 'lsd --tree --depth=2 -1F {}')
+	local direc
+	direc=$(find "$HOME" -type d | fzf --preview 'lsd --tree --depth=2 -1F {}')
 
-    direc="${direc##*( )}"
-    direc="${direc%%*( )}"
-    if [[ -z "$direc" ]]; then
-        return 0
-    fi
+	direc="${direc##*( )}"
+	direc="${direc%%*( )}"
+	if [[ -z "$direc" ]]; then
+		return 0
+	fi
 
-    builtin cd "$direc" || return
+	builtin cd "$direc" || return
 
-    local d
-    d="$(basename "$(pwd)")"
+	local d
+	d="$(basename "$(pwd)")"
 
-    d="${d//./_}"
+	d="${d//./_}"
 
-    if [[ d == "$USER" ]]; then
-        return 0
-    fi
+	if [[ d == "$USER" ]]; then
+		return 0
+	fi
 
-    tmux new-session -d -s "$d"
-    while ! tmux has-session -t "$d"; do
-        sleep 0.01
-    done
+	tmux new-session -d -s "$d"
+	while ! tmux has-session -t "$d"; do
+		sleep 0.01
+	done
 
-    cd "$last_dir" || return
+	cd "$last_dir" || return
 
-    tmux switch-client -t "$d"
+	tmux switch-client -t "$d"
 
 }
 
 pf() {
-    p
-    f
+	p
+	f
 }
 
 sesh_connect() {
-    local selection
-    selection=$(
-        sesh list --icons | fzf \
-            --no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \
-            --header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' \
-            --bind 'tab:down,btab:up' \
-            --bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list --icons)' \
-            --bind 'ctrl-t:change-prompt(🪟  )+reload(sesh list -t --icons)' \
-            --bind 'ctrl-g:change-prompt(⚙️  )+reload(sesh list -c --icons)' \
-            --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list -z --icons)' \
-            --bind 'ctrl-f:change-prompt(🔎  )+reload(fd -H -d 2 -t d -E .Trash . ~)' \
-            --bind 'ctrl-d:execute(tmux kill-session -t {2..})+change-prompt(⚡  )+reload(sesh list --icons)'
-    )
-    [[ -n "$selection" ]] && sesh connect "$selection"
+	local selection
+	selection=$(
+		sesh list --icons | fzf \
+			--no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \
+			--header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' \
+			--bind 'tab:down,btab:up' \
+			--bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list --icons)' \
+			--bind 'ctrl-t:change-prompt(🪟  )+reload(sesh list -t --icons)' \
+			--bind 'ctrl-g:change-prompt(⚙️  )+reload(sesh list -c --icons)' \
+			--bind 'ctrl-x:change-prompt(📁  )+reload(sesh list -z --icons)' \
+			--bind 'ctrl-f:change-prompt(🔎  )+reload(fd -H -d 2 -t d -E .Trash . ~)' \
+			--bind 'ctrl-d:execute(tmux kill-session -t {2..})+change-prompt(⚡  )+reload(sesh list --icons)'
+	)
+	[[ -n "$selection" ]] && sesh connect "$selection"
 }
 
 # my binds
@@ -376,6 +381,23 @@ bind -x '"\eg":"lsd -F"'
 bind -x '"\C-b":f'
 # bind -x '"\C-a":fs'
 bind -x '"\C-o":fe'
+
+tmux_manager() {
+	if [ "$(tmux list-sessions 2>/dev/null | wc -l)" -gt 0 ]; then
+		tmux attach
+	else
+
+		if ! tmux has-session -t default 2>/dev/null; then
+			tmux new-session -s default
+		else
+			tmux attach-session -t default
+		fi
+	fi
+}
+
+if [ -z "$TMUX" ]; then
+	bind -x '"\C-g":tmux_manager'
+fi
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -399,28 +421,28 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type d --hidden --strip-cwd-prefix --exclude .git"
 
 _fzf_compgen_path() {
-    fd --hidden --exclude .git . "$1"
+	fd --hidden --exclude .git . "$1"
 }
 
 _fzf_compgen_dir() {
-    fd --type d --hidden --exclude .git . "$1"
+	fd --type d --hidden --exclude .git . "$1"
 }
 
-source ~/fzf-git.sh/fzf-git.sh
+# source ~/fzf-git.sh/fzf-git.sh
 
 export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'lsd --tree --depth=2 -1F {}'"
 
 _fzf_comprun() {
-    local command=$1
-    shift
+	local command=$1
+	shift
 
-    case "$command" in
-    cd) fzf --preview 'lsd --tree --depth=2 -1F {}' ;;
-    export | unset) fzf --preview "eval 'echo \$' {}" "$@" ;;
-    ssh) fzf --preview 'dig {}' "$@" ;;
-    *) fzf --preview "--preview 'bat -n --color=aways --line-range :500 {}'" "$@" ;;
-    esac
+	case "$command" in
+	cd) fzf --preview 'lsd --tree --depth=2 -1F {}' ;;
+	export | unset) fzf --preview "eval 'echo \$' {}" "$@" ;;
+	ssh) fzf --preview 'dig {}' "$@" ;;
+	*) fzf --preview "--preview 'bat -n --color=aways --line-range :500 {}'" "$@" ;;
+	esac
 }
 
 eval "$(thefuck --alias fk)"
