@@ -66,8 +66,8 @@
     },
     "clock": {
         "tooltip-format": "{calendar}",
-        "format-alt": "  {:%a, %d %b %Y}",
-        "format": "  {:%I:%M %p}"
+        "format": "  {:%a, %d %b %Y}",
+        "format-alt": "  {:%I:%M %p}"
     },
     "network": {
         "format-wifi": "{icon}",
