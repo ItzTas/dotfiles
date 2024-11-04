@@ -46,7 +46,7 @@
             "urgent": "󱓻"
         },
         "persistent_workspaces": {
-            "1": ["kitty"],
+            "1": [],
             "2": [],
             "3": [],
             "4": [],
@@ -67,8 +67,8 @@
     },
     "clock": {
         "tooltip-format": "{calendar}",
-        "format": "  {:%a, %d %b %Y}",
-        "format-alt": "  {:%I:%M %p}"
+        "format-alt": "  {:%a, %d %b %Y}",
+        "format": "  {:%I:%M %p}"
     },
     "network": {
         "format-wifi": "{icon}",
