@@ -454,3 +454,4 @@ export PATH=$PATH:~/Unity/Hub/Editor/6000.0.23f1/Editor
 . "$HOME/.cargo/env"
 export PATH=$PATH:~/.cargo/env
 export PATH="$PATH:/usr/local/bin/tmux"
+export HYPRCURSOR_THEME="Bibata-Modern-Classic"
