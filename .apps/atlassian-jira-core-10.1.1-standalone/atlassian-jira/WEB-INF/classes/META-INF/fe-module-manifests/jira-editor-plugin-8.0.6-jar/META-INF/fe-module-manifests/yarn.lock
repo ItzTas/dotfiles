@@ -1,6 +1,0 @@
-# yarn lockfile v1
-
-tinymce@^5.10.9:
-  version "5.10.9"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/tinymce/-/tinymce-5.10.9.tgz#1dfacb3231c71a688d90ff44a0b3f2e91b3b9edf"
-  integrity "sha512-5bkrors87X9LhYX2xq8GgPHrIgJYHl87YNs+kBcjQ5I3CiUgzo/vFcGvT3MZQ9QHsEeYMhYO6a5CLGGffR8hMg=="

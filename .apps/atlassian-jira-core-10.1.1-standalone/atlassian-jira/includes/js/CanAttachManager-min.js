@@ -1,1 +1,0 @@
-define("jira/attachments/can-attach-manager",["jquery","exports","wrm/context-path"],(function(t,n,e){"use strict";n.canAttach=function(n){return new Promise((function(a){n?t.ajax({url:e()+"/rest/internal/2/attachment-permission/attach?projectKey="+encodeURIComponent(n),type:"GET",dataType:"json",success:function(t){a(t)},error:function(){a(!1)}}):a(!1)}))}}));

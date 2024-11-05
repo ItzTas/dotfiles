@@ -84,6 +84,7 @@ cabextract 1.11-2
 cairo 1.18.2-1
 cairo-perl 1.109-5
 cairomm 1.14.5-1
+cairomm-1.16 1.18.0-1
 cantarell-fonts 1:0.303.1-2
 capstone 5.0.3-1
 cbindgen 0.27.0-1
@@ -129,7 +130,7 @@ desktop-file-utils 0.27-1
 device-mapper 2.03.26-1
 diffutils 3.10-1
 ding-libs 0.6.2-2
-discord 0.0.72-1
+discord 0.0.73-1
 discount 3.0.0.d-1
 djvulibre 3.5.28-6
 dmenu 5.3-3
@@ -232,6 +233,7 @@ glib2 2.80.5-1
 glibc 2.40+r16+gaa533d58ff-2
 glibc-locales 2.40+r16+gaa533d58ff-2
 glibmm 2.66.7-1
+glibmm-2.68 2.80.1-1
 glslang 14.3.0-1
 glu 9.0.3-2
 glusterfs 1:11.1-2
@@ -243,6 +245,7 @@ gnome-themes-extra 3.28+r6+g45b1d457-2
 gnupg 2.4.5-4
 gnustep-base 1.30.0-1
 gnutls 3.8.7-1
+go 2:1.23.1-1
 gobject-introspection-runtime 1.80.1-3
 godot 4.3-4
 goocanvas 3.0.0-6
@@ -280,6 +283,7 @@ gtk-layer-shell 0.9.0-1
 gtk-update-icon-cache 1:4.14.5-1
 gtk3 1:3.24.43-2
 gtk4 1:4.14.5-1
+gtkmm-4.0 4.14.0-1
 gtkmm3 3.24.9-1
 gtksourceview4 4.8.4-1
 guile 3.0.10-1
@@ -290,6 +294,7 @@ gwenview 24.08.1-1
 gzip 1.13-4
 harfbuzz 9.0.0-1
 harfbuzz-icu 9.0.0-1
+heidisql 12.8.0.6908-3
 hicolor-icon-theme 0.18-1
 hidapi 0.14.0-3
 highway 1.2.0-1
@@ -964,7 +969,7 @@ mhwd-db 0.6.5-36
 mhwd-nvidia 550.120-1
 mhwd-nvidia-390xx 390.157-14
 mhwd-nvidia-470xx 470.256.02-4
-microsoft-edge-stable-bin 130.0.2849.56-1
+microsoft-edge-stable-bin 130.0.2849.68-1
 milou 6.1.5-1
 miniupnpc 2.2.8-1
 minizip 1:1.3.1-2
@@ -1022,7 +1027,7 @@ oath-toolkit 2.6.12-1
 obs-studio 30.2.1-1
 ocean-sound-theme 6.1.5-1
 ocl-icd 2.3.2-2
-oh-my-posh 23.20.3-1
+oh-my-posh 24.0.6-1
 okular 24.08.1-1
 onetbb 2021.13.0-1
 oniguruma 6.9.9-1
@@ -1057,11 +1062,13 @@ pambase 20230918-2
 pango 1:1.54.0-1
 pango-perl 1.227-18
 pangomm 2.46.4-1
+pangomm-2.48 2.54.0-1
 parted 3.6-2
 paru 2.0.4-1
 pass 1.7.4-5
 passim 0.1.8-1
 patch 2.7.6-10
+pavucontrol 1:6.1-1
 pciutils 3.13.0-2
 pcre 8.45-4
 pcre2 10.44-1
@@ -1657,6 +1664,7 @@ zip 3.0-11
 zita-convolver 4.0.3-4
 zix 0.4.2-2
 zlib 1:1.3.1-2
+zoom 6.2.6-1
 zoxide 0.9.5-1
 zsh 5.9-5
 zsh-autosuggestions 0.7.0-3

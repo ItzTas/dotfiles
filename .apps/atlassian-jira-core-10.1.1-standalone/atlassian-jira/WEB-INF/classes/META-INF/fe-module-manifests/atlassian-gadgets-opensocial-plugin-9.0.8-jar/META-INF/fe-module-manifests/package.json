@@ -1,9 +1,0 @@
-{
-  "name": "@atlassian/dc.atlassian-gadgets.opensocial-plugin",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "bitbucket.org:atlassian/atlassian-gadgets.git",
-    "directory": "opensocial-plugin"
-  }
-}
