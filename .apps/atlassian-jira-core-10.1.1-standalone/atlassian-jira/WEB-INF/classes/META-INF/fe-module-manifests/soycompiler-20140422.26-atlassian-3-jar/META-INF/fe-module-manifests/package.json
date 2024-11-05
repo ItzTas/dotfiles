@@ -1,9 +1,0 @@
-{
-  "name": "@atlassian/dc.shared.closure-templates",
-  "private": true,
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "bitbucket.org:atlassian/closure-templates.git"
-  }
-}

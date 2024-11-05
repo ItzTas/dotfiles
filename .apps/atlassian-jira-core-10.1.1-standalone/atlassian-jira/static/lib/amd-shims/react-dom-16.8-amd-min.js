@@ -1,1 +1,0 @@
-define("jira/react-dom-16.8",["jira/api/react-dom-16.8"],(function(r){"use strict";return r}));

@@ -1,9 +1,0 @@
-{
-  "name": "@atlassian/dc.shared.atlassian-oauth.service-provider-plugin",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git@stash.atlassian.com:7997/sjp/atlassian-oauth.git",
-    "directory": "service-provider-plugin"
-  }
-}

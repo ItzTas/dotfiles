@@ -1,1 +1,0 @@
-define("jira/util/events",["jira/api/events"],(function(e){"use strict";return e}));
