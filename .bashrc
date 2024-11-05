@@ -455,6 +455,9 @@ export PATH=$PATH:~/Unity/Hub/Editor/6000.0.23f1/Editor
 export PATH=$PATH:~/.cargo/env
 export PATH="$PATH:/usr/local/bin/tmux"
 export PATH="$PATH:$HOME/.config/yadm/bin/"
+
 export HYPRCURSOR_THEME="Bibata-Modern-Classic"
+export HYPRSHOT_DIR="$HOME/Pictures/screenshots/"
+export XDG_PICTURES_DIR="$HOME/Pictures"
 
 eval "$(thefuck --alias)"
