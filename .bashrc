@@ -456,3 +456,5 @@ export PATH=$PATH:~/.cargo/env
 export PATH="$PATH:/usr/local/bin/tmux"
 export PATH="$PATH:$HOME/.config/yadm/bin/"
 export HYPRCURSOR_THEME="Bibata-Modern-Classic"
+
+eval "$(thefuck --alias)"
