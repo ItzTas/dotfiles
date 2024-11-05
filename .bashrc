@@ -251,7 +251,10 @@ fe() {
 
 f() {
     local dir
-    dir=$(find . -type d | fzf --preview 'lsd --tree --depth=2 -1F {}') && cd "$dir" || return
+    dir=$( (
+        zoxide query -l
+        find . -type d
+    ) | fzf --preview 'lsd --tree --depth=2 -1F {}') && cd "$dir" || return
 }
 
 fv() {
