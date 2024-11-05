@@ -1,1 +1,0 @@
-define("jira/field/init-favourite-pickers",["jira/field/favourite-picker","jira/util/events/reasons","jira/util/events/types","jira/util/events"],(function(i,e,t,a){"use strict";a.bind(t.NEW_CONTENT_ADDED,(function(t,a,n){n!==e.pageLoad&&n!==e.dialogReady||i.init(a)}))}));
