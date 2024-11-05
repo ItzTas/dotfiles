@@ -7,6 +7,8 @@ adobe-source-sans-fonts
 alsa-firmware
 alsa-utils
 amd-ucode
+android-sdk
+android-sdk-platform-tools
 android-studio
 ark
 audiocd-kio
@@ -25,6 +27,7 @@ btrfs-progs
 clamav
 clamtk
 cliphist
+cpu-checker-bzr
 cpupower
 cronie
 cryptsetup
@@ -146,6 +149,7 @@ libpamac-flatpak-plugin
 libva-intel-driver
 libva-mesa-driver
 libva-nvidia-driver
+libvirt
 libxnvctrl
 linux-meta
 linux610-nvidia
@@ -306,6 +310,7 @@ usb_modeswitch
 usbutils
 vi
 vim
+virt-manager
 vlc
 vscodium
 vulkan-intel
