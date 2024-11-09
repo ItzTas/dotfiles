@@ -395,6 +395,7 @@ tmux_manager() {
 			tmux attach-session -t default
 		fi
 	fi
+	bind -r "\C-g"
 }
 
 if [ -z "$TMUX" ]; then
