@@ -118,6 +118,7 @@ export MY_PROJECT_PATH
 
 # my aliases
 alias ksee='kitty +kitten icat'
+alias y='yazi'
 alias screenK='screenkey -p fixed --geometry 500x70+1200+120 -f "JetBrains Mono" -s small '
 alias python='python3'
 alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
