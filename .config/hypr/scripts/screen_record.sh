@@ -24,6 +24,6 @@ rm "$THUMBNAIL"
 case "$ACTION" in
 "default")
     dunstify "Opening $BASENAME"
-    vlc "$FILENAME" &
+    mpv "$FILENAME" &
     ;;
 esac

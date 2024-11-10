@@ -27,6 +27,7 @@ btrfs-progs
 clamav
 clamtk
 cliphist
+cmatrix
 cpu-checker-bzr
 cpupower
 cronie
@@ -355,6 +356,7 @@ yakuake
 yamllint
 yay
 yazi
+yt-dlp
 zathura
 zen-browser-avx2-bin
 zoom
