@@ -23,7 +23,7 @@ rm "$THUMBNAIL"
 
 case "$ACTION" in
 "default")
-    dunstify "Opening $BASENAME with VLC"
-    vlc "$FILENAME" &
+    dunstify "Opening $BASENAME"
+    mpv "$FILENAME" &
     ;;
 esac
