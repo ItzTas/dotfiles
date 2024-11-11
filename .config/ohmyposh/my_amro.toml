@@ -110,6 +110,14 @@ version = 3
 
   [[blocks.segments]]
     style = 'plain'
+    template = '  '
+    foreground = '#342311'
+    background = ''
+    type = 'zig'
+
+
+  [[blocks.segments]]
+    style = 'plain'
     template = '  '
     foreground = '#6CA35E'
     background = ''
