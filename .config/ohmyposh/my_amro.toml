@@ -18,7 +18,7 @@ version = 3
 
   [[blocks.segments]]
     style = 'plain'
-    template = '   {{ .Path }} '
+    template = '  {{ .Path }} '
     foreground = '#0CA0D8'
     background = ''
     type = 'path'
