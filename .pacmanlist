@@ -196,6 +196,7 @@ mpv
 mtpfs
 nano
 nano-syntax-highlighting
+nautilus
 neofetch
 neovim
 net-tools
@@ -360,6 +361,7 @@ yay
 yazi
 yt-dlp
 zathura
+zathura-pdf-poppler
 zen-browser-avx2-bin
 zoom
 zoxide
