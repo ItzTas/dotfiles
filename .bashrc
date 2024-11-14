@@ -470,3 +470,7 @@ eval "$(thefuck --alias)"
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
