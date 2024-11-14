@@ -465,12 +465,12 @@ export PATH="$PATH:$HOME/.config/yadm/bin/"
 export HYPRCURSOR_THEME="Bibata-Modern-Classic"
 export HYPRSHOT_DIR="$HOME/Pictures/screenshots/"
 export XDG_PICTURES_DIR="$HOME/Pictures"
+export TERMINAL="kitty"
 
 eval "$(thefuck --alias)"
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
