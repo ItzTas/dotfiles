@@ -44,8 +44,6 @@ dmraid
 dnsmasq
 docker
 docker-desktop
-dolphin
-dolphin-plugins
 dosfstools
 dotnet-sdk
 dunst
@@ -71,6 +69,7 @@ fzf
 glibc-locales
 gnome-terminal
 gnome-themes-extra
+gnome-tweaks
 godot
 grim
 grub
@@ -196,7 +195,7 @@ mpv
 mtpfs
 nano
 nano-syntax-highlighting
-nautilus
+nemo
 neofetch
 neovim
 net-tools
