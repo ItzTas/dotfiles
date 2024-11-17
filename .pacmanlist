@@ -8,6 +8,7 @@ alpaca-ai
 alsa-firmware
 alsa-utils
 amd-ucode
+ananicy-git
 android-sdk
 android-sdk-platform-tools
 android-studio
@@ -34,6 +35,8 @@ cpu-checker-bzr
 cpupower
 cronie
 cryptsetup
+czkawka-cli
+czkawka-gui
 dbeaver
 debtap
 device-mapper
@@ -324,12 +327,14 @@ vulkan-intel
 vulkan-nouveau
 vulkan-radeon
 waybar
+waydroid
 wf-recorder
 wget
 which
 wine
 winetricks
 wireless-regdb
+wireshark-qt
 wl-clipboard
 wofi
 wpa_supplicant
