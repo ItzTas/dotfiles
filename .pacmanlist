@@ -105,6 +105,7 @@ inetutils
 install-grub
 intel-ucode
 inxi
+iriunwebcam-bin
 jdk17-openjdk
 jfsutils
 jira-cli
@@ -160,6 +161,7 @@ libva-nvidia-driver
 libvirt
 libxnvctrl
 linux-meta
+linux610-headers
 linux610-nvidia
 logrotate
 lsd
@@ -238,6 +240,7 @@ perl
 perl-file-mimeinfo
 phonon-qt6-vlc
 picom
+pipewire-jack
 plasma-browser-integration
 plasma-desktop
 plasma-nm
@@ -342,6 +345,7 @@ xbindkeys
 xclip
 xdg-desktop-portal-gtk
 xdg-desktop-portal-kde
+xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils
 xf86-input-elographics
