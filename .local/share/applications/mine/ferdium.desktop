@@ -3,7 +3,7 @@ Version=1.0
 Type=Application
 Name=Ferdium
 Comment=Atlassian Jira Issue Tracker
-Exec=/home/talinux/.apps/ferdium/Ferdium-linux-Portable-7.0.0-x86_64.AppImage
+Exec=/home/talinux/.apps/ferdium/ferdium
 Terminal=false
 Categories=Development;ProjectManagement;
 
