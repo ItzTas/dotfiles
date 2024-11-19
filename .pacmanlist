@@ -26,6 +26,7 @@ breeze5
 brightnessctl
 brillo
 btrfs-progs
+calf
 cava
 clamav
 clamtk
@@ -57,6 +58,7 @@ ecryptfs-utils
 efibootmgr
 elisa
 eog
+exercism
 exfatprogs
 eza
 f2fs-tools
@@ -70,6 +72,7 @@ flameshot
 freeoffice
 fwupd
 fzf
+gimp
 glibc-locales
 gnome-terminal
 gnome-themes-extra
@@ -185,6 +188,7 @@ manjaro-release
 manjaro-settings-manager-knotifier
 manjaro-system
 manjaro-zsh-config
+mda.lv2
 mdadm
 meld
 memtest86+
