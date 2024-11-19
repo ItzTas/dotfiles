@@ -23,6 +23,7 @@ bat
 bluedevil
 breeze-gtk
 breeze5
+brightness-controller-git
 brightnessctl
 brillo
 btrfs-progs
@@ -158,6 +159,7 @@ lib32-vulkan-radeon
 libcanberra
 libdvdcss
 libpamac-flatpak-plugin
+libreoffice-still
 libva-intel-driver
 libva-mesa-driver
 libva-nvidia-driver
@@ -166,6 +168,7 @@ libxnvctrl
 linux-meta
 linux610-headers
 linux610-nvidia
+linux610-virtualbox-host-modules
 logrotate
 lsd
 lsp-plugins
@@ -208,6 +211,7 @@ mtpfs
 nano
 nano-syntax-highlighting
 nemo
+nemo-preview
 neofetch
 neovim
 net-tools
@@ -264,6 +268,8 @@ power-profiles-daemon
 powerdevil
 powertop
 print-manager
+protonvpn-applet
+protonvpn-cli-community
 python-pillow
 python-pip
 python-pipx
@@ -275,6 +281,7 @@ qt6-imageformats
 qt6-virtualkeyboard
 recordmydesktop
 redis
+redshift
 reiserfsprogs
 ripgrep
 rofi-emoji-git
@@ -328,6 +335,7 @@ usbutils
 vi
 vim
 virt-manager
+virtualbox
 vlc
 vscodium
 vulkan-intel
