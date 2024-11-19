@@ -118,6 +118,7 @@ export MY_PROJECT_PATH
 
 # my aliases
 alias ksee='kitty +kitten icat'
+alias killzoom='killall ZoomWebviewHost zoom'
 alias chgra='chmod +x gradlew'
 alias y='yazi'
 alias screenK='screenkey -p fixed --geometry 500x70+1200+120 -f "JetBrains Mono" -s small '
