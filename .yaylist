@@ -70,6 +70,7 @@ figlet
 filelight
 firefox
 flameshot
+folder-color-switcher
 freeoffice
 fwupd
 fzf
@@ -211,7 +212,12 @@ mtpfs
 nano
 nano-syntax-highlighting
 nemo
+nemo-emblems
+nemo-fileroller
+nemo-image-converter
+nemo-media-columns
 nemo-preview
+nemo-terminal
 neofetch
 neovim
 net-tools

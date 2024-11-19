@@ -1,6 +1,8 @@
 #!/bin/bash
 
-kitty --directory="$(pwd)" bash -c "
+trimmed_path=$(echo "$NEMO_SCRIPT_SELECTED_FILE_PATHS" | sed 's/^[ \t]*//;s/[ \t]*$//')
+
+scr="
 new_ss() {
     local direc
     direc=\$(pwd)
@@ -24,3 +26,9 @@ new_ss() {
 
 new_ss
 "
+
+if [ -n "$trimmed_path" ]; then
+    kitty --directory="$(dirname "$trimmed_path")" "$trimmed_path" bash -c "$scr"
+else
+    kitty --directory="$(pwd)" bash -c "$scr"
+fi
