@@ -2,7 +2,7 @@
 
 trimmed_path=$(echo "$NEMO_SCRIPT_SELECTED_FILE_PATHS" | sed 's/^[ \t]*//;s/[ \t]*$//')
 
-scr="
+scrPWD="
 new_ss() {
     local direc
     direc=\$(pwd)
@@ -27,8 +27,26 @@ new_ss() {
 new_ss
 "
 
+scrPATH="
+new_ss() {
+    local d
+    d=\"\$(basename \"$trimmed_path\")\"
+    d=\"\${d//./_}\"
+
+    cd \"$trimmed_path\"
+    tmux new-session -d -s \"\$d\"
+    while ! tmux has-session -t \"\$d\"; do
+        sleep 0.01
+    done
+
+    tmux attach-session -t \"\$d\"
+}
+
+new_ss
+"
+
 if [ -n "$trimmed_path" ]; then
-    kitty --directory="$(dirname "$trimmed_path")" "$trimmed_path" bash -c "$scr"
+	kitty --directory="$(dirname "$trimmed_path")" bash -c "$scrPATH"
 else
-    kitty --directory="$(pwd)" bash -c "$scr"
+	kitty --directory="$(pwd)" bash -c "$scrPWD"
 fi
