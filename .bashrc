@@ -379,17 +379,6 @@ sesh_connect() {
     [[ -n "$selection" ]] && sesh connect "$selection"
 }
 
-# my binds
-# bind -x '"\eb":"pf"'
-bind -x '"\eg":"lsd -F"'
-bind -x '"\ey":"yazi"'
-# bind -x '"\C-f":new_ss'
-bind -x '"\C-b":f'
-# bind -x '"\C-a":fs'
-bind -x '"\C-o":fe'
-
-# my apps paths
-
 tmux_manager() {
     if [ "$(tmux list-sessions 2>/dev/null | wc -l)" -gt 0 ]; then
         tmux attach
@@ -401,13 +390,23 @@ tmux_manager() {
             tmux attach-session -t default
         fi
     fi
-    bind -r "\C-g"
 }
+
+# my binds
+# bind -x '"\eb":"pf"'
+bind -x '"\eg":"lsd -F"'
+bind -x '"\ey":"yazi"'
+# bind -x '"\C-f":new_ss'
+bind -x '"\C-b":f'
+# bind -x '"\C-a":fs'
+bind -x '"\C-o":fe'
 
 if [ -z "$TMUX" ]; then
     bind -x '"\C-f":sesh_connect'
     bind -x '"\C-g":tmux_manager'
 fi
+
+# my apps paths
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
