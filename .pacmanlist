@@ -75,6 +75,7 @@ freeoffice
 fwupd
 fzf
 gimp
+gitahead
 glava
 glibc-locales
 gnome-terminal
@@ -325,8 +326,10 @@ systemsettings
 terminus-font
 texinfo
 thunderbird
+tig
 timeshift
 timeshift-autosnap-manjaro
+tk
 ttf-dejavu
 ttf-droid
 ttf-inconsolata
