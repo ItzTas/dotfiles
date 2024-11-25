@@ -383,7 +383,6 @@ tmux_manager() {
     if [ "$(tmux list-sessions 2>/dev/null | wc -l)" -gt 0 ]; then
         tmux attach
     else
-
         if ! tmux has-session -t default 2>/dev/null; then
             tmux new-session -s default
         else
