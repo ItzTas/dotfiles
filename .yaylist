@@ -63,6 +63,7 @@ exercism
 exfatprogs
 eza
 f2fs-tools
+fastfetch
 feh
 ffmpeg
 ffmpegthumbs
@@ -239,7 +240,6 @@ numlockx
 nvidia-settings
 nvidia-utils
 obs-studio
-oh-my-posh
 okular
 openresolv
 openssh
@@ -268,6 +268,7 @@ plasma-workspace-wallpapers
 plymouth
 plymouth-kcm
 plymouth-theme-manjaro
+polkit-gnome
 polybar
 poppler-data
 postgresql
@@ -276,8 +277,6 @@ power-profiles-daemon
 powerdevil
 powertop
 print-manager
-protonvpn-applet
-protonvpn-cli-community
 python-pillow
 python-pip
 python-pipx
