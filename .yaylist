@@ -28,7 +28,6 @@ brightnessctl
 brillo
 btrfs-progs
 calf
-cava
 clamav
 clamtk
 cliphist
@@ -65,6 +64,7 @@ eza
 f2fs-tools
 fastfetch
 feh
+ferdium
 ffmpeg
 ffmpegthumbs
 figlet
@@ -152,10 +152,8 @@ lazygit
 less
 lib32-libcanberra
 lib32-libva-intel-driver
-lib32-libva-mesa-driver
 lib32-libva-vdpau-driver
 lib32-mesa-utils
-lib32-mesa-vdpau
 lib32-nvidia-utils
 lib32-vulkan-intel
 lib32-vulkan-nouveau
@@ -165,14 +163,13 @@ libdvdcss
 libpamac-flatpak-plugin
 libreoffice-still
 libva-intel-driver
-libva-mesa-driver
 libva-nvidia-driver
 libvirt
 libxnvctrl
+linux-headers-meta
 linux-meta
-linux610-headers
-linux610-nvidia
-linux610-virtualbox-host-modules
+linux-nvidia-meta
+linux-virtualbox-host-modules-meta
 logrotate
 lsd
 lsp-plugins
@@ -201,7 +198,6 @@ meld
 memtest86+
 memtest86+-efi
 mesa-utils
-mesa-vdpau
 mhwd
 mhwd-db
 microsoft-edge-stable-bin
@@ -275,6 +271,7 @@ postgresql
 postman-bin
 power-profiles-daemon
 powerdevil
+powershell-bin
 powertop
 print-manager
 python-pillow
