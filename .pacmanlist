@@ -246,7 +246,6 @@ pacman-contrib
 pamac-cli
 pamac-gtk3
 pamac-tray-icon-plasma
-paru
 pavucontrol
 perl
 perl-file-mimeinfo
