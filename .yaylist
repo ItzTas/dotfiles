@@ -25,7 +25,6 @@ breeze-gtk
 breeze5
 brightness-controller-git
 brightnessctl
-brillo
 btrfs-progs
 calf
 clamav
@@ -43,7 +42,6 @@ debtap
 device-mapper
 diffutils
 discord
-dmenu
 dmidecode
 dmraid
 dnsmasq
@@ -173,7 +171,6 @@ linux-virtualbox-host-modules-meta
 logrotate
 lsd
 lsp-plugins
-luarocks
 lutris
 lvm2
 maim
@@ -217,7 +214,6 @@ nemo-image-converter
 nemo-media-columns
 nemo-preview
 nemo-terminal
-neofetch
 neovim
 net-tools
 networkmanager
