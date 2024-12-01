@@ -24,11 +24,8 @@ bluedevil
 breeze-gtk
 breeze5
 brightness-controller-git
-brightnessctl
 btrfs-progs
 calf
-clamav
-clamtk
 cliphist
 cmatrix
 cpu-checker-bzr
@@ -77,9 +74,6 @@ gimp
 gitahead
 glava
 glibc-locales
-gnome-terminal
-gnome-themes-extra
-gnome-tweaks
 godot
 grim
 grub
