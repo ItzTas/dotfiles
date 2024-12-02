@@ -226,6 +226,7 @@ numlockx
 nvidia-settings
 nvidia-utils
 obs-studio
+oh-my-posh
 okular
 openresolv
 openssh
@@ -371,7 +372,6 @@ xorg-xinit
 xorg-xkill
 xsel
 xwallpaper
-yakuake
 yamllint
 yay
 yazi
