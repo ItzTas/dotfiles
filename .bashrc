@@ -118,6 +118,7 @@ export MY_PROJECT_PATH
 
 # my aliases
 alias ksee='kitty +kitten icat'
+alias upgrady='yay -Syu --devel'
 alias killzoom='killall ZoomWebviewHost zoom'
 alias chgra='chmod +x gradlew'
 alias y='yazi'
