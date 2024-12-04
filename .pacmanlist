@@ -9,8 +9,6 @@ alsa-firmware
 alsa-utils
 amd-ucode
 ananicy-git
-android-sdk
-android-sdk-platform-tools
 android-studio
 ark
 audiocd-kio
@@ -25,6 +23,7 @@ breeze-gtk
 breeze5
 brightness-controller-git
 btrfs-progs
+bun-bin
 calf
 cliphist
 cmatrix
@@ -75,6 +74,7 @@ gitahead
 glava
 glibc-locales
 godot
+google-chrome
 grim
 grub
 grub-btrfs
@@ -165,7 +165,6 @@ linux-virtualbox-host-modules-meta
 logrotate
 lsd
 lsp-plugins
-lutris
 lvm2
 maim
 man-db
@@ -185,7 +184,6 @@ manjaro-system
 manjaro-zsh-config
 mda.lv2
 mdadm
-meld
 memtest86+
 memtest86+-efi
 mesa-utils
@@ -201,6 +199,7 @@ mpv
 mtpfs
 nano
 nano-syntax-highlighting
+ncspot
 nemo
 nemo-emblems
 nemo-fileroller
@@ -381,3 +380,4 @@ zathura-pdf-poppler
 zen-browser-avx2-bin
 zoom
 zoxide
+zsa-keymapp-bin
