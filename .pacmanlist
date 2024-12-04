@@ -85,7 +85,6 @@ gst-plugins-good
 gst-plugins-ugly
 gtk3
 gwenview
-heidisql
 htop
 hydralauncher
 hypnotix
@@ -337,8 +336,6 @@ waydroid
 wf-recorder
 wget
 which
-wine
-winetricks
 wireless-regdb
 wireshark-qt
 wl-clipboard
