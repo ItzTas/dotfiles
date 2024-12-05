@@ -8,7 +8,6 @@ alsa-firmware
 alsa-utils
 amd-ucode
 ananicy-git
-android-studio
 ark
 audiocd-kio
 avahi
@@ -21,6 +20,7 @@ bluedevil
 breeze-gtk
 breeze5
 brightness-controller-git
+brightnessctl
 btrfs-progs
 bun-bin
 calf
