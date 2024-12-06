@@ -3,15 +3,29 @@
 )
 
 (defsrc
-  a
+  a s d f
+  h j k l
+)
+
+(defvar
+  tap-time 200
+  hold-time 200
 )
 
 (defalias
   ;; tap-timeout hold-timeout tap-action hold-action
   ;; lmet=LEFTMETA
-  a-mod (tap-hold 200 200 a lmet)
+  a-mod (tap-hold $tap-time $hold-time a lmet)
+  s-mod (tap-hold $tap-time $hold-time s lalt)
+  d-mod (tap-hold $tap-time $hold-time d lsft)
+  f-mod (tap-hold $tap-time $hold-time f lctl)
+  h-mod (tap-hold $tap-time $hold-time h rctl)
+  j-mod (tap-hold $tap-time $hold-time j rsft)
+  k-mod (tap-hold $tap-time $hold-time k ralt)
+  l-mod (tap-hold $tap-time $hold-time l rmet)
 )
 
 (deflayer base
-  @a-mod
+  @a-mod @s-mod @d-mod @f-mod 
+  @h-mod @j-mod @k-mod @l-mod
 )
