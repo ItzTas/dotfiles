@@ -110,6 +110,7 @@ jira-cli
 jq
 kaccounts-providers
 kamera
+kanata-bin
 kate
 kcalc
 kde-gtk-config
@@ -299,7 +300,6 @@ sshfs
 steam
 sudo
 swaylock-effects-git
-swaync
 sysfsutils
 system-config-printer
 systemsettings
@@ -367,6 +367,7 @@ xorg-xkill
 xsel
 xwallpaper
 yamllint
+yarn
 yay
 yazi
 yt-dlp
