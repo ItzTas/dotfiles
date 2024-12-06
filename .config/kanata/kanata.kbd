@@ -1,0 +1,17 @@
+(defcfg
+  process-unmapped-keys yes 
+)
+
+(defsrc
+  a
+)
+
+(defalias
+  ;; tap-timeout hold-timeout tap-action hold-action
+  ;; lmet=LEFTMETA
+  a-mod (tap-hold 200 200 a lmet)
+)
+
+(deflayer base
+  @a-mod
+)
