@@ -14,14 +14,13 @@
 
 (defalias
   ;; tap-timeout hold-timeout tap-action hold-action
-  ;; lmet=LEFTMETA
   a-mod (tap-hold $tap-time $hold-time a lmet)
   s-mod (tap-hold $tap-time $hold-time s lalt)
   d-mod (tap-hold $tap-time $hold-time d lsft)
   f-mod (tap-hold $tap-time $hold-time f lctl)
   h-mod (tap-hold $tap-time $hold-time h rctl)
   j-mod (tap-hold $tap-time $hold-time j rsft)
-  k-mod (tap-hold $tap-time $hold-time k ralt)
+  k-mod (tap-hold $tap-time $hold-time k lalt)
   l-mod (tap-hold $tap-time $hold-time l rmet)
 )
 
