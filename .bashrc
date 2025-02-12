@@ -454,7 +454,6 @@ eval "$(thefuck --alias fk)"
 export PATH=$PATH:/var/lib/snapd/snap/bin
 export PATH="$PATH:/home/talinux/.dotnet/tools"
 export PATH=$PATH:~/Unity/Hub/Editor/6000.0.23f1/Editor
-. "$HOME/.cargo/env"
 export PATH=$PATH:~/.cargo/env
 export PATH="$PATH:/usr/local/bin/tmux"
 export PATH="$PATH:$HOME/.config/yadm/bin/"
@@ -468,3 +467,4 @@ eval "$(thefuck --alias)"
 
 export ANDROID_HOME=$HOME/.AndroidS/Sdk/
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
+. "$HOME/.cargo/env"
