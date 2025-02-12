@@ -1,9 +1,11 @@
+7zip
 acpi
 acpid
 adobe-source-han-sans-cn-fonts
 adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts
 adobe-source-sans-fonts
+alpaca-ai
 alsa-firmware
 alsa-utils
 amd-ucode
@@ -84,6 +86,7 @@ gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
 gtk3
+gtksourceview3
 gwenview
 htop
 hydralauncher
@@ -102,6 +105,7 @@ i3status
 inetutils
 install-grub
 intel-ucode
+intellij-idea-ultimate-edition
 inxi
 iriunwebcam-bin
 jdk17-openjdk
@@ -138,7 +142,6 @@ kwalletmanager
 kwayland-integration
 kwin
 kwrited
-lazydocker
 lazygit
 less
 lib32-libcanberra
@@ -188,7 +191,6 @@ memtest86+-efi
 mesa-utils
 mhwd
 mhwd-db
-microsoft-edge-stable-bin
 milou
 mkinitcpio-openswap
 modemmanager
@@ -228,8 +230,8 @@ okular
 openresolv
 openssh
 os-prober
-p7zip
 packagekit-qt6
+packettracer
 pacman-contrib
 pamac-cli
 pamac-gtk3
@@ -270,6 +272,7 @@ python-reportlab
 qbittorrent
 qt6-imageformats
 qt6-virtualkeyboard
+rar
 recordmydesktop
 redis
 redshift
@@ -279,7 +282,6 @@ rofi-emoji-git
 rofi-lbonn-wayland-git
 rsync
 ruby
-rust
 s-nail
 samba
 scrot
@@ -296,6 +298,7 @@ snapd
 sof-firmware
 spectacle
 spotify
+spring-boot-cli
 sshfs
 steam
 sudo
@@ -327,12 +330,12 @@ vim
 virt-manager
 virtualbox
 vlc
-vscodium
 vulkan-intel
 vulkan-nouveau
 vulkan-radeon
 waybar
 waydroid
+webkit2gtk
 wf-recorder
 wget
 which
@@ -373,7 +376,7 @@ yazi
 yt-dlp
 zathura
 zathura-pdf-poppler
-zen-browser-avx2-bin
+zen-browser-bin
 zoom
 zoxide
 zsa-keymapp-bin
