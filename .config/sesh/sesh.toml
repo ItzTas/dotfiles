@@ -1,13 +1,23 @@
 blacklist = ["scratch"]
 
 [default_session]
-startup_command = "nvim -c ':Telescope find_files'"
+startup_command = "nvim . -c \"lua require('oil').open(vim.fn.getcwd())\" -c \"lua vim.defer_fn(function() require('telescope.builtin').find_files() end, 70)\""
 preview_command = "lsd {}"
 
 [[session]]
 name = "Downloads 📥"
 path = "~/Downloads"
 startup_command = "ls -A"
+
+[[session]]
+name = "tmux config"
+path = "~/.config/tmux"
+startup_command = "nvim tmux.conf"
+preview_command = "bat --color=always ~/.config/tmux/tmux.conf"
+
+[[session]]
+name = "nvim config  "
+path = "~/.config/nvim"
 
 [[session]]
 name = "Projects 📂"
