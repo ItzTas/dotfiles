@@ -1,8 +1,8 @@
 blacklist = ["scratch"]
 
 [default_session]
-startup_command = "nvim . -c \"lua require('oil').open(vim.fn.getcwd())\" -c \"lua vim.defer_fn(function() require('telescope.builtin').find_files() end, 70)\" && clear"
-preview_command = "lsd {}"
+startup_command = "nvim . -c \"lua require('oil').open(vim.fn.getcwd())\" -c \"lua vim.defer_fn(function() require('telescope.builtin').find_files() end, 80)\" && clear"
+preview_command = "eza --all --git --icons --tree --level=2 --color=always {}"
 
 [[session]]
 name = "Projects 📂"
