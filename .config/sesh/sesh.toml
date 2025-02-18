@@ -12,7 +12,7 @@ startup_command = """
     --bind 'ctrl-y:accept' \
     --preview='lsd --tree --icon always --color always --depth 2 {}')" \
   && clear
-  """
+"""
 
 [[session]]
 name = "Downloads 📥"
