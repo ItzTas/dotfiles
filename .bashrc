@@ -236,21 +236,14 @@ p() {
 
 fe() {
 	if ! git rev-parse --is-inside-work-tree &>/dev/null; then
-		echo "Erro: não está dentro de um repositório Git."
+		echo "Error: not in a git directory"
 		return 1
 	fi
 
 	local b
 	b="$(git branch -a | grep -v '\->' | sed 's|remotes/origin/||' | sed 's|^\* ||' | sed 's/^ *//;s/ *$//' | sort -u)"
 
-	local toB
-	toB="$(echo "$b" | fzf)"
-	toB="${toB##*( )}"
-	toB="${toB%%*( )}"
-	if [[ -z "$toB" ]]; then
-		return 0
-	fi
-	git switch "$toB"
+	echo "$b" | fzf --bind 'ctrl-y:execute(git switch {})+abort'
 }
 
 f() {
