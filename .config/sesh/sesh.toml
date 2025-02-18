@@ -1,13 +1,18 @@
 blacklist = ["scratch"]
 
 [default_session]
-startup_command = "nvim . -c \"lua require('oil').open(vim.fn.getcwd())\" -c \"lua vim.defer_fn(function() require('telescope.builtin').find_files() end, 80)\" && clear"
+startup_command = "nvim . -c \"lua require('oil').open(vim.fn.getcwd())\" -c \"lua vim.defer_fn(function() require('telescope.builtin').find_files() end, 90)\" && clear"
 preview_command = "lsd --icon always --tree --depth 2 --color always {}"
 
 [[session]]
 name = "Projects 📂"
 path = "~/workspace/github.com/ItzTas/"
-startup_command = "nvim ."
+startup_command = """
+  cd "$(ls -A | fzf \
+    --bind 'ctrl-y:accept' \
+    --preview='lsd --tree --icon always --color always --depth 2 {}')" \
+  && clear
+  """
 
 [[session]]
 name = "Downloads 📥"
