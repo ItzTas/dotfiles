@@ -18,6 +18,10 @@ configuration {
     kb-row-left: "Control+h";
     kb-row-right: "Control+l";
     kb-remove-char-back: "BackSpace,Shift+BackSpace";
+    kb-mode-next: "Tab";
+    kb-mode-previous: "ISO_Left_Tab";
+    kb-element-next: "";
+    kb-element-prev: "";
     kb-remove-to-eol: "";
     kb-mode-complete: "";
 }
