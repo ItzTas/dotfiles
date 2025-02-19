@@ -26,5 +26,5 @@ configuration {
     kb-mode-complete: "";
 }
 
-@theme "catppuccin-mocha"
+@theme "./themes/windows11-list-dark.rasi"
 
