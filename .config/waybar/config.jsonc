@@ -53,14 +53,14 @@
             "5": []
         }
     },
+    "cpu": {
+        "format": "󰍛 {usage}%",
+        "tooltip": true
+    },
     "memory": {
         "interval": 5,
-        "format": "󰍛 {}%",
+        "format": " {}%",
         "max-length": 10
-    },
-    "cpu": {
-        "format": " {usage}%",
-        "tooltip": true
     },
     "tray": {
         "spacing": 10
