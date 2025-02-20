@@ -80,15 +80,15 @@ window#waybar.hidden {
 }
 
 #memory {
+    background-color: #e91e63;
+}
+
+#cpu {
     background-color: #fab387;
 }
 
 #battery {
     background-color: #f38ba8;
-}
-
-#cpu {
-    background-color: #e91e63;
 }
 
 #battery.warning,
