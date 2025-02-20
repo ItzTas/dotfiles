@@ -12,8 +12,8 @@
     ],
     "modules-right": [
         "tray",
-        "cpu",
         "memory",
+        "cpu",
         "network",
         "wireplumber",
         "battery",
