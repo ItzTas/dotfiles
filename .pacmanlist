@@ -185,6 +185,7 @@ mdadm
 memtest86+
 memtest86+-efi
 mesa-utils
+meson
 mhwd
 mhwd-db
 milou
