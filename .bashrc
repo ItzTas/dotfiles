@@ -113,11 +113,16 @@ fi
 MY_PROJECT_PATH="$(pwd)"
 export MY_PROJECT_PATH
 
-# my aliases
+# brightness controll
+alias sdc='ddcutil setvcp 10'
+
+# ls
 alias ll='lsd -alF'
 alias la='lsd -A'
 alias l='lsd -F'
 alias ls='lsd'
+
+# some more aliases
 alias sc='sesh clone'
 alias ksee='kitty +kitten icat'
 alias upgrady='yay -Syu --devel'
