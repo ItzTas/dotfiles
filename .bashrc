@@ -1,4 +1,3 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -83,6 +82,10 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(oh-my-posh init bash --config "$HOME"/.config/ohmyposh/my_amro.toml)"
 # eval "$(oh-my-posh init bash --config "$(brew --prefix oh-my-posh)"/themes/amro.omp.json)"
 
+eval "$(zoxide init --cmd cd bash)"
+
+eval "$(thefuck --alias fk)"
+
 # my apps paths
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -92,40 +95,6 @@ export IGNOREEOF=999
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:~/go/bin"
 
-eval "$(zoxide init --cmd cd bash)"
-
-eval "$(fzf --bash)"
-
-export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type d --hidden --strip-cwd-prefix --exclude .git"
-
-_fzf_compgen_path() {
-    fd --hidden --exclude .git . "$1"
-}
-
-_fzf_compgen_dir() {
-    fd --type d --hidden --exclude .git . "$1"
-}
-
-# source ~/fzf-git.sh/fzf-git.sh
-
-export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
-export FZF_ALT_C_OPTS="--preview 'eza --icons --tree --level 2 -F {}'"
-
-_fzf_comprun() {
-    local command=$1
-    shift
-
-    case "$command" in
-    cd) fzf --preview 'eza --icons --tree --level 2 -F {}' ;;
-    export | unset) fzf --preview "eval 'echo \$' {}" "$@" ;;
-    ssh) fzf --preview 'dig {}' "$@" ;;
-    *) fzf --preview 'bat -n --color=aways --line-range :500 {}' "$@" ;;
-    esac
-}
-
-eval "$(thefuck --alias fk)"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 export PATH=$PATH:/var/lib/snapd/snap/bin
