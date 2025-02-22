@@ -25,14 +25,14 @@ HISTFILESIZE=2000
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-	debian_chroot=$(cat /etc/debian_chroot)
+    debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm* | rxvt*)
-	PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-	;;
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
 *) ;;
 esac
 
@@ -44,22 +44,27 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # alias definitions.
 if [ -f "$HOME/.bash_aliases" ]; then
-	source "$HOME/.bash_aliases"
+    source "$HOME/.bash_aliases"
 fi
 
 # bash functions
 if [ -f "$HOME/.bash_functions.sh" ]; then
-	source "$HOME/.bash_functions.sh"
+    source "$HOME/.bash_functions.sh"
 fi
 
-# bash functions
+# bash binds
 if [ -f "$HOME/.bash_binds.sh" ]; then
-	source "$HOME/.bash_binds.sh"
+    source "$HOME/.bash_binds.sh"
+fi
+
+# my fzf
+if [ -f "$HOME/.my_fzf.sh" ]; then
+    source "$HOME/.my_fzf.sh"
 fi
 
 # bash completion
 if [ -f /usr/share/bash-completion/bash_completion ]; then
-	. /usr/share/bash-completion/bash_completion
+    . /usr/share/bash-completion/bash_completion
 fi
 # if [ -f /etc/bash_completion ]; then
 # 	. /etc/bash_completion
@@ -96,11 +101,11 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type d --hidden --strip-cwd-prefix --exclude .git"
 
 _fzf_compgen_path() {
-	fd --hidden --exclude .git . "$1"
+    fd --hidden --exclude .git . "$1"
 }
 
 _fzf_compgen_dir() {
-	fd --type d --hidden --exclude .git . "$1"
+    fd --type d --hidden --exclude .git . "$1"
 }
 
 # source ~/fzf-git.sh/fzf-git.sh
@@ -109,15 +114,15 @@ export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --icons --tree --level 2 -F {}'"
 
 _fzf_comprun() {
-	local command=$1
-	shift
+    local command=$1
+    shift
 
-	case "$command" in
-	cd) fzf --preview 'eza --icons --tree --level 2 -F {}' ;;
-	export | unset) fzf --preview "eval 'echo \$' {}" "$@" ;;
-	ssh) fzf --preview 'dig {}' "$@" ;;
-	*) fzf --preview 'bat -n --color=aways --line-range :500 {}' "$@" ;;
-	esac
+    case "$command" in
+    cd) fzf --preview 'eza --icons --tree --level 2 -F {}' ;;
+    export | unset) fzf --preview "eval 'echo \$' {}" "$@" ;;
+    ssh) fzf --preview 'dig {}' "$@" ;;
+    *) fzf --preview 'bat -n --color=aways --line-range :500 {}' "$@" ;;
+    esac
 }
 
 eval "$(thefuck --alias fk)"
