@@ -15,10 +15,6 @@ shopt -s histappend
 shopt -s checkwinsize
 shopt -s globstar
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
-
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -34,9 +30,6 @@ xterm* | rxvt*)
     ;;
 *) ;;
 esac
-
-# colors in gcc
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -56,6 +49,11 @@ if [ -f "$HOME/.bash_binds.sh" ]; then
     source "$HOME/.bash_binds.sh"
 fi
 
+# bash exports
+if [ -f "$HOME/.bash_exports.sh" ]; then
+    source "$HOME/.bash_exports.sh"
+fi
+
 # my fzf
 if [ -f "$HOME/.my_fzf.sh" ]; then
     source "$HOME/.my_fzf.sh"
@@ -68,12 +66,6 @@ fi
 # if [ -f /etc/bash_completion ]; then
 # 	. /etc/bash_completion
 # fi
-
-MY_PROJECT_PATH="$(pwd)"
-export MY_PROJECT_PATH
-
-# editor
-export EDITOR='nvim'
 
 # linuxbrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -89,8 +81,6 @@ eval "$(thefuck --alias fk)"
 # my apps paths
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-export IGNOREEOF=999
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:~/go/bin"
