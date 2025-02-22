@@ -7,6 +7,19 @@ alias la='lsd -A'
 alias l='lsd -F'
 alias ls='lsd'
 
+# dir aliases
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+
+# nvim aliases
+alias vim='nvim'
+alias v='nvim .'
+
+# grep
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
 # some more aliases
 alias sc='sesh clone'
 alias ksee='kitty +kitten icat'
@@ -17,9 +30,7 @@ alias y='yazi'
 alias python='python3'
 alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
 alias grep='grep --color=always'
-alias vim='nvim'
 alias c='bat --paging=never'
 alias renderMarkdown='grip'
 alias tattach='tmux attach'
-alias v='nvim .'
 alias tds='tmux new-session -s default'
