@@ -1,17 +1,17 @@
 # brightness controll
-alias sdc='ddcutil setvcp 10'
+alias dcs='ddcutil setvcp 10'
 
 # ls
+alias ls='lsd'
 alias ll='lsd -alF'
 alias la='lsd -A'
 alias l='lsd -F'
-alias ls='lsd'
 
-# dir aliases
+# dir
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 
-# nvim aliases
+# nvim
 alias vim='nvim'
 alias v='nvim .'
 
