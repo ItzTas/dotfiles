@@ -16,9 +16,13 @@ alias vim='nvim'
 alias v='nvim .'
 
 # grep
-alias grep='grep --color=auto'
+alias grep='grep --color=always'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+# tmux
+alias tattach='tmux attach'
+alias tds='tmux new-session -s default'
 
 # some more aliases
 alias sc='sesh clone'
@@ -29,8 +33,5 @@ alias chgra='chmod +x gradlew'
 alias y='yazi'
 alias python='python3'
 alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
-alias grep='grep --color=always'
 alias c='bat --paging=never'
 alias renderMarkdown='grip'
-alias tattach='tmux attach'
-alias tds='tmux new-session -s default'
