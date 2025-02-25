@@ -84,6 +84,7 @@ gst-plugins-good
 gst-plugins-ugly
 gtk3
 gtksourceview3
+gum
 gwenview
 htop
 hydralauncher
@@ -341,6 +342,7 @@ wireshark-qt
 wl-clipboard
 wofi
 wpa_supplicant
+wtype
 xbindkeys
 xclip
 xdg-desktop-portal-gtk

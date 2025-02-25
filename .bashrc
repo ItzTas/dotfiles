@@ -10,7 +10,7 @@ esac
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 
-# shopt utils
+# shopt
 shopt -s histappend
 shopt -s checkwinsize
 shopt -s globstar
