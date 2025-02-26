@@ -15,7 +15,7 @@ print_selected_area() {
     ACTION=$(dunstify -i "$fullpath" --action="default,swappy" "Screenshot saved" "Image saved in $fullpath")
 
     case "$ACTION" in
-    "default") swappy -f "$fullpath" ;;
+    "default") gimp "$fullpath" ;;
     esac
 }
 
