@@ -1,0 +1,24 @@
+# Font
+font-family = JetBrains Mono
+font-size = 15.0
+
+# Window
+window-padding-x = 1
+
+# cursor 
+cursor-style = block_hollow
+cursor-style-blink = false
+cursor-click-to-move = true
+
+# mouse
+mouse-hide-while-typing = true
+mouse-shift-capture = true
+
+# themes and opacities
+
+# Argonaut
+theme = Argonaut
+background-opacity = 0.6
+
+theme = Argonaut
+background-opacity = 0.6
