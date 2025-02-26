@@ -1,18 +1,32 @@
 # Font
 font-family = JetBrains Mono
-font-size = 15.0
+font-size = 15.5
 
 # Window
-window-padding-x = 1
+window-padding-x = 6
+window-padding-y = 10,0
 
 # cursor 
 cursor-style = block_hollow
 cursor-style-blink = false
 cursor-click-to-move = true
+adjust-cursor-thickness = 0
 
-# mouse
+# Mouse
 mouse-hide-while-typing = true
 mouse-shift-capture = true
+
+# Others
+confirm-close-surface = false
+link-url = true
+gtk-adwaita = true
+desktop-notifications = true
+shell-integration = bash
+focus-follows-mouse = true
+mouse-scroll-multiplier = 0.7
+
+# Keybinds
+# keybind = ctrl+a=increase_font_size
 
 # themes and opacities
 
@@ -34,7 +48,7 @@ mouse-shift-capture = true
 
 # Catppuccin mocha
 theme = catppuccin-mocha
-background-opacity = 0.4
+background-opacity = 0.31
 
 # CyberpunkScarletProtocol
 # theme = CyberpunkScarletProtocol
