@@ -33,12 +33,12 @@ mouse-shift-capture = true
 # background-opacity = 0.5
 
 # Catppuccin mocha
-# theme = catppuccin-mocha
-# background-opacity = 0.4
+theme = catppuccin-mocha
+background-opacity = 0.4
 
 # CyberpunkScarletProtocol
-theme = CyberpunkScarletProtocol
-background-opacity = 0.5
+# theme = CyberpunkScarletProtocol
+# background-opacity = 0.5
 
 # Zenbones dark
 # theme = zenbones_dark
