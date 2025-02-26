@@ -17,8 +17,21 @@ mouse-shift-capture = true
 # themes and opacities
 
 # Argonaut
-theme = Argonaut
-background-opacity = 0.6
+# theme = Argonaut
+# background-opacity = 0.6
 
-theme = Argonaut
-background-opacity = 0.6
+# Andromeda
+# theme = Andromeda
+# background-opacity = 0.3
+
+# Ayu
+# theme = ayu
+# background-opacity = 0.5
+
+# Ayu Mirage
+# theme = Ayu Mirage
+# background-opacity = 0.5
+
+# catppuccin mocha
+theme = catppuccin-mocha
+background-opacity = 0.4
