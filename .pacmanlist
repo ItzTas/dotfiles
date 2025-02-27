@@ -337,6 +337,8 @@ webkit2gtk
 wf-recorder
 wget
 which
+wine
+wine-mono
 wireless-regdb
 wireshark-qt
 wl-clipboard
