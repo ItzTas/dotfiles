@@ -1,6 +1,6 @@
 # Font
 font-family = JetBrains Mono
-font-size = 15.5
+font-size = 16
 
 # Window
 window-padding-x = 6
@@ -39,16 +39,17 @@ mouse-scroll-multiplier = 0.7
 # background-opacity = 0.3
 
 # Ayu
-# theme = ayu
-# background-opacity = 0.5
+theme = ayu
+background-opacity = 0.4
+cursor-color =  #cccccc
 
 # Ayu Mirage
 # theme = Ayu Mirage
 # background-opacity = 0.5
 
 # Catppuccin mocha
-theme = catppuccin-mocha
-background-opacity = 0.31
+# theme = catppuccin-mocha
+# background-opacity = 0.31
 
 # CyberpunkScarletProtocol
 # theme = CyberpunkScarletProtocol
