@@ -7,7 +7,7 @@ export MY_PROJECT_PATH
 export EDITOR='nvim'
 
 # terminal
-export TERMINAL="kitty"
+export TERMINAL="ghostty"
 
 # colors in gcc
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
