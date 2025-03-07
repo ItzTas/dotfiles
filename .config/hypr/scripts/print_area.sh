@@ -12,7 +12,7 @@ print_selected_area() {
     grim -g "$(slurp)" "$fullpath"
 
     local ACTION
-    ACTION=$(dunstify -i "$fullpath" --action="default,swappy" "Screenshot saved" "Image saved in $fullpath")
+    ACTION=$(dunstify -I "$fullpath" --action="default,swappy" "Screenshot saved" "Image saved in $fullpath")
 
     case "$ACTION" in
     "default") gimp "$fullpath" ;;
