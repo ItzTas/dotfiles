@@ -10,7 +10,8 @@ print_img() {
     grim "$fullpath"
 
     local ACTION
-    ACTION=$(dunstify -i "$fullpath" --action="default,swappy" "Screenshot saved" "Image saved in $fullpath")
+    sleep 0.2
+    ACTION=$(dunstify -I "$fullpath" --action="default,swappy" "Screenshot saved" "Image saved in $fullpath")
 
     case "$ACTION" in
     "default") gimp "$fullpath" ;;
