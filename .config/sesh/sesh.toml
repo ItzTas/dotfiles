@@ -1,7 +1,7 @@
 blacklist = ["scratch"]
 
 [default_session]
-startup_command = "nvim . -c \"lua require('oil').open(vim.fn.getcwd())\" -c \"lua vim.defer_fn(function() require('telescope.builtin').find_files() end, 100)\" && clear"
+startup_command = "nvim . -c \"lua require('oil').open(vim.fn.getcwd())\" -c \"lua vim.defer_fn(function() require('telescope.builtin').find_files() end, 105)\" && clear"
 preview_command = "lsd --icon always --tree --depth 2 --color always {}"
 
 [[session]]
