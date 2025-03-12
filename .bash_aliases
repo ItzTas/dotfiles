@@ -27,7 +27,7 @@ alias tds='tmux new-session -s default'
 # some more aliases
 alias sc='sesh clone'
 alias ksee='kitty +kitten icat'
-alias upgrady='yay -Syu --devel'
+alias upgrady='yay -Syu --devel; yadm_update'
 alias killzoom='killall ZoomWebviewHost zoom'
 alias chgra='chmod +x gradlew'
 alias y='yazi'
