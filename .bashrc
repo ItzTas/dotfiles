@@ -63,18 +63,6 @@ if [ -f "$HOME/.bash_evals.sh" ]; then
     source "$HOME/.bash_evals.sh"
 fi
 
-# linuxbrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# oh my posh
-eval "$(oh-my-posh init bash --config "$HOME"/.config/ohmyposh/my_amro.toml)"
-
-# zoxide
-eval "$(zoxide init --cmd cd bash)"
-
-# pay-respects
-# eval "$(pay-respects bash --alias fk)"
-
 # my apps paths
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -89,8 +77,6 @@ export PATH="$PATH:/home/talinux/.dotnet/tools"
 export PATH=$PATH:~/Unity/Hub/Editor/6000.0.23f1/Editor
 export PATH=$PATH:~/.cargo/env
 export PATH="$PATH:$HOME/.config/yadm/bin/"
-
-eval "$(thefuck --alias)"
 
 export ANDROID_HOME=$HOME/.AndroidS/Sdk/
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
