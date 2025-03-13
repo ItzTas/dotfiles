@@ -20,7 +20,7 @@ shopt -s globstar
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-	debian_chroot=$(cat /etc/debian_chroot)
+    debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # sleep 10; alert
@@ -28,47 +28,52 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # alias definitions.
 if [ -f "$HOME/.bash_aliases" ]; then
-	source "$HOME/.bash_aliases"
+    source "$HOME/.bash_aliases"
 fi
 
 # bash functions
 if [ -f "$HOME/.bash_functions.sh" ]; then
-	source "$HOME/.bash_functions.sh"
+    source "$HOME/.bash_functions.sh"
 fi
 
 # bash binds
 if [ -f "$HOME/.bash_binds.sh" ]; then
-	source "$HOME/.bash_binds.sh"
+    source "$HOME/.bash_binds.sh"
 fi
 
 # bash exports
 if [ -f "$HOME/.bash_exports.sh" ]; then
-	source "$HOME/.bash_exports.sh"
+    source "$HOME/.bash_exports.sh"
 fi
 
 # my fzf
 if [ -f "$HOME/.my_fzf.sh" ]; then
-	source "$HOME/.my_fzf.sh"
+    source "$HOME/.my_fzf.sh"
 fi
 
 # bash completion
 if [ -f /usr/share/bash-completion/bash_completion ]; then
-	. /usr/share/bash-completion/bash_completion
+    . /usr/share/bash-completion/bash_completion
 fi
 # if [ -f /etc/bash_completion ]; then
 # 	. /etc/bash_completion
 # fi
+
+if [ -f "$HOME/.bash_evals.sh" ]; then
+    source "$HOME/.bash_evals.sh"
+fi
 
 # linuxbrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # oh my posh
 eval "$(oh-my-posh init bash --config "$HOME"/.config/ohmyposh/my_amro.toml)"
-# eval "$(oh-my-posh init bash --config "$(brew --prefix oh-my-posh)"/themes/amro.omp.json)"
 
+# zoxide
 eval "$(zoxide init --cmd cd bash)"
 
-eval "$(thefuck --alias fk)"
+# pay-respects
+# eval "$(pay-respects bash --alias fk)"
 
 # my apps paths
 export NVM_DIR="$HOME/.nvm"
