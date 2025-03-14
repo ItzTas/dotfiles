@@ -159,6 +159,7 @@ linux-meta
 linux-nvidia-meta
 linux-virtualbox-host-modules-meta
 logrotate
+looksyk-desktop
 lsd
 lsp-plugins
 lvm2

@@ -270,6 +270,13 @@ version = 3
       extensions = ['*.js', '*.cjs', '*.mjs']
 
   [[blocks.segments]]
+    type = 'mojo'
+    style = 'plain'
+    foreground = '#100e23'
+    background = ''
+    template = ' 🔥 '
+
+  [[blocks.segments]]
     style = 'plain'
     template = '  '
     foreground = '#007ACC'
