@@ -63,7 +63,6 @@ if [ -f "$HOME/.bash_evals.sh" ]; then
     source "$HOME/.bash_evals.sh"
 fi
 
-# my apps paths
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
@@ -80,4 +79,4 @@ export PATH="$PATH:$HOME/.config/yadm/bin/"
 
 export ANDROID_HOME=$HOME/.AndroidS/Sdk/
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
-. "$HOME/.cargo/env"
+source "$HOME/.cargo/env"
