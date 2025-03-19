@@ -9,13 +9,14 @@ y() {
 
 	brew bundle dump --file="$HOME"/.Brewfile
 
+    yadm --no-pager diff
+
 	yadm add "$HOME"/.pacmanlist
 
 	yadm add "$HOME"/.yaylist
 
 	yadm add "$HOME"/.Brewfile
 
-    yadm --no-pager diff
 
 	yadm commit -am 'updates'
 
