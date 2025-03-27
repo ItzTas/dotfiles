@@ -68,7 +68,7 @@ version = 3
   [[blocks.segments]]
     style = 'plain'
     template = ' {{.Icon}} '
-    foreground = '#D8BFD8'
+    foreground = '#1e66f5'
     background = ''
     type = 'os'
 
