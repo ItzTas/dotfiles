@@ -1,5 +1,6 @@
 base
 base-devel
+bash-language-server
 bat
 btrfs-progs
 cmake
@@ -35,6 +36,8 @@ man-db
 nemo
 neovim
 networkmanager
+nodejs
+npm
 oh-my-posh
 os-prober
 pacfiles
@@ -43,10 +46,13 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+ripgrep
 rofi
 sddm
 sddm-sugar-candy-git
 sesh-bin
+shellcheck
+shfmt
 slurp
 spotify
 termpicker
