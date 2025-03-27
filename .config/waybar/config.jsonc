@@ -33,7 +33,7 @@
         "format-icons": {
             "default": "",
             "1": "",
-            "2": "爵",
+            "2": "󰖟",
             "3": "",
             "4": "4",
             "5": "5",
@@ -108,8 +108,8 @@
         "scroll-step": 1
     },
     "custom/logo": {
-        // "format": "  ",
-        "format": "  ",
+        "format": "  ",
+        // "format": "  ",
         "tooltip": false,
         "on-click": "~/.config/rofi/launchers/misc/launcher.sh &"
     },
