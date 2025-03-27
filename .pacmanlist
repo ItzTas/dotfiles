@@ -4,6 +4,7 @@ bat
 btrfs-progs
 cmake
 dhcpcd
+dotnet-sdk
 dunst
 efibootmgr
 fastfetch
@@ -34,7 +35,6 @@ man-db
 nemo
 neovim
 networkmanager
-nvm
 oh-my-posh
 os-prober
 pacfiles
