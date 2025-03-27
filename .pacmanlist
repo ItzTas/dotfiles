@@ -14,6 +14,7 @@ ghostty
 gimp
 git
 github-cli
+glues
 grim
 grub
 gst-plugin-pipewire
@@ -21,6 +22,7 @@ hyprland
 hyprpaper
 hyprshot
 intel-ucode
+kitty
 konsole
 lazygit
 libpulse
@@ -32,6 +34,7 @@ man-db
 nemo
 neovim
 networkmanager
+nvm
 oh-my-posh
 os-prober
 pacfiles
@@ -46,6 +49,7 @@ sddm-sugar-candy-git
 sesh-bin
 slurp
 spotify
+termpicker
 thunderbird
 tmux
 ttf-jetbrains-mono-nerd
@@ -56,7 +60,6 @@ wayland-protocols
 wireplumber
 wl-clipboard
 wlroots
-wofi
 yadm
 yay
 yay-debug
