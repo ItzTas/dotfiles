@@ -80,3 +80,4 @@ export PATH="$PATH:$HOME/.config/yadm/bin/"
 export ANDROID_HOME=$HOME/.AndroidS/Sdk/
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
