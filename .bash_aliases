@@ -24,14 +24,21 @@ alias egrep='egrep --color=auto'
 alias tattach='tmux attach'
 alias tds='tmux new-session -s default'
 
+# pacman, yay & utilities
+alias upacf='pacfiles --update-db *'
+alias pacf='pacfiles -l'
+alias upgrady='yay -Syu --devel; yadm_update'
+
+# git 
+alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
+alias gss='git status'
+
 # some more aliases
 alias sc='sesh clone'
 alias ksee='kitty +kitten icat'
-alias upgrady='yay -Syu --devel; yadm_update'
 alias killzoom='killall ZoomWebviewHost zoom'
 alias chgra='chmod +x gradlew'
 alias y='yazi'
 alias python='python3'
-alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
 alias c='bat --paging=never'
 alias renderMarkdown='grip'

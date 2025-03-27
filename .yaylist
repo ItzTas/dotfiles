@@ -9,7 +9,6 @@ efibootmgr
 fastfetch
 fd
 ferdium
-fuzzel
 fzf
 ghostty
 gimp
@@ -23,9 +22,11 @@ hyprpaper
 hyprshot
 intel-ucode
 konsole
+lazygit
 libpulse
 linux
 linux-firmware
+looksyk-desktop
 lsd
 man-db
 nemo
@@ -33,6 +34,7 @@ neovim
 networkmanager
 oh-my-posh
 os-prober
+pacfiles
 pay-respects
 pipewire
 pipewire-alsa
@@ -58,6 +60,7 @@ wofi
 yadm
 yay
 yay-debug
+yazi
 yq
 zen-browser-bin
 zip
