@@ -75,10 +75,25 @@ _install_pacman_packages() {
 }
 
 _install_nvm() {
+    if command -v nvm &>/dev/null; then
+        echo "nvm is already installed. Skipping installation."
+        return
+    fi
     echo "Installing nvm"
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
 }
 
+_install_rustup() {
+    if command -v rustup &>/dev/null; then
+        echo "Rustup is already installed. Skipping installation."
+        return
+    fi
+
+    echo "Installing rustup"
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+}
+
 _install_yay
-_install_pacman_packages
 _install_nvm
+_install_pacman_packages
+_install_rustup
