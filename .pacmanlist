@@ -25,6 +25,7 @@ gst-plugin-pipewire
 hyprland
 hyprpaper
 hyprshot
+imv
 intel-ucode
 kitty
 konsole
@@ -69,6 +70,7 @@ wayland-protocols
 wireplumber
 wl-clipboard
 wlroots
+xdg-user-dirs
 yadm
 yay
 yay-debug
