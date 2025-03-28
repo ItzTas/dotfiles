@@ -75,6 +75,7 @@ _install_pacman_packages() {
 }
 
 _install_nvm() {
+    echo "Installing nvm"
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
 }
 
