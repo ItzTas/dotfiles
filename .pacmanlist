@@ -49,6 +49,7 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+polkit-kde-agent
 ripgrep
 rofi
 sddm
