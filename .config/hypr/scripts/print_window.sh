@@ -12,10 +12,10 @@ print_window() {
 
     hyprshot -m window -s -o "$path" -f "$filename"
 
-    ACTION=$(dunstify -I "$fullpath" --action="default,swappy" "Screenshot saved" "Image saved in $fullpath")
+    ACTION=$(dunstify -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
 
     case "$ACTION" in
-    "default") gimp "$fullpath" ;;
+    "default") imv "$fullpath" ;;
     esac
 }
 
