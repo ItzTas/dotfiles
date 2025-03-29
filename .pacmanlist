@@ -36,6 +36,7 @@ linux-firmware
 looksyk-desktop
 lsd
 man-db
+nano
 nemo
 neovim
 networkmanager
@@ -63,6 +64,7 @@ spotify
 stacer-bin
 termpicker
 thunderbird
+timeshift
 tmux
 ttf-jetbrains-mono-nerd
 unzip
