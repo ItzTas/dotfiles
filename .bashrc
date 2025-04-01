@@ -54,10 +54,9 @@ fi
 # bash completion
 if [ -f /usr/share/bash-completion/bash_completion ]; then
 	. /usr/share/bash-completion/bash_completion
+elif [ -f /etc/bash_completion ]; then
+	. /etc/bash_completion
 fi
-# if [ -f /etc/bash_completion ]; then
-# 	. /etc/bash_completion
-# fi
 
 if [ -f "$HOME/.bash_evals.sh" ]; then
 	source "$HOME/.bash_evals.sh"
@@ -75,9 +74,12 @@ export PATH=$PATH:/var/lib/snapd/snap/bin
 export PATH="$PATH:/home/talinux/.dotnet/tools"
 export PATH=$PATH:~/Unity/Hub/Editor/6000.0.23f1/Editor
 export PATH=$PATH:~/.cargo/env
-export PATH="$PATH:$HOME/.config/yadm/bin/"
 
 export ANDROID_HOME=$HOME/.AndroidS/Sdk/
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 source "$HOME/.cargo/env"
-. "$HOME/.cargo/env"
+
+# yay completions
+# if [ -f /usr/share/bash-completion/completions/yay ]; then
+# 	source /usr/share/bash-completion/completions/yay
+# fi
