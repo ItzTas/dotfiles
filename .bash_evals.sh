@@ -1,5 +1,5 @@
 # linuxbrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # oh my posh
 if command -v oh-my-posh &>/dev/null; then

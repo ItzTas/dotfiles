@@ -7,18 +7,16 @@
 set -eu
 
 # Directory to look for bootstrap executables in
-BOOTSTRAP_D="$HOME/.config/yadm/bootstrap.d"
+BOOTSTRAP_D="$HOME/.config/yadm/bootstrap.x.d"
 
 if [[ ! -d "$BOOTSTRAP_D" ]]; then
-	echo "Error: bootstrap directory '$BOOTSTRAP_D' not found" >&2
-	exit 1
+    echo "Error: bootstrap directory '$BOOTSTRAP_D' not found" >&2
+    exit 1
 fi
 
-find -L "$BOOTSTRAP_D" -type f | sort | while IFS= read -r bootstrap; do
-	if [[ -x "$bootstrap" && ! "$bootstrap" =~ "##" && ! "$bootstrap" =~ "~$" ]]; then
-		if ! "$bootstrap"; then
-			echo "Error: bootstrap '$bootstrap' failed" >&2
-			exit 1
-		fi
-	fi
-done
+chmod "$BOOTSTRAP_D/*" +x
+
+"./$BOOTSTRAP_D/stash.sh"
+"./$BOOTSTRAP_D/install_packages.sh"
+"./$BOOTSTRAP_D/enables.sh"
+"./$BOOTSTRAP_D/grub_theme.sh"
