@@ -12,9 +12,9 @@ configuration {
     display-drun: " 🚀  App ";
     sidebar-mode: true;
     // --- BINDS ---
-    kb-accept-entry: "Control+y";
-    kb-row-up: "Control+k";
-    kb-row-down: "Control+j";
+    kb-accept-entry: "Control+y,Return";
+    kb-row-up: "Control+k,Up";
+    kb-row-down: "Control+j,Down";
     kb-row-left: "Control+h";
     kb-row-right: "Control+l";
     kb-remove-char-back: "BackSpace,Shift+BackSpace";
