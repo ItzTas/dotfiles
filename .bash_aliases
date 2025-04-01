@@ -29,9 +29,12 @@ alias upacf='pacfiles --update-db *'
 alias pacf='pacfiles -l'
 alias upgrady='yay -Syu --devel; yadm_update'
 
-# git 
+# git
 alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
 alias gss='git status'
+
+# yadm
+alias yadm_update='~/.config/yadm/bin/yadm_update.sh'
 
 # some more aliases
 alias sc='sesh clone'
