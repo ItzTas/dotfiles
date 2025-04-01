@@ -1,5 +1,6 @@
 base
 base-devel
+bash-completion
 bash-language-server
 bat
 btrfs-progs
@@ -54,6 +55,7 @@ qt5-wayland
 qt6-wayland
 rofi
 sddm
+sddm-sugar-candy-git
 sesh-bin
 shellcheck
 shfmt
@@ -65,7 +67,6 @@ termpicker
 thunderbird
 ttf-jetbrains-mono-nerd
 unzip
-vim
 vulkan-intel
 vulkan-nouveau
 vulkan-radeon
@@ -85,7 +86,6 @@ xorg-server
 xorg-xinit
 yadm
 yay
-yay-debug
 yq
 zen-browser-bin
 zip
