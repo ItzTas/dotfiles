@@ -67,6 +67,7 @@ spotify
 stacer-bin
 termpicker
 thunderbird
+timeshift
 ttf-jetbrains-mono-nerd
 unzip
 vulkan-intel
@@ -86,6 +87,7 @@ xf86-video-ati
 xf86-video-nouveau
 xf86-video-vmware
 xorg-server
+xorg-xhost
 xorg-xinit
 yadm
 yay
