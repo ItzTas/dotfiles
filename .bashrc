@@ -62,12 +62,11 @@ if [ -f "$HOME/.bash_evals.sh" ]; then
 	source "$HOME/.bash_evals.sh"
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:~/go/bin"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 export PATH=$PATH:/var/lib/snapd/snap/bin

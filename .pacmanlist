@@ -5,6 +5,7 @@ bash-language-server
 bat
 btrfs-progs
 cmake
+cronie
 discord
 dotnet-sdk
 dunst
@@ -52,6 +53,7 @@ pipewire-pulse
 polkit-kde-agent
 qt5-wayland
 qt6-wayland
+ripgrep
 rofi
 sddm
 sddm-sugar-candy-git
@@ -89,3 +91,4 @@ yq
 zen-browser-bin
 zip
 zram-generator
+zsa-keymapp-bin
