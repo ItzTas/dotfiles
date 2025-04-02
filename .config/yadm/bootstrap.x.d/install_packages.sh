@@ -23,6 +23,8 @@ _install_pacman_packages() {
 	set -e
 	local packages=(
 		"cmake"
+		"mpv"
+		"wf-recorder"
 		"ferdium"
 		"discord"
 		"dotnet-sdk"
@@ -72,6 +74,7 @@ _install_pacman_packages() {
 		"zsa-keymapp-bin"
 		"sddm-sugar-candy-git"
 	)
+	local installed=()
 
 	for package in "${packages[@]}"; do
 		if yay -Q "$package" &>/dev/null; then
@@ -79,8 +82,15 @@ _install_pacman_packages() {
 		else
 			echo "Installing package: $package"
 			yay -S "$package" --noconfirm
+			installed+=("$package")
 		fi
 	done
+
+	if [ ${#installed[@]} -gt 0 ]; then
+		echo "The following packages were installed: ${installed[*]}"
+	else
+		echo "No new packages were installed."
+	fi
 }
 
 _install_nvm() {
