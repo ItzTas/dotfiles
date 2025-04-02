@@ -11,6 +11,7 @@ configuration {
     display-combi: " 🖥️  All ";
     display-drun: " 🚀  App ";
     sidebar-mode: true;
+    font: "JetBrainsMonoNL Nerd Font 10";
     // --- BINDS ---
     kb-accept-entry: "Control+y,Return";
     kb-row-up: "Control+k,Up";
