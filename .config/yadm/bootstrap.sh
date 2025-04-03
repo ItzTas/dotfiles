@@ -14,9 +14,12 @@ if [[ ! -d "$BOOTSTRAP_D" ]]; then
     exit 1
 fi
 
-chmod "$BOOTSTRAP_D/*" +x
+chmod +x "$BOOTSTRAP_D/stash.sh"
+chmod +x "$BOOTSTRAP_D/install_packages.sh"
+chmod +x "$BOOTSTRAP_D/enables.sh"
+chmod +x "$BOOTSTRAP_D/grub_theme.sh"
 
-"./$BOOTSTRAP_D/stash.sh"
-"./$BOOTSTRAP_D/install_packages.sh"
-"./$BOOTSTRAP_D/enables.sh"
-"./$BOOTSTRAP_D/grub_theme.sh"
+# "$BOOTSTRAP_D/stash.sh"
+"$BOOTSTRAP_D/install_packages.sh"
+"$BOOTSTRAP_D/enables.sh"
+"$BOOTSTRAP_D/grub_theme.sh"
