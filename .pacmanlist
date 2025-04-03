@@ -6,6 +6,7 @@ bat
 btrfs-progs
 cmake
 cronie
+ddcutil
 discord
 dotnet-sdk
 dunst
