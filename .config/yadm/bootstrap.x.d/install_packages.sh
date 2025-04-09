@@ -34,6 +34,7 @@ _install_pacman_packages() {
 		"sesh-bin"
 		"github-cli"
 		"glues"
+		"pay-respects"
 		"grim"
 		"hyprpaper"
 		"hyprshot"
