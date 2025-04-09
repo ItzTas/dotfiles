@@ -82,3 +82,4 @@ source "$HOME/.cargo/env"
 # if [ -f /usr/share/bash-completion/completions/yay ]; then
 # 	source /usr/share/bash-completion/completions/yay
 # fi
+. "$HOME/.cargo/env"
