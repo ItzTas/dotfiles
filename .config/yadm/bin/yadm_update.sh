@@ -1,15 +1,15 @@
 y() {
-	set -e
+    set -e
 
-	pacman -Qqe >"$HOME"/.pacmanlist
+    pacman -Q >"$HOME"/.pacmanlist
 
-	yadm --no-pager diff
+    yadm --no-pager diff
 
-	yadm add "$HOME"/.pacmanlist
+    yadm add "$HOME"/.pacmanlist
 
-	yadm commit -am 'updates'
+    yadm commit -am 'updates'
 
-	yadm push
+    yadm push
 }
 
 y
