@@ -22,6 +22,7 @@ _install_yay() {
 _install_pacman_packages() {
 	set -e
 	local packages=(
+		"os-prober"
 		"cmake"
 		"mpv"
 		"wf-recorder"
