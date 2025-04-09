@@ -519,7 +519,8 @@ pangomm 2.46.4-1
 parted 3.6-2
 paru-debug 2.0.4-1
 patch 2.7.6-10
-pay-respects 0.7.2-1
+pay-respects 0.7.3-1
+pay-respects-debug 0.7.3-1
 pciutils 3.13.0-2
 pcre 8.45-4
 pcre2 10.45-1
