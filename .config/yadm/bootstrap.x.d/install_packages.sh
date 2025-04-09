@@ -32,6 +32,7 @@ _install_pacman_packages() {
 		"easyeffects"
 		"fd"
 		"fzf"
+		"bash-completion"
 		"sesh-bin"
 		"github-cli"
 		"glues"
