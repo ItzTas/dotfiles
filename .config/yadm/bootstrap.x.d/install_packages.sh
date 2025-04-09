@@ -39,6 +39,7 @@ _install_pacman_packages() {
 		"hyprshot"
 		"kitty"
 		"lazygit"
+		"ghostty"
 		"lsd"
 		"man-db"
 		"wget"
@@ -46,6 +47,7 @@ _install_pacman_packages() {
 		"nemo"
 		"cronie"
 		"neovim"
+		"wl-clip-persist"
 		"oh-my-posh"
 		"pacfiles"
 		"ripgrep"
@@ -114,6 +116,9 @@ _install_rustup() {
 	if command -v rustup &>/dev/null; then
 		echo "Rustup is already installed. Skipping installation."
 		return
+	fi
+	if yay -Q "rust" &>/dev/null; then
+		yay -Rns rust
 	fi
 
 	echo "Installing rustup"

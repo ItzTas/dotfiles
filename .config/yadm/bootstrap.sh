@@ -19,7 +19,6 @@ chmod +x "$BOOTSTRAP_D/install_packages.sh"
 chmod +x "$BOOTSTRAP_D/enables.sh"
 chmod +x "$BOOTSTRAP_D/grub_theme.sh"
 
-"$BOOTSTRAP_D/stash.sh"
 "$BOOTSTRAP_D/install_packages.sh"
 "$BOOTSTRAP_D/enables.sh"
 "$BOOTSTRAP_D/grub_theme.sh"
