@@ -28,6 +28,8 @@ alias tds='tmux new-session -s default'
 alias upacf='pacfiles --update-db *'
 alias pacf='pacfiles -l'
 alias upgrady='yay -Syu --devel; yadm_update'
+alias yayd='yay -S $(yay -Slq | fzf)'
+alias yremove='yay -Qq | fzf --multi --preview "yay -Qi {}" | xargs yay -Rns'
 
 # git
 alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
