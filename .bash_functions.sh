@@ -22,12 +22,6 @@ ex() {
     fi
 }
 
-fs() {
-    local session
-    session=$(tmux list-sessions -F "#{session_name}" | fzf)
-    tmux switch-client -t "$session"
-}
-
 p() {
     cd "$MY_PROJECT_PATH" || return
 }
@@ -52,11 +46,6 @@ f() {
     ) | fzf --preview 'eza --icons --tree --level 3 -F {}') && cd "$dir" || return
 }
 
-fv() {
-    f
-    nvim .
-}
-
 fvv() {
     local file
     file="$(find . -type f | fzf --preview 'bat --style=numbers --color=always {}')"
@@ -67,14 +56,6 @@ fvv() {
     fi
 
     nvim "$file"
-}
-
-fr() {
-    cd "$HOME" && f
-}
-
-frv() {
-    cd "$HOME" && fv
 }
 
 replace_in_files() {
@@ -98,20 +79,6 @@ replace_in_files() {
     fi
 
     find "$project_path" -type f -exec sed -i "s/$old_name/$new_name/g" {} +
-}
-
-ft() {
-    local s
-    printf "(new-session) "
-    read -r s
-
-    tmux new-session -d -s "$s"
-    while ! tmux has-session -t "$s" 2>/dev/null; do
-        sleep 0.2
-    done
-    tmux send-keys -t "$s" 'cd && f && clear' C-m
-    tmux switch-client -t "$s"
-    clear
 }
 
 pf() {
