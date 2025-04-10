@@ -149,3 +149,26 @@ tmux_manager() {
         fi
     fi
 }
+
+pacclean() {
+    local orphans
+    orphans=$(pacman -Qdtq)
+
+    if [[ -z $orphans ]]; then
+        echo "No orphan packages found."
+        return
+    fi
+
+    local valid_pkgs=()
+    for pkg in $orphans; do
+        if pacman -Q "$pkg" &>/dev/null; then
+            valid_pkgs+=("$pkg")
+        fi
+    done
+
+    if [[ ${#valid_pkgs[@]} -eq 0 ]]; then
+        echo "No valid orphan packages found."
+    else
+        sudo pacman -Rns "${valid_pkgs[@]}"
+    fi
+}
