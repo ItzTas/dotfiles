@@ -64,6 +64,8 @@ dconf 0.40.0-3
 debugedit 5.1-1
 default-cursors 3-1
 desktop-file-utils 0.28-1
+devhub-bin 0.102.0-3
+devhub-bin-debug 0.102.0-3
 device-mapper 2.03.31-1
 diffutils 3.11-2
 discord 0.0.90-1
@@ -78,6 +80,8 @@ e2fsprogs 1.47.2-2
 easyeffects 7.2.3-2
 efibootmgr 18-3
 efivar 39-1
+electron11-bin 11.5.0-2
+electron11-bin-debug 11.5.0-2
 electron34 34.5.0-2
 enchant 2.8.2-2
 exempi 2.6.5-1
@@ -212,6 +216,7 @@ haskell-witherable 0.4.2-127
 hicolor-icon-theme 0.18-1
 hidapi 0.14.0-3
 highway 1.2.0-1
+http-parser 2.9.4-2
 hunspell 1.7.2-2
 hwdata 0.394-1
 hwloc 2.12.0-1

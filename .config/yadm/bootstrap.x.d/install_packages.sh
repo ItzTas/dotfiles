@@ -39,6 +39,7 @@ _install_pacman_packages() {
         "pay-respects"
         "grim"
         "hyprpaper"
+        "devhub-bin"
         "cliphist"
         "hyprshot"
         "kitty"
