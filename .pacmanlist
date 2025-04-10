@@ -45,8 +45,10 @@ cairomm 1.14.5-1
 cantarell-fonts 1:0.303.1-2
 cblas 3.12.1-2
 cinnamon-desktop 6.4.1-1
+clang 19.1.7-1
 cliphist 1:0.6.1-1
 cmake 4.0.0-1
+compiler-rt 19.1.7-1
 coreutils 9.6-4
 cppdap 1.58.0-2
 cronie 1.7.2-1
@@ -108,6 +110,7 @@ gcc-libs 14.2.1+r753+g1cd744a6828f-1
 gcr-4 4.4.0.1-1
 gdbm 1.25-1
 gdk-pixbuf2 2.42.12-2
+gendesk 1.0.10-1
 gettext 0.24-1
 ghc-libs 9.2.8-1
 ghostty 1.1.3-1
@@ -124,12 +127,14 @@ glslang 15.2.0-2
 glu 9.0.3-2
 glues 0.6.2-1
 gmp 6.3.0-2
+gn 0.2223.6e8e0d6d-1
 gnu-free-fonts 20120503-8
 gnulib-l10n 20241231-1
 gnupg 2.4.7-1
 gnutls 3.8.9-1
 gobject-introspection 1.84.0-1
 gobject-introspection-runtime 1.84.0-1
+gperf 3.1-5
 gperftools 2.16-1
 gpgme 1.24.2-1
 gpm 1.20.7.r38.ge82d1a6-6
@@ -211,6 +216,7 @@ haskell-witherable 0.4.2-127
 hicolor-icon-theme 0.18-1
 hidapi 0.14.0-3
 highway 1.2.0-1
+http-parser 2.9.4-2
 hunspell 1.7.2-2
 hwdata 0.394-1
 hwloc 2.12.0-1
@@ -461,7 +467,9 @@ linux 6.14.1.arch1-1
 linux-api-headers 6.13-1
 linux-firmware 20250311.b69d4b74-3
 linux-firmware-whence 20250311.b69d4b74-3
+lld 19.1.7-1
 llhttp 9.2.1-2
+llvm 19.1.7-1
 llvm-libs 19.1.7-1
 lm_sensors 1:3.6.0.r41.g31d1f125-3
 lmdb 0.9.33-1
@@ -496,7 +504,11 @@ neovim 0.11.0-2
 netstandard-targeting-pack 9.0.3.sdk104-1
 nettle 3.10.1-1
 networkmanager 1.52.0-1
-nodejs 23.9.0-1
+ninja 1.12.1-2
+node-gyp 11.2.0-1
+nodejs-lts-iron 20.19.0-1
+nodejs-nopt 7.2.1-1
+npm 11.3.0-1
 npth 1.8-1
 nspr 4.36-1
 nss 3.110-1
@@ -524,6 +536,7 @@ pangomm 2.46.4-1
 parted 3.6-2
 paru-debug 2.0.4-1
 patch 2.7.6-10
+patchutils 0.4.2-3
 pay-respects 0.7.3-1
 pciutils 3.13.0-2
 pcre 8.45-4
@@ -552,6 +565,9 @@ pugixml 1.15-2
 python 3.13.2-1
 python-argcomplete 3.5.3-1
 python-autocommand 2.2.2-7
+python-charset-normalizer 3.4.1-1
+python-httplib2 0.22.0-8
+python-idna 3.10-2
 python-jaraco.collections 5.1.0-1
 python-jaraco.context 6.0.1-1
 python-jaraco.functools 4.1.0-1
@@ -562,8 +578,12 @@ python-markupsafe 2.1.5-3
 python-more-itertools 10.6.0-1
 python-packaging 24.2-3
 python-platformdirs 4.3.6-2
+python-pyparsing 3.2.1-1
+python-requests 2.32.3-4
 python-setuptools 1:75.8.0-1
+python-six 1.17.0-1
 python-tomlkit 0.13.2-2
+python-urllib3 2.3.0-1
 python-wheel 0.45.1-1
 python-xmltodict 0.14.2-1
 python-yaml 6.0.2-2
@@ -589,6 +609,7 @@ rsync 3.4.1-2
 rtkit 0.13-3
 rubberband 4.0.0-1
 run-parts 5.17-1
+rust 1:1.86.0-1
 sbc 2.0-2
 sdbus-cpp 2.1.0-2
 sddm 0.21.0-6
@@ -597,6 +618,7 @@ sdl2-compat 2.32.54-1
 sdl3 3.2.10-1
 seatd 0.9.1-1
 sed 4.9-3
+semver 7.7.1-1
 serd 0.32.4-1
 sesh-bin 2.13.0-1
 shaderc 2025.1-3
@@ -712,6 +734,7 @@ xvidcore 1.3.7-3
 xxhash 0.8.3-1
 xz 5.8.1-1
 yadm 3.4.0-1
+yarn 1.22.22-2
 yay 12.4.2-1
 yq 3.4.3-2
 zen-browser-bin 1.11.1b-1
