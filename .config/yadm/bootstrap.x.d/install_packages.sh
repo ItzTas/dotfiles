@@ -98,7 +98,6 @@ _install_pacman_packages() {
     else
         echo "No new packages were installed."
     fi
-    sudo pacman -Rns "$(pacman -Qdtq)"
 }
 
 _install_nvm() {
