@@ -40,7 +40,6 @@ _install_pacman_packages() {
         "grim"
         "hyprpaper"
         "devhub-bin"
-        "cliphist"
         "clipse"
         "clipse-gui"
         "hyprshot"
