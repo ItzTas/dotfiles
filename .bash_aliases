@@ -27,7 +27,7 @@ alias tds='tmux new-session -s default'
 # pacman, yay & utilities
 alias upacf='pacfiles --update-db *'
 alias pacf='pacfiles -l'
-alias upgrady='yay -Syu --devel; yadm_update'
+alias upgrady='yay -Syu --devel; sudo pacman -Fy; yadm_update'
 alias yayd='yay -S $(yay -Slq | fzf)'
 alias yremove='yay -Qq | fzf --multi --preview "yay -Qi {}" | xargs yay -Rns'
 
