@@ -39,6 +39,7 @@ _install_pacman_packages() {
         "glues"
         "pay-respects"
         "grim"
+        "imfile"
         "hyprpaper"
         "devhub-bin"
         "clipse"
