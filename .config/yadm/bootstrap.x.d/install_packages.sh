@@ -23,6 +23,7 @@ _install_pacman_packages() {
     set -e
     local packages=(
         "os-prober"
+        "xorg-host"
         "cmake"
         "mpv"
         "wf-recorder"
