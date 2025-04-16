@@ -41,6 +41,8 @@ _install_pacman_packages() {
         "hyprpaper"
         "devhub-bin"
         "cliphist"
+        "clipse"
+        "clipse-gui"
         "hyprshot"
         "kitty"
         "lazygit"

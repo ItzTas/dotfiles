@@ -46,6 +46,10 @@ cantarell-fonts 1:0.303.1-2
 cblas 3.12.1-2
 cinnamon-desktop 6.4.1-1
 cliphist 1:0.6.1-1
+clipse 1.1.0-1
+clipse-debug 1.1.0-1
+clipse-gui 0.1.1-2.6
+clipse-gui-debug 0.1.1-2.6
 cmake 4.0.1-1
 coreutils 9.7-1
 cppdap 1.58.0-2
@@ -515,6 +519,7 @@ os-prober 1.83-1
 p11-kit 0.25.5-1
 pacfiles 0.2.7-2
 pacman 7.0.0.r6.gc685ae6-2
+pacman-contrib 1.11.0-1
 pacman-mirrorlist 20250311-1
 pam 1.7.0-2
 pambase 20230918-2
@@ -550,6 +555,7 @@ pugixml 1.15-2
 python 3.13.2-1
 python-argcomplete 3.5.3-1
 python-autocommand 2.2.2-7
+python-gobject 3.52.3-3
 python-jaraco.collections 5.1.0-1
 python-jaraco.context 6.0.1-1
 python-jaraco.functools 4.1.0-1
