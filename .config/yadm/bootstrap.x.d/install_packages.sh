@@ -23,7 +23,9 @@ _install_pacman_packages() {
     set -e
     local packages=(
         "os-prober"
-        "xorg-host"
+        "docker"
+        "docker-desktop"
+        "xorg-xhost"
         "cmake"
         "mpv"
         "wf-recorder"
