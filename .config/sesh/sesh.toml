@@ -6,7 +6,7 @@ preview_command = "lsd --icon always --tree --depth 2 --color always {}"
 
 [[session]]
 name = "Projects 📂"
-path = "~/workspace/github.com/ItzTas/"
+path = "~/workspace/github.com/ItzTas"
 startup_command = """
   cd "$(ls -A | fzf \
     --bind 'ctrl-y:accept' \
