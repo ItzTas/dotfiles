@@ -3,6 +3,8 @@ _change_grub_theme() {
     THEME_PATH="/boot/grub/themes/elegant-mojave"
     local GRUB_CONFIG
     GRUB_CONFIG="/etc/default/grub"
+    local THEME_LINE
+    THEME_LINE='GRUB_THEME="/boot/grub/themes/elegant-mojave/theme.txt"'
 
     if grep -q "$THEME_LINE" "$GRUB_CONFIG"; then
         echo "GRUB theme is already set. Skipping..."
