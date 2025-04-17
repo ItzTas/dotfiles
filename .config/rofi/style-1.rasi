@@ -35,7 +35,6 @@ window {
     width:                       400px;
     x-offset:                    0px;
     y-offset:                    0px;
-
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
