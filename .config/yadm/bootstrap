@@ -1,12 +1,7 @@
 #!/bin/bash
 
-# Save this file as ~/.config/yadm/bootstrap and make it executable. It will
-# execute all executable files (excluding templates and editor backups) in the
-# ~/.config/yadm/bootstrap.d directory when run.
-
 set -eu
 
-# Directory to look for bootstrap executables in
 BOOTSTRAP_D="$HOME/.config/yadm/bootstrap.x.d"
 
 if [[ ! -d "$BOOTSTRAP_D" ]]; then
