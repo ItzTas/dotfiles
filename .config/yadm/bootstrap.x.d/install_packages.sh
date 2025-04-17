@@ -72,7 +72,6 @@ _install_pacman_packages() {
         "stacer-bin"
         "termpicker"
         "thunderbird"
-        "dove"
         "tmux"
         "ttf-jetbrains-mono-nerd"
         "unzip"
