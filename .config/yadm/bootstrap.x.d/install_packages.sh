@@ -23,6 +23,8 @@ _install_pacman_packages() {
     set -e
     local packages=(
         "os-prober"
+        "miru-go-bin"
+        "proto-bin"
         "brightnessctl"
         "docker"
         "docker-desktop"
