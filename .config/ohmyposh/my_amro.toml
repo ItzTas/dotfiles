@@ -86,7 +86,7 @@ version = 3
 
   [[blocks.segments]]
     style = 'plain'
-    template = '['
+    template = ' ['
     foreground = '#CD4277'
     background = ''
     type = 'text'
