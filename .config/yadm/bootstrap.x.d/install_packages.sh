@@ -23,8 +23,10 @@ _install_pacman_packages() {
     set -e
     local packages=(
         "os-prober"
+        "brightnessctl"
         "docker"
         "docker-desktop"
+        "ddcutil"
         "xorg-xhost"
         "cmake"
         "mpv"
