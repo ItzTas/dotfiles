@@ -148,6 +148,7 @@ gobject-introspection-runtime 1.84.0-1
 gperftools 2.16-1
 gpgme 1.24.2-1
 gpm 1.20.7.r38.ge82d1a6-6
+gpu-screen-recorder-debug r1072.1fd3018-1
 graphene 1.10.8-2
 graphite 1:1.3.14-4
 grep 3.12-1
