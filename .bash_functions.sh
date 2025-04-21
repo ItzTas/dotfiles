@@ -147,3 +147,20 @@ pacclean() {
 		sudo pacman -Rns "${valid_pkgs[@]}"
 	fi
 }
+
+# proto & langs
+pgo() {
+	proto run go -- "$@"
+}
+
+# pnode() {
+# 	proto run node -- "$@"
+# }
+#
+# pbun() {
+# 	proto run bun -- "$@"
+# }
+#
+# pdeno() {
+# 	proto run deno -- "$@"
+# }
