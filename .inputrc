@@ -6,13 +6,13 @@ set mark-directories On
 # Completion settings
 set show-all-if-ambiguous on
 set completion-ignore-case on
-set completion-query-items 1000
+set completion-query-items 2000
 set visible-stats On
 set print-completions-horizontally On
 set mark-modified-lines On
 set match-hidden-files On
 set mark-symlinked-directories On
-set history-size 1000
+set history-size 2000
 set history-preserve-point On
 
 # no bell
@@ -29,4 +29,6 @@ set echo-control-characters off
 "\e[1;5D": backward-word
 "\e[1;5C": forward-word
 
-
+# Move foreward/backward in menu complete
+"\C-j": menu-complete
+"\C-k": menu-complete-backward
