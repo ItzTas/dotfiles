@@ -16,6 +16,7 @@ set completion-query-items 2000
 set visible-stats on
 set print-completions-horizontally on
 set mark-modified-lines on
+set completion-map-case on
 set match-hidden-files on
 set mark-symlinked-directories on
 set history-size 2000
@@ -30,13 +31,19 @@ set show-mode-in-prompt on
 set vi-ins-mode-string (i)
 set vi-cmd-mode-string (n) 
 
+# ^C no longer shows on C-c keypress
+set echo-control-characters off
+
+# other
+# set keyseq-timeout 200
+
 # Navigation and Editing
 "\C-a": beginning-of-line  # Move to the beginning of the line
 "\C-e": end-of-line        # Move to the end of the line
 "\C-y": yank               # Paste the last killed text
 "\C-w": backward-kill-word # Delete the word to the left of the cursor
 "\C-d": delete-char        # Delete the character under the cursor
-"\C-h": backward-delete-char # Delete the character to the left of the cursor
+"\C-h": backward-kill-word # Delete the word to the left of the cursor
 "\e[d": kill-word          # Delete the word to the right of the cursor
 "\C-t": transpose-chars    # Swap the character before the cursor with the one under it
 "\e[b": backward-word      # Move one word backward
@@ -44,16 +51,9 @@ set vi-cmd-mode-string (n)
 "\C-l": clear-screen       # Clear the screen
 # "\C-k": kill-line          # Delete from the cursor to the end of the line
 
-# History
-"\C-p": previous-history   # Go to the previous command in history
-"\C-n": next-history       # Go to the next command in history
-
 # Other
 "\e.": yank-last-arg       # Paste the last argument from the previous command
 # "\C-z": suspend            # Suspend the current process
-
-# ^C no longer shows on C-c keypress
-set echo-control-characters off
 
 # Command history search
 "\e[A": history-search-backward
@@ -64,5 +64,5 @@ set echo-control-characters off
 "\e[1;5C": forward-word
 
 # Move foreward/backward in menu complete
-"\C-j": menu-complete
-"\C-k": menu-complete-backward
+"\C-i": menu-complete
+"\e[Z": menu-complete-backward
