@@ -49,7 +49,7 @@ set echo-control-characters off
 "\e[b": backward-word      # Move one word backward
 "\e[f": forward-word       # Move one word forward
 "\C-l": clear-screen       # Clear the screen
-# "\C-k": kill-line          # Delete from the cursor to the end of the line
+"\C-k": kill-line          # Delete from the cursor to the end of the line
 
 # Other
 "\e.": yank-last-arg       # Paste the last argument from the previous command
