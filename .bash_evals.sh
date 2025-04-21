@@ -12,6 +12,16 @@ if command -v oh-my-posh &>/dev/null; then
 	fi
 fi
 
+# Proto completions
+if command -v proto >/dev/null 2>&1; then
+	if [ ! -f "$HOME/.bash_completions/proto.sh" ]; then
+		mkdir -p ~/.bash_completions
+		proto completions --shell bash >~/.bash_completions/proto.sh
+	fi
+	# shellcheck disable=SC1090
+	source "$HOME/.bash_completions/proto.sh"
+fi
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
