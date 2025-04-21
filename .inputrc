@@ -1,22 +1,56 @@
+# bind -l : List names of functions.
+# bind -p : List functions and bindings in a form that can be reused as input.
+# bind -v : List variable names and values in a form that can be reused as input.
+
 # Prettyfi 
-set colored-stats On
-set colored-completion-prefix On
-set mark-directories On
+set colored-stats on
+set colored-completion-prefix on
+set mark-directories on
 
 # Completion settings
+set skip-completed-text on
+set menu-complete-display-prefix on
 set show-all-if-ambiguous on
 set completion-ignore-case on
 set completion-query-items 2000
-set visible-stats On
-set print-completions-horizontally On
-set mark-modified-lines On
-set match-hidden-files On
-set mark-symlinked-directories On
+set visible-stats on
+set print-completions-horizontally on
+set mark-modified-lines on
+set match-hidden-files on
+set mark-symlinked-directories on
 set history-size 2000
-set history-preserve-point On
+set history-preserve-point on
 
 # no bell
 set bell-style none
+
+# editing mode
+set editing-mode vi
+set show-mode-in-prompt on
+set vi-ins-mode-string (i)
+set vi-cmd-mode-string (n) 
+
+# Navigation and Editing
+"\C-a": beginning-of-line  # Move to the beginning of the line
+"\C-e": end-of-line        # Move to the end of the line
+"\C-y": yank               # Paste the last killed text
+"\C-w": backward-kill-word # Delete the word to the left of the cursor
+"\C-d": delete-char        # Delete the character under the cursor
+"\C-h": backward-delete-char # Delete the character to the left of the cursor
+"\e[d": kill-word          # Delete the word to the right of the cursor
+"\C-t": transpose-chars    # Swap the character before the cursor with the one under it
+"\e[b": backward-word      # Move one word backward
+"\e[f": forward-word       # Move one word forward
+"\C-l": clear-screen       # Clear the screen
+# "\C-k": kill-line          # Delete from the cursor to the end of the line
+
+# History
+"\C-p": previous-history   # Go to the previous command in history
+"\C-n": next-history       # Go to the next command in history
+
+# Other
+"\e.": yank-last-arg       # Paste the last argument from the previous command
+# "\C-z": suspend            # Suspend the current process
 
 # ^C no longer shows on C-c keypress
 set echo-control-characters off
