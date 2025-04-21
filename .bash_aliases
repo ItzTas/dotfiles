@@ -24,6 +24,11 @@ alias egrep='egrep --color=auto'
 alias tattach='tmux attach'
 alias tds='tmux new-session -s default'
 
+# miru
+alias mjs='miru npm'
+alias mgo='miru go'
+alias mrs='miru rs'
+
 # pacman, yay & utilities
 alias upacf='pacfiles --update-db *'
 alias pacf='pacfiles -l'
