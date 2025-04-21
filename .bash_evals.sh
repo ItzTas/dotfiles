@@ -19,7 +19,7 @@ fi
 eval "$(pay-respects bash --alias fk)"
 
 # proto
-eval "$(proto activate)"
+eval "$(proto activate bash)"
 
 # zoxide
 eval "$(zoxide init bash --cmd cd)"
