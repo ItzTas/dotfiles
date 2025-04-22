@@ -39,6 +39,7 @@ _install_pacman_packages() {
         "dotnet-sdk"
         "easyeffects"
         "fd"
+        "lsp-plugins"
         "paru"
         "fzf"
         "bash-completion"
@@ -90,7 +91,7 @@ _install_pacman_packages() {
         "zoxide"
         "zsa-keymapp-bin"
         "sddm-sugar-candy-git"
-	"yazi"
+        "yazi"
     )
     local installed=()
 
