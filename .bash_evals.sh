@@ -3,23 +3,13 @@
 
 # oh my posh
 if command -v oh-my-posh &>/dev/null; then
-	if [ -f "$HOME/.config/ohmyposh/my_amro.toml" ]; then
-		eval "$(oh-my-posh init bash --config "$HOME"/.config/ohmyposh/my_amro.toml)"
-	else
-		if command -v brew &>/dev/null && [ -f "$(brew --prefix oh-my-posh)/themes/amro.omp.json" ]; then
-			eval "$(oh-my-posh init zsh --config "$(brew --prefix oh-my-posh)/themes/amro.omp.json")"
-		fi
-	fi
-fi
-
-# Proto completions
-if command -v proto >/dev/null 2>&1; then
-	if [ ! -f "$HOME/.bash_completions/proto.sh" ]; then
-		mkdir -p ~/.bash_completions
-		proto completions --shell bash >~/.bash_completions/proto.sh
-	fi
-	# shellcheck disable=SC1090
-	source "$HOME/.bash_completions/proto.sh"
+    if [ -f "$HOME/.config/ohmyposh/my_amro.toml" ]; then
+        eval "$(oh-my-posh init bash --config "$HOME"/.config/ohmyposh/my_amro.toml)"
+    else
+        if command -v brew &>/dev/null && [ -f "$(brew --prefix oh-my-posh)/themes/amro.omp.json" ]; then
+            eval "$(oh-my-posh init zsh --config "$(brew --prefix oh-my-posh)/themes/amro.omp.json")"
+        fi
+    fi
 fi
 
 # make less more friendly for non-text input files, see lesspipe(1)
