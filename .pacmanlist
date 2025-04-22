@@ -104,8 +104,6 @@ filesystem 2024.11.21-1
 findutils 4.10.0-2
 flac 1.5.0-1
 flex 2.6.4-5
-flying-carpet 9.0.4-1
-flying-carpet-debug 9.0.4-1
 fmt 11.1.4-1
 fontconfig 2:2.16.2-1
 freetype2 2.13.3-3

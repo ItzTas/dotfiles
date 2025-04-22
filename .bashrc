@@ -79,7 +79,7 @@ export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 source "$HOME/.cargo/env"
 
 # yay completions
-# if [ -f /usr/share/bash-completion/completions/yay ]; then
-# 	source /usr/share/bash-completion/completions/yay
-# fi
+if [ -f /usr/share/bash-completion/completions/yay ]; then
+	source /usr/share/bash-completion/completions/yay
+fi
 . "$HOME/.cargo/env"
