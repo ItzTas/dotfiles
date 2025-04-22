@@ -89,6 +89,7 @@ _install_pacman_packages() {
         "zoxide"
         "zsa-keymapp-bin"
         "sddm-sugar-candy-git"
+	"yazi"
     )
     local installed=()
 
