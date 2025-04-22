@@ -37,7 +37,7 @@ set echo-control-characters off
 # other
 # set keyseq-timeout 200
 
-# Navigation and Editing
+# Navigation and Editing binds
 "\C-a": beginning-of-line  # Move to the beginning of the line
 "\C-e": end-of-line        # Move to the end of the line
 "\C-y": yank               # Paste the last killed text
