@@ -1,6 +1,6 @@
 bind -x '"\eg":"lsd -F"'
 bind -x '"\ey":"yazi"'
-bind -x '"\C-b":f'
+bind -x '"\C-b":fk'
 bind -x '"\C-o":fe'
 # bind -x '"\eb":"pf"'
 # bind -x '"\C-f":new_ss'

@@ -46,7 +46,7 @@ seticonstheme() {
     gsettings set org.gnome.desktop.interface icon-theme "$1"
 }
 
-f() {
+fk() {
     local dir
     dir=$( (
         zoxide query -l
@@ -91,7 +91,7 @@ replace_in_files() {
 
 pf() {
     p
-    f
+    fk
 }
 
 sesh_connect() {
