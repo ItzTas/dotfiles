@@ -28,8 +28,8 @@ set bell-style none
 # editing mode
 set editing-mode vi
 set show-mode-in-prompt on
-set vi-ins-mode-string (i)
-set vi-cmd-mode-string (n) 
+set vi-ins-mode-string "(i) "
+set vi-cmd-mode-string "(n) "
 
 # ^C no longer shows on C-c keypress
 set echo-control-characters off
