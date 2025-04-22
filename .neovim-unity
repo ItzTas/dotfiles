@@ -1,2 +1,2 @@
 #!/bin/bash
-ghostty -- nvim --listen unity "$@"
+kitty -- nvim --listen unity "$@"
