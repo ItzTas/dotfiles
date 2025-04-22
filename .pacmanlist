@@ -12,6 +12,8 @@ alsa-ucm-conf 1.2.14-1
 aom 3.12.1-1
 appstream 1.0.4-1
 aquamarine 0.8.0-3
+arch-update 3.12.2-1
+archlinux-contrib 20250219-1
 archlinux-keyring 20250123-1
 at-spi2-core 2.56.1-1
 atkmm 2.28.4-1
@@ -47,11 +49,9 @@ cantarell-fonts 1:0.303.1-2
 capstone 5.0.6-1
 cblas 3.12.1-2
 cinnamon-desktop 6.4.1-1
-clang 19.1.7-1
 clipse 1.1.0-1
 clipse-gui 0.1.1-2.6
 cmake 4.0.1-1
-compiler-rt 19.1.7-1
 containerd 2.0.5-1
 coreutils 9.7-1
 cppdap 1.58.0-2
@@ -70,7 +70,6 @@ ddcutil 2.2.0-1
 debugedit 5.1-1
 default-cursors 3-1
 desktop-file-utils 0.28-1
-devhub-bin 0.102.0-3
 device-mapper 2.03.31-1
 diffutils 3.12-1
 discord 1:0.0.91-1
@@ -89,7 +88,6 @@ easyeffects 7.2.3-2
 edk2-ovmf 202411-1
 efibootmgr 18-3
 efivar 39-1
-electron11-bin 11.5.0-2
 electron31 31.7.7-3
 electron34 34.5.0-2
 enchant 2.8.2-2
@@ -220,6 +218,7 @@ haskell-witherable 0.4.2-143
 hicolor-icon-theme 0.18-1
 hidapi 0.14.0-3
 highway 1.2.0-1
+htmlq 0.4.0-2
 hunspell 1.7.2-2
 hwdata 0.394-1
 hwloc 2.12.0-1
@@ -497,7 +496,6 @@ mdadm 4.4-1
 mesa 1:25.0.4-1
 minizip 1:1.3.1-2
 miru-go-bin 0.0.14-1
-miru-go-bin-debug 0.0.14-1
 mkinitcpio 39.2-3
 mkinitcpio-busybox 1.36.1-1
 mobile-broadband-provider-info 20240407-1
@@ -539,6 +537,7 @@ os-prober 1.83-1
 p11-kit 0.25.5-1
 pacfiles 0.2.7-2
 pacman 7.0.0.r6.gc685ae6-2
+pacman-contrib 1.11.0-1
 pacman-mirrorlist 20250311-1
 pam 1.7.0-2
 pambase 20230918-2
@@ -549,7 +548,6 @@ paru-debug 2.0.4-1
 pass 1.7.4-7
 patch 2.8-1
 pay-respects 0.7.6-1
-pay-respects-debug 0.7.6-1
 pciutils 3.13.0-2
 pcre 8.45-4
 pcre2 10.45-1
@@ -575,6 +573,7 @@ procps-ng 4.0.5-3
 proto-bin 0.48.0-1
 psmisc 23.7-1
 pugixml 1.15-2
+pyalpm 0.10.10-2
 python 3.13.3-1
 python-argcomplete 3.5.3-1
 python-attrs 24.1.0-1
@@ -592,6 +591,8 @@ python-packaging 25.0-1
 python-pip 25.0.1-1
 python-platformdirs 4.3.6-2
 python-pycparser 2.22-3
+python-pyqt6 6.9.0-1
+python-pyqt6-sip 13.10.0-1
 python-setuptools 1:78.1.1-1
 python-tomlkit 0.13.2-2
 python-wheel 0.45.1-1
@@ -624,7 +625,6 @@ rtkit 0.13-3
 rubberband 4.0.0-1
 run-parts 5.17-1
 runc 1.2.6-1
-rustup 1.28.1-1
 sbc 2.0-2
 sdbus-cpp 2.1.0-2
 sddm 0.21.0-6
@@ -667,6 +667,7 @@ systemd-libs 257.5-2
 systemd-sysvcompat 257.5-2
 tar 1.35-2
 tdb 1.4.13-1
+tdf 0.3.0-2
 termpicker 1.3.7-1
 tesseract 5.5.0-2
 tesseract-data-afr 2:4.1.0-4
@@ -766,6 +767,5 @@ zlib 1:1.3.1-2
 zoxide 0.9.7-1
 zram-generator 1.2.1-1
 zsa-keymapp-bin 1.3.6-1
-zsa-keymapp-bin-debug 1.3.6-1
 zsa-udev 2.1.3.r14.gbceec97-1
 zstd 1.5.7-2
