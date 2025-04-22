@@ -2,7 +2,7 @@
 
 [ -d "$HOME/Downloads" ] || mkdir "$HOME/Downloads"
 
-cd "$HOME/Downloads/" || exit 1
+cd "$HOME/Downloads" || exit 1
 
 _install_yay() {
     set -e
@@ -91,6 +91,8 @@ _install_pacman_packages() {
         "zoxide"
         "zsa-keymapp-bin"
         "sddm-sugar-candy-git"
+        "easyeffects-bundy01-presets"
+        "calf"
         "yazi"
     )
     local installed=()
@@ -153,8 +155,22 @@ _install_tpm() {
     tmux source "$HOME/.config/tmux/tmux.conf"
 }
 
+_curl_and_wget_installations() {
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
+}
+
+_source_git_installations() {
+    cd "$HOME/Downloads" || (mkdir -p "$HOME/Downloads" && cd "$HOME/Downloads")
+    git clone "https://github.com/Digitalone1/EasyEffects-Presets" && cd EasyEffects-Presets
+    cp LoudnessEqualizer.json "$HOME/.config/easyeffects/output/"
+    cd "$HOME/Downloads"
+    rm -rf "$HOME/EasyEffects-Presets"
+}
+
 _install_yay
 _install_nvm
 _install_pacman_packages
 _install_rustup
 _install_tpm
+_curl_and_wget_installations
+_source_git_installations
