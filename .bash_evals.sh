@@ -26,7 +26,7 @@ fi
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # pay-respects
-eval "$(pay-respects bash --alias fk)"
+eval "$(pay-respects bash --alias f)"
 
 # proto
 eval "$(proto activate bash)"
