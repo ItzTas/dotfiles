@@ -39,6 +39,7 @@ _install_pacman_packages() {
         "dotnet-sdk"
         "easyeffects"
         "fd"
+        "paru"
         "fzf"
         "bash-completion"
         "sesh-bin"
