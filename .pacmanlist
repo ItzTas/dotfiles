@@ -47,6 +47,7 @@ cairo 1.18.4-1
 cairomm 1.14.5-1
 cantarell-fonts 1:0.303.1-2
 capstone 5.0.6-1
+cargo-tauri 2.4.1-1
 cblas 3.12.1-2
 cinnamon-desktop 6.4.1-1
 clipse 1.1.0-1
@@ -103,6 +104,8 @@ filesystem 2024.11.21-1
 findutils 4.10.0-2
 flac 1.5.0-1
 flex 2.6.4-5
+flying-carpet 9.0.4-1
+flying-carpet-debug 9.0.4-1
 fmt 11.1.4-1
 fontconfig 2:2.16.2-1
 freetype2 2.13.3-3
@@ -624,6 +627,7 @@ rtkit 0.13-3
 rubberband 4.0.0-1
 run-parts 5.17-1
 runc 1.2.6-1
+rust 1:1.86.0-1
 sbc 2.0-2
 sdbus-cpp 2.1.0-2
 sddm 0.21.0-6
