@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -eu
-
 BOOTSTRAP_D="$HOME/.config/yadm/bootstrap.x.d"
 
 if [[ ! -d "$BOOTSTRAP_D" ]]; then
