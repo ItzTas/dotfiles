@@ -10,4 +10,14 @@ _start_enables() {
     done
 }
 
+_start_user_enables() {
+    local enables=(
+        "arch-update.timer"
+    )
+    for enable in "${enables[@]}"; do
+        systemctl --user enable --now "$enable"
+    done
+}
+
 _start_enables
+_start_user_enables
