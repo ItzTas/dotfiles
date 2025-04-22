@@ -546,7 +546,6 @@ pango 1:1.56.3-1
 pangomm 2.46.4-1
 parted 3.6-2
 paru 2.0.4-1
-paru-debug 2.0.4-1
 pass 1.7.4-7
 patch 2.8-1
 pay-respects 0.7.6-1
@@ -627,7 +626,6 @@ rtkit 0.13-3
 rubberband 4.0.0-1
 run-parts 5.17-1
 runc 1.2.6-1
-rust 1:1.86.0-1
 sbc 2.0-2
 sdbus-cpp 2.1.0-2
 sddm 0.21.0-6
