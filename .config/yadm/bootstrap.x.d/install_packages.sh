@@ -124,7 +124,10 @@ _install_nvm() {
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
 
     export NVM_DIR="$HOME/.nvm"
+
+    # shellcheck disable=SC1091
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    # shellcheck disable=SC1091
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
     nvm install node
@@ -160,11 +163,22 @@ _curl_and_wget_installations() {
 }
 
 _source_git_installations() {
+    echo "Changing to Downloads directory..."
     cd "$HOME/Downloads" || (mkdir -p "$HOME/Downloads" && cd "$HOME/Downloads")
+
+    echo "Cloning EasyEffects-Presets repository..."
     git clone "https://github.com/Digitalone1/EasyEffects-Presets" && cd EasyEffects-Presets
+
+    echo "Copying LoudnessEqualizer.json to EasyEffects output directory..."
     cp LoudnessEqualizer.json "$HOME/.config/easyeffects/output/"
+
+    echo "Returning to Downloads directory..."
     cd "$HOME/Downloads"
-    rm -rf "$HOME/EasyEffects-Presets"
+
+    echo "Cleaning up by removing the cloned EasyEffects-Presets directory..."
+    rm -rf "$HOME/Downloads/EasyEffects-Presets"
+
+    echo "Operation complete!"
 }
 
 _install_yay
@@ -172,5 +186,5 @@ _install_nvm
 _install_pacman_packages
 _install_rustup
 _install_tpm
-_curl_and_wget_installations
+# _curl_and_wget_installations
 _source_git_installations
