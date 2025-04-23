@@ -165,6 +165,10 @@ pdeno() {
     proto run deno -- "$@"
 }
 
+pgleam() {
+    proto run gleam -- "$@"
+}
+
 # miru
 mggo() {
     miru go "https://github.com/$1"
