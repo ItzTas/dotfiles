@@ -546,6 +546,7 @@ netstandard-targeting-pack 9.0.4.sdk105-1
 nettle 3.10.1-1
 networkmanager 1.52.0-1
 node-gyp 11.2.0-1
+nodejs 23.9.0-1
 nodejs-nopt 7.2.1-1
 npm 11.3.0-1
 npth 1.8-1
