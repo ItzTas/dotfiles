@@ -153,17 +153,17 @@ pgo() {
     proto run go -- "$@"
 }
 
-# pnode() {
-# 	proto run node -- "$@"
-# }
-#
-# pbun() {
-# 	proto run bun -- "$@"
-# }
-#
-# pdeno() {
-# 	proto run deno -- "$@"
-# }
+pnode() {
+    proto run node -- "$@"
+}
+
+pbun() {
+    proto run bun -- "$@"
+}
+
+pdeno() {
+    proto run deno -- "$@"
+}
 
 # miru
 mggo() {
