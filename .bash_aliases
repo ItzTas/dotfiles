@@ -41,7 +41,7 @@ alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --c
 alias gss='git status'
 
 # yadm
-alias yadm_update='~/.config/yadm/bin/yadm_update.sh'
+alias yadm_update='chmod +x "$HOME/.config/yadm/bin/yadm_update.sh" && "$HOME/.config/yadm/bin/yadm_update.sh"'
 
 # some more aliases
 alias sc='sesh clone'
