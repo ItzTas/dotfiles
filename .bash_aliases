@@ -43,12 +43,15 @@ alias gss='git status'
 # yadm
 alias yadm_update='chmod +x "$HOME/.config/yadm/bin/yadm_update.sh" && "$HOME/.config/yadm/bin/yadm_update.sh"'
 
-# some more aliases
-alias sc='sesh clone'
-alias ksee='kitty +kitten icat'
-alias killzoom='killall ZoomWebviewHost zoom'
-alias chgra='chmod +x gradlew'
+# yazy
 alias y='yazi'
+
+# sesh
+alias sc='sesh clone'
+
+# some more aliases
+alias ksee='kitty +kitten icat'
+alias chgra='chmod +x gradlew'
 alias python='python3'
 alias c='bat --paging=never'
 alias renderMarkdown='grip'
