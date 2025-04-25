@@ -39,6 +39,7 @@ _install_pacman_packages() {
         "wf-recorder"
         "ferdium"
         "discord"
+        "xdg-desktop-portal-hyprland"
         "polkit-gnome"
         "dotnet-sdk"
         "easyeffects"
