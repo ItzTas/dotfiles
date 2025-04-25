@@ -12,6 +12,8 @@ print_window() {
 
     hyprshot -m window -s -o "$path" -f "$filename"
 
+    sleep 0.2
+
     ACTION=$(dunstify -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
 
     case "$ACTION" in
