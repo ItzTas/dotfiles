@@ -24,7 +24,6 @@ attr 2.5.2-1
 aubio 0.4.9-21
 audit 4.0.3-1
 autoconf 2.72-1
-autoconf-archive 1:2024.10.16-2
 automake 1.17-1
 avahi 1:0.8+r194+g3f79789-3
 ayatana-ido 0.10.4-1
@@ -89,8 +88,6 @@ desktop-file-utils 0.28-1
 device-mapper 2.03.31-1
 diffutils 3.12-1
 discord 1:0.0.92-1
-docbook-xml 4.5-10
-docbook-xsl 1.79.2-9
 docker 1:28.1.1-1
 docker-desktop 4.40.0-1
 dotnet-host 9.0.4.sdk105-1
@@ -137,23 +134,20 @@ gc 8.2.8-2
 gcc 14.2.1+r753+g1cd744a6828f-1
 gcc-libs 14.2.1+r753+g1cd744a6828f-1
 gcr-4 4.4.0.1-1
-gd 2.3.3-8
 gdbm 1.25-1
 gdk-pixbuf2 2.42.12-2
 gettext 0.24-1
 ghc-libs 9.4.8-1
-ghostscript 10.05.0-3
 ghostty 1.1.3-1
 ghostty-shell-integration 1.1.3-1
 ghostty-terminfo 1.1.3-1
 giflib 5.2.2-2
 git 2.49.0-1
-github-cli 2.71.1-1
+github-cli 2.71.2-1
 gjs 2:1.84.2-1
 glib-networking 1:2.80.1-1
 glib2 2.84.1-1
 glib2-devel 2.84.1-1
-glib2-docs 2.84.1-1
 glibc 2.41+r47+g046b33800c3e-1
 glibmm 2.66.8-1
 glslang 15.2.0-2
@@ -166,7 +160,6 @@ gnu-free-fonts 20120503-8
 gnulib-l10n 20241231-1
 gnupg 2.4.7-1
 gnutls 3.8.9-1
-go 2:1.24.2-1
 gobject-introspection 1.84.0-1
 gobject-introspection-runtime 1.84.0-1
 gperftools 2.16-1
@@ -174,14 +167,12 @@ gpgme 1.24.2-1
 gpm 1.20.7.r38.ge82d1a6-6
 graphene 1.10.8-2
 graphite 1:1.3.14-4
-graphviz 12.2.1-1
 grep 3.12-2
 grim 1.4.1-3
 groff 1.23.0-7
 grub 2:2.12.r283.ga4da71da-1
 gsettings-desktop-schemas 48.0-1
 gsettings-system-schemas 48.0-1
-gsfonts 20200910-4
 gsl 2.8-1
 gsm 1.0.22-2
 gssdp 1.6.3-2
@@ -190,7 +181,6 @@ gst-plugins-bad-libs 1.26.0-4
 gst-plugins-base-libs 1.26.0-4
 gstreamer 1.26.0-4
 gtest 1.16.0-2
-gtk-doc 1.34.0-3
 gtk-layer-shell 0.9.1-1
 gtk-update-icon-cache 1:4.18.4-1
 gtk2 2.24.33-5
@@ -198,7 +188,6 @@ gtk3 1:3.24.49-1
 gtk4 1:4.18.4-1
 gtk4-layer-shell 1.1.1-1
 gtkmm3 3.24.10-1
-gts 0.7.6.121130-3
 guile 3.0.10-1
 gumbo-parser 0.13.0-1
 gupnp 1:1.6.8-1
@@ -269,7 +258,7 @@ hyprland-qtutils 0.1.3-6
 hyprlang 0.6.1-1
 hyprnav 0.0.18-1
 hyprpaper 0.7.4-6
-hyprpwmenu 0.1.12-1
+hyprpwmenu 0.1.14-1
 hyprscratch 0.5.3-1
 hyprshot 1.3.0-2
 hyprutils 0.6.0-1
@@ -277,7 +266,6 @@ hyprwayland-scanner 0.4.4-1
 i2c-tools 4.4-2
 iana-etc 20250328-1
 icu 76.1-1
-ijs 0.35-6
 imfile 1.1.2-2
 imv 4.5.0-5
 iniparser 4.2.6-1
@@ -306,7 +294,6 @@ krb5 1.21.3-1
 l-smash 2.14.5-4
 ladspa 1.17-5
 lame 3.100-5
-lapack 3.12.1-2
 lazydocker 0.24.1-1
 lazygit 0.49.0-1
 lcms2 2.17-1
@@ -401,7 +388,6 @@ libgudev 238-1
 libheif 1.19.7-3
 libice 1.1.2-1
 libid3tag 0.16.3-2
-libidn 1.43-1
 libidn2 2.3.7-1
 libiec61883 1.2.0-8
 libimagequant 4.3.4-1
@@ -449,7 +435,6 @@ libnvme 1.12-2
 libogg 1.3.5-2
 libopenmpt 0.7.13-2
 libp11-kit 0.25.5-1
-libpaper 2.2.6-1
 libpcap 1.10.5-2
 libpciaccess 0.18.1-2
 libpgm 5.3.128-3
@@ -500,7 +485,7 @@ libusb 1.0.28-1
 libusbmuxd 2.1.0-1
 libutempter 1.2.3-1
 libutf8proc 2.10.0-1
-libuv 1.50.0-1
+libuv 1.51.0-1
 libva 2.22.0-1
 libvdpau 1.5-3
 libverto 0.3.2-5
@@ -534,7 +519,6 @@ libxklavier 5.4-5
 libxml2 2.13.8-1
 libxmlb 0.3.22-1
 libxmu 1.2.1-1
-libxpm 3.5.17-2
 libxpresent 1.0.1-2
 libxrandr 1.5.4-1
 libxrender 0.9.12-1
@@ -601,7 +585,6 @@ ncurses 6.5-3
 ndctl 79-1
 nemo 6.4.5-1
 neovim 0.11.0-2
-netpbm 10.86.46-1
 netstandard-targeting-pack 9.0.4.sdk105-1
 nettle 3.10.1-1
 networkmanager 1.52.0-1
@@ -660,7 +643,6 @@ pkgconf 2.4.3-1
 playerctl 2.4.1-4
 plocate 1.1.23-1
 polkit 126-2
-poppler-data 0.4.12-2
 popt 1.19-2
 portaudio 1:19.7.0-3
 procps-ng 4.0.5-3
@@ -683,7 +665,6 @@ python-cffi 1.17.1-2
 python-charset-normalizer 3.4.1-1
 python-cleo 1:2.1.0-1
 python-click 8.1.8-1
-python-clickgen 2.2.5-1
 python-crashtest 0.4.1-4
 python-cryptography 44.0.2-1
 python-dbus 1.4.0-1
@@ -691,13 +672,11 @@ python-distlib 0.3.9-2
 python-distro 1.9.0-3
 python-dotenv 1.1.0-1
 python-dulwich 0.22.8-1
-python-editables 0.5-5
 python-evdev 1.9.0-1
 python-fastjsonschema 2.21.1-1
 python-filelock 3.18.0-1
 python-findpython 0.6.3-1
 python-gobject 3.52.3-3
-python-hatchling 1.27.0-1
 python-html5lib 1.1-15
 python-hyprpy 0.2.0-1
 python-idna 3.10-2
@@ -722,9 +701,7 @@ python-mdurl 0.1.2-8
 python-moddb 0.12.0-1
 python-more-itertools 10.6.0-1
 python-msgpack 1.0.5-3
-python-numpy 2.2.5-1
 python-packaging 25.0-1
-python-pathspec 0.12.1-3
 python-pbs-installer 2025.03.17-1
 python-pexpect 4.9.0-4
 python-pillow 11.2.1-1
@@ -732,7 +709,6 @@ python-pip 25.0.1-1
 python-pkginfo 1.12.0-1
 python-platformdirs 4.3.6-2
 python-playsound3 2.5.2-1
-python-pluggy 1.5.0-3
 python-poetry 2.1.2-1
 python-poetry-core 2.1.2-1
 python-poetry-plugin-export 1.9.0-1
@@ -780,7 +756,6 @@ qt5-location 5.15.16+kde+r7-4
 qt5-quickcontrols 5.15.16-3
 qt5-quickcontrols2 5.15.16+kde+r5-3
 qt5-svg 5.15.16+kde+r5-3
-qt5-tools 5.15.16+kde+r3-6
 qt5-translations 5.15.16-3
 qt5-webchannel 5.15.16+kde+r3-3
 qt5-webengine 5.15.18-6
@@ -789,7 +764,6 @@ qt6-declarative 6.9.0-2
 qt6-svg 6.9.0-1
 qt6-translations 6.9.0-1
 qt6-wayland 6.9.0-2
-qtilitools 0.1.2-1
 qtractor 1.5.4-1
 rav1e 0.7.1-1
 re2 1:20240702-4
@@ -798,12 +772,10 @@ rhash 1.4.4-1
 ripgrep 14.1.1-1
 rnnoise 1:0.2-1
 rofi 1.7.8-2
-rsync 3.4.1-2
 rtkit 0.13-3
 rubberband 4.0.0-1
 run-parts 5.17-1
 runc 1.2.6-1
-rust 1:1.86.0-1
 sbc 2.0-2
 sdbus-cpp 2.1.0-2
 sddm 0.21.0-6
@@ -883,7 +855,6 @@ upower 1.90.9-1
 util-linux 2.41-4
 util-linux-libs 2.41-4
 v4l-utils 1.28.1-2
-vala 0.56.18-2
 vapoursynth R70-2
 vde2 2.3.3-6
 vid.stab 1.1.1-2
