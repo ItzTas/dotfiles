@@ -49,9 +49,15 @@ alias y='yazi'
 # sesh
 alias sc='sesh clone'
 
-# some more aliases
-alias ksee='kitty +kitten icat'
-alias chgra='chmod +x gradlew'
+# kitty
+alias icat='kitty +kitten icat'
+
+# python
 alias python='python3'
+
+# cat | bat
 alias c='bat --paging=never'
+
+# some more aliases
+alias chgra='chmod +x gradlew'
 alias renderMarkdown='grip'
