@@ -23,6 +23,7 @@ _install_pacman_packages() {
     set -e
     local packages=(
         "os-prober"
+        "bibata-cursor-them"
         "hyprscratch"
         "btop"
         "arch-update"
