@@ -41,6 +41,8 @@ _install_pacman_packages() {
         "discord"
         "xdg-desktop-portal-hyprland"
         "polkit-gnome"
+        "hyprshade"
+        "hyprpicker"
         "dotnet-sdk"
         "easyeffects"
         "fd"
