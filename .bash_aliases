@@ -58,6 +58,9 @@ alias python='python3'
 # cat | bat
 alias c='bat --paging=never'
 
+# man & utilities
+alias man='qman'
+
 # some more aliases
 alias chgra='chmod +x gradlew'
 alias renderMarkdown='grip'
