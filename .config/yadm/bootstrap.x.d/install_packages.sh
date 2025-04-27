@@ -39,6 +39,7 @@ _install_pacman_packages() {
         "mpv"
         "wf-recorder"
         "ferdium"
+        "xorg-xrandr"
         "discord"
         "xdg-desktop-portal-hyprland"
         "polkit-gnome"
