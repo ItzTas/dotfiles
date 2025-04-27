@@ -83,7 +83,6 @@ export PATH=$PATH:~/.cargo/env
 
 export ANDROID_HOME=$HOME/.AndroidS/Sdk/
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
-source "$HOME/.cargo/env"
 
 # yay completions
 # if [ -f /usr/share/bash-completion/completions/yay ]; then
