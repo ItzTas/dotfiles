@@ -93,7 +93,7 @@ _install_pacman_packages() {
         "shfmt"
         "slurp"
         "spotify"
-        # "stacer-bin"
+        "stacer-bin"
         "termpicker"
         "thunderbird"
         "tmux"
