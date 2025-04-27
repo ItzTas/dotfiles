@@ -15,6 +15,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 export HISTSIZE=1000
 export HISTFILESIZE=2000
+export HISTTIMEFORMAT='%m-%d %T '
 
 # hyprcursor
 export HYPRCURSOR_THEME="Bibata-Modern-Classic"
