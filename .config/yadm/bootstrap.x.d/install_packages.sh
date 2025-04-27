@@ -22,6 +22,7 @@ _install_yay() {
 _install_pacman_packages() {
     set -e
     local packages=(
+	"timeshift"
         "os-prober"
         "bibata-cursor-theme"
         "hyprscratch"
@@ -91,7 +92,7 @@ _install_pacman_packages() {
         "shfmt"
         "slurp"
         "spotify"
-        "stacer-bin"
+        # "stacer-bin"
         "termpicker"
         "thunderbird"
         "tmux"
@@ -153,6 +154,8 @@ _install_rustup() {
         echo "Rustup is already installed. Skipping installation."
         return
     fi
+
+    sudo pacman -Rns rust --noconfirm
 
     echo "Installing rustup"
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
