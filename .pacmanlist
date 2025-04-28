@@ -730,7 +730,6 @@ qt5-wayland 5.15.16+kde+r60-1
 qt5-webchannel 5.15.16+kde+r3-3
 qt5-webengine 5.15.18-6
 qt6-base 6.9.0-1
-qt6-charts 6.9.0-1
 qt6-declarative 6.9.0-2
 qt6-svg 6.9.0-1
 qt6-tools 6.9.0-2
