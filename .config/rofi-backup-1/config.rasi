@@ -1,0 +1,31 @@
+configuration {
+    modi: "run,window,combi,drun";
+    show-icons: true;
+    terminal: "ghostty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-run: "🏃  Run ";
+    display-window: " 🪟  Win ";
+    display-combi: " 🖥️  All ";
+    display-drun: " 🚀  App ";
+    sidebar-mode: true;
+    font: "JetBrainsMonoNL Nerd Font 10";
+    // --- BINDS ---
+    kb-accept-entry: "Control+y,Return";
+    kb-row-up: "Control+k,Up";
+    kb-row-down: "Control+j,Down";
+    kb-row-left: "Control+h";
+    kb-row-right: "Control+l";
+    kb-remove-char-back: "BackSpace,Shift+BackSpace";
+    kb-mode-next: "Tab";
+    kb-mode-previous: "ISO_Left_Tab";
+    kb-element-next: "";
+    kb-element-prev: "";
+    kb-remove-to-eol: "";
+    kb-mode-complete: "";
+}
+
+@theme "./themes/windows11-list-dark.rasi"
+
