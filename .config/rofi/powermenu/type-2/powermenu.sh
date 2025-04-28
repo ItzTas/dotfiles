@@ -32,6 +32,9 @@ rofi_cmd() {
 	rofi -dmenu \
 		-p "Uptime: $uptime" \
 		-mesg "Uptime: $uptime" \
+        -no-animation \
+        -no-lazy-grab \
+        -theme-str 'window { animation: false; }' \
 		-theme ${dir}/${theme}.rasi
 }
 
