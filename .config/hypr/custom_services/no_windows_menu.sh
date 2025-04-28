@@ -1,6 +1,5 @@
 #!/bin/bash
 
-rofi_pid=""
 windows_count=""
 workspace_id=""
 current_id=""
@@ -60,10 +59,6 @@ _is_rofi_in_active_workspace() {
 }
 
 _kill_rofi() {
-    if [[ -n "$rofi_pid" ]] && kill -0 "$rofi_pid" 2>/dev/null; then
-        kill "$rofi_pid"
-        rofi_pid=""
-    fi
     if pgrep -x rofi >/dev/null; then
         killall rofi 2>/dev/null
     fi
@@ -71,10 +66,9 @@ _kill_rofi() {
 
 _open_rofi() {
     if ! pgrep -x rofi >/dev/null; then
-        local path="$HOME/.config/rofi/powermenu/type-6/powermenu.sh"
+        local path="$HOME/.config/rofi/powermenu/type-2/powermenu.sh"
         if [[ -x "$path" ]]; then
             hyprctl dispatch exec [workspace "$current_id" silent] "$path" &
-            rofi_pid=$!
         else
             echo "Error: Rofi script not found at $path" >&2
         fi
