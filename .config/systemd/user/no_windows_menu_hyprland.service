@@ -1,0 +1,13 @@
+[Unit]
+Description=Monitor Rofi no Hyprland
+After=hyprland.service
+
+[Service]
+Type=simple
+ExecStart=/home/talinux/.config/hypr/custom_services/no_windows_menu.sh
+Restart=always
+User=seu_usuario
+
+[Install]
+WantedBy=default.target
+
