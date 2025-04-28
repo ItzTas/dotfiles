@@ -22,7 +22,7 @@ _install_yay() {
 _install_pacman_packages() {
     set -e
     local packages=(
-	"timeshift"
+        "timeshift"
         "os-prober"
         "bibata-cursor-theme"
         "hyprscratch"
@@ -93,7 +93,7 @@ _install_pacman_packages() {
         "shfmt"
         "slurp"
         "spotify"
-        "stacer-bin"
+        "stacer-git"
         "termpicker"
         "thunderbird"
         "tmux"
@@ -118,8 +118,11 @@ _install_pacman_packages() {
             echo "Package '$package' is already installed, skipping..."
         else
             echo "Installing package: $package"
-            yay -S "$package" --noconfirm
-            installed+=("$package")
+            if yay -S "$package" --noconfirm; then
+                installed+=("$package")
+            else
+                echo "Failed to install '$package', skipping..."
+            fi
         fi
     done
 
