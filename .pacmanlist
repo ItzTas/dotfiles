@@ -35,10 +35,12 @@ bibata-cursor-theme 2.0.7-1
 binutils 2.44-1
 bison 3.8.2-8
 blas 3.12.1-2
+blend2d 0.12.0-1
 bluez-libs 5.82-1
 botan2 2.19.5-2
 brightnessctl 0.5.1-3
 brotli 1.1.0-3
+bruno-bin 2.2.0-1
 btop 1.4.1-1
 btrfs-progs 6.14-1
 bubblewrap 0.11.0-1
@@ -54,9 +56,11 @@ cantarell-fonts 1:0.303.1-2
 capstone 5.0.6-1
 cblas 3.12.1-2
 cinnamon-desktop 6.4.1-1
+clang 19.1.7-1
 clipse 1.1.0-1
 clipse-gui 0.1.2-2.7
 cmake 4.0.1-1
+compiler-rt 19.1.7-1
 confz 2.1.0-2
 containerd 2.0.5-1
 coreutils 9.7-1
@@ -130,6 +134,7 @@ gcr-4 4.4.0.1-1
 gd 2.3.3-8
 gdbm 1.25-1
 gdk-pixbuf2 2.42.12-2
+gendesk 1.0.10-1
 gettext 0.24-1
 ghc-libs 9.4.8-1
 ghostscript 10.05.0-3
@@ -179,6 +184,7 @@ gtk-update-icon-cache 1:4.18.4-1
 gtk2 2.24.33-5
 gtk3 1:3.24.49-1
 gtk4 1:4.18.4-1
+gtk4-layer-shell 1.1.1-1
 gtkmm3 3.24.10-1
 gts 0.7.6.121130-3
 guile 3.0.10-1
@@ -610,6 +616,7 @@ pciutils 3.13.0-2
 pcre 8.45-4
 pcre2 10.45-1
 pcsclite 2.3.3-1
+pdf4qt-bin 1.5.1.0-1
 perl 5.40.2-1
 perl-error 0.17030-1
 perl-mailtools 2.22-1
@@ -630,7 +637,7 @@ poppler-data 0.4.12-2
 popt 1.19-2
 portaudio 1:19.7.0-3
 procps-ng 4.0.5-3
-proto-bin 0.48.0-1
+proto 0.48.0-1
 psmisc 23.7-1
 pugixml 1.15-2
 pyalpm 0.10.10-2
@@ -736,6 +743,9 @@ qt5-webengine 5.15.18-6
 qt6-base 6.9.0-1
 qt6-charts 6.9.0-1
 qt6-declarative 6.9.0-2
+qt6-multimedia 6.9.0-1
+qt6-multimedia-ffmpeg 6.9.0-1
+qt6-speech 6.9.0-1
 qt6-svg 6.9.0-1
 qt6-tools 6.9.0-2
 qt6-translations 6.9.0-1
@@ -753,6 +763,7 @@ rtkit 0.13-3
 rubberband 4.0.0-1
 run-parts 5.17-1
 runc 1.2.6-1
+rust 1:1.86.0-1
 sbc 2.0-2
 sdbus-cpp 2.1.0-2
 sddm 0.21.0-6
