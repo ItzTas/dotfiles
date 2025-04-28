@@ -33,9 +33,7 @@ rofi_cmd() {
 		-p "Uptime: $uptime" \
 		-mesg "Uptime: $uptime" \
         -no-animation \
-        -no-lazy-grab \
-        -theme-str 'window { animation: false; }' \
-		-theme ${dir}/${theme}.rasi
+		-theme "${dir}/${theme}.rasi"
 }
 
 # Confirmation CMD
