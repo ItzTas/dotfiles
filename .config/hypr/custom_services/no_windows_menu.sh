@@ -1,10 +1,11 @@
 #!/bin/bash
 
 rofi_pid=""
+windows_count=""
+workspace_id=""
+current_id=""
 
 _watch() {
-    local current_id=""
-
     while true; do
         local workspace_info
         workspace_info=$(hyprctl activeworkspace 2>/dev/null)
@@ -16,33 +17,40 @@ _watch() {
         local workspace_json
         workspace_json="$(hyprctl activeworkspace -j)"
 
-        local windows_count
         windows_count=$(echo "$workspace_json" | jq '.windows')
 
-        local workspace_id
         workspace_id=$(echo "$workspace_json" | jq '.id')
 
-        if [[ "$workspace_id" != "$current_id" ]]; then
+        if _has_workspace_changed; then
             _kill_rofi
             current_id="$workspace_id"
             continue
         fi
-        _check_to_open "$windows_count" "$current_id"
-
+        _check_to_open "$windows_count"
         sleep 0.2
     done
 }
 
+_has_workspace_changed() {
+    if [[ "$workspace_id" != "$current_id" ]]; then
+        return 0
+    fi
+    return 1
+}
+
 _check_to_open() {
     local windows_count="$1"
-    local id="$2"
-    if ((windows_count == 0)); then
-        _open_rofi
+    if ((windows_count != 0)) && ! _is_rofi_in_active_workspace "$current_id"; then
+        _kill_rofi
         return
     fi
-    if ! _is_rofi_in_active_workspace "$id"; then
-        _kill_rofi
+    sleep 1.5
+    if _has_workspace_changed; then
+        return
     fi
+    sleep 0.5
+    _open_rofi
+    return
 }
 
 _is_rofi_in_active_workspace() {
@@ -65,7 +73,7 @@ _open_rofi() {
     if ! pgrep -x rofi >/dev/null; then
         local path="$HOME/.config/rofi/powermenu/type-2/powermenu.sh"
         if [[ -x "$path" ]]; then
-            "$path" &
+            hyprctl dispatch exec [workspace "$current_id" silent] "$path" &
             rofi_pid=$!
         else
             echo "Error: Rofi script not found at $path" >&2
