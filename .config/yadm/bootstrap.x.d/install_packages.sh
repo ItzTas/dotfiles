@@ -89,6 +89,7 @@ _install_pacman_packages() {
         "bat"
         "bash-language-server"
         "rofi"
+        "rofi-emoji"
         "shellcheck"
         "shfmt"
         "slurp"

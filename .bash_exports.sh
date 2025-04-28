@@ -3,6 +3,9 @@ export IGNOREEOF=999
 MY_PROJECT_PATH="$(pwd)"
 export MY_PROJECT_PATH
 
+# browser
+export BROWSER='zen browser'
+
 # editor
 export EDITOR='nvim'
 
