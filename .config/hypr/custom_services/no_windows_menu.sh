@@ -71,7 +71,7 @@ _kill_rofi() {
 
 _open_rofi() {
     if ! pgrep -x rofi >/dev/null; then
-        local path="$HOME/.config/rofi/powermenu/type-2/powermenu.sh"
+        local path="$HOME/.config/rofi/powermenu/type-6/powermenu.sh"
         if [[ -x "$path" ]]; then
             hyprctl dispatch exec [workspace "$current_id" silent] "$path" &
             rofi_pid=$!
