@@ -6,7 +6,7 @@ current_id=""
 
 _watch() {
     while true; do
-        sleep 0.5
+        sleep 0.1
         local workspace_info
         workspace_info=$(hyprctl activeworkspace 2>/dev/null)
 
@@ -22,8 +22,12 @@ _watch() {
         workspace_id=$(echo "$workspace_json" | jq '.id')
 
         if _has_workspace_changed; then
-            _kill_rofi
             current_id="$workspace_id"
+            _kill_rofi
+            continue
+        fi
+        if pgrep -x rofi >/dev/null; then
+            sleep 2
             continue
         fi
         _check_to_open "$windows_count"
@@ -58,9 +62,7 @@ _is_rofi_in_active_workspace() {
 }
 
 _kill_rofi() {
-    if pgrep -x rofi >/dev/null; then
-        killall rofi 2>/dev/null
-    fi
+    killall rofi 2>/dev/null
 }
 
 _open_rofi() {
