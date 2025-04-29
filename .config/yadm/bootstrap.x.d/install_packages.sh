@@ -39,6 +39,7 @@ _install_pacman_packages() {
         "ddcutil"
         "xorg-xhost"
         "cmake"
+        "inotify-tools"
         "mpv"
         "wf-recorder"
         "ferdium"
