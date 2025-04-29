@@ -465,6 +465,7 @@ librsvg 2:2.60.0-1
 librsync 1:2.3.4-2
 libsamplerate 0.2.2-3
 libsasl 2.1.28-5
+libsass 3.6.6-1
 libseccomp 2.5.6-1
 libsecret 0.21.7-1
 libsigc++ 2.12.1-1
@@ -834,6 +835,7 @@ rubberband 4.0.0-1
 run-parts 5.17-1
 runc 1.2.6-1
 rust 1:1.86.0-1
+sassc 3.6.2-5
 sbc 2.0-2
 sdbus-cpp 2.1.0-2
 sddm 0.21.0-6
@@ -874,6 +876,7 @@ startup-notification 0.12-8
 stremio 4.4.168-2
 sudo 1.9.16.p2-2
 svt-av1 3.0.2-1
+swayosd-gtk3 0.1.0-1
 sxhkd 0.6.2-4
 systemd 257.5-2
 systemd-libs 257.5-2
