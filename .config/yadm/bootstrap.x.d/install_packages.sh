@@ -27,6 +27,7 @@ _install_pacman_packages() {
         "os-prober"
         "bibata-cursor-theme"
         "hyprscratch"
+        "swayosd-gtk3"
         "hyprlock"
         "btop"
         "arch-update"
