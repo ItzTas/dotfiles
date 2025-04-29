@@ -23,6 +23,7 @@ _install_pacman_packages() {
     set -e
     local packages=(
         "timeshift"
+        "eww-git"
         "os-prober"
         "bibata-cursor-theme"
         "hyprscratch"
