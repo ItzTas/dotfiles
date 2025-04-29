@@ -95,7 +95,7 @@ make_literal() {
     local caches
     caches="$(compile_caches)"
     local quote
-    quote="$("$HOME/.config/eww/Control-Center/scripts/quotes.zsh" rand)"
+    quote="$("$HOME/.config/eww/Control-Center/scripts/quotes.sh" rand)"
     if [[ -z "$caches" ]]; then
         echo "(box :class \"control-center-empty-box\" :height 590 :orientation \"vertical\" :space-evenly false (image :class \"control-center-empty-banner\" :valign \"end\" :vexpand true :path \"assets/empty-notification.svg\" :image-width 200 :image-height 200) (label :vexpand true :valign \"start\" :wrap true :class \"control-center-empty-label\" :text \"$quote\"))"
     else
