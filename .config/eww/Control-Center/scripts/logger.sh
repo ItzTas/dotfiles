@@ -31,10 +31,11 @@ process_notification() {
     local notif="$1"
     local urgency="$2"
 
-    local summary body appname
+    local summary body appname id
     summary=$(echo "$notif" | jq -r '.summary.data')
     body=$(echo "$notif" | jq -r '.body.data' | recode html)
     appname=$(echo "$notif" | jq -r '.appname.data')
+    id=$(echo "$notif" | jq -r '.id.data')
 
     [[ -z "$summary" ]] && summary="Summary unavailable."
     [[ -z "$body" ]] && body="Body unavailable."
@@ -60,7 +61,7 @@ process_notification() {
     "firefox") glyph="" ;;
     esac
 
-    echo "(card :class \"control-center-card control-center-card-$urgency control-center-card-$appname\" :glyph_class \"control-center-$urgency control-center-$appname\" :SL \"$DUNST_ID\" :L \"dunstctl history-rm $DUNST_ID\" :body \"$body\" :summary \"$summary\" :glyph \"$glyph\")" |
+    echo "(card :class \"control-center-card control-center-card-$urgency control-center-card-$appname\" :glyph_class \"control-center-$urgency control-center-$appname\" :SL \"$id\" :L \"dunstctl history-rm $id\" :body \"$body\" :summary \"$summary\" :glyph \"$glyph\")" |
         cat - "$DUNST_LOG" |
         sponge "$DUNST_LOG"
 }
@@ -103,10 +104,8 @@ make_literal() {
 }
 
 clear_logs() {
-    killall dunst 2>/dev/null
-    dunst &
-    disown
-    : >"$DUNST_LOG"
+    dunstctl history-clear
+    create_cache
 }
 
 pop() {
@@ -118,8 +117,10 @@ drop() {
 }
 
 remove_line() {
-    sed -i "/SL \"$1\"/d" "$DUNST_LOG"
     dunstctl history-rm "$1"
+    : >"$DUNST_LOG"
+    cat "$DUNST_LOG"
+    create_cache
 }
 
 critical_count() {
