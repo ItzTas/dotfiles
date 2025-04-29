@@ -28,9 +28,6 @@ _watch() {
             _kill_window
             continue
         fi
-        if _is_control_center_open; then
-            continue
-        fi
         _check_workspace "$windows_count"
     done
 }
@@ -56,13 +53,19 @@ _check_workspace() {
         _on_no_windows
         return
     fi
-    _open_waybar
+    _on_windows
 }
 
 _is_rofi_in_active_workspace() {
     local id
     id="$current_id"
     hyprctl clients -j | jq -e ".[] | select(.workspace.id == $id and (.class == \"Rofi\" or .class == \"rofi\"))" >/dev/null
+}
+
+_kill_waybar() {
+    if _is_waybar_active; then
+        killall waybar
+    fi
 }
 
 _on_windows() {
@@ -88,12 +91,19 @@ _open_waybar() {
     if _is_waybar_active; then
         return
     fi
-    waybar
+    waybar >/dev/null 2>&1 &
+}
+
+_open_control_center() {
+    if _is_control_center_open; then
+        return
+    fi
+    eww --config "$CONTROL_CENTER_CONFIG_DIR" open control-center
 }
 
 _on_no_windows() {
-    eww --config "$CONTROL_CENTER_CONFIG_DIR" open control-center
-    killall waybar
+    _open_control_center
+    _kill_waybar
 }
 
 _watch
