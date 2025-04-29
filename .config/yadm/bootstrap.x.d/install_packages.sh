@@ -27,6 +27,7 @@ _install_pacman_packages() {
         "os-prober"
         "bibata-cursor-theme"
         "hyprscratch"
+        "hyprlock"
         "btop"
         "arch-update"
         "miru-go-bin"
