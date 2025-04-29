@@ -23,6 +23,7 @@ _install_pacman_packages() {
     set -e
     local packages=(
         "timeshift"
+        "fortune-mod"
         "eww-git"
         "os-prober"
         "bibata-cursor-theme"
