@@ -549,6 +549,7 @@ libyuv r2426+464c51a03-1
 libzen 0.4.41-2
 libzip 1.11.3-1
 licenses 20240728-1
+light 1.2.2-5
 lilv 0.24.26-1
 linux 6.14.4.arch1-1
 linux-api-headers 6.14-1
