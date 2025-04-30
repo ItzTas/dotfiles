@@ -91,7 +91,9 @@ _is_powermenu_open() {
 }
 
 _kill_rofi() {
-    pkill -f "rofi.*rofi-pwmenuauto"
+    if _is_powermenu_open; then
+        pkill -f "rofi.*rofi-pwmenuauto"
+    fi
 }
 
 _open_rofi() {
