@@ -74,7 +74,7 @@ _kill_waybar() {
 
 _on_windows() {
     _kill_window
-    _open_waybar
+    # _open_waybar
 }
 
 _kill_window() {
@@ -107,7 +107,7 @@ _open_control_center() {
 
 _on_no_windows() {
     _open_control_center
-    _kill_waybar
+    # _kill_waybar
 }
 
 _watch
