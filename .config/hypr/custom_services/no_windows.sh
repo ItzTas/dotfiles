@@ -1,6 +1,10 @@
 #!/bin/bash
 
+sleep 2
+
 CONTROL_CENTER_CONFIG_DIR="$HOME/.config/eww/Control-Center"
+
+eww --config "$CONTROL_CENTER_CONFIG_DIR" daemon
 
 windows_count=""
 workspace_id=""

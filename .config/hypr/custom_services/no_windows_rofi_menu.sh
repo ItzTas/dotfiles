@@ -22,8 +22,8 @@ _watch() {
         workspace_id=$(echo "$workspace_json" | jq '.id')
 
         if _has_workspace_changed; then
+            _kill_rofi
             current_id="$workspace_id"
-            killall rofi
             continue
         fi
 
@@ -52,7 +52,7 @@ _check_to_open() {
         _on_windows_open "$windows_count"
         return
     fi
-    sleep 7
+    sleep 10
     if _has_workspace_changed; then
         return
     fi
@@ -95,7 +95,7 @@ _open_rofi() {
     if pgrep -x rofi >/dev/null; then
         return
     fi
-    local path=
+    local path="$HOME/.config/rofi/powermenu/type-2/powermenu.sh"
     if [[ -x "$path" ]]; then
         hyprctl dispatch exec [workspace "$current_id" silent] "$path" &
     else
