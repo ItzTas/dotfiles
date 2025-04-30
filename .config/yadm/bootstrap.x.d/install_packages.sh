@@ -39,6 +39,8 @@ _install_pacman_packages() {
         "docker-desktop"
         "ddcutil"
         "xorg-xhost"
+        "gping"
+        "ncdu"
         "cmake"
         "inotify-tools"
         "mpv"
