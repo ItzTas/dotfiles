@@ -27,12 +27,16 @@ _watch() {
             continue
         fi
 
-        windows_count=$(echo "$workspace_json" | jq '.windows')
+        windows_count=$(_get_windows)
         if ((windows_count >= 2)) && _is_rofi_in_active_workspace && _is_powermenu_open; then
             _kill_rofi
         fi
-        _check_to_open "$windows_count"
+        _check_to_open
     done
+}
+
+_get_windows() {
+    echo "$workspace_json" | jq '.windows'
 }
 
 _is_rofi_open() {
@@ -50,7 +54,6 @@ _has_workspace_changed() {
 }
 
 _check_to_open() {
-    local windows_count="$1"
     if ((windows_count != 0)); then
         _on_windows_open "$windows_count"
         return
@@ -96,7 +99,8 @@ _open_rofi() {
     local loops=10
     for ((i = 0; i <= loops; i++)); do
         sleep 1
-        if _has_workspace_changed; then
+        windows_count=$(_get_windows)
+        if _has_workspace_changed || ((windows_count > 0)); then
             return
         fi
     done
