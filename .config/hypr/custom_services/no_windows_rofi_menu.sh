@@ -28,6 +28,9 @@ _watch() {
         fi
 
         windows_count=$(echo "$workspace_json" | jq '.windows')
+        if ((windows_count >= 2)) && _is_rofi_in_active_workspace && _is_powermenu_open; then
+            _kill_rofi
+        fi
         _check_to_open "$windows_count"
     done
 }
