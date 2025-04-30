@@ -27,6 +27,11 @@ _watch() {
             continue
         fi
 
+        if _is_powermenu_open && ! _is_rofi_in_active_workspace; then
+            _kill_rofi
+            continue
+        fi
+
         windows_count=$(_get_windows)
         if ((windows_count >= 2)) && _is_rofi_in_active_workspace && _is_powermenu_open; then
             _kill_rofi
