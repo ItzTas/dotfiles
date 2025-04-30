@@ -55,10 +55,6 @@ _check_to_open() {
         _on_windows_open "$windows_count"
         return
     fi
-    sleep 10
-    if _has_workspace_changed; then
-        return
-    fi
     _open_rofi
     return
 }
@@ -97,6 +93,14 @@ _kill_rofi() {
 }
 
 _open_rofi() {
+    local loops=10
+    for ((i = 0; i <= loops; i++)); do
+        sleep 1
+        if _has_workspace_changed; then
+            return
+        fi
+    done
+
     if pgrep -x rofi >/dev/null; then
         return
     fi

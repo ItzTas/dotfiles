@@ -3,6 +3,9 @@ export IGNOREEOF=999
 MY_PROJECT_PATH="$(pwd)"
 export MY_PROJECT_PATH
 
+# bat 
+export BAT_THEME="Catppuccin Mocha"
+
 # browser
 export BROWSER='zen browser'
 
