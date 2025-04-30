@@ -56,7 +56,8 @@ alias icat='kitty +kitten icat'
 alias python='python3'
 
 # cat | bat
-alias c='bat --paging=never'
+alias cat='bat --paging=never'
+alias c='command cat'
 
 # man & utilities
 alias man='qman'
