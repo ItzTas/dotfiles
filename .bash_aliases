@@ -32,7 +32,7 @@ alias mrs='miru rs'
 # pacman, yay & utilities
 alias upacf='pacfiles --update-db *'
 alias pacf='pacfiles -l'
-alias upgrady='arch-update --check &; yay -Syu --devel; yay -Fy; yadm_update'
+alias upgrady='yay -Syu --devel; yay -Fy; yadm_update; arch-update --check'
 alias yayd='yay -S $(yay -Slq | fzf)'
 alias yremove='yay -Qq | fzf --multi --preview "yay -Qi {}" | xargs yay -Rns'
 
