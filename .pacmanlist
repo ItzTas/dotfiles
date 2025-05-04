@@ -1042,8 +1042,8 @@ vte3 0.80.1-1
 vulkan-icd-loader 1.4.309.0-1
 vulkan-nouveau 1:25.0.5-1
 w3m 0.5.3.git20230713_1-1
-walrs 1.0.6-1
-walrs-debug 1.0.6-1
+walrs 1.0.8-1
+walrs-debug 1.0.8-1
 waybar 0.12.0-1
 wayland 1.23.1-2
 wayland-protocols 1.44-1
