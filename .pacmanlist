@@ -52,7 +52,7 @@ bubblewrap 0.11.0-1
 bzip2 1.0.8-6
 c-ares 1.34.5-1
 ca-certificates 20240618-1
-ca-certificates-mozilla 3.110-1
+ca-certificates-mozilla 3.111-1
 ca-certificates-utils 20240618-1
 cairo 1.18.4-1
 cairomm 1.14.5-1
@@ -204,10 +204,10 @@ gst-plugins-base-libs 1.26.1-1
 gstreamer 1.26.1-1
 gtest 1.16.0-2
 gtk-layer-shell 0.9.1-1
-gtk-update-icon-cache 1:4.18.4-1
+gtk-update-icon-cache 1:4.18.5-1
 gtk2 2.24.33-5
 gtk3 1:3.24.49-1
-gtk4 1:4.18.4-1
+gtk4 1:4.18.5-1
 gtk4-layer-shell 1.1.1-1
 gtkmm 1:2.24.5-5
 gtkmm-4.0 4.18.0-2
@@ -365,7 +365,7 @@ lib32-libnm 1.52.0-1
 lib32-libnsl 2.0.1-1
 lib32-libpciaccess 0.18.1-1
 lib32-libpipewire 1:1.4.2-1
-lib32-libpng 1.6.47-1
+lib32-libpng 1.6.48-1
 lib32-libpsl 0.21.5-1
 lib32-libssh2 1.11.1-1
 lib32-libtasn1 4.20.0-1
@@ -387,10 +387,10 @@ lib32-libxss 1.2.4-2
 lib32-libxxf86vm 1.1.5-2
 lib32-llvm-libs 1:19.1.7-2
 lib32-lm_sensors 1:3.6.0.r41.g31d1f125-3
-lib32-mesa 1:25.0.4-1
+lib32-mesa 1:25.0.5-1
 lib32-ncurses 6.5-1
 lib32-nspr 4.36-1
-lib32-nss 3.110-1
+lib32-nss 3.111-1
 lib32-openssl 1:3.5.0-1
 lib32-p11-kit 0.25.5-1
 lib32-pam 1.7.0-1
@@ -401,7 +401,7 @@ lib32-sqlite 3.49.1-1
 lib32-systemd 257.5-1
 lib32-util-linux 2.41-1
 lib32-vulkan-icd-loader 1.4.309.0-1
-lib32-vulkan-nouveau 1:25.0.4-1
+lib32-vulkan-nouveau 1:25.0.5-1
 lib32-wayland 1.23.1-1
 lib32-xcb-util-keysyms 0.4.1-2
 lib32-xz 5.8.1-1
@@ -538,7 +538,7 @@ libpipeline 1.5.8-1
 libpipewire 1:1.4.2-1
 libplacebo 7.349.0-6
 libplist 2.6.0-2
-libpng 1.6.47-1
+libpng 1.6.48-1
 libproxy 0.5.9-1
 libpsl 0.21.5-2
 libpulse 17.0+r43+g3e2bb8a1e-1
@@ -612,8 +612,8 @@ libxfont2 2.0.7-1
 libxft 2.3.9-1
 libxi 1.8.2-1
 libxinerama 1.1.5-2
-libxkbcommon 1.9.0-1
-libxkbcommon-x11 1.9.0-1
+libxkbcommon 1.9.1-1
+libxkbcommon-x11 1.9.1-1
 libxkbfile 1.1.3-1
 libxklavier 5.4-6
 libxml2 2.14.2-2
@@ -674,7 +674,7 @@ md4c 0.5.2-1
 mda.lv2 1.2.10-2
 mdadm 4.4-1
 menu-cache 1.1.1-1
-mesa 1:25.0.4-1
+mesa 1:25.0.5-1
 meson 1.8.0-1
 minizip 1:1.3.1-2
 miru-go-bin 0.0.19-1
@@ -715,7 +715,7 @@ nodejs-nopt 7.2.1-1
 npm 11.3.0-1
 npth 1.8-1
 nspr 4.36-1
-nss 3.110-1
+nss 3.111-1
 numactl 2.0.19-1
 ocl-icd 2.3.2-2
 oh-my-posh 25.18.0-1
@@ -768,7 +768,7 @@ pipewire-alsa 1:1.4.2-1
 pipewire-audio 1:1.4.2-1
 pipewire-jack 1:1.4.2-1
 pipewire-pulse 1:1.4.2-1
-pixman 0.44.2-1
+pixman 0.46.0-1
 pkgconf 2.4.3-1
 playerctl 2.4.1-4
 plocate 1.1.23-1
@@ -795,7 +795,7 @@ python-atomicwrites 1.4.1-5
 python-attrs 24.1.0-1
 python-autocommand 2.2.2-7
 python-build 1.2.2-3
-python-cachecontrol 1:0.14.2-1
+python-cachecontrol 1:0.14.3-1
 python-cachy 0.3.0-11
 python-cffi 1.17.1-2
 python-charset-normalizer 3.4.1-1
@@ -850,7 +850,7 @@ python-pathspec 0.12.1-3
 python-pbs-installer 2025.03.17-1
 python-pexpect 4.9.0-4
 python-pillow 11.2.1-1
-python-pip 25.1-1
+python-pip 25.1.1-1
 python-pkginfo 1.12.0-1
 python-platformdirs 4.3.6-2
 python-pluggy 1.5.0-3
@@ -861,8 +861,8 @@ python-propcache 0.3.1-1
 python-ptyprocess 0.7.0-8
 python-pyaml 24.12.0-1
 python-pycparser 2.22-3
-python-pydantic 2.11.3-1
-python-pydantic-core 2:2.33.1-1
+python-pydantic 2.11.4-1
+python-pydantic-core 2:2.33.2-2
 python-pymediainfo 6.1.0-4
 python-pypdf 5.4.0-1
 python-pyproject-hooks 1.2.0-3
@@ -999,7 +999,7 @@ tdb 1.4.13-1
 termpicker 1.3.9-1
 texinfo 7.2-1
 thunar 4.20.2-1
-thunderbird 137.0.2-1
+thunderbird 138.0-1
 timeshift 24.06.6-1
 tint2 17.0.2-4
 tinysparql 3.9.2-2
@@ -1040,7 +1040,7 @@ volume_key 0.3.12-10
 vte-common 0.80.1-1
 vte3 0.80.1-1
 vulkan-icd-loader 1.4.309.0-1
-vulkan-nouveau 1:25.0.4-1
+vulkan-nouveau 1:25.0.5-1
 w3m 0.5.3.git20230713_1-1
 walrs 1.0.6-1
 walrs-debug 1.0.6-1
