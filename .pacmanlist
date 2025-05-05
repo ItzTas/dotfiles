@@ -91,7 +91,6 @@ default-cursors 3-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.31-1
 diffutils 3.12-2
-discord 1:0.0.93-1
 docker 1:28.1.1-1
 docker-desktop 4.41.1-1
 dotnet-host 9.0.4.sdk105-1
@@ -764,6 +763,7 @@ pixman 0.46.0-1
 pkgconf 2.4.3-1
 playerctl 2.4.1-4
 plocate 1.1.23-1
+pnpm 10.10.0-1
 polkit 126-2
 polkit-gnome 0.105-11
 poppler-data 0.4.12-2
@@ -1023,6 +1023,8 @@ v4l-utils 1.28.1-2
 vapoursynth R70-2
 vde2 2.3.3-6
 vdirsyncer 0.19.3-2
+vencord-git 1.12.0.r0.g0a2d4a2-1
+vesktop 1.5.6-1
 vid.stab 1.1.1-2
 vim 9.1.1362-1
 vim-runtime 9.1.1362-1
