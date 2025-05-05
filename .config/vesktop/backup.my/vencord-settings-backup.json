@@ -3,9 +3,18 @@
         "autoUpdate": false,
         "autoUpdateNotification": true,
         "useQuickCss": true,
-        "themeLinks": [],
+        "themeLinks": [
+            "# https://s-k-y-l-i.github.io/discord-themes/Smooth-Harmony.theme.css",
+            "# https://s-k-y-l-i.github.io/discord-themes/Acrylic-Harmony.theme.css"
+        ],
         "eagerPatches": false,
-        "enabledThemes": [],
+        "enabledThemes": [
+            "rose-pine-moon.theme.css",
+            "NieR-Night-Source.theme.css",
+            "Acrylic-Harmony.theme.css",
+            "Translucence.theme.css",
+            "mocha.theme.css"
+        ],
         "enableReactDevtools": false,
         "frameless": false,
         "transparent": true,
@@ -47,7 +56,8 @@
                 "enabled": true
             },
             "AccountPanelServerProfile": {
-                "enabled": true
+                "enabled": true,
+                "prioritizeServerProfile": false
             },
             "AlwaysAnimate": {
                 "enabled": true
@@ -495,7 +505,9 @@
                 "hoverControls": false
             },
             "SpotifyCrack": {
-                "enabled": false
+                "enabled": false,
+                "noSpotifyAutoPause": true,
+                "keepSpotifyActivityOnIdle": false
             },
             "SpotifyShareCommands": {
                 "enabled": true
@@ -621,8 +633,8 @@
             "authenticated": false,
             "url": "https://api.vencord.dev/",
             "settingsSync": false,
-            "settingsSyncVersion": 1746469111450
+            "settingsSyncVersion": 1746470633837
         }
     },
-    "quickCss": "console.log(\"ola\")"
+    "quickCss": ""
 }
