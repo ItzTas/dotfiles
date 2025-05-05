@@ -33,7 +33,6 @@ bash 5.2.037-3
 bash-completion 2.16.0-1
 bash-language-server 5.6.0-1
 bat 0.25.0-4
-bats 1.11.1-1
 bc 1.08.1-1
 bibata-cursor-theme 2.0.7-1
 binutils 2.44+r94+gfe459e33c676-1
@@ -735,7 +734,6 @@ pango 1:1.56.3-1
 pangomm 2.46.4-1
 pangomm-2.48 2.56.1-1
 papirus-icon-theme 20250501-1
-parallel 20250422-1
 parcellite 1.2.5-1
 parted 3.6-2
 paru 2.0.4-1
@@ -765,7 +763,6 @@ pixman 0.46.0-1
 pkgconf 2.4.3-1
 playerctl 2.4.1-4
 plocate 1.1.23-1
-pnpm 10.10.0-1
 polkit 126-2
 polkit-gnome 0.105-11
 poppler-data 0.4.12-2
