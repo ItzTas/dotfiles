@@ -1,14 +1,11 @@
 {
     "settings": {
-        "autoUpdate": true,
+        "autoUpdate": false,
         "autoUpdateNotification": true,
         "useQuickCss": true,
         "themeLinks": [],
         "eagerPatches": false,
-        "enabledThemes": [
-            "mocha.theme.css",
-            "NotAnotherAnimeTheme.theme.css"
-        ],
+        "enabledThemes": [],
         "enableReactDevtools": false,
         "frameless": false,
         "transparent": true,
@@ -179,7 +176,8 @@
                 "enabled": false
             },
             "Experiments": {
-                "enabled": true
+                "enabled": true,
+                "toolbarDevMenu": false
             },
             "F8Break": {
                 "enabled": false
@@ -213,7 +211,7 @@
                 "enabled": true
             },
             "FixSpotifyEmbeds": {
-                "enabled": false
+                "enabled": true
             },
             "FixYoutubeEmbeds": {
                 "enabled": true
@@ -273,7 +271,12 @@
                 "enabled": false
             },
             "LoadingQuotes": {
-                "enabled": true
+                "enabled": true,
+                "replaceEvents": true,
+                "enableDiscordPresetQuotes": false,
+                "additionalQuotes": "",
+                "additionalQuotesDelimiter": "|",
+                "enablePluginPresetQuotes": true
             },
             "MemberCount": {
                 "enabled": false
@@ -434,7 +437,13 @@
                 "enabled": false
             },
             "RoleColorEverywhere": {
-                "enabled": true
+                "enabled": true,
+                "chatMentions": true,
+                "memberList": true,
+                "voiceUsers": true,
+                "reactorsList": true,
+                "pollResults": true,
+                "colorChatMessages": false
             },
             "SecretRingToneEnabler": {
                 "enabled": false
@@ -482,7 +491,8 @@
                 "enabled": false
             },
             "SpotifyControls": {
-                "enabled": false
+                "enabled": true,
+                "hoverControls": false
             },
             "SpotifyCrack": {
                 "enabled": false
@@ -611,8 +621,8 @@
             "authenticated": false,
             "url": "https://api.vencord.dev/",
             "settingsSync": false,
-            "settingsSyncVersion": 1746467438075
+            "settingsSyncVersion": 1746469021186
         }
     },
-    "quickCss": ""
+    "quickCss": "console.log(\"ola\")"
 }
