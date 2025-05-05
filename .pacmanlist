@@ -129,6 +129,7 @@ file 5.46-4
 file-roller 44.5-1
 filesystem 2024.11.21-1
 findutils 4.10.0-2
+firefox-bin 138.0.1-1
 fish 4.0.2-1
 flac 1.5.0-1
 flex 2.6.4-5
@@ -1016,7 +1017,7 @@ tree-sitter-markdown 0.3.1-1
 tree-sitter-query 0.5.0-1
 tree-sitter-vim 0.4.0-1
 tree-sitter-vimdoc 3.0.0-1
-trippy 0.12.2-1
+trippy 0.13.0-1
 tslib 1.23-1
 ttf-jetbrains-mono-nerd 3.4.0-1
 ttf-nerd-fonts-symbols 3.4.0-1
