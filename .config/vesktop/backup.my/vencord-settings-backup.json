@@ -498,7 +498,7 @@
                 "enabled": false
             },
             "SpotifyShareCommands": {
-                "enabled": false
+                "enabled": true
             },
             "StartupTimings": {
                 "enabled": false
@@ -621,7 +621,7 @@
             "authenticated": false,
             "url": "https://api.vencord.dev/",
             "settingsSync": false,
-            "settingsSyncVersion": 1746469021186
+            "settingsSyncVersion": 1746469111450
         }
     },
     "quickCss": "console.log(\"ola\")"
