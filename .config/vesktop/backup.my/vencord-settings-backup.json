@@ -3,24 +3,27 @@
         "autoUpdate": false,
         "autoUpdateNotification": true,
         "useQuickCss": true,
-        "themeLinks": [],
+        "themeLinks": [
+            "# https://s-k-y-l-i.github.io/discord-themes/Smooth-Harmony.theme.css",
+            "# https://s-k-y-l-i.github.io/discord-themes/Acrylic-Harmony.theme.css"
+        ],
         "eagerPatches": false,
         "enabledThemes": [
             "rose-pine-moon.theme.css",
             "NieR-Night-Source.theme.css",
-            "Acrylic-Harmony.theme.css",
             "Translucence.theme.css",
+            "Acrylic-Harmony.theme.css",
             "mocha.theme.css"
         ],
         "enableReactDevtools": false,
         "frameless": false,
-        "transparent": true,
-        "winCtrlQ": false,
+        "transparent": false,
+        "winCtrlQ": true,
         "disableMinSize": false,
         "winNativeTitleBar": false,
         "plugins": {
             "ChatInputButtonAPI": {
-                "enabled": false
+                "enabled": true
             },
             "CommandsAPI": {
                 "enabled": true
@@ -103,7 +106,9 @@
                 "enabled": false
             },
             "BetterSessions": {
-                "enabled": false
+                "enabled": true,
+                "backgroundCheck": false,
+                "checkInterval": 20
             },
             "BetterSettings": {
                 "enabled": true,
@@ -140,7 +145,8 @@
                 "enabled": false
             },
             "CopyEmojiMarkdown": {
-                "enabled": false
+                "enabled": false,
+                "copyUnicode": true
             },
             "CopyFileContents": {
                 "enabled": false
@@ -200,10 +206,12 @@
                 "emojiSize": 48,
                 "hyperLinkText": "{{NAME}}",
                 "useHyperLinks": true,
-                "disableEmbedPermissionCheck": false
+                "disableEmbedPermissionCheck": false,
+                "stickerSize": 160
             },
             "FakeProfileThemes": {
-                "enabled": false
+                "enabled": true,
+                "nitroFirst": true
             },
             "FavoriteEmojiFirst": {
                 "enabled": false
@@ -254,7 +262,14 @@
                 "enabled": false
             },
             "IgnoreActivities": {
-                "enabled": false
+                "enabled": false,
+                "listMode": 0,
+                "idsList": "",
+                "ignorePlaying": false,
+                "ignoreStreaming": false,
+                "ignoreListening": false,
+                "ignoreWatching": false,
+                "ignoreCompeting": false
             },
             "ImageLink": {
                 "enabled": false
@@ -271,7 +286,8 @@
                 "enabled": false
             },
             "InvisibleChat": {
-                "enabled": false
+                "enabled": false,
+                "savedPasswords": "password, Password"
             },
             "IrcColors": {
                 "enabled": false
@@ -327,7 +343,9 @@
                 "enabled": false
             },
             "NoBlockedMessages": {
-                "enabled": false
+                "enabled": false,
+                "ignoreMessages": false,
+                "applyToIgnoredUsers": true
             },
             "NoDevtoolsWarning": {
                 "enabled": false
@@ -395,10 +413,13 @@
                 "enabled": false
             },
             "PermissionFreeWill": {
-                "enabled": false
+                "enabled": false,
+                "lockout": true,
+                "onboarding": true
             },
             "PermissionsViewer": {
-                "enabled": false
+                "enabled": false,
+                "permissionsSortOrder": 0
             },
             "petpet": {
                 "enabled": false
@@ -434,7 +455,9 @@
                 "enabled": false
             },
             "ReplaceGoogleSearch": {
-                "enabled": false
+                "enabled": true,
+                "customEngineURL": "https://duckduckgo.com/",
+                "customEngineName": "Duck Duck go"
             },
             "ReplyTimestamp": {
                 "enabled": false
@@ -461,7 +484,8 @@
                 "enabled": false
             },
             "Summaries": {
-                "enabled": false
+                "enabled": true,
+                "summaryExpiryThresholdDays": 3
             },
             "SendTimestamps": {
                 "enabled": false
@@ -497,7 +521,7 @@
                 "enabled": false
             },
             "SilentTyping": {
-                "enabled": false
+                "enabled": true
             },
             "SortFriendRequests": {
                 "enabled": false
@@ -539,7 +563,7 @@
                 "enabled": false
             },
             "TypingTweaks": {
-                "enabled": false
+                "enabled": true
             },
             "Unindent": {
                 "enabled": false
@@ -636,7 +660,7 @@
             "authenticated": false,
             "url": "https://api.vencord.dev/",
             "settingsSync": false,
-            "settingsSyncVersion": 1746471355545
+            "settingsSyncVersion": 1746519603199
         }
     },
     "quickCss": ""
