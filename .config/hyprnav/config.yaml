@@ -7,9 +7,9 @@
 # - sound: Settings related to audio feedback during transitions
 
 main_window:
-  width: 450 # the width of the main window
+  width: 100 # the width of the main window
   height: 70 # the height of the main window
-  duration: 350 # the transition timeout in milliseconds
+  duration: 100 # the transition timeout in milliseconds
 
 
 sound:
