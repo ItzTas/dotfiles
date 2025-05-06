@@ -20,7 +20,7 @@
 
 /* Workspace label styling - used for displaying current workspace information */
 #workspaceLabel {
-    color: #00ffd0;
+    color: #444444;
     font-size: 26px;
     font-family: "JetBrainsMonoNL Nerd Font", monospace;
 }
