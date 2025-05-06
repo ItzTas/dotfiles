@@ -39,6 +39,7 @@ _install_pacman_packages() {
         "docker-desktop"
         "ddcutil"
         "xorg-xhost"
+        "weston"
         "gping"
         "ncdu"
         "cmake"
