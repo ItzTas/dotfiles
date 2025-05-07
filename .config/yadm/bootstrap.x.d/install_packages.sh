@@ -36,7 +36,6 @@ _install_pacman_packages() {
         "proto-bin"
         "brightnessctl"
         "docker"
-        "docker-desktop"
         "ddcutil"
         "xorg-xhost"
         "git-bug-git"
