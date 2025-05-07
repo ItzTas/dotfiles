@@ -91,7 +91,7 @@ _install_pacman_packages() {
         "oh-my-posh"
         "pacfiles"
         "ripgrep"
-        "imv"
+        "gthumb"
         "dunst"
         "zen-browser-bin"
         "bat"
