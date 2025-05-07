@@ -105,7 +105,6 @@ duktape 2.7.0-7
 dunst 1.12.2-1
 e2fsprogs 1.47.2-2
 easyeffects 7.2.3-2
-easyeffects-bundy01-presets 2.2-2
 efibootmgr 18-3
 efivar 39-1
 electron31 31.7.7-4
@@ -691,7 +690,6 @@ make 4.4.1-2
 man-db 2.13.1-1
 mate-polkit 1.28.1-2
 md4c 0.5.2-1
-mda.lv2 1.2.10-2
 mdadm 4.4-1
 media-player-info 26-1
 menu-cache 1.1.1-1
@@ -1132,7 +1130,6 @@ yay 12.5.0-1
 yay-debug 12.5.0-1
 yazi 25.4.8-1
 yq 3.4.3-2
-zam-plugins-lv2 4.3-1
 zddccpl-git r1-1
 zelda64recomp-bin 1.2.0-3
 zen-browser-bin 1.12.1b-1
