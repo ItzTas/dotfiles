@@ -94,9 +94,8 @@ _is_powermenu_open() {
 }
 
 _kill_rofi() {
-    if _is_powermenu_open; then
-        pkill -f "rofi.*rofi-pwmenuauto"
-    fi
+    pkill -f "rofi.*rofi-pwmenuauto"
+    pkill -f "bash $HOME/.config/rofi/powermenu/type-2/powermenu.sh"
 }
 
 _open_rofi() {
