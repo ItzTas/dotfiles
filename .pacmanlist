@@ -96,7 +96,7 @@ desktop-file-utils 0.28-1
 device-mapper 2.03.32-1
 diffutils 3.12-2
 docker 1:28.1.1-1
-docker-compose 2.35.1-1
+docker-compose 2.36.0-1
 dotnet-host 9.0.4.sdk105-1
 dotnet-runtime 9.0.4.sdk105-1
 dotnet-sdk 9.0.4.sdk105-1
@@ -125,13 +125,13 @@ fftw 3.3.10-7
 file 5.46-4
 file-roller 44.5-1
 filelight 25.04.0-1
-filesystem 2024.11.21-1
+filesystem 2025.05.03-1
 findutils 4.10.0-2
 firefox-bin 138.0.1-1
 fish 4.0.2-1
 flac 1.5.0-1
 flex 2.6.4-5
-fluidsynth 2.4.5-3
+fluidsynth 2.4.6-1
 fmt 11.1.4-1
 fontconfig 2:2.16.2-1
 fortune-mod 3.22.0-1
@@ -281,7 +281,7 @@ hyprgraphics 0.1.3-4
 hyprland 0.48.1-5
 hyprland-qt-support 0.1.0-6
 hyprland-qtutils 0.1.4-2
-hyprlang 0.6.1-2
+hyprlang 0.6.2-1
 hyprlock 0.8.2-1
 hyprnav 0.1.2-1
 hyprpaper 0.7.5-1
@@ -290,7 +290,7 @@ hyprpwmenu 0.1.16-1
 hyprscratch 0.5.3-1
 hyprshade 3.2.1-1
 hyprshot 1.3.0-2
-hyprutils 0.7.0-1
+hyprutils 0.7.1-1
 hyprwayland-scanner 0.4.4-1
 i2c-tools 4.4-2
 iana-etc 20250328-1
@@ -1002,7 +1002,7 @@ spotify 1:1.2.60.564-2
 sqlite 3.49.1-1
 sratom 0.6.18-1
 srt 1.5.4-1
-stacer-git 1.3.4.r1.gba480ba-1
+stacer-git 1.3.4.r2.g89e18af-1
 starship 1.23.0-1
 startup-notification 0.12-8
 steam 1.0.0.82-2
