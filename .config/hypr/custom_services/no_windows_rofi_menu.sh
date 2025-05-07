@@ -73,7 +73,6 @@ _on_windows_open() {
         return
     fi
     if _is_rofi_in_active_workspace && ! _is_powermenu_open; then
-        sleep 3
         return
     fi
 
