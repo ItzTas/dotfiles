@@ -15,7 +15,7 @@ print_selected_area() {
     ACTION=$(dunstify -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
 
     case "$ACTION" in
-    "default") imv "$fullpath" ;;
+    "default") gthumb "$fullpath" ;;
     esac
 }
 
