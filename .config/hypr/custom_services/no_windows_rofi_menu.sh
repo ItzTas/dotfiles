@@ -86,7 +86,7 @@ _is_rofi_in_active_workspace() {
 }
 
 _is_powermenu_open() {
-    if pgrep -f "rofi.*rofi-pwmenuauto" >/dev/null; then
+    if pgrep -f "rofi.*rofi-pwmenuauto" >/dev/null || pgrep -f "bash $HOME/.config/rofi/powermenu/type-2/powermenu.sh" >/dev/null; then
         return 1
     else
         return 0
