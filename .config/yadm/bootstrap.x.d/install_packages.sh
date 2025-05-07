@@ -39,6 +39,7 @@ _install_pacman_packages() {
         "ddcutil"
         "xorg-xhost"
         "git-bug-git"
+        "docker-compose"
         "weston"
         "gping"
         "ncdu"
