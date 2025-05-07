@@ -75,6 +75,7 @@ cogl 1.22.8-3
 colord 1.4.7-2
 compiler-rt 19.1.7-1
 confz 2.1.0-2
+containerd 2.0.5-1
 coreutils 9.7-1
 cppdap 1.58.0-2
 cronie 1.7.2-1
@@ -94,6 +95,7 @@ default-cursors 3-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.32-1
 diffutils 3.12-2
+docker 1:28.1.1-1
 dotnet-host 9.0.4.sdk105-1
 dotnet-runtime 9.0.4.sdk105-1
 dotnet-sdk 9.0.4.sdk105-1
@@ -964,6 +966,7 @@ rsync 3.4.1-2
 rtkit 0.13-3
 rubberband 4.0.0-1
 run-parts 5.17-1
+runc 1.3.0-1
 sbc 2.0-2
 sdbus-cpp 2.1.0-2
 sddm 0.21.0-6
