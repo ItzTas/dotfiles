@@ -46,6 +46,11 @@ if [ -f "$HOME/.bash_exports.sh" ]; then
     source "$HOME/.bash_exports.sh"
 fi
 
+# bash evals
+if [ -f "$HOME/.bash_evals.sh" ]; then
+    source "$HOME/.bash_evals.sh"
+fi
+
 # my fzf
 if [ -f "$HOME/.my_fzf.sh" ]; then
     source "$HOME/.my_fzf.sh"
@@ -87,10 +92,6 @@ if [ -f /usr/share/bash-completion/bash_completion ]; then
 elif [ -f /etc/bash_completion ]; then
     # shellcheck disable=SC1091
     source /etc/bash_completion
-fi
-
-if [ -f "$HOME/.bash_evals.sh" ]; then
-    source "$HOME/.bash_evals.sh"
 fi
 
 export PATH=$PATH:/usr/local/go/bin
