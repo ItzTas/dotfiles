@@ -1,122 +1,95 @@
 #!/bin/bash
 
-sleep 10
+TEMP_FILE="/tmp/rofi_opening"
 
-windows_count=""
-workspace_id=""
-current_id=""
-
-_watch() {
-    while true; do
-        sleep 0.2
-        local workspace_info
-        workspace_info=$(hyprctl activeworkspace 2>/dev/null)
-
-        if [[ -z "$workspace_info" ]]; then
-            continue
-        fi
-
-        local workspace_json
-        workspace_json="$(hyprctl activeworkspace -j)"
-
-        workspace_id=$(echo "$workspace_json" | jq '.id')
-
-        if _has_workspace_changed; then
-            _kill_rofi
-            current_id="$workspace_id"
-            continue
-        fi
-
-        if _is_powermenu_open && ! _is_rofi_in_active_workspace; then
-            _kill_rofi
-            continue
-        fi
-
-        windows_count=$(_get_windows)
-        if ((windows_count >= 2)) && _is_powermenu_open; then
-            _kill_rofi
-        fi
-        _check_to_open
-    done
+_is_powermenu_open() {
+    pgrep -f "rofi.*rofi-pwmenuauto" >/dev/null || pgrep -f "bash $HOME/.config/rofi/powermenu/type-2/powermenu.sh" >/dev/null
 }
 
-_get_windows() {
-    echo "$workspace_json" | jq '.windows'
+_is_rofi_in_active_workspace() {
+    local id="$1"
+    hyprctl clients -j | jq -e ".[] | select(.workspace.id == $id and (.class == \"Rofi\" or .class == \"rofi\"))" >/dev/null
 }
 
-_is_rofi_open() {
-    if pgrep -x rofi >/dev/null; then
-        return 1
-    fi
-    return 0
+_kill_rofi() {
+    pkill -f "rofi.*rofi-pwmenuauto"
+    pkill -f "bash $HOME/.config/rofi/powermenu/type-2/powermenu.sh"
+    rm -f "$TEMP_FILE"
 }
 
-_has_workspace_changed() {
-    if [[ "$workspace_id" != "$current_id" ]]; then
-        return 0
-    fi
-    return 1
-}
-
-_check_to_open() {
-    if ((windows_count != 0)); then
-        _on_windows_open "$windows_count"
+_open_rofi() {
+    if _is_powermenu_open || [ -f "$TEMP_FILE" ]; then
         return
     fi
-    _open_rofi
-    return
+
+    touch "$TEMP_FILE"
+    (
+        local loops=20
+        for ((i = 0; i < loops; i++)); do
+            sleep 0.5
+            if [ ! -f "$TEMP_FILE" ]; then
+                return
+            fi
+        done
+
+        local path="$HOME/.config/rofi/powermenu/type-2/powermenu.sh"
+        local current_id="$1"
+        if [[ -x "$path" ]]; then
+            hyprctl dispatch exec "[workspace $current_id silent] $path" &
+        else
+            echo "Erro: Script do Rofi não encontrado em $path" >&2
+        fi
+        rm -f "$TEMP_FILE"
+    ) &
 }
 
-_on_windows_open() {
+_check_wokspace() {
+    rm -f "$TEMP_FILE"
+
+    local workspace_json windows_count current_id
+
+    workspace_json=$(hyprctl activeworkspace -j)
+    windows_count=$(echo "$workspace_json" | jq '.windows')
+    current_id=$(echo "$workspace_json" | jq '.id')
+
+    if _is_rofi_in_active_workspace "$current_id"; then
+        return
+    fi
+    if ((windows_count > 0)); then
+        _on_windows "$windows_count" "$current_id"
+        return
+    fi
+    _open_rofi "$current_id"
+}
+
+_on_windows() {
     local windows_count="$1"
-    if ((windows_count == 1)) && _is_rofi_in_active_workspace && _is_powermenu_open; then
-        return
-    fi
-    if _is_rofi_in_active_workspace && ! _is_powermenu_open; then
+    local id="$1"
+
+    if ((windows_count == 1)) && _is_rofi_in_active_workspace "$id"; then
         return
     fi
 
     _kill_rofi
 }
 
-_is_rofi_in_active_workspace() {
-    local id
-    id="$current_id"
-    hyprctl clients -j | jq -e ".[] | select(.workspace.id == $id and (.class == \"Rofi\" or .class == \"rofi\"))" >/dev/null
+_handle_event() {
+    local event="$1"
+    case "$event" in
+    workspace* | createworkspace*)
+        _kill_rofi
+        _check_wokspace
+        ;;
+    openwindow* | closewindow*)
+        _check_wokspace
+        ;;
+    esac
 }
 
-_is_powermenu_open() {
-    if pgrep -f "rofi.*rofi-pwmenuauto" >/dev/null || pgrep -f "bash $HOME/.config/rofi/powermenu/type-2/powermenu.sh" >/dev/null; then
-        return 1
-    else
-        return 0
-    fi
-}
-
-_kill_rofi() {
-    pkill -f "rofi.*rofi-pwmenuauto"
-    pkill -f "bash $HOME/.config/rofi/powermenu/type-2/powermenu.sh"
-}
-
-_open_rofi() {
-    local loops=10
-    for ((i = 0; i <= loops; i++)); do
-        sleep 1
-        windows_count=$(_get_windows)
-        if _has_workspace_changed || ((windows_count > 0)); then
-            return
-        fi
+_watch() {
+    socat - "UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock" | while read -r line; do
+        _handle_event "$line"
     done
-
-    if pgrep -x rofi >/dev/null; then
-        return
-    fi
-    local path="$HOME/.config/rofi/powermenu/type-2/powermenu.sh"
-    if [[ -x "$path" ]]; then
-        hyprctl dispatch exec [workspace "$current_id" silent] "$path" &
-    else
-        echo "Error: Rofi script not found at $path" >&2
-    fi
 }
 
 _watch
