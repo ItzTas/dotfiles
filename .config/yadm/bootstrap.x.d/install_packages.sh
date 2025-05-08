@@ -23,6 +23,7 @@ _install_pacman_packages() {
     set -e
     local packages=(
         "timeshift"
+        "socat"
         "fortune-mod"
         "eww-git"
         "os-prober"
