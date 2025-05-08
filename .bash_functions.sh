@@ -57,7 +57,7 @@ fdex() {
 	local lines container
 
 	lines="$(docker ps --format "id: {{.ID}}\t name: {{.Names}}\t img: {{.Image}}")"
-	container="$(echo "$lines" | fzf)"
+	container="$(echo "$lines" | fzf --header "exec -it")"
 
 	if [ -n "$container" ]; then
 		local container_name
