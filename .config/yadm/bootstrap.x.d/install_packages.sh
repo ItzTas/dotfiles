@@ -39,6 +39,7 @@ _install_pacman_packages() {
         "docker"
         "ddcutil"
         "xorg-xhost"
+        "ttf-nerd-fonts-symbols"
         "hypridle"
         "git-bug-git"
         "docker-compose"
