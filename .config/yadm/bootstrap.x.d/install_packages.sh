@@ -153,25 +153,6 @@ _install_pacman_packages() {
     fi
 }
 
-# _install_nvm() {
-#     if [ -d "$HOME/.nvm" ]; then
-#         echo "nvm is already installed. Skipping installation."
-#         return
-#     fi
-#
-#     echo "Installing nvm..."
-#     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
-#
-#     export NVM_DIR="$HOME/.nvm"
-#
-#     # shellcheck disable=SC1091
-#     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-#     # shellcheck disable=SC1091
-#     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-#
-#     nvm install node
-# }
-
 _install_rustup() {
     set -e
     if command -v rustup &>/dev/null; then
@@ -231,13 +212,41 @@ _install_loudness_equalizer_ef_preset() {
     rm -rf "$tmpdir"
 }
 
-_source_git_installations() {
+_install_flatpak_packages() {
+    if ! command -v flatpak &>/dev/null; then
+        echo "Flatpak is not installed. Installing..."
+        sudo pacman -Sy --noconfirm flatpak
+    fi
+
+    if ! command -v flatpak &>/dev/null; then
+        echo "Failed to install flatpak. Skipping"
+        return
+    fi
+
+    local sources=(
+        "https://flathub.org/repo/flathub.flatpakrepo"
+    )
+
+    for source in "${sources[@]}"; do
+        flatpak remote-add --if-not-exists "$(basename "$source" .flatpakrepo)" "$source"
+    done
+
+    local flathub_packages=(
+    )
+
+    for package in "${flathub_packages[@]}"; do
+        flatpak install --assumeyes --noninteractive flathub "$package"
+    done
+}
+
+_source_installations() {
     _install_loudness_equalizer_ef_preset
 }
 
-_install_paru
-_install_pacman_packages
-_install_rustup
-_install_tpm
-_curl_and_wget_installations
-_source_git_installations
+_install_paru || true
+_install_pacman_packages || true
+_install_rustup || true
+_install_tpm || true
+_curl_and_wget_installations || true
+_source_installations || true
+_install_flatpak_packages || true
