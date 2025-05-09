@@ -16,6 +16,7 @@ chmod +x "$BOOTSTRAP_D/set_up_docker.sh"
 chmod +x "$BOOTSTRAP_D/source_tmux_conf.sh"
 chmod +x "$BOOTSTRAP_D/set_up_sddm.sh"
 chmod +x "$BOOTSTRAP_D/remove_icons.sh"
+chmod +x "$BOOTSTRAP_D/set_up_flatpak.sh"
 
 "$BOOTSTRAP_D/install_packages.sh" || true
 "$BOOTSTRAP_D/enables.sh" || true
@@ -26,3 +27,4 @@ chmod +x "$BOOTSTRAP_D/remove_icons.sh"
 "$BOOTSTRAP_D/source_tmux_conf.sh" || true
 "$BOOTSTRAP_D/set_up_sddm.sh" || true
 "$BOOTSTRAP_D/remove_icons.sh" || true
+"$BOOTSTRAP_D/set_up_flatpak.sh" || true
