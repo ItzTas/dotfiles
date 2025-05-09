@@ -10,3 +10,5 @@ export EDITOR='nvim'
 export TERMINAL="ghostty"
 
 . "$HOME/.cargo/env"
+
+export PATH="$HOME/.local/bin:$PATH"
