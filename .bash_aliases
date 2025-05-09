@@ -32,7 +32,7 @@ alias mrs='miru rs'
 # pacman, paru & utilities
 alias upacf='pacfiles --update-db *'
 alias pacf='pacfiles -l'
-alias upgrady='arch-update --check & paru -Syu --noconfirm --devel; paru -Fy; yadm_update; arch-update --check'
+alias upgrady='arch-update --check & paru -Syu --noconfirm --devel; sudo freshclam; paru -Fy; yadm_update; arch-update --check'
 alias premove='paru -Qq | fzf --multi --preview "paru -Qi {}" | xargs -r paru -Rns --noconfirm'
 
 # git

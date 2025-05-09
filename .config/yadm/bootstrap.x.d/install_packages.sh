@@ -39,6 +39,7 @@ _install_pacman_packages() {
         "brightnessctl"
         "docker"
         "ddcutil"
+        "clamtk"
         "xorg-xhost"
         "flatpak"
         "ttf-nerd-fonts-symbols"
