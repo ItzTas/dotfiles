@@ -1,8 +1,6 @@
 _set_up() {
     local sources=(
         "https://flathub.org/repo/flathub.flatpakrepo"
-        "https://sdk.gnome.org/gnome.flatpakrepo"
-        "https://distribute.kde.org/flatpak-repo"
     )
 
     for source in "${sources[@]}"; do

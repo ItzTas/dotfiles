@@ -4,19 +4,20 @@
 
 cd "$HOME/Downloads" || exit 1
 
-_install_yay() {
+_install_paru() {
     set -e
-    if command -v yay &>/dev/null; then
-        echo "yay is already installed. Skipping installation."
+    if command -v paru &>/dev/null; then
+        echo "paru is already installed. Skipping installation."
         return
     fi
 
-    echo "Downloading and installing yay"
-    git clone https://aur.archlinux.org/yay.git
-    cd yay || exit 1
+    echo "Downloading and installing paru"
+    sudo pacman -S --needed base-devel
+    git clone https://aur.archlinux.org/paru.git
+    cd paru || exit 1
     makepkg -si --noconfirm
     cd ..
-    rm -rf yay
+    rm -rf paru
 }
 
 _install_pacman_packages() {
@@ -42,7 +43,7 @@ _install_pacman_packages() {
         "flatpak"
         "ttf-nerd-fonts-symbols"
         "hypridle"
-        "git-bug-git"
+        "git-bug"
         "docker-compose"
         "weston"
         "gping"
@@ -124,24 +125,30 @@ _install_pacman_packages() {
         "yazi"
     )
     local installed=()
+    local faileds=()
 
     for package in "${packages[@]}"; do
-        if yay -Q "$package" &>/dev/null; then
+        if paru -Q "$package" &>/dev/null; then
             echo "Package '$package' is already installed, skipping..."
         else
             echo "Installing package: $package"
-            if yay -S "$package" --noconfirm; then
+            if paru -S "$package" --noconfirm; then
                 installed+=("$package")
             else
-                echo "Failed to install '$package', skipping..."
+                echo "❌ Failed to install '$package', skipping..."
+                faileds+=("$package")
             fi
         fi
     done
 
     if [ ${#installed[@]} -gt 0 ]; then
-        echo "The following packages were installed: ${installed[*]}"
+        echo "✅ The following packages were installed: ${installed[*]}"
     else
-        echo "No new packages were installed."
+        echo "No new packages were installed"
+    fi
+
+    if [ ${#faileds[@]} -gt 0 ]; then
+        echo "⚠️ The following packages failed to install: ${faileds[*]}"
     fi
 }
 
@@ -192,31 +199,44 @@ _install_tpm() {
 }
 
 _curl_and_wget_installations() {
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
+    echo 1 | bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
+}
+
+_install_loudness_equalizer_ef_preset() {
+    local dest="$HOME/.config/easyeffects/output/LoudnessEqualizer.json"
+    local tmpdir
+    tmpdir=$(mktemp -d)
+
+    echo "Cloning EasyEffects-Presets repository temporarily..."
+    git clone --depth=1 "https://github.com/Digitalone1/EasyEffects-Presets" "$tmpdir"
+
+    if [[ -f "$dest" ]]; then
+        if cmp -s "$tmpdir/LoudnessEqualizer.json" "$dest"; then
+            echo "Preset already exists and is identical. Skipping installation."
+            rm -rf "$tmpdir"
+            return
+        else
+            echo "Preset exists but differs. Updating..."
+        fi
+    else
+        echo "Preset does not exist. Installing..."
+    fi
+
+    mkdir -p "$(dirname "$dest")"
+    cp "$tmpdir/LoudnessEqualizer.json" "$dest"
+
+    echo "Preset installed at: $dest"
+
+    rm -rf "$tmpdir"
 }
 
 _source_git_installations() {
-    echo "Changing to Downloads directory..."
-    cd "$HOME/Downloads" || (mkdir -p "$HOME/Downloads" && cd "$HOME/Downloads")
-
-    echo "Cloning EasyEffects-Presets repository..."
-    git clone "https://github.com/Digitalone1/EasyEffects-Presets" && cd EasyEffects-Presets
-
-    echo "Copying LoudnessEqualizer.json to EasyEffects output directory..."
-    cp LoudnessEqualizer.json "$HOME/.config/easyeffects/output/"
-
-    echo "Returning to Downloads directory..."
-    cd "$HOME/Downloads"
-
-    echo "Cleaning up by removing the cloned EasyEffects-Presets directory..."
-    rm -rf "$HOME/Downloads/EasyEffects-Presets"
-
-    echo "Operation complete!"
+    _install_loudness_equalizer_ef_preset
 }
 
-_install_yay
+_install_paru
 _install_pacman_packages
 _install_rustup
 _install_tpm
-# _curl_and_wget_installations
+_curl_and_wget_installations
 _source_git_installations
