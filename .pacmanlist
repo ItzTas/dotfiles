@@ -13,6 +13,7 @@ alsa-utils 1.2.14-1
 anytype-bin 0.46.4-1
 aom 3.12.1-1
 appstream 1.0.5-2
+appstream-glib 0.8.3-2
 aquamarine 0.8.0-4
 arch-update 3.12.4-1
 archlinux-contrib 20250219-1
@@ -42,6 +43,7 @@ bluez 5.82-1
 bluez-libs 5.82-1
 bluez-utils 5.82-1
 botan2 2.19.5-2
+breezy 3.3.11-1
 brightnessctl 0.5.1-3
 brotli 1.1.0-3
 bruno-bin 2.2.0-1
@@ -78,6 +80,7 @@ composefs 1.0.7-1
 confz 2.1.0-2
 containerd 2.0.5-1
 coreutils 9.7-1
+cpio 2.15-2
 cppdap 1.58.0-2
 cronie 1.7.2-1
 cryptsetup 2.7.5-2
@@ -131,6 +134,8 @@ filesystem 2025.05.03-1
 findutils 4.10.0-2
 flac 1.5.0-1
 flatpak 1:1.16.0-3
+flatpak-builder 1.4.4-2
+flatseal 2.3.1-1
 flex 2.6.4-5
 fluidsynth 2.4.6-1
 fmt 11.1.4-1
@@ -163,6 +168,7 @@ giflib 5.2.2-2
 git 2.49.0-1
 git-bug 0.8.1-1
 github-cli 2.72.0-1
+gjs 2:1.84.2-1
 glew 2.2.0-7
 glib-networking 1:2.80.1-1
 glib-perl 1.329.4-2
@@ -316,6 +322,7 @@ jbig2dec 0.20-1
 jbigkit 2.1-8
 jgmenu 4.5.0-2
 jq 1.7.1-2
+js128 128.10.0-1
 json-c 0.18-1
 json-glib 1.10.6-1
 jsoncpp 1.9.6-3
@@ -456,6 +463,7 @@ libgpg-error 1.55-1
 libgtop 2.41.3-2
 libgudev 238-1
 libgusb 0.4.9-2
+libhandy 1.8.3-2
 libheif 1.19.8-1
 libice 1.1.2-1
 libidn 1.43-1
@@ -807,6 +815,7 @@ python-distlib 0.3.9-2
 python-dotenv 1.1.0-1
 python-dulwich 0.22.8-1
 python-editables 0.5-5
+python-fastbencode 0.3.1-2
 python-fastjsonschema 2.21.1-1
 python-filelock 3.18.0-1
 python-findpython 0.6.3-1
@@ -839,6 +848,7 @@ python-license-expression 30.4.0-1
 python-lockfile 0.12.2-14
 python-markdown-it-py 3.0.0-4
 python-mdurl 0.1.2-8
+python-merge3 0.0.15-2
 python-more-itertools 10.6.0-1
 python-msgpack 1.0.5-3
 python-multidict 6.4.3-1
@@ -847,6 +857,7 @@ python-nava 0.7-5
 python-nspektr 0.5.0-3
 python-packaging 25.0-1
 python-pathspec 0.12.1-3
+python-patiencediff 0.2.15-2
 python-pbs-installer 2025.03.17-1
 python-pexpect 4.9.0-4
 python-pillow 11.2.1-1
@@ -939,6 +950,7 @@ rnnoise 1:0.2-1
 rofi-emoji 4.1.0-1
 rofi-wayland 1.7.8.1-2
 rofimoji 6.5.0-2
+rpmextract 1.0-10
 rsync 3.4.1-2
 rtkit 0.13-3
 rubberband 4.0.0-1
