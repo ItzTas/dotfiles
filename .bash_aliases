@@ -29,12 +29,11 @@ alias mjs='miru npm'
 alias mgo='miru go'
 alias mrs='miru rs'
 
-# pacman, yay & utilities
+# pacman, paru & utilities
 alias upacf='pacfiles --update-db *'
 alias pacf='pacfiles -l'
-alias upgrady='arch-update --check & yay -Syu --devel; yay -Fy; yadm_update; arch-update --check'
-alias yayd='yay -S $(yay -Slq | fzf)'
-alias yremove='yay -Qq | fzf --multi --preview "yay -Qi {}" | xargs yay -Rns'
+alias upgrady='arch-update --check & paru -Syu --noconfirm --devel; paru -Fy; yadm_update; arch-update --check'
+alias yremove='paru -Qq | fzf --multi --preview "paru -Qi {}" | xargs paru -Rns'
 
 # git
 alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
