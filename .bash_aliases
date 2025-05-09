@@ -33,7 +33,7 @@ alias mrs='miru rs'
 alias upacf='pacfiles --update-db *'
 alias pacf='pacfiles -l'
 alias upgrady='arch-update --check & paru -Syu --noconfirm --devel; paru -Fy; yadm_update; arch-update --check'
-alias yremove='paru -Qq | fzf --multi --preview "paru -Qi {}" | xargs paru -Rns'
+alias premove='paru -Qq | fzf --multi --preview "paru -Qi {}" | xargs -r paru -Rns --noconfirm'
 
 # git
 alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
