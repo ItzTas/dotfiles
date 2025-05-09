@@ -74,6 +74,7 @@ cmake 4.0.2-1
 cogl 1.22.8-3
 colord 1.4.7-2
 compiler-rt 19.1.7-1
+composefs 1.0.7-1
 confz 2.1.0-2
 containerd 2.0.5-1
 coreutils 9.7-1
@@ -131,6 +132,7 @@ findutils 4.10.0-2
 firefox-bin 138.0.1-1
 fish 4.0.2-1
 flac 1.5.0-1
+flatpak 1:1.16.0-3
 flex 2.6.4-5
 fluidsynth 2.4.6-1
 fmt 11.1.4-1
@@ -530,6 +532,7 @@ liblqr 0.4.3-1
 liblsp-r3d-glx-lib 1.2.21-1
 libluv 1.48.0_2-1
 libmad 0.15.1b-10
+libmalcontent 0.13.0-1
 libmanette 0.2.12-1
 libmd 1.1.0-2
 libmediainfo 25.04-1
@@ -749,6 +752,7 @@ openssl 3.5.0-1
 opus 1.5.2-1
 orc 0.4.41-1
 os-prober 1.83-1
+ostree 2025.2-2
 p11-kit 0.25.5-1
 pacfiles 0.2.7-2
 pacman 7.0.0.r6.gc685ae6-2
