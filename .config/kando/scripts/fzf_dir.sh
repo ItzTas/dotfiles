@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
 
 _handle_fifo() {
     local fifo
