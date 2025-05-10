@@ -25,7 +25,6 @@ _find() {
 
     if [[ -n "$dir" ]]; then
         hyprscratch nemo "exec nemo \"$dir\""
-        hyprscratch killall
         exit 0
     fi
 }
