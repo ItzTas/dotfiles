@@ -39,7 +39,7 @@ _install_pacman_packages() {
         "bibata-cursor-theme"
         "hyprscratch"
         "swayosd-gtk3"
-        "kando"
+        "kando-bin"
         "hyprlock"
         "btop"
         "arch-update"
