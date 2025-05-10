@@ -1,0 +1,19 @@
+{
+  "menus": [
+    {
+      "root": {
+        "type": "submenu",
+        "name": "Bookmarks",
+        "icon": "target",
+        "iconTheme": "material-symbols-rounded",
+        "children": []
+      },
+      "shortcut": "",
+      "shortcutID": "",
+      "centered": false,
+      "warpMouse": false,
+      "anchored": false
+    }
+  ],
+  "templates": []
+}
