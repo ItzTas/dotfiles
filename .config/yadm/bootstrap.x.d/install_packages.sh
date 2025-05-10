@@ -159,6 +159,8 @@ _install_pacman_packages() {
     if [ ${#faileds[@]} -gt 0 ]; then
         echo "⚠️ The following packages failed to install: ${faileds[*]}"
     fi
+
+    echo ""
 }
 
 _install_rustup() {
@@ -217,6 +219,7 @@ _curl_and_wget_installations() {
 
     echo ""
     _install_jackhack96_ef_presets
+    echo ""
 }
 
 _install_p-chan_ef_presets() {
@@ -232,6 +235,64 @@ _install_p-chan_ef_presets() {
 
     echo "Checking if files already exist in the destination directory..."
     for file in "$tmpdir/output/"*; do
+        filename=$(basename "$file")
+        if [[ -f "$dest$filename" ]]; then
+            echo "$filename already exists in $dest. Skipping..."
+        else
+            echo "$filename does not exist in $dest. Copying..."
+            cp "$file" "$dest"
+        fi
+    done
+
+    echo "Presets installed at: $dest"
+
+    rm -rf "$tmpdir"
+}
+
+_install_rabcor_ef_presets() {
+    local dest="$HOME/.config/easyeffects/output/"
+    local tmpdir
+    tmpdir=$(mktemp -d)
+
+    echo "Cloning Heavy-Bass-EE repository temporarily..."
+    git clone --depth=1 "https://github.com/Rabcor/Heavy-Bass-EE" "$tmpdir"
+
+    rm -rf "$tmpdir/.git" "$tmpdir/LICENSE" "$tmpdir/README.md"
+
+    echo "Files in the cloned output directory:"
+    ls "$tmpdir/"
+
+    echo "Checking if files already exist in the destination directory..."
+    for file in "$tmpdir/"*; do
+        filename=$(basename "$file")
+        if [[ -f "$dest$filename" ]]; then
+            echo "$filename already exists in $dest. Skipping..."
+        else
+            echo "$filename does not exist in $dest. Copying..."
+            cp "$file" "$dest"
+        fi
+    done
+
+    echo "Presets installed at: $dest"
+
+    rm -rf "$tmpdir"
+}
+
+_install_crachecode_ef_presets() {
+    local dest="$HOME/.config/easyeffects/output/"
+    local tmpdir
+    tmpdir=$(mktemp -d)
+
+    echo "Cloning crachecode repository temporarily..."
+    git clone --depth=1 "https://gitlab.com/crachecode/easyeffects-eq-presets" "$tmpdir"
+
+    rm -rf "$tmpdir/.git" "$tmpdir/LICENSE" "$tmpdir/README.md"
+
+    echo "Files in the cloned output directory:"
+    ls "$tmpdir/"
+
+    echo "Checking if files already exist in the destination directory..."
+    for file in "$tmpdir/"*; do
         filename=$(basename "$file")
         if [[ -f "$dest$filename" ]]; then
             echo "$filename already exists in $dest. Skipping..."
@@ -308,7 +369,13 @@ _source_installations() {
     _install_loudness_equalizer_ef_preset
 
     echo ""
+    _install_rabcor_ef_presets
+
+    echo ""
     _install_p-chan_ef_presets
+
+    echo ""
+    _install_crachecode_ef_presets
 }
 
 _install_paru || true
