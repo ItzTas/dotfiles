@@ -11,7 +11,8 @@ _find() {
     rm "$fifo"
 
     if [[ -n "$dir" ]]; then
-        xdg-open "$dir"
+        hyprscratch nemo "exec nemo \"$dir\""
+        hyprscratch killall
     fi
 }
 
