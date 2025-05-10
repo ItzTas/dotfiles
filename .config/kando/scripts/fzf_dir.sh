@@ -1,9 +1,14 @@
 _find() {
-    local dir z_dirs
+    local dir fifo
 
-    z_dirs=$(zoxide query -l | sed "s|$HOME|~|")
+    fifo=$(mktemp -u)
+    mkfifo "$fifo"
 
-    dir=$(echo -e "$z_dirs\n$(find "$HOME" -type d)" | fzf --preview 'eza --icons --tree --level 3 -F {}')
+    (zoxide query -l && find "$HOME" -type d) >"$fifo" &
+
+    dir=$(fzf --preview 'eza -A --git --icons --tree --level 3 -F {}' --bind 'ctrl-y:accept' <"$fifo")
+
+    rm "$fifo"
 
     if [[ -n "$dir" ]]; then
         xdg-open "$dir"
