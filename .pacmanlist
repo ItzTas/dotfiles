@@ -781,6 +781,7 @@ polkit-gnome 0.105-11
 poppler-data 0.4.12-2
 popt 1.19-2
 portaudio 1:19.7.0-3
+prettierd 0.26.1-1
 procps-ng 4.0.5-3
 procs 0.14.10-1
 proto 0.48.1-1
