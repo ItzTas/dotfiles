@@ -21,7 +21,7 @@
                                 "icon": "search",
                                 "iconTheme": "material-symbols-rounded",
                                 "data": {
-                                    "command": "chmod +x \"$HOME/.config/kando/scripts/fzf_dir.sh\" && \"$HOME/.config/kando/scripts/fzf_dir.sh\""
+                                    "command": "chmod +x \"$HOME/.config/kando/scripts/fzf_dir.sh\" && bash -c 'hyprscratch yazi \"[size 90% 80%] ghostty --background-opacity=1 -e \\\"$HOME/.config/kando/scripts/fzf_dir.sh\\\"\" eager && hyprscratch killall'"
                                 }
                             },
                             {
