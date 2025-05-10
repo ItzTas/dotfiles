@@ -226,7 +226,7 @@ _curl_and_wget_installations() {
 }
 
 _install_p-chan_ef_presets() {
-    local dest="$HOME/.config/easyeffects/output/"
+    local dest="$HOME/.config/easyeffects/output"
     local tmpdir
     tmpdir=$(mktemp -d)
 
@@ -237,13 +237,21 @@ _install_p-chan_ef_presets() {
     ls "$tmpdir/output/"
 
     echo "Checking if files already exist in the destination directory..."
+    mkdir -p "$dest"
     for file in "$tmpdir/output/"*; do
         filename=$(basename "$file")
-        if [[ -f "$dest$filename" ]]; then
-            echo "$filename already exists in $dest. Skipping..."
+        dest_file="$dest/$filename"
+
+        if [[ -f "$dest_file" ]]; then
+            if cmp -s "$file" "$dest_file"; then
+                echo "$filename already exists and is identical. Skipping..."
+            else
+                echo "$filename exists but differs. Updating..."
+                cp "$file" "$dest_file"
+            fi
         else
             echo "$filename does not exist in $dest. Copying..."
-            cp "$file" "$dest"
+            cp "$file" "$dest_file"
         fi
     done
 
@@ -253,7 +261,7 @@ _install_p-chan_ef_presets() {
 }
 
 _install_rabcor_ef_presets() {
-    local dest="$HOME/.config/easyeffects/output/"
+    local dest="$HOME/.config/easyeffects/output"
     local tmpdir
     tmpdir=$(mktemp -d)
 
@@ -266,13 +274,21 @@ _install_rabcor_ef_presets() {
     ls "$tmpdir/"
 
     echo "Checking if files already exist in the destination directory..."
+    mkdir -p "$dest"
     for file in "$tmpdir/"*; do
         filename=$(basename "$file")
-        if [[ -f "$dest$filename" ]]; then
-            echo "$filename already exists in $dest. Skipping..."
+        dest_file="$dest/$filename"
+
+        if [[ -f "$dest_file" ]]; then
+            if cmp -s "$file" "$dest_file"; then
+                echo "$filename already exists and is identical. Skipping..."
+            else
+                echo "$filename exists but differs. Updating..."
+                cp "$file" "$dest_file"
+            fi
         else
             echo "$filename does not exist in $dest. Copying..."
-            cp "$file" "$dest"
+            cp "$file" "$dest_file"
         fi
     done
 
@@ -282,7 +298,7 @@ _install_rabcor_ef_presets() {
 }
 
 _install_crachecode_ef_presets() {
-    local dest="$HOME/.config/easyeffects/output/"
+    local dest="$HOME/.config/easyeffects/output"
     local tmpdir
     tmpdir=$(mktemp -d)
 
@@ -295,13 +311,21 @@ _install_crachecode_ef_presets() {
     ls "$tmpdir/"
 
     echo "Checking if files already exist in the destination directory..."
+    mkdir -p "$dest"
     for file in "$tmpdir/"*; do
         filename=$(basename "$file")
-        if [[ -f "$dest$filename" ]]; then
-            echo "$filename already exists in $dest. Skipping..."
+        dest_file="$dest/$filename"
+
+        if [[ -f "$dest_file" ]]; then
+            if cmp -s "$file" "$dest_file"; then
+                echo "$filename already exists and is identical. Skipping..."
+            else
+                echo "$filename exists but differs. Updating..."
+                cp "$file" "$dest_file"
+            fi
         else
             echo "$filename does not exist in $dest. Copying..."
-            cp "$file" "$dest"
+            cp "$file" "$dest_file"
         fi
     done
 
@@ -315,7 +339,7 @@ _install_loudness_equalizer_ef_preset() {
     local tmpdir
     tmpdir=$(mktemp -d)
 
-    echo "Cloning EasyEffects-Presets repository temporarily..."
+    echo "Cloning loudness equalizer repository temporarily..."
     git clone --depth=1 "https://github.com/Digitalone1/EasyEffects-Presets" "$tmpdir"
 
     if [[ -f "$dest" ]]; then
@@ -365,6 +389,43 @@ _install_flatpak_packages() {
     done
 }
 
+_install_oficial_kando_themes() {
+    local dest="$HOME/.config/kando/menu-themes"
+    local tmpdir
+    tmpdir=$(mktemp -d)
+
+    echo "Cloning oficial themes from kando temporarily..."
+    git clone --depth=1 "https://github.com/kando-menu/menu-themes" "$tmpdir"
+
+    mkdir -p "$dest"
+
+    for theme_path in "$tmpdir"/themes/*; do
+        theme_name=$(basename "$theme_path")
+        dest_path="$dest/$theme_name"
+
+        if [[ -d "$dest_path" ]]; then
+            if diff -qr "$theme_path" "$dest_path" >/dev/null; then
+                echo "Theme '$theme_name' already exists and is identical. Skipping."
+                continue
+            else
+                echo "Theme '$theme_name' exists but differs. Updating..."
+                rm -rf "$dest_path"
+            fi
+        else
+            echo "Installing new theme '$theme_name'..."
+        fi
+
+        cp -r "$theme_path" "$dest_path"
+    done
+
+    rm -rf "$tmpdir"
+    echo "Themes installation complete."
+}
+
+_install_kando_themes() {
+    _install_oficial_kando_themes
+}
+
 _source_installations() {
     echo "Iniciating source installations"
 
@@ -379,6 +440,9 @@ _source_installations() {
 
     echo ""
     _install_crachecode_ef_presets
+
+    echo ""
+    _install_kando_themes
 }
 
 _install_paru || true
