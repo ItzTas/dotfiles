@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 [ -d "$HOME/Downloads" ] || mkdir "$HOME/Downloads"
 
