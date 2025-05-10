@@ -71,6 +71,7 @@ _install_pacman_packages() {
         "hyprshade"
         "hyprpicker"
         "dotnet-sdk"
+        "eza"
         "easyeffects"
         "fd"
         "hyprpwmenu"
