@@ -1,115 +1,115 @@
 {
-    "menus": [
-        {
-            "shortcutID": "bookmarks",
-            "centered": false,
-            "root": {
-                "type": "submenu",
-                "name": "Bookmarks",
-                "icon": "award_star",
-                "iconTheme": "material-symbols-rounded",
-                "children": [
-                    {
-                        "type": "submenu",
-                        "name": "Extra",
-                        "iconTheme": "material-symbols-rounded",
-                        "icon": "folder",
-                        "children": [
-                            {
-                                "type": "command",
-                                "name": "fzf",
-                                "icon": "search",
-                                "iconTheme": "material-symbols-rounded",
-                                "data": {
-                                    "command": "chmod +x \"$HOME/.config/kando/scripts/fzf_dir.sh\" && bash -c 'hyprscratch ghostty-fzf \"[size 90% 80%] ghostty --background-opacity=1 -e \\\"$HOME/.config/kando/scripts/fzf_dir.sh\\\"\" eager"
-                                }
-                            },
-                            {
-                                "type": "command",
-                                "data": {
-                                    "command": "xdg-open \"$XDG_CONFIG_HOME\""
-                                },
-                                "name": ".config",
-                                "icon": "settings",
-                                "iconTheme": "material-symbols-rounded"
-                            },
-                            {
-                                "type": "command",
-                                "data": {
-                                    "command": "xdg-open \"$(xdg-user-dir PICTURES)/screenshots\""
-                                },
-                                "name": "Captures",
-                                "icon": "camera_alt",
-                                "iconTheme": "material-symbols-rounded"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "xdg-open \"$(xdg-user-dir DOWNLOAD)\""
-                        },
-                        "name": "Downloads",
-                        "icon": "download",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "xdg-open \"$(xdg-user-dir VIDEOS)\""
-                        },
-                        "name": "Videos",
-                        "icon": "video_camera_front",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "xdg-open \"$(xdg-user-dir PICTURES)\""
-                        },
-                        "name": "Pictures",
-                        "icon": "imagesmode",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "xdg-open \"$(xdg-user-dir DOCUMENTS)\""
-                        },
-                        "name": "Documents",
-                        "icon": "text_ad",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "xdg-open \"$(xdg-user-dir DESKTOP)\""
-                        },
-                        "name": "Desktop",
-                        "icon": "desktop_windows",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "xdg-open ~"
-                        },
-                        "name": "Home",
-                        "icon": "home",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "xdg-open \"$(xdg-user-dir MUSIC)\""
-                        },
-                        "name": "Music",
-                        "icon": "music_note",
-                        "iconTheme": "material-symbols-rounded"
-                    }
-                ]
-            }
-        }
-    ],
-    "templates": []
+  "menus": [
+    {
+      "shortcutID": "bookmarks",
+      "centered": false,
+      "root": {
+        "type": "submenu",
+        "name": "Bookmarks",
+        "icon": "award_star",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "submenu",
+            "name": "Extra",
+            "icon": "folder",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "chmod +x \"$HOME/.config/kando/scripts/fzf_dir.sh\" && bash -c 'hyprscratch ghostty-fzf \"[size 90% 80%] ghostty --background-opacity=1 -e \\\"$HOME/.config/kando/scripts/fzf_dir.sh\\\"\" eager"
+                },
+                "name": "fzf",
+                "icon": "search",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "xdg-open \"$XDG_CONFIG_HOME\""
+                },
+                "name": ".config",
+                "icon": "settings",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "xdg-open \"$(xdg-user-dir PICTURES)/screenshots\""
+                },
+                "name": "Captures",
+                "icon": "camera_alt",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "xdg-open \"$(xdg-user-dir DOWNLOAD)\""
+            },
+            "name": "Downloads",
+            "icon": "download",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "xdg-open \"$(xdg-user-dir VIDEOS)\""
+            },
+            "name": "Videos",
+            "icon": "video_camera_front",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "xdg-open \"$(xdg-user-dir PICTURES)\""
+            },
+            "name": "Pictures",
+            "icon": "imagesmode",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "xdg-open \"$(xdg-user-dir DOCUMENTS)\""
+            },
+            "name": "Documents",
+            "icon": "text_ad",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "xdg-open \"$(xdg-user-dir DESKTOP)\""
+            },
+            "name": "Desktop",
+            "icon": "desktop_windows",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "xdg-open ~"
+            },
+            "name": "Home",
+            "icon": "home",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "xdg-open \"$(xdg-user-dir MUSIC)\""
+            },
+            "name": "Music",
+            "icon": "music_note",
+            "iconTheme": "material-symbols-rounded"
+          }
+        ]
+      }
+    }
+  ],
+  "templates": []
 }
