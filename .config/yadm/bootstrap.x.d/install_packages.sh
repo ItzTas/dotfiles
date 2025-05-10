@@ -5,6 +5,10 @@
 cd "$HOME/Downloads" || exit 1
 
 _install_paru() {
+    echo ""
+    echo "Iniciating paru installation"
+    echo ""
+
     set -e
     if command -v paru &>/dev/null; then
         echo "paru is already installed. Skipping installation."
@@ -21,6 +25,10 @@ _install_paru() {
 }
 
 _install_pacman_packages() {
+    echo ""
+    echo "Iniciating pacman installations"
+    echo ""
+
     set -e
     local packages=(
         "timeshift"
@@ -180,8 +188,62 @@ _install_tpm() {
     tmux source "$HOME/.config/tmux/tmux.conf"
 }
 
+_install_jackhack96_ef_presets() {
+    local dest="$HOME/.config/easyeffects/output/"
+    local files=(
+        "Advanced Auto Gain.json"
+        "Bass Boosted.json"
+        "Bass Enhancing + Perfect EQ.json"
+        "Boosted.json"
+        "Loudness+Autogain.json"
+        "Perfect EQ.json"
+    )
+
+    echo "Checking if any required files are missing..."
+
+    for file in "${files[@]}"; do
+        if [[ ! -f "$dest$file" ]]; then
+            echo "$file is missing. Installing presets..."
+            echo 1 | bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
+            break
+        else
+            echo "$file already exists. Skipping download."
+        fi
+    done
+}
+
 _curl_and_wget_installations() {
-    echo 1 | bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
+    echo "Iniciating http/https installations"
+
+    echo ""
+    _install_jackhack96_ef_presets
+}
+
+_install_p-chan_ef_presets() {
+    local dest="$HOME/.config/easyeffects/output/"
+    local tmpdir
+    tmpdir=$(mktemp -d)
+
+    echo "Cloning EasyPulse repository temporarily..."
+    git clone --depth=1 "https://github.com/p-chan5/EasyPulse" "$tmpdir"
+
+    echo "Files in the cloned output directory:"
+    ls "$tmpdir/output/"
+
+    echo "Checking if files already exist in the destination directory..."
+    for file in "$tmpdir/output/"*; do
+        filename=$(basename "$file")
+        if [[ -f "$dest$filename" ]]; then
+            echo "$filename already exists in $dest. Skipping..."
+        else
+            echo "$filename does not exist in $dest. Copying..."
+            cp "$file" "$dest"
+        fi
+    done
+
+    echo "Presets installed at: $dest"
+
+    rm -rf "$tmpdir"
 }
 
 _install_loudness_equalizer_ef_preset() {
@@ -240,7 +302,13 @@ _install_flatpak_packages() {
 }
 
 _source_installations() {
+    echo "Iniciating source installations"
+
+    echo ""
     _install_loudness_equalizer_ef_preset
+
+    echo ""
+    _install_p-chan_ef_presets
 }
 
 _install_paru || true
