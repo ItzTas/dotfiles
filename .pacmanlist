@@ -1,6 +1,7 @@
 abseil-cpp 20250127.1-1
 accountsservice 23.13.9-2
 acl 2.3.2-1
+acorn 1:8.11.1-2
 adwaita-cursors 48.0-1
 adwaita-fonts 48.2-1
 adwaita-icon-theme 48.0-1
@@ -118,6 +119,7 @@ electron35 35.3.0-1
 elementary-icon-theme 8.1.0-1
 elfutils 0.193-2
 enchant 2.8.2-2
+eslint 9.26.0-1
 eww 0.6.0-1
 exempi 2.6.6-1
 exiv2 0.28.5-1
