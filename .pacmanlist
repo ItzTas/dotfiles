@@ -49,7 +49,7 @@ breezy 3.3.11-1
 brightnessctl 0.5.1-3
 brotli 1.1.0-3
 bruno-bin 2.2.0-1
-btop 1.4.2-1
+btop 1.4.3-1
 btrfs-progs 6.14-1
 bubblewrap 0.11.0-1
 bzip2 1.0.8-6
@@ -152,7 +152,7 @@ fribidi 1.0.16-1
 fuse-common 3.17.1-1
 fuse2 2.9.9-5
 fuse3 3.17.1-1
-fzf 0.61.3-1
+fzf 0.62.0-1
 garcon 4.20.0-2
 gawk 5.3.2-1
 gc 8.2.8-2
@@ -335,9 +335,9 @@ kando-bin 1.8.0-1
 kbd 2.7.1-2
 keyutils 1.6.3-3
 khal 0.13.0-1
-kitty 0.41.1-1
-kitty-shell-integration 0.41.1-1
-kitty-terminfo 0.41.1-1
+kitty 0.42.0-1
+kitty-shell-integration 0.42.0-1
+kitty-terminfo 0.42.0-1
 kmod 34.2-1
 krb5 1.21.3-1
 l-smash 2.14.5-4
@@ -390,7 +390,7 @@ lib32-libxxf86vm 1.1.5-2
 lib32-llvm-libs 1:19.1.7-2
 lib32-lm_sensors 1:3.6.0.r41.g31d1f125-3
 lib32-mesa 1:25.0.5-1
-lib32-ncurses 6.5-1
+lib32-ncurses 6.5-2
 lib32-openssl 1:3.5.0-1
 lib32-pam 1.7.0-1
 lib32-spirv-tools 1:1.4.313.0-1
@@ -626,7 +626,7 @@ libzip 1.11.3-1
 licenses 20240728-1
 light 1.2.2-5
 lilv 0.24.26-1
-linux 6.14.5.arch1-1
+linux 6.14.6.arch1-1
 linux-api-headers 6.14-1
 linux-firmware 20250508.788aadc8-1
 linux-firmware-whence 20250508.788aadc8-1
@@ -678,7 +678,7 @@ mujs 1.3.6-1
 namcap 3.5.2-3
 navi 2.24.0-1
 ncdu 2.7-1
-ncurses 6.5-3
+ncurses 6.5-4
 nemo 6.4.5-1
 nemo-fileroller 6.4.0-2
 nemo-image-converter 6.4.0-2
@@ -885,7 +885,7 @@ python-pydantic-core 2:2.33.2-2
 python-pyelftools 0.32-1
 python-pygments 2.19.1-1
 python-pymediainfo 6.1.0-4
-python-pypdf 5.4.0-1
+python-pypdf 5.5.0-1
 python-pyproject-hooks 1.2.0-3
 python-pyqt6 6.9.0-1
 python-pyqt6-sip 13.10.0-1
@@ -906,7 +906,7 @@ python-taskw 2.0.0-2
 python-toml 0.10.2-12
 python-tomlkit 0.13.2-2
 python-tqdm 4.67.1-2
-python-trove-classifiers 2025.5.1.12-1
+python-trove-classifiers 2025.5.7.19-1
 python-typing-inspection 0.4.0-1
 python-typing_extensions 4.13.2-1
 python-tzlocal 1:5.3.1-1
