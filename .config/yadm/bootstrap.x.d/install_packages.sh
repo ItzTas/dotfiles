@@ -55,6 +55,7 @@ _install_pacman_packages() {
         "hypridle"
         "git-bug"
         "docker-compose"
+        "bitwarden"
         "prettierd"
         "weston"
         "gping"
