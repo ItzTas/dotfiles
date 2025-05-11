@@ -7,12 +7,7 @@ preview_command = "lsd --icon always --tree --depth 2 --color always {}"
 [[session]]
 name = "Projects 📂"
 path = "~/workspace/github.com/ItzTas"
-startup_command = """
-  cd "$(ls -A | fzf \
-    --bind 'ctrl-y:accept' \
-    --preview='lsd --tree --icon always --color always --depth 2 {}')" \
-  && clear
-"""
+startup_command = "bash -c 'selection=$(ls -A | fzf --bind \"ctrl-y:accept\" --preview=\"lsd --tree --icon always --color always --depth 2 {}\") && if [[ -n \"$selection\" ]]; then cd \"$selection\"; else cd ~/workspace/github.com/ItzTas; fi; clear'"
 
 [[session]]
 name = "Downloads 📥"
@@ -28,4 +23,3 @@ preview_command = "bat --color=always ~/.config/tmux/tmux.conf"
 [[session]]
 name = "nvim config  "
 path = "~/.config/nvim"
-
