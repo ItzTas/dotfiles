@@ -435,8 +435,8 @@ _source_installations() {
     echo ""
     _install_rabcor_ef_presets
 
-    echo ""
-    _install_p-chan_ef_presets
+    # echo ""
+    # _install_p-chan_ef_presets
 
     echo ""
     _install_crachecode_ef_presets
