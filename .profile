@@ -12,3 +12,8 @@ export TERMINAL="ghostty"
 . "$HOME/.cargo/env"
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/talinux/.lmstudio/bin"
+# End of LM Studio CLI section
+
