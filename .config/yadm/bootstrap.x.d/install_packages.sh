@@ -31,6 +31,7 @@ _install_pacman_packages() {
 
     set -e
     local packages=(
+        "ghostty"
         "timeshift"
         "socat"
         "fortune-mod"
@@ -53,6 +54,7 @@ _install_pacman_packages() {
         "flatpak"
         "ttf-nerd-fonts-symbols"
         "hypridle"
+        "fastfetch"
         "git-bug"
         "docker-compose"
         "bitwarden"
@@ -92,7 +94,6 @@ _install_pacman_packages() {
         "kitty"
         "lazygit"
         "lazydocker"
-        "ghostty"
         "lsd"
         "wget"
         "qman"
@@ -114,7 +115,7 @@ _install_pacman_packages() {
         "zen-browser-bin"
         "bat"
         "bash-language-server"
-        "rofi"
+        "rofi-wayland"
         "rofi-emoji"
         "shellcheck"
         "shfmt"
