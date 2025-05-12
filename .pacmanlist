@@ -100,6 +100,10 @@ e2fsprogs 1.47.2-2
 easyeffects 7.2.3-2
 efibootmgr 18-3
 efivar 39-1
+egl-gbm 1.1.2.1-1
+egl-wayland 4:1.1.19-1
+egl-x11 1.0.1-1
+eglexternalplatform 1.2.1-1
 electron31 31.7.7-4
 electron34 34.5.5-1
 enchant 2.8.2-2
@@ -511,6 +515,7 @@ libxklavier 5.4-6
 libxml2 2.14.2-2
 libxmlb 0.3.22-1
 libxmu 1.2.1-1
+libxnvctrl 570.144-1
 libxpm 3.5.17-2
 libxpresent 1.0.1-2
 libxrandr 1.5.4-1
@@ -593,6 +598,9 @@ npth 1.8-1
 nspr 4.36-1
 nss 3.111-1
 numactl 2.0.19-1
+nvidia 570.144-5
+nvidia-settings 570.144-1
+nvidia-utils 570.144-3
 ocl-icd 2.3.2-2
 oh-my-posh 25.23.0-1
 onetbb 2022.1.0-1
