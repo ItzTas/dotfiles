@@ -564,7 +564,6 @@ miru-go-bin 0.0.20-1
 mkinitcpio 39.2-3
 mkinitcpio-busybox 1.36.1-1
 mobile-broadband-provider-info 20240407-1
-mozillavpn-git 2.27.0.r73.g4148e9d-1
 mpdecimal 4.0.0-2
 mpfr 4.2.2-1
 mpg123 1.32.10-1
@@ -776,17 +775,13 @@ qt5-graphicaleffects 5.15.16-3
 qt5-quickcontrols2 5.15.16+kde+r5-3
 qt5-svg 5.15.16+kde+r5-3
 qt5-translations 5.15.16-3
-qt6-5compat 6.9.0-1
 qt6-base 6.9.0-1
 qt6-charts 6.9.0-1
 qt6-declarative 6.9.0-2
-qt6-networkauth 6.9.0-1
-qt6-shadertools 6.9.0-1
 qt6-svg 6.9.0-1
 qt6-tools 6.9.0-2
 qt6-translations 6.9.0-1
 qt6-wayland 6.9.0-2
-qt6-websockets 6.9.0-1
 qtractor 1.5.4-1
 rav1e 0.7.1-1
 re2 1:20240702-4
@@ -893,7 +888,6 @@ weston 14.0.0-2
 wf-recorder 0.5.0-2
 wget 1.25.0-2
 which 2.23-1
-wireguard-tools 1.0.20210914-2
 wireplumber 0.5.8-1
 wl-clip-persist 0.4.3-2
 wl-clipboard 1:2.2.1-2
