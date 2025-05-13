@@ -7,16 +7,11 @@ if [[ ! -d "$BOOTSTRAP_D" ]]; then
     exit 1
 fi
 
-chmod +x "$BOOTSTRAP_D/install_packages.sh"
-chmod +x "$BOOTSTRAP_D/enables.sh"
-chmod +x "$BOOTSTRAP_D/grub_theme.sh"
-chmod +x "$BOOTSTRAP_D/clone_nvim.sh"
-chmod +x "$BOOTSTRAP_D/create_dirs.sh"
-chmod +x "$BOOTSTRAP_D/set_up_docker.sh"
-chmod +x "$BOOTSTRAP_D/source_tmux_conf.sh"
-chmod +x "$BOOTSTRAP_D/set_up_sddm.sh"
-chmod +x "$BOOTSTRAP_D/remove_icons.sh"
-chmod +x "$BOOTSTRAP_D/set_up_git.sh"
+for script in "$BOOTSTRAP_D"/*.sh; do
+    if [[ -f "$script" ]]; then
+        chmod +x "$script"
+    fi
+done
 
 "$BOOTSTRAP_D/install_packages.sh" || true
 "$BOOTSTRAP_D/enables.sh" || true
@@ -28,3 +23,4 @@ chmod +x "$BOOTSTRAP_D/set_up_git.sh"
 "$BOOTSTRAP_D/set_up_sddm.sh" || true
 "$BOOTSTRAP_D/remove_icons.sh" || true
 "$BOOTSTRAP_D/set_up_git.sh" || true
+"$BOOTSTRAP_D/set_up_nemo.sh" || true
