@@ -1,24 +1,37 @@
 #!/bin/bash
 
-    cmd="$(amixer -D pulse sget Master | grep 'Front Left:' | awk '{ print $6 }')"
+get_audio_state() {
+    volume_info=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+    volume=$(echo "$volume_info" | awk '{print $2}')
+    muted=$(echo "$volume_info" | awk '{print $3}')
 
-
-    if [ "$cmd" == "[on]" ]; then
+    if [ "$muted" = "[MUTED]" ]; then
         col="#0f0f17"
         bg="#bbc5d7"
-        icon=""
-    else
-        bg="#0f0f17"
-        col="#bbc5d7"
         icon=""
+    else
+        col="#0f0f17"
+        bg="#bbc5d7"
+
+        volume_percent=$(echo "$volume * 100" | bc | cut -d'.' -f1)
+        if [ "$volume_percent" -eq 0 ]; then
+            icon=""
+        elif [ "$volume_percent" -lt 30 ]; then
+            icon=""
+        elif [ "$volume_percent" -lt 70 ]; then
+            icon=""
+        else
+            icon=""
+        fi
     fi
+}
 
+get_audio_state
 
-
-if [ $1 = "vol" ]; then
-    echo $icon
-elif [ $1 = "vol_col" ]; then
-    echo $col
-elif [ $1 = "vol_bg" ]; then
-    echo $bg
-fi
+case "$1" in
+"vol") echo "$icon" ;;
+"vol_col") echo "$col" ;;
+"vol_bg") echo "$bg" ;;
+"vol_level") echo "$volume" ;;
+"vol_percent") echo "${volume_percent}%" ;;
+esac
