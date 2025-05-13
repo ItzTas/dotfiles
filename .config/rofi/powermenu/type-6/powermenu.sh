@@ -10,17 +10,17 @@
 ## style-1   style-2   style-3   style-4   style-5
 
 # Current Theme
-# HOME="${HOME:-/home/talinux}"
-#
-# if [ -f "$HOME/.profile" ]; then
-#     # shellcheck disable=SC1091
-#     source "$HOME/.profile"
-# fi
-#
-# export DISPLAY=:1
-# export XAUTHORITY="$HOME/.Xauthority"
-# export XAUTHORITY="$HOME/.Xauthority"
-# export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin"
+HOME="${HOME:-/home/talinux}"
+
+if [ -f "$HOME/.profile" ]; then
+    # shellcheck disable=SC1091
+    source "$HOME/.profile"
+fi
+
+export DISPLAY=:1
+export XAUTHORITY="$HOME/.Xauthority"
+export XAUTHORITY="$HOME/.Xauthority"
+export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin"
 
 dir="$HOME/.config/rofi/powermenu/type-6"
 theme='style-1'
