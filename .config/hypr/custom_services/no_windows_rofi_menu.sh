@@ -24,7 +24,7 @@ _open_rofi() {
 
     touch "$TEMP_FILE"
     (
-        local loops=20
+        local loops=60
         for ((i = 0; i < loops; i++)); do
             sleep 0.5
             if [ ! -f "$TEMP_FILE" ]; then
@@ -35,7 +35,7 @@ _open_rofi() {
         local path="$HOME/.config/rofi/powermenu/type-2/powermenu.sh"
         local current_id="$1"
         if [[ -x "$path" ]]; then
-            hyprctl dispatch exec "[workspace $current_id silent] $path" &
+            hyprctl dispatch exec "[workspace $current_id silent noinitialfocus] $path" &
         else
             echo "Erro: Script do Rofi não encontrado em $path" >&2
         fi
