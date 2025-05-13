@@ -11,8 +11,7 @@
         "enabledThemes": [
             "rose-pine-moon.theme.css",
             "NieR-Night-Source.theme.css",
-            "Translucence.theme.css",
-            "Acrylic-Harmony.theme.css",
+            "NotAnotherAnimeTheme.theme.css",
             "mocha.theme.css"
         ],
         "enableReactDevtools": false,
@@ -563,7 +562,8 @@
                 "enabled": false
             },
             "TypingTweaks": {
-                "enabled": true
+                "enabled": true,
+                "alternativeFormatting": true
             },
             "Unindent": {
                 "enabled": false
@@ -660,7 +660,7 @@
             "authenticated": false,
             "url": "https://api.vencord.dev/",
             "settingsSync": false,
-            "settingsSyncVersion": 1746519603199
+            "settingsSyncVersion": 1747159156497
         }
     },
     "quickCss": ""
