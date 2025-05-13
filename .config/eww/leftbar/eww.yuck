@@ -44,8 +44,13 @@
 (defpoll vol_col :interval "15s" "scripts/vol vol_col")
 (defpoll vol_bg :interval "17s" "scripts/vol vol_bg")
 
-(defpoll volume_percent :interval "6s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
-(defpoll mic_percent :interval "6s" "amixer -D pulse sget Capture | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+(defpoll volume_percent 
+  :interval "6s" 
+  "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2*100}' | cut -d'.' -f1")
+
+(defpoll mic_percent 
+  :interval "6s" 
+  "wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{print $2*100}' | cut -d'.' -f1")
 (defpoll brightness :interval "6s" "brightnessctl -m -d intel_backlight | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'")
 
 
@@ -195,7 +200,9 @@
 			(box :vexpand "false" :hexpand "false"
 				(box :orientation "h" :spacing 25 :halign "center" :valign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
 					(box :class "volume_bar" :orientation "v" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false"
-                            (scale :flipped "true" :orientation "v" :min 0 :max 101 :value volume_percent :onchange "amixer -D pulse sset Master {}%" )
+                            (scale :flipped "true" :orientation "v" :min 0 :max 101 :value volume_percent 
+                                :onchange "wpctl set-volume @DEFAULT_AUDIO_SINK@ {}% && dunstify -h int:value:\"$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}')\" -i ~/.config/dunst/assets/volume.svg -t 500 -r 2593 \"Volume: \"$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}')\"\""
+                             )
                             (label  :text "" :class "vol_icon"))
 					(box :class "mic_bar" :orientation "v" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false"
                             (scale :flipped "true" :orientation "v" :min 0 :max 101 :value mic_percent :active "false")
@@ -209,9 +216,9 @@
       (button :class "wifi_but" :onclick "networkmanager_dmenu" :style "color: ${wifi_col}; background-color: ${wifi_bg};"  wifi_icon)
       (button :class "notif_but" :onclick "dunstctl set-paused toggle" :style "color: ${notif_col}; background-color: ${notif_bg};"  notif_icon))
     (box :orientation "h" :hexpand "false" :vexpand "false" :space-evenly "false"
-      (button :class "vol_but" :onclick "amixer -D pulse set Master toggle" :style "color: ${vol_col}; background-color: ${vol_bg};"  vol_icon)
+      (button :class "vol_but" :onclick "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" :style "color: ${vol_col}; background-color: ${vol_bg};"  vol_icon)
       (button :class "log_but" :onclick "bspc quit" "")
-      (button :class "log_but" :onclick "poweroff" ""))))
+      (button :class "log_but" :onclick "~/.config/rofi/powermenu/type-6/powermenu.sh" ""))))
 
 
 (defwidget stats []
