@@ -703,7 +703,7 @@ numactl 2.0.19-1
 nvidia 570.144-5
 nvidia-settings 570.144-1
 nvidia-utils 570.144-3
-ocl-icd 2.3.2-2
+ocl-icd 2.3.3-1
 oh-my-posh 25.23.0-1
 onetbb 2022.1.0-1
 oniguruma 6.9.10-1
@@ -891,9 +891,13 @@ qman 1:1.4.2-1
 qt5-base 5.15.16+kde+r131-1
 qt5-declarative 5.15.16+kde+r22-3
 qt5-graphicaleffects 5.15.16-3
+qt5-location 5.15.16+kde+r7-4
+qt5-quickcontrols 5.15.16-3
 qt5-quickcontrols2 5.15.16+kde+r5-3
 qt5-svg 5.15.16+kde+r5-3
 qt5-translations 5.15.16-3
+qt5-webchannel 5.15.16+kde+r3-3
+qt5-webengine 5.15.18-7
 qt6-base 6.9.0-1
 qt6-charts 6.9.0-1
 qt6-declarative 6.9.0-2
@@ -954,6 +958,7 @@ srt 1.5.4-1
 stacer-git 1.3.5-1
 startup-notification 0.12-8
 steam 1.0.0.82-2
+stremio 4.4.168-2
 sudo 1.9.16.p2-2
 svt-av1 3.0.2-1
 swayosd-gtk3 0.1.0-1
@@ -1011,6 +1016,7 @@ wf-recorder 0.5.0-2
 wget 1.25.0-2
 which 2.23-1
 wine 10.7-1
+winetricks 20250102-1
 wireplumber 0.5.8-1
 wl-clip-persist 0.4.3-2
 wl-clipboard 1:2.2.1-2
