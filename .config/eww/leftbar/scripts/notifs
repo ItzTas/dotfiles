@@ -1,0 +1,37 @@
+#!/bin/bash
+
+count="$(dunstctl count history)"
+
+if [ "$count" -gt 0 ]; then
+    col="#0f0f17"
+    bg="#bbc5d7"
+    icon=""
+else
+    bg="#0f0f17"
+    col="#bbc5d7"
+    icon=""
+fi
+
+if [ "$(dunstctl is-paused)" = "true" ]; then
+    icon=""
+    col="#d78787"
+    bg="#0f0f17"
+fi
+
+toggle_notifications() {
+    if [ "$(dunstctl is-paused)" = "false" ]; then
+        notify-send "Dunst" "Notifications paused" --icon=dialog-information
+        sleep 0.5
+        dunstctl set-paused toggle
+    else
+        dunstctl set-paused toggle
+        notify-send "Dunst" "Notifications enabled" --icon=dialog-information
+    fi
+}
+
+case "$1" in
+"notifs") echo "$icon" ;;
+"notifs_col") echo "$col" ;;
+"notifs_bg") echo "$bg" ;;
+"toggle_notifs") toggle_notifications ;;
+esac

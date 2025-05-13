@@ -1,11 +1,11 @@
 #!/bin/bash
 
-CONTROL_CENTER_CONFIG_DIR="$HOME/.config/eww/Control-Center"
+LEFTBAR_CONFIG_DIR="$HOME/.config/eww/leftbar"
 
-eww --config "$CONTROL_CENTER_CONFIG_DIR" daemon
+eww --config "$LEFTBAR_CONFIG_DIR" daemon
 
-_is_control_center_open() {
-    eww --config "$CONTROL_CENTER_CONFIG_DIR" active-windows | grep -q "control-center"
+_is_left_bar_open() {
+    eww --config "$LEFTBAR_CONFIG_DIR" active-windows | grep -q "."
 }
 
 _is_rofi_in_active_workspace() {
@@ -28,32 +28,28 @@ _check_workspace() {
 }
 
 _on_windows() {
-    _kill_window
+    _kill_left_bar
 }
 
-_kill_window() {
-    if _is_control_center_open; then
-        eww --config "$CONTROL_CENTER_CONFIG_DIR" close control-center
-    fi
-}
-
-_is_waybar_active() {
-    if pgrep -x "waybar" >/dev/null; then
-        return 0
-    else
-        return 1
-    fi
-}
-
-_open_control_center() {
-    if _is_control_center_open; then
+_kill_left_bar() {
+    if ! _is_left_bar_open; then
         return
     fi
-    eww --config "$CONTROL_CENTER_CONFIG_DIR" open control-center
+
+    eww --config "$LEFTBAR_CONFIG_DIR" close-all
+}
+
+_open_left_bar() {
+    if _is_left_bar_open; then
+        return
+    fi
+
+    # shellcheck disable=SC2046
+    eww --config "$LEFTBAR_CONFIG_DIR" open-many $(eww --config "$LEFTBAR_CONFIG_DIR" list-windows | tr '\n' ' ')
 }
 
 _on_no_windows() {
-    _open_control_center
+    _open_left_bar
 }
 
 _handle_event() {
