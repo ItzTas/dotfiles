@@ -1,0 +1,13 @@
+#!/bin/sh
+
+read -r _ total _ used _ _ _ <<EOF
+$(free -m | awk '/Mem:/')
+EOF
+
+free=$((total - used))
+
+case "$1" in
+"total") echo "$total" ;;
+"used") echo "$used" ;;
+"free") echo "$free" ;;
+esac

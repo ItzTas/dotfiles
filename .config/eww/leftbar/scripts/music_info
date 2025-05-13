@@ -1,0 +1,100 @@
+#!/bin/bash
+
+CACHE_DIR="$HOME/.cache/spotify_eww"
+mkdir -p "$CACHE_DIR"
+
+get_status() {
+    status=$(playerctl -p spotify status 2>/dev/null)
+    [[ "$status" == "Playing" ]] && echo "" || echo "奈"
+}
+
+get_song() {
+    song=$(playerctl -p spotify metadata title 2>/dev/null)
+    echo "${song:-Offline}"
+}
+
+get_artist() {
+    artist=$(playerctl -p spotify metadata artist 2>/dev/null)
+    echo "${artist:-Unknown Artist}"
+}
+
+get_time() {
+    duration=$(playerctl -p spotify metadata mpris:length 2>/dev/null)
+    position=$(playerctl -p spotify position 2>/dev/null)
+    [[ -z "$duration" || -z "$position" ]] && echo "0" || echo $(((position * 100) / (duration / 1000000)))
+}
+
+get_ctime() {
+    position=$(playerctl -p spotify position 2>/dev/null)
+    if [[ -z "$position" ]]; then
+        echo "0:00"
+    else
+        printf "%d:%02d\n" $((position / 60)) $((position % 60))
+    fi
+}
+
+get_ttime() {
+    duration=$(playerctl -p spotify metadata mpris:length 2>/dev/null)
+    if [[ -z "$duration" ]]; then
+        echo "0:00"
+    else
+        seconds=$((duration / 1000000))
+        printf "%d:%02d\n" $((seconds / 60)) $((seconds % 60))
+    fi
+}
+
+get_cover() {
+    python3 - <<END
+import dbus
+import shutil
+import os
+
+try:
+    bus = dbus.SessionBus()
+    spotify = bus.get_object("org.mpris.MediaPlayer2.spotify", "/org/mpris/MediaPlayer2")
+    props = dbus.Interface(spotify, "org.freedesktop.DBus.Properties")
+    metadata = props.Get("org.mpris.MediaPlayer2.Player", "Metadata")
+    
+    art_url = metadata.get('mpris:artUrl', '')
+    if art_url:
+        if art_url.startswith('https://open.spotify.com/'):
+            art_url = art_url.replace('https://open.spotify.com/', '')
+        
+        song_id = metadata.get('mpris:trackid', '').split(':')[-1]
+        cache_file = f"${CACHE_DIR}/spotify_{song_id}.jpg"
+        
+        if not os.path.exists(cache_file):
+            os.system(f"wget -O '{cache_file}' '{art_url}' >/dev/null 2>&1")
+        
+        print(cache_file)
+    else:
+        print("images/music.png")
+except:
+    print("images/music.png")
+END
+}
+
+loop_st() {
+    loop_status=$(playerctl -p spotify loop 2>/dev/null)
+    [[ "$loop_status" == "Playlist" || "$loop_status" == "Track" ]] && echo "凌" || echo "稜"
+}
+
+case "$1" in
+"--song") get_song ;;
+"--artist") get_artist ;;
+"--status") get_status ;;
+"--time") get_time ;;
+"--ctime") get_ctime ;;
+"--ttime") get_ttime ;;
+"--cover") get_cover ;;
+"--toggle") playerctl -p spotify play-pause ;;
+"--next") playerctl -p spotify next ;;
+"--prev") playerctl -p spotify previous ;;
+"--loop")
+    current=$(playerctl -p spotify loop 2>/dev/null)
+    [[ "$current" == "None" ]] && new="Playlist" || new="None"
+    playerctl -p spotify loop "$new"
+    ;;
+"--loop_ic") loop_st ;;
+*) echo "Invalid option" ;;
+esac

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#!/bin/bash
+
+battery() {
+    BAT=$(find /sys/class/power_supply -name 'BAT*' -printf '%f\n' | head -n 1)
+    cat "/sys/class/power_supply/${BAT}/capacity"
+}
+
+battery_stat() {
+    BAT=$(find /sys/class/power_supply -name 'BAT*' -printf '%f\n' | head -n 1)
+    cat "/sys/class/power_supply/${BAT}/status"
+}
+
+if [[ "$1" == "--bat" ]]; then
+    battery
+elif [[ "$1" == "--bat-st" ]]; then
+    battery_stat
+fi
