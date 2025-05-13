@@ -55,6 +55,7 @@ _install_pacman_packages() {
         "ttf-nerd-fonts-symbols"
         "hypridle"
         "fastfetch"
+        "inetutils"
         "git-bug"
         "docker-compose"
         "bitwarden"
