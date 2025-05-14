@@ -11,6 +11,9 @@ alias l='lsd -F'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 
+# bitwarden
+alias ubw='export BW_SESSION=$(bw unlock --raw)'
+
 # nvim
 alias vim='nvim'
 alias v='nvim .'
