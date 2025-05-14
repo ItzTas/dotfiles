@@ -207,7 +207,7 @@ gtkmm3 3.24.10-1
 gts 0.7.6.121130-3
 guile 3.0.10-1
 gupnp 1:1.6.8-2
-gupnp-igd 1.6.0-1
+gupnp-igd 1.6.0-2
 gvfs 1.57.2-3
 gzip 1.14-2
 harfbuzz 11.2.1-1
@@ -517,7 +517,7 @@ libnfnetlink 1.0.2-2
 libnftnl 1.2.9-1
 libnghttp2 1.65.0-1
 libnghttp3 1.9.0-1
-libnice 0.1.22-1
+libnice 0.1.22-2
 libnl 3.11.0-1
 libnm 1.52.0-1
 libnotify 0.8.6-1
