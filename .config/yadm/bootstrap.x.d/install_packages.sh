@@ -32,6 +32,7 @@ _install_pacman_packages() {
     set -e
     local packages=(
         "ghostty"
+        "bitwarden-cli"
         "timeshift"
         "socat"
         "fortune-mod"
@@ -385,6 +386,7 @@ _install_flatpak_packages() {
     done
 
     local flathub_packages=(
+        "com.stremio.Stremio"
     )
 
     for package in "${flathub_packages[@]}"; do
