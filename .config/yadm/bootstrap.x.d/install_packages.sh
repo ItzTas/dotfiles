@@ -367,6 +367,7 @@ _install_loudness_equalizer_ef_preset() {
 }
 
 _install_flatpak_packages() {
+
     if ! command -v flatpak &>/dev/null; then
         echo "Flatpak is not installed. Installing..."
         sudo pacman -Sy --noconfirm flatpak
@@ -380,6 +381,8 @@ _install_flatpak_packages() {
     local sources=(
         "https://flathub.org/repo/flathub.flatpakrepo"
     )
+
+    echo "Iniciating flatpak installations"
 
     for source in "${sources[@]}"; do
         flatpak remote-add --if-not-exists "$(basename "$source" .flatpakrepo)" "$source"
