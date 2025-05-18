@@ -41,8 +41,8 @@ set echo-control-characters off
 "\C-a": beginning-of-line  # Move to the beginning of the line
 "\C-e": end-of-line        # Move to the end of the line
 "\C-y": yank               # Paste the last killed text
-"\C-w": backward-kill-word # Delete the word to the left of the cursor
 "\C-d": delete-char        # Delete the character under the cursor
+"\C-w": unix-filename-rubout # Delete the word to the left of the cursor
 "\C-h": backward-kill-word # Delete the word to the left of the cursor
 "\e[d": kill-word          # Delete the word to the right of the cursor
 "\C-t": transpose-chars    # Swap the character before the cursor with the one under it
