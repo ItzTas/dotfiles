@@ -1,0 +1,28 @@
+{
+  "timeStamp": 1747719642959,
+  "version": "1.64.0",
+  "userSettings": {
+    "importedLists": []
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-unbreak",
+    "ublock-quick-fixes",
+    "easylist",
+    "easyprivacy",
+    "urlhaus-1",
+    "plowe-0"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "chrome-extension-scheme",
+    "moz-extension-scheme"
+  ],
+  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-csp-reports: * true",
+  "userFilters": "! 19 de mai. de 2025 https://ww11.readonepiece.com\nww11.readonepiece.com###top > div.justify-between.items-center.flex > .z-0.m-3.mx-auto > .overflow-hidden.border-border-primary.border-b-0.rounded > .px-2.justify-center.items-center.flex.text-secondary.uppercase.bg-bg-secondary.border-border-primary.border-b\nww11.readonepiece.com##.js-pages-container > div.justify-between.items-center.flex > .z-0.m-3.mx-auto > .overflow-hidden.border-border-primary.border-b-0.rounded > .px-2.justify-center.items-center.flex.text-secondary.uppercase.bg-bg-secondary.border-border-primary.border-b\n||blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfinntVh4QT19mpgtUD5pji_snnyDCsQYdULir7Sg6wtf4t6sXR7RDd3rIsbwNLV5-QiCIM1BWW_lVJq0g3rdWt4ComWMv7Q3e4LYT0tYZfuYmWYmbOM-or87w_aMbsEbZJu-Jb0st1AcKZHhJYz894CZsXIvPDX3CmPuTxT3P1wJRbKXAg1iUoOzi/s1600/Read%20Manga%20after%20manga%20end%202.png$image\nww11.readonepiece.com##.md\\:col-span-2.col-span-3 > .justify-between.items-center.flex > .z-0.m-3.mx-auto > .overflow-hidden.border-border-primary.border-b-0.rounded > .px-2.justify-center.items-center.flex.text-secondary.uppercase.bg-bg-secondary.border-border-primary.border-b\nww11.readonepiece.com##.relative > .adsbyvli\n||imageshack.com/a/img924/1000/d7dtSY.png$image\n\n! May 19, 2025 https://ww11.readonepiece.com\n||imageshack.com/a/img922/3640/2I68oA.png$image\n\n! May 20, 2025 https://ww11.readonepiece.com\n||imageshack.com/a/img923/3552/KIqPqQ.png$image\n\n! May 20, 2025 https://readsakadays.com\nreadsakadays.com##.md\\:col-span-2.col-span-3 > .justify-between.items-center.flex > .z-0.m-3.mx-auto > .overflow-hidden.border-border-primary.border-b-0.rounded > .px-2.justify-center.items-center.flex.text-secondary.uppercase.bg-bg-secondary.border-border-primary.border-b"
+}
