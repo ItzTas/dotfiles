@@ -9,7 +9,7 @@ y() {
 
     yadm add "$HOME/.pacmanlist"
 
-    yadm add "$HOME/.config/yadm/misc/zen-browser/chrome"
+    yadm add "$HOME/.config/yadm/misc/zen-browser/symlinks/chrome"
 
     yadm commit -am 'updates'
 
