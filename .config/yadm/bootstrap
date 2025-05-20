@@ -24,3 +24,4 @@ done
 "$BOOTSTRAP_D/remove_icons.sh" || true
 "$BOOTSTRAP_D/set_up_git.sh" || true
 "$BOOTSTRAP_D/set_up_nemo.sh" || true
+# "$BOOTSTRAP_D/set_up_zen-browser.sh" || true
