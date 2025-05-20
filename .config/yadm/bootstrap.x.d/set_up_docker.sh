@@ -1,3 +1,5 @@
+#!/bin/env bash
+
 _set_up_docker() {
     echo "Setting up docker"
 

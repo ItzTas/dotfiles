@@ -1,3 +1,5 @@
+#!/bin/env bash
+
 _remove() {
     local icons_dir breeze_dir breeze_dark_dir papirus_dir
 

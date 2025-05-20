@@ -1,3 +1,5 @@
+#!/bin/env bash
+
 _set_up() {
     git config --global diff.renameLimit 99999
     git config --global user.name "Tales"

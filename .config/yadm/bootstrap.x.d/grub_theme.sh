@@ -1,3 +1,5 @@
+#!/bin/env bash
+
 _change_grub_theme() {
     local THEME_PATH
     THEME_PATH="/boot/grub/themes/elegant-mojave"
