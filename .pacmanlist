@@ -725,6 +725,7 @@ parted 3.6-2
 paru 2.0.4-1
 paru-debug 2.0.4-1
 patch 2.8-1
+patchelf 0.18.0-3
 pay-respects 0.7.6-1
 pciutils 3.13.0-2
 pcre 8.45-4
