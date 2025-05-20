@@ -1,3 +1,5 @@
+#!/bin/env bash
+
 y() {
     set -e
 
@@ -5,7 +7,9 @@ y() {
 
     yadm --no-pager diff
 
-    yadm add "$HOME"/.pacmanlist
+    yadm add "$HOME/.pacmanlist"
+
+    yadm add "$HOME/.config/yadm/misc/zen-browser/chrome"
 
     yadm commit -am 'updates'
 
