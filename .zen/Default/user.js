@@ -1,1 +1,0 @@
-/home/talinux/.config/yadm/misc/zen-browser/user.js
