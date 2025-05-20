@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 _start_enables() {
     local enables=(

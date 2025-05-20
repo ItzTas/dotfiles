@@ -1,3 +1,5 @@
+#!/bin/env bash
+
 _set_up() {
     sudo mkdir -p "/etc/sddm.conf.d"
 

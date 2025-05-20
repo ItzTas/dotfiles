@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 _create() {
     local workspace_dir
