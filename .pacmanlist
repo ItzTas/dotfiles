@@ -334,7 +334,7 @@ lib32-fontconfig 2:2.16.2-1
 lib32-freetype2 2.13.3-3
 lib32-gcc-libs 15.1.1+r7+gf36ec88aa85a-1
 lib32-gettext 0.24-1
-lib32-glib2 2.84.1-1
+lib32-glib2 2.84.2-1
 lib32-glibc 2.41+r48+g5cb575ca9a3d-1
 lib32-harfbuzz 11.2.1-1
 lib32-icu 76.1-1
