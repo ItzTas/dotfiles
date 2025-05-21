@@ -110,6 +110,7 @@ egl-x11 1.0.1-1
 eglexternalplatform 1.2.1-1
 electron31 31.7.7-4
 electron34 34.5.6-1
+electrum 4.5.8-5
 enchant 2.8.2-2
 eww 0.6.0-1
 exempi 2.6.6-1
@@ -544,6 +545,7 @@ librsync 1:2.3.4-2
 libsamplerate 0.2.2-3
 libsasl 2.1.28-5
 libseccomp 2.5.6-1
+libsecp256k1 1:0.5.1-1
 libsecret 0.21.7-1
 libsigc++ 2.12.1-1
 libsigc++-3.0 3.6.0-1
@@ -778,10 +780,16 @@ portaudio 1:19.7.0-3
 prettierd 0.26.1-1
 procps-ng 4.0.5-3
 proto 0.49.1-1
+protobuf 30.2-3
 psmisc 23.7-1
 pugixml 1.15-2
 pyalpm 0.10.10-2
 python 3.13.3-1
+python-aiohappyeyeballs 2.6.1-1
+python-aiohttp 3.11.18-1
+python-aiohttp-socks 0.10.1-1
+python-aiorpcx 0.25.0-1
+python-aiosignal 1.3.2-1
 python-annotated-types 0.7.0-2
 python-argcomplete 3.5.3-1
 python-attrs 24.1.0-1
@@ -789,6 +797,7 @@ python-autocommand 2.2.2-7
 python-build 1.2.2-3
 python-cachecontrol 1:0.14.3-1
 python-cachy 0.3.0-11
+python-certifi 2025.04.26-1
 python-cffi 1.17.1-2
 python-charset-normalizer 3.4.2-1
 python-cleo 1:2.1.0-1
@@ -796,11 +805,13 @@ python-click 8.1.8-1
 python-crashtest 0.4.1-4
 python-cryptography 44.0.3-1
 python-distlib 0.3.9-2
+python-dnspython 1:2.7.0-1
 python-dotenv 1.1.0-1
 python-dulwich 0.22.8-1
 python-fastjsonschema 2.21.1-1
 python-filelock 3.18.0-1
 python-findpython 0.6.3-1
+python-frozenlist 1.6.0-1
 python-gobject 3.52.3-3
 python-html5lib 1.1-15
 python-idna 3.10-2
@@ -812,6 +823,8 @@ python-jaraco.context 6.0.1-1
 python-jaraco.functools 4.1.0-1
 python-jaraco.text 4.0.0-2
 python-jeepney 0.9.0-1
+python-jsonpatch 1.33-4
+python-jsonpointer 3.0.0-2
 python-jsonschema 4.23.0-2
 python-jsonschema-specifications 2024.10.1-1
 python-keyring 25.6.0-1
@@ -819,6 +832,7 @@ python-lark-parser 1.2.2-3
 python-lockfile 0.12.2-14
 python-more-itertools 10.7.0-1
 python-msgpack 1.0.5-3
+python-multidict 6.4.3-1
 python-mutagen 1.47.0-3
 python-packaging 25.0-1
 python-pbs-installer 2025.03.17-1
@@ -830,7 +844,10 @@ python-platformdirs 4.3.6-2
 python-poetry 2.1.2-1
 python-poetry-core 2.1.2-1
 python-poetry-plugin-export 1.9.0-1
+python-propcache 0.3.1-1
+python-protobuf 30.2-3
 python-ptyprocess 0.7.0-8
+python-pyaes 1.6.1-12
 python-pyaml 24.12.0-1
 python-pycparser 2.22-3
 python-pydantic 2.11.4-1
@@ -838,8 +855,12 @@ python-pydantic-core 2:2.33.2-2
 python-pymediainfo 6.1.0-4
 python-pypdf 5.5.0-1
 python-pyproject-hooks 1.2.0-3
+python-pyqt5 5.15.11-2
+python-pyqt5-sip 12.17.0-1
 python-pyqt6 6.9.0-1
 python-pyqt6-sip 13.10.0-1
+python-python-socks 2.7.1-2
+python-qrcode 8.2-1
 python-rapidfuzz 3.12.2-1
 python-referencing 0.35.1-3
 python-requests 2.32.3-4
@@ -862,6 +883,7 @@ python-webencodings 0.5.1-12
 python-wheel 0.45.1-1
 python-xmltodict 0.14.2-1
 python-yaml 6.0.2-2
+python-yarl 1.20.0-1
 python-zipp 3.21.0-2
 qman 1:1.4.2-1
 qt5-base 5.15.16+kde+r131-1
