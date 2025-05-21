@@ -160,8 +160,8 @@ git-filter-repo 2.47.0-2
 github-cli 2.73.0-1
 glib-networking 1:2.80.1-1
 glib-perl 1.329.4-2
-glib2 2.84.1-1
-glib2-devel 2.84.1-1
+glib2 2.84.2-1
+glib2-devel 2.84.2-1
 glibc 2.41+r48+g5cb575ca9a3d-1
 glibmm 2.66.8-1
 glslang 1:1.4.313.0-1
