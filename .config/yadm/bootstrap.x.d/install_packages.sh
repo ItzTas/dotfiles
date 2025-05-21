@@ -390,6 +390,7 @@ _install_flatpak_packages() {
 
     local flathub_packages=(
         "com.stremio.Stremio"
+        "surf.deckr.deckr"
     )
 
     for package in "${flathub_packages[@]}"; do
