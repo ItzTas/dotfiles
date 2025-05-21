@@ -27,7 +27,7 @@
                             {
                                 "type": "command",
                                 "data": {
-                                    "command": "xdg-open \"$XDG_CONFIG_HOME\""
+                                    "command": "nemo \"$XDG_CONFIG_HOME\""
                                 },
                                 "name": ".config",
                                 "icon": "settings",
@@ -36,7 +36,7 @@
                             {
                                 "type": "command",
                                 "data": {
-                                    "command": "xdg-open \"$(xdg-user-dir PICTURES)/screenshots\""
+                                    "command": "nemo \"$(xdg-user-dir PICTURES)/screenshots\""
                                 },
                                 "name": "Captures",
                                 "icon": "camera_alt",
@@ -47,7 +47,7 @@
                     {
                         "type": "command",
                         "data": {
-                            "command": "xdg-open \"$(xdg-user-dir DOWNLOAD)\""
+                            "command": "nemo \"$(xdg-user-dir DOWNLOAD)\""
                         },
                         "name": "Downloads",
                         "icon": "download",
@@ -56,7 +56,7 @@
                     {
                         "type": "command",
                         "data": {
-                            "command": "xdg-open \"$(xdg-user-dir VIDEOS)\""
+                            "command": "nemo \"$(xdg-user-dir VIDEOS)\""
                         },
                         "name": "Videos",
                         "icon": "video_camera_front",
@@ -65,7 +65,7 @@
                     {
                         "type": "command",
                         "data": {
-                            "command": "xdg-open \"$(xdg-user-dir PICTURES)\""
+                            "command": "nemo \"$(xdg-user-dir PICTURES)\""
                         },
                         "name": "Pictures",
                         "icon": "imagesmode",
@@ -74,7 +74,7 @@
                     {
                         "type": "command",
                         "data": {
-                            "command": "xdg-open \"$(xdg-user-dir DOCUMENTS)\""
+                            "command": "nemo \"$(xdg-user-dir DOCUMENTS)\""
                         },
                         "name": "Documents",
                         "icon": "text_ad",
@@ -83,7 +83,7 @@
                     {
                         "type": "command",
                         "data": {
-                            "command": "xdg-open \"$(xdg-user-dir DESKTOP)\""
+                            "command": "nemo \"$(xdg-user-dir DESKTOP)\""
                         },
                         "name": "Desktop",
                         "icon": "desktop_windows",
@@ -92,7 +92,7 @@
                     {
                         "type": "command",
                         "data": {
-                            "command": "xdg-open ~"
+                            "command": "nemo ~"
                         },
                         "name": "Home",
                         "icon": "home",
@@ -101,7 +101,7 @@
                     {
                         "type": "command",
                         "data": {
-                            "command": "xdg-open \"$(xdg-user-dir MUSIC)\""
+                            "command": "nemo \"$(xdg-user-dir MUSIC)\""
                         },
                         "name": "Music",
                         "icon": "music_note",
