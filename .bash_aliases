@@ -41,6 +41,7 @@ alias premove='paru -Qq | fzf --multi --preview "paru -Qi {}" | xargs -r paru -R
 # git
 alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
 alias gss='git status'
+alias gc='git clone'
 
 # yadm
 alias yadm_update='chmod +x "$HOME/.config/yadm/bin/yadm_update.sh" && "$HOME/.config/yadm/bin/yadm_update.sh"'
