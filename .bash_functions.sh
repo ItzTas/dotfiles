@@ -69,23 +69,21 @@ fdex() {
 
 # pacman & utils
 upgrady() {
-    (
-        {
-            nohup arch-update --check >/dev/null 2>&1 &
-            disown
-        } >/dev/null 2>&1
+    {
+        nohup arch-update --check >/dev/null 2>&1 &
+        disown
+    } >/dev/null 2>&1
 
-        paru -Syu --devel
-        flatpak update
-        sudo freshclam
-        paru -Fy
-        yadm_update
+    paru -Syu --devel
+    flatpak update
+    sudo freshclam
+    paru -Fy
+    yadm_update
 
-        {
-            nohup arch-update --check >/dev/null 2>&1 &
-            disown
-        } >/dev/null 2>&1
-    )
+    {
+        nohup arch-update --check >/dev/null 2>&1 &
+        disown
+    } >/dev/null 2>&1
 }
 
 pacclean() {
