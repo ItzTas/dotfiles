@@ -70,6 +70,7 @@ fdex() {
 # pacman & utils
 upgrady() {
     nohup arch-update --check >/dev/null 2>&1 &
+    disown
 
     paru -Syu --devel
     flatpak update
@@ -78,6 +79,7 @@ upgrady() {
     yadm_update
 
     nohup arch-update --check >/dev/null 2>&1 &
+    disown
 }
 
 pacclean() {
