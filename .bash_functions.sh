@@ -69,6 +69,10 @@ fdex() {
 
 # pacman & utils
 upgrady() {
+    temporaria() {
+        echo "Função temporária chamada"
+    }
+
     {
         nohup arch-update --check >/dev/null 2>&1 &
         disown
