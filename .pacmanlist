@@ -148,7 +148,6 @@ gcr-4 4.4.0.1-1
 gd 2.3.3-8
 gdbm 1.25-1
 gdk-pixbuf2 2.42.12-2
-gendesk 1.0.10-1
 gettext 0.25-1
 ghc-libs 9.4.8-1
 ghostscript 10.05.1-2
@@ -287,7 +286,6 @@ hyprutils 0.7.1-1
 hyprwayland-scanner 0.4.4-1
 i2c-tools 4.4-2
 iana-etc 20250502-1
-icoutils 0.32.3-3
 icu 76.1-1
 ijs 0.35-6
 imagemagick 7.1.1.47-2
@@ -701,7 +699,6 @@ numactl 2.0.19-1
 nvidia 570.144-5
 nvidia-settings 570.144-1
 nvidia-utils 570.144-3
-nvm 0.40.3-1
 ocl-icd 2.3.3-1
 oh-my-posh 25.23.2-1
 onetbb 2022.1.0-1
@@ -774,7 +771,6 @@ pixman 0.46.0-1
 pkgconf 2.4.3-1
 playerctl 2.4.1-4
 plocate 1.1.23-1
-pnpm 10.11.0-1
 polkit 126-2
 polkit-gnome 0.105-11
 poppler-data 0.4.12-2
@@ -853,7 +849,7 @@ python-ptyprocess 0.7.0-8
 python-pyaes 1.6.1-12
 python-pyaml 24.12.0-1
 python-pycparser 2.22-3
-python-pydantic 2.11.4-1
+python-pydantic 2.11.5-1
 python-pydantic-core 2:2.33.2-2
 python-pymediainfo 6.1.0-4
 python-pypdf 5.5.0-1
@@ -917,7 +913,6 @@ rtkit 0.13-3
 rubberband 4.0.0-1
 run-parts 5.22-1
 runc 1.3.0-1
-rust 1:1.87.0-1
 sbc 2.0-2
 sdbus-cpp 2.1.0-2
 sddm 0.21.0-6
