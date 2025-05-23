@@ -857,7 +857,7 @@ python-pyproject-hooks 1.2.0-3
 python-pyqt5 5.15.11-2
 python-pyqt5-sip 12.17.0-1
 python-pyqt6 6.9.0-1
-python-pyqt6-sip 13.10.0-1
+python-pyqt6-sip 13.10.2-1
 python-python-socks 2.7.1-2
 python-qrcode 8.2-1
 python-rapidfuzz 3.12.2-1
@@ -885,12 +885,12 @@ python-yaml 6.0.2-2
 python-yarl 1.20.0-1
 python-zipp 3.21.0-2
 qman 1:1.4.2-1
-qt5-base 5.15.16+kde+r131-1
-qt5-declarative 5.15.16+kde+r22-3
-qt5-graphicaleffects 5.15.16-3
-qt5-quickcontrols2 5.15.16+kde+r5-3
-qt5-svg 5.15.16+kde+r5-3
-qt5-translations 5.15.16-3
+qt5-base 5.15.17+kde+r122-1
+qt5-declarative 5.15.17+kde+r21-1
+qt5-graphicaleffects 5.15.17-1
+qt5-quickcontrols2 5.15.17+kde+r5-1
+qt5-svg 5.15.17+kde+r5-1
+qt5-translations 5.15.17-1
 qt6-base 6.9.0-1
 qt6-charts 6.9.0-1
 qt6-declarative 6.9.0-2
@@ -1017,7 +1017,7 @@ wpa_supplicant 2:2.11-3
 wtype 0.4-2
 x264 3:0.164.r3108.31e19f9-2
 x265 4.0-1
-xapp 2.8.8-1
+xapp 2.8.9-1
 xcb-imdkit 1.0.9-1
 xcb-proto 1.17.0-3
 xcb-util 0.4.1-2
