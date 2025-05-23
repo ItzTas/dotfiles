@@ -118,7 +118,7 @@ exiv2 0.28.5-1
 expat 2.7.1-1
 eza 0.21.3-1
 fakeroot 1.37.1.2-1
-fastfetch 2.43.0-1
+fastfetch 2.44.0-1
 fd 10.2.0-1
 ferdium 7.0.1-1
 ffmpeg 2:7.1.1-3
@@ -320,7 +320,7 @@ l-smash 2.14.5-4
 ladspa 1.17-5
 lame 3.100-5
 lazydocker 0.24.1-1
-lazygit 0.51.0-1
+lazygit 0.51.1-1
 lcms2 2.17-1
 leancrypto 1.3.0-1
 less 1:668-1
