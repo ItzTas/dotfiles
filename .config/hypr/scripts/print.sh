@@ -1,3 +1,5 @@
+#!/bin/env bash
+
 print_img() {
     local filename
     filename="screenshot_$(date '+%Y-%m-%d_%H-%M-%S-%3N').png"
