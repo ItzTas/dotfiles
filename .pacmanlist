@@ -72,6 +72,7 @@ composefs 1.0.7-1
 confz 2.1.0-2
 containerd 2.1.1-1
 coreutils 9.7-1
+countryfetch 0.1.9-3
 cppdap 1.58.0-2
 cronie 1.7.2-1
 cryptsetup 2.7.5-2
@@ -925,6 +926,7 @@ sed 4.9-3
 semver 7.7.2-1
 serd 0.32.4-1
 sesh-bin 2.13.0-1
+sfwbar 1.0_beta16-1
 shaderc 2025.2-2
 shadow 4.17.4-1
 shared-mime-info 2.4-2
@@ -979,6 +981,7 @@ ttf-jetbrains-mono-nerd 3.4.0-1
 ttf-liberation 2.1.5-2
 ttf-nerd-fonts-symbols 3.4.0-1
 ttf-nerd-fonts-symbols-common 3.4.0-1
+typeracer 2.1.5-1
 tzdata 2025b-1
 uchardet 0.0.8-3
 udisks2 2.10.1-5
