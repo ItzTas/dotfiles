@@ -4,6 +4,8 @@ _handle_fifo() {
     local fifo
     fifo=$1
 
+    # (zoxide query -l && find / -type d 2>/dev/null) | awk '!seen[$0]++' >"$fifo" &
+
     (zoxide query -l && find "$HOME" -type d) | awk '!seen[$0]++' >"$fifo" &
 }
 
