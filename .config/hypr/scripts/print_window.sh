@@ -1,3 +1,5 @@
+#!/bin/env bash
+
 print_window() {
     local filename
     local path

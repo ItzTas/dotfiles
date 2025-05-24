@@ -1,4 +1,5 @@
 #!/bin/bash
+
 wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 muted=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $3}')
 if [[ "$muted" == "[MUTED]" ]]; then
