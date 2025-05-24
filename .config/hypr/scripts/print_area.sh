@@ -1,3 +1,5 @@
+#!/bin/env bash
+
 print_selected_area() {
     local filename
     local path
