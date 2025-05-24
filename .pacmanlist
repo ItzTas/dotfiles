@@ -867,7 +867,7 @@ python-requests 2.32.3-4
 python-requests-toolbelt 1.0.0-3
 python-rpds-py 0.22.3-1
 python-secretstorage 3.3.3-6
-python-setuptools 1:80.3.1-1
+python-setuptools 1:80.4.0-1
 python-shellingham 1.5.4-3
 python-six 1.17.0-1
 python-stopit 1.1.2-9
