@@ -309,9 +309,9 @@ jsoncpp 1.9.6-3
 kando-bin 1.8.0-1
 kbd 2.7.1-2
 keyutils 1.6.3-3
-kitty 0.42.0-1
-kitty-shell-integration 0.42.0-1
-kitty-terminfo 0.42.0-1
+kitty 0.42.1-1
+kitty-shell-integration 0.42.1-1
+kitty-terminfo 0.42.1-1
 kmod 34.2-1
 krb5 1.21.3-1
 l-smash 2.14.5-4
@@ -392,7 +392,7 @@ lib32-mesa 1:25.1.1-1
 lib32-ncurses 6.5-2
 lib32-nspr 4.36-1
 lib32-nss 3.111-1
-lib32-nvidia-utils 570.144-1
+lib32-nvidia-utils 570.153.02-1
 lib32-openssl 1:3.5.0-1
 lib32-p11-kit 0.25.5-1
 lib32-pam 1.7.0-1
@@ -438,7 +438,7 @@ libcdio 2.2.0-1
 libcdio-paranoia 10.2+2.0.2-1
 libcloudproviders 0.3.6-1
 libcolord 1.4.7-2
-libcups 2:2.4.12-1
+libcups 2:2.4.12-2
 libcurl-gnutls 8.13.0-2
 libdaemon 0.14-6
 libdatrie 0.2.13-4
@@ -611,7 +611,7 @@ libxklavier 5.4-6
 libxml2 2.14.3-1
 libxmlb 0.3.22-1
 libxmu 1.2.1-1
-libxnvctrl 570.144-1
+libxnvctrl 570.153.02-1
 libxpm 3.5.17-2
 libxpresent 1.0.1-2
 libxrandr 1.5.4-1
@@ -629,10 +629,10 @@ libzen 0.4.41-2
 libzip 1.11.3-1
 licenses 20240728-1
 lilv 0.24.26-1
-linux 6.14.6.arch1-1
+linux 6.14.7.arch2-1
 linux-api-headers 6.14-1
-linux-firmware 20250508.788aadc8-1
-linux-firmware-whence 20250508.788aadc8-1
+linux-firmware 20250508.788aadc8-2
+linux-firmware-whence 20250508.788aadc8-2
 llhttp 9.2.1-2
 llvm-libs 19.1.7-2
 lm_sensors 1:3.6.2-1
@@ -696,9 +696,9 @@ npth 1.8-1
 nspr 4.36-1
 nss 3.111-1
 numactl 2.0.19-1
-nvidia 570.144-5
-nvidia-settings 570.144-1
-nvidia-utils 570.144-3
+nvidia 570.153.02-2
+nvidia-settings 570.153.02-1
+nvidia-utils 570.153.02-1
 ocl-icd 2.3.3-1
 oh-my-posh 25.23.2-1
 onetbb 2022.1.0-1
@@ -831,7 +831,7 @@ python-lark-parser 1.2.2-3
 python-lockfile 0.12.2-14
 python-more-itertools 10.7.0-1
 python-msgpack 1.0.5-3
-python-multidict 6.4.3-1
+python-multidict 6.4.4-1
 python-mutagen 1.47.0-3
 python-packaging 25.0-1
 python-pbs-installer 2025.03.17-1
@@ -959,7 +959,7 @@ tar 1.35-2
 tdb 1.4.13-1
 termpicker 1.3.9-1
 texinfo 7.2-1
-thunderbird 138.0.1-1
+thunderbird 138.0.2-1
 timeshift 24.06.6-1
 tinysparql 3.9.2-2
 tinyxml2 11.0.0-1
@@ -1055,7 +1055,7 @@ yazi 25.4.8-1
 yq 3.4.3-2
 yyjson 0.11.1-1
 zelda64recomp-bin 1.2.0-3
-zen-browser-bin 1.12.7b-1
+zen-browser-bin 1.12.8b-1
 zenity 4.1.90-1
 zeromq 4.3.5-2
 zimg 3.0.5-1
