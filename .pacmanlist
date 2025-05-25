@@ -399,7 +399,7 @@ lib32-pam 1.7.0-1
 lib32-pcre2 10.45-1
 lib32-pipewire 1:1.4.2-1
 lib32-spirv-tools 1:1.4.313.0-1
-lib32-sqlite 3.49.1-1
+lib32-sqlite 3.49.2-1
 lib32-systemd 257.5-1
 lib32-util-linux 2.41-1
 lib32-vulkan-icd-loader 1.4.313.0-1
@@ -626,7 +626,7 @@ libxxf86vm 1.1.6-1
 libyaml 0.2.5-3
 libyuv r2426+464c51a03-1
 libzen 0.4.41-2
-libzip 1.11.3-1
+libzip 1.11.4-1
 licenses 20240728-1
 lilv 0.24.26-1
 linux 6.14.7.arch2-1
@@ -691,7 +691,7 @@ ninja 1.12.1-2
 node-gyp 11.2.0-1
 nodejs-lts-iron 20.19.2-1
 nodejs-nopt 7.2.1-1
-npm 11.4.0-1
+npm 11.4.1-1
 npth 1.8-1
 nspr 4.36-1
 nss 3.111-1
@@ -866,7 +866,7 @@ python-requests 2.32.3-4
 python-requests-toolbelt 1.0.0-3
 python-rpds-py 0.22.3-1
 python-secretstorage 3.3.3-6
-python-setuptools 1:80.4.0-1
+python-setuptools 1:80.8.0-1
 python-shellingham 1.5.4-3
 python-six 1.17.0-1
 python-stopit 1.1.2-9
