@@ -192,20 +192,6 @@
           }
         ]
       }
-    },
-    {
-      "root": {
-        "type": "submenu",
-        "name": "New Menu",
-        "icon": "public",
-        "iconTheme": "material-symbols-rounded",
-        "children": []
-      },
-      "shortcut": "",
-      "shortcutID": "",
-      "centered": false,
-      "warpMouse": false,
-      "anchored": false
     }
   ],
   "templates": []
