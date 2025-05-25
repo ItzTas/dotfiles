@@ -10,6 +10,7 @@ alsa-lib 1.2.14-1
 alsa-plugins 1:1.2.12-4
 alsa-topology-conf 1.2.5.1-4
 alsa-ucm-conf 1.2.14-2
+antimicrox 3.5.1-1
 aom 3.12.1-1
 appstream 1.0.5-2
 aquamarine 0.8.0-4
@@ -98,6 +99,7 @@ dotnet-runtime 9.0.4.sdk105-1
 dotnet-sdk 9.0.4.sdk105-1
 dotnet-targeting-pack 9.0.4.sdk105-1
 double-conversion 3.3.1-1
+dualsensectl 0.7-1
 duktape 2.7.0-7
 dunst 1.12.2-1
 e2fsprogs 1.47.2-2
@@ -113,6 +115,7 @@ electron34 34.5.6-1
 electron35 35.4.0-1
 electrum 4.5.8-5
 enchant 2.8.2-2
+evtest 1.35-2
 eww 0.6.0-1
 exempi 2.6.6-1
 exiv2 0.28.5-1
@@ -639,6 +642,7 @@ linux 6.14.7.arch2-1
 linux-api-headers 6.14-1
 linux-firmware 20250508.788aadc8-2
 linux-firmware-whence 20250508.788aadc8-2
+linuxconsole 1.8.1-1
 llhttp 9.2.1-2
 llvm-libs 19.1.7-2
 lm_sensors 1:3.6.2-1
@@ -777,6 +781,7 @@ pixman 0.46.0-1
 pkgconf 2.4.3-1
 playerctl 2.4.1-4
 plocate 1.1.23-1
+pnpm 10.11.0-1
 polkit 126-2
 polkit-gnome 0.105-11
 poppler-data 0.4.12-2
@@ -998,8 +1003,7 @@ util-linux 2.41-4
 util-linux-libs 2.41-4
 v4l-utils 1.30.1-1
 vapoursynth R70-2
-vencord 1.12.2-1
-vesktop 1.5.6-1
+vesktop-git 1.5.6.r20.g6e7d912-1
 vid.stab 1.1.1-2
 vim 9.1.1376-1
 vim-runtime 9.1.1376-1
