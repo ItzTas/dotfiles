@@ -1,21 +1,25 @@
 #!/bin/bash
 
 _handle_fifo() {
-    local fifo
-    fifo=$1
+    local fifo=$1
+    local search_dir=$2
 
-    # (zoxide query -l && find / -type d 2>/dev/null) | awk '!seen[$0]++' >"$fifo" &
-
-    (zoxide query -l && find "$HOME" -type d) | awk '!seen[$0]++' >"$fifo" &
+    (zoxide query -l && find "$search_dir" -type d 2>/dev/null) | awk '!seen[$0]++' >"$fifo" &
 }
 
 _find() {
-    local dir fifo
+    local dir fifo search_dir
+
+    if [[ $1 == "root" ]]; then
+        search_dir="/"
+    else
+        search_dir="$HOME"
+    fi
 
     fifo=$(mktemp -u)
     mkfifo "$fifo"
 
-    _handle_fifo "$fifo"
+    _handle_fifo "$fifo" "$search_dir"
 
     dir=$(
         fzf \
@@ -31,4 +35,4 @@ _find() {
     fi
 }
 
-_find
+_find "$1"
