@@ -120,6 +120,14 @@
         "iconTheme": "material-symbols-rounded",
         "children": [
           {
+            "type": "submenu",
+            "data": {},
+            "name": "Extra",
+            "icon": "scrollable_header",
+            "iconTheme": "material-symbols-rounded",
+            "children": []
+          },
+          {
             "type": "command",
             "data": {
               "command": "hyprshade on colors"
@@ -138,22 +146,31 @@
             "iconTheme": "material-symbols-rounded"
           },
           {
-            "type": "command",
-            "data": {
-              "command": "hyprshade on extradark"
-            },
-            "name": "ExtraDark",
+            "type": "submenu",
+            "data": {},
+            "name": "Dark",
             "icon": "dark_mode",
-            "iconTheme": "material-symbols-rounded"
-          },
-          {
-            "type": "command",
-            "data": {
-              "command": "hyprshade on blue-light-filter"
-            },
-            "name": "BLF",
-            "icon": "filter_alt",
-            "iconTheme": "material-symbols-rounded"
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprshade on extradark"
+                },
+                "name": "ExtraDark",
+                "icon": "dark_mode",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprshade on blue-light-filter"
+                },
+                "name": "BLF",
+                "icon": "filter_alt",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
           },
           {
             "type": "command",
@@ -175,6 +192,20 @@
           }
         ]
       }
+    },
+    {
+      "root": {
+        "type": "submenu",
+        "name": "New Menu",
+        "icon": "public",
+        "iconTheme": "material-symbols-rounded",
+        "children": []
+      },
+      "shortcut": "",
+      "shortcutID": "",
+      "centered": false,
+      "warpMouse": false,
+      "anchored": false
     }
   ],
   "templates": []
