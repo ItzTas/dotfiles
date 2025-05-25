@@ -11,6 +11,8 @@ y() {
 
     yadm add "$HOME/.config/yadm/misc/zen-browser/symlinks/chrome"
 
+    yadm add "$HOME/Pictures/.backgrounds"
+
     yadm commit -am 'updates'
 
     yadm push
