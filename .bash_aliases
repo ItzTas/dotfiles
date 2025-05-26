@@ -12,11 +12,15 @@ alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 
 # bitwarden
-alias ubw='export BW_SESSION=$(bw unlock --raw)'
+if command -v bw &>/dev/null; then
+	alias ubw='export BW_SESSION=$(bw unlock --raw)'
+fi
 
 # nvim
-alias vim='nvim'
-alias v='nvim .'
+if command -v nvim &>/dev/null; then
+	alias vim='nvim'
+	alias v='nvim .'
+fi
 
 # grep
 alias grep='grep --color=always'
@@ -28,13 +32,17 @@ alias tattach='tmux attach'
 alias tds='tmux new-session -s default'
 
 # miru
-alias mjs='miru npm'
-alias mgo='miru go'
-alias mrs='miru rs'
+if command -v miru &>/dev/null; then
+	alias mjs='miru npm'
+	alias mgo='miru go'
+	alias mrs='miru rs'
+fi
 
 # pacman, paru & utilities
-alias upacf='pacfiles --update-db *'
-alias pacf='pacfiles -l'
+if command -v pacfiles &>/dev/null; then
+	alias upacf='pacfiles --update-db *'
+	alias pacf='pacfiles -l'
+fi
 alias premove='paru -Qq | fzf --multi --preview "paru -Qi {}" | xargs -r paru -Rns --noconfirm'
 
 # git
@@ -66,4 +74,6 @@ alias man='qman'
 
 # some more aliases
 alias chgra='chmod +x gradlew'
-alias renderMarkdown='grip'
+if command -v grip &>/dev/null; then
+	alias renderMarkdown='grip'
+fi
