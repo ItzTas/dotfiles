@@ -130,19 +130,19 @@
           {
             "type": "command",
             "data": {
-              "command": "hyprshade on colors"
+              "command": "hyprshade auto"
             },
-            "name": "Colors",
-            "icon": "palette",
+            "name": "Auto",
+            "icon": "auto_mode",
             "iconTheme": "material-symbols-rounded"
           },
           {
             "type": "command",
             "data": {
-              "command": "hyprshade auto"
+              "command": "hyprshade on colors"
             },
-            "name": "Auto",
-            "icon": "auto_mode",
+            "name": "Colors",
+            "icon": "palette",
             "iconTheme": "material-symbols-rounded"
           },
           {
