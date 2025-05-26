@@ -1,11 +1,15 @@
 # brightness controll
-alias dcs='ddcutil setvcp 10'
+if command -v ddcutil &>/dev/null; then
+	alias dcs='ddcutil setvcp 10'
+fi
 
 # ls
-alias ls='lsd'
-alias ll='lsd -alF'
-alias la='lsd -A'
-alias l='lsd -F'
+if command -v lsd &>/dev/null; then
+	alias ls='lsd'
+	alias ll='lsd -alF'
+	alias la='lsd -A'
+	alias l='lsd -F'
+fi
 
 # dir
 alias dir='dir --color=auto'
@@ -28,8 +32,10 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # tmux
-alias tattach='tmux attach'
-alias tds='tmux new-session -s default'
+if command -v tmux &>/dev/null; then
+	alias tattach='tmux attach'
+	alias tds='tmux new-session -s default'
+fi
 
 # miru
 if command -v miru &>/dev/null; then
@@ -46,34 +52,48 @@ fi
 alias premove='paru -Qq | fzf --multi --preview "paru -Qi {}" | xargs -r paru -Rns --noconfirm'
 
 # git
-alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
-alias gss='git status'
-alias gc='git clone'
+if command -v git &>/dev/null; then
+	alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
+	alias gss='git status'
+	alias gc='git clone'
+fi
 
 # yadm
-alias yadm_update='chmod +x "$HOME/.config/yadm/bin/yadm_update.sh" && "$HOME/.config/yadm/bin/yadm_update.sh"'
+if command -v yadm &>/dev/null; then
+	alias yadm_update='chmod +x "$HOME/.config/yadm/bin/yadm_update.sh" && "$HOME/.config/yadm/bin/yadm_update.sh"'
+fi
 
 # yazy
-alias y='yazi'
+if command -v yazi &>/dev/null; then
+	alias y='yazi'
+fi
 
 # sesh
-alias sc='sesh clone'
+if command -v sesh &>/dev/null; then
+	alias sc='sesh clone'
+fi
 
 # kitty
-alias icat='kitty +kitten icat'
+if command -v kitty &>/dev/null; then
+	alias icat='kitty +kitten icat'
+fi
 
 # python
 alias python='python3'
 
 # cat | bat
-alias cat='bat --paging=never'
+if command -v bat &>/dev/null; then
+	alias cat='bat --paging=never'
+fi
 alias c='command cat'
 
 # man & utilities
-alias man='qman'
+if command -v qman &>/dev/null; then
+	alias man='qman'
+fi
 
 # some more aliases
-alias chgra='chmod +x gradlew'
 if command -v grip &>/dev/null; then
 	alias renderMarkdown='grip'
 fi
+alias chgra='chmod +x gradlew'
