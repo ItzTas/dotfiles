@@ -1,3 +1,7 @@
 #!/bin/bash
 
-ghostty -e bash -c 'nvim --listen unity "$@"' _ "$@"
+echo "Processed args: $(printf "%q " "$@")"
+
+{
+    ghostty --wait-after-command -e "nvim --listen unity $(printf "%q " "$@"); exec bash --login"
+} &>/dev/null
