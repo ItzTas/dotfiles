@@ -50,7 +50,7 @@ bubblewrap 0.11.0-1
 bzip2 1.0.8-6
 c-ares 1.34.5-1
 ca-certificates 20240618-1
-ca-certificates-mozilla 3.111-1
+ca-certificates-mozilla 3.112-1
 ca-certificates-utils 20240618-1
 cabextract 1.11-2
 cairo 1.18.4-1
@@ -305,7 +305,7 @@ imagemagick 7.1.1.47-2
 inetutils 2.6-1
 inotify-tools 4.23.9.0-2
 intel-ucode 20250512-1
-iproute2 6.14.0-1
+iproute2 6.15.0-1
 iptables 1:1.8.11-2
 iputils 20240905-1
 iso-codes 4.18.0-1
@@ -708,7 +708,7 @@ nodejs-nopt 7.2.1-1
 npm 11.4.1-1
 npth 1.8-1
 nspr 4.36-1
-nss 3.111-1
+nss 3.112-1
 numactl 2.0.19-1
 nvidia 570.153.02-2
 nvidia-settings 570.153.02-1
