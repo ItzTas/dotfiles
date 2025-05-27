@@ -114,6 +114,7 @@ eglexternalplatform 1.2.1-1
 electron31 31.7.7-4
 electron34 34.5.6-1
 electron35 35.4.0-1
+electron36 36.2.1-1
 electrum 4.5.8-5
 enchant 2.8.2-2
 evtest 1.35-2
@@ -165,7 +166,7 @@ git 2.49.0-2
 git-bug 0.10.1-1
 git-filter-repo 2.47.0-2
 github-cli 2.73.0-1
-gitify 6.3.0-1
+gitify 6.4.0-1
 glib-networking 1:2.80.1-1
 glib-perl 1.329.4-2
 glib2 2.84.2-1
