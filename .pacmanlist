@@ -155,6 +155,7 @@ gcr-4 4.4.0.1-1
 gd 2.3.3-8
 gdbm 1.25-1
 gdk-pixbuf2 2.42.12-2
+gendesk 1.0.10-1
 gettext 0.25-1
 ghc-libs 9.4.8-1
 ghostscript 10.05.1-2
@@ -166,7 +167,7 @@ git 2.49.0-2
 git-bug 0.10.1-1
 git-filter-repo 2.47.0-2
 github-cli 2.73.0-1
-gitify 6.4.0-1
+gitify 6.4.1-1
 glib-networking 1:2.80.1-1
 glib-perl 1.329.4-2
 glib2 2.84.2-1
@@ -299,6 +300,7 @@ hyprutils 0.7.1-1
 hyprwayland-scanner 0.4.4-1
 i2c-tools 4.4-2
 iana-etc 20250502-1
+icoutils 0.32.3-3
 icu 76.1-1
 ijs 0.35-6
 imagemagick 7.1.1.47-2
@@ -713,6 +715,7 @@ numactl 2.0.19-1
 nvidia 570.153.02-2
 nvidia-settings 570.153.02-1
 nvidia-utils 570.153.02-1
+nvm 0.40.3-1
 ocl-icd 2.3.3-1
 oh-my-posh 25.23.3-1
 onetbb 2022.1.0-1
@@ -785,6 +788,7 @@ pixman 0.46.0-1
 pkgconf 2.4.3-1
 playerctl 2.4.1-4
 plocate 1.1.23-1
+pnpm 10.11.0-1
 polkit 126-2
 polkit-gnome 0.105-11
 poppler-data 0.4.12-2
