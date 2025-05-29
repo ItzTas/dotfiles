@@ -56,6 +56,7 @@ cabextract 1.11-2
 cairo 1.18.4-1
 cairo-perl 1.109-5
 cairomm 1.14.5-1
+cairomm-1.16 1.18.0-1
 calf 0.90.7-1
 cblas 3.12.1-2
 cinnamon-desktop 6.4.1-1
@@ -173,6 +174,7 @@ glib2 2.84.2-1
 glib2-devel 2.84.2-1
 glibc 2.41+r48+g5cb575ca9a3d-1
 glibmm 2.66.8-1
+glibmm-2.68 2.84.0-1
 glslang 1:1.4.313.0-1
 glues 0.6.2-1
 gmp 6.3.0-2
@@ -212,6 +214,7 @@ gtk-update-icon-cache 1:4.18.5-2
 gtk2 2.24.33-5
 gtk3 1:3.24.49-2
 gtk4 1:4.18.5-2
+gtkmm-4.0 4.18.0-2
 gtkmm3 3.24.10-1
 gts 0.7.6.121130-3
 guile 3.0.10-1
@@ -735,10 +738,12 @@ pam 1.7.0-2
 pambase 20230918-2
 pango 1:1.56.3-1
 pangomm 2.46.4-1
+pangomm-2.48 2.56.1-1
 parted 3.6-2
 paru 2.0.4-1
 paru-debug 2.0.4-1
 patch 2.8-1
+pavucontrol 1:6.1-1
 pay-respects 0.7.6-1
 pciutils 3.13.0-2
 pcre 8.45-4
