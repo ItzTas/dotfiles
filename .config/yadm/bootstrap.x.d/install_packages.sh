@@ -86,7 +86,6 @@ _install_pacman_packages() {
         "bash-completion"
         "sesh-bin"
         "github-cli"
-        "glues"
         "pay-respects"
         "grim"
         "hyprpaper"
