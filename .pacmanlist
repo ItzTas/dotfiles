@@ -926,9 +926,13 @@ qman 1:1.4.2-1
 qt5-base 5.15.17+kde+r122-1
 qt5-declarative 5.15.17+kde+r21-1
 qt5-graphicaleffects 5.15.17-1
+qt5-location 5.15.17+kde+r7-1
 qt5-quickcontrols2 5.15.17+kde+r5-1
+qt5-remoteobjects 5.15.17-1
 qt5-svg 5.15.17+kde+r5-1
 qt5-translations 5.15.17-1
+qt5-webchannel 5.15.17+kde+r3-1
+qt5-webengine 5.15.19-2
 qt6-base 6.9.0-2
 qt6-charts 6.9.0-1
 qt6-declarative 6.9.0-2
@@ -1111,6 +1115,7 @@ zita-convolver 4.0.3-4
 zix 0.6.2-1
 zlib 1:1.3.1-2
 zlib-ng 2.2.4-1
+zoom 6.4.12-1
 zoxide 0.9.8-2
 zram-generator 1.2.1-1
 zsa-keymapp-bin 1.3.7-1
