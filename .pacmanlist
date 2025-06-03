@@ -935,7 +935,7 @@ qt6-wayland 6.9.0-2
 qtractor 1.5.5-1
 rav1e 0.7.1-1
 re2 1:20240702-5
-readline 8.2.013-1
+readline 8.2.013-2
 recode 3.7.15-1
 rhash 1.4.4-1
 ripgrep 14.1.1-1
@@ -954,7 +954,7 @@ sddm 0.21.0-6
 sddm-sugar-candy-git 1.6r42.d31dbf5-1
 sdl2-compat 2.32.56-1
 sdl2_net 1:2.2.0-2
-sdl3 3.2.14-1
+sdl3 3.2.16-1
 seatd 0.9.1-1
 sed 4.9-3
 semver 7.7.2-1
