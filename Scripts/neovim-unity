@@ -1,7 +1,14 @@
 #!/bin/bash
 
-echo "Processed args: $(printf "%q " "$@")"
+_open() {
+    local file line dir
+    file="$1"
+    line="$2"
+    dir="$3"
 
-{
-    ghostty --wait-after-command -e "nvim --listen unity $(printf "%q " "$@"); exec bash --login"
-} &>/dev/null
+    {
+        ghostty --wait-after-command -e "nvim --listen unity +$line '$file'; exec bash --login"
+    } &>/dev/null
+}
+
+_open "$@"
