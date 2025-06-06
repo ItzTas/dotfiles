@@ -90,6 +90,7 @@ alias c='command cat'
 # man & utilities
 if command -v qman &>/dev/null; then
 	alias man='qman'
+	alias cman='command man'
 fi
 
 # some more aliases
