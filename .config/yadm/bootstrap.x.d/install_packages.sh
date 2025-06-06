@@ -32,7 +32,6 @@ _install_pacman_packages() {
     set -e
     local packages=(
         "ghostty"
-        "bitwarden-cli"
         "timeshift"
         "socat"
         "fortune-mod"
@@ -60,7 +59,6 @@ _install_pacman_packages() {
         "git-bug"
         "docker-compose"
         "bitwarden"
-        "prettierd"
         "weston"
         "gping"
         "ncdu"
@@ -115,7 +113,6 @@ _install_pacman_packages() {
         "dunst"
         "zen-browser-bin"
         "bat"
-        "bash-language-server"
         "rofi-wayland"
         "rofi-emoji"
         "shellcheck"
