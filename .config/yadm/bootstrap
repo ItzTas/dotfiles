@@ -25,4 +25,5 @@ done
 "$BOOTSTRAP_D/set_up_git.sh" || true
 "$BOOTSTRAP_D/set_up_nemo.sh" || true
 "$BOOTSTRAP_D/set_up_proto.sh" || true
-# "$BOOTSTRAP_D/set_up_zen-browser.sh" || true
+"$BOOTSTRAP_D/set_up_xdg.sh" || true
+"$BOOTSTRAP_D/set_up_zen-browser.sh" || true
