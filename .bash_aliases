@@ -9,6 +9,10 @@ if command -v lsd &>/dev/null; then
     alias ll='lsd -alF'
     alias la='lsd -A'
     alias l='lsd -F'
+else
+    alias ll='ls -alF'
+    alias la='ls -A'
+    alias l='ls -F'
 fi
 
 # dir
@@ -85,7 +89,9 @@ if command -v kitty &>/dev/null; then
 fi
 
 # python
-alias python='python3'
+if command -v python3 &>/dev/null; then
+    alias python='python3'
+fi
 
 # cat | bat
 if command -v bat &>/dev/null; then
