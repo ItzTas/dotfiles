@@ -93,7 +93,6 @@ default-cursors 3-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.32-1
 diffutils 3.12-2
-discord 1:0.0.96-1
 docker 1:28.2.2-1
 docker-compose 2.37.0-1
 dotnet-host 9.0.4.sdk105-1
