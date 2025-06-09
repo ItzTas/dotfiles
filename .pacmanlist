@@ -61,7 +61,7 @@ cblas 3.12.1-2
 cinnamon-desktop 6.4.1-1
 clamav 1.4.2-2
 clamtk 6.18-1
-clang 19.1.7-2
+clang 20.1.6-1
 clipse 1.1.0-1
 clipse-gui 0.1.4-1
 clutter 1.26.4-3
@@ -69,7 +69,7 @@ clutter-gtk 1.8.4-4
 cmake 4.0.2-1
 cogl 1.22.8-3
 colord 1.4.7-2
-compiler-rt 19.1.7-1
+compiler-rt 20.1.6-1
 composefs 1.0.8-1
 confz 2.1.0-2
 containerd 2.1.1-1
@@ -94,7 +94,7 @@ desktop-file-utils 0.28-1
 device-mapper 2.03.32-1
 diffutils 3.12-2
 discord 1:0.0.96-1
-docker 1:28.2.0-1
+docker 1:28.2.2-1
 docker-compose 2.37.0-1
 dotnet-host 9.0.4.sdk105-1
 dotnet-runtime 9.0.4.sdk105-1
@@ -303,7 +303,7 @@ hyprpicker 0.4.5-2
 hyprpwmenu 0.2.0-1
 hyprscratch 0.5.3-1
 hyprshade 3.2.1-1
-hyprshot 1.3.0-2
+hyprshot 1.3.0-3
 hyprutils 0.7.1-1
 hyprwayland-scanner 0.4.4-1
 i2c-tools 4.4-2
@@ -413,9 +413,9 @@ lib32-libxrender 0.9.11-2
 lib32-libxshmfence 1.3.3-1
 lib32-libxss 1.2.4-2
 lib32-libxxf86vm 1.1.5-2
-lib32-llvm-libs 1:19.1.7-2
+lib32-llvm-libs 1:20.1.6-1
 lib32-lm_sensors 1:3.6.2-2
-lib32-mesa 1:25.1.3-2
+lib32-mesa 1:25.1.3-3
 lib32-ncurses 6.5-2
 lib32-nspr 4.36-1
 lib32-nss 3.112-1
@@ -609,7 +609,7 @@ libutempter 1.2.3-1
 libutf8proc 2.10.0-1
 libuv 1.51.0-1
 libva 2.22.0-1
-libva-nvidia-driver 0.0.13-1
+libva-nvidia-driver 0.0.14-1
 libvdpau 1.5-3
 libverto 0.3.2-5
 libvorbis 1.3.7-4
@@ -667,7 +667,7 @@ linux-firmware 20250508.788aadc8-2
 linux-firmware-whence 20250508.788aadc8-2
 linuxconsole 1.8.1-1
 llhttp 9.2.1-2
-llvm-libs 19.1.7-2
+llvm-libs 20.1.6-3
 lm_sensors 1:3.6.2-1
 lmdb 0.9.33-1
 lsb-release 2.0.r55.a25a4fc-1
@@ -695,7 +695,7 @@ man-db 2.13.1-1
 md4c 0.5.2-1
 mdadm 4.4-1
 meld 3.22.3-1
-mesa 1:25.1.3-2
+mesa 1:25.1.3-3
 mesa-utils 9.0.0-6
 meson 1.8.1-1
 miniupnpc 2.3.0-1
@@ -910,7 +910,7 @@ python-python-socks 2.7.1-2
 python-qrcode 8.2-1
 python-rapidfuzz 3.12.2-1
 python-referencing 0.35.1-3
-python-requests 2.32.3-4
+python-requests 2.32.4-1
 python-requests-toolbelt 1.0.0-3
 python-rpds-py 0.22.3-1
 python-secretstorage 3.3.3-6
@@ -948,7 +948,7 @@ qt6-base 6.9.1-1
 qt6-charts 6.9.1-1
 qt6-declarative 6.9.1-1
 qt6-svg 6.9.1-1
-qt6-tools 6.9.1-1
+qt6-tools 6.9.1-2
 qt6-translations 6.9.1-1
 qt6-wayland 6.9.1-1
 qtractor 1.5.6-1
@@ -1126,7 +1126,7 @@ zita-convolver 4.0.3-4
 zix 0.6.2-1
 zlib 1:1.3.1-2
 zlib-ng 2.2.4-1
-zoom 6.4.12-1
+zoom 6.4.13-1
 zoxide 0.9.8-2
 zram-generator 1.2.1-1
 zsa-keymapp-bin 1.3.7-1
