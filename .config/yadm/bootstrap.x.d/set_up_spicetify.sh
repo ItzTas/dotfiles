@@ -21,6 +21,8 @@ _install_themes() {
         echo "Copying file: $file"
         cp -r "$file" "$dest"
     done
+
+    rm "$dest/*/*.md" "$dest/*/*.png"
 }
 
 _set_up() {
