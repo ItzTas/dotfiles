@@ -22,7 +22,7 @@ _install_themes() {
         cp -r "$file" "$dest"
     done
 
-    rm "$dest/*/*.md" "$dest/*/*.png"
+    rm "$dest"/*/*.md "$dest"/*/*.png
 }
 
 _set_up() {
