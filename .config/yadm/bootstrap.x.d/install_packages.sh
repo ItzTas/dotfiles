@@ -29,113 +29,165 @@ _install_pacman_packages() {
     echo "Iniciating pacman installations"
     echo ""
 
-    set -e
     local packages=(
+        # Terminals
         "ghostty"
-        "timeshift"
-        "socat"
-        "fortune-mod"
-        "eww"
-        "os-prober"
-        "bibata-cursor-theme"
-        "hyprscratch"
+        "kitty"
+
+        # Themes & Looks
+        "waybar"
+        "sddm-sugar-candy-git"
+        "oh-my-posh"
         "swayosd-gtk3"
         "kando-bin"
+        "spicetify-cli"
+        "eww"
+
+        # Hyprland ecosystem
+        "hyprshot"
+        "hyprpaper"
         "hyprlock"
-        "btop"
-        "arch-update"
-        "miru-go-bin"
-        "proto"
-        "brightnessctl"
-        "docker"
-        "ddcutil"
-        "clamtk"
-        "xorg-xhost"
-        "flatpak"
-        "ttf-nerd-fonts-symbols"
-        "hypridle"
-        "fastfetch"
-        "inetutils"
-        "git-bug"
-        "docker-compose"
-        "bitwarden"
-        "weston"
-        "gping"
-        "ncdu"
-        "cmake"
-        "inotify-tools"
-        "mpv"
-        "wf-recorder"
-        "ferdium"
-        "xorg-xrandr"
         "xdg-desktop-portal-hyprland"
-        "vencord"
-        "polkit-gnome"
+        "hypridle"
         "hyprshade"
         "hyprpicker"
-        "dotnet-sdk"
-        "eza"
-        "easyeffects"
-        "fd"
-        "hyprpwmenu"
-        "lsp-plugins"
+        "hyprscratch"
+
+        # System utils
+        "xdg-user-dirs"
+        "cronie"
+        "socat"
+        "inetutils"
+        "os-prober"
+        "xorg-xrandr"
+        "arch-update"
+        "xorg-xhost"
+
+        # Process Manegement
+        "stacer-git"
+        "btop"
+
+        # Package managers
+        "flatpak"
+        "proto"
         "paru"
+
+        # Package manager helpers
+        "pacfiles"
+
+        # Cli tools
+        "yq"
+        "zip"
+        "jq"
         "fzf"
-        "bash-completion"
-        "sesh-bin"
-        "github-cli"
-        "pay-respects"
-        "grim"
-        "hyprpaper"
-        "clipse"
-        "clipse-gui"
-        "hyprshot"
-        "kitty"
-        "lazygit"
-        "lazydocker"
-        "lsd"
         "wget"
         "qman"
         "man-db"
+        "ripgrep"
         "curl"
+        "miru-go-bin"
+        "ddcutil"
+        "brightnessctl"
+        "fastfetch"
+        "pay-respects"
+
+        # Cli file utils
+        "unzip"
+        "eza"
+        "lsd"
+        "fd"
+        "zoxide"
+        "bat"
+
+        # Apps
+        "zsa-keymapp-bin"
+        "spotify"
+        "vencord"
+        "ferdium"
+        "clamtk"
+
+        # Docker
+        "lazydocker"
+        "docker-compose"
+        "docker"
+
+        # Cursor & Fonts
+        "ttf-jetbrains-mono-nerd"
+        "bibata-cursor-theme"
+        "ttf-nerd-fonts-symbols"
+
+        # Git
+        "lazygit"
+        "github-cli"
+        "git-bug"
+
+        # Tui
+        "ncdu"
+        "gping"
+
+        # Compositors
+        "weston"
+        "hyprland"
+
+        # Notifications
+        "dunst"
+        "inotify-tools"
+
+        # Displayers
+        "gthumb"
+        "mpv"
+
+        # Capture
+        "slurp"
+        "wf-recorder"
+        "grim"
+
+        # Clipboard
+        "wl-clipboard"
+        "wl-clip-persist"
+        "clipse"
+        "clipse-gui"
+
+        # File managers & extensions
+        "yazi"
         "nemo"
         "nemo-fileroller"
         "nemo-terminal"
         "nemo-image-converter"
         "nemo-media-columns"
-        "cronie"
-        "neovim"
-        "wl-clip-persist"
-        "oh-my-posh"
-        "pacfiles"
-        "ripgrep"
-        "gthumb"
-        "dunst"
+
+        # Terminal session management
+        "tmux"
+        "sesh-bin"
+
+        # Sound
+        "easyeffects"
+        "lsp-plugins"
+        "calf"
+
+        # Languages
+        "dotnet-sdk"
+
+        # Browsers & Emails
         "zen-browser-bin"
-        "bat"
+        "thunderbird"
+
+        # Editors
+        "neovim"
+
+        # App lanchers & utils
         "rofi-wayland"
         "rofi-emoji"
-        "shellcheck"
-        "shfmt"
-        "slurp"
-        "spotify"
-        "stacer-git"
+
+        # Others
+        "timeshift"
         "termpicker"
-        "thunderbird"
-        "tmux"
-        "ttf-jetbrains-mono-nerd"
-        "unzip"
-        "waybar"
-        "wl-clipboard"
-        "xdg-user-dirs"
-        "yq"
-        "zip"
-        "zoxide"
-        "zsa-keymapp-bin"
-        "sddm-sugar-candy-git"
-        "calf"
-        "yazi"
+
+        # Essentials
+        "cmake"
+        "polkit-gnome"
     )
+
     local installed=()
     local faileds=()
 
