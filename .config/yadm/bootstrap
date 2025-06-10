@@ -3,41 +3,39 @@
 BOOTSTRAP_D="$HOME/.config/yadm/bootstrap.x.d"
 
 if [[ ! -d "$BOOTSTRAP_D" ]]; then
-    echo "Error: bootstrap directory '$BOOTSTRAP_D' not found" >&2
-    exit 1
+	echo "Error: bootstrap directory '$BOOTSTRAP_D' not found" >&2
+	exit 1
 fi
 
 for script in "$BOOTSTRAP_D"/*.sh; do
-    if [[ -f "$script" ]]; then
-        chmod +x "$script"
-    fi
+	if [[ -f "$script" ]]; then
+		chmod +x "$script"
+	fi
 done
 
 scripts=(
-    "install_packages"
-    "enables"
-    "grub_theme"
-    "clone_nvim"
-    "create_dirs"
-    "set_up_docker"
-    "source_tmux_conf"
-    "set_up_sddm"
-    "remove_icons"
-    "set_up_git"
-    "set_up_nemo"
-    "set_up_proto"
-    "set_up_xdg"
-    "set_up_zen-browser"
-    "set_up_spicetify"
+	"install_packages"
+	"enables"
+	"grub_theme"
+	"clone_nvim"
+	"create_dirs"
+	"set_up_docker"
+	"source_tmux_conf"
+	"set_up_sddm"
+	"remove_icons"
+	"set_up_git"
+	"set_up_nemo"
+	"set_up_proto"
+	"set_up_xdg"
+	"set_up_zen-browser"
+	"set_up_spicetify"
 )
 
-#
-
 for script in "${scripts[@]}"; do
-    if [[ -f "$BOOTSTRAP_D/$script" ]]; then
-        echo "Executing: $script"
-        "$BOOTSTRAP_D/$script.sh" || true
-    else
-        echo "Warning: Script '$script' not found in $BOOTSTRAP_D" >&2
-    fi
+	if [[ -f "$BOOTSTRAP_D/$script" ]]; then
+		echo "Executing: $script"
+		"$BOOTSTRAP_D/$script.sh" || true
+	else
+		echo "Warning: Script '$script' not found in $BOOTSTRAP_D" >&2
+	fi
 done
