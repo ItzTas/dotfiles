@@ -1,6 +1,7 @@
 # ~/.gtkrc-2.0
 
 gtk-enable-animations=1
+gtk-application-prefer-dark-theme=1
 gtk-theme-name="Dracula"
 gtk-primary-button-warps-slider=1
 gtk-toolbar-style=3

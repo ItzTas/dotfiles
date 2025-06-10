@@ -44,14 +44,14 @@ _install_pacman_packages() {
         "eww"
 
         # Hyprland ecosystem
-        "hyprshot"
-        "hyprpaper"
-        "hyprlock"
         "xdg-desktop-portal-hyprland"
-        "hypridle"
-        "hyprshade"
         "hyprpicker"
         "hyprscratch"
+        "hyprpaper"
+        "hyprshade"
+        "hyprshot"
+        "hyprlock"
+        "hypridle"
 
         # System utils
         "xdg-user-dirs"
