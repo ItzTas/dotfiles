@@ -31,6 +31,8 @@ scripts=(
     "set_up_spicetify"
 )
 
+#
+
 for script in "${scripts[@]}"; do
     if [[ -f "$BOOTSTRAP_D/$script" ]]; then
         echo "Executing: $script"
