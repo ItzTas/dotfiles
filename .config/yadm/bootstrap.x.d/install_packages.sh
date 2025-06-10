@@ -174,6 +174,7 @@ _install_pacman_packages() {
 
         # Editors
         "neovim"
+        "vim"
 
         # App lanchers & utils
         "rofi-wayland"
