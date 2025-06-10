@@ -167,7 +167,7 @@ giflib 5.2.2-2
 git 2.49.0-2
 git-bug 0.10.1-1
 git-filter-repo 2.47.0-2
-github-cli 2.74.0-1
+github-cli 2.74.1-1
 gitify 6.4.1-1
 glib-networking 1:2.80.1-1
 glib-perl 1.329.4-2
@@ -302,7 +302,7 @@ hyprlock 0.8.2-1
 hyprpaper 0.7.5-1
 hyprpicker 0.4.5-2
 hyprpwmenu 0.2.0-1
-hyprscratch 0.5.3-1
+hyprscratch 0.6.0-1
 hyprshade 3.2.1-1
 hyprshot 1.3.0-3
 hyprutils 0.7.1-1
@@ -735,7 +735,7 @@ nss 3.112-1
 numactl 2.0.19-1
 nvidia 575.57.08-4
 nvidia-settings 575.57.08-1
-nvidia-utils 575.57.08-2
+nvidia-utils 575.57.08-3
 ocl-icd 2.3.3-1
 oh-my-posh 26.6.0-1
 onetbb 2022.1.0-1
@@ -827,7 +827,7 @@ pugixml 1.15-2
 pyalpm 0.10.12-1
 python 3.13.3-1
 python-aiohappyeyeballs 2.6.1-1
-python-aiohttp 3.12.11-1
+python-aiohttp 3.12.12-1
 python-aiohttp-socks 0.10.1-1
 python-aiorpcx 0.25.0-1
 python-aiosignal 1.3.2-1
@@ -887,7 +887,6 @@ python-packaging 25.0-1
 python-pbs-installer 2025.05.29-1
 python-pexpect 4.9.0-4
 python-pillow 11.2.1-1
-python-pip 25.1.1-1
 python-pkginfo 1.12.0-1
 python-platformdirs 4.3.6-2
 python-poetry 2.1.2-1
