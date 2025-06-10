@@ -23,7 +23,7 @@ EOF
     hdr_text=$(
         cat <<EOF
 # 1
-monitor = $MONITOR, preferred, auto, 1, bitdepth, 10, cm, hdr, vrr, 1, sdrbrightness, 1.17, sdrsaturation, 1.45
+monitor = $MONITOR, preferred, auto, 1, bitdepth, 10, cm, hdr, vrr, 1, sdrbrightness, 1.12, sdrsaturation, 1.45
 EOF
     )
 
