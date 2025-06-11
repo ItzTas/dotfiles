@@ -662,7 +662,7 @@ libzen 0.4.41-2
 libzip 1.11.4-1
 licenses 20240728-1
 lilv 0.24.26-1
-linux 6.15.1.arch1-2
+linux 6.15.2.arch1-1
 linux-api-headers 6.15-1
 linux-firmware 20250508.788aadc8-2
 linux-firmware-whence 20250508.788aadc8-2
@@ -733,7 +733,7 @@ npth 1.8-1
 nspr 4.36-1
 nss 3.112-1
 numactl 2.0.19-1
-nvidia 575.57.08-4
+nvidia 575.57.08-5
 nvidia-settings 575.57.08-1
 nvidia-utils 575.57.08-3
 ocl-icd 2.3.3-1
