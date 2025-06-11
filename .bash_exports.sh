@@ -1,11 +1,8 @@
-export IGNOREEOF=999
-
 MY_PROJECT_PATH="$(pwd)"
 export MY_PROJECT_PATH
 
-# pager
-export PAGER="bat --style=plain"
-export SYSTEMD_PAGER="bat --style=plain"
+# for not accidentally exiting with ctrl+d
+export IGNOREEOF=999
 
 # less
 export LESS='-R'
