@@ -1,38 +1,37 @@
 #!/bin/env bash
 
-MONITOR="DP-2"
+MONITOR1="DP-2"
+HYPRMONITOR_FILE="$HOME/.config/hypr/config/hyprmonitor.conf"
+
+SATURATION_MONITOR1="1.45"
+BRIGHTNESS_MONITOR1="1.12"
+
+NO_HDR_TEXT=$(
+    cat <<EOF
+# 0
+monitor = $MONITOR1, preferred, auto, 1, cm, auto, vrr, 1
+EOF
+)
+
+HDR_TEXT=$(
+    cat <<EOF
+# 1
+monitor = $MONITOR1, preferred, auto, 1, bitdepth, 10, cm, hdr, vrr, 1, sdrbrightness, $BRIGHTNESS_MONITOR1, sdrsaturation, $SATURATION_MONITOR1
+EOF
+)
 
 _is_hdr_activated() {
-    local hyprmonitor_file="$1"
-    mode=$(awk 'NR==1 { print $2 }' "$hyprmonitor_file")
+    mode=$(awk 'NR==1 { print $2 }' "$HYPRMONITOR_FILE")
     [[ "$mode" == "1" ]]
 }
 
 _toggle() {
-    local hyprmonitor_file="$HOME/.config/hypr/config/hyprmonitor.conf"
-
-    local no_hdr_text
-    no_hdr_text=$(
-        cat <<EOF
-# 0
-monitor = $MONITOR, preferred, auto, 1, cm, auto, vrr, 1
-EOF
-    )
-
-    local hdr_text
-    hdr_text=$(
-        cat <<EOF
-# 1
-monitor = $MONITOR, preferred, auto, 1, bitdepth, 10, cm, hdr, vrr, 1, sdrbrightness, 1.12, sdrsaturation, 1.45
-EOF
-    )
-
-    if _is_hdr_activated "$hyprmonitor_file"; then
+    if _is_hdr_activated; then
         echo "🔄 HDR is active – disabling..."
-        printf "%s\n" "$no_hdr_text" >"$hyprmonitor_file"
+        printf "%s\n" "$NO_HDR_TEXT" >"$HYPRMONITOR_FILE"
     else
         echo "🔄 HDR is inactive – enabling..."
-        printf "%s\n" "$hdr_text" >"$hyprmonitor_file"
+        printf "%s\n" "$HDR_TEXT" >"$HYPRMONITOR_FILE"
     fi
     hyprctl reload
 }
