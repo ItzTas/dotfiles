@@ -3,7 +3,14 @@ export IGNOREEOF=999
 MY_PROJECT_PATH="$(pwd)"
 export MY_PROJECT_PATH
 
-# bat 
+# pager
+export PAGER="bat --style=plain"
+export SYSTEMD_PAGER="bat --style=plain"
+
+# less
+export LESS='-R'
+
+# bat
 export BAT_THEME="Catppuccin Mocha"
 
 # browser
