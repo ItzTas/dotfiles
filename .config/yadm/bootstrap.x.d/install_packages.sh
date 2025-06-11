@@ -438,7 +438,8 @@ _install_flatpak_packages() {
     done
 
     local flathub_packages=(
-        # "com.stremio.Stremio"
+        # Apps
+        "com.stremio.Stremio"
         # "surf.deckr.deckr"
     )
 
