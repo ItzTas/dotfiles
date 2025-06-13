@@ -80,7 +80,7 @@ fi
 upgrady() {
 	(
 		set -e
-        trap 'exit 0' SIGINT
+		trap 'exit 0' SIGINT
 		{
 			nohup arch-update --check >/dev/null 2>&1 &
 			disown
@@ -90,6 +90,7 @@ upgrady() {
 		flatpak update
 		sudo freshclam
 		paru -Fy
+		pacclean
 		yadm_update
 
 		{
