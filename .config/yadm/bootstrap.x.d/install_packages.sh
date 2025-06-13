@@ -438,8 +438,8 @@ _install_flatpak_packages() {
     done
 
     local flathub_packages=(
-        # Apps
         "com.stremio.Stremio"
+        "com.protonvpn.www"
         # "surf.deckr.deckr"
     )
 
