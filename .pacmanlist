@@ -101,6 +101,7 @@ dotnet-runtime 9.0.4.sdk105-1
 dotnet-sdk 9.0.4.sdk105-1
 dotnet-targeting-pack 9.0.4.sdk105-1
 double-conversion 3.3.1-1
+downgrade 11.5.2-1
 dualsensectl 0.7-1
 duktape 2.7.0-7
 dunst 1.12.2-1
@@ -986,6 +987,7 @@ tzdata 2025b-1
 uchardet 0.0.8-3
 udisks2 2.10.1-5
 unibilium 2.1.2-1
+unrar 1:7.1.7-1
 unzip 6.0-22
 upower 1.90.9-1
 usbutils 018-1

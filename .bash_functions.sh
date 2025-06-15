@@ -163,7 +163,7 @@ if command -v miru &>/dev/null; then
     }
 fi
 
-# others
+# file extraction
 ex() {
     if [ -f "$1" ]; then
         case "$1" in
@@ -181,7 +181,29 @@ ex() {
         *.deb) ar x "$1" ;;
         *.tar.xz) tar xf "$1" ;;
         *.tar.zst) unzstd "$1" ;;
-        *) echo "'$1' cannot be extracted via ex()" ;;
+        *) echo "'$1' cannot be listed by ${FUNCNAME[0]}()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+lse() {
+    if [ -f "$1" ]; then
+        case "$1" in
+        *.tar.bz2 | *.tbz2) tar tjf "$1" ;;
+        *.tar.gz | *.tgz) tar tzf "$1" ;;
+        *.tar.xz) tar tJf "$1" ;;
+        *.tar.zst) unzstd -c "$1" | tar tf - ;;
+        *.tar) tar tf "$1" ;;
+        *.bz2) bunzip2 -l "$1" ;;
+        *.gz) gzip -l "$1" ;;
+        *.zip) unzip -l "$1" ;;
+        *.rar) unrar l "$1" ;;
+        *.7z) 7z l "$1" ;;
+        *.Z) uncompress -c "$1" | wc -c ;;
+        *.deb) ar t "$1" ;;
+        *) echo "'$1' cannot be listed by ${FUNCNAME[0]}()" ;;
         esac
     else
         echo "'$1' is not a valid file"
