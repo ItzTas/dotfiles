@@ -138,6 +138,7 @@ _install_pacman_packages() {
         "mpv"
 
         # Capture
+        "flameshot-git"
         "slurp"
         "wf-recorder"
         "grim"
