@@ -92,6 +92,7 @@ upgrady() {
         paru -Fy
         pacclean
         flatpak uninstall --unused
+        hyprpm update
         yadm_update
 
         {

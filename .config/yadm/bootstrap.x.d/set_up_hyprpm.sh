@@ -12,11 +12,15 @@ _set_up() {
     done
 
     local enables=(
+        "dynamic-cursors"
+        "Hypr-DarkWindow"
     )
 
     for enable in "${enables[@]}"; do
         hyprpm enable "$enable"
     done
+
+    hyprpm reload
 }
 
 _set_up
