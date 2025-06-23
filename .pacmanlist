@@ -138,7 +138,7 @@ file-roller 44.5-1
 filesystem 2025.05.03-1
 findutils 4.10.0-2
 flac 1.5.0-1
-flameshot-git r2071.1d774e30-1
+flameshot-git r2072.ef93ad94-1
 flatpak 1:1.16.1-1
 flex 2.6.4-5
 fluidsynth 2.4.6-1
@@ -922,7 +922,7 @@ sfwbar 1.0_beta16.1-1
 shaderc 2025.2-2
 shadow 4.17.4-1
 shared-mime-info 2.4-2
-skim 0.18.0-2
+skim 0.20.1-1
 sklauncher-bin 3.2.12-4
 slang 2.3.3-3
 slurp 1.5.0-1
