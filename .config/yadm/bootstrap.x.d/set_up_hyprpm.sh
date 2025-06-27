@@ -2,6 +2,8 @@ _set_up() {
     sudo pacman -S base-devel
     sudo pacman -S cmake meson cpio git
 
+    hyprpm update
+
     local plugins=(
         "https://github.com/hyprwm/hyprland-plugins"
         "https://github.com/virtcode/hypr-dynamic-cursors"
@@ -23,4 +25,6 @@ _set_up() {
     hyprpm reload
 }
 
-_set_up
+if command -v hyprpm &>/dev/null; then
+    _set_up
+fi

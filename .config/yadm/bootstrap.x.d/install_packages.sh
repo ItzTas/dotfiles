@@ -44,6 +44,7 @@ _install_pacman_packages() {
         "eww"
 
         # Hyprland ecosystem
+        "hyprland"
         "xdg-desktop-portal-hyprland"
         "hyprpicker"
         "hyprpaper"
@@ -127,7 +128,6 @@ _install_pacman_packages() {
 
         # Compositors
         "weston"
-        "hyprland"
 
         # Notifications
         "dunst"
