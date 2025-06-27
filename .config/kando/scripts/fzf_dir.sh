@@ -38,7 +38,9 @@ _find() {
     rm "$fifo"
 
     if [[ -n "$selected" ]]; then
-        hyprscratch nemo "exec nemo \"$selected\""
+        trap '' SIGHUP
+        nohup nemo "$selected" &>/dev/null 2>&1 &
+        disown
         exit 0
     fi
 }
