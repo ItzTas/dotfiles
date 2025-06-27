@@ -32,13 +32,15 @@ _find() {
     if [[ "$mode" != "file" ]]; then
         selected=$(
             fzf \
-                --preview 'lsd --icon always --tree -F --depth 3 {}' \
+                --preview 'lsd --color always --icon always --tree -F --depth 3 {}' \
+                --ansi \
                 --bind 'ctrl-y:accept' <"$fifo"
         )
     else
         selected=$(
             fzf \
-                --preview 'bat --style=numbers --paging=never {}' \
+                --preview 'bat --style=numbers --color=always --paging=never {}' \
+                --ansi \
                 --bind 'ctrl-y:accept' <"$fifo"
         )
     fi

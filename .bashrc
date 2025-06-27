@@ -20,7 +20,7 @@ shopt -s globstar
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
+	debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # sleep 10; alert
@@ -28,70 +28,70 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # alias definitions.
 if [ -f "$HOME/.bash_aliases" ]; then
-    source "$HOME/.bash_aliases"
+	source "$HOME/.bash_aliases"
 fi
 
 # bash functions
 if [ -f "$HOME/.bash_functions.sh" ]; then
-    source "$HOME/.bash_functions.sh"
+	source "$HOME/.bash_functions.sh"
 fi
 
 # bash binds
 if [ -f "$HOME/.bash_binds.sh" ]; then
-    source "$HOME/.bash_binds.sh"
+	source "$HOME/.bash_binds.sh"
 fi
 
 # bash exports
 if [ -f "$HOME/.bash_exports.sh" ]; then
-    source "$HOME/.bash_exports.sh"
+	source "$HOME/.bash_exports.sh"
 fi
 
 # bash evals
 if [ -f "$HOME/.bash_evals.sh" ]; then
-    source "$HOME/.bash_evals.sh"
+	source "$HOME/.bash_evals.sh"
 fi
 
 # my fzf
 if [ -f "$HOME/.my_fzf.sh" ]; then
-    source "$HOME/.my_fzf.sh"
+	source "$HOME/.my_fzf.sh"
 fi
 
 # Proto completions
 if command -v proto >/dev/null 2>&1; then
-    if [ ! -f "$HOME/.bash_completions/proto.sh" ]; then
-        mkdir -p ~/.bash_completions
-        proto completions --shell bash >~/.bash_completions/proto.sh
-    fi
-    # shellcheck disable=SC1090
-    source "$HOME/.bash_completions/proto.sh"
+	if [ ! -f "$HOME/.bash_completions/proto.sh" ]; then
+		mkdir -p ~/.bash_completions
+		proto completions --shell bash >~/.bash_completions/proto.sh
+	fi
+	# shellcheck disable=SC1090
+	source "$HOME/.bash_completions/proto.sh"
 fi
 
 # Eww completions
 if command -v eww >/dev/null 2>&1; then
-    if [ ! -f "$HOME/.bash_completions/eww.sh" ]; then
-        mkdir -p ~/.bash_completions
-        eww shell-completions --shell bash >"$HOME/.bash_completions/eww.sh"
-    fi
-    # shellcheck disable=SC1090
-    source "$HOME/.bash_completions/eww.sh"
+	if [ ! -f "$HOME/.bash_completions/eww.sh" ]; then
+		mkdir -p ~/.bash_completions
+		eww shell-completions --shell bash >"$HOME/.bash_completions/eww.sh"
+	fi
+	# shellcheck disable=SC1090
+	source "$HOME/.bash_completions/eww.sh"
 fi
 
 # GitBug completions
 if command -v git bug >/dev/null 2>&1; then
-    if [ ! -f "$HOME/.bash_completions/gitbug.sh" ]; then
-        mkdir -p ~/.bash_completions
-        git bug completion bash >"$HOME/.bash_completions/gitbug.sh"
-    fi
-    # shellcheck disable=SC1090
-    source "$HOME/.bash_completions/gitbug.sh"
+	if [ ! -f "$HOME/.bash_completions/gitbug.sh" ]; then
+		mkdir -p ~/.bash_completions
+		git bug completion bash >"$HOME/.bash_completions/gitbug.sh"
+	fi
+	# shellcheck disable=SC1090
+	source "$HOME/.bash_completions/gitbug.sh"
 fi
 
 # bash completion
 if [ -f /usr/share/bash-completion/bash_completion ]; then
-    source /usr/share/bash-completion/bash_completion
+	source /usr/share/bash-completion/bash_completion
 elif [ -f /etc/bash_completion ]; then
-    # shellcheck disable=SC1091
-    source /etc/bash_completion
+	# shellcheck disable=SC1091
+	source /etc/bash_completion
 fi
 
 export PATH=$PATH:/usr/local/go/bin
@@ -114,4 +114,3 @@ export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/talinux/.lmstudio/bin"
 # End of LM Studio CLI section
-
