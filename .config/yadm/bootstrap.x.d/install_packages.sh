@@ -103,7 +103,7 @@ _install_pacman_packages() {
         # Apps
         "zsa-keymapp-bin"
         "spotify"
-        # "vencord"
+        "vesktop-git"
         "ferdium"
         "clamtk"
 
