@@ -46,7 +46,6 @@ _install_pacman_packages() {
         # Hyprland ecosystem
         "xdg-desktop-portal-hyprland"
         "hyprpicker"
-        "hyprscratch"
         "hyprpaper"
         "hyprshade"
         "hyprshot"

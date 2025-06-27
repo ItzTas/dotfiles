@@ -29,11 +29,19 @@ _find() {
 
     _handle_fifo "$fifo" "$search_dir" "$mode"
 
-    selected=$(
-        fzf \
-            --preview 'eza -A --git --icons --tree --level 3 -F {}' \
-            --bind 'ctrl-y:accept' <"$fifo"
-    )
+    if [[ "$mode" != "file" ]]; then
+        selected=$(
+            fzf \
+                --preview 'lsd --icon always --tree -F --depth 3 {}' \
+                --bind 'ctrl-y:accept' <"$fifo"
+        )
+    else
+        selected=$(
+            fzf \
+                --preview 'bat --style=numbers --paging=never {}' \
+                --bind 'ctrl-y:accept' <"$fifo"
+        )
+    fi
 
     rm "$fifo"
 
