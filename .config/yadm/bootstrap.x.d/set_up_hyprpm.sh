@@ -16,6 +16,7 @@ _set_up() {
     local enables=(
         "dynamic-cursors"
         "Hypr-DarkWindow"
+        "hyprexpo"
     )
 
     for enable in "${enables[@]}"; do
