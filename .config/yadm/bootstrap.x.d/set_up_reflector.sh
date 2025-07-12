@@ -7,8 +7,12 @@ _set_up() {
         sudo mkdir -p "$system_config_dir"
     fi
 
-    echo "Creating symlink from $reflector_config_file to /etc/xdg/reflector/reflector.conf"
-    sudo ln -fs "$reflector_config_file" "$system_config_dir/reflector.conf"
+    echo "Copying $reflector_config_file to $system_config_dir/"
+    sudo cp -f "$reflector_config_file" "$system_config_dir/reflector.conf"
+
+    sudo chmod 644 /etc/xdg/reflector/reflector.conf
+
+    sudo systemctl enable reflector.timer
 }
 
 _set_up
