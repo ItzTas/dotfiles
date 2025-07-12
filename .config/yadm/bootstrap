@@ -22,20 +22,21 @@ scripts=(
     "set_up_docker"
     "source_tmux_conf"
     "remove_icons"
-    "set_up_sddm"
-    "set_up_git"
-    "set_up_nemo"
-    "set_up_proto"
-    "set_up_xdg"
-    "set_up_zen-browser"
-    "set_up_spicetify"
-    "set_up_hyprpm"
 )
 
 for script in "${scripts[@]}"; do
     if [[ -f "$BOOTSTRAP_D/$script" ]]; then
         echo "Executing: $script"
         "$BOOTSTRAP_D/$script.sh" || true
+    else
+        echo "Warning: Script '$script' not found in $BOOTSTRAP_D" >&2
+    fi
+done
+
+for script in "$BOOTSTRAP_D"/set_up_*; do
+    if [[ -f "$script" ]]; then
+        echo "Executing: $(basename "$script")"
+        "$script" || true
     else
         echo "Warning: Script '$script' not found in $BOOTSTRAP_D" >&2
     fi
