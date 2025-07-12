@@ -12,7 +12,7 @@ _set_up() {
 
     sudo chmod 644 /etc/xdg/reflector/reflector.conf
 
-    sudo systemctl enable reflector.timer
+    sudo systemctl enable --now reflector.timer
 }
 
 _set_up
