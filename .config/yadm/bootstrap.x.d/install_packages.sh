@@ -63,6 +63,7 @@ _install_pacman_packages() {
         "xorg-xrandr"
         "arch-update"
         "xorg-xhost"
+        "ufw"
 
         # Process Manegement
         "stacer-git"

@@ -5,6 +5,7 @@ _start_enables() {
         "cronie"
         "docker"
         "swayosd-libinput-backend.service"
+        "ufw"
     )
     for enable in "${enables[@]}"; do
         sudo systemctl enable --now "$enable"
