@@ -29,7 +29,7 @@ _set_up() {
     _install_themes
 
     spicetify config current_theme Sleek color_scheme RosePine
-    spicetify config always_enable_devtools 1
+    # spicetify config always_enable_devtools 1
     spicetify apply
 }
 
