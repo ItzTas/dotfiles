@@ -57,8 +57,9 @@ _install_ohitstom_extensions() {
             else
                 echo "→ Copying '$ext.js' to Extensions folder"
                 cp "$src" "$dest"
-                spicetify config extensions "$ext.js"
             fi
+            echo "→ Ensuring '$ext.js' is enabled"
+            spicetify config extensions "$ext.js"
         else
             echo "⚠️ Extension '$ext.js' not found in repo at expected path: $src"
         fi
