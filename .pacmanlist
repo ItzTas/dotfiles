@@ -678,8 +678,9 @@ nettle 3.10.2-1
 networkmanager 1.52.1-1
 ninja 1.12.1-2
 node-gyp 11.2.0-1
-nodejs 24.4.0-1
+nodejs 24.4.1-1
 nodejs-nopt 7.2.1-1
+noto-fonts-cjk 20240730-1
 noto-fonts-emoji 1:2.048-1
 npm 11.4.2-1
 npth 1.8-1
