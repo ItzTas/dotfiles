@@ -170,7 +170,7 @@ git-bug 0.10.1-1
 git-filter-repo 2.47.0-2
 github-cli 2.75.1-1
 gitify 6.5.0-1
-glaze 5.5.3-1
+glaze 5.5.4-1
 glib-networking 1:2.80.1-1
 glib-perl 1.329.4-3
 glib2 2.84.3-1
@@ -243,7 +243,7 @@ hyphen 2.8.8-6
 hyprcursor-git 0.1.12.r3.g45fcc10-1
 hyprgraphics-git 0.1.5.r0.g340494a-1
 hypridle-git 0.1.6.r11.gdda793b-1
-hyprland-git 0.50.0.r3.g409b56f-1
+hyprland-git 0.50.0.r4.g49d73d1-1
 hyprland-qt-support-git 0.1.0.r9.g4c8053c-1
 hyprland-qtutils-git 0.1.4.r2.gb13c748-1
 hyprlang-git 0.6.3.r3.gcee0145-1
