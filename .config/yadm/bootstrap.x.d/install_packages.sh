@@ -108,6 +108,7 @@ _install_pacman_packages() {
         "vesktop-git"
         "ferdium"
         "clamtk"
+        "localsend-bin"
 
         # Docker
         "lazydocker"
