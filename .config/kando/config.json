@@ -7,7 +7,7 @@
   "enableDarkModeForMenuThemes": false,
   "soundTheme": "none",
   "soundVolume": 0.5,
-  "sidebarVisible": false,
+  "sidebarVisible": true,
   "ignoreWriteProtectedConfigFiles": false,
   "trayIconFlavor": "color",
   "enableVersionCheck": true,

@@ -17,10 +17,10 @@ aom 3.12.1-1
 appstream 1.0.5-2
 appstream-glib 0.8.3-2
 aquamarine-git 0.9.2.r0.ge31b575-1
-arch-update 3.13.1-1
+arch-update 3.13.2-1
 archlinux-appstream-data 20250529-1
 archlinux-contrib 20250219-1
-archlinux-keyring 20250707-1
+archlinux-keyring 20250716-1
 at-spi2-core 2.56.3-1
 atkmm 2.28.4-1
 attr 2.5.2-1
@@ -41,6 +41,7 @@ bison 3.8.2-8
 bitwarden 2025.4.2-1
 blas 3.12.1-2
 bluez-libs 5.83-1
+boost-libs 1.88.0-3
 botan2 2.19.5-2
 brightnessctl 0.5.1-3
 brotli 1.1.0-3
@@ -80,7 +81,7 @@ cpio 2.15-3
 cppdap 1.58.0-2
 cronie 1.7.2-1
 cryptsetup 2.8.0-1
-curl 8.14.1-1
+curl 8.15.0-1
 dav1d 1.5.1-1
 db5.3 5.3.28-5
 dbus 1.16.2-1
@@ -148,6 +149,7 @@ fortune-mod 3.22.0-1
 freetype2 2.13.3-3
 fribidi 1.0.16-2
 fuse-common 3.17.1-1
+fuse2 2.9.9-5
 fuse3 3.17.1-1
 fzf 0.64.0-1
 gawk 5.3.2-1
@@ -168,7 +170,7 @@ giflib 5.2.2-2
 git 2.50.1-3
 git-bug 0.10.1-1
 git-filter-repo 2.47.0-2
-github-cli 2.75.1-1
+github-cli 2.76.0-1
 gitify 6.5.0-1
 glaze 5.5.4-1
 glib-networking 1:2.80.1-1
@@ -244,7 +246,7 @@ hyphen 2.8.8-6
 hyprcursor-git 0.1.12.r3.g45fcc10-1
 hyprgraphics-git 0.1.5.r0.g340494a-1
 hypridle-git 0.1.6.r11.gdda793b-1
-hyprland-git 0.50.0.r7.ga05c797-1
+hyprland-git 0.50.0.r11.g4adf658-1
 hyprland-qt-support-git 0.1.0.r9.g4c8053c-1
 hyprland-qtutils-git 0.1.4.r2.gb13c748-1
 hyprlang-git 0.6.3.r3.gcee0145-1
@@ -304,7 +306,7 @@ lib32-alsa-plugins 1.2.12-1
 lib32-audit 4.0.5-1
 lib32-brotli 1.1.0-1
 lib32-bzip2 1.0.8-4
-lib32-curl 8.14.1-1
+lib32-curl 8.15.0-1
 lib32-dbus 1.16.2-1
 lib32-e2fsprogs 1.47.3-1
 lib32-expat 2.7.1-1
@@ -355,7 +357,7 @@ lib32-libxss 1.2.4-2
 lib32-libxxf86vm 1.1.5-2
 lib32-llvm-libs 1:20.1.6-1
 lib32-lm_sensors 1:3.6.2-2
-lib32-mesa 1:25.1.5-1
+lib32-mesa 1:25.1.6-1
 lib32-ncurses 6.5-2
 lib32-nspr 4.36-1
 lib32-nss 3.113.1-1
@@ -406,7 +408,7 @@ libcdio-paranoia 10.2+2.0.2-1
 libcloudproviders 0.3.6-2
 libcolord 1.4.8-1
 libcups 2:2.4.12-2
-libcurl-gnutls 8.14.1-1
+libcurl-gnutls 8.15.0-1
 libdaemon 0.14-6
 libdatrie 0.2.13-4
 libdbusmenu-glib 16.04.0.r498-2
@@ -538,6 +540,7 @@ libtheora 1.2.0-1
 libtiff 4.7.0-1
 libtirpc 1.3.6-2
 libtool 2.5.4+r23+g5b582aed-1
+libtorrent-rasterbar 1:2.0.11-4
 libunibreak 6.1-1
 libunistring 1.3-1
 libunwind 1.8.2-1
@@ -600,7 +603,7 @@ libzen 0.4.41-2
 libzip 1.11.4-1
 licenses 20240728-1
 lilv 0.24.26-1
-linux 6.15.6.arch1-1
+linux 6.15.7.arch1-1
 linux-api-headers 6.15-1
 linux-firmware 20250708-1
 linux-firmware-amdgpu 20250708-1
@@ -619,6 +622,7 @@ llhttp 9.2.1-2
 llvm-libs 20.1.8-1
 lm_sensors 1:3.6.2-1
 lmdb 0.9.33-1
+localsend-bin 1.17.0-1
 lsb-release 2.0.r55.a25a4fc-1
 lsd 1.1.5-1
 lsof 4.99.5-1
@@ -644,7 +648,7 @@ man-db 2.13.1-1
 md4c 0.5.2-1
 mdadm 4.4-1
 meld 3.22.3-1
-mesa 1:25.1.5-1
+mesa 1:25.1.6-1
 mesa-utils 9.0.0-7
 meson 1.8.2-2
 miniupnpc 2.3.3-1
@@ -683,7 +687,7 @@ npth 1.8-1
 nspr 4.36-1
 nss 3.113.1-1
 numlockx 1.2-6
-nvidia 575.64.03-3
+nvidia 575.64.03-4
 nvidia-settings 575.64-1
 nvidia-utils 575.64.03-1
 ocl-icd 2.3.3-1
@@ -770,7 +774,7 @@ popt 1.19-2
 portaudio 1:19.7.0-3
 pps-tools 1.0.3-2
 procps-ng 4.0.5-3
-proto-bin 0.50.5-1
+proto-bin 0.51.1-1
 protobuf 31.1-1
 psmisc 23.7-1
 pugixml 1.15-2
@@ -789,7 +793,7 @@ python-build 1.2.2-3
 python-cachecontrol 1:0.14.3-1
 python-cachy 0.3.0-11
 python-cairo 1.28.0-1
-python-certifi 2025.07.09-1
+python-certifi 2025.07.14-1
 python-cffi 1.17.1-2
 python-charset-normalizer 3.4.2-1
 python-chevron 0.14.0-1
@@ -878,6 +882,7 @@ python-xmltodict 0.14.2-1
 python-yaml 6.0.2-2
 python-yarl 1.21.1-1
 python-zipp 3.21.0-2
+qbittorrent 5.1.2-1
 qman 1:1.4.2-1
 qt5-base 5.15.17+kde+r123-1
 qt5-declarative 5.15.17+kde+r21-1
@@ -892,6 +897,8 @@ qt5-webengine 5.15.19-2
 qt6-base 6.9.1-4
 qt6-charts 6.9.1-1
 qt6-declarative 6.9.1-1
+qt6-multimedia 6.9.1-1
+qt6-multimedia-ffmpeg 6.9.1-1
 qt6-svg 6.9.1-1
 qt6-tools 6.9.1-2
 qt6-translations 6.9.1-1
@@ -938,14 +945,14 @@ socat 1.8.0.3-2
 sord 0.16.18-1
 sound-theme-freedesktop 0.8-6
 soundtouch 2.4.0-1
-spacer-bin 0.3.9-1
+spacer-bin 0.4.2-1
 spdlog 1.15.3-1
 speex 1.2.1-2
 speexdsp 1.2.1-2
 spicetify-cli 2.40.11-1
 spirv-tools 1:1.4.321.0-1
 spotify 1:1.2.63.394-1
-sqlite 3.50.2-1
+sqlite 3.50.3-1
 sratom 0.6.18-1
 srt 1.5.4-1
 stacer-git 1.3.5.r1.gfb1a1f5-1
