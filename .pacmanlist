@@ -16,7 +16,7 @@ antimicrox 3.5.1-1
 aom 3.12.1-1
 appstream 1.0.5-2
 appstream-glib 0.8.3-2
-aquamarine-git 0.9.2.r0.ge31b575-1
+aquamarine-git 0.9.2.r1.g141a991-1
 arch-update 3.13.2-1
 archlinux-appstream-data 20250529-1
 archlinux-contrib 20250219-1
@@ -129,7 +129,7 @@ exempi 2.6.6-1
 exiv2 0.28.5-1
 expat 2.7.1-1
 fakeroot 1.37.1.2-1
-fastfetch 2.48.0-1
+fastfetch 2.48.1-1
 fd 10.2.0-1
 ferdium-nightly 7.1.0.nightly.3-1
 ffmpeg 2:7.1.1-5
@@ -139,7 +139,7 @@ file-roller 44.5-1
 filesystem 2025.05.03-1
 findutils 4.10.0-3
 flac 1.5.0-1
-flameshot-git r2089.7ae2be6d-1
+flameshot-git r2090.4f224d9a-1
 flatpak 1:1.16.1-1
 flex 2.6.4-5
 fluidsynth 2.4.6-1
@@ -191,7 +191,7 @@ gnulib-l10n 20241231-1
 gnupg 2.4.8-1
 gnutls 3.8.10-1
 gobject-introspection-runtime 1.84.0-2
-godot 4.4.1-3
+godot 4.4.1-4
 gperftools 2.16-1
 gpgme 2.0.0-1
 gping 1.18.0-2
@@ -246,7 +246,7 @@ hyphen 2.8.8-6
 hyprcursor-git 0.1.12.r3.g45fcc10-1
 hyprgraphics-git 0.1.5.r0.g340494a-1
 hypridle-git 0.1.6.r11.gdda793b-1
-hyprland-git 0.50.0.r11.g4adf658-1
+hyprland-git 0.50.0.r16.g91d8a62-1
 hyprland-qt-support-git 0.1.0.r9.g4c8053c-1
 hyprland-qtutils-git 0.1.4.r2.gb13c748-1
 hyprlang-git 0.6.3.r3.gcee0145-1
@@ -448,7 +448,7 @@ libice 1.1.2-1
 libidn 1.43-1
 libidn2 2.3.7-1
 libiec61883 1.2.0-8
-libimagequant 4.3.4-1
+libimagequant 4.4.0-1
 libimobiledevice 1.3.0-16
 libimobiledevice-glue 1.3.2-1
 libinih 58-1
@@ -798,7 +798,7 @@ python-cffi 1.17.1-2
 python-charset-normalizer 3.4.2-1
 python-chevron 0.14.0-1
 python-cleo 1:2.1.0-1
-python-click 8.1.8-1
+python-click 8.2.1-1
 python-configargparse 1.5.5-3
 python-crashtest 0.4.1-4
 python-cryptography 45.0.5-1
@@ -1057,6 +1057,7 @@ xorg-server-common 21.1.18-2
 xorg-setxkbmap 1.3.4-2
 xorg-xauth 1.1.4-1
 xorg-xhost 1.0.10-1
+xorg-xinput 1.6.4-2
 xorg-xkbcomp 1.4.7-1
 xorg-xprop 1.2.8-1
 xorg-xrandr 1.5.3-1
