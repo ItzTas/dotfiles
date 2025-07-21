@@ -10,6 +10,16 @@ if command -v proto >/dev/null 2>&1; then
     source "$HOME/.bash_completions/proto.sh"
 fi
 
+# Bootdev completions
+if command -v bootdev >/dev/null 2>&1; then
+    if [ ! -f "$HOME/.bash_completions/bootdev.sh" ]; then
+        mkdir -p ~/.bash_completions
+        bootdev completion bash >~/.bash_completions/bootdev.sh
+    fi
+    # shellcheck disable=SC1090
+    source "$HOME/.bash_completions/bootdev.sh"
+fi
+
 # Eww completions
 if command -v eww >/dev/null 2>&1; then
     if [ ! -f "$HOME/.bash_completions/eww.sh" ]; then
@@ -21,7 +31,7 @@ if command -v eww >/dev/null 2>&1; then
 fi
 
 # GitBug completions
-if command -v git bug >/dev/null 2>&1; then
+if command -v git-bug >/dev/null 2>&1; then
     if [ ! -f "$HOME/.bash_completions/gitbug.sh" ]; then
         mkdir -p ~/.bash_completions
         git bug completion bash >"$HOME/.bash_completions/gitbug.sh"
