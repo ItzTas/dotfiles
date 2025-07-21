@@ -93,6 +93,7 @@ _install_pacman_packages() {
         "brightnessctl"
         "fastfetch"
         "pay-respects"
+        "direnv"
 
         # Cli file utils
         "unzip"

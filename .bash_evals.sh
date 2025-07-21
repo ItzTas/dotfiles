@@ -1,6 +1,3 @@
-# linuxbrew
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 # oh my posh
 if command -v oh-my-posh &>/dev/null; then
     if [ -f "$HOME/.config/ohmyposh/my_amro.toml" ]; then
@@ -16,10 +13,20 @@ fi
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # pay-respects
-eval "$(pay-respects bash --alias f)"
+if command -v pay-respects &>/dev/null; then
+    eval "$(pay-respects bash --alias f)"
+fi
 
 # proto
-eval "$(proto activate bash)"
+if command -v proto &>/dev/null; then
+    eval "$(proto activate bash)"
+fi
 
 # zoxide
-eval "$(zoxide init bash --cmd cd)"
+if command -v zoxide &>/dev/null; then
+    eval "$(zoxide init bash --cmd cd)"
+fi
+
+if command -v direnv &>/dev/null; then
+    eval "$(direnv hook bash)"
+fi
