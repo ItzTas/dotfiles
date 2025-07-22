@@ -1,6 +1,6 @@
 {
     "settings": {
-        "autoUpdate": false,
+        "autoUpdate": true,
         "autoUpdateNotification": true,
         "useQuickCss": true,
         "themeLinks": [
@@ -43,13 +43,13 @@
                 "enabled": true
             },
             "MessagePopoverAPI": {
-                "enabled": false
+                "enabled": true
             },
             "MessageUpdaterAPI": {
-                "enabled": false
+                "enabled": true
             },
             "ServerListAPI": {
-                "enabled": false
+                "enabled": true
             },
             "UserSettingsAPI": {
                 "enabled": true
@@ -85,9 +85,10 @@
                 "showFolderIcon": 1,
                 "keepIcons": false,
                 "closeAllHomeButton": false,
-                "closeAllFolders": false,
+                "closeAllFolders": true,
                 "forceOpen": false,
-                "sidebarAnim": true
+                "sidebarAnim": true,
+                "closeOthers": false
             },
             "BetterGifAltText": {
                 "enabled": true
@@ -125,7 +126,8 @@
                 "blurAmount": 10
             },
             "CallTimer": {
-                "enabled": true
+                "enabled": true,
+                "format": "stopwatch"
             },
             "ClearURLs": {
                 "enabled": true
@@ -135,7 +137,7 @@
                 "color": "313338"
             },
             "ColorSighted": {
-                "enabled": false
+                "enabled": true
             },
             "ConsoleJanitor": {
                 "enabled": false
@@ -167,7 +169,7 @@
             },
             "CustomIdle": {
                 "enabled": true,
-                "idleTimeout": 30,
+                "idleTimeout": 7.689530685920577,
                 "remainInIdle": true
             },
             "Dearrow": {
@@ -211,7 +213,7 @@
                 "nitroFirst": true
             },
             "FavoriteEmojiFirst": {
-                "enabled": false
+                "enabled": true
             },
             "FavoriteGifSearch": {
                 "enabled": true
@@ -254,7 +256,7 @@
                 "enabled": false
             },
             "HideMedia": {
-                "enabled": false
+                "enabled": true
             },
             "iLoveSpam": {
                 "enabled": false
@@ -278,10 +280,13 @@
                 "zoom": 2,
                 "nearestNeighbour": false,
                 "square": false,
-                "saveZoomValues": true
+                "saveZoomValues": true,
+                "invertScroll": true,
+                "zoomSpeed": 0.5
             },
             "ImplicitRelationships": {
-                "enabled": false
+                "enabled": true,
+                "sortByAffinity": true
             },
             "InvisibleChat": {
                 "enabled": false,
@@ -319,7 +324,8 @@
                 "toolTip": true
             },
             "MentionAvatars": {
-                "enabled": true
+                "enabled": true,
+                "showAtSymbol": true
             },
             "MessageClickActions": {
                 "enabled": true,
@@ -335,13 +341,23 @@
                 "showMillis": false
             },
             "MessageLinkEmbeds": {
-                "enabled": false,
+                "enabled": true,
                 "automodEmbeds": "never",
                 "listMode": "blacklist",
                 "idList": ""
             },
             "MessageLogger": {
-                "enabled": false
+                "enabled": true,
+                "deleteStyle": "text",
+                "logDeletes": true,
+                "collapseDeleted": true,
+                "logEdits": true,
+                "inlineEdits": true,
+                "ignoreBots": false,
+                "ignoreSelf": false,
+                "ignoreUsers": "",
+                "ignoreChannels": "",
+                "ignoreGuilds": ""
             },
             "MessageTags": {
                 "enabled": false
@@ -359,7 +375,7 @@
                 "enabled": false
             },
             "NewGuildSettings": {
-                "enabled": false,
+                "enabled": true,
                 "guild": true,
                 "messages": 3,
                 "everyone": true,
@@ -386,7 +402,7 @@
                 "enabled": false
             },
             "NoOnboardingDelay": {
-                "enabled": false
+                "enabled": true
             },
             "NoPendingCount": {
                 "enabled": false
@@ -395,7 +411,10 @@
                 "enabled": false
             },
             "NoReplyMention": {
-                "enabled": false
+                "enabled": true,
+                "userList": "1234567890123445,1234567890123445",
+                "shouldPingListed": true,
+                "inverseShiftReply": false
             },
             "NoServerEmojis": {
                 "enabled": false
@@ -407,7 +426,7 @@
                 "enabled": false
             },
             "NormalizeMessageLinks": {
-                "enabled": false
+                "enabled": true
             },
             "NotificationVolume": {
                 "enabled": true,
@@ -464,7 +483,7 @@
                 }
             },
             "PlainFolderIcon": {
-                "enabled": false
+                "enabled": true
             },
             "PlatformIndicators": {
                 "enabled": false
@@ -482,10 +501,16 @@
                 "enabled": false
             },
             "ReadAllNotificationsButton": {
-                "enabled": false
+                "enabled": true
             },
             "RelationshipNotifier": {
-                "enabled": false
+                "enabled": true,
+                "notices": true,
+                "offlineRemovals": true,
+                "friends": true,
+                "friendRequestCancels": true,
+                "servers": true,
+                "groups": true
             },
             "ReplaceGoogleSearch": {
                 "enabled": true,
@@ -502,9 +527,9 @@
                 "enabled": true
             },
             "ReviewDB": {
-                "enabled": false,
+                "enabled": true,
                 "notifyReviews": true,
-                "showWarning": true,
+                "showWarning": false,
                 "hideTimestamps": false,
                 "hideBlockedUsers": true
             },
@@ -525,7 +550,8 @@
                 "summaryExpiryThresholdDays": 3
             },
             "SendTimestamps": {
-                "enabled": false
+                "enabled": true,
+                "replaceMessageContents": true
             },
             "ServerInfo": {
                 "enabled": true
@@ -543,10 +569,15 @@
                 "enabled": false
             },
             "ShowHiddenChannels": {
-                "enabled": false
+                "enabled": true,
+                "showMode": 0,
+                "hideUnreads": true
             },
             "ShowHiddenThings": {
-                "enabled": false
+                "enabled": true,
+                "showTimeouts": true,
+                "showInvitesPaused": true,
+                "showModView": true
             },
             "ShowMeYourName": {
                 "enabled": false
@@ -561,7 +592,8 @@
             "SilentTyping": {
                 "enabled": true,
                 "isEnabled": true,
-                "showIcon": false
+                "showIcon": true,
+                "contextMenu": true
             },
             "SortFriendRequests": {
                 "enabled": false
@@ -611,12 +643,14 @@
                 "enabled": false
             },
             "Translate": {
-                "enabled": false,
+                "enabled": true,
                 "showChatBarButton": true,
                 "service": "google",
                 "deeplApiKey": "",
                 "autoTranslate": false,
-                "showAutoTranslateTooltip": true
+                "showAutoTranslateTooltip": true,
+                "receivedInput": "auto",
+                "receivedOutput": "en"
             },
             "TypingIndicator": {
                 "enabled": true,
@@ -730,7 +764,7 @@
                 "enabled": true
             },
             "ExpressionCloner": {
-                "enabled": false
+                "enabled": true
             }
         },
         "notifications": {
@@ -740,10 +774,10 @@
             "logLimit": 50
         },
         "cloud": {
-            "authenticated": false,
+            "authenticated": true,
             "url": "https://api.vencord.dev/",
-            "settingsSync": false,
-            "settingsSyncVersion": 1752358805343
+            "settingsSync": true,
+            "settingsSyncVersion": 1753197736311
         }
     },
     "quickCss": ""
