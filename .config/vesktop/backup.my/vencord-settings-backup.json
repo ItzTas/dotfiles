@@ -31,13 +31,13 @@
                 "enabled": true
             },
             "MemberListDecoratorsAPI": {
-                "enabled": false
+                "enabled": true
             },
             "MessageAccessoriesAPI": {
                 "enabled": true
             },
             "MessageDecorationsAPI": {
-                "enabled": false
+                "enabled": true
             },
             "MessageEventsAPI": {
                 "enabled": true
@@ -97,13 +97,17 @@
                 "enabled": true
             },
             "BetterNotesBox": {
-                "enabled": false
+                "enabled": true,
+                "hide": false,
+                "noSpellCheck": false
             },
             "BetterRoleContext": {
                 "enabled": false
             },
             "BetterRoleDot": {
-                "enabled": false
+                "enabled": true,
+                "bothStyles": false,
+                "copyRoleColorInProfilePopout": false
             },
             "BetterSessions": {
                 "enabled": true,
@@ -150,7 +154,7 @@
                 "copyUnicode": true
             },
             "CopyFileContents": {
-                "enabled": false
+                "enabled": true
             },
             "CopyUserURLs": {
                 "enabled": true
@@ -232,7 +236,7 @@
                 "enabled": true
             },
             "ForceOwnerCrown": {
-                "enabled": false
+                "enabled": true
             },
             "FriendInvites": {
                 "enabled": true
@@ -254,7 +258,7 @@
                 "enabled": false
             },
             "GreetStickerPicker": {
-                "enabled": false
+                "enabled": true
             },
             "HideMedia": {
                 "enabled": true
@@ -301,7 +305,7 @@
                 "applyColorOnlyToUsersWithoutColor": false
             },
             "KeepCurrentChannel": {
-                "enabled": false
+                "enabled": true
             },
             "LastFMRichPresence": {
                 "enabled": false,
@@ -404,7 +408,8 @@
                 "enabled": false
             },
             "NoMosaic": {
-                "enabled": false
+                "enabled": false,
+                "inlineVideo": true
             },
             "NoOnboardingDelay": {
                 "enabled": true
@@ -461,7 +466,7 @@
                 "enabled": false
             },
             "PauseInvitesForever": {
-                "enabled": false
+                "enabled": true
             },
             "PermissionFreeWill": {
                 "enabled": false,
@@ -491,13 +496,17 @@
                 "enabled": true
             },
             "PlatformIndicators": {
-                "enabled": false
+                "enabled": true,
+                "list": true,
+                "badges": true,
+                "messages": true,
+                "colorMobileIndicator": true
             },
             "PreviewMessage": {
                 "enabled": false
             },
             "QuickMention": {
-                "enabled": false
+                "enabled": true
             },
             "QuickReply": {
                 "enabled": false
@@ -526,7 +535,7 @@
                 "enabled": false
             },
             "RevealAllSpoilers": {
-                "enabled": false
+                "enabled": true
             },
             "ReverseImageSearch": {
                 "enabled": true
@@ -566,13 +575,17 @@
                 "enabled": false
             },
             "ShikiCodeblocks": {
-                "enabled": false
+                "enabled": false,
+                "useDevIcon": "GREYSCALE",
+                "theme": "https://raw.githubusercontent.com/shikijs/textmate-grammars-themes/2d87559c7601a928b9f7e0f0dda243d2fb6d4499/packages/tm-themes/themes/dark-plus.json"
             },
             "ShowAllMessageButtons": {
                 "enabled": false
             },
             "ShowConnections": {
-                "enabled": false
+                "enabled": true,
+                "iconSize": 32,
+                "iconSpacing": 1
             },
             "ShowHiddenChannels": {
                 "enabled": true,
@@ -589,11 +602,13 @@
                 "enabled": false
             },
             "ShowTimeoutDuration": {
-                "enabled": false,
+                "enabled": true,
                 "displayStyle": "ssalggnikool"
             },
             "SilentMessageToggle": {
-                "enabled": false
+                "enabled": true,
+                "persistState": false,
+                "autoDisable": true
             },
             "SilentTyping": {
                 "enabled": true,
@@ -602,7 +617,8 @@
                 "contextMenu": true
             },
             "SortFriendRequests": {
-                "enabled": false
+                "enabled": true,
+                "showDates": false
             },
             "SpotifyControls": {
                 "enabled": true,
@@ -620,10 +636,10 @@
                 "enabled": false
             },
             "StickerPaste": {
-                "enabled": false
+                "enabled": true
             },
             "StreamerModeOnStream": {
-                "enabled": false
+                "enabled": true
             },
             "SuperReactionTweaks": {
                 "enabled": false
@@ -685,7 +701,10 @@
                 "enabled": false
             },
             "UserVoiceShow": {
-                "enabled": false
+                "enabled": true,
+                "showInUserProfileModal": true,
+                "showInMemberList": true,
+                "showInMessages": true
             },
             "USRBG": {
                 "enabled": true,
@@ -785,7 +804,7 @@
             "authenticated": true,
             "url": "https://api.vencord.dev/",
             "settingsSync": true,
-            "settingsSyncVersion": 1753198603387
+            "settingsSyncVersion": 1753199878273
         }
     },
     "quickCss": ""
