@@ -225,7 +225,8 @@
                 "enabled": true
             },
             "FixSpotifyEmbeds": {
-                "enabled": true
+                "enabled": true,
+                "volume": 7.9422382671480145
             },
             "FixYoutubeEmbeds": {
                 "enabled": true
@@ -293,7 +294,11 @@
                 "savedPasswords": "password, Password"
             },
             "IrcColors": {
-                "enabled": false
+                "enabled": true,
+                "memberListColors": true,
+                "lightness": 70,
+                "applyColorOnlyInDms": false,
+                "applyColorOnlyToUsersWithoutColor": false
             },
             "KeepCurrentChannel": {
                 "enabled": false
@@ -408,7 +413,7 @@
                 "enabled": false
             },
             "NoProfileThemes": {
-                "enabled": false
+                "enabled": true
             },
             "NoReplyMention": {
                 "enabled": true,
@@ -436,7 +441,7 @@
                 "enabled": false
             },
             "OnePingPerDM": {
-                "enabled": false
+                "enabled": true
             },
             "oneko": {
                 "enabled": false
@@ -543,7 +548,8 @@
                 "colorChatMessages": false
             },
             "SecretRingToneEnabler": {
-                "enabled": false
+                "enabled": true,
+                "onlySnow": false
             },
             "Summaries": {
                 "enabled": true,
@@ -661,7 +667,9 @@
             },
             "TypingTweaks": {
                 "enabled": true,
-                "alternativeFormatting": true
+                "alternativeFormatting": true,
+                "showRoleColors": true,
+                "showAvatars": true
             },
             "Unindent": {
                 "enabled": false
@@ -685,10 +693,10 @@
                 "voiceBackground": true
             },
             "ValidReply": {
-                "enabled": false
+                "enabled": true
             },
             "ValidUser": {
-                "enabled": false
+                "enabled": true
             },
             "VoiceChatDoubleClick": {
                 "enabled": true
@@ -777,7 +785,7 @@
             "authenticated": true,
             "url": "https://api.vencord.dev/",
             "settingsSync": true,
-            "settingsSyncVersion": 1753197736311
+            "settingsSyncVersion": 1753198603387
         }
     },
     "quickCss": ""
