@@ -120,8 +120,8 @@ eglexternalplatform 1.2.1-1
 electron31 31.7.7-4
 electron34 34.5.8-1
 electron35 35.7.2-1
-electron37-bin 37.2.3-1
-electrum 4.5.8-5
+electron37-bin 37.2.4-1
+electrum 4.6.0-1
 embree 4.4.0-1
 enchant 2.8.10-1
 evtest 1.35-2
@@ -234,7 +234,7 @@ gvfs 1.57.2-4
 gzip 1.14-2
 harfbuzz 11.2.1-1
 harfbuzz-icu 11.2.1-1
-heroic-games-launcher-bin 2.17.2-1
+heroic-games-launcher-bin 2.18.0-1
 hicolor-icon-theme 0.18-1
 hidapi 0.15.0-1
 highway 1.2.0-1
@@ -247,7 +247,7 @@ hyphen 2.8.8-6
 hyprcursor-git 0.1.12.r3.g45fcc10-1
 hyprgraphics-git 0.1.5.r0.g340494a-1
 hypridle-git 0.1.6.r11.gdda793b-1
-hyprland-git 0.50.0.r26.gfdbbad0-1
+hyprland-git 0.50.0.r28.g2d2a5be-1
 hyprland-qt-support-git 0.1.0.r9.g4c8053c-1
 hyprland-qtutils-git 0.1.4.r2.gb13c748-1
 hyprlang-git 0.6.3.r3.gcee0145-1
@@ -256,7 +256,7 @@ hyprpaper-git 0.7.5.r6.ga88e0e0-1
 hyprpicker-git 0.4.5.r8.gd6a1363-1
 hyprshade-git 3.2.1.r289.g63b169b-1
 hyprshot-git 1.3.0.r2.f95068d-1
-hyprutils-git 0.8.1.r5.g18fbac5-1
+hyprutils-git 0.8.1.r6.g8dd20c7-1
 hyprwayland-scanner-git 0.4.5.r0.gfcca0c6-1
 i2c-tools 4.4-2
 iana-etc 20250612-1
@@ -301,7 +301,7 @@ lazydocker 0.24.1-1
 lazygit 0.53.0-1
 lcms2 2.17-1
 leancrypto 1.5.1-1
-less 1:668-1
+less 1:679-1
 lib32-alsa-lib 1.2.14-1
 lib32-alsa-plugins 1.2.12-1
 lib32-audit 4.0.5-1
@@ -704,7 +704,7 @@ openxr 1.1.43-1
 opus 1.5.2-1
 orc 0.4.41-1
 os-prober 1.83-1
-ostree 2025.3-1
+ostree 2025.4-1
 p11-kit 0.25.5-1
 pacfiles 0.2.7-2
 pacman 7.0.0.r6.gc685ae6-6
@@ -808,6 +808,8 @@ python-distlib 0.3.9-2
 python-distro 1.9.0-3
 python-dnspython 1:2.7.0-1
 python-dulwich 0.23.2-1
+python-electrum-aionostr 0.0.11-1
+python-electrum-ecc 0.0.5-1
 python-evdev 1.9.0-1
 python-fastjsonschema 2.21.1-1
 python-filelock 3.18.0-1
@@ -1000,7 +1002,7 @@ upower 1.90.9-1
 usbutils 018-1
 util-linux 2.41.1-1
 util-linux-libs 2.41.1-1
-uv 0.8.0-1
+uv 0.8.2-1
 v4l-utils 1.30.1-1
 vapoursynth R70-2
 vesktop-bin 1.5.8-1
