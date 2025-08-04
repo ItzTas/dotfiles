@@ -104,6 +104,7 @@ _install_pacman_packages() {
         "bat"
 
         # Apps
+        "alarm-clock-applet"
         "zsa-keymapp-bin"
         "spotify"
         "vesktop-git"
