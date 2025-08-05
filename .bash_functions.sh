@@ -87,11 +87,13 @@ upgrady() {
 		} >/dev/null 2>&1
 
 		paru -Syu --devel
+        paru -Fy
+        pacclean
+
 		flatpak update
-		sudo freshclam
-		paru -Fy
-		pacclean
 		flatpak uninstall --unused
+
+        sudo freshclam
 		hyprpm update
 		yadm_update
 
