@@ -55,6 +55,7 @@ _install_pacman_packages() {
 
         # System utils
         "xdg-user-dirs"
+        "tidy"
         "reflector"
         "cronie"
         "socat"
