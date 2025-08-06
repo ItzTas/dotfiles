@@ -2,7 +2,7 @@
 name = "colors"
 default = true  
 
-[[shades]]
-name = "extradark"
-start_time = 20:00:05
-end_time = 06:00:00
+# [[shades]]
+# name = "extradark"
+# start_time = 20:00:05
+# end_time = 06:00:00
