@@ -119,7 +119,7 @@ easyeffects 7.2.5-1
 efibootmgr 18-3
 efivar 39-1
 egl-gbm 1.1.2.1-1
-egl-wayland 4:1.1.19-1
+egl-wayland 4:1.1.20-1
 egl-x11 1.0.2-1
 eglexternalplatform 1.2.1-1
 electron31 31.7.7-4
@@ -145,7 +145,7 @@ file-roller 44.5-1
 filesystem 2025.05.03-1
 findutils 4.10.0-3
 flac 1.5.0-1
-flameshot-git r2098.93d456d2-1
+flameshot-git r2100.23fade7b-1
 flatpak 1:1.16.1-1
 flex 2.6.4-5
 fluidsynth 2.4.7-1
@@ -256,7 +256,7 @@ hyphen 2.8.8-6
 hyprcursor-git 0.1.13.r0.g44e91d4-1
 hyprgraphics-git 0.1.5.r1.g4c1d63a-1
 hypridle-git 0.1.6.r11.gdda793b-1
-hyprland-git 0.50.0.r71.gec26b75-1
+hyprland-git 0.50.0.r73.ga4529be-1
 hyprland-qt-support-git 0.1.0.r9.g4c8053c-1
 hyprland-qtutils-git 0.1.4.r3.gb308a81-1
 hyprlang-git 0.6.4.r1.g23f0deb-1
@@ -316,7 +316,7 @@ l-smash 2.14.5-4
 ladspa 1.17-5
 lame 3.100-5
 lazydocker 0.24.1-1
-lazygit 0.54.0-1
+lazygit 0.54.1-1
 lcms2 2.17-1
 leancrypto 1.5.1-1
 less 1:679-1
@@ -679,7 +679,7 @@ miru-go-bin 0.0.21-1
 mkinitcpio 39.2-3
 mkinitcpio-busybox 1.36.1-1
 mobile-broadband-provider-info 20250613-1
-most 5.2.0-2
+most 5.2.0-3
 mpdecimal 4.0.1-1
 mpfr 4.2.2-1
 mpg123 1.33.1-1
@@ -1107,7 +1107,7 @@ yazi 25.5.31-2
 yq 3.4.3-2
 yyjson 0.11.1-1
 zelda64recomp-bin 1.2.0-3
-zen-browser-bin 1.14.9b-2
+zen-browser-bin 1.14.10b-1
 zenity 4.1.99-2
 zeromq 4.3.5-2
 zimg 3.0.5-1
