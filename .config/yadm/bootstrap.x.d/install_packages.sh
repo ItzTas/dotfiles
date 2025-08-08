@@ -117,6 +117,7 @@ _install_pacman_packages() {
         "lazydocker"
         "docker-compose"
         "docker"
+        "docker-buildx"
 
         # Cursor & Fonts
         "ttf-jetbrains-mono-nerd"
