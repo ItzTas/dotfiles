@@ -221,7 +221,7 @@ lse() {
 test_memory() {
 	local memory="$1"
 	if [[ $memory == "" ]]; then
-		echo "usage test_memory <num>g"
+		echo "usage test_memory <num>G"
 		return
 	fi
 	</dev/zero head -c "$memory" | tail
