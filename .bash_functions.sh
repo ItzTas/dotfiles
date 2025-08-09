@@ -67,7 +67,7 @@ if command -v docker &>/dev/null; then
 		lines="$(docker ps --format "id: {{.ID}}\t name: {{.Names}}\t img: {{.Image}}")"
 		container="$(echo "$lines" | fzf --header "exec -it")"
 
-		if [ -n "$container" ]; then
+		if [ "$container" != "" ]; then
 			local container_name
 			container_name=$(echo "$container" | awk '{print $4}')
 
@@ -87,13 +87,13 @@ upgrady() {
 		} >/dev/null 2>&1
 
 		paru -Syu --devel
-        paru -Fy
-        pacclean
+		paru -Fy
+		pacclean
 
 		flatpak update
 		flatpak uninstall --unused
 
-        sudo freshclam
+		sudo freshclam
 		hyprpm update
 		yadm_update
 
@@ -114,7 +114,7 @@ pacclean() {
 	fi
 
 	local valid_pkgs=()
-	for pkg in $orphans; do
+	for pkg in "${orphans[@]}"; do
 		if pacman -Q "$pkg" &>/dev/null; then
 			valid_pkgs+=("$pkg")
 		fi
@@ -215,4 +215,14 @@ lse() {
 	else
 		echo "'$1' is not a valid file"
 	fi
+}
+
+# memory testing
+test_memory() {
+	local memory="$1"
+	if [[ $memory == "" ]]; then
+		echo "usage test_memory <num>g"
+		return
+	fi
+	</dev/zero head -c "$memory" | tail
 }
