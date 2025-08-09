@@ -104,7 +104,7 @@ diffutils 3.12-2
 direnv 2.37.1-1
 docker 1:28.3.3-1
 docker-buildx 0.26.1-1
-docker-compose 2.39.1-1
+docker-compose 2.39.2-1
 dotnet-host 9.0.7.sdk108-1
 dotnet-runtime 9.0.7.sdk108-1
 dotnet-sdk 9.0.7.sdk108-1
@@ -999,7 +999,7 @@ termpicker 1.4.0-1
 texinfo 7.2-1
 thunderbird 141.0-1
 tidy 5.8.0-3
-timeshift 25.07.4-1
+timeshift 25.07.5-1
 tinysparql 3.9.2-2
 tinyxml2 11.0.0-1
 tmux 3.5_a-1
