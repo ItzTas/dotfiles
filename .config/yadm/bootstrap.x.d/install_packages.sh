@@ -88,6 +88,7 @@ _install_pacman_packages() {
         "qman"
         "man-db"
         "ripgrep"
+        "net-tools"
         "curl"
         "miru-go-bin"
         "ddcutil"
