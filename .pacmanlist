@@ -18,7 +18,7 @@ antimicrox 3.5.1-1
 aom 3.12.1-1
 appstream 1.0.5-2
 appstream-glib 0.8.3-2
-aquamarine-git 0.9.2.r3.gbe166e1-1
+aquamarine-git 0.9.2.r4.g498f466-1
 arch-update 3.14.1-1
 archlinux-appstream-data 20250730-1
 archlinux-contrib 20250219-1
@@ -40,7 +40,7 @@ bash 5.3.3-2
 bash-completion 2.16.0-1
 bat 0.25.0-4
 bibata-cursor-theme 2.0.7-1
-binutils 2.45+r8+g09be88bfb653-1
+binutils 2.45+r8+g09be88bfb653-2
 bison 3.8.2-8
 bitwarden 2025.7.0-1
 blas 3.12.1-2
@@ -107,10 +107,10 @@ direnv 2.37.1-1
 docker 1:28.3.3-1
 docker-buildx 0.26.1-1
 docker-compose 2.39.2-1
-dotnet-host 9.0.7.sdk108-1
-dotnet-runtime 9.0.7.sdk108-1
-dotnet-sdk 9.0.7.sdk108-1
-dotnet-targeting-pack 9.0.7.sdk108-1
+dotnet-host 9.0.8.sdk109-1
+dotnet-runtime 9.0.8.sdk109-1
+dotnet-sdk 9.0.8.sdk109-1
+dotnet-targeting-pack 9.0.8.sdk109-1
 double-conversion 3.3.1-1
 downgrade 11.5.2-1
 dualsensectl 0.7-1
@@ -123,7 +123,7 @@ efibootmgr 18-3
 efivar 39-1
 egl-gbm 1.1.2.1-1
 egl-wayland 4:1.1.20-1
-egl-x11 1.0.2-1
+egl-x11 1.0.3-1
 eglexternalplatform 1.2.1-1
 electron31 31.7.7-4
 electron35 35.7.4-1
@@ -148,7 +148,7 @@ file-roller 44.5-1
 filesystem 2025.05.03-1
 findutils 4.10.0-3
 flac 1.5.0-1
-flameshot-git r2104.8d8a4c94-1
+flameshot-git r2105.f0e46edf-1
 flatpak 1:1.16.1-1
 flex 2.6.4-5
 fluidsynth 2.4.7-1
@@ -245,8 +245,8 @@ gupnp 1:1.6.9-1
 gupnp-igd 1.6.0-2
 gvfs 1.57.2-4
 gzip 1.14-2
-harfbuzz 11.3.3-1
-harfbuzz-icu 11.3.3-1
+harfbuzz 11.4.1-1
+harfbuzz-icu 11.4.1-1
 heroic-games-launcher-bin 2.18.1-1
 hicolor-icon-theme 0.18-1
 hidapi 0.15.0-1
@@ -260,7 +260,7 @@ hyphen 2.8.8-6
 hyprcursor-git 0.1.13.r0.g44e91d4-1
 hyprgraphics-git 0.1.5.r1.g4c1d63a-1
 hypridle-git 0.1.6.r11.gdda793b-1
-hyprland-git 0.50.0.r79.gcb6589d-1
+hyprland-git 0.50.0.r82.gaa6a78f-1
 hyprland-protocols-git 0.6.4.r1.g613878c-1
 hyprland-qt-support-git 0.1.0.r9.g4c8053c-1
 hyprland-qtutils-git 0.1.4.r3.gb308a81-1
@@ -276,11 +276,11 @@ i2c-tools 4.4-2
 iana-etc 20250612-1
 icu 76.1-1
 ijs 0.35-6
-imagemagick 7.1.2.0-2
+imagemagick 7.1.2.1-1
 imlib2 1.12.5-1
 inetutils 2.6-1
 inotify-tools 4.23.9.0-2
-intel-ucode 20250512-1
+intel-ucode 20250812-1
 iproute2 6.16.0-2
 iptables 1:1.8.11-2
 iputils 20250605-1
@@ -339,7 +339,7 @@ lib32-freetype2 2.13.3-3
 lib32-gcc-libs 15.1.1+r500+gb1b8d8ce3eea-1
 lib32-glib2 2.84.3-1
 lib32-glibc 2.42+r3+gbc13db739377-1
-lib32-harfbuzz 11.3.3-1
+lib32-harfbuzz 11.4.1-1
 lib32-icu 76.1-1
 lib32-json-c 0.18-2
 lib32-keyutils 1.6.3-2
@@ -705,7 +705,7 @@ nemo-terminal 6.4.0-3
 neovim 0.11.3-1
 net-tools 2.10-3
 netpbm 10.86.47-1
-netstandard-targeting-pack 9.0.7.sdk108-1
+netstandard-targeting-pack 9.0.8.sdk109-1
 nettle 3.10.2-1
 networkmanager 1.54.0-1
 ninja 1.12.1-2
@@ -1045,9 +1045,9 @@ upower 1.90.9-1
 usbutils 018-1
 util-linux 2.41.1-1
 util-linux-libs 2.41.1-1
-uv 0.8.8-1
+uv 0.8.9-1
 v4l-utils 1.30.1-1
-vapoursynth R70-2
+vapoursynth 72-1
 vesktop-bin 1.5.8-1
 vid.stab 1.1.1-2
 vim 9.1.1623-1
