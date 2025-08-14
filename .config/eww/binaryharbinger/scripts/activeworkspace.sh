@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MONITOR=$(hyprctl activeworkspace | grep "on monitor" | awk '{print $4}' | tr -d '()')
+MONITOR="$(hyprctl activeworkspace | grep "on monitor" | awk '{print $4}' | tr -d '()')"
 
 eww update monitor="$MONITOR"
 
