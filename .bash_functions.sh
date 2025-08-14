@@ -99,9 +99,6 @@ upgrady() {
 			flatpak uninstall --unused
 		fi
 
-		if command -v spicetify >/dev/null; then
-			spicetify update
-		fi
 		if command -v freshclam >/dev/null; then
 			sudo freshclam
 		fi
