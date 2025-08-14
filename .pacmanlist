@@ -40,7 +40,7 @@ bash 5.3.3-2
 bash-completion 2.16.0-1
 bat 0.25.0-4
 bibata-cursor-theme 2.0.7-1
-binutils 2.45+r8+g09be88bfb653-2
+binutils 2.45+r29+g2b2e51a31ec7-1
 bison 3.8.2-8
 bitwarden 2025.7.0-1
 blas 3.12.1-2
@@ -49,7 +49,7 @@ boost-libs 1.88.0-3
 botan2 2.19.5-2
 brightnessctl 0.5.1-3
 brotli 1.1.0-3
-bruno-bin 2.9.0-1
+bruno-bin 2.9.1-1
 btop 1.4.4-1
 btrfs-progs 6.15-1
 bubblewrap 0.11.0-1
@@ -164,8 +164,8 @@ fuse3 3.17.1-1
 fzf 0.65.1-1
 gawk 5.3.2-1
 gc 8.2.8-2
-gcc 15.1.1+r500+gb1b8d8ce3eea-1
-gcc-libs 15.1.1+r500+gb1b8d8ce3eea-1
+gcc 15.2.1+r22+gc4e96a094636-1
+gcc-libs 15.2.1+r22+gc4e96a094636-1
 gcr 3.41.2-2
 gcr-4 4.4.0.1-1
 gd 2.3.3-8
@@ -187,7 +187,7 @@ glib-networking 1:2.80.1-1
 glib-perl 1.329.4-3
 glib2 2.84.3-1
 glib2-devel 2.84.3-1
-glibc 2.42+r3+gbc13db739377-1
+glibc 2.42+r17+gd7274d718e6f-1
 glibmm 2.66.8-1
 glibmm-2.68 2.84.0-1
 glslang 1:1.4.321.0-1
@@ -270,8 +270,8 @@ hyprpaper-git 0.7.5.r9.gbcb1ffa-1
 hyprpicker-git 0.4.5.r8.gd6a1363-1
 hyprshade-git 3.2.1.r289.g63b169b-1
 hyprshot-git 1.3.0.r2.f95068d-1
-hyprutils-git 0.8.2.r1.gdf6b882-1
-hyprwayland-scanner-git 0.4.5.r0.gfcca0c6-1
+hyprutils-git 0.8.2.r2.g69efb62-1
+hyprwayland-scanner-git 0.4.5.r1.gb3b0f1f-1
 i2c-tools 4.4-2
 iana-etc 20250612-1
 icu 76.1-1
@@ -336,9 +336,9 @@ lib32-e2fsprogs 1.47.3-1
 lib32-expat 2.7.1-1
 lib32-fontconfig 2:2.17.1-1
 lib32-freetype2 2.13.3-3
-lib32-gcc-libs 15.1.1+r500+gb1b8d8ce3eea-1
+lib32-gcc-libs 15.2.1+r22+gc4e96a094636-1
 lib32-glib2 2.84.3-1
-lib32-glibc 2.42+r3+gbc13db739377-1
+lib32-glibc 2.42+r17+gd7274d718e6f-1
 lib32-harfbuzz 11.4.1-1
 lib32-icu 76.1-1
 lib32-json-c 0.18-2
@@ -363,7 +363,7 @@ lib32-libpng 1.6.50-1
 lib32-libpsl 0.21.5-1
 lib32-libssh2 1.11.1-1
 lib32-libtasn1 4.20.0-1
-lib32-libtirpc 1.3.6-1
+lib32-libtirpc 1.3.6-2
 lib32-libunistring 1.3-1
 lib32-libva 2.22.0-1
 lib32-libx11 1.8.12-2
@@ -385,7 +385,7 @@ lib32-mesa 1:25.1.7-1
 lib32-ncurses 6.5-2
 lib32-nspr 4.37-1
 lib32-nss 3.114-1
-lib32-nvidia-utils 575.64.05-1
+lib32-nvidia-utils 580.76.05-1
 lib32-openssl 1:3.5.2-1
 lib32-p11-kit 0.25.5-1
 lib32-pam 1.7.0-1
@@ -449,7 +449,7 @@ libdvdread 6.1.3-2
 libebur128 1.2.6-2
 libedit 20250104_3.1-1
 libei 1.4.1-1
-libelf 0.193-3
+libelf 0.193-5
 libepoxy 1.5.10-3
 libevdev 1.13.4-1
 libevent 2.1.12-4
@@ -477,7 +477,7 @@ libiec61883 1.2.0-8
 libimagequant 4.4.0-1
 libimobiledevice 1.3.0-17
 libimobiledevice-glue 1.3.2-1
-libinih 58-1
+libinih 61-1
 libinput 1.28.1-1
 libinstpatch 1.1.7-2
 libisl 0.27-1
@@ -559,14 +559,14 @@ libsquish 1.15-8
 libssh 0.11.2-1
 libssh2 1.11.1-1
 libstemmer 3.0.1-1
-libsysprof-capture 48.0-6
+libsysprof-capture 48.0-7
 libtasn1 4.20.0-1
 libteam 1.32-2
 libthai 0.1.29-3
 libtheora 1.2.0-1
 libtiff 4.7.0-1
 libtirpc 1.3.6-2
-libtool 2.5.4+r23+g5b582aed-2
+libtool 2.5.4+r62+g6389dce8-1
 libtorrent-rasterbar 1:2.0.11-4
 libunibreak 6.1-1
 libunistring 1.3-1
@@ -630,7 +630,7 @@ libzen 0.4.41-2
 libzip 1.11.4-1
 licenses 20240728-1
 lilv 0.24.26-1
-linux 6.15.9.arch1-1
+linux 6.16.arch2-1
 linux-api-headers 6.16-1
 linux-firmware 20250708-1
 linux-firmware-amdgpu 20250708-1
@@ -715,9 +715,9 @@ npth 1.8-1
 nspr 4.37-1
 nss 3.114-1
 numlockx 1.2-6
-nvidia 575.64.05-4
+nvidia 580.76.05-3
 nvidia-settings 575.64.05-1
-nvidia-utils 575.64.05-2
+nvidia-utils 580.76.05-3
 ocl-icd 2.3.3-1
 oh-my-posh 26.19.0-1
 onetbb 2022.2.0-1
@@ -807,8 +807,8 @@ polkit-gnome 0.105-11
 poppler-data 0.4.12-2
 popt 1.19-2
 portaudio 1:19.7.0-3
-postgresql 17.5-4
-postgresql-libs 17.5-4
+postgresql 17.5-5
+postgresql-libs 17.5-5
 pps-tools 1.0.3-2
 procps-ng 4.0.5-3
 proto-bin 0.51.6-1
@@ -963,6 +963,7 @@ run-parts 5.23.1-1
 runc 1.3.0-1
 rust 1:1.89.0-1
 sbc 2.1-1
+scdoc 1.11.3-1
 sdbus-cpp 2.1.0-2
 sddm 0.21.0-6
 sddm-sugar-candy-git 1.6r42.d31dbf5-1
@@ -991,7 +992,7 @@ spacer-bin 0.4.5-1
 spdlog 1.15.3-1
 speex 1.2.1-2
 speexdsp 1.2.1-2
-spicetify-cli 2.40.11-1
+spicetify-cli 2.40.13-1
 spirv-tools 1:1.4.321.0-1
 spotify 1:1.2.63.394-1
 sqlite 3.50.4-1
