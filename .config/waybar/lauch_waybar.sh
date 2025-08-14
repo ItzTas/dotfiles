@@ -2,6 +2,7 @@
 
 launch() {
     local style_num="$1"
+    : "${style_num:=1}"
     local style="style-$style_num"
     local path="$HOME/.config/waybar/$style"
 
