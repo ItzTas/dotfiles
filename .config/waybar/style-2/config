@@ -38,15 +38,15 @@
 
 // ====================== Custom Modules ======================
 
-"custom/search": {
+"custom/power": {
     
-    "format": " ",
+    "format": "󰤆 ",
     "tooltip": false,
     
-    "on-click": "~/.config/hypr/scripts/rofilaunch.sh --drun",
+    "on-click": "~/.config/rofi/powermenu/type-6/powermenu.sh &",
 },
 
-  "custom/runner": {
+"custom/runner": {
 
     "format": " ",
     "tooltip": false,
@@ -56,7 +56,7 @@
 
 "custom/os_button": {
     "format": "",
-    "on-click": "~/.config/hypr/scripts/rofilaunch.sh --menu",
+    "on-click": "~/.config/rofi/launchers/type-3/launcher.sh &",
     "tooltip": false
   },
 
@@ -98,7 +98,7 @@
     "tooltip-format": "{icon} {essid}",
     "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤢 ", "󰤨 "],
 
-    "on-click": "bash ~/.config/hypr/scripts/actioncenter.sh &  eww close calendar",
+    "on-click": "chmod +x ~/.config/waybar/style-2/scripts/eww_open_action_center.sh && ~/.config/waybar/style-2/scripts/eww_open_action_center.sh",
     "on-click-right": "bash .config/hypr/scripts/rofiwifi.sh"
 },
 
@@ -159,16 +159,18 @@
     "format": "{icon} {volume}%",
     "tooltip-format": "{icon}  {volume}%",
     
+    "format-muted": " ",
     "format-icons": {
         "headphone": " ",
-        "format-muted": " ",
-        "default": [" ", " "]
+        "default": [
+        " ",
+        " "
+        ]
     },
 
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && chmod +x ~/.config/waybar/style-2/scripts/eww_close_calendar.sh && ~/.config/waybar/style-2/scripts/eww_close_calendar.sh",
     "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
-    "on-click": "bash ~/.config/hypr/scripts/actioncenter.sh & eww close calendar",
     "menu": "on-click-right",
     "menu-file": "~/.config/waybar/volume_menu.xml",
 	"menu-actions": {
@@ -185,8 +187,6 @@
     "format": "{icon}",
     "tooltip-format": "{icon} {percent}%",
     "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " "],
-    
-    "on-click": "bash ~/.config/hypr/scripts/actioncenter.sh &  eww close calendar"
 },
 
 // ========================================================
@@ -283,7 +283,7 @@
 "clock": {
     "format": " {:%R}",
     "tooltip-format": " {:%d %B %Y}",
-    "on-click": "eww open calendar --toggle --no-daemonize & eww close actioncenter musiccenter",
+    "on-click": "chmod +x ~/.config/waybar/style-2/scripts/eww_open_calendar.sh && ~/.config/waybar/style-2/scripts/eww_open_calendar.sh",
   },
 
 "memory": {
@@ -324,12 +324,11 @@
 "group/leftSide": {
 	"orientation": "horizontal",
 	"modules": [
-			"custom/search",
-            "custom/runner",
+			"custom/power",
             "custom/os_button",
             "mpris",
             "group/hardware"
-            ]
+    ]
 },
 
 "group/rightSide": {
