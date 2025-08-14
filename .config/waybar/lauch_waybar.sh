@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 launch() {
     local style_num="$1"
@@ -6,7 +6,20 @@ launch() {
     local style="style-$style_num"
     local path="$HOME/.config/waybar/$style"
 
-    waybar -c "$path/config.jsonc" -s "$path/style.css"
+    local config_file
+
+    if [ -f "$path/config.jsonc" ]; then
+        config_file="$path/config.jsonc"
+    elif [ -f "$path/config" ]; then
+        config_file="$path/config"
+    else
+        echo "Error: No config file found in '$path'" >&2
+        return 1
+    fi
+
+    local style_file="$path/style.css"
+
+    waybar -c "$config_file" -s "$style_file"
 }
 
 launch "$@"
