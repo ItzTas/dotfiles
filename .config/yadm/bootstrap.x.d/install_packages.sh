@@ -139,6 +139,7 @@ _install_pacman_packages() {
 
         # Notifications
         "dunst"
+        "swaync"
         "inotify-tools"
 
         # Displayers
