@@ -194,6 +194,7 @@ _install_pacman_packages() {
         # App lanchers & utils
         "rofi-wayland"
         "rofi-emoji"
+        "wlogout"
 
         # Others
         "timeshift"
