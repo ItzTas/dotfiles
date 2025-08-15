@@ -10,6 +10,9 @@ _set_up() {
     _set_preference thumbnail-limit 'uint64 68719476736'
     _set_preference show-open-in-terminal-toolbar true
     _set_preference context-menus-show-all-actions true
+
+    gsettings set org.cinnamon.desktop.default-applications.terminal exec ghostty
+    gsettings set org.cinnamon.desktop.default-applications.terminal exec-arg "-e"
 }
 
 _set_up
