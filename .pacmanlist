@@ -105,6 +105,7 @@ debugedit 5.2-1
 default-cursors 3-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.34-1
+dex 0.9.0-2
 diffutils 3.12-2
 direnv 2.37.1-1
 docker 1:28.3.3-1
