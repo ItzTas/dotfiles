@@ -29,14 +29,9 @@
         }
     },
     "notification-visibility": {
-        "example-name": {
-            "state": "muted",
-            "urgency": "Low",
-            "app-name": "Spotify"
-        },
         "no-volume-change": {
             "state": "transient",
-            "app-name": "volume-change"
+            "app-name": "_transient"
         }
     },
     "widgets": [

@@ -314,6 +314,24 @@
   padding: 0;
 }
 
+.notification-action button {
+  color: @text-color;
+  background-color: @bg-second;
+  border: 1px solid @border-main;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.notification-action button:hover {
+  background-color: @bg-hover;
+  filter: brightness(130%);
+}
+
+.notification-row:read {
+  opacity: 0.8;
+  color: #e0e0e0;
+}
+
 .notification-row
   .notification-background
   .notification
