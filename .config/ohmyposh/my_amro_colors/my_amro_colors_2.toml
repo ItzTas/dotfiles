@@ -1,10 +1,5 @@
 version = 3
 
-[transient_prompt]
-  template = '# '
-  foreground = '#CD4277'
-  background = ''
-
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
@@ -12,14 +7,14 @@ version = 3
   [[blocks.segments]]
     style = 'plain'
     template = ' {{ .UserName }} on'
-    foreground = '#45F1C2'
+    foreground = '#B4BEFE'
     background = ''
     type = 'session'
 
   [[blocks.segments]]
     style = 'plain'
     template = '  {{ .Path }} '
-    foreground = '#0CA0D8'
+    foreground = '#6A7FEA'
     background = ''
     type = 'path'
 
@@ -45,7 +40,7 @@ version = 3
   [[blocks.segments]]
     style = 'plain'
     template = '(  {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} ){{ end }}{{ end }}'
-    foreground = '#BF3B30'
+    foreground = '#D0679D'
     background = ''
     type = 'python'
 
@@ -68,7 +63,7 @@ version = 3
   [[blocks.segments]]
     style = 'plain'
     template = ' {{.Icon}} '
-    foreground = '#1e66f5'
+    foreground = '#6A7FEA'
     background = ''
     type = 'os'
 
@@ -87,7 +82,7 @@ version = 3
   [[blocks.segments]]
     style = 'plain'
     template = '['
-    foreground = '#CD4277'
+    foreground = '#6A7FEA'
     background = ''
     type = 'text'
 
@@ -410,6 +405,6 @@ version = 3
   [[blocks.segments]]
     style = 'plain'
     template = ']  '
-    foreground = '#CD4277'
+    foreground = '#6A7FEA'
     background = ''
     type = 'text'

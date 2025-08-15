@@ -3,7 +3,7 @@ font-family = JetBrainsMonoNL Nerd Font
 font-size = 16
 
 # Window
-window-padding-x = 6
+window-padding-x = 10
 window-padding-y = 10,0
 
 # cursor 
