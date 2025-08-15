@@ -40,7 +40,7 @@ mouse-scroll-multiplier = 0.7
 
 # Ayu
 theme = ayu
-background-opacity = 0.4
+background-opacity = 0.43
 cursor-color =  #cccccc
 
 # Ayu Mirage
