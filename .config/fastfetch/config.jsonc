@@ -62,6 +62,17 @@
             "key": "‎‎‎‎   ",
             "keyColor": "#A3BE8C",
         },
+        {
+            "type": "display",
+            "key": "‎‎‎‎   ",
+            "keyColor": "#7E9ED3",
+            "format": "{name}: {width}x{height} @ {refreshRate} Hz in {sizeInch}\" [{type}]",
+        },
+        {
+            "type": "wm",
+            "key": "‎‎‎‎   ",
+            "keyColor": "#FFC95D",
+        },
         "break",
         {
             "type": "custom",
