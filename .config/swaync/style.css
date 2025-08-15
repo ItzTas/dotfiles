@@ -327,11 +327,6 @@
   filter: brightness(130%);
 }
 
-.notification-row:read {
-  opacity: 0.8;
-  color: #e0e0e0;
-}
-
 .notification-row
   .notification-background
   .notification
@@ -454,7 +449,8 @@
   /* The Control Center which contains the old notifications + widgets */
   background: var(--cc-bg);
   color: var(--text-color);
-  border-radius: 12p;
+  margin-right: 3px;
+  border-radius: 12px;
   border: 2px solid var(--noti-border-color);
 }
 
@@ -462,7 +458,8 @@
   /* The placeholder when there are no notifications */
   opacity: 0.5;
 }
-/ .control-center .control-center-list {
+
+.control-center .control-center-list {
   /* List of notifications */
   background: var(--bg_main);
 }
