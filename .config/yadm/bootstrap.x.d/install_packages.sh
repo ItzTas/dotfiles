@@ -150,6 +150,8 @@ _install_pacman_packages() {
         # Displayers
         "gthumb"
         "mpv"
+        "zathura"
+        "zathura-pdf-poppler"
 
         # Capture
         "flameshot-git"

@@ -181,6 +181,7 @@ ghostty 1.1.3-1
 ghostty-shell-integration 1.1.3-1
 ghostty-terminfo 1.1.3-1
 giflib 5.2.2-2
+girara 0.4.5-1
 git 2.50.1-3
 git-bug 0.10.1-1
 git-filter-repo 2.47.0-2
@@ -567,6 +568,7 @@ libsquish 1.15-8
 libssh 0.11.2-1
 libssh2 1.11.1-1
 libstemmer 3.0.1-1
+libsynctex 2025.2-1
 libsysprof-capture 48.0-7
 libtasn1 4.20.0-1
 libteam 1.32-2
@@ -813,7 +815,9 @@ playerctl 2.4.1-4
 plocate 1.1.23-1
 polkit 126-2
 polkit-gnome 0.105-11
+poppler 25.08.0-1
 poppler-data 0.4.12-2
+poppler-glib 25.08.0-1
 popt 1.19-2
 portaudio 1:19.7.0-3
 postgresql 17.5-5
@@ -1139,6 +1143,8 @@ yadm 3.5.0-1
 yazi 25.5.31-2
 yq 3.4.3-2
 yyjson 0.11.1-1
+zathura 0.5.12-1
+zathura-pdf-poppler 0.3.3-5
 zelda64recomp-bin 1.2.0-3
 zen-browser-bin 1.14.11b-1
 zenity 4.1.99-2
