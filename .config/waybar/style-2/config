@@ -214,7 +214,7 @@
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
     
-    "on-click": "swaync-client -t -sw & eww close actioncenter calendar musiccenter",
+    "on-click": "swaync-client -t -sw & chmod +x ~/.config/waybar/style-2/scripts/eww_close_calendar.sh && ~/.config/waybar/style-2/scripts/eww_close_calendar.sh",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
 },
