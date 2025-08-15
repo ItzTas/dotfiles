@@ -4,7 +4,7 @@ set recolor false
 set selection-clipboard clipboard
 set statusbar-h-padding 0
 set statusbar-v-padding 0
-set page-padding 0
+set page-padding 1
 set font                        "Jetbrains Mono 9"
 
 map p print
