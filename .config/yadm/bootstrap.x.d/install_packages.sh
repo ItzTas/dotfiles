@@ -38,6 +38,8 @@ _install_pacman_packages() {
         "waybar"
         "sddm-sugar-candy-git"
         "oh-my-posh"
+        "qt6ct"
+        "nwg-look"
         "swayosd-gtk3"
         "kando-bin"
         "spicetify-cli"
