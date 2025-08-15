@@ -1,52 +1,31 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-trimmed_path=$(echo "$NEMO_SCRIPT_SELECTED_FILE_PATHS" | sed 's/^[ \t]*//;s/[ \t]*$//')
+_get_target_dir() {
+    local first_sel
+    first_sel="$(printf "%s" "${NEMO_SCRIPT_SELECTED_FILE_PATHS:-}" | head -n 1)"
 
-scrPWD="
-new_ss() {
-    local direc
-    direc=\$(pwd)
-    direc=\"\${direc##*( )}\"
-    direc=\"\${direc%%*( )}\"
-    if [[ -z \"\$direc\" ]]; then
-        return 0
+    if [ "$first_sel" != "" ]; then
+        if [ -d "$first_sel" ]; then
+            echo "$first_sel"
+        else
+            dirname "$first_sel"
+        fi
+    else
+        echo "$PWD"
     fi
-
-    local d
-    d=\"\$(basename \"\$(pwd)\")\"
-    d=\"\${d//./_}\"
-
-    tmux new-session -d -s \"\$d\"
-    while ! tmux has-session -t \"\$d\"; do
-        sleep 0.01
-    done
-
-    tmux attach-session -t \"\$d\"
 }
 
-new_ss
-"
+_open() {
+    set -euo pipefail
 
-scrPATH="
-new_ss() {
-    local d
-    d=\"\$(basename \"$trimmed_path\")\"
-    d=\"\${d//./_}\"
+    target_dir=$(_get_target_dir)
 
-    cd \"$trimmed_path\"
-    tmux new-session -d -s \"\$d\"
-    while ! tmux has-session -t \"\$d\"; do
-        sleep 0.01
-    done
+    session_name="$(basename "$target_dir" | tr '.' '_')"
+    session_name="$(basename "$session_name" | tr ' ' '_')"
 
-    tmux attach-session -t \"\$d\"
+    local tmux_cmd="tmux new-session -A -s \"$session_name\""
+
+    ghostty --working-directory="$target_dir" -e "$tmux_cmd"
 }
 
-new_ss
-"
-
-if [ "$trimmed_path" != "" ]; then
-    ghostty --working-directory="$(dirname "$trimmed_path")" -e "bash -c \"$scrPATH\""
-else
-    ghostty --working-directory="$PWD" -e "bash -c \"$scrPWD\""
-fi
+_open
