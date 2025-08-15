@@ -14,7 +14,7 @@ print_selected_area() {
     grim -g "$(slurp)" "$fullpath"
 
     local ACTION
-    ACTION=$(dunstify -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
+    ACTION=$(dunstify -a "sys_print" -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
 
     case "$ACTION" in
     "default") xdg-open "$fullpath" ;;

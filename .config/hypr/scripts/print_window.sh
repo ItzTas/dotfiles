@@ -16,7 +16,7 @@ print_window() {
 
     sleep 0.2
 
-    ACTION=$(dunstify -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
+    ACTION=$(dunstify -a "sys_print" -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
 
     case "$ACTION" in
     "default") gthumb "$fullpath" ;;

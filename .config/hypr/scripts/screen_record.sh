@@ -11,7 +11,7 @@ mkdir -p "$DIR"
 FILENAME="$DIR/recording_$(date '+%Y-%m-%d_%H-%M-%S').mp4"
 BASENAME=$(basename "$FILENAME")
 
-dunstify "Recording Started" "Recording to $FILENAME" || exit 1
+notify-send -a "sys_recording" "Recording Started" "Recording to $FILENAME" || exit 1
 
 if ! wf-recorder -f "$FILENAME"; then
     dunstify "Error" "Failed to start recording"
@@ -25,7 +25,7 @@ if ! ffmpeg -y -i "$FILENAME" -vframes 1 "$THUMBNAIL"; then
     exit 1
 fi
 
-ACTION=$(dunstify -i "$THUMBNAIL" --action="default,VLC" "Recording Finished" "The recording has been saved as $BASENAME")
+ACTION=$(dunstify -a "sys_recording" -i "$THUMBNAIL" --action="default,VLC" "Recording Finished" "The recording has been saved as $BASENAME")
 
 rm "$THUMBNAIL"
 
