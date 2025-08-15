@@ -11,4 +11,4 @@ _remove() {
     sudo rm -rf "$breeze_dir" "$breeze_dark_dir" "$papirus_dir"
 }
 
-_remove
+# _remove

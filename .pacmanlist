@@ -47,6 +47,7 @@ blas 3.12.1-2
 bluez-libs 5.83-1
 boost-libs 1.88.0-3
 botan2 2.19.5-2
+breeze-gtk 6.4.4-1
 brightnessctl 0.5.1-3
 brotli 1.1.0-3
 bruno-bin 2.9.1-1
