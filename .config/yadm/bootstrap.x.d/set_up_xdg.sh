@@ -11,6 +11,7 @@ _set_up() {
     # xdg-mime default ghostty.desktop x-scheme-handler/terminal
     xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
     xdg-mime default nemo.desktop inode/directory
+    xdg-mime default org.pwmt.zathura.desktop application/pdf
 
     _create_symlinks
 }
