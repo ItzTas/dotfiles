@@ -170,8 +170,6 @@
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && chmod +x ~/.config/waybar/style-2/scripts/eww_close_calendar.sh && ~/.config/waybar/style-2/scripts/eww_close_calendar.sh",
     "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
-    "menu": "on-click-right",
-    "menu-file": "~/.config/waybar/volume_menu.xml",
 	"menu-actions": {
         "ToggleSound": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 		"pavu": "nohup foot --override=colors.alpha=1 --app-id=Wiremix -e wiremix >/dev/null 2>&1 &",
