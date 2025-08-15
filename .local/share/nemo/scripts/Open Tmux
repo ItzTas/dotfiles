@@ -45,8 +45,8 @@ new_ss() {
 new_ss
 "
 
-if [ -n "$trimmed_path" ]; then
-	kitty --directory="$(dirname "$trimmed_path")" bash -c "$scrPATH"
+if [ "$trimmed_path" != "" ]; then
+    ghostty --working-directory="$(dirname "$trimmed_path")" -e "bash -c \"$scrPATH\""
 else
-	kitty --directory="$(pwd)" bash -c "$scrPWD"
+    ghostty --working-directory="$PWD" -e "bash -c \"$scrPWD\""
 fi

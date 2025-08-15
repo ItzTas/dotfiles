@@ -1,9 +1,0 @@
-#!/bin/bash
-
-trimmed_path=$(echo "$NEMO_SCRIPT_SELECTED_FILE_PATHS" | sed 's/^[ \t]*//;s/[ \t]*$//')
-
-if [ -n "$trimmed_path" ]; then
-	/usr/bin/kitty --directory="$(dirname "$trimmed_path")" "$trimmed_path"
-else
-	/usr/bin/kitty --directory="$(pwd)"
-fi
