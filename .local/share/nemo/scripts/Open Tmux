@@ -25,7 +25,7 @@ _open() {
 
     local tmux_cmd="tmux new-session -A -s \"$session_name\""
 
-    ghostty --working-directory="$target_dir" -e "$tmux_cmd"
+    ghostty --working-directory="$target_dir" -e "bash -c \"$tmux_cmd\""
 }
 
 _open
