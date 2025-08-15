@@ -9,4 +9,8 @@ else
     icon="volume.svg"
     message="Audio: Unmuted"
 fi
-dunstify -i ~/.config/dunst/assets/$icon -t 500 -r 2593 "$message"
+notify-send "$message" \
+    --icon="$HOME/.config/dunst/assets/$icon" \
+    --expire-time=500 \
+    --replace-id=2593 \
+    -a "_transient"
