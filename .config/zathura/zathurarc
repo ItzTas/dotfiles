@@ -1,11 +1,14 @@
 include atheme
 
-set adjust-open "best-fit"
-set adjust-open width
-
 set recolor false
 set selection-clipboard clipboard
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 0
+set font                        "Jetbrains Mono 9"
+
 map p print
 map i recolor
-set font                        "Jetbrains Mono 9"
+map R rotate
+map r reload
 map b toggle_statusbar
