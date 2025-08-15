@@ -1,0 +1,9 @@
+#!/bin/bash
+
+trimmed_path=$(echo "$NEMO_SCRIPT_SELECTED_FILE_PATHS" | sed 's/^[ \t]*//;s/[ \t]*$//')
+
+if [ "$trimmed_path" != "" ]; then
+    /usr/bin/ghostty --working-directory="$(dirname "$trimmed_path")"
+else
+    /usr/bin/ghostty --working-directory="$PWD"
+fi
