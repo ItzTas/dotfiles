@@ -85,6 +85,7 @@ _install_pacman_packages() {
         "yq"
         "zip"
         "unrar"
+        "dex"
         "jq"
         "fzf"
         "wget"
@@ -134,6 +135,7 @@ _install_pacman_packages() {
         "git-bug"
 
         # Tui
+        "wiremix"
         "ncdu"
         "gping"
 

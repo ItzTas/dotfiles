@@ -168,6 +168,7 @@
     },
 
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && chmod +x ~/.config/waybar/style-2/scripts/eww_close_calendar.sh && ~/.config/waybar/style-2/scripts/eww_close_calendar.sh",
+    "on-click-right": "dex ~/.local/share/applications/hypr-terminal/hypr-wiremix.desktop",
     "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
 	"menu-actions": {
