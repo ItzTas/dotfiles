@@ -1,9 +1,39 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-trimmed_path=$(echo "$NEMO_SCRIPT_SELECTED_FILE_PATHS" | sed 's/^[ \t]*//;s/[ \t]*$//')
+first_sel="$(printf "%s" "${NEMO_SCRIPT_SELECTED_FILE_PATHS:-}" | head -n 1)"
 
-if [ "$trimmed_path" != "" ]; then
-    /usr/bin/ghostty --working-directory="$(dirname "$trimmed_path")"
+if [ "$first_sel" != "" ]; then
+    if [ -d "$first_sel" ]; then
+        target_dir="$first_sel"
+    else
+        target_dir="$(dirname "$first_sel")"
+    fi
 else
-    /usr/bin/ghostty --working-directory="$PWD"
+
+    target_dir="$PWD"
 fi
+
+launch() {
+    cmd="$1"
+    shift
+    if command -v "$cmd" >/dev/null 2>&1; then
+        "$cmd" "$@"
+        exit 0
+    fi
+}
+
+launch ghostty --working-directory="$target_dir"
+launch kitty --directory="$target_dir"
+launch alacritty --working-directory "$target_dir"
+launch foot -D "$target_dir"
+launch gnome-terminal --working-directory="$target_dir"
+
+for t in xterm konsole mate-terminal; do
+    if command -v "$t" >/dev/null 2>&1; then
+        "$t" &
+        exit 0
+    fi
+done
+
+exit 1
