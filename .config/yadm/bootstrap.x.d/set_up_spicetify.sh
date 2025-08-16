@@ -130,7 +130,7 @@ _set_up() {
 
     # ----------------------------------------------
     # ------------------- Themes -------------------
-    # favorite: ⭐
+    # favorites: ⭐
     #
     # Sleek
     #  - BladeRunner
@@ -152,7 +152,7 @@ _set_up() {
     #  - latte
     #  - frappe
     #  - mocha ⭐
-    #  - macchiato
+    #  - macchiato ⭐
 
     spicetify config current_theme catppuccin
     spicetify config color_scheme mocha
