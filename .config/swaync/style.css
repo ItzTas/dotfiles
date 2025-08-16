@@ -315,9 +315,9 @@
 }
 
 .notification-action button {
-  color: @text-color;
-  background-color: @bg-second;
-  border: 1px solid @border-main;
+  color: var(--text-color);
+  background-color: var(--bg-second);
+  border: 1px solid var(--border-main);
   border-radius: 6px;
   font-weight: bold;
 }
