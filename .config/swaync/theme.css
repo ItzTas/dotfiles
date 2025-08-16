@@ -24,7 +24,6 @@
 @define-color msc-act #424268;
 
 /* Wlogout */
-
 @define-color wlogout-hover rgba(37, 37, 68, 0.541);
 @define-color wlogout-bg rgba(17, 17, 17, 0.45);
 @define-color wlogout-button rgba(17, 17, 27, 0.781);
