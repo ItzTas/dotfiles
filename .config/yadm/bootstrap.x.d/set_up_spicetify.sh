@@ -1,4 +1,4 @@
-_install_themes() {
+_install_oficial_themes() {
     echo ""
     echo "installing spicetify themes"
 
@@ -23,6 +23,38 @@ _install_themes() {
     done
 
     rm "$dest"/*/*.md "$dest"/*/*.png
+}
+
+_install_catppuccin_theme() {
+    echo ""
+    echo "installing spicetify themes"
+
+    local dest="$HOME/.config/spicetify/Themes"
+
+    local themes=(
+        "catppuccin"
+    )
+
+    local tmpdir
+    tmpdir=$(mktemp -d)
+
+    git clone --depth=1 "https://github.com/catppuccin/spicetify" "$tmpdir"
+
+    echo "Files in the cloned output directory:"
+    ls "$tmpdir"
+
+    for theme in "${themes[@]}"; do
+        local file="$tmpdir/$theme"
+        echo "Copying file: $file"
+        cp -r "$file" "$dest"
+    done
+
+    rm "$dest"/*/*.md "$dest"/*/*.png
+}
+
+_install_themes() {
+    _install_catppuccin_theme
+    _install_oficial_themes
 }
 
 _install_spicetify_extension() {
@@ -94,8 +126,10 @@ _install_spicetify_extensions() {
 
 _set_up() {
     _install_spicetify_extensions
+    _install_themes
 
-    spicetify config current_theme Sleek color_scheme RosePine
+    spicetify config current_theme catppuccin
+    spicetify config color_scheme mocha
     spicetify config always_enable_devtools 1
     spicetify config sidebar_config 0
     spicetify apply
