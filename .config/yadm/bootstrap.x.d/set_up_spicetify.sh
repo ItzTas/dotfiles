@@ -27,7 +27,7 @@ _install_oficial_themes() {
 
 _install_catppuccin_theme() {
     echo ""
-    echo "installing spicetify themes"
+    echo "installing spicetify catppuccin themes"
 
     local dest="$HOME/.config/spicetify/Themes"
 
@@ -48,8 +48,6 @@ _install_catppuccin_theme() {
         echo "Copying file: $file"
         cp -r "$file" "$dest"
     done
-
-    rm "$dest"/*/*.md "$dest"/*/*.png
 }
 
 _install_themes() {
@@ -161,6 +159,7 @@ _set_up() {
 
     spicetify config always_enable_devtools 1
     spicetify config sidebar_config 0
+    spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1
     spicetify apply
 }
 
