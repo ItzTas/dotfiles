@@ -234,7 +234,7 @@
     "on-scroll-up": "hyprctl dispatch workspace r+1",
     "on-scroll-down": "hyprctl dispatch workspace r-1",
     
-    "persistent-workspaces": { "*": 4 },
+    "persistent-workspaces": { "*": 3 },
     "format-icons": {
         //"1": "一",
         //"2": "二",
