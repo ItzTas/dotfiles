@@ -98,7 +98,7 @@
     "tooltip-format": "{icon} {essid}",
     "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤢 ", "󰤨 "],
 
-    "on-click-right": "bash .config/hypr/scripts/rofiwifi.sh"
+    "on-click-right": "bash ~/.config/rofi/binaryharbinger/scripts/rofiwifi.sh"
 },
 
 "bluetooth": {
