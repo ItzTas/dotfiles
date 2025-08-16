@@ -128,8 +128,37 @@ _set_up() {
     _install_spicetify_extensions
     _install_themes
 
+    # ----------------------------------------------
+    # ------------------- Themes -------------------
+    # favorite: ⭐
+    #
+    # Sleek
+    #  - BladeRunner
+    #  - Cherry
+    #  - Coral
+    #  - Deep
+    #  - Deeper
+    #  - Greener
+    #  - Elementary
+    #  - Futura
+    #  - Nord
+    #  - Psycho
+    #  - UltraBlack
+    #  - Wealthy
+    #  - Dracula
+    #  - VantaBlack
+    #  - RosePine ⭐
+    # catppuccin
+    #  - latte
+    #  - frappe
+    #  - mocha ⭐
+    #  - macchiato
+
     spicetify config current_theme catppuccin
     spicetify config color_scheme mocha
+
+    # ----------------------------------------------
+
     spicetify config always_enable_devtools 1
     spicetify config sidebar_config 0
     spicetify apply
