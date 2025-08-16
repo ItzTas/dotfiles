@@ -97,7 +97,7 @@
     "format-disconnected": "󰌙 ",
     "tooltip-format": "{icon} {essid}",
     "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤢 ", "󰤨 "],
-
+    "on-click": "chmod +x ~/.config/rofi/binaryharbinger/scripts/rofiwifi.sh && ~/.config/rofi/binaryharbinger/scripts/rofiwifi.sh",
     "on-click-right": "dex ~/.local/share/applications/hypr-terminal/hypr-nmtui.desktop"
 },
 
