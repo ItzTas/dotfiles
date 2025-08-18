@@ -68,20 +68,34 @@
 // ====================== Media ======================
 
 "mpris": {
-    
     "format": "{status_icon}",
     
     "player-icons": {
-      "default": "▶  Playing"},
-
-    "status-icons": {
-      "paused": "  Paused",
-      "playing": "  Playing",
-      "stopped": " Stopped",
+      "default": "▶"
     },
 
-    "tooltip": false
+    "status-icons": {
+      "paused": "",
+      "playing": "",
+      "stopped": "",
+    },
+
+    "tooltip": true,
+    "tooltip-format": "{title} - {artist}"
 },
+
+"custom/next": {
+  "format": "",
+  "on-click": "playerctl next",
+  "tooltip": true
+},
+
+"custom/prev": {
+  "format": "",
+  "on-click": "playerctl previous",
+  "tooltip": true
+},
+
 
 // ===================================================
 
@@ -324,7 +338,9 @@
 	"modules": [
 			"custom/power",
             "custom/os_button",
+            "custom/prev",
             "mpris",
+            "custom/next",
             "group/hardware"
     ]
 },

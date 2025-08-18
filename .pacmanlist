@@ -248,6 +248,7 @@ gtk4-layer-shell 1.1.1-1
 gtkmm-4.0 4.18.0-2
 gtkmm3 3.24.10-1
 gtksourceview4 4.8.4-2
+gtksourceview5 5.16.0-2
 gts 0.7.6.121130-3
 guile 3.0.10-1
 gupnp 1:1.6.9-1
@@ -262,7 +263,7 @@ hidapi 0.15.0-1
 highway 1.3.0-1
 htmlq 0.4.0-2
 hunspell 1.7.2-2
-hwdata 0.397-1
+hwdata 0.398-1
 hwloc 2.12.1-1
 hydra-launcher-bin 3.6.3-1
 hyphen 2.8.8-6
@@ -863,7 +864,7 @@ python-dulwich 0.24.1-1
 python-electrum-aionostr 0.0.11-1
 python-electrum-ecc 0.0.5-1
 python-evdev 1.9.2-1
-python-fastjsonschema 2.21.1-1
+python-fastjsonschema 2.21.2-1
 python-filelock 3.18.0-1
 python-findpython 0.7.0-1
 python-frozenlist 1.7.0-1
