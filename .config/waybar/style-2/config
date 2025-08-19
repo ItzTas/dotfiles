@@ -84,7 +84,7 @@
     "exec": "chmod +x ~/.config/waybar/style-2/scripts/get_media_data.sh && ~/.config/waybar/style-2/scripts/get_media_data.sh",
     "tooltip-format": "{dynamic}",
     "dynamic-order": ["title", "artist"],
-    "interval": 2,
+    "interval": 1,
     "dynamic-separator": " - "
 },
 
@@ -93,7 +93,7 @@
   "tooltip": true,
   "exec": "chmod +x ~/.config/waybar/style-2/scripts/get_media_data.sh && ~/.config/waybar/style-2/scripts/get_media_data.sh next",
   "return-type": "json",
-  "interval": 2
+  "interval": 1
 },
 
 "custom/prev": {
@@ -101,7 +101,7 @@
   "tooltip": true,
   "exec": "chmod +x ~/.config/waybar/style-2/scripts/get_media_data.sh && ~/.config/waybar/style-2/scripts/get_media_data.sh prev",
   "return-type": "json",
-  "interval": 2
+  "interval": 1
 },
 
 
