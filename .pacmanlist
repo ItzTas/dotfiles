@@ -134,7 +134,7 @@ eglexternalplatform 1.2.1-1
 electron31 31.7.7-4
 electron35 35.7.4-1
 electron36 36.7.4-1
-electron37-bin 37.3.0-1
+electron37-bin 37.3.1-1
 electrum 4.6.0-2
 embree 4.4.0-1
 enchant 2.8.12-1
@@ -335,7 +335,7 @@ kwindowsystem 6.17.0-1
 l-smash 2.14.5-4
 ladspa 1.17-5
 lame 3.100-5
-lazydocker 0.24.1-1
+lazydocker 0.24.1-2
 lazygit 0.54.2-1
 lcms2 2.17-1
 leancrypto 1.5.1-1
@@ -861,7 +861,7 @@ python-configargparse 1.5.5-3
 python-crashtest 0.4.1-4
 python-cryptography 45.0.5-1
 python-dbus 1.4.0-1
-python-distlib 0.3.9-2
+python-distlib 0.4.0-1
 python-distro 1.9.0-3
 python-dnspython 1:2.7.0-1
 python-dulwich 0.24.1-1
