@@ -75,9 +75,9 @@
     },
 
     "status-icons": {
-      "paused": "",
-      "playing": "",
-      "stopped": "",
+      "paused": "",
+      "playing": "",
+      "stopped": "",
     },
 
     "tooltip": true,
