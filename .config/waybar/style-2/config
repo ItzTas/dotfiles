@@ -84,7 +84,6 @@
     "exec": "chmod +x ~/.config/waybar/style-2/scripts/get_media_data.sh && ~/.config/waybar/style-2/scripts/get_media_data.sh",
     "tooltip-format": "{dynamic}",
     "dynamic-order": ["title", "artist"],
-    "interval": 1,
     "dynamic-separator": " - "
 },
 
