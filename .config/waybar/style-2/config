@@ -309,14 +309,16 @@
 "memory": {
     "format": "󰍛 {}%",
     "format-alt": "󰍛 {used}/{total} GiB",
-    "interval": 5
-  },
+    "interval": 5,
+    "on-click": "dex ~/.local/share/applications/hypr-terminal/hypr-btop.desktop"
+},
 
   "cpu": {
     "format": "󰻠 {usage}%",
     "format-alt": "󰻠 {avg_frequency} GHz",
-    "interval": 5
-  },
+    "interval": 5,
+    "on-click": "dex ~/.local/share/applications/hypr-terminal/hypr-btop.desktop"
+},
 
 // =======================================================
 
