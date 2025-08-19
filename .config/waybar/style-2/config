@@ -81,19 +81,27 @@
     },
 
     "tooltip": true,
-    "tooltip-format": "{title} - {artist}"
+    "exec": "chmod +x ~/.config/waybar/style-2/scripts/get_media_data.sh && ~/.config/waybar/style-2/scripts/get_media_data.sh",
+    "tooltip-format": "{dynamic}",
+    "dynamic-order": ["title", "artist"],
+    "interval": 2,
+    "dynamic-separator": " - "
 },
 
 "custom/next": {
-  "format": "",
   "on-click": "playerctl next",
-  "tooltip": true
+  "tooltip": true,
+  "exec": "chmod +x ~/.config/waybar/style-2/scripts/get_media_data.sh && ~/.config/waybar/style-2/scripts/get_media_data.sh next",
+  "return-type": "json",
+  "interval": 2
 },
 
 "custom/prev": {
-  "format": "",
   "on-click": "playerctl previous",
-  "tooltip": true
+  "tooltip": true,
+  "exec": "chmod +x ~/.config/waybar/style-2/scripts/get_media_data.sh && ~/.config/waybar/style-2/scripts/get_media_data.sh prev",
+  "return-type": "json",
+  "interval": 2
 },
 
 
@@ -209,7 +217,8 @@
 // ====================== Notification ======================
 
 "custom/swaync": {
-    "tooltip": false,
+    "tooltip": true,
+    "tooltip-format": "Notifications: {}",
     
     "format": "{icon}",
     "format-icons": {

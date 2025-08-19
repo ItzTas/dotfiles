@@ -237,10 +237,6 @@ menu > *:active {
   margin-right: 8px;
 }
 
-#mpris.paused {
-  color: @bg-third;
-}
-
 /* Hover effect for bar elements */
 #custom-swaync:hover,
 #tray > widget:hover,
