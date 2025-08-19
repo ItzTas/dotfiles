@@ -29,7 +29,11 @@
         }
     },
     "notification-visibility": {
-        "no-volume-change": {
+        "spotify-transient": {
+            "state": "transient",
+            "app-name": "[Ss]potify"
+        },
+        "transient": {
             "state": "transient",
             "app-name": "_transient"
         }
