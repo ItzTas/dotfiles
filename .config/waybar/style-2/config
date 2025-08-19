@@ -69,17 +69,15 @@
 
 "mpris": {
     "format": "{status_icon}",
-    
     "player-icons": {
       "default": "▶"
     },
-
     "status-icons": {
       "paused": "",
       "playing": "",
       "stopped": "",
     },
-
+    "on-click-right": "",
     "tooltip": true,
     "exec": "chmod +x ~/.config/waybar/style-2/scripts/get_media_data.sh && ~/.config/waybar/style-2/scripts/get_media_data.sh",
     "tooltip-format": "{dynamic}",
