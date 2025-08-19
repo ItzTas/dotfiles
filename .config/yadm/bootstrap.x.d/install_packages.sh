@@ -40,7 +40,7 @@ _install_pacman_packages() {
         "oh-my-posh"
         "qt6ct"
         "catppuccin-gtk-theme-mocha"
-        "nwg-look"
+        "candy-icons-git"
         "swayosd-gtk3"
         "kando-bin"
         "spicetify-cli"
@@ -110,6 +110,7 @@ _install_pacman_packages() {
         "bat"
 
         # Apps
+        "nwg-look"
         "alarm-clock-applet"
         "zsa-keymapp-bin"
         "spotify"
