@@ -458,12 +458,15 @@ _install_flatpak_packages() {
     local flathub_packages=(
         "com.stremio.Stremio"
         "com.protonvpn.www"
-        # "surf.deckr.deckr"
     )
 
     for package in "${flathub_packages[@]}"; do
         flatpak install --assumeyes --noninteractive flathub "$package"
     done
+
+    sudo flatpak override --filesystem="$HOME"/.themes
+    sudo flatpak override --filesystem="$HOME"/.icons
+    sudo flatpak override --filesystem=/usr/share/themes
 }
 
 _install_oficial_kando_themes() {
