@@ -215,7 +215,7 @@
 
 "custom/swaync": {
     "tooltip": true,
-    "tooltip-format": "Notifications: {}",
+    "tooltip-format": "{} notification(s)",
     
     "format": "{icon}",
     "format-icons": {
