@@ -32,7 +32,7 @@
         "thunderbird-imap.gmail.com-conection-fail-transient": {
             "state": "transient",
             "app-name": "[Tt]hunderbird",
-            "body": "Unable to connect to imap\\.gmail\\.com(.*)"
+            "body": "Unable to connect to(.*)? imap\\.gmail\\.com(.*)"
         },
         "spotify-transient": {
             "state": "transient",
