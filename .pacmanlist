@@ -18,7 +18,7 @@ antimicrox 3.5.1-1
 aom 3.12.1-1
 appstream 1.0.5-2
 appstream-glib 0.8.3-2
-aquamarine-git 0.9.3.r1.g84d53ca-1
+aquamarine-git 0.9.3.r2.g50637ed-1
 arch-update 3.15.0-1
 archlinux-appstream-data 20250730-1
 archlinux-contrib 20250219-1
@@ -678,7 +678,7 @@ lsp-plugins-standalone 1.2.22-1
 lsp-plugins-vst 1.2.22-1
 lsp-plugins-vst3 1.2.22-1
 lua 5.4.8-2
-lua51-lpeg 1.1.0-3
+lua51-lpeg 1.1.0-4
 luajit 2.1.1753364724-1
 lutris 0.5.19-6
 lv2 1.18.10-1
@@ -1072,7 +1072,7 @@ upower 1.90.9-1
 usbutils 018-1
 util-linux 2.41.1-1
 util-linux-libs 2.41.1-1
-uv 0.8.11-1
+uv 0.8.12-1
 v4l-utils 1.30.1-1
 vapoursynth 72-1
 vesktop-bin 1.5.8-1
