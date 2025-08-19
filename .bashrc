@@ -57,8 +57,8 @@ if [ -f "$HOME/.my_fzf.sh" ]; then
 fi
 
 # bash completions
-if [ -f "$HOME/.completions.sh" ]; then
-    source "$HOME/.completions.sh"
+if [ -f "$HOME/.bash_completions.sh" ]; then
+    source "$HOME/.bash_completions.sh"
 fi
 
 export PATH=$PATH:/usr/local/go/bin
