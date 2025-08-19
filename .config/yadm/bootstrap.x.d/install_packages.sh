@@ -464,9 +464,6 @@ _install_flatpak_packages() {
         flatpak install --assumeyes --noninteractive flathub "$package"
     done
 
-    sudo flatpak override --filesystem="$HOME"/.themes
-    sudo flatpak override --filesystem="$HOME"/.icons
-    sudo flatpak override --filesystem=/usr/share/themes
 }
 
 _install_oficial_kando_themes() {
