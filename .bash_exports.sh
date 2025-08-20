@@ -11,7 +11,7 @@ export LESS='-R'
 export BAT_THEME="Catppuccin Mocha"
 
 # browser
-export BROWSER='zen browser'
+export BROWSER='zen-browser'
 
 # editor
 export EDITOR='nvim'
