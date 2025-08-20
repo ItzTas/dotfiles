@@ -17,7 +17,7 @@ print_selected_area() {
     ACTION=$(dunstify -a "sys_print" -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
 
     case "$ACTION" in
-    "default") xdg-open "$fullpath" ;;
+    "default") nemo "$fullpath" & ;;
     esac
 }
 

@@ -31,7 +31,6 @@ rm "$THUMBNAIL"
 
 case "$ACTION" in
 "default")
-    dunstify "Opening $BASENAME"
-    mpv "$FILENAME" &
+    nemo "$FILENAME" &
     ;;
 esac

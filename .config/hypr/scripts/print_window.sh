@@ -19,7 +19,7 @@ print_window() {
     ACTION=$(dunstify -a "sys_print" -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
 
     case "$ACTION" in
-    "default") gthumb "$fullpath" ;;
+    "default") nemo "$fullpath" & ;;
     esac
 }
 
