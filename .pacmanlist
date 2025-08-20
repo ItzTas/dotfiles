@@ -135,7 +135,7 @@ egl-x11 1.0.3-1
 eglexternalplatform 1.2.1-1
 electron31 31.7.7-4
 electron35 35.7.4-1
-electron36 36.7.4-1
+electron36 36.8.1-1
 electron37-bin 37.3.1-1
 electrum 4.6.0-2
 embree 4.4.0-1
@@ -730,7 +730,7 @@ netstandard-targeting-pack 9.0.8.sdk109-1
 nettle 3.10.2-1
 networkmanager 1.54.0-1
 ninja 1.12.1-2
-node-gyp 11.3.0-1
+node-gyp 11.4.0-1
 nodejs 24.6.0-1
 nodejs-nopt 7.2.1-1
 noto-fonts-cjk 20240730-1
