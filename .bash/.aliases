@@ -1,3 +1,6 @@
+#!/bin/env bash
+# vim: filetype=sh
+
 # brightness controll
 if command -v ddcutil &>/dev/null; then
     alias dcs='ddcutil setvcp 10'

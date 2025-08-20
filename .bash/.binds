@@ -1,3 +1,6 @@
+#!/bin/env bash
+# vim: filetype=sh
+
 bind -x '"\eg":"lsd -F"'
 bind -x '"\ey":"yazi"'
 bind -x '"\C-b":fk'

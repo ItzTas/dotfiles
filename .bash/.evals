@@ -1,3 +1,6 @@
+#!/bin/env bash
+# vim: filetype=sh
+
 # oh my posh
 if command -v oh-my-posh &>/dev/null; then
     if [ -d "$HOME/.config/ohmyposh/my_amro_colors" ]; then
