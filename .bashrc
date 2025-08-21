@@ -7,16 +7,10 @@ case $- in
 *) return ;;
 esac
 
-# don't put duplicate lines or lines starting with space in the history.
-HISTCONTROL=ignoreboth
-
 # shopt
 shopt -s histappend
 shopt -s checkwinsize
 shopt -s globstar
-
-# sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 __source_bash_files() {
     # bash files home
