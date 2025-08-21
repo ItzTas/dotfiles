@@ -1,6 +1,9 @@
 #!/bin/env bash
 # vim: filetype=sh
 
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
 # oh my posh
 if command -v oh-my-posh &>/dev/null; then
     if [ -d "$HOME/.config/ohmyposh/my_amro_colors" ]; then
@@ -11,9 +14,6 @@ if command -v oh-my-posh &>/dev/null; then
         fi
     fi
 fi
-
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # pay-respects
 if command -v pay-respects &>/dev/null; then
@@ -35,6 +35,5 @@ if command -v direnv &>/dev/null; then
 fi
 
 if command -v phpenv &>/dev/null; then
-    export PATH="$HOME/.phpenv/bin:$PATH"
     eval "$(phpenv init -)"
 fi
