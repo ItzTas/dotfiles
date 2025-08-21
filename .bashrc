@@ -41,38 +41,13 @@ _source_bash_files() {
     for file in "${files[@]}"; do
         local path="$bash_home/$file"
         if [ -f "$path" ]; then
+            # shellcheck disable=SC1090
             source "$path"
         fi
     done
 }
-
 _source_bash_files
 unset _source_bash_files
-
-# bash binds
-if [ -f "$HOME/.bash_binds" ]; then
-    source "$HOME/binds.sh"
-fi
-
-# bash exports
-if [ -f "$HOME/exports" ]; then
-    source "$HOME/exports"
-fi
-
-# bash evals
-if [ -f "$HOME/.bash_evals.sh" ]; then
-    source "$HOME/.bash_evals.sh"
-fi
-
-# my fzf
-if [ -f "$HOME/.my_fzf.sh" ]; then
-    source "$HOME/.my_fzf.sh"
-fi
-
-# bash completions
-if [ -f "$HOME/.bash_completions.sh" ]; then
-    source "$HOME/.bash_completions.sh"
-fi
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:~/go/bin"
