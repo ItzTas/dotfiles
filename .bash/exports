@@ -1,6 +1,10 @@
 #!/bin/env bash
 # vim: filetype=sh
 
+# don't put duplicate lines or lines starting with space in the history.
+export HISTCONTROL=ignoreboth
+
+# inicial project path
 MY_PROJECT_PATH="$PWD"
 export MY_PROJECT_PATH
 
