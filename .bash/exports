@@ -21,10 +21,16 @@ export BAT_THEME="Catppuccin Mocha"
 export BROWSER='zen-browser'
 
 # editor
-export EDITOR='nvim'
+if command -v nvim &>/dev/null; then
+    export EDITOR='nvim'
+fi
 
 # terminal
-export TERMINAL="ghostty"
+if command -v ghostty &>/dev/null; then
+    export TERMINAL="ghostty"
+elif command -v kitty &>/dev/null; then
+    export TERMINAL="kitty"
+fi
 
 # colors in gcc
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
@@ -56,7 +62,6 @@ export XDG_VIDEOS_DIR="$HOME/Videos"
 # ---- PATH EXPORTS ----
 
 export PATH="$PATH:/home/talinux/.dotnet/tools"
-
 export ANDROID_HOME=$HOME/.AndroidS/Sdk/
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 
