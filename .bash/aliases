@@ -22,8 +22,8 @@ else
 fi
 
 # dir
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
+alias dir='dir --color=always'
+alias vdir='vdir --color=always'
 
 # bitwarden
 if command -v bw &>/dev/null; then
@@ -48,8 +48,8 @@ fi
 
 # grep
 alias grep='grep --color=always'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=always'
+alias egrep='egrep --color=always'
 
 # tmux
 if command -v tmux &>/dev/null; then
