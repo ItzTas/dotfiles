@@ -49,10 +49,9 @@ export XDG_MUSIC_DIR="$HOME/Musics"
 export XDG_PICTURES_DIR="$HOME/Pictures"
 export XDG_VIDEOS_DIR="$HOME/Videos"
 
-# path exports
-export PATH=$PATH:/var/lib/snapd/snap/bin
+# ---- PATH EXPORTS ----
+
 export PATH="$PATH:/home/talinux/.dotnet/tools"
-export PATH=$PATH:~/Unity/Hub/Editor/6000.0.23f1/Editor
 
 export ANDROID_HOME=$HOME/.AndroidS/Sdk/
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
@@ -65,4 +64,9 @@ fi
 # cargo
 if command -v cargo &>/dev/null; then
     export PATH=$PATH:~/.cargo/env
+fi
+
+# snap
+if command -v snap &>/dev/null; then
+    export PATH="$PATH:/var/lib/snapd/snap/bin"
 fi
