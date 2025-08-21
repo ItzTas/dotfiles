@@ -9,5 +9,5 @@ else
   icon="mic.svg"
   message="Microphone: Unmuted"
 fi
-dunstify -i ~/.config/dunst/assets/$icon -t 500 -r 2593 "$message"
+dunstify -a _transient -i ~/.config/dunst/assets/$icon -t 500 -r 2593 "$message"
 
