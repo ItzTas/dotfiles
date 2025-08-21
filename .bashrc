@@ -36,6 +36,7 @@ __source_bash_files() {
         "binds"
         "exports"
         "evals"
+        "sources"
     )
 
     local file path

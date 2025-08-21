@@ -57,7 +57,12 @@ export PATH=$PATH:~/Unity/Hub/Editor/6000.0.23f1/Editor
 export ANDROID_HOME=$HOME/.AndroidS/Sdk/
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 
+# phpenv
+if command -v phpenv &>/dev/null; then
+    export PATH="$HOME/.phpenv/bin:$PATH"
+fi
+
+# cargo
 if command -v cargo &>/dev/null; then
     export PATH=$PATH:~/.cargo/env
-    source "$HOME/.cargo/env"
 fi
