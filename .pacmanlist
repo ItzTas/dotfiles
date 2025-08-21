@@ -16,14 +16,15 @@ alsa-ucm-conf 1.2.14-2
 anime-games-launcher 1.0.2-2
 antimicrox 3.5.1-1
 aom 3.12.1-1
+apparmor 4.1.1-3
 appstream 1.0.5-2
-appstream-glib 0.8.3-2
 aquamarine-git 0.9.3.r2.g50637ed-1
 arch-update 3.15.0-1
 archlinux-appstream-data 20250730-1
 archlinux-contrib 20250219-1
 archlinux-keyring 20250807.1-1
 argon2 20190702-6
+asciidoc 10.2.1-2
 ash-git r470.9953135-1
 at-spi2-core 2.56.4-1
 atkmm 2.28.4-1
@@ -31,6 +32,7 @@ attr 2.5.2-1
 aubio 0.4.9-21
 audit 4.0.5-1
 autoconf 2.72-1
+autoconf-archive 1:2024.10.16-2
 automake 1.18.1-1
 avahi 1:0.9rc2-1
 ayatana-ido 0.10.4-1
@@ -91,7 +93,7 @@ countryfetch 0.2.0-1
 cpio 2.15-3
 cppdap 1.58.0-2
 cronie 1.7.2-1
-cryptsetup 2.8.0-1
+cryptsetup 2.8.1-1
 cunit 2.1.3-4
 curl 8.15.0-1
 czkawka-cli-bin 10.0.0-1
@@ -112,6 +114,8 @@ device-mapper 2.03.34-1
 dex 0.9.0-2
 diffutils 3.12-2
 direnv 2.37.1-1
+docbook-xml 4.5-11
+docbook-xsl 1.79.2-9
 docker 1:28.3.3-1
 docker-buildx 0.26.1-1
 docker-compose 2.39.2-1
@@ -134,7 +138,7 @@ egl-wayland 4:1.1.20-1
 egl-x11 1.0.3-1
 eglexternalplatform 1.2.1-1
 electron31 31.7.7-4
-electron35 35.7.4-1
+electron35 35.7.5-1
 electron36 36.8.1-1
 electron37-bin 37.3.1-1
 electrum 4.6.0-2
@@ -178,7 +182,7 @@ gcc-libs 15.2.1+r22+gc4e96a094636-1
 gcr 3.41.2-2
 gcr-4 4.4.0.1-1
 gd 2.3.3-8
-gdbm 1.25-1
+gdbm 1.26-1
 gdk-pixbuf2 2.42.12-2
 gendesk 1.0.10-1
 gettext 0.26-1
@@ -186,6 +190,7 @@ ghostscript 10.05.1-2
 ghostty 1.1.3-1
 ghostty-shell-integration 1.1.3-1
 ghostty-terminfo 1.1.3-1
+gi-docgen 2025.4-1
 giflib 5.2.2-2
 girara 0.4.5-1
 git 2.50.1-3
@@ -199,6 +204,7 @@ glib-networking 1:2.80.1-1
 glib-perl 1.329.4-3
 glib2 2.84.4-2
 glib2-devel 2.84.4-2
+glib2-docs 2.84.4-2
 glibc 2.42+r17+gd7274d718e6f-1
 glibmm 2.66.8-1
 glibmm-2.68 2.84.0-1
@@ -213,6 +219,7 @@ gnulib-l10n 20241231-1
 gnupg 2.4.8-1
 gnutls 3.8.10-1
 go 2:1.24.6-1
+go-tools 4:0.34.0-2
 gobject-introspection 1.84.0-2
 gobject-introspection-runtime 1.84.0-2
 godot 4.4.1-6
@@ -245,6 +252,7 @@ gst-plugins-good 1.26.5-1
 gstreamer 1.26.5-1
 gtest 1.17.0-1
 gthumb 3.12.7-1
+gtk-doc 1.34.0-3
 gtk-layer-shell 0.9.2-1
 gtk-update-icon-cache 1:4.18.6-1
 gtk2 2.24.33-5
@@ -532,7 +540,6 @@ libnfnetlink 1.0.2-2
 libnftnl 1.3.0-1
 libnghttp2 1.66.0-1
 libnghttp3 1.11.0-1
-libngtcp2 1.13.0-2
 libnice 0.1.22-2
 libnl 3.11.0-1
 libnm 1.54.0-1
@@ -543,7 +550,7 @@ libnvme 1.15-1
 libogg 1.3.6-1
 libopenmpt 0.8.2-1
 libp11-kit 0.25.5-1
-libpamac-aur 11.7.3-4
+libpamac-full 1:11.7.3-1
 libpaper 2.2.6-1
 libpcap 1.10.5-3
 libpciaccess 0.18.1-2
@@ -592,6 +599,7 @@ libtorrent-rasterbar 1:2.0.11-4
 libunibreak 6.1-1
 libunistring 1.3-1
 libunwind 1.8.2-1
+liburcu 0.15.3-1
 liburing 2.11-1
 libusb 1.0.29-1
 libusbmuxd 2.1.1-1
@@ -730,12 +738,8 @@ netstandard-targeting-pack 9.0.8.sdk109-1
 nettle 3.10.2-1
 networkmanager 1.54.0-1
 ninja 1.12.1-2
-node-gyp 11.4.0-1
-nodejs 24.6.0-1
-nodejs-nopt 7.2.1-1
 noto-fonts-cjk 20240730-1
 noto-fonts-emoji 1:2.048-1
-npm 11.5.2-1
 npth 1.8-1
 nspr 4.37-1
 nss 3.115-1
@@ -766,7 +770,8 @@ pacman 7.0.0.r6.gc685ae6-6
 pacman-contrib 1.12.0-1
 pacman-mirrorlist 20250702-2
 pam 1.7.1-1
-pamac-aur 11.7.3-3
+pamac-all 11.7.3-1
+pamac-cli 11.7.3-1
 pambase 20250719-1
 pango 1:1.56.4-1
 pangomm 2.46.4-1
@@ -830,7 +835,6 @@ pixman 0.46.4-1
 pkgconf 2.5.1-1
 playerctl 2.4.1-4
 plocate 1.1.23-1
-pnpm 10.15.0-1
 polkit 126-2
 polkit-gnome 0.105-11
 poppler 25.08.0-1
@@ -875,6 +879,7 @@ python-dbus 1.4.0-1
 python-distlib 0.4.0-1
 python-distro 1.9.0-3
 python-dnspython 1:2.7.0-1
+python-docutils 1:0.21.2-3
 python-dulwich 0.24.1-1
 python-electrum-aionostr 0.0.11-1
 python-electrum-ecc 0.0.5-1
@@ -894,14 +899,17 @@ python-jaraco.context 6.0.1-1
 python-jaraco.functools 4.1.0-1
 python-jaraco.text 4.0.0-2
 python-jeepney 0.9.0-1
+python-jinja 1:3.1.6-1
 python-jsonpatch 1.33-4
 python-jsonpointer 3.0.0-2
 python-jsonschema 4.25.1-1
 python-jsonschema-specifications 2025.4.1-1
 python-keyring 25.6.0-1
 python-lark-parser 1.2.2-3
+python-legacy-cgi 2.6.3-2
 python-lockfile 0.12.2-14
 python-lxml 6.0.0-2
+python-magic 1:0.4.27-5
 python-mako 1.3.10-1
 python-markdown 3.8.2-1
 python-markupsafe 3.0.2-1
@@ -925,6 +933,7 @@ python-protobuf 31.1-2
 python-ptyprocess 0.7.0-8
 python-pyaes 1.6.1-12
 python-pycparser 2.22-3
+python-pygments 2.19.2-1
 python-pymediainfo 6.1.0-4
 python-pypdf 6.0.0-1
 python-pyproject-hooks 1.2.0-3
@@ -941,12 +950,14 @@ python-secretstorage 3.3.3-6
 python-setuptools 1:80.9.0-1
 python-shellingham 1.5.4-3
 python-six 1.17.0-1
+python-smartypants 2.0.2-1
 python-soupsieve 2.7-1
 python-stopit 1.1.2-9
 python-tomlkit 0.13.3-1
 python-tqdm 4.67.1-2
 python-trove-classifiers 2025.8.6.13-1
 python-typing_extensions 4.14.1-1
+python-typogrify 2.1.0-1
 python-urllib3 2.5.0-1
 python-virtualenv 20.34.0-1
 python-webencodings 0.5.1-12
@@ -1007,19 +1018,19 @@ sdl2_net 1:2.2.0-2
 sdl3 3.2.20-1
 seatd 0.9.1-1
 sed 4.9-3
-semver 7.7.2-1
 serd 0.32.4-1
 sesh-bin 2.17.1-1
 sfwbar 1.0_beta16.1-1
 shaderc 2025.3-1
 shadow 4.18.0-1
 shared-mime-info 2.4-2
-simdjson 1:3.13.0-1
 skim 0.20.5-1
 sklauncher-bin 3.2.12-4
 slack-desktop 4.45.64-1
 slang 2.3.3-4
 slurp 1.5.0-1
+snapd 2.71-1
+snapd-glib 1.70-1
 snappy 1.2.2-2
 sndio 1.10.0-1
 socat 1.8.0.3-2
@@ -1034,6 +1045,7 @@ spicetify-cli 2.40.13-1
 spirv-tools 1:1.4.321.0-1
 spotify 1:1.2.63.394-1
 sqlite 3.50.4-1
+squashfs-tools 4.7.2-1
 sratom 0.6.18-1
 srt 1.5.4-1
 stacer-git 1.3.5.r1.gfb1a1f5-1
@@ -1087,6 +1099,7 @@ util-linux 2.41.1-1
 util-linux-libs 2.41.1-1
 uv 0.8.12-1
 v4l-utils 1.30.1-1
+vala 0.56.18-4
 vapoursynth 72-1
 vesktop-bin 1.5.8-1
 vid.stab 1.1.1-2
@@ -1142,6 +1155,7 @@ xdg-user-dirs 0.18-2
 xdg-utils 1.2.1-1
 xdotool 3.20211022.1-2
 xf86-input-libinput 1.5.0-1
+xfsprogs 6.15.0-1
 xkeyboard-config 2.45-1
 xorg-fonts-encodings 1.1.0-1
 xorg-server 21.1.18-2
