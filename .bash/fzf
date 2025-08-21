@@ -1,3 +1,6 @@
+#!/bin/env bash
+# vim: filetype=sh
+
 eval "$(fzf --bash)"
 
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
