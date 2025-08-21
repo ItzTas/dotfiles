@@ -23,6 +23,7 @@ __source_bash_files() {
         "exports"
         "evals"
         "sources"
+        "fzf"
     )
 
     local file path
