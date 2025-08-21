@@ -7,11 +7,6 @@ case $- in
 *) return ;;
 esac
 
-# shopt
-shopt -s histappend
-shopt -s checkwinsize
-shopt -s globstar
-
 __source_bash_files() {
     # bash files home
     local bash_home="$HOME/.bash"
@@ -24,6 +19,7 @@ __source_bash_files() {
         "evals"
         "sources"
         "fzf"
+        "shopt"
     )
 
     local file path
