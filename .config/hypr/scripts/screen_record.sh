@@ -27,9 +27,9 @@ if ! ffmpeg -y -i "$FILENAME" -vframes 1 "$THUMBNAIL"; then
     exit 1
 fi
 
-ACTION=$(dunstify -a "sys_recording" -i "$THUMBNAIL" --action="default,VLC" "Recording Finished" "The recording has been saved as $BASENAME")
+ACTION=$(dunstify -a "sys_recording" -i "$THUMBNAIL" --action="default,open" "Recording Finished" "The recording has been saved as $BASENAME")
 
-rm -f "$THUMBNAIL"
+rm -rf "$TMPDIR"
 
 case "$ACTION" in
 "default")
