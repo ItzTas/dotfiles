@@ -18,7 +18,7 @@ antimicrox 3.5.1-1
 aom 3.12.1-1
 apparmor 4.1.1-3
 appstream 1.0.5-2
-aquamarine-git 0.9.3.r2.g50637ed-1
+aquamarine-git 0.9.3.r4.g25fba03-1
 arch-update 3.15.0-1
 archlinux-appstream-data 20250730-1
 archlinux-contrib 20250219-1
@@ -408,7 +408,7 @@ lib32-libxss 1.2.4-2
 lib32-libxxf86vm 1.1.5-2
 lib32-llvm-libs 1:20.1.8-1
 lib32-lm_sensors 1:3.6.2-2
-lib32-mesa 1:25.1.7-1
+lib32-mesa 1:25.2.1-1
 lib32-ncurses 6.5-2
 lib32-nspr 4.37-1
 lib32-nss 3.115-1
@@ -659,7 +659,7 @@ libzen 0.4.41-2
 libzip 1.11.4-1
 licenses 20240728-1
 lilv 0.24.26-1
-linux 6.16.1.arch1-1
+linux 6.16.2.arch1-1
 linux-api-headers 6.16-1
 linux-firmware 20250808-1
 linux-firmware-amdgpu 20250808-1
@@ -704,7 +704,7 @@ man-db 2.13.1-1
 md4c 0.5.2-1
 mdadm 4.4-1
 meld 3.22.3-1
-mesa 1:25.1.7-1
+mesa 1:25.2.1-1
 mesa-utils 9.0.0-7
 meson 1.8.4-1
 miniupnpc 2.3.3-1
@@ -744,7 +744,7 @@ npth 1.8-1
 nspr 4.37-1
 nss 3.115-1
 numlockx 1.2-6
-nvidia 580.76.05-4
+nvidia 580.76.05-5
 nvidia-settings 580.76.05-1
 nvidia-utils 580.76.05-4
 nvm 0.40.3-1
@@ -908,7 +908,7 @@ python-keyring 25.6.0-1
 python-lark-parser 1.2.2-3
 python-legacy-cgi 2.6.3-2
 python-lockfile 0.12.2-14
-python-lxml 6.0.0-2
+python-lxml 6.0.1-1
 python-magic 1:0.4.27-5
 python-mako 1.3.10-1
 python-markdown 3.8.2-1
@@ -945,7 +945,7 @@ python-rapidfuzz 3.13.0-1
 python-referencing 0.36.2-1
 python-requests 2.32.5-1
 python-requests-toolbelt 1.0.0-3
-python-rpds-py 0.27.0-1
+python-rpds-py 0.27.1-1
 python-secretstorage 3.3.3-6
 python-setuptools 1:80.9.0-1
 python-shellingham 1.5.4-3
@@ -982,7 +982,7 @@ qt5-webengine 5.15.19-2
 qt6-5compat 6.9.1-1
 qt6-base 6.9.1-5
 qt6-charts 6.9.1-1
-qt6-declarative 6.9.1-2
+qt6-declarative 6.9.1-3
 qt6-shadertools 6.9.1-1
 qt6-svg 6.9.1-1
 qt6-tools 6.9.1-2
