@@ -18,16 +18,18 @@ if ! wf-recorder -f "$FILENAME"; then
     exit 1
 fi
 
-THUMBNAIL="$DIR/thumbnail_$(date '+%Y-%m-%d_%H-%M-%S').png"
+TMPDIR=$(mktemp -d)
+THUMBNAIL="$TMPDIR/thumbnail.png"
+rm -f "$THUMBNAIL"
 if ! ffmpeg -y -i "$FILENAME" -vframes 1 "$THUMBNAIL"; then
     dunstify "Error" "Failed to generate thumbnail"
-    rm "$FILENAME"
+    rm -rf "$TMPDIR"
     exit 1
 fi
 
 ACTION=$(dunstify -a "sys_recording" -i "$THUMBNAIL" --action="default,VLC" "Recording Finished" "The recording has been saved as $BASENAME")
 
-rm "$THUMBNAIL"
+rm -f "$THUMBNAIL"
 
 case "$ACTION" in
 "default")
