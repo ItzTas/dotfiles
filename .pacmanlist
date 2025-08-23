@@ -17,8 +17,8 @@ anime-games-launcher 1.0.2-2
 antimicrox 3.5.1-1
 aom 3.12.1-1
 apparmor 4.1.1-3
-appstream 1.0.5-2
-aquamarine-git 0.9.3.r4.g25fba03-1
+appstream 1.0.6-1
+aquamarine-git 0.9.4.r0.g81584da-1
 arch-update 3.15.0-1
 archlinux-appstream-data 20250730-1
 archlinux-contrib 20250219-1
@@ -81,12 +81,12 @@ clipse 1.1.0-1
 clipse-gui 0.1.4-1
 clutter 1.26.4-3
 clutter-gtk 1.8.4-4
-cmake 4.0.3-1
+cmake 4.1.0-1
 cogl 1.22.8-3
 colord 1.4.8-1
 compiler-rt 20.1.8-1
 composefs 1.0.8-1
-composer 2.8.10-1
+composer 2.8.11-1
 containerd 2.1.4-1
 coreutils 9.7-1
 countryfetch 0.2.0-1
@@ -419,7 +419,7 @@ lib32-pam 1.7.0-1
 lib32-pcre2 10.45-1
 lib32-pipewire 1:1.4.7-1
 lib32-spirv-tools 1:1.4.321.0-1
-lib32-sqlite 3.50.2-1
+lib32-sqlite 3.50.4-1
 lib32-systemd 257.8-1
 lib32-util-linux 2.41.1-1
 lib32-vulkan-icd-loader 1.4.321.0-1
@@ -586,7 +586,7 @@ libsquish 1.15-8
 libssh 0.11.2-1
 libssh2 1.11.1-1
 libstemmer 3.0.1-1
-libsynctex 2025.2-1
+libsynctex 2025.2-2
 libsysprof-capture 48.0-7
 libtasn1 4.20.0-1
 libteam 1.32-2
@@ -722,7 +722,7 @@ msgpack-c 6.1.0-2
 mtdev 1.1.7-1
 mujs 1.3.7-1
 mupen64plus 2.6.0-1
-nano 8.5-1
+nano 8.6-1
 ncdu 2.8.2-3
 ncurses 6.5-4
 nemo 6.4.5-1
@@ -967,7 +967,7 @@ python-yaml 6.0.2-2
 python-yarl 1.21.1-1
 python-zipp 3.21.0-2
 qbittorrent 5.1.2-1
-qca-qt6 2.3.10-2
+qca-qt6 2.3.10-3
 qman 1:1.5.0-2
 qt5-base 5.15.17+kde+r123-1
 qt5-declarative 5.15.17+kde+r21-1
@@ -1123,7 +1123,7 @@ weston 14.0.2-1
 wf-recorder 0.5.0-2
 wget 1.25.0-2
 which 2.23-1
-wine 10.12-1
+wine 10.13-1
 winetricks 20250102-1
 wiremix 0.7.0-1
 wireplumber 0.5.10-1
