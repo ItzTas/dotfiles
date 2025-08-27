@@ -60,8 +60,8 @@ if command -v sesh &>/dev/null; then
     sc() {
         sesh clone "$@"
         local session_name="Projects 📂"
-        if tmux has-session "$session_name"; then
-            tmux kill-session "$session_name"
+        if tmux has-session -t "$session_name"; then
+            tmux kill-session -t "$session_name"
         fi
     }
 fi
