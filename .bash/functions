@@ -56,6 +56,14 @@ if command -v sesh &>/dev/null; then
         )
         [[ -n "$selection" ]] && sesh connect "$selection"
     }
+
+    sc() {
+        sesh clone "$@"
+        local session_name="Projects 📂"
+        if tmux has-session "$session_name"; then
+            tmux kill-session "$session_name"
+        fi
+    }
 fi
 
 # docker
