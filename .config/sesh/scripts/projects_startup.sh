@@ -4,7 +4,10 @@ _f() {
     local original_path="$PWD"
     local selection
     selection=$(
-        command ls -A |
+        find . \
+            -maxdepth 1 -mindepth 1 \
+            \( -name ".*" -o -name "*" \) \
+            -printf '%P\n' |
             fzf \
                 --bind "ctrl-y:accept" \
                 --preview="lsd --tree --icon always --color always --depth 2 {}"
