@@ -7,7 +7,7 @@ preview_command = "lsd --icon always --tree --depth 2 --color always {}"
 [[session]]
 name = "Projects 📂"
 path = "~/workspace/github.com/ItzTas"
-startup_command = "bash -c 'selection=$(ls -A | fzf --bind \"ctrl-y:accept\" --preview=\"lsd --tree --icon always --color always --depth 2 {}\") && if [[ -n \"$selection\" ]]; then cd \"$selection\"; else cd ~/workspace/github.com/ItzTas; fi; clear'"
+startup_command = "bash \"$HOME/.config/sesh/scripts/projects_startup.sh\""
 
 [[session]]
 name = "Downloads 📥"
