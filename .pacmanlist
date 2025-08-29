@@ -392,7 +392,7 @@ lib32-libpng 1.6.50-1
 lib32-libpsl 0.21.5-1
 lib32-libssh2 1.11.1-1
 lib32-libtasn1 4.20.0-1
-lib32-libtirpc 1.3.6-2
+lib32-libtirpc 1.3.7-1
 lib32-libunistring 1.3-1
 lib32-libva 2.22.0-1
 lib32-libx11 1.8.12-2
@@ -418,7 +418,7 @@ lib32-nvidia-utils 580.76.05-1
 lib32-openssl 1:3.5.2-1
 lib32-p11-kit 0.25.5-1
 lib32-pam 1.7.0-1
-lib32-pcre2 10.45-1
+lib32-pcre2 10.46-1
 lib32-pipewire 1:1.4.7-1
 lib32-spirv-tools 1:1.4.321.0-1
 lib32-sqlite 3.50.4-1
@@ -598,7 +598,7 @@ libteam 1.32-2
 libthai 0.1.29-3
 libtheora 1.2.0-1
 libtiff 4.7.0-1
-libtirpc 1.3.6-2
+libtirpc 1.3.7-1
 libtool 2.5.4+r62+g6389dce8-1
 libtorrent-rasterbar 1:2.0.11-4
 libunibreak 6.1-1
@@ -664,7 +664,7 @@ libzen 0.4.41-2
 libzip 1.11.4-1
 licenses 20240728-1
 lilv 0.24.26-1
-linux 6.16.3.arch1-1
+linux 6.16.4.arch1-1
 linux-api-headers 6.16-1
 linux-firmware 20250808-1
 linux-firmware-amdgpu 20250808-1
@@ -750,7 +750,7 @@ npth 1.8-1
 nspr 4.37-1
 nss 3.115.1-1
 numlockx 1.2-6
-nvidia 580.76.05-6
+nvidia 580.76.05-7
 nvidia-settings 580.76.05-1
 nvidia-utils 580.76.05-4
 nvm 0.40.3-1
@@ -795,7 +795,7 @@ pavucontrol 1:6.1-1
 pay-respects 0.7.9-1
 pciutils 3.14.0-1
 pcre 8.45-4
-pcre2 10.45-1
+pcre2 10.46-1
 pcsclite 2.3.3-1
 perl 5.42.0-1
 perl-cairo-gobject 1.005-5
