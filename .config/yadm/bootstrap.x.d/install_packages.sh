@@ -84,7 +84,7 @@ _install_pacman_packages() {
         # Cli tools
         "yq"
         "zip"
-        "unrar"
+        "rar"
         "dex"
         "jq"
         "fzf"
