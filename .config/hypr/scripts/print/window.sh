@@ -1,10 +1,7 @@
 #!/bin/env bash
 
 print_window() {
-    local filename
-    local path
-    local fullpath
-    local ACTION
+    local filename path fullpath 
 
     filename="screenshot_$(date '+%Y-%m-%d_%H-%M-%S-%3N').png"
     path="$(xdg-user-dir PICTURES)/screenshots"
@@ -14,8 +11,17 @@ print_window() {
 
     hyprshot -m window -s -o "$path" -f "$filename"
 
-    sleep 0.2
+    local max_retries=20
+    local retry_interval=0.1
+    for ((i = 1; i <= max_retries; i++)); do
+        if [ -f "$fullpath" ]; then
+            sleep 0.6
+            break
+        fi
+        sleep "$retry_interval"
+    done
 
+    local ACTION
     ACTION=$(dunstify -a "sys_print" -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
 
     case "$ACTION" in
