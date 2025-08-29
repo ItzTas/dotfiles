@@ -480,6 +480,7 @@ libedit 20250104_3.1-1
 libei 1.5.0-1
 libelf 0.193-5
 libepoxy 1.5.10-3
+libev 4.33-4
 libevdev 1.13.4-1
 libevent 2.1.12-4
 libexif 0.6.25-1
@@ -1099,6 +1100,7 @@ tzdata 2025b-1
 uchardet 0.0.8-3
 udisks2 2.10.1-6
 ufw 0.36.2-5
+unclutter 1:1.6-4
 unibilium 2.1.2-1
 unzip 6.0-23
 upower 1.90.10-1
