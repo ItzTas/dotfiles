@@ -151,7 +151,7 @@ exempi 2.6.6-2
 exiv2 0.28.5-1
 expat 2.7.1-1
 fakeroot 1.37.1.2-1
-fastfetch 2.50.2-1
+fastfetch 2.51.1-1
 fd 10.3.0-1
 ferdium-nightly 7.1.1.nightly.4-2
 ffmpeg 2:7.1.1-5
@@ -286,7 +286,7 @@ hyphen 2.8.8-6
 hyprcursor-git 0.1.13.r0.g44e91d4-1
 hyprgraphics-git 0.1.5.r2.g157cc52-1
 hypridle-git 0.1.7.r0.g5430b73-1
-hyprland-git 0.50.0.r119.g4b2bfbd-1
+hyprland-git 0.50.0.r123.gea42041-1
 hyprland-protocols-git 0.6.4.r1.g613878c-1
 hyprland-qt-support-git 0.1.0.r9.g4c8053c-1
 hyprland-qtutils-git 0.1.4.r3.gb308a81-1
@@ -1063,7 +1063,7 @@ startup-notification 0.12-9
 steam 1.0.0.82-2
 sudo 1.9.17.p1-1
 svt-av1 3.1.0-1
-swaync 0.12.1-1
+swaync 0.12.2-1
 swayosd-gtk3 0.1.0-1
 symfony-cli 5.12.0-7
 systemd 257.8-2
@@ -1076,7 +1076,7 @@ termpicker 1.4.0-1
 texinfo 7.2-1
 thunderbird 141.0-1
 tidy 5.8.0-3
-timeshift 25.07.5-1
+timeshift 25.07.6-1
 tinysparql 3.9.2-2
 tinyxml2 11.0.0-1
 tmux 3.5_a-1
@@ -1192,7 +1192,7 @@ yyjson 0.12.0-1
 zathura 0.5.12-1
 zathura-pdf-poppler 0.3.3-5
 zelda64recomp-bin 1.2.2-1
-zen-browser-bin 1.15.1b-1
+zen-browser-bin 1.15.2b-1
 zenity 4.1.99-2
 zeromq 4.3.5-2
 zimg 3.0.5-1
