@@ -265,7 +265,7 @@ gtkmm-4.0 4.18.0-2
 gtkmm3 3.24.10-1
 gtksourceview4 4.8.4-2
 gtksourceview5 5.16.0-2
-gts 0.7.6.121130-3
+gts 0.7.6.121130-5
 guile 3.0.10-1
 gupnp 1:1.6.9-1
 gupnp-igd 1.6.0-2
@@ -286,7 +286,7 @@ hyphen 2.8.8-6
 hyprcursor-git 0.1.13.r0.g44e91d4-1
 hyprgraphics-git 0.1.5.r2.g157cc52-1
 hypridle-git 0.1.7.r0.g5430b73-1
-hyprland-git 0.50.0.r123.gea42041-1
+hyprland-git 0.50.0.r124.g5bb8adb-1
 hyprland-protocols-git 0.6.4.r1.g613878c-1
 hyprland-qt-support-git 0.1.0.r9.g4c8053c-1
 hyprland-qtutils-git 0.1.4.r3.gb308a81-1
@@ -736,7 +736,7 @@ nemo-image-converter 6.4.0-3
 nemo-media-columns 6.4.0-1
 nemo-python 6.4.0-3
 nemo-terminal 6.4.0-3
-neovim 0.11.3-1
+neovim 0.11.4-1
 net-tools 2.10-3
 netpbm 10.86.47-1
 netstandard-targeting-pack 9.0.8.sdk109-1
