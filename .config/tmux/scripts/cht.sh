@@ -3,28 +3,32 @@
 _ask_query() {
     local selected="$1"
     local type="$2"
-    local query response
 
     while true; do
+        local query response_body response_code
         read -r -p "($selected) query: " query
 
         if [[ "$type" == "language" ]]; then
             query=$(echo "$query" | tr ' ' '+')
-            response=$(curl -s -w "%{http_code}" "cht.sh/$selected/$query" -o /tmp/cht_response.txt)
+            response_body=$(curl -s "curl" -w "%{http_code}" "cht.sh/$selected/$query")
         elif [[ "$type" == "core" ]]; then
-            response=$(curl -s -w "%{http_code}" "cht.sh/$selected~$query" -o /tmp/cht_response.txt)
+            response_body=$(curl -s "curl" -w "%{http_code}" "cht.sh/$selected~$query")
         fi
 
-        if [[ "$response" -ge 200 && "$response" -lt 400 ]]; then
+        response_code="${response_body: -3}"
+        response_body="${response_body::-3}"
+
+        if [[ "$response_code" -ge 200 && "$response_code" -lt 400 ]]; then
             if [ "$PAGER" != "" ]; then
-                cat /tmp/cht_response.txt | "$PAGER"
+                echo "$response_body" | "$PAGER"
                 break
             fi
-            cat /tmp/cht_response.txt | less -R
+            echo "$response_body" | less -R
             break
         fi
 
-        echo "Server error or invalid query, try another."
+        echo "Reponse code: $response_code"
+        echo "Server error or invalid query: $query, try again"
     done
 }
 
