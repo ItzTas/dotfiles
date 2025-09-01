@@ -33,6 +33,9 @@ _cht() {
     if [ "$selected" = "" ]; then
         return
     fi
+
+    local query
+    read -r -p "query: " query
 }
 
 _cht
