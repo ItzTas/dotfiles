@@ -162,7 +162,7 @@ file-roller 44.5-1
 filesystem 2025.05.03-1
 findutils 4.10.0-3
 flac 1.5.0-1
-flameshot-git r2172.06f41a86-1
+flameshot-git r2173.980cf535-1
 flatpak 1:1.16.1-1
 flatseal 2.3.1-4
 flex 2.6.4-5
@@ -286,7 +286,7 @@ hyphen 2.8.8-6
 hyprcursor-git 0.1.13.r0.g44e91d4-1
 hyprgraphics-git 0.1.5.r2.g157cc52-1
 hypridle-git 0.1.7.r0.g5430b73-1
-hyprland-git 0.50.0.r124.g5bb8adb-1
+hyprland-git 0.50.0.r126.g8a64168-1
 hyprland-protocols-git 0.6.4.r1.g613878c-1
 hyprland-qt-support-git 0.1.0.r9.g4c8053c-1
 hyprland-qtutils-git 0.1.4.r3.gb308a81-1
@@ -665,7 +665,7 @@ libzip 1.11.4-1
 licenses 20240728-1
 lilv 0.24.26-1
 linux 6.16.4.arch1-1
-linux-api-headers 6.16-1
+linux-api-headers 6.16-2
 linux-firmware 20250808-1
 linux-firmware-amdgpu 20250808-1
 linux-firmware-atheros 20250808-1
