@@ -18,9 +18,21 @@ _cht() {
         "jq"
     )
 
-    local options=("${languages_list[@]}" "${core_utilts_list[@]}")
+    local options
+    options="$(printf "%s\n" "${languages_list[@]}" "${core_utilts_list[@]}")"
+
     local selected
-    selected=$(printf "%s\n" "${options[@]}" | fzf)
+    selected=$(
+        echo "$options" |
+            fzf \
+                --preview "bash $HOME/.config/tmux/scripts/fzf_preview/cht.sh {}" \
+                --bind 'ctrl-y:accept' \
+                --ansi
+    )
+
+    if [ "$selected" = "" ]; then
+        return
+    fi
 }
 
 _cht
