@@ -16,6 +16,7 @@ __source_zsh_files() {
         "sources"
         "fzf"
         "shopt"
+        "zstyle"
     )
 
     local path
@@ -30,3 +31,6 @@ __source_zsh_files() {
 __source_zsh_files
 unset __source_zsh_files
 
+if [ -z "$TMUX" ]; then
+    tmux_manager
+fi

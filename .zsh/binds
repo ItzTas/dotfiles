@@ -6,25 +6,44 @@ yazi_widget() { yazi }
 fk_widget() { fk }
 fe_widget() { fe }
 sesh_connect_widget() { sesh_connect }
-tmux_manager_widget() { tmux_manager }
 
 zle -N lsd_widget
 zle -N yazi_widget
 zle -N fk_widget
 zle -N fe_widget
 zle -N sesh_connect_widget
-zle -N tmux_manager_widget
 
 bindkey "\eg" lsd_widget    # Alt+g
 bindkey "\ey" yazi_widget   # Alt+y
 bindkey "^B" fk_widget      # Ctrl+b
 bindkey "^O" fe_widget      # Ctrl+o
-# bindkey "\eb" pf_widget    # Alt+b (comentado)
-# bindkey "^F" new_ss_widget # Ctrl+f (comentado)
-# bindkey "^A" fs_widget     # Ctrl+a (comentado)
+# bindkey "\eb" pf_widget    # Alt+b 
+# bindkey "^F" new_ss_widget # Ctrl+f 
+# bindkey "^A" fs_widget     # Ctrl+a 
 
 if [ -z "$TMUX" ]; then
     bindkey "^F" sesh_connect_widget
-    bindkey "^G" tmux_manager_widget
 fi
 
+# Completion settings
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+bindkey '^Y' yank
+bindkey '^D' delete-char
+bindkey '^W' backward-kill-word
+bindkey '^H' backward-kill-word
+bindkey '\ed' kill-word
+bindkey '^T' transpose-chars
+bindkey '\eb' backward-word
+bindkey '\ef' forward-word
+bindkey '^L' clear-screen
+bindkey '^K' kill-line
+
+# Completion & history
+bindkey '^I' menu-complete
+bindkey '\e[Z' menu-complete-backward
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
+
+# Others
+bindkey '\e.' yank-last-arg

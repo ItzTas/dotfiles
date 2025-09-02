@@ -17,8 +17,7 @@ __source_bash_files() {
         "exports"
         "evals"
         "sources"
-        "fzf"
-        "shopt"
+        "setopt"
     )
 
     local file path
