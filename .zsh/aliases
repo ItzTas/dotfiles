@@ -14,10 +14,10 @@ fi
 
 # ls && utils
 if command -v lsd &>/dev/null; then
-    alias ls='lsd'
-    alias ll='lsd -alF'
-    alias la='lsd -A'
-    alias l='lsd -F'
+    alias ls='lsd --icon=always'
+    alias ll='lsd -alF --icon=always'
+    alias la='lsd -A --icon=always'
+    alias l='lsd -F --icon=always'
 else
     alias ll='ls -alF'
     alias la='ls -A'

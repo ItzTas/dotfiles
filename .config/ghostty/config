@@ -13,6 +13,7 @@ cursor-click-to-move = true
 adjust-cursor-thickness = 0
 
 # Shell
+# zsh
 # initial-command = bash ~/.config/ghostty/scripts/start_zsh.sh
 
 # Mouse
