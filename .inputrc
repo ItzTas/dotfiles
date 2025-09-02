@@ -27,7 +27,7 @@ set bell-style none
 
 # editing mode
 set editing-mode vi
-set show-mode-in-prompt on
+set show-mode-in-prompt off
 set vi-ins-mode-string "(i) "
 set vi-cmd-mode-string "(n) "
 

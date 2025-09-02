@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 # vim: filetype=zsh
 
-# zsh is kinda stupid so it needs this
 export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
 
 # don't put duplicate lines or lines starting with space in the history.

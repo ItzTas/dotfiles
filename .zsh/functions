@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 # vim: filetype=zsh
 
-# zsh is kinda stupid so it needs this
 export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
 
 # git
@@ -21,13 +20,16 @@ fi
 
 # tmux
 if command -v tmux &>/dev/null; then
-	tmux_manager() {
-		if [ "$(tmux list-sessions 2>/dev/null | wc -l)" -gt 0 ]; then
-			tmux attach
-		else
-			tmux new-session -s default
-		fi
-	}
+    tmux_manager() {
+      local session_count
+      session_count=$(tmux list-sessions 2>/dev/null | wc -l | tr -d ' ')
+
+      if (( session_count > 0 )); then
+        tmux attach
+      else
+        tmux new-session -s default
+      fi
+    }
 fi
 
 # sesh
