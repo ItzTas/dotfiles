@@ -29,9 +29,7 @@ fi
 
 __source_zsh_files() {
     local zsh_home="$HOME/.zsh"
-
-    local zsh_settings="$zsh_home/settings"
-    local setting_files=(
+    local files=(
         "exports"
         "aliases"
         "completions"
@@ -39,26 +37,13 @@ __source_zsh_files() {
         "binds"
         "evals"
         "sources"
-        "fzf"
-        "shopt"
+        "setopt"
         "zstyle"
     )
 
-    local zsh_plugins_settings="$zsh_home/plugins"
-    local plugins_setting_files=(
-        "zsh-syntax-highlighting"
-    )
-
     local path
-    for file in "${setting_files[@]}"; do
-        path="$zsh_settings/$file"
-        if [[ -f $path ]]; then
-            source "$path"
-        fi
-    done
-    local path
-    for file in "${plugins_setting_files[@]}"; do
-        path="$zsh_plugins_settings/$file"
+    for file in "${files[@]}"; do
+        path="$zsh_home/$file"
         if [[ -f $path ]]; then
             source "$path"
         fi

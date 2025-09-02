@@ -17,7 +17,7 @@ __source_bash_files() {
         "exports"
         "evals"
         "sources"
-        "setopt"
+        "shopt"
         "oh-my-zsh"
     )
 
