@@ -203,7 +203,6 @@ _install_pacman_packages() {
         "timeshift"
         "termpicker"
         "zsh"
-        "oh-my-zsh-git"
 
         # Essentials
         "cmake"

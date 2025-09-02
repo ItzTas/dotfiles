@@ -21,10 +21,6 @@ bindkey "^O" fe_widget      # Ctrl+o
 # bindkey "^F" new_ss_widget # Ctrl+f 
 # bindkey "^A" fs_widget     # Ctrl+a 
 
-if [ -z "$TMUX" ]; then
-    bindkey "^F" sesh_connect_widget
-fi
-
 # Completion settings
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
