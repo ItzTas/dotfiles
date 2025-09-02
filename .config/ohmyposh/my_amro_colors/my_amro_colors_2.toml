@@ -86,18 +86,6 @@ version = 3
     background = ''
     type = 'root'
 
-  # [[blocks.segments]]
-  #   background = "transparent"
-  #   foreground_templates = [
-  #       "{{if eq .Env.POSH_VI_MODE \"n\"}}#5898ff{{end}}",
-  #       "{{if eq .Env.POSH_VI_MODE \"i\"}}#ff57a8{{end}}",
-  #       "{{if eq .Env.POSH_VI_MODE \"v\"}}#b879ff{{end}}",
-  #       "{{if eq .Env.POSH_VI_MODE \"r\"}}#ff2185{{end}}"
-  #   ]
-  #   style = "plain"
-  #   template = "{{ if .Env.POSH_VI_MODE }}({{ .Env.POSH_VI_MODE }}){{ end }}"
-  #   type = "text"
-
   [[blocks.segments]]
     style = 'plain'
     template = '['

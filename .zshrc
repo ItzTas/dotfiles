@@ -15,7 +15,6 @@ ZSH_THEME="robbyrussell"
 plugins=(
     "zsh-syntax-highlighting"
     "zsh-autosuggestions"
-    "vi-mode"
 )
 
 ZSH_CACHE_DIR="$HOME/.cache/oh-my-zsh"
