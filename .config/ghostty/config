@@ -26,7 +26,9 @@ focus-follows-mouse = true
 mouse-scroll-multiplier = 0.7
 
 # Keybinds
-# keybind = ctrl+a=increase_font_size
+keybind = ctrl+shift+plus=increase_font_size:1
+keybind = ctrl+shift+minus=decrease_font_size:1
+keybind = ctrl+shift+0=reset_font_size
 
 # themes and opacities
 
