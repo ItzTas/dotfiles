@@ -31,31 +31,9 @@ fi
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#8c8caa'
 
 # zsh-syntax-highlighting
-typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[default]='fg=#cdd6f4'
-ZSH_HIGHLIGHT_STYLES[comment]='fg=#8c8caa'
-ZSH_HIGHLIGHT_STYLES[command]='fg=#b4befe'
-ZSH_HIGHLIGHT_STYLES[alias]='fg=#cba6f7'
-ZSH_HIGHLIGHT_STYLES[builtin]='fg=#9ccfd8'
-ZSH_HIGHLIGHT_STYLES[function]='fg=#f5c2e7'
-ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=#d6a8c9'
-ZSH_HIGHLIGHT_STYLES[operator]='fg=#89b4fa'
-ZSH_HIGHLIGHT_STYLES[parameter]='fg=#f9e2af'
-ZSH_HIGHLIGHT_STYLES[backtick]='fg=#b4befe'
-ZSH_HIGHLIGHT_STYLES[single-quote]='fg=#f2cdcd'
-ZSH_HIGHLIGHT_STYLES[double-quote]='fg=#f2cdcd'
-ZSH_HIGHLIGHT_STYLES[exec]='fg=#89b4fa'
-ZSH_HIGHLIGHT_STYLES[precommand]='fg=#d6a8c9'
-ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=#89b4fa'
-ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=#f5c2e7'
-ZSH_HIGHLIGHT_STYLES[path]='fg=#cba6f7'
-ZSH_HIGHLIGHT_STYLES[named-directory]='fg=#f9e2af'
-ZSH_HIGHLIGHT_STYLES[numeric]='fg=#f5c2e7'
-ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=#f38ba8'
-ZSH_HIGHLIGHT_STYLES[pattern]='fg=#9ccfd8'
-ZSH_HIGHLIGHT_STYLES[redirection]='fg=#89b4fa'
-ZSH_HIGHLIGHT_STYLES[globbing]='fg=#cba6f7'
-ZSH_HIGHLIGHT_STYLES[error]='fg=#f38ba8'
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main cursor)
+typeset -gA ZSH_HIGHLIGHT_STYLES
+source "$HOME/.zsh/catppuccin_mocha-zsh-syntax-highlighting"
 # -------------------------------------------
 
 __source_zsh_files() {
