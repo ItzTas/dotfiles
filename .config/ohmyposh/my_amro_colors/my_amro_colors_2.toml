@@ -20,7 +20,9 @@ version = 3
 
     [blocks.segments.properties]
       folder_separator_icon = '/'
-      style = 'agnoster'
+      style = 'letter'
+      # style = 'agnoster'
+      # style = 'full'
 
   [[blocks.segments]]
     style = 'plain'
