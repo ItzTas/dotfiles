@@ -43,12 +43,12 @@ __source_zsh_files() {
         "aliases"
         "completions"
         "functions"
-        "binds"
         "evals"
         "sources"
         "setopt"
         "zstyle"
         "vi-mode"
+        "binds"
     )
 
     local path
