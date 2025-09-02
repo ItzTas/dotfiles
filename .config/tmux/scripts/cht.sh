@@ -33,6 +33,7 @@ _get_request() {
     local topic="$1"
     local query="$2"
     local type="$3"
+    local url response response_body response_code
 
     if [[ "$type" == "language" ]]; then
         query=$(echo "$query" | tr ' ' '+')
@@ -41,15 +42,28 @@ _get_request() {
         url="cht.sh/$topic~$query"
     fi
 
-    response_body=$(curl -s -w "%{http_code}" "$url")
+    response=$(curl -s -w "\n%{http_code}" "$url")
+    response_code=$(echo "$response" | tail -n1)
+    response_body=$(echo "$response" | head -n -1)
 
-    response_code="${response_body: -3}"
-    response_body="${response_body::-3}"
+    if _is_not_found "$response_body"; then
+        response_code=404
+    fi
 
     if ((response_code >= 200 && response_code < 400)); then
         _save_to_cache "$topic" "$query" "$response_body"
     fi
+
     echo -e "$response_codeµµµ$response_body"
+}
+
+_is_not_found() {
+    local response="$1"
+    if echo "$response" | head -n5 | grep -q "404 NOT FOUND"; then
+        return 0
+    else
+        return 1
+    fi
 }
 
 _ask_query() {
