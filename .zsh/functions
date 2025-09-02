@@ -107,7 +107,14 @@ upgrady() {
 		if command -v freshclam >/dev/null; then
 			sudo freshclam
 		fi
-		hyprpm update
+
+        if command -v hyprpm >/dev/null; then
+		    hyprpm update
+        fi
+
+        if command -v omz >/dev/null; then
+            omz update
+        fi
 		yadm_update
 
 		{
