@@ -166,7 +166,7 @@ flameshot-git r2173.980cf535-1
 flatpak 1:1.16.1-1
 flatseal 2.3.1-4
 flex 2.6.4-5
-fluidsynth 2.4.7-1
+fluidsynth 2.4.8-1
 fmt 11.2.0-1
 fontconfig 2:2.17.1-1
 fortune-mod 3.24.0-1
@@ -225,7 +225,7 @@ go-tools 4:0.34.0-2
 gobject-introspection 1.84.0-2
 gobject-introspection-runtime 1.84.0-2
 godot 4.4.1-6
-gperftools 2.17-1
+gperftools 2.17.2-1
 gpgme 2.0.0-1
 gpgmepp 2.0.0-2
 gping 1.20.1-1
@@ -281,7 +281,7 @@ htmlq 0.4.0-2
 hunspell 1.7.2-2
 hwdata 0.398-1
 hwloc 2.12.1-1
-hydra-launcher-bin 3.6.3-1
+hydra-launcher-bin 3.6.6-1
 hyphen 2.8.8-6
 hyprcursor-git 0.1.13.r0.g44e91d4-1
 hyprgraphics-git 0.1.5.r2.g157cc52-1
@@ -290,7 +290,7 @@ hyprland-git 0.50.0.r126.g8a64168-1
 hyprland-protocols-git 0.6.4.r1.g613878c-1
 hyprland-qt-support-git 0.1.0.r9.g4c8053c-1
 hyprland-qtutils-git 0.1.4.r3.gb308a81-1
-hyprlang-git 0.6.4.r1.g23f0deb-1
+hyprlang-git 0.6.4.r2.g3d63fb4-1
 hyprlock-git 0.9.1.r3.g8d0e569-1
 hyprpaper-git 0.7.5.r9.gbcb1ffa-1
 hyprpicker-git 0.4.5.r8.gd6a1363-1
@@ -854,7 +854,7 @@ postgresql 17.5-5
 postgresql-libs 17.5-5
 pps-tools 1.0.3-2
 procps-ng 4.0.5-3
-proto-bin 0.52.2-1
+proto-bin 0.52.3-1
 protobuf 32.0-1
 psmisc 23.7-1
 pugixml 1.15-2
