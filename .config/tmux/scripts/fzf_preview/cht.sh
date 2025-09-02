@@ -36,7 +36,7 @@ _preview() {
     local first_line
     first_line=$(echo "$response" | head -n1 | xargs)
     if [[ "$first_line" == "Unknown topic." ]]; then
-        echo ""
+        echo "No preview"
         return
     fi
 
