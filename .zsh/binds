@@ -46,10 +46,10 @@ bindkey '\e[B' history-search-forward
 bindkey '\e.' yank-last-arg
 
 # Quoted vi edition
-autoload -U select-quoted
-zle -N select-quoted
+autoload -U __vi-select-quoted
+zle -N __vi-select-quoted
 for m in visual viopp; do
     for c in {a,i}{\',\",\`}; do
-        bindkey -M $m $c select-quoted
+        bindkey -M $m $c __vi-select-quoted
     done
 done

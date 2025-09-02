@@ -3,7 +3,7 @@
 
 export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
 
-select-quoted() {
+__vi-select-quoted() {
     setopt localoptions noksharrays
 
     local matching=${${1:-$KEYS}[2]}
