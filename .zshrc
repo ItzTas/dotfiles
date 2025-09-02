@@ -48,6 +48,7 @@ __source_zsh_files() {
         "sources"
         "setopt"
         "zstyle"
+        "vi-mode"
     )
 
     local path
@@ -62,4 +63,3 @@ __source_zsh_files() {
 __source_zsh_files
 unset -f __source_zsh_files
 unset -f upgrade_oh_my_zsh
-
