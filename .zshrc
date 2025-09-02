@@ -55,7 +55,8 @@ ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=#f38ba8'
 ZSH_HIGHLIGHT_STYLES[pattern]='fg=#9ccfd8'
 ZSH_HIGHLIGHT_STYLES[redirection]='fg=#89b4fa'
 ZSH_HIGHLIGHT_STYLES[globbing]='fg=#cba6f7'
-ZSH_HIGHLIGHT_STYLES[error]='fg=#f38ba8'
+ZSH_HIGHLIGHT_STYLES[error]='fg=#d6a8c9'
+
 # -------------------------------------------
 
 __source_zsh_files() {
