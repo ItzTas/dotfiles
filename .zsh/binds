@@ -12,6 +12,7 @@ zle -N yazi_widget
 zle -N fk_widget
 zle -N fe_widget
 zle -N sesh_connect_widget
+zle -N select-quoted
 
 bindkey "\eg" lsd_widget    # Alt+g
 bindkey "\ey" yazi_widget   # Alt+y
@@ -43,3 +44,12 @@ bindkey '\e[B' history-search-forward
 
 # Others
 bindkey '\e.' yank-last-arg
+
+# Quoted vi edition
+autoload -U select-quoted
+zle -N select-quoted
+for m in visual viopp; do
+    for c in {a,i}{\',\",\`}; do
+        bindkey -M $m $c select-quoted
+    done
+done
