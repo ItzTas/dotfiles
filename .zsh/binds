@@ -40,8 +40,8 @@ bindkey '^L' clear-screen
 bindkey '^K' kill-line
 
 # Completion & history
-bindkey '^I' menu-complete
-bindkey '\e[Z' menu-complete-backward
+bindkey '^I' expand-or-complete
+bindkey '\e[Z' reverse-menu-complete
 bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
 

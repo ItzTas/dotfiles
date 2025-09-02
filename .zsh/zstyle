@@ -1,10 +1,13 @@
 #!/usr/bin/env zsh
 # vim: filetype=zsh
 
-zstyle ':completion:*' list-colors 'di=34:ln=36:so=35:pi=33:ex=32:bd=34;46:cd=34;43:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:mi=05;37;41:*.tar=31'
+zmodload zsh/complist
 
-zstyle ':completion:*' list-prompt '%SAt least %p%S'
-zstyle ':completion:*' menu select=2
+zstyle ':completion:*' list-colors 'di=34:ln=36:so=35:pi=33:ex=32:bd=34;46:cd=34;su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:mi=05;37;41:*.tar=31'
+
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
+
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*:default' list-colors '=(#b) # Highlight matches'
 
