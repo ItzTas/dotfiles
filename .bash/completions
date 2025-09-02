@@ -1,6 +1,8 @@
 #!/bin/env bash
 # vim: filetype=sh
 
+mkdir -p "$HOME/.bash_completions"
+
 # Proto completions
 if command -v proto >/dev/null 2>&1; then
     if [ ! -f "$HOME/.bash_completions/proto.sh" ]; then
