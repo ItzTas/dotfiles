@@ -1,33 +1,85 @@
 #!/usr/bin/env bash
 
+CACHE_DIR="/tmp/cht_response_cache"
+mkdir -p "$CACHE_DIR"
+
+_get_from_cache() {
+    local cache_name
+    cache_name=$(_get_cache_path "$1" "$2")
+    if [[ -f "$cache_name" ]]; then
+        cat "$cache_name"
+        return 0
+    else
+        return 1
+    fi
+}
+
+_get_cache_path() {
+    local topic="$1"
+    topic=$(echo "$topic" | tr '/' '_')
+
+    local query="$2"
+    query=$(echo "$query" | tr '/' '_')
+    echo "$CACHE_DIR/$topic%$query"
+}
+
+_save_to_cache() {
+    local cache_name
+    cache_name=$(_get_cache_path "$1" "$2")
+    echo "$3" >"$cache_name"
+}
+
+_get_request() {
+    local topic="$1"
+    local query="$2"
+    local type="$3"
+
+    if [[ "$type" == "language" ]]; then
+        query=$(echo "$query" | tr ' ' '+')
+        url="cht.sh/$topic/$query"
+    elif [[ "$type" == "core" ]]; then
+        url="cht.sh/$topic~$query"
+    fi
+
+    response_body=$(curl -s -w "%{http_code}" "$url")
+
+    response_code="${response_body: -3}"
+    response_body="${response_body::-3}"
+
+    if ((response_code >= 200 && response_code < 400)); then
+        _save_to_cache "$topic" "$query" "$response_body"
+    fi
+    echo -e "$response_codeµµµ$response_body"
+}
+
 _ask_query() {
-    local selected="$1"
+    local topic="$1"
     local type="$2"
 
     while true; do
-        local query response_body response_code
-        read -r -p "($selected) query: " query
+        local query response response_code response_body cache_content
+        read -r -p "($topic) query: " query
+        [[ -z "$query" ]] && continue
 
-        if [[ "$type" == "language" ]]; then
-            query=$(echo "$query" | tr ' ' '+')
-            response_body=$(curl -s "curl" -w "%{http_code}" "cht.sh/$selected/$query")
-        elif [[ "$type" == "core" ]]; then
-            response_body=$(curl -s "curl" -w "%{http_code}" "cht.sh/$selected~$query")
+        if cache_content=$(_get_from_cache "$topic" "$query"); then
+            response_code=200
+            response_body="$cache_content"
+        else
+            response=$(_get_request "$topic" "$query" "$type")
+            response_code="${response%%µµµ*}"
+            response_body="${response#*µµµ}"
         fi
 
-        response_code="${response_body: -3}"
-        response_body="${response_body::-3}"
-
-        if [[ "$response_code" -ge 200 && "$response_code" -lt 400 ]]; then
+        if ((response_code >= 200 && response_code < 400)); then
             if [ "$PAGER" != "" ]; then
                 echo "$response_body" | "$PAGER"
-                break
+            else
+                echo "$response_body" | less -R
             fi
-            echo "$response_body" | less -R
             break
         fi
 
-        echo "Reponse code: $response_code"
+        echo "Response code: $response_code"
         echo "Server error or invalid query: $query, try again"
     done
 }
