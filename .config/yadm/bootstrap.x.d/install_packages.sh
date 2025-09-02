@@ -202,6 +202,8 @@ _install_pacman_packages() {
         # Others
         "timeshift"
         "termpicker"
+        "zsh"
+        "oh-my-zsh-git"
 
         # Essentials
         "cmake"
