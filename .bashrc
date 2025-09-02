@@ -18,6 +18,7 @@ __source_bash_files() {
         "evals"
         "sources"
         "setopt"
+        "oh-my-zsh"
     )
 
     local file path
