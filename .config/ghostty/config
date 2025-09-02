@@ -12,6 +12,9 @@ cursor-style-blink = false
 cursor-click-to-move = true
 adjust-cursor-thickness = 0
 
+# Shell
+# command = bash ~/.config/ghostty/scripts/start_zsh.sh
+
 # Mouse
 mouse-hide-while-typing = true
 mouse-shift-capture = true
