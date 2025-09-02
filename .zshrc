@@ -25,6 +25,22 @@ fi
 if [[ -f "$ZSH/oh-my-zsh.sh" ]]; then
     source "$ZSH/oh-my-zsh.sh"
 fi
+
+# zsh-syntax-highlighting
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[default]='fg=250'
+ZSH_HIGHLIGHT_STYLES[command]='fg=175'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=175'   
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=166'  
+ZSH_HIGHLIGHT_STYLES[function]='fg=104'  
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=141' 
+ZSH_HIGHLIGHT_STYLES[valid_path]='fg=109'  
+ZSH_HIGHLIGHT_STYLES[error]='fg=160'         
+ZSH_HIGHLIGHT_STYLES[comment]='fg=244'      
+ZSH_HIGHLIGHT_STYLES[quote]='fg=221'          
+ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=248'
+ZSH_HIGHLIGHT_STYLES[history]='fg=245'
+ZSH_HIGHLIGHT_STYLES[unknown]='fg=252'
 # -------------------------------------------
 
 __source_zsh_files() {
