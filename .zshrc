@@ -26,6 +26,10 @@ if [[ -f "$ZSH/oh-my-zsh.sh" ]]; then
     source "$ZSH/oh-my-zsh.sh"
 fi
 
+# === Plugins section ===
+# zsh-autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#8c8caa'
+
 # zsh-syntax-highlighting
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[default]='fg=#cdd6f4'
