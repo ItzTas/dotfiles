@@ -1,6 +1,9 @@
 #!/bin/env zsh
 # vim: filetype=zsh
 
+# zsh is kinda stupid so it needs this
+export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
+
 # clear
 alias clear='clear -x'
 

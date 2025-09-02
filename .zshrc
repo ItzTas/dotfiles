@@ -9,6 +9,7 @@ __source_zsh_files() {
     local files=(
         "exports"
         "aliases"
+        "completions"
         "functions"
         "binds"
         "evals"

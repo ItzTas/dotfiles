@@ -12,6 +12,7 @@ __source_bash_files() {
     local files=(
         "aliases"
         "functions"
+        "completions"
         "binds"
         "exports"
         "evals"

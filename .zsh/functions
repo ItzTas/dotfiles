@@ -1,5 +1,8 @@
-#!/bin/env bash
-# vim: filetype=sh
+#!/usr/bin/env zsh
+# vim: filetype=zsh
+
+# zsh is kinda stupid so it needs this
+export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
 
 # git
 if command -v git &>/dev/null; then
