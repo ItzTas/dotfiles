@@ -3,6 +3,7 @@
 
 export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
 
+# a" and i" vim operators
 __vi-select-quoted() {
     setopt localoptions noksharrays
 
