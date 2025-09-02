@@ -87,6 +87,7 @@ _ask_query() {
 _cht() {
     local languages_list=(
         "golang"
+        "python"
         "lua"
         "cpp"
         "c"
