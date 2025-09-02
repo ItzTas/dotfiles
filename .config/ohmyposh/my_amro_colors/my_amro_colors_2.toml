@@ -87,6 +87,11 @@ version = 3
     type = 'root'
 
   [[blocks.segments]]
+      type = "text"
+      style = "plain"
+      template = '{{ if .Env.POSH_VI_MODE }}({{ .Env.POSH_VI_MODE }}) {{ end }}'
+
+  [[blocks.segments]]
     style = 'plain'
     template = '['
     foreground = '#6A7FEA'
