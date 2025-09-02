@@ -5,18 +5,13 @@
 setopt APPEND_HISTORY
 
 # Save multi-line commands as a single entry in the history
-setopt CMDHIST
+setopt EXTENDED_HISTORY
 
 # Check window size after each command and update LINES and COLUMNS
 setopt CHECK_JOBS
-# OBS: zsh atualiza LINES e COLUMNS automaticamente, não precisa de equivalente direto para checkwinsize
-
-# Enable recursive globbing with **
-setopt GLOBSTAR_SHORT
-setopt GLOBSTAR
 
 # Include hidden files (starting with .) in pathname expansions
-setopt DOT_GLOB
+setopt dotglob
 
 # If a glob doesn't match, expand to nothing instead of the pattern itself
 setopt NULL_GLOB
@@ -29,6 +24,3 @@ setopt PROMPT_SUBST
 
 # No beep
 setopt no_beep
-
-# Don't show ^C
-setopt no_echo_ctlchars
