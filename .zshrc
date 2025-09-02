@@ -1,13 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # If not running interactively, don't do anything
-case $- in
-*i*) ;;
-*) return ;;
-esac
+[[ $- != *i* ]] && return
 
-__source_bash_files() {
-    local bash_home="$HOME/.bash"
+source_zsh_files() {
+    local zsh_home="$HOME/.zsh"
 
     local files=(
         "aliases"
@@ -20,14 +17,15 @@ __source_bash_files() {
         "shopt"
     )
 
-    local file path
+    local path
     for file in "${files[@]}"; do
-        path="$bash_home/$file"
-        if [ -f "$path" ]; then
-            # shellcheck disable=SC1090
+        path="$zsh_home/$file"
+        if [[ -f $path ]]; then
             source "$path"
         fi
     done
 }
-__source_bash_files
-unset __source_bash_files
+
+source_zsh_files
+unset source_zsh_files
+
