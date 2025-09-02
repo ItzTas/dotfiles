@@ -15,7 +15,6 @@ zle -N sesh_connect_widget
 
 bindkey "\eg" lsd_widget    # Alt+g
 bindkey "\ey" yazi_widget   # Alt+y
-bindkey "^B" fk_widget      # Ctrl+b
 bindkey "^O" fe_widget      # Ctrl+o
 # bindkey "\eb" pf_widget    # Alt+b 
 # bindkey "^F" new_ss_widget # Ctrl+f 
@@ -24,7 +23,7 @@ bindkey "^O" fe_widget      # Ctrl+o
 # Completion settings
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
-bindkey '^Y' yank
+bindkey '^B' yank
 bindkey '^D' delete-char
 bindkey '^W' backward-kill-word
 bindkey '^H' backward-kill-word
@@ -36,6 +35,7 @@ bindkey '^L' clear-screen
 bindkey '^K' kill-line
 
 # Completion & history
+bindkey '^Y' autosuggest-accept
 bindkey '^I' expand-or-complete
 bindkey '\e[Z' reverse-menu-complete
 bindkey '\e[A' history-search-backward
