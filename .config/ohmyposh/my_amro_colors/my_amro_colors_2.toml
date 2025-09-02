@@ -1,5 +1,10 @@
 version = 3
 
+[transient_prompt]
+    background = "transparent"
+    foreground = "#6A7FEA"
+    template = "[#]  "
+
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
