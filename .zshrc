@@ -13,8 +13,8 @@ export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 ZSH_THEME="robbyrussell"
 
 plugins=(
-    "git"
     "zsh-syntax-highlighting"
+    "zsh-autosuggestions"
 )
 
 ZSH_CACHE_DIR="$HOME/.cache/oh-my-zsh"
