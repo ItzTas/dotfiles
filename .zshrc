@@ -6,28 +6,14 @@
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
 # --------------------- Plugins ---------------------
-export ZSH="$HOME/.oh-my-zsh"
-export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
-
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
-plugins=(
-    "zsh-syntax-highlighting"
-    "zsh-autosuggestions"
-)
-
-if [[ -f "$ZSH/oh-my-zsh.sh" ]]; then
-    source "$ZSH/oh-my-zsh.sh"
-fi
-
-# === Plugins section ===
-# zsh-autosuggestions
-
 # zsh-syntax-highlighting
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main cursor)
-typeset -gA ZSH_HIGHLIGHT_STYLES
-source "$HOME/.config/zsh/config/zsh-syntax-highlighting"
+autoload -U compinit
+compinit
+
+source "$HOME/.config/zsh/plugins/settings/zsh-syntax-highlighting/plugin"
+source "$HOME/.config/zsh/plugins/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$HOME/.config/zsh/plugins/settings/zsh-autosuggestions/plugin"
+source "$HOME/.config/zsh/plugins/repos/zsh-autosuggestions/zsh-autosuggestions.zsh"
 # ---------------------------------------------------
 
 __source_zsh_config_files() {
@@ -56,4 +42,3 @@ __source_zsh_config_files() {
 
 __source_zsh_config_files
 unset -f __source_zsh_config_files
-unset -f upgrade_oh_my_zsh
