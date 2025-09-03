@@ -1,7 +1,10 @@
 #!/usr/bin/env zsh
 # vim: filetype=zsh
 
-zstyle ':completion:*' list-colors \
-'di=34:ln=36:so=35:pi=33:ex=32:bd=34:cd=34:su=37:sg=30:tw=30:ow=34'
+# zstyle ':completion:*' list-colors \
+# 'di=34:ln=36:so=35:pi=33:ex=32:bd=34:cd=34:su=37:sg=30:tw=30:ow=34'
+
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
