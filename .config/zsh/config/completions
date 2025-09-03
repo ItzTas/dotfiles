@@ -13,7 +13,7 @@ mkdir -p "$_MANUAL_COMPLETIONS_DIR"
 autoload -U +X compinit
 compinit
 
-# -------- Generated Completions --------
+# ---------------- Generated Completions ----------------
 # Proto completions
 if command -v proto >/dev/null 2>&1; then
     if [ ! -f "$_GENERATED_COMPLETIONS_DIR/proto.zsh" ]; then
@@ -45,4 +45,4 @@ if command -v git-bug >/dev/null 2>&1; then
     fi
     source "$_GENERATED_COMPLETIONS_DIR/gitbug.zsh"
 fi
-
+# ------------------ Manual Completions -----------------
