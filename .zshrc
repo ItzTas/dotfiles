@@ -14,7 +14,6 @@ ZSH_THEME="robbyrussell"
 
 plugins=(
     "zsh-syntax-highlighting"
-    "zsh-substring-search"
     "zsh-autosuggestions"
 )
 
@@ -34,11 +33,11 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#8c8caa'
 # zsh-syntax-highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main cursor)
 typeset -gA ZSH_HIGHLIGHT_STYLES
-source "$HOME/.zsh/catppuccin_mocha-zsh-syntax-highlighting"
+source "$HOME/.config/zsh/config/catppuccin_mocha-zsh-syntax-highlighting"
 # -------------------------------------------
 
-__source_zsh_files() {
-    local zsh_home="$HOME/.zsh"
+__source_zsh_config_files() {
+    local zsh_home="$HOME/.config/zsh"
     local files=(
         "exports"
         "aliases"
@@ -54,13 +53,13 @@ __source_zsh_files() {
 
     local path
     for file in "${files[@]}"; do
-        path="$zsh_home/$file"
+        path="$zsh_home/config/$file"
         if [[ -f $path ]]; then
             source "$path"
         fi
     done
 }
 
-__source_zsh_files
-unset -f __source_zsh_files
+__source_zsh_config_files
+unset -f __source_zsh_config_files
 unset -f upgrade_oh_my_zsh
