@@ -1,0 +1,7 @@
+#!/bin/env zsh
+# vim: filetype=zsh
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main cursor)
+typeset -gA ZSH_HIGHLIGHT_STYLES
+
+source "$HOME/.config/zsh/plugins/settings/zsh-syntax-highlighting/themes/catppuccin-mocha"

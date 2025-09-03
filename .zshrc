@@ -3,9 +3,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# ---------------- oh-my-zsh ----------------
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
+# --------------------- Plugins ---------------------
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 
@@ -17,24 +17,18 @@ plugins=(
     "zsh-autosuggestions"
 )
 
-ZSH_CACHE_DIR="$HOME/.cache/oh-my-zsh"
-if [[ ! -d "$ZSH_CACHE_DIR" ]]; then
-  mkdir "$ZSH_CACHE_DIR"
-fi
-
 if [[ -f "$ZSH/oh-my-zsh.sh" ]]; then
     source "$ZSH/oh-my-zsh.sh"
 fi
 
 # === Plugins section ===
 # zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#8c8caa'
 
 # zsh-syntax-highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main cursor)
 typeset -gA ZSH_HIGHLIGHT_STYLES
-source "$HOME/.config/zsh/config/catppuccin_mocha-zsh-syntax-highlighting"
-# -------------------------------------------
+source "$HOME/.config/zsh/config/zsh-syntax-highlighting"
+# ---------------------------------------------------
 
 __source_zsh_config_files() {
     local zsh_home="$HOME/.config/zsh"
