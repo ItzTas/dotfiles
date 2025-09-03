@@ -5,14 +5,14 @@
 
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
+emulate -L zsh
+zmodload zsh/complist
+autoload -Uz promptinit; promptinit
+
 # load prompt before everything
 if [[ -f "$HOME/.config/zsh/config/prompt" ]]; then
     source "$HOME/.config/zsh/config/prompt"
 fi
-
-emulate -L zsh
-zmodload zsh/complist
-autoload -Uz promptinit; promptinit
 
 # --------------------- Plugins ---------------------
 
