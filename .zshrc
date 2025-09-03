@@ -19,7 +19,7 @@ source "$HOME/.config/zsh/plugins/repos/zsh-autosuggestions/zsh-autosuggestions.
 __source_zsh_config_files() {
     local zsh_home="$HOME/.config/zsh"
     local files=(
-        "exports"
+        "envs"
         "aliases"
         "completions"
         "functions"
