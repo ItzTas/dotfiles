@@ -27,3 +27,7 @@ setopt PROMPT_SUBST
 
 # No beep
 setopt no_beep
+
+# don't put duplicate lines or lines starting with space in the history.
+setopt HIST_IGNORE_ALL_DUPS  
+setopt HIST_IGNORE_SPACE
