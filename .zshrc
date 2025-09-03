@@ -5,15 +5,9 @@
 
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
-# load oh-my-posh first
-if command -v oh-my-posh >/dev/null 2>&1; then
-    if [ -d "$HOME/.config/ohmyposh/my_amro_colors" ]; then
-        eval "$(oh-my-posh init zsh --config "$HOME"/.config/ohmyposh/my_amro_colors/my_amro_colors_2.toml)"
-    else
-        if command -v brew >/dev/null 2>&1 && [ -f "$(brew --prefix oh-my-posh)/themes/amro.omp.json" ]; then
-            eval "$(oh-my-posh init zsh --config "$(brew --prefix oh-my-posh)/themes/amro.omp.json")"
-        fi
-    fi
+# load prompt before everything
+if [[ -f "$HOME/.config/zsh/config/prompt" ]]; then
+    source "$HOME/.config/zsh/config/prompt"
 fi
 
 emulate -L zsh
@@ -78,6 +72,3 @@ __source_zsh_config_files() {
 
 __source_zsh_config_files
 unset -f __source_zsh_config_files
-
-# fzf eval in main file for performance reasons
-eval "$(fzf --zsh)"
