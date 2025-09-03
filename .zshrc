@@ -81,4 +81,5 @@ __source_zsh_config_files() {
 __source_zsh_config_files
 unset -f __source_zsh_config_files
 
+# fzf eval in main file for performance reasons
 eval "$(fzf --zsh)"
