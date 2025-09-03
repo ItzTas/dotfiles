@@ -19,15 +19,26 @@ export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'lsd --icons always --tree --depth 2 -F {}'"
 
 _fzf_comprun() {
-	local command=$1
-	shift
+    local command=$1
+    shift
 
-	case "$command" in
-	cd) fzf --preview 'lsd --icons always --tree --depth 2 -F {}' ;;
-	export | unset) fzf --preview "eval 'echo \$' {}" "$@" ;;
-	ssh) fzf --preview 'dig {}' "$@" ;;
-	*) fzf \
-        --preview 'bat -n --color=always --line-range :500 {}' "$@" ;;
-	esac
+    case "$command" in
+    cd)
+        fzf --bind 'ctrl-y:accept' \
+            --preview 'lsd --icons always --tree --depth 2 -F {}' "$@"
+        ;;
+    export | unset)
+        fzf --bind 'ctrl-y:accept' \
+            --preview "eval 'echo \$' {}" "$@"
+        ;;
+    ssh)
+        fzf --bind 'ctrl-y:accept' \
+            --preview 'dig {}' "$@"
+        ;;
+    *)
+        fzf --bind 'ctrl-y:accept' \
+            --preview 'bat -n --color=always --line-range :500 {}' "$@"
+        ;;
+    esac
 }
 
