@@ -10,6 +10,7 @@ if command -v oh-my-posh >/dev/null 2>&1; then
         fi
     fi
 fi
+
 function zle-line-init zle-keymap-select {
     RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
     RPS2=$RPS1
