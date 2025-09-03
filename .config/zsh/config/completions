@@ -46,3 +46,13 @@ if command -v git-bug >/dev/null 2>&1; then
     source "$_GENERATED_COMPLETIONS_DIR/gitbug.zsh"
 fi
 # ------------------ Manual Completions -----------------
+__source_manual_completions() {
+    local dir="$HOME/.config/zsh/completions/manual"
+    for file in "$dir"/*; do
+        if [[ -f "$file" ]]; then  
+            source "$file"
+        fi
+    done
+}
+__source_manual_completions
+unset -f __source_manual_completions
