@@ -3,9 +3,9 @@
 
 export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
 
-_COMPLETIONS_DIR="$HOME/.zsh_completions"
-_GENERATED_COMPLETIONS_DIR="$HOME/.zsh_completions/generated"
-_MANUAL_COMPLETIONS_DIR="$HOME/.zsh_completions/manual"
+_COMPLETIONS_DIR="$HOME/.config/zsh/completions"
+_GENERATED_COMPLETIONS_DIR="$_COMPLETIONS_DIR/generated"
+_MANUAL_COMPLETIONS_DIR="$_COMPLETIONS_DIR/manual"
 mkdir -p "$_COMPLETIONS_DIR"
 mkdir -p "$_GENERATED_COMPLETIONS_DIR"
 mkdir -p "$_MANUAL_COMPLETIONS_DIR"
