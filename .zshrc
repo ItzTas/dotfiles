@@ -6,6 +6,7 @@
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
 # --------------------- Plugins ---------------------
+
 __source_zsh_plugins() {
     local plugins_base="$HOME/.config/zsh/plugins"
     local plugins=(
@@ -32,6 +33,7 @@ autoload -U compinit
 compinit
 __source_zsh_plugins
 unset -f __source_zsh_plugins
+
 # ---------------------------------------------------
 
 __source_zsh_config_files() {
