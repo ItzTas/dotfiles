@@ -1,0 +1,48 @@
+#!/bin/env zsh
+# vim: filetype=zsh
+
+export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
+
+_COMPLETIONS_DIR="$HOME/.zsh_completions"
+_GENERATED_COMPLETIONS_DIR="$HOME/.zsh_completions/generated"
+_MANUAL_COMPLETIONS_DIR="$HOME/.zsh_completions/manual"
+mkdir -p "$_COMPLETIONS_DIR"
+mkdir -p "$_GENERATED_COMPLETIONS_DIR"
+mkdir -p "$_MANUAL_COMPLETIONS_DIR"
+
+autoload -U +X compinit
+compinit
+
+# -------- Generated Completions --------
+# Proto completions
+if command -v proto >/dev/null 2>&1; then
+    if [ ! -f "$_GENERATED_COMPLETIONS_DIR/proto.zsh" ]; then
+        proto completions --shell zsh > "$_GENERATED_COMPLETIONS_DIR/proto.zsh"
+    fi
+    source "$_GENERATED_COMPLETIONS_DIR/proto.zsh"
+fi
+
+# Bootdev completions
+if command -v bootdev >/dev/null 2>&1; then
+    if [ ! -f "$_GENERATED_COMPLETIONS_DIR/bootdev.zsh" ]; then
+        bootdev completion zsh > "$_GENERATED_COMPLETIONS_DIR/bootdev.zsh"
+    fi
+    source "$_GENERATED_COMPLETIONS_DIR/bootdev.zsh"
+fi
+
+# Eww completions
+if command -v eww >/dev/null 2>&1; then
+    if [ ! -f "$_GENERATED_COMPLETIONS_DIR/eww.zsh" ]; then
+        eww shell-completions --shell zsh > "$_GENERATED_COMPLETIONS_DIR/eww.zsh"
+    fi
+    source "$_GENERATED_COMPLETIONS_DIR/eww.zsh"
+fi
+
+# GitBug completions
+if command -v git-bug >/dev/null 2>&1; then
+    if [ ! -f "$_GENERATED_COMPLETIONS_DIR/gitbug.zsh" ]; then
+        git bug completion zsh > "$_GENERATED_COMPLETIONS_DIR/gitbug.zsh"
+    fi
+    source "$_GENERATED_COMPLETIONS_DIR/gitbug.zsh"
+fi
+
