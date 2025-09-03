@@ -142,7 +142,25 @@ if command -v docker &>/dev/null; then
 	}
 fi
 
-# pacman & utils
+# system update
+update_zsh_plugins() {
+    local plugins_dir="$HOME/.config/zsh/plugins/repos"
+    local plugin
+
+    for plugin in "$plugins_dir"/*; do
+        if [[ ! -d "$plugin/.git" ]]; then
+            continue
+        fi
+        local plugin_name
+        plugin_name=$(basename "$plugin")
+        echo "Updating plugin: $plugin_name..."
+        git -C "$plugin" pull >/dev/null 2>&1 &
+    done
+
+    wait
+    echo "All plugins updated."
+}
+
 upgrady() {
 	(
 		# set -e
@@ -176,6 +194,7 @@ upgrady() {
         if command -v omz >/dev/null; then
             omz update
         fi
+        update_zsh_plugins
 		yadm_update
 
 		{
@@ -187,6 +206,7 @@ upgrady() {
 	)
 }
 
+# pacman & utils
 pacclean() {
 	local orphans
 	orphans=$(pacman -Qdtq)

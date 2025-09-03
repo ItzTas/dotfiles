@@ -3,6 +3,23 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+if [[ -r ~/.zshrc ]]; then
+  emulate -L zsh
+  zmodload zsh/complist
+  autoload -Uz promptinit; promptinit
+fi
+
+# oh my posh
+if command -v oh-my-posh >/dev/null 2>&1; then
+    if [ -d "$HOME/.config/ohmyposh/my_amro_colors" ]; then
+        eval "$(oh-my-posh init zsh --config "$HOME"/.config/ohmyposh/my_amro_colors/my_amro_colors_2.toml)"
+    else
+        if command -v brew >/dev/null 2>&1 && [ -f "$(brew --prefix oh-my-posh)/themes/amro.omp.json" ]; then
+            eval "$(oh-my-posh init zsh --config "$(brew --prefix oh-my-posh)/themes/amro.omp.json")"
+        fi
+    fi
+fi
+
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
 # --------------------- Plugins ---------------------
