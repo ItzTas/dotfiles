@@ -16,19 +16,17 @@ if command -v oh-my-posh >/dev/null 2>&1; then
     fi
 fi
 
-if [[ -r ~/.zshrc ]]; then
-  emulate -L zsh
-  zmodload zsh/complist
-  autoload -Uz promptinit; promptinit
-fi
+emulate -L zsh
+zmodload zsh/complist
+autoload -Uz promptinit; promptinit
 
 # --------------------- Plugins ---------------------
 
 __source_zsh_plugins() {
     local plugins_base="$HOME/.config/zsh/plugins"
     local plugins=(
-        "zsh-syntax-highlighting"
         "zsh-autosuggestions"
+        "zsh-syntax-highlighting"
     )
 
     local plugin
