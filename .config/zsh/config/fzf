@@ -2,9 +2,8 @@
 # vim: filetype=zsh
 
 if [[ ! -f "$HOME/.fzf.zsh" ]]; then
-    fzf --zsh > "$HOME/.fzf.zsh"
+    fzf --zsh > ~/.fzf.zsh
 fi
-source "$HOME/.fzf.zsh"
 
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

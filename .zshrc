@@ -59,7 +59,6 @@ __source_zsh_config_files() {
         "envs"
         "evals"
         "aliases"
-        "fzf"
         "completions"
         "functions"
         "sources"
@@ -67,6 +66,7 @@ __source_zsh_config_files() {
         "zstyle"
         "vi-mode"
         "binds"
+        "fzf"
     )
 
     local path
@@ -80,3 +80,5 @@ __source_zsh_config_files() {
 
 __source_zsh_config_files
 unset -f __source_zsh_config_files
+
+eval "$(fzf --zsh)"
