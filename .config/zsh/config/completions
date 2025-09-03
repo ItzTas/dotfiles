@@ -48,6 +48,7 @@ fpath=(
     "$_GENERATED_COMPLETIONS_DIR"
     "$_MANUAL_COMPLETIONS_DIR"
     "$_COMPLETIONS_DIR"
+    "$HOME/.config/zsh/plugins/zsh-completions/"
     $fpath
 )
 
