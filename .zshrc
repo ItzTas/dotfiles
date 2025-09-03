@@ -3,6 +3,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
+
 # load oh-my-posh first
 if command -v oh-my-posh >/dev/null 2>&1; then
     if [ -d "$HOME/.config/ohmyposh/my_amro_colors" ]; then
@@ -19,8 +21,6 @@ if [[ -r ~/.zshrc ]]; then
   zmodload zsh/complist
   autoload -Uz promptinit; promptinit
 fi
-
-export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
 # --------------------- Plugins ---------------------
 
