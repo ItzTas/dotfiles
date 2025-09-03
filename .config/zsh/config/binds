@@ -29,7 +29,6 @@ bindkey '^D' delete-char
 bindkey '^W' backward-kill-word
 bindkey '^H' backward-kill-word
 bindkey '\ed' kill-word
-bindkey '^T' transpose-chars
 bindkey '\eb' backward-word
 bindkey '\ef' forward-word
 bindkey '^L' clear-screen
