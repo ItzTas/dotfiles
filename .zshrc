@@ -59,6 +59,7 @@ __source_zsh_config_files() {
         "envs"
         "evals"
         "aliases"
+        "fzf"
         "completions"
         "functions"
         "sources"
