@@ -13,6 +13,7 @@ mkdir -p "$_GENERATED_COMPLETIONS_DIR"
 mkdir -p "$_MANUAL_COMPLETIONS_DIR"
 
 # ---------------- Generated Completions ----------------
+
 # Proto completions
 if command -v proto >/dev/null 2>&1; then
     if [ ! -f "$_GENERATED_COMPLETIONS_DIR/proto.zsh" ]; then
@@ -42,6 +43,7 @@ if command -v git-bug >/dev/null 2>&1; then
 fi
 
 # -------------------------------------------------------
+
 fpath=(
     "$_GENERATED_COMPLETIONS_DIR"
     "$_MANUAL_COMPLETIONS_DIR"
