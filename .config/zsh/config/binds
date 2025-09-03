@@ -34,6 +34,8 @@ bindkey '\eb' backward-word
 bindkey '\ef' forward-word
 bindkey '^L' clear-screen
 bindkey '^K' kill-line
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 # Completion & history
 bindkey '^Y' autosuggest-accept

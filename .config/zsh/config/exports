@@ -7,6 +7,11 @@ export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
 setopt HIST_IGNORE_ALL_DUPS  # similar to ignoreboth
 setopt HIST_IGNORE_SPACE
 
+# history settings
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
+
 # initial project path
 export MY_PROJECT_PATH="$PWD"
 
