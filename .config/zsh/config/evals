@@ -31,3 +31,10 @@ if command -v phpenv >/dev/null 2>&1; then
     eval "$(phpenv init -)"
 fi
 
+# dircolors
+if command -v dircolors >/dev/null 2>&1; then
+  if [[ ! -f ~/.dircolors ]]; then
+    dircolors -p > ~/.dircolors
+  fi
+  eval "$( [[ -r ~/.dircolors ]] && dircolors -b ~/.dircolors || dircolors -b )"
+fi

@@ -57,10 +57,10 @@ __source_zsh_config_files() {
     local zsh_home="$HOME/.config/zsh"
     local files=(
         "envs"
+        "evals"
         "aliases"
         "completions"
         "functions"
-        "evals"
         "sources"
         "setopt"
         "zstyle"
