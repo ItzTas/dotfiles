@@ -6,14 +6,32 @@
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
 # --------------------- Plugins ---------------------
-# zsh-syntax-highlighting
+__source_zsh_plugins() {
+    local plugins_base="$HOME/.config/zsh/plugins"
+    local plugins=(
+        "zsh-syntax-highlighting"
+        "zsh-autosuggestions"
+    )
+
+    local plugin
+    for plugin in "${plugins[@]}"; do
+        if [[ -f "$plugins_base/settings/$plugin" ]]; then
+            source "$plugins_base/settings/$plugin"
+        elif [[ -f "$plugins_base/settings/$plugin/settings" ]]; then  
+            source "$plugins_base/settings/$plugin/settings"
+        fi
+
+        local plugin_path="$plugins_base/repos/$plugin/$plugin.zsh"
+        if [[ -f "$plugin_path" ]]; then  
+            source "$plugin_path"
+        fi
+    done
+}
+
 autoload -U compinit
 compinit
-
-source "$HOME/.config/zsh/plugins/settings/zsh-syntax-highlighting/settings"
-source "$HOME/.config/zsh/plugins/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "$HOME/.config/zsh/plugins/settings/zsh-autosuggestions/settings"
-source "$HOME/.config/zsh/plugins/repos/zsh-autosuggestions/zsh-autosuggestions.zsh"
+__source_zsh_plugins
+unset -f __source_zsh_plugins
 # ---------------------------------------------------
 
 __source_zsh_config_files() {
