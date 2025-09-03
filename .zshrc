@@ -14,6 +14,7 @@ ZSH_THEME="robbyrussell"
 
 plugins=(
     "zsh-syntax-highlighting"
+    "zsh-substring-search"
     "zsh-autosuggestions"
 )
 
