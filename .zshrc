@@ -10,6 +10,12 @@ export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 autoload -U compinit
 compinit
 
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+setopt sharehistory
+
 source "$HOME/.config/zsh/plugins/settings/zsh-syntax-highlighting/settings"
 source "$HOME/.config/zsh/plugins/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$HOME/.config/zsh/plugins/settings/zsh-autosuggestions/settings"

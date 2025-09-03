@@ -7,6 +7,9 @@ setopt APPEND_HISTORY
 # Save multi-line commands as a single entry in the history
 setopt EXTENDED_HISTORY
 
+# Make history shareable
+setopt SHAREHISTORY
+
 # Check window size after each command and update LINES and COLUMNS
 setopt CHECK_JOBS
 
