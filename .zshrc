@@ -3,6 +3,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+source ~/.instant-zsh.zsh
+
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
 emulate -L zsh
@@ -38,8 +40,6 @@ __source_zsh_plugins() {
     done
 }
 
-autoload -U compinit
-compinit
 __source_zsh_plugins
 unset -f __source_zsh_plugins
 
@@ -72,3 +72,6 @@ __source_zsh_config_files() {
 
 __source_zsh_config_files
 unset -f __source_zsh_config_files
+
+autoload -Uz compinit
+compinit 

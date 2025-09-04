@@ -6,6 +6,7 @@ _install_plugins() {
     local plugins=(
         "https://github.com/zsh-users/zsh-syntax-highlighting.git"
         "https://github.com/zsh-users/zsh-autosuggestions.git"
+        "https://github.com/zsh-users/zsh-completions"
     )
 
     local plugin
