@@ -9,7 +9,7 @@ source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type d --hidden --strip-cwd-prefix --exclude .git"
-export FZF_DEFAULT_OPTS="--ansi"
+export FZF_DEFAULT_OPTS="--ansi --bind ctrl-y:accept"
 export FZF_COMPLETION_TRIGGER='__'
 
 _fzf_compgen_path() {
@@ -29,19 +29,19 @@ _fzf_comprun() {
 
     case "$command" in
     cd)
-        fzf --bind 'ctrl-y:accept' \
+        fzf  \
             --preview 'lsd --icons always --tree --depth 2 -F {}' "$@"
         ;;
     export | unset)
-        fzf --bind 'ctrl-y:accept' \
+        fzf  \
             --preview "eval 'echo \$' {}" "$@"
         ;;
     ssh)
-        fzf --bind 'ctrl-y:accept' \
+        fzf  \
             --preview 'dig {}' "$@"
         ;;
     *)
-        fzf --bind 'ctrl-y:accept' \
+        fzf  \
             --preview 'bat -n --color=always --line-range :500 {}' "$@"
         ;;
     esac
