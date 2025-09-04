@@ -26,9 +26,7 @@ gui:
   language: auto
   timeFormat: 02 Jan 06
   shortTimeFormat: 3:04PM
-
   theme:
-    # Bordas
     activeBorderColor:
       - "#a6e3a1"
       - bold
