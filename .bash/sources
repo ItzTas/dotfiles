@@ -1,6 +1,0 @@
-#!/bin/env bash
-# vim: filetype=sh
-
-if command -v cargo &>/dev/null; then
-    source "$HOME/.cargo/env"
-fi
