@@ -1,8 +1,6 @@
 #!/bin/env zsh
 # vim: filetype=zsh
 
-export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
-
 if (( ! ${+commands[oh-my-posh]} )); then
     exit 0
 fi
