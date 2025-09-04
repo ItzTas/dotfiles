@@ -67,4 +67,3 @@ for m in visual viopp; do
         bindkey -M $m $c __vi-select-quoted
     done
 done
-
