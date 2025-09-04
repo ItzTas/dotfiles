@@ -286,7 +286,7 @@ ex() {
 			elif (( ${+commands[unrar]} )); then
 				unrar x "$1"
 			else
-				echo "Download rar or unrar before extraction"
+				echo "Please install 'rar' or 'unrar' to extract RAR files."
 			fi
 			;;
 		*.gz) gunzip "$1" ;;
@@ -299,10 +299,10 @@ ex() {
 		*.deb) ar x "$1" ;;
 		*.tar.xz) tar xf "$1" ;;
 		*.tar.zst) unzstd "$1" ;;
-		*) echo "'$1' não pode ser extraído por ${FUNCNAME[0]}()" ;;
+		*) echo "Cannot extract '$1' with ${FUNCNAME[0]}()" ;;
 		esac
 	else
-		echo "'$1' não é um arquivo válido"
+		echo "'$1' is not a valid file."
 	fi
 }
 
@@ -318,9 +318,9 @@ lse() {
 		*.gz) gzip -l "$1" ;;
 		*.zip) unzip -l "$1" ;;
 		*.rar)
-			if command -v rar >/dev/null 2>&1; then
+			if (( ${+commands[rar]} )); then
 				rar l "$1"
-			elif command -v unrar >/dev/null 2>&1; then
+			elif (( ${+commands[unrar]} )); then
 				unrar l "$1"
 			else
 				echo "Install rar or unrar to list .rar files"
