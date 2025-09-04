@@ -8,3 +8,4 @@ else
         eval "$(oh-my-posh init zsh --config "$(brew --prefix oh-my-posh)/themes/amro.omp.json")"
     fi
 fi
+
