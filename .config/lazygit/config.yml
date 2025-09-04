@@ -1,0 +1,79 @@
+
+gui:
+  authorColors: {}
+  branchColorPatterns: {}
+  customIcons:
+    filenames: {}
+    extensions: {}
+  scrollHeight: 2
+  scrollPastBottom: true
+  scrollOffMargin: 2
+  scrollOffBehavior: margin
+  tabWidth: 4
+  mouseEvents: true
+  skipAmendWarning: false
+  skipDiscardChangeWarning: false
+  skipStashWarning: false
+  skipNoStagedFilesWarning: false
+  skipRewordInEditorWarning: false
+  sidePanelWidth: 0.3333
+  expandFocusedSidePanel: false
+  expandedSidePanelWeight: 2
+  mainPanelSplitMode: flexible
+  enlargedSideViewLocation: left
+  wrapLinesInStagingView: true
+  useHunkModeInStagingView: true
+  language: auto
+  timeFormat: 02 Jan 06
+  shortTimeFormat: 3:04PM
+
+  theme:
+    # Bordas
+    activeBorderColor:
+      - "#a6e3a1"
+      - bold
+    inactiveBorderColor:
+      - "#cdd6f4"
+    selectedLineBgColor:
+      - "#313244"
+    inactiveViewSelectedLineBgColor:
+      - "#313244"
+    optionsTextColor:
+      - "#89b4fa"
+    unstagedChangesColor:
+      - "#f38ba8"
+  commitLength:
+    show: true
+  showListFooter: true
+  showFileTree: true
+  showRootItemInFileTree: true
+  showNumstatInFilesView: false
+  showRandomTip: true
+  showCommandLog: true
+  showBottomLine: true
+  showPanelJumps: true
+  nerdFontsVersion: ""
+  showFileIcons: true
+  commitAuthorShortLength: 2
+  commitAuthorLongLength: 17
+  commitHashLength: 8
+  showBranchCommitHash: false
+  showDivergenceFromBaseBranch: none
+  commandLogSize: 8
+  splitDiff: auto
+  screenMode: normal
+  border: rounded
+  animateExplosion: true
+  portraitMode: auto
+  filterMode: substring
+  spinner:
+    frames:
+      - '|'
+      - /
+      - '-'
+      - \
+    rate: 50
+  statusPanelView: dashboard
+  switchToFilesAfterStashPop: true
+  switchToFilesAfterStashApply: true
+  switchTabsWithPanelJumpKeys: false
