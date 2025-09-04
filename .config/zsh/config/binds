@@ -35,8 +35,14 @@ bindkey '^L' clear-screen
 bindkey '^K' kill-line
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
-bindkey "^[[H" beginning-of-line   
-bindkey "^[[F" end-of-line  
+
+# Home/End
+bindkey '\e[H' beginning-of-line   # Home
+bindkey '\e[F' end-of-line         # End
+bindkey '\e[1~' beginning-of-line  # Alternative home 
+bindkey '\e[4~' end-of-line        # Alternative End 
+bindkey '\eOH' beginning-of-line   # Some xterms
+bindkey '\eOF' end-of-line
 
 # Completion & history
 bindkey '^Y' autosuggest-accept
