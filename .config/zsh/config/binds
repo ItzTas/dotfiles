@@ -1,9 +1,11 @@
 #!/bin/env zsh
 # vim: filetype=zsh
 
+# vi mode
+bindkey -v
+
 lsd_widget() { lsd -F }
 yazi_widget() { yazi }
-fk_widget() { fk }
 fe_widget() { fe }
 sesh_connect_widget() { sesh_connect }
 
@@ -13,6 +15,7 @@ zle -N fk_widget
 zle -N fe_widget
 zle -N sesh_connect_widget
 zle -N select-quoted
+zle -N copybuffer
 
 bindkey "\eg" lsd_widget    # Alt+g
 bindkey "\ey" yazi_widget   # Alt+y
@@ -53,6 +56,8 @@ bindkey '\e[B' history-search-forward
 
 # Others
 bindkey '\e.' yank-last-arg
+bindkey -M vicmd "^N" copybuffer
+bindkey -M viins "^N" copybuffer
 
 # Quoted vi edition
 autoload -U __vi-select-quoted
@@ -63,5 +68,3 @@ for m in visual viopp; do
     done
 done
 
-# vi mode
-bindkey -v

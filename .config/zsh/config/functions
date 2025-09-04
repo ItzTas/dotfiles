@@ -345,3 +345,12 @@ test_memory() {
 	fi
 	</dev/zero head -c "$memory" | tail
 }
+
+# others
+copybuffer () {
+  if builtin which clipcopy &>/dev/null; then
+    printf "%s" "$BUFFER" | clipcopy
+  else
+    zle -M "clipcopy not found. Please make sure you have Oh My Zsh installed correctly."
+  fi
+}
