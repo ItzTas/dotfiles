@@ -7,7 +7,7 @@ case $- in
 esac
 
 __source_bash_files() {
-    local bash_home="$HOME/.bash"
+    local bash_home="$HOME/.config/bash/config"
 
     local files=(
         "aliases"
