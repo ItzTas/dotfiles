@@ -7,32 +7,32 @@ export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # pay-respects
-if command -v pay-respects >/dev/null 2>&1; then
+if (( ${+commands[pay-respects]} )); then
     eval "$(pay-respects zsh --alias f)"
 fi
 
 # proto
-if command -v proto >/dev/null 2>&1; then
+if (( ${+commands[proto]} )); then
     eval "$(proto activate zsh)"
 fi
 
 # zoxide
-if command -v zoxide >/dev/null 2>&1; then
+if (( ${+commands[zoxide]} )); then
     eval "$(zoxide init zsh --cmd cd)"
 fi
 
 # direnv
-if command -v direnv >/dev/null 2>&1; then
+if (( ${+commands[direnv]} )); then
     eval "$(direnv hook zsh)"
 fi
 
 # phpenv
-if command -v phpenv >/dev/null 2>&1; then
+if (( ${+commands[phpenv]} )); then
     eval "$(phpenv init -)"
 fi
 
 # dircolors
-if command -v dircolors >/dev/null 2>&1; then
+if (( ${+commands[dircolors]} )); then
   if [[ ! -f ~/.dircolors ]]; then
     dircolors -p > ~/.dircolors
   fi
