@@ -65,7 +65,7 @@ __vi-select-quoted() {
 }
 
 # git
-if command -v git &>/dev/null; then
+if (( ${+commands[git]} )); then
 	fe() {
 		if ! git rev-parse --is-inside-work-tree &>/dev/null; then
 			echo "Error: not in a git directory"
@@ -80,7 +80,7 @@ if command -v git &>/dev/null; then
 fi
 
 # tmux
-if command -v tmux &>/dev/null; then
+if (( ${+commands[tmux]} )); then
     tmux_manager() {
       local session_count
       session_count=$(tmux list-sessions 2>/dev/null | wc -l | tr -d ' ')
@@ -94,7 +94,7 @@ if command -v tmux &>/dev/null; then
 fi
 
 # sesh
-if command -v sesh &>/dev/null; then
+if (( ${+commands[sesh]} )); then
 	sesh_connect() {
 		local selection
 		selection=$(
@@ -126,7 +126,7 @@ if command -v sesh &>/dev/null; then
 fi
 
 # docker
-if command -v docker &>/dev/null; then
+if (( ${+commands[docker]} )); then
 	fdex() {
 		local lines container
 
@@ -240,7 +240,7 @@ setgtkicons() {
 }
 
 # proto & langs
-if command -v proto &>/dev/null; then
+if (( ${+commands[proto]} )); then
 	pgo() {
 		proto run go -- "$@"
 	}
@@ -267,7 +267,7 @@ if command -v proto &>/dev/null; then
 fi
 
 # miru
-if command -v miru &>/dev/null; then
+if (( ${+commands[miru]} )); then
 	mggo() {
 		miru go "https://github.com/$1"
 	}
@@ -281,9 +281,9 @@ ex() {
 		*.tar.gz) tar xzf "$1" ;;
 		*.bz2) bunzip2 "$1" ;;
 		*.rar)
-			if command -v rar >/dev/null 2>&1; then
+			if (( ${+commands[rar]} )); then
 				rar x "$1"
-			elif command -v unrar >/dev/null 2>&1; then
+			elif (( ${+commands[unrar]} )); then
 				unrar x "$1"
 			else
 				echo "Download rar or unrar before extraction"

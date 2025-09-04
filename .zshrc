@@ -3,13 +3,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-source ~/.instant-zsh.zsh
-
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
-
-emulate -L zsh
-zmodload zsh/complist
-autoload -Uz promptinit; promptinit
 
 # load prompt before everything
 if [[ -f "$HOME/.config/zsh/config/prompt" ]]; then
