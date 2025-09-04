@@ -348,9 +348,9 @@ test_memory() {
 
 # others
 copybuffer () {
-  if builtin which clipcopy &>/dev/null; then
-    printf "%s" "$BUFFER" | clipcopy
+  if builtin which wl-copy &>/dev/null; then
+    printf "%s" "$BUFFER" | wl-copy
   else
-    zle -M "clipcopy not found. Please make sure you have Oh My Zsh installed correctly."
+    zle -M "wl-copy not found. Please make sure you have it installed"
   fi
 }

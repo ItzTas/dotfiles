@@ -35,10 +35,6 @@ __source_zsh_plugins() {
 __source_zsh_plugins
 unset -f __source_zsh_plugins
 
-if [[ -f "$HOME/.oh-my-zsh/oh-my-zsh.sh" ]]; then
-    source "$HOME/.oh-my-zsh/oh-my-zsh.sh"
-fi
-
 # ---------------------------------------------------
 
 __source_zsh_config_files() {
