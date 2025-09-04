@@ -3,6 +3,6 @@
 
 export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
 
-if command -v cargo >/dev/null 2>&1; then
+if (( ${+commands[cargo]} )); then
     source "$HOME/.cargo/env"
 fi
