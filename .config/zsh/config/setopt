@@ -34,3 +34,6 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_IGNORE_DUPS
 setopt HIST_FIND_NO_DUPS
+
+# ctrl+d doesn't do anything
+setopt IGNOREEOF
