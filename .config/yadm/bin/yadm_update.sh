@@ -1,21 +1,25 @@
 #!/bin/env bash
 
 y() {
-    set -e
+    (
+        set -e
 
-    pacman -Q >"$HOME"/.pacmanlist
+        pacman -Q >"$HOME"/.pacmanlist
 
-    yadm --no-pager diff
+        yadm --no-pager diff
 
-    yadm add "$HOME/.pacmanlist"
+        yadm add "$HOME/.pacmanlist"
 
-    yadm add "$HOME/.config/yadm/misc/zen-browser/symlinks/chrome"
-    yadm add "$HOME/Pictures/.backgrounds"
-    yadm add "$HOME/.config/hypr/config"
+        yadm add "$HOME/.config/yadm/misc/zen-browser/symlinks/chrome"
+        yadm add "$HOME/Pictures/.backgrounds"
+        yadm add "$HOME/.config/hypr/config"
 
-    yadm commit -am 'updates'
+        yadm add -u :/
 
-    yadm push
+        yadm commit -m 'updates'
+
+        yadm push
+    )
 }
 
 y
