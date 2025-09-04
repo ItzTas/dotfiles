@@ -4,10 +4,10 @@
 export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
 
 if (( ${+commands[fzf]} )); then
-    if [[ ! -f ~/.fzf.zsh ]]; then
-        fzf --zsh > ~/.fzf.zsh
+    if [[ ! -f ~/.cache/.fzf.zsh ]]; then
+        fzf --zsh > ~/.cache/.fzf.zsh
     fi
-    source ~/.fzf.zsh
+    source ~/.cache/.fzf.zsh
 fi
 
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
