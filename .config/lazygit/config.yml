@@ -40,6 +40,8 @@ gui:
       - "#89b4fa"
     unstagedChangesColor:
       - "#f38ba8"
+    defaultFgColor:
+      - "#cdd6f4"
   commitLength:
     show: true
   showListFooter: true
