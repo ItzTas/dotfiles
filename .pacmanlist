@@ -53,7 +53,7 @@ botan2 2.19.5-2
 breeze-gtk 6.4.4-1
 brightnessctl 0.5.1-3
 brotli 1.1.0-3
-bruno-bin 2.9.1-1
+bruno-bin 2.10.0-1
 btop 1.4.4-1
 btrfs-progs 6.16-1
 bubblewrap 0.11.0-1
@@ -78,7 +78,7 @@ clamav 1.4.3-1
 clamtk 6.18-1
 clang 20.1.8-1
 clipse 1.1.0-1
-clipse-gui 0.1.4-1
+clipse-gui 0.3.2-3
 clutter 1.26.4-3
 clutter-gtk 1.8.4-4
 cmake 4.1.1-1
@@ -219,8 +219,8 @@ gnu-free-fonts 20120503-8
 gnulib-l10n 20241231-1
 gnupg 2.4.8-1
 gnutls 3.8.10-1
-go 2:1.24.6-1
-go-tools 4:0.34.0-2
+go 2:1.25.1-2
+go-tools 4:0.36.0-2
 gobject-introspection 1.84.0-2
 gobject-introspection-runtime 1.84.0-2
 godot 4.4.1-6
@@ -278,7 +278,7 @@ hidapi 0.15.0-1
 highway 1.3.0-1
 htmlq 0.4.0-2
 hunspell 1.7.2-2
-hwdata 0.398-1
+hwdata 0.399-1
 hwloc 2.12.1-1
 hydra-launcher-bin 3.6.7-1
 hyphen 2.8.8-6
@@ -916,7 +916,7 @@ python-lockfile 0.12.2-14
 python-lxml 6.0.1-1
 python-magic 1:0.4.27-5
 python-mako 1.3.10-1
-python-markdown 3.8.2-1
+python-markdown 3.9.0-1
 python-markupsafe 3.0.2-1
 python-moddb 0.14.0-1
 python-more-itertools 10.8.0-1
@@ -969,7 +969,7 @@ python-userpath 1.9.2-3
 python-virtualenv 20.34.0-1
 python-webencodings 0.5.1-12
 python-wheel 0.45.1-1
-python-xmltodict 0.14.2-1
+python-xmltodict 0.15.0-1
 python-yaml 6.0.2-2
 python-yarl 1.21.1-1
 python-zipp 3.21.0-2
@@ -1014,7 +1014,7 @@ rsync 3.4.1-2
 rtkit 0.13-3
 rubberband 4.0.0-1
 run-parts 5.23.1-1
-runc 1.3.0-1
+runc 1.3.1-1
 rust 1:1.89.0-1
 sbc 2.1-1
 scdoc 1.11.3-1
@@ -1111,8 +1111,8 @@ vala 0.56.18-4
 vapoursynth 72-1
 vesktop-bin 1.5.8-1
 vid.stab 1.1.1-2
-vim 9.1.1623-1
-vim-runtime 9.1.1623-1
+vim 9.1.1734-1
+vim-runtime 9.1.1734-1
 vimpager 2.06-7
 vmaf 3.0.0-1
 volume_key 0.3.12-11
@@ -1191,7 +1191,7 @@ yyjson 0.12.0-1
 zathura 0.5.12-1
 zathura-pdf-poppler 0.3.3-5
 zelda64recomp-bin 1.2.2-1
-zen-browser-bin 1.15.3b-1
+zen-browser-bin 1.15.4b-1
 zenity 4.1.99-2
 zeromq 4.3.5-2
 zimg 3.0.5-1
