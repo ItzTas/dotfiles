@@ -212,8 +212,8 @@ glibmm-2.68 2.84.0-1
 glslang 1:1.4.321.0-1
 glu 9.0.3-2
 gmp 6.3.0-2
-gnome-desktop 1:44.3-1
-gnome-desktop-common 1:44.3-1
+gnome-desktop 1:44.4-1
+gnome-desktop-common 1:44.4-1
 gnome-keyring 1:48.0-1
 gnu-free-fonts 20120503-8
 gnulib-l10n 20241231-1
@@ -413,7 +413,7 @@ lib32-mesa 1:25.2.1-5
 lib32-ncurses 6.5-2
 lib32-nspr 4.37-1
 lib32-nss 3.115.1-1
-lib32-nvidia-utils 580.76.05-1
+lib32-nvidia-utils 580.82.07-1
 lib32-openssl 1:3.5.2-1
 lib32-p11-kit 0.25.5-1
 lib32-pam 1.7.0-1
@@ -644,7 +644,7 @@ libxklavier 5.4-6
 libxml2 2.14.5-1
 libxmlb 0.3.23-1
 libxmu 1.2.1-1
-libxnvctrl 580.76.05-1
+libxnvctrl 580.82.07-1
 libxpm 3.5.17-2
 libxpresent 1.0.1-2
 libxrandr 1.5.4-1
@@ -747,9 +747,9 @@ npth 1.8-1
 nspr 4.37-1
 nss 3.115.1-1
 numlockx 1.2-6
-nvidia 580.76.05-7
-nvidia-settings 580.76.05-1
-nvidia-utils 580.76.05-4
+nvidia 580.82.07-1
+nvidia-settings 580.82.07-1
+nvidia-utils 580.82.07-1
 nvm 0.40.3-1
 nwg-look 1.0.6-1
 ocl-icd 2.3.3-1
