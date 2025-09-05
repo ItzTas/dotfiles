@@ -290,7 +290,7 @@ hyprland-protocols-git 0.6.4.r1.g613878c-1
 hyprland-qt-support-git 0.1.0.r9.g4c8053c-1
 hyprland-qtutils-git 0.1.4.r3.gb308a81-1
 hyprlang-git 0.6.4.r2.g3d63fb4-1
-hyprlock-git 0.9.1.r4.gcedbb24-1
+hyprlock-git 0.9.1.r5.g04cfdc4-1
 hyprpaper-git 0.7.5.r9.gbcb1ffa-1
 hyprpicker-git 0.4.5.r8.gd6a1363-1
 hyprshade-git 3.2.1.r289.g63b169b-1
@@ -928,6 +928,7 @@ python-pbs-installer 2025.09.02-1
 python-pexpect 4.9.0-4
 python-pillow 11.3.0-1
 python-pip 25.2-1
+python-pipx 1.7.1-2
 python-pkginfo 1.12.1.2-1
 python-platformdirs 4.4.0-1
 python-poetry 2.1.2-1
@@ -964,6 +965,7 @@ python-trove-classifiers 2025.8.26.11-1
 python-typing_extensions 4.15.0-1
 python-typogrify 2.1.0-1
 python-urllib3 2.5.0-1
+python-userpath 1.9.2-3
 python-virtualenv 20.34.0-1
 python-webencodings 0.5.1-12
 python-wheel 0.45.1-1
