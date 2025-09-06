@@ -195,7 +195,7 @@ _install_pacman_packages() {
         "vim"
 
         # App lanchers & utils
-        "rofi-wayland"
+        "rofi"
         "rofi-emoji"
         "wlogout"
 
