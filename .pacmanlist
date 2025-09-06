@@ -851,7 +851,7 @@ postgresql 17.5-5
 postgresql-libs 17.5-5
 pps-tools 1.0.3-2
 procps-ng 4.0.5-3
-proto-bin 0.52.3-1
+proto-bin 0.52.4-1
 protobuf 32.0-1
 psmisc 23.7-1
 pugixml 1.15-2
