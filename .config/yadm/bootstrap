@@ -21,7 +21,6 @@ scripts=(
     "create_dirs"
     "set_up_docker"
     "source_tmux_conf"
-    "remove_icons"
 )
 
 for script in "${scripts[@]}"; do
