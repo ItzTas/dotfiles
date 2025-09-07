@@ -58,6 +58,7 @@ _install_pacman_packages() {
 
         # System utils
         "xdg-user-dirs"
+        "numlockx"
         "tidy"
         "reflector"
         "cronie"
