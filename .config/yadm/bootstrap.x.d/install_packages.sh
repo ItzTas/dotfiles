@@ -117,6 +117,7 @@ _install_pacman_packages() {
         "vesktop-git"
         "ferdium"
         "clamtk"
+        "bitwarden-bin"
         "localsend-bin"
 
         # Docker
@@ -436,7 +437,6 @@ _install_loudness_equalizer_ef_preset() {
 }
 
 _install_flatpak_packages() {
-
     if ! command -v flatpak &>/dev/null; then
         echo "Flatpak is not installed. Installing..."
         sudo pacman -Sy --noconfirm flatpak
