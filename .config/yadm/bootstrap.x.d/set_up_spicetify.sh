@@ -160,6 +160,7 @@ _set_up() {
     spicetify config always_enable_devtools 1
     spicetify config sidebar_config 0
     spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1
+    sudo chown -R $USER:$USER /opt/spotify
     spicetify apply
 }
 
