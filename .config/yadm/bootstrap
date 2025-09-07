@@ -25,7 +25,7 @@ scripts=(
 )
 
 for script in "${scripts[@]}"; do
-    if [[ -f "$BOOTSTRAP_D/$script" ]]; then
+    if [[ -f "$BOOTSTRAP_D/$script.sh" ]]; then
         echo "Executing: $script"
         "$BOOTSTRAP_D/$script.sh" || true
     else

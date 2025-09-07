@@ -32,3 +32,4 @@ __source_bash_files() {
 }
 __source_bash_files
 unset __source_bash_files
+. "$HOME/.cargo/env"
