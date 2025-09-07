@@ -6,6 +6,7 @@ _start_enables() {
         "docker"
         "swayosd-libinput-backend.service"
         "ufw"
+        "reflector.timer"
     )
     for enable in "${enables[@]}"; do
         sudo systemctl enable --now "$enable"
