@@ -39,5 +39,3 @@ for script in "$BOOTSTRAP_D"/set_up_*; do
         echo "Warning: Script '$script' not found in $BOOTSTRAP_D" >&2
     fi
 done
-
-newgrp docker
