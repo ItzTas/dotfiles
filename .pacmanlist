@@ -75,6 +75,7 @@ compiler-rt 20.1.8-1
 composefs 1.0.8-1
 containerd 2.1.4-1
 coreutils 9.7-1
+cpio 2.15-3
 cppdap 1.58.0-2
 cronie 1.7.2-1
 cryptsetup 2.8.1-1
