@@ -660,6 +660,9 @@ ninja 1.12.1-2
 node-gyp 11.4.2-1
 nodejs 24.7.0-1
 nodejs-nopt 7.2.1-1
+noto-fonts 1:2025.09.01-1
+noto-fonts-cjk 20240730-1
+noto-fonts-emoji 1:2.048-1
 npm 11.6.0-1
 npth 1.8-1
 nspr 4.37-1

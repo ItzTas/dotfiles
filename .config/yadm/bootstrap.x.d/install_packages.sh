@@ -130,6 +130,9 @@ _install_pacman_packages() {
         "ttf-jetbrains-mono-nerd"
         "bibata-cursor-theme"
         "ttf-nerd-fonts-symbols"
+        "noto-fonts"
+        "noto-fonts-cjk"
+        "noto-fonts-emoji"
 
         # Git
         "lazygit"
