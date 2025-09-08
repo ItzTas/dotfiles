@@ -7,12 +7,6 @@ if [[ ! -d "$BOOTSTRAP_D" ]]; then
     exit 1
 fi
 
-for script in "$BOOTSTRAP_D"/*.sh; do
-    if [[ -f "$script" ]]; then
-        chmod +x "$script"
-    fi
-done
-
 scripts=(
     "install_packages"
     "enables"
@@ -25,6 +19,7 @@ scripts=(
 for script in "${scripts[@]}"; do
     if [[ -f "$BOOTSTRAP_D/$script.sh" ]]; then
         echo "Executing: $script"
+        chmod +x "$BOOTSTRAP_D/$script.sh"
         "$BOOTSTRAP_D/$script.sh" || true
     else
         echo "Warning: Script '$script' not found in $BOOTSTRAP_D" >&2
@@ -34,6 +29,7 @@ done
 for script in "$BOOTSTRAP_D"/set_up/*.sh; do
     if [[ -f "$script" ]]; then
         echo "Executing: $(basename "$script")"
+        chmod +x "$script"
         "$script" || true
     else
         echo "Warning: Script '$script' not found in $BOOTSTRAP_D" >&2
