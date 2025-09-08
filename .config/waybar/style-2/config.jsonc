@@ -131,7 +131,7 @@
 
 "wireplumber": {
     "max-volume": 150,
-    "scroll-step": 10,
+    "scroll-step": 1,
     
     "format": "{icon} {volume}%",
     "tooltip-format": "{icon}  {volume}%",
@@ -147,8 +147,6 @@
 
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && chmod +x ~/.config/waybar/style-2/scripts/eww_close_calendar.sh && ~/.config/waybar/style-2/scripts/eww_close_calendar.sh",
     "on-click-right": "dex ~/.local/share/applications/hypr-terminal/hypr-wiremix.desktop",
-    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
-    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
 	"menu-actions": {
         "ToggleSound": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 		"pavu": "nohup foot --override=colors.alpha=1 --app-id=Wiremix -e wiremix >/dev/null 2>&1 &",
