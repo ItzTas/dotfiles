@@ -98,7 +98,7 @@ dex 0.9.0-2
 diffutils 3.12-2
 direnv 2.37.1-1
 docker 1:28.3.3-1
-docker-buildx 0.27.0-1
+docker-buildx 0.28.0-1
 docker-compose 2.39.2-1
 dotnet-host 9.0.8.sdk109-1
 dotnet-runtime 9.0.8.sdk109-1
@@ -128,6 +128,7 @@ fastfetch 2.52.0-1
 fd 10.3.0-1
 ferdium 7.1.0-1
 ffmpeg 2:7.1.1-5
+ffmpeg4.4 4.4.6-2
 fftw 3.3.10-7
 file 5.46-5
 file-roller 44.5-1
@@ -344,7 +345,7 @@ lib32-libxss 1.2.4-2
 lib32-libxxf86vm 1.1.5-2
 lib32-llvm-libs 1:20.1.8-1
 lib32-lm_sensors 1:3.6.2-2
-lib32-mesa 1:25.2.2-1
+lib32-mesa 1:25.2.2-2
 lib32-ncurses 6.5-2
 lib32-nspr 4.37-1
 lib32-nss 3.115.1-1
@@ -458,6 +459,7 @@ libmalcontent 0.13.1-1
 libmanette 0.2.12-1
 libmd 1.1.0-2
 libmediainfo 25.07-1
+libmfx 23.2.2-4
 libmm-glib 1.24.2-1
 libmms 0.6.4-5
 libmnl 1.0.5-2
@@ -483,7 +485,7 @@ libnsl 2.0.1-1
 libnss_nis 3.4-1
 libnvme 1.15-1
 libogg 1.3.6-1
-libopenmpt 0.8.2-1
+libopenmpt 0.8.3-1
 libp11-kit 0.25.5-1
 libpaper 2.2.6-1
 libpcap 1.10.5-3
@@ -601,6 +603,8 @@ linux-firmware-other 20250808-1
 linux-firmware-radeon 20250808-1
 linux-firmware-realtek 20250808-1
 linux-firmware-whence 20250808-1
+linux-headers 6.16.5.arch1-1
+linuxconsole 1.8.1-1
 llhttp 9.2.1-2
 llvm-libs 20.1.8-1
 lm_sensors 1:3.6.2-1
@@ -629,7 +633,7 @@ make 4.4.1-2
 man-db 2.13.1-1
 md4c 0.5.2-1
 mdadm 4.4-1
-mesa 1:25.2.2-1
+mesa 1:25.2.2-2
 meson 1.9.0-1
 minizip 1:1.3.1-2
 miru-go-bin 0.0.21-1
@@ -684,20 +688,23 @@ openh264 2.6.0-1
 openjpeg2 2.5.3-1
 openssh 10.0p1-4
 openssl 3.5.2-1
+openssl-1.1 1.1.1.w-2
 opus 1.5.2-1
 orc 0.4.41-1
 os-prober 1.83-1
-ostree 2025.5-1
+ostree 2025.6-1
 p11-kit 0.25.5-1
 pacfiles 0.2.7-2
 pacman 7.0.0.r6.gc685ae6-6
 pacman-contrib 1.13.0-1
 pacman-mirrorlist 20250702-2
+pahole 1:1.30-2
 pam 1.7.1-1
 pambase 20250719-1
-pango 1:1.56.4-1
+pango 1:1.56.4-2
 pangomm 2.46.4-1
 parallel 20250822-1
+parsec-bin 150_97c-1
 parted 3.6-2
 paru 2.1.0-1
 paru-debug 2.1.0-1
@@ -714,7 +721,7 @@ perl-clone 0.47-2
 perl-encode-locale 1.05-14
 perl-error 0.17030-2
 perl-file-listing 6.16-5
-perl-glib-object-introspection 0.051-4
+perl-glib-object-introspection 0.052-1
 perl-gtk3 0.038-5
 perl-html-parser 3.83-2
 perl-html-tagset 3.24-3
@@ -752,9 +759,9 @@ plocate 1.1.23-1
 pnpm 10.15.1-1
 polkit 126-2
 polkit-gnome 0.105-11
-poppler 25.08.0-1
+poppler 25.09.1-1
 poppler-data 0.4.12-2
-poppler-glib 25.08.0-1
+poppler-glib 25.09.1-1
 popt 1.19-2
 portaudio 1:19.7.0-3
 pps-tools 1.0.3-2

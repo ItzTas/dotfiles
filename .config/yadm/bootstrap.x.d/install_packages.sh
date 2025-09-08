@@ -110,6 +110,10 @@ _install_pacman_packages() {
         "zoxide"
         "bat"
 
+        # Input
+        "libusb"
+        "hidapi"
+
         # Apps
         "nwg-look"
         "alarm-clock-applet"
