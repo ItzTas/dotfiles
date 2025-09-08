@@ -31,7 +31,7 @@ for script in "${scripts[@]}"; do
     fi
 done
 
-for script in "$BOOTSTRAP_D"/set_up_*; do
+for script in "$BOOTSTRAP_D"/set_up/*.sh; do
     if [[ -f "$script" ]]; then
         echo "Executing: $(basename "$script")"
         "$script" || true
