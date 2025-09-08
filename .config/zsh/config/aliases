@@ -86,7 +86,7 @@ fi
 
 # yadm
 if (( ${+commands[yadm]} )); then
-    alias yadm_update='chmod +x "$HOME/.config/yadm/bin/yadm_update.sh" && "$HOME/.config/yadm/bin/yadm_update.sh"'
+    alias yadm_update='chmod +x "$HOME/.config/yadm/bin/yadm_update" && "$HOME/.config/yadm/bin/yadm_update"'
 fi
 
 # yazy

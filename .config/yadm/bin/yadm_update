@@ -1,17 +1,19 @@
 #!/bin/env bash
+# vim=sh
 
 yadm_update() {
     (
         set -e
 
         pacman -Q >"$HOME"/.pacmanlist
+        flatpak list --app --columns=application >"$HOME/.flatpaklist"
 
         yadm --no-pager diff
 
         yadm add "$HOME/.pacmanlist"
+        yadm add "$HOME/.flatpaklist"
         yadm add "$HOME/Pictures/.backgrounds"
         yadm add "$HOME/.config/hypr/config"
-
         yadm add -u :/
 
         local files
