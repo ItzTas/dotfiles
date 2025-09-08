@@ -15,7 +15,7 @@ alsa-ucm-conf 1.2.14-2
 aom 3.13.1-1
 appstream 1.0.6-1
 aquamarine 0.9.4-1
-arch-update 3.15.4-1
+arch-update 3.15.5-1
 archlinux-contrib 20250219-1
 archlinux-keyring 20250807.1-1
 asar 4.0.1-1
@@ -137,7 +137,7 @@ filesystem 2025.05.03-1
 findutils 4.10.0-3
 firefox 142.0.1-1
 flac 1.5.0-1
-flameshot-git r2177.cd80260a-1
+flameshot-git r2179.83506050-1
 flatpak 1:1.16.1-1
 flex 2.6.4-5
 fluidsynth 2.4.8-1
@@ -1004,7 +1004,7 @@ yq 3.4.3-2
 yyjson 0.12.0-1
 zathura 0.5.12-1
 zathura-pdf-poppler 0.3.3-5
-zen-browser-bin 1.15.4b-1
+zen-browser-bin 1.15.5b-1
 zenity 4.1.99-2
 zeromq 4.3.5-2
 zimg 3.0.5-1
