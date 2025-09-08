@@ -56,8 +56,8 @@ bindkey '\e[B' history-search-forward
 
 # Others
 bindkey '\e.' yank-last-arg
-bindkey -M vicmd "^N" copybuffer
-bindkey -M viins "^N" copybuffer
+bindkey -M vicmd "^X" copybuffer
+bindkey -M viins "^X" copybuffer
 
 # Quoted vi edition
 autoload -U __vi-select-quoted
