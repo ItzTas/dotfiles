@@ -112,7 +112,7 @@ _install_pacman_packages() {
 
         # Input
         "libusb"
-        "hidapi"
+        "hidapi" 
 
         # Apps
         "nwg-look"
