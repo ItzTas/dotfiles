@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-y() {
+yadm_update() {
     (
         set -e
 
@@ -14,13 +14,15 @@ y() {
 
         yadm add -u :/
 
-        files=$(yadm status -s | awk '{print $2}' | tr '\n' ', ')
+        local files
+        files=$(yadm status -s | awk '{print $1 " " $2}' | tr '\n' ', ')
+
+        local commit_msg
         commit_msg="$(date '+%Y-%m-%d %H:%M') - Updated: $files"
 
         yadm commit -m "$commit_msg"
-
         yadm push
     )
 }
 
-y
+yadm_update
