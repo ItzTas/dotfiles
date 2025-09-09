@@ -356,9 +356,6 @@ copybuffer () {
 }
 
 # venv_wrapper
-export VENV_HOME="$HOME/.virtualenvs"
-[[ -d $VENV_HOME ]] || mkdir $VENV_HOME
-
 lsvenv() {
   ls -1 $VENV_HOME
 }
