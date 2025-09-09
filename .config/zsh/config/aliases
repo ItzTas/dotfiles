@@ -102,6 +102,7 @@ fi
 # python & utils
 if (( ${+commands[python3]} )); then
     alias python='python3'
+    alias jmolten='python -m ipykernel install --user --name=python3 --display-name "Python 3 (Molten)"'
 fi
 if (( ${+commands[direnv]} )); then
     alias da='direnv allow'
