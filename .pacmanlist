@@ -104,7 +104,6 @@ direnv 2.37.1-1
 docker 1:28.3.3-1
 docker-buildx 0.28.0-1
 docker-compose 2.39.2-1
-dosfstools 4.2-5
 dotnet-host 9.0.8.sdk109-1
 dotnet-runtime 9.0.8.sdk109-1
 dotnet-sdk 9.0.8.sdk109-1
@@ -958,7 +957,6 @@ util-linux 2.41.1-1
 util-linux-libs 2.41.1-1
 v4l-utils 1.30.1-1
 vapoursynth 72-1
-ventoy-bin 1.1.07-1
 vesktop-git 1.5.8.r5.g497c251-1
 vid.stab 1.1.1-2
 vim 9.1.1734-1
