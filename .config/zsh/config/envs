@@ -3,6 +3,9 @@
 
 export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
 
+export VENV_HOME="$HOME/.virtualenvs"
+[[ -d $VENV_HOME ]] || mkdir $VENV_HOME
+
 # history settings
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

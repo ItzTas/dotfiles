@@ -213,11 +213,6 @@ _install_pacman_packages() {
         "termpicker"
         "zsh"
 
-        # Python
-        "jupyter"
-        "jupyter-console"
-        "python-ipykernel"
-
         # Essentials
         "cmake"
         "polkit-gnome"
