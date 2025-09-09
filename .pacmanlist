@@ -803,7 +803,6 @@ python-cryptography 45.0.7-1
 python-editables 0.5-5
 python-filelock 3.19.1-1
 python-gobject 3.52.3-3
-python-greenlet 3.2.4-1
 python-hatchling 1.27.0-1
 python-importlib-metadata 8.7.0-1
 python-installer 0.7.0-10
@@ -815,7 +814,6 @@ python-mako 1.3.10-1
 python-markdown 3.9.0-1
 python-markupsafe 3.0.2-1
 python-more-itertools 10.8.0-1
-python-msgpack 1.0.5-3
 python-mutagen 1.47.0-3
 python-numpy 2.3.2-1
 python-packaging 25.0-1
@@ -826,7 +824,6 @@ python-platformdirs 4.4.0-1
 python-pluggy 1.6.0-1
 python-pycparser 2.22-3
 python-pymediainfo 6.1.0-4
-python-pynvim 0.6.0-1
 python-pypdf 6.0.0-1
 python-pyproject-hooks 1.2.0-3
 python-pyqt6 6.9.1-2
