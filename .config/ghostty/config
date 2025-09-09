@@ -25,7 +25,6 @@ confirm-close-surface = false
 link-url = true
 gtk-adwaita = true
 desktop-notifications = true
-shell-integration = bash
 focus-follows-mouse = true
 mouse-scroll-multiplier = 0.7
 
