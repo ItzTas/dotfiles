@@ -13,6 +13,7 @@ yadm_update() {
         yadm add "$HOME/.pacmanlist"
         yadm add "$HOME/.flatpaklist"
         yadm add "$HOME/Pictures/.backgrounds"
+        yadm add "$HOME/.config/yadm/bootstrap.x.d"
         yadm add "$HOME/.config/hypr/config"
         yadm add -u :/
 
