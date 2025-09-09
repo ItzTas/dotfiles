@@ -375,6 +375,7 @@ lib32-xz 5.8.1-1
 lib32-zlib 1.3.1-2
 lib32-zstd 1.5.7-2
 libadwaita 1:1.7.6-1
+libajantv2 1:17.1.0-2
 libarchive 3.8.1-1
 libass 0.17.4-1
 libassuan 3.0.0-1
@@ -695,6 +696,7 @@ nvidia-settings 580.82.07-1
 nvidia-utils 580.82.07-1
 nvm 0.40.3-1
 nwg-look 1.0.6-1
+obs-studio-git 31.1.2.r167.g482778d-1
 ocl-icd 2.3.3-1
 oh-my-posh 26.19.1-1
 onetbb 2022.2.0-1
@@ -956,6 +958,7 @@ util-linux 2.41.1-1
 util-linux-libs 2.41.1-1
 v4l-utils 1.30.1-1
 vapoursynth 72-1
+ventoy-bin 1.1.07-1
 vesktop-git 1.5.8.r5.g497c251-1
 vid.stab 1.1.1-2
 vim 9.1.1734-1

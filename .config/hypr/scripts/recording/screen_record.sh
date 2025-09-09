@@ -5,7 +5,7 @@ if pgrep wf-recorder; then
     exit 0
 fi
 
-DIR=~/Videos/.recordings
+DIR="$HOME/Videos/.recordings/system"
 mkdir -p "$DIR"
 
 FILENAME="$DIR/recording_$(date '+%Y-%m-%d_%H-%M-%S').mp4"
