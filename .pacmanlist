@@ -1,3 +1,4 @@
+a52dec 0.8.0-2
 aalib 1.4rc5-19
 abseil-cpp 20250814.0-1
 accountsservice 23.13.9-2
@@ -19,6 +20,7 @@ arch-update 3.15.5-1
 archlinux-contrib 20250219-1
 archlinux-keyring 20250807.1-1
 asar 4.0.1-1
+asio 1.34.2-1
 at-spi2-core 2.56.4-1
 atkmm 2.28.4-1
 attr 2.5.2-1
@@ -62,6 +64,7 @@ catppuccin-gtk-theme-mocha 1.0.3-1
 cblas 3.12.1-2
 cdparanoia 10.2-9
 cinnamon-desktop 6.4.1-1
+cjson 1.7.18-1
 clamav 1.4.3-1
 clamtk 6.18-1
 clang 20.1.8-1
@@ -101,6 +104,7 @@ direnv 2.37.1-1
 docker 1:28.3.3-1
 docker-buildx 0.28.0-1
 docker-compose 2.39.2-1
+dosfstools 4.2-5
 dotnet-host 9.0.8.sdk109-1
 dotnet-runtime 9.0.8.sdk109-1
 dotnet-sdk 9.0.8.sdk109-1
@@ -123,13 +127,16 @@ eww 0.6.0-1
 exempi 2.6.6-2
 exiv2 0.28.7-1
 expat 2.7.1-1
+extra-cmake-modules 6.17.0-1
 eza 0.23.2-1
+faad2 2.11.2-1
 fakeroot 1.37.1.2-1
 fastfetch 2.52.0-1
 fd 10.3.0-1
 ferdium 7.1.0-1
 ffmpeg 2:7.1.1-5
 ffmpeg4.4 4.4.6-2
+ffnvcodec-headers 13.0.19.0-1
 fftw 3.3.10-7
 file 5.46-5
 file-roller 44.5-1
@@ -402,6 +409,7 @@ libcolord 1.4.8-1
 libcups 2:2.4.12-2
 libcurl-gnutls 8.15.0-1
 libdaemon 0.14-6
+libdatachannel 0.23.2-1
 libdatrie 0.2.13-4
 libdbusmenu-glib 16.04.0.r498-2
 libdbusmenu-gtk3 16.04.0.r498-2
@@ -448,6 +456,7 @@ libinput 1.29.1-1
 libinstpatch 1.1.7-2
 libisl 0.27-1
 libjpeg-turbo 3.1.2-1
+libjuice 1.6.1-1
 libjxl 0.11.1-4
 libksba 1.6.7-2
 liblc3 1.1.3-1
@@ -504,6 +513,7 @@ libpsl 0.21.5-2
 libpulse 17.0+r43+g3e2bb8a1e-1
 libraqm 0.10.3-1
 libraw1394 2.1.2-4
+librist 0.2.11-1
 librsvg 2:2.61.0-1
 librsync 1:2.3.4-2
 libsamplerate 0.2.2-3
@@ -520,6 +530,7 @@ libsndfile 1.2.2-3
 libsodium 1.0.20-1
 libsoup3 3.6.5-1
 libsoxr 0.1.3-4
+libsrtp 1:2.7.0-1
 libssh 0.11.2-1
 libssh2 1.11.1-1
 libstemmer 3.0.1-1
@@ -544,6 +555,7 @@ libuv 1.51.0-1
 libva 2.22.0-1
 libvdpau 1.5-3
 libverto 0.3.2-5
+libvlc 3.0.21-28
 libvorbis 1.3.7-4
 libvpl 2.15.0-1
 libvpx 1.15.0-1
@@ -634,6 +646,7 @@ m4 1.4.20-1
 mailcap 2.1.54-2
 make 4.4.1-2
 man-db 2.13.1-1
+mbedtls 3.6.4-1
 md4c 0.5.2-1
 mdadm 4.4-1
 mesa 1:25.2.2-2
@@ -665,6 +678,7 @@ netstandard-targeting-pack 9.0.8.sdk109-1
 nettle 3.10.2-1
 networkmanager 1.54.0-1
 ninja 1.12.1-2
+nlohmann-json 3.12.0-2
 node-gyp 11.4.2-1
 nodejs 24.7.0-1
 nodejs-nopt 7.2.1-1
@@ -824,12 +838,15 @@ python-xmltodict 0.15.0-1
 python-yaml 6.0.2-2
 python-zipp 3.21.0-2
 qman 1:1.5.0-2
+qrcodegencpp-cmake 1.8.0-4
 qt5-base 5.15.17+kde+r123-1
 qt5-declarative 5.15.17+kde+r21-1
 qt5-graphicaleffects 5.15.17-1
 qt5-quickcontrols2 5.15.17+kde+r5-1
 qt5-svg 5.15.17+kde+r5-1
 qt5-translations 5.15.17-1
+qt5-wayland 5.15.17+kde+r57-1
+qt5-x11extras 5.15.17-1
 qt6-base 6.9.2-1
 qt6-charts 6.9.2-1
 qt6-declarative 6.9.2-1
@@ -870,6 +887,7 @@ sesh-bin 2.17.1-1
 shaderc 2025.3-1
 shadow 4.18.0-1
 shared-mime-info 2.4-2
+simde 0.8.2-1
 simdjson 1:3.13.0-1
 slang 2.3.3-4
 slurp 1.5.0-1
@@ -895,6 +913,7 @@ sudo 1.9.17.p1-1
 svt-av1 3.1.2-1
 swaync 0.12.2-1
 swayosd-gtk3 0.1.0-1
+swig 4.3.1-1
 systemd 257.9-1
 systemd-libs 257.9-1
 systemd-sysvcompat 257.9-1
@@ -910,6 +929,7 @@ tinysparql 3.9.2-2
 tinyxml2 11.0.0-1
 tmux 3.5_a-1
 tomlplusplus 3.4.0-1
+tor-browser-bin 14.5.6-1
 tpm2-tss 4.1.3-1
 tree-sitter 0.25.8-1
 tree-sitter-c 0.24.1-1
@@ -931,6 +951,7 @@ unibilium 2.1.2-1
 unzip 6.0-23
 upower 1.90.10-1
 usbutils 018-1
+uthash 2.3.0-2
 util-linux 2.41.1-1
 util-linux-libs 2.41.1-1
 v4l-utils 1.30.1-1
@@ -939,6 +960,37 @@ vesktop-git 1.5.8.r5.g497c251-1
 vid.stab 1.1.1-2
 vim 9.1.1734-1
 vim-runtime 9.1.1734-1
+vlc 3.0.21-28
+vlc-cli 3.0.21-28
+vlc-gui-qt 3.0.21-28
+vlc-plugin-a52dec 3.0.21-28
+vlc-plugin-alsa 3.0.21-28
+vlc-plugin-archive 3.0.21-28
+vlc-plugin-dav1d 3.0.21-28
+vlc-plugin-dbus 3.0.21-28
+vlc-plugin-dbus-screensaver 3.0.21-28
+vlc-plugin-faad2 3.0.21-28
+vlc-plugin-flac 3.0.21-28
+vlc-plugin-gnutls 3.0.21-28
+vlc-plugin-inflate 3.0.21-28
+vlc-plugin-journal 3.0.21-28
+vlc-plugin-jpeg 3.0.21-28
+vlc-plugin-lua 3.0.21-28
+vlc-plugin-mpg123 3.0.21-28
+vlc-plugin-ogg 3.0.21-28
+vlc-plugin-opus 3.0.21-28
+vlc-plugin-png 3.0.21-28
+vlc-plugin-pulse 3.0.21-28
+vlc-plugin-shout 3.0.21-28
+vlc-plugin-speex 3.0.21-28
+vlc-plugin-tag 3.0.21-28
+vlc-plugin-theora 3.0.21-28
+vlc-plugin-twolame 3.0.21-28
+vlc-plugin-vorbis 3.0.21-28
+vlc-plugin-vpx 3.0.21-28
+vlc-plugin-xml 3.0.21-28
+vlc-plugins-base 3.0.21-28
+vlc-plugins-video-output 3.0.21-28
 vmaf 3.0.0-1
 volume_key 0.3.12-11
 vte-common 0.80.3-1
@@ -950,6 +1002,7 @@ wayland 1.24.0-1
 wayland-protocols 1.45-1
 webkit2gtk-4.1 2.48.6-1
 webrtc-audio-processing-1 1.3-5
+websocketpp 0.8.2-3
 weston 14.0.2-1
 wf-recorder 0.5.0-2
 wget 1.25.0-2
