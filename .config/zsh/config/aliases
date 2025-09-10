@@ -82,14 +82,16 @@ if (( ${+commands[git]} )); then
     alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
 
     alias gcl='git clone'
+    alias gpp='git push'
     alias gcm='git commit --verbose'
 
     alias ga='git add'
     alias gap='git add --patch'
     alias gr='git restore'
+    alias grs='git restore --staged'
 
     alias gds='git diff --staged'
-    alias gd='git diff'
+    alias gd='git diff | diff-so-fancy'
 fi
 
 # yadm

@@ -33,6 +33,9 @@
     diffFilter = diff-so-fancy --patch
     singlekey = true
 
+[push]
+    autoSetupRemote = true
+
 [color]
     ui = always
 
