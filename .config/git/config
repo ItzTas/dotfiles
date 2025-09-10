@@ -58,8 +58,8 @@
 
 [rebase]
     missingCommitsCheck = warn
+    ; autosquash = true automatically reorder and squash fixup! or squash! commits during interactive rebase
     autosquash = true
-    ; Automatically reorder and squash fixup! or squash! commits during interactive rebase
 
 [log]
     graphColors = blue,yellow,cyan,magenta,green,red
