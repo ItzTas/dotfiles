@@ -51,6 +51,13 @@
 
 [color]
     ui = always
+    diff = auto
+    status = auto
+    branch = auto
+    showBranch = auto
+    interactive = auto
+    grep = auto
+
 
 [color "decorate"]
     HEAD = 15 bold
@@ -65,6 +72,21 @@
     whitespace = 11 reverse
     old = 9
     new = 10
+
+[color "status"]
+    header = 15 bold
+    branch = 13
+    nobranch = 9
+    unmerged = 9
+    untracked = 11
+    added = 10
+    changed = 13 bold
+
+
+[color "branch"]
+    current = 15 reverse
+    local = 13
+    remote = 9
 
 [diff-so-fancy]
     markEmptyLines = false
