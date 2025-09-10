@@ -82,8 +82,10 @@ if (( ${+commands[git]} )); then
     alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
 
     alias gcl='git clone'
-    alias gpp='git push'
     alias gcm='git commit --verbose'
+
+    alias gpp='git push'
+    alias gu='git pull'
 
     alias ga='git add'
     alias gap='git add --patch'
