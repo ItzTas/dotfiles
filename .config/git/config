@@ -39,7 +39,11 @@
     followTags = true
 
 [pull]
+    default = current
     rebase = true
+
+[rebase]
+    missingCommitsCheck = warn
 
 [color]
     ui = always
