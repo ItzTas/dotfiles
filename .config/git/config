@@ -21,6 +21,9 @@
 [rerere]
     enabled = true
 
+[help]
+    autocorrect = 10
+
 [commit]
     verbose = true
     ; gpgSign = true
