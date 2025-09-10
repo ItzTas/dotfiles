@@ -22,6 +22,9 @@
     verbose = true
     ; gpgSign = true
 
+[merge]
+    conflictstyle = diff3
+
 [status]
     branch = true
     showStash = true
