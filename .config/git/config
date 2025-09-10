@@ -38,6 +38,9 @@
     default = current
     followTags = true
 
+[pull]
+    rebase = true
+
 [color]
     ui = always
 
