@@ -66,6 +66,9 @@
 [fetch]
     prune = true
 
+[transfer]
+    fsckObjects = true
+
 [rebase]
     missingCommitsCheck = warn
     ; autosquash = true automatically reorder and squash fixup! or squash! commits during interactive rebase
