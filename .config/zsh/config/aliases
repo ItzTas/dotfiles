@@ -84,6 +84,8 @@ if (( ${+commands[git]} )); then
 
     alias gb='git branch'
 
+    alias gmt='git mergetool --tool=nvimdiff'
+
     alias gcl='git clone'
     alias gcm='git commit'
 
