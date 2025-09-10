@@ -9,6 +9,7 @@
     editor = nvim
     whitespace = error
     preloadindex = true
+    pager = less -FRX
 
 [advice]
     addEmptyPathspec = false
@@ -21,6 +22,11 @@
 
 [diff] 
     context = 3
+    renames = copies
+    interHunkContext = 10
+
+[pager]
+    diff = diff-so-fancy | $PAGER
 
 [credential "https://github.com"]
 	helper = 
