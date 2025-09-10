@@ -81,15 +81,15 @@ alias yay='paru'
 if (( ${+commands[git]} )); then
     alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
 
-    alias gss='git status'
     alias gcl='git clone'
+    alias gcm='git commit --verbose'
 
-    alias gr='git restore'
     alias ga='git add'
     alias gap='git add --patch'
+    alias gr='git restore'
 
-    alias gd='git diff'
     alias gds='git diff --staged'
+    alias gd='git diff'
 fi
 
 # yadm
