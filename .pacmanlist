@@ -956,6 +956,7 @@ usbutils 018-1
 uthash 2.3.0-2
 util-linux 2.41.1-1
 util-linux-libs 2.41.1-1
+uv 0.8.15-1
 v4l-utils 1.30.1-1
 vapoursynth 72-1
 vesktop-git 1.5.8.r5.g497c251-1

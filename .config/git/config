@@ -6,13 +6,18 @@
 	email = 59647566+ItzTas@users.noreply.github.com
 
 [core]
-    editor = "nvim"
+    editor = nvim
     whitespace = error
     preloadindex = true
 
 [advice]
     addEmptyPathspec = false
     statusHints = false
+
+[status] 
+    branch = true
+    showStash = true
+    showUntrackedFiles = all
 
 [credential "https://github.com"]
 	helper = 
