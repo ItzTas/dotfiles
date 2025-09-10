@@ -14,7 +14,7 @@
     addEmptyPathspec = false
     statusHints = false
 
-[status] 
+[status]
     branch = true
     showStash = true
     showUntrackedFiles = all
