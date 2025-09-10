@@ -23,6 +23,7 @@
     ; gpgSign = true
 
 [merge]
+    ; conflictstyle = diff3 may conflict with diff tools in some projects
     conflictstyle = diff3
 
 [status]
