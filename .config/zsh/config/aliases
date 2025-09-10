@@ -85,7 +85,7 @@ if (( ${+commands[git]} )); then
     alias gb='git branch'
 
     alias gcl='git clone'
-    alias gcm='git commit --verbose'
+    alias gcm='git commit'
 
     alias gpp='git push'
     alias gu='git pull'

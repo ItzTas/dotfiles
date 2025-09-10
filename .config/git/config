@@ -19,6 +19,7 @@
     statusHints = false
 
 [commit]
+    verbose = true
     ; gpgSign = true
 
 [status]
