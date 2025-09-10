@@ -3,6 +3,10 @@
 [user]
 	name = Tales
 	email = 59647566+ItzTas@users.noreply.github.com
+[core]
+    editor = "nvim"
+    whitespace = error
+    preloadindex = true
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
