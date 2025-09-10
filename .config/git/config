@@ -52,6 +52,12 @@
 [color]
     ui = always
 
+[color "decorate"]
+    HEAD = 15 bold
+    branch = 13
+    tag = 10
+    remoteBranch = 9
+
 [color "diff"]
     meta = 15 bold
     frag = 13
