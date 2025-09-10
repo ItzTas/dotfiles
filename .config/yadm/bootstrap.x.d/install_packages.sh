@@ -143,6 +143,7 @@ _install_pacman_packages() {
         "lazygit"
         "github-cli"
         "git-bug"
+        "diff-so-fancy"
 
         # Tui
         "wiremix"
