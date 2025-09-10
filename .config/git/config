@@ -31,6 +31,7 @@
 
 [interactive]
     diffFilter = diff-so-fancy --patch
+    singlekey = true
 
 [color]
     ui = always
