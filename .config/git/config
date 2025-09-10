@@ -53,11 +53,16 @@
     default = current
     rebase = true
 
+[fetch]
+    prune = true
+
 [rebase]
     missingCommitsCheck = warn
+    autosquash = true
 
 [log]
     graphColors = blue,yellow,cyan,magenta,green,red
+    follwo = true
 
 [branch]
     sort = -committerdate
