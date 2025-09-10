@@ -94,7 +94,7 @@ if (( ${+commands[git]} )); then
             fi
         done
         if $has_diff && $no_pager && (( ${+commands[diff-so-fancy]} )); then
-            command git -c color.ui=always diff "${args[@]}" | diff-so-fancy
+            command git diff "${args[@]}" | diff-so-fancy
         else
             command git "$@"
         fi
