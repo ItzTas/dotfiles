@@ -1,5 +1,18 @@
-# javascript
-node_modules/
-
-# python
+# Python specific
+.venv/
+.mypy_cache/
+.pytest_cache/
 __pycache__/
+.hypothesis/
+.ruff_cache/
+.ropeproject/
+
+# Rust specific
+target/
+
+# Zig specific
+.zig-cache/
+zig-out/
+
+# JavaScript | TypeScript specific
+node_modules/
