@@ -35,6 +35,7 @@
     context = 3
     renames = copies
     interHunkContext = 10
+    algorithm = histogram
 
 [interactive]
     diffFilter = diff-so-fancy --patch
