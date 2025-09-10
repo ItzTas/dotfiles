@@ -8,7 +8,11 @@ yadm_update() {
         pacman -Q >"$HOME"/.pacmanlist
         flatpak list --app --columns=application >"$HOME/.flatpaklist"
 
-        yadm --no-pager diff
+        if command -v diff-so-fancy &>/dev/null; then
+            yadm --no-pager diff | diff-so-fancy
+        else
+            yadm --no-pager diff
+        fi
 
         yadm add "$HOME/.pacmanlist"
         yadm add "$HOME/.flatpaklist"
