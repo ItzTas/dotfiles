@@ -27,7 +27,7 @@ yadm_update() {
         files="${files%, }"
 
         local commit_msg
-        commit_msg="$(date '+%Y-%m-%d %H:%M') - Atualizados: $files"
+        commit_msg="$(date '+%Y-%m-%d %H:%M') - Updated: $files"
 
         yadm commit -m "$commit_msg"
         yadm push
