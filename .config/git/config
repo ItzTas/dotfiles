@@ -24,6 +24,13 @@
 [help]
     autocorrect = 10
 
+[merge]
+    tool = nvimdiff
+
+[mergetool "nvimdiff"]
+    cmd = nvim -d "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+    keepBackup = false
+
 [commit]
     verbose = true
     ; gpgSign = true
