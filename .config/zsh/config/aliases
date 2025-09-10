@@ -87,6 +87,9 @@ if (( ${+commands[git]} )); then
     alias gr='git restore'
     alias ga='git add'
     alias gap='git add --patch'
+
+    alias gd='git diff'
+    alias gds='git diff --staged'
 fi
 
 # yadm
