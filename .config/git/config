@@ -11,7 +11,6 @@
     editor = nvim
     whitespace = error
     preloadindex = true
-    pager = diff-so-fancy | $PAGER
 
 [advice]
     addEmptyPathspec = false
@@ -35,6 +34,14 @@
 
 [color]
     ui = always
+
+[color "diff"]
+    meta = 15 bold
+    frag = 13
+    context = 15
+    whitespace = 11 reverse
+    old = 9
+    new = 10
 
 [diff-so-fancy]
     markEmptyLines = false
