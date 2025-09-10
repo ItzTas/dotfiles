@@ -77,6 +77,29 @@ if (( ${+commands[git]} )); then
 
 		echo "$b" | fzf --bind 'ctrl-y:execute(git switch {})+abort'
 	}
+
+    # overwrite git binary for my own modifications
+    git() {
+        local args=()
+        local has_diff=false
+        local no_pager=false
+
+        for arg in "$@"; do
+            if [[ "$arg" == "--no-pager" ]]; then
+                no_pager=true
+            elif [[ "$arg" == "diff" ]]; then
+                has_diff=true
+            else
+                args+=("$arg")
+            fi
+        done
+
+        if $has_diff && $no_pager && (( ${+commands[diff-so-fancy]} )); then
+            command git -c color.ui=always diff "${args[@]}" | diff-so-fancy
+        else
+            command git "$@"
+        fi
+    }
 fi
 
 # tmux
