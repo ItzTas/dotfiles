@@ -18,6 +18,9 @@
     addEmptyPathspec = false
     statusHints = false
 
+[rerere]
+    enabled = true
+
 [commit]
     verbose = true
     ; gpgSign = true
