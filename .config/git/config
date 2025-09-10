@@ -1,3 +1,5 @@
+[alias]
+
 [diff]
 	renameLimit = 99999
 
@@ -9,7 +11,7 @@
     editor = nvim
     whitespace = error
     preloadindex = true
-    pager = less -FRX
+    pager = diff-so-fancy | $PAGER
 
 [advice]
     addEmptyPathspec = false
@@ -27,6 +29,15 @@
 
 [pager]
     diff = diff-so-fancy | $PAGER
+
+[interactive]
+    diffFilter = diff-so-fancy
+
+[color]
+    ui = always
+
+[diff-so-fancy]
+    markEmptyLines = false
 
 [credential "https://github.com"]
 	helper = 
