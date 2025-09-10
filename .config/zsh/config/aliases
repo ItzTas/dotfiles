@@ -82,6 +82,7 @@ if (( ${+commands[git]} )); then
     alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
     alias gss='git status'
     alias gc='git clone'
+    alias gr='git restore'
 fi
 
 # yadm

@@ -1,15 +1,23 @@
 [diff]
 	renameLimit = 99999
+
 [user]
 	name = Tales
 	email = 59647566+ItzTas@users.noreply.github.com
+
 [core]
     editor = "nvim"
     whitespace = error
     preloadindex = true
+
+[advice]
+    addEmptyPathspec = false
+    statusHints = false
+
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
