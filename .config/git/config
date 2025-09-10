@@ -3,19 +3,23 @@
 [diff]
 	renameLimit = 99999
 
-[user]
-	name = Tales
-	email = 59647566+ItzTas@users.noreply.github.com
-
 [core]
     filemode = true
     editor = nvim
     whitespace = error
     preloadindex = true
 
+[pager]
+    diff = diff-so-fancy | $PAGER
+    branch = false
+    tag = false
+
 [advice]
     addEmptyPathspec = false
     statusHints = false
+
+[commit]
+    ; gpgSign = true
 
 [status]
     branch = true
@@ -26,9 +30,6 @@
     context = 3
     renames = copies
     interHunkContext = 10
-
-[pager]
-    diff = diff-so-fancy | $PAGER
 
 [interactive]
     diffFilter = diff-so-fancy --patch
@@ -49,8 +50,14 @@
 [log]
     graphColors = blue,yellow,cyan,magenta,green,red
 
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = -taggerdate
+
 [color]
-    ui = always
+    ui = auto
     diff = auto
     status = auto
     branch = auto
