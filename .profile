@@ -7,9 +7,6 @@ export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 # zsh home
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
-# PATH
-export PATH="$HOME/.local/bin:$PATH"
-
 # browser
 export BROWSER='zen-browser'
 
@@ -18,3 +15,6 @@ export EDITOR='nvim'
 
 # terminal
 export TERMINAL="ghostty"
+
+# PATH
+export PATH="$HOME/.local/bin:$PATH"
