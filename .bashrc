@@ -14,7 +14,7 @@ __source_bash_files() {
         "functions"
         "completions"
         "binds"
-        "exports"
+        "envs"
         "evals"
         "sources"
         "shopt"
@@ -32,4 +32,3 @@ __source_bash_files() {
 }
 __source_bash_files
 unset __source_bash_files
-. "$HOME/.cargo/env"
