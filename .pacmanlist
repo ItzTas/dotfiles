@@ -8,7 +8,7 @@ adwaita-fonts 49.0-2
 adwaita-icon-theme 48.1-1
 adwaita-icon-theme-legacy 46.2-3
 alarm-clock-applet 1:0.4.1-5
-alsa-card-profiles 1:1.4.7-1
+alsa-card-profiles 1:1.4.8-1
 alsa-lib 1.2.14-1
 alsa-plugins 1:1.2.12-4
 alsa-topology-conf 1.2.5.1-4
@@ -58,7 +58,7 @@ cairo 1.18.4-1
 cairo-perl 1.109-6
 cairomm 1.14.5-1
 cairomm-1.16 1.18.0-1
-calf 0.90.8-3
+calf 0.90.8-4
 candy-icons-git r1332.278998c-1
 catppuccin-gtk-theme-mocha 1.0.3-1
 cblas 3.12.1-2
@@ -84,7 +84,7 @@ cppdap 1.58.0-2
 cronie 1.7.2-1
 cryptsetup 2.8.1-1
 cunit 2.1.3-4
-curl 8.15.0-1
+curl 8.16.0-1
 dav1d 1.5.1-1
 db5.3 5.3.28-5
 dbus 1.16.2-1
@@ -97,7 +97,7 @@ ddcutil 2.2.1-1
 debugedit 5.2-1
 default-cursors 3-1
 desktop-file-utils 0.28-1
-device-mapper 2.03.34-1
+device-mapper 2.03.35-1
 dex 0.9.0-2
 diff-so-fancy 1.4.4-2
 diffutils 3.12-2
@@ -152,7 +152,7 @@ fluidsynth 2.4.8-1
 fmt 11.2.0-1
 fontconfig 2:2.17.1-1
 freeglut 3.6.0-2
-freetype2 2.14.0-2
+freetype2 2.14.1-1
 fribidi 1.0.16-2
 fuse-common 3.17.1-1
 fuse2 2.9.9-5
@@ -216,7 +216,7 @@ gsl 2.8-1
 gsm 1.0.22-2
 gssdp 1.6.4-1
 gst-plugin-gtk 1.26.5-2
-gst-plugin-pipewire 1:1.4.7-1
+gst-plugin-pipewire 1:1.4.8-1
 gst-plugins-bad-libs 1.26.5-2
 gst-plugins-base 1.26.5-2
 gst-plugins-base-libs 1.26.5-2
@@ -305,12 +305,12 @@ lib32-alsa-plugins 1.2.12-1
 lib32-audit 4.0.5-1
 lib32-brotli 1.1.0-1
 lib32-bzip2 1.0.8-4
-lib32-curl 8.15.0-1
+lib32-curl 8.16.0-1
 lib32-dbus 1.16.2-1
 lib32-e2fsprogs 1.47.3-1
 lib32-expat 2.7.1-1
 lib32-fontconfig 2:2.17.1-1
-lib32-freetype2 2.14.0-2
+lib32-freetype2 2.14.1-1
 lib32-gcc-libs 15.2.1+r22+gc4e96a094636-1
 lib32-glib2 2.84.4-2
 lib32-glibc 2.42+r17+gd7274d718e6f-1
@@ -333,7 +333,7 @@ lib32-libnghttp3 1.11.0-1
 lib32-libnm 1.54.0-1
 lib32-libnsl 2.0.1-1
 lib32-libpciaccess 0.18.1-1
-lib32-libpipewire 1:1.4.7-1
+lib32-libpipewire 1:1.4.8-1
 lib32-libpng 1.6.50-1
 lib32-libpsl 0.21.5-1
 lib32-libssh2 1.11.1-1
@@ -365,7 +365,7 @@ lib32-openssl 1:3.5.2-1
 lib32-p11-kit 0.25.7-1
 lib32-pam 1.7.0-1
 lib32-pcre2 10.46-1
-lib32-pipewire 1:1.4.7-1
+lib32-pipewire 1:1.4.8-1
 lib32-spirv-tools 1:1.4.321.0-1
 lib32-sqlite 3.50.4-1
 lib32-systemd 257.9-1
@@ -409,7 +409,7 @@ libcdio-paranoia 10.2+2.0.2-1
 libcloudproviders 0.3.6-2
 libcolord 1.4.8-1
 libcups 2:2.4.12-2
-libcurl-gnutls 8.15.0-1
+libcurl-gnutls 8.16.0-1
 libdaemon 0.14-6
 libdatachannel 0.23.2-1
 libdatrie 0.2.13-4
@@ -506,7 +506,7 @@ libpcap 1.10.5-3
 libpciaccess 0.18.1-2
 libpgm 5.3.128-3
 libpipeline 1.5.8-1
-libpipewire 1:1.4.7-1
+libpipewire 1:1.4.8-1
 libplacebo 7.351.0-2
 libplist 2.7.0-1
 libpng 1.6.50-1
@@ -769,11 +769,11 @@ perl-try-tiny 0.32-3
 perl-uri 5.32-2
 perl-www-robotrules 6.02-15
 pinentry 1.3.2-1
-pipewire 1:1.4.7-1
-pipewire-alsa 1:1.4.7-1
-pipewire-audio 1:1.4.7-1
-pipewire-jack 1:1.4.7-1
-pipewire-pulse 1:1.4.7-1
+pipewire 1:1.4.8-1
+pipewire-alsa 1:1.4.8-1
+pipewire-audio 1:1.4.8-1
+pipewire-jack 1:1.4.8-1
+pipewire-pulse 1:1.4.8-1
 pixman 0.46.4-1
 pkgconf 2.5.1-1
 playerctl 2.4.1-4
@@ -957,7 +957,7 @@ usbutils 018-1
 uthash 2.3.0-2
 util-linux 2.41.1-1
 util-linux-libs 2.41.1-1
-uv 0.8.16-1
+uv 0.8.17-1
 v4l-utils 1.30.1-1
 vapoursynth 72-1
 vesktop-git 1.5.8.r5.g497c251-1
