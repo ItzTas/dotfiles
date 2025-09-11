@@ -5,7 +5,7 @@ yadm_update() {
     (
         set -e
 
-        local package_lists_dir="${XDG_CONFIG_DIR:-$HOME/.config/}/yadm/package_lists"
+        local package_lists_dir="${XDG_CONFIG_DIR:-$HOME/.config/}/yadm/packagelists"
         mkdir -p "$package_lists_dir"
 
         pacman -Q >"$package_lists_dir/.pacmanlist"
