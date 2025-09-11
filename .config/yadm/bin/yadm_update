@@ -8,11 +8,11 @@ yadm_update() {
         local package_lists_dir="${XDG_CONFIG_DIR:-$HOME/.config/}/yadm/packagelists"
         mkdir -p "$package_lists_dir"
 
-        pacman -Q >"$package_lists_dir/.pacmanlist"
-        yadm add "$package_lists_dir/.pacmanlist"
+        pacman -Q >"$package_lists_dir/pacmanlist"
+        yadm add "$package_lists_dir/pacmanlist"
 
-        flatpak list --app --columns=application >"$package_lists_dir/.flatpaklist"
-        yadm add "$package_lists_dir/.flatpaklist"
+        flatpak list --app --columns=application >"$package_lists_dir/flatpaklist"
+        yadm add "$package_lists_dir/flatpaklist"
 
         if command -v diff-so-fancy &>/dev/null; then
             yadm --no-pager diff | diff-so-fancy
