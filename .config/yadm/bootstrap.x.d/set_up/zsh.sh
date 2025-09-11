@@ -34,7 +34,7 @@ _install_ohmyzsh() {
 }
 
 _set_up() {
-    _install_ohmyzsh
+    # _install_ohmyzsh
     _install_plugins
 }
 
