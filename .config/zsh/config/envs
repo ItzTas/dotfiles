@@ -13,6 +13,10 @@ HISTFILESIZE=2000
 HISTTIMEFORMAT='%m-%d %T '
 HISTDUP=erase
 
+# python history file
+export PYTHONHISTFILE="${XDG_CONFIG_HOME:-$HOME/.config}/python/history"
+mkdir -p "$(dirname "$PYTHONHISTFILE")"
+
 # initial project path
 export MY_PROJECT_PATH="$PWD"
 
