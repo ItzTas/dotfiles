@@ -5,8 +5,14 @@ yadm_update() {
     (
         set -e
 
-        pacman -Q >"$HOME"/.pacmanlist
-        flatpak list --app --columns=application >"$HOME/.flatpaklist"
+        local package_lists_dir="${XDG_CONFIG_DIR:-$HOME/.config/}/yadm/package_lists"
+        mkdir -p "$package_lists_dir"
+
+        pacman -Q >"$package_lists_dir/.pacmanlist"
+        yadm add "$package_lists_dir/.pacmanlist"
+
+        flatpak list --app --columns=application >"$package_lists_dir/.flatpaklist"
+        yadm add "$package_lists_dir/.flatpaklist"
 
         if command -v diff-so-fancy &>/dev/null; then
             yadm --no-pager diff | diff-so-fancy
@@ -14,8 +20,6 @@ yadm_update() {
             yadm --no-pager diff
         fi
 
-        yadm add "$HOME/.pacmanlist"
-        yadm add "$HOME/.flatpaklist"
         yadm add "$HOME/Pictures/.backgrounds"
         yadm add "$HOME/.config/yadm/bootstrap.x.d"
         yadm add "$HOME/.config/hypr/config"
