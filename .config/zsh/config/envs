@@ -7,7 +7,9 @@ export VENV_HOME="$HOME/.virtualenvs"
 [[ -d $VENV_HOME ]] || mkdir $VENV_HOME
 
 # history settings
-HISTFILE="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/history"
+HISTFILE="${XDG_CONFIG_HOME:-$HOME/.config}/cache/zsh/history"
+mkdir -p "$(dirname "$HISTFILE")"
+
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILESIZE=2000
