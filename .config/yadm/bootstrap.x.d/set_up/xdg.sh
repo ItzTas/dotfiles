@@ -5,8 +5,6 @@ _create_symlinks() {
 }
 
 _set_up() {
-    xdg-user-dirs-update --no-update
-
     xdg-mime default mpv.desktop video/mp4
     xdg-mime default mpv.desktop video/x-matroska
     xdg-mime default mpv.desktop video/webm
