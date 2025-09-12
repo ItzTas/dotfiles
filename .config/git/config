@@ -68,7 +68,6 @@
     # Others
 	graph = log --oneline --graph --all --decorate --stat --color --pretty=format:'%h %d %s %an %ar'
 
-
 [diff]
 	renameLimit = 99999
 
@@ -111,8 +110,7 @@
     ; gpgSign = true
 
 [merge]
-    ; conflictstyle = diff3 may conflict with diff tools in some projects
-    conflictstyle = diff3
+    conflictstyle = diff3 ; may conflict with diff tools in some projects
 
 [status]
     branch = true
