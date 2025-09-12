@@ -37,5 +37,4 @@ yadm_update() {
         yadm push
     )
 }
-
 yadm_update
