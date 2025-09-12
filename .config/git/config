@@ -205,6 +205,16 @@
     local = 13
     remote = 9
 
+[url "git@github.com:"]
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
+
+[url "git@gist.github.com:"]
+	insteadOf = "gst:"
+	pushInsteadOf = "gist:"
+	pushInsteadOf = "git://gist.github.com/"
+
 [diff-so-fancy]
     markEmptyLines = false
     stripLeadingSymbols = true
