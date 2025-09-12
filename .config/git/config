@@ -199,7 +199,6 @@
     added = 10
     changed = 13 bold
 
-
 [color "branch"]
     current = 15 reverse
     local = 13
