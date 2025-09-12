@@ -172,7 +172,6 @@
     interactive = auto
     grep = auto
 
-
 [color "decorate"]
     HEAD = 15 bold
     branch = 13
