@@ -29,9 +29,8 @@ yadm_update() {
 
         status_output=$(yadm status -s)
         filtered_output=$(echo "$status_output" | grep -vE '^\s*##')
-        files=$(echo "$filtered_output" | tr '\n' ', ')
+        files=$(echo "$filtered_output" | awk '{$1=$1; print}' | tr '\n' ', ')
         files="${files%, }"
-
 
         local commit_msg
         commit_msg="$(date '+%Y-%m-%d %H:%M') - Updated: $files"
