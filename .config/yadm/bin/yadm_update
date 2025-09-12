@@ -28,19 +28,21 @@ yadm_update() {
         local status_output filtered_output files
 
         status_output=$(yadm status -s)
+
         filtered_output=$(echo "$status_output" | grep -vE '^\s*##')
+        if [ "$filtered_output" = "" ]; then
+            echo "Nothing to update"
+            return
+        fi
         files=$(echo "$filtered_output" | awk '{$1=$1; print}' | tr '\n' ', ')
         files="${files%, }"
 
-        if [ "$files" != "" ]; then
-            local commit_msg
-            commit_msg="$(date '+%Y-%m-%d %H:%M') - Updated: $files"
+        local commit_msg
+        commit_msg="$(date '+%Y-%m-%d %H:%M') - Updated: $files"
 
-            yadm commit -m "$commit_msg"
-            yadm push
-        else
-            echo "Nada para atualizar."
-        fi
+        yadm commit -m "$commit_msg"
+        yadm push
     )
 }
+
 yadm_update
