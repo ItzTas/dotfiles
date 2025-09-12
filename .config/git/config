@@ -93,10 +93,14 @@
     enabled = true
 
 [help]
-    autocorrect = 10
+    autocorrect = 1
+
+[diff "bin"]
+    textconv = hexdump -v -C
 
 [merge]
     tool = nvimdiff
+    log = true
 
 [mergetool "nvimdiff"]
     cmd = nvim -d "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
