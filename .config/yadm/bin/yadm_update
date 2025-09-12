@@ -29,8 +29,7 @@ yadm_update() {
 
         status_output=$(yadm status -s)
 
-        echo "test"
-        filtered_output=$(echo "$status_output" | grep -vE '^\s*##')
+        filtered_output=$(echo "$status_output" | grep -vE '^\s*##' || true)
         echo "another test"
         if [ "$filtered_output" = "" ]; then
             echo "Nothing to update"
