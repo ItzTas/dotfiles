@@ -32,11 +32,15 @@ yadm_update() {
         files=$(echo "$filtered_output" | awk '{$1=$1; print}' | tr '\n' ', ')
         files="${files%, }"
 
-        local commit_msg
-        commit_msg="$(date '+%Y-%m-%d %H:%M') - Updated: $files"
+        if [ "$files" != "" ]; then
+            local commit_msg
+            commit_msg="$(date '+%Y-%m-%d %H:%M') - Updated: $files"
 
-        yadm commit -m "$commit_msg"
-        yadm push
+            yadm commit -m "$commit_msg"
+            yadm push
+        else
+            echo "Nada para atualizar."
+        fi
     )
 }
 yadm_update
