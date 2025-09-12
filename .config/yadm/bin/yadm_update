@@ -32,6 +32,7 @@ yadm_update() {
         files=$(echo "$filtered_output" | tr '\n' ', ')
         files="${files%, }"
 
+
         local commit_msg
         commit_msg="$(date '+%Y-%m-%d %H:%M') - Updated: $files"
 
