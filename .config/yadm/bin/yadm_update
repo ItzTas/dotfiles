@@ -25,9 +25,11 @@ yadm_update() {
         yadm add "$HOME/.config/hypr/config"
         yadm add -u :/
 
-        local files
-        files=$(yadm status -s | grep -vE '^\s*##' | awk '{print $2}' | tr '\n' ', ')
+        local status_output filtered_output files
 
+        status_output=$(yadm status -s)
+        filtered_output=$(echo "$status_output" | grep -vE '^\s*##')
+        files=$(echo "$filtered_output" | tr '\n' ', ')
         files="${files%, }"
 
         local commit_msg
@@ -37,5 +39,4 @@ yadm_update() {
         yadm push
     )
 }
-
 yadm_update
