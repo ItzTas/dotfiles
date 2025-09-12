@@ -158,7 +158,7 @@
 
 [log]
     graphColors = blue,yellow,cyan,magenta,green,red
-    follwo = true
+    follow = true
 
 [branch]
     sort = -committerdate
