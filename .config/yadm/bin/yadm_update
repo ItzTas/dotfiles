@@ -34,6 +34,7 @@ yadm_update() {
             echo "Nothing to update"
             return
         fi
+        echo "$filtered_output"
         files=$(echo "$filtered_output" | awk '{$1=$1; print}' | tr '\n' ', ')
         files="${files%, }"
 
