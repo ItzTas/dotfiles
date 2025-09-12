@@ -20,6 +20,9 @@ mkdir -p "$(dirname "$PYTHONHISTFILE")"
 # wgetrc path
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 
+# curlrc path
+export CURL_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/curl/curlrc"
+
 # initial path
 export MY_PROJECT_PATH="$PWD"
 
