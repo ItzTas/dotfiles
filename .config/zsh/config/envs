@@ -17,7 +17,10 @@ HISTDUP=erase
 export PYTHONHISTFILE="${XDG_CONFIG_HOME:-$HOME/.config}/python/history"
 mkdir -p "$(dirname "$PYTHONHISTFILE")"
 
-# initial project path
+# wgetrc path
+export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+
+# initial path
 export MY_PROJECT_PATH="$PWD"
 
 # for not accidentally exiting with ctrl+d
