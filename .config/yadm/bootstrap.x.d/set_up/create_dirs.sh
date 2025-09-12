@@ -8,6 +8,7 @@ _create() {
     mkdir -p "$HOME/Downloads"
     mkdir -p "$HOME/Videos"
     mkdir -p "$HOME/Pictures"
+    mkdir -p "$HOME/Desktop"
 }
 
 _create
