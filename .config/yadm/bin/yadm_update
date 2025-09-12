@@ -29,12 +29,12 @@ yadm_update() {
 
         status_output=$(yadm status -s)
 
+        echo "test"
         filtered_output=$(echo "$status_output" | grep -vE '^\s*##')
         if [ "$filtered_output" = "" ]; then
             echo "Nothing to update"
             return
         fi
-        echo "filtered: $filtered_output"
         files=$(echo "$filtered_output" | awk '{$1=$1; print}' | tr '\n' ', ')
         files="${files%, }"
 
