@@ -33,6 +33,9 @@ export IGNOREEOF=999
 export PAGER='less -FRX'
 export LESS='-FRX'
 
+# manpager
+export MANPAGER='less -RX'
+
 # bat
 export BAT_THEME="Catppuccin Mocha"
 
