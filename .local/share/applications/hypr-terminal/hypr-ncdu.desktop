@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ncdu Hypr
 Comment=Disk usage analyzer in Hyprland
-Exec=hyprctl dispatch exec "[float; size 90% 80%] ghostty --background-opacity=1 -e ncdu /"
+Exec=hyprctl dispatch exec "[noblur 0; float; size 90% 80%] ghostty --background-opacity=0.65 -e ncdu /"
 Icon=utilities-terminal
 Terminal=false
 Type=Application
