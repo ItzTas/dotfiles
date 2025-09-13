@@ -68,7 +68,6 @@ cjson 1.7.18-1
 clamav 1.4.3-1
 clamtk 6.18-1
 clang 20.1.8-1
-clipman 1.6.4-1
 clipse 1.1.0-1
 clipse-gui 0.3.2-3
 clutter 1.26.4-3
@@ -79,7 +78,6 @@ colord 1.4.8-1
 compiler-rt 20.1.8-1
 composefs 1.0.8-1
 containerd 2.1.4-1
-copyq 11.0.0-1
 coreutils 9.7-1
 cpio 2.15-3
 cppdap 1.58.0-2
@@ -287,17 +285,13 @@ json-glib 1.10.6-1
 jsoncpp 1.9.6-3
 kando-bin 2.0.0-1
 kbd 2.8.0-1
-kconfig5 5.116.0-1
-kcoreaddons5 5.116.0-1
 keyutils 1.6.3-3
 kguiaddons 6.17.0-1
 kitty 0.42.2-1
 kitty-shell-integration 0.42.2-1
 kitty-terminfo 0.42.2-1
 kmod 34.2-1
-knotifications5 5.116.0-2
 krb5 1.21.3-2
-kwindowsystem5 5.116.0-1
 l-smash 2.14.5-4
 ladspa 1.17-6
 lame 3.100-6
@@ -422,7 +416,6 @@ libdatachannel 0.23.2-1
 libdatrie 0.2.13-4
 libdbusmenu-glib 16.04.0.r498-2
 libdbusmenu-gtk3 16.04.0.r498-2
-libdbusmenu-qt5 0.9.3+16.04.20160218-7
 libde265 1.0.16-1
 libdecor 0.2.3-1
 libdisplay-info 0.2.0-2
@@ -854,9 +847,7 @@ qrcodegencpp-cmake 1.8.0-4
 qt5-base 5.15.17+kde+r123-2
 qt5-declarative 5.15.17+kde+r21-1
 qt5-graphicaleffects 5.15.17-1
-qt5-multimedia 5.15.17+kde+r2-1
 qt5-quickcontrols2 5.15.17+kde+r5-1
-qt5-speech 5.15.17+kde+r1-1
 qt5-svg 5.15.17+kde+r5-1
 qt5-translations 5.15.17-1
 qt5-wayland 5.15.17+kde+r57-1
