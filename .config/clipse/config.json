@@ -7,7 +7,7 @@
     "tempDir": "tmp_files",
     "keyBindings": {
         "choose": "ctrl+y",
-        "clearSelected": "S",
+        "clearSelected": "C",
         "down": "down",
         "end": "end",
         "filter": "/",
