@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Clipse Hypr
 Comment=Clipse TUI in hyprland
-Exec=hyprctl dispatch exec "[float; size 50% 70%] ghostty --background-opacity=0.65 -e clipse"
+Exec=hyprctl dispatch exec "[noblur 0;float; size 50% 70%] ghostty --background-opacity=0.65 -e clipse"
 Icon=clipse-gui
 Terminal=false
 Type=Application
