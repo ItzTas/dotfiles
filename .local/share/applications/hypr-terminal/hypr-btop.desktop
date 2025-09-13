@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Btop Hypr
 Comment=Resource monitor in Hyprland
-Exec=hyprctl dispatch exec "[float; size 85% 80%] ghostty -e btop"
+Exec=hyprctl dispatch exec "[noborder;float; size 85% 80%] ghostty --background-opacity=0 -e btop"
 Icon=btop
 Terminal=false
 Type=Application
