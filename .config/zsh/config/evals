@@ -33,8 +33,8 @@ fi
 
 # dircolors
 if (( ${+commands[dircolors]} )); then
-  if [[ ! -f ~/.dircolors ]]; then
-    dircolors -p > ~/.dircolors
-  fi
-  eval "$( [[ -r ~/.dircolors ]] && dircolors -b ~/.dircolors || dircolors -b )"
+  local dcfile="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/.dircolors"
+  [[ -f $dcfile ]] || dircolors -p > "$dcfile"
+  eval "$(dircolors -b "$dcfile")"
 fi
+
