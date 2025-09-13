@@ -174,7 +174,6 @@ _install_pacman_packages() {
         "wl-clipboard"
         "wl-clip-persist"
         "clipse"
-        "clipse-gui"
 
         # File managers & extensions
         "yazi"
