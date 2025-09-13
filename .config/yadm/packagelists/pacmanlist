@@ -61,6 +61,7 @@ cairomm-1.16 1.18.0-1
 calf 0.90.8-4
 candy-icons-git r1332.278998c-1
 catppuccin-gtk-theme-mocha 1.0.3-1
+cava 0.10.4-3
 cblas 3.12.1-2
 cdparanoia 10.2-9
 cinnamon-desktop 6.4.1-1
@@ -270,6 +271,7 @@ ijs 0.35-6
 imagemagick 7.1.2.3-1
 imlib2 1.12.5-1
 inetutils 2.6-1
+iniparser 4.2.6-2
 inotify-tools 4.23.9.0-2
 intel-ucode 20250812-1
 iproute2 6.16.0-2
