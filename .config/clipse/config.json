@@ -1,9 +1,9 @@
 {
     "allowDuplicates": false,
     "historyFile": "clipboard_history.json",
-    "maxHistory": 100,
+    "maxHistory": 500,
     "logFile": "clipse.log",
-    "themeFile": "custom_theme.json",
+    "themeFile": "themes/lavender.json",
     "tempDir": "tmp_files",
     "keyBindings": {
         "choose": "ctrl+y",
