@@ -2,7 +2,7 @@
 
 _create() {
     local workspace_dir
-    workspace_dir="$HOME/workspace/github.com/ItzTas"
+    workspace_dir="$HOME/Workspace/github.com/ItzTas"
     mkdir -p "$workspace_dir"
     mkdir -p "$HOME/Docs"
     mkdir -p "$HOME/Downloads"
