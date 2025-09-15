@@ -35,6 +35,7 @@ yadm_update() {
         filtered_output=$(echo "$status_output" | grep -vE '^\s*##' || true)
         if [ "$filtered_output" = "" ]; then
             echo "Nothing to update"
+            echo ""
             return
         fi
         files=$(echo "$filtered_output" | awk '{$1=$1; print}' | tr '\n' ', ')
@@ -45,6 +46,7 @@ yadm_update() {
 
         yadm commit -m "$commit_msg"
         yadm push
+        echo ""
     )
 }
 
