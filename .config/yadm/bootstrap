@@ -10,7 +10,6 @@ fi
 scripts=(
     "install_packages"
     "enables"
-    "grub_theme"
 )
 
 for script in "${scripts[@]}"; do
