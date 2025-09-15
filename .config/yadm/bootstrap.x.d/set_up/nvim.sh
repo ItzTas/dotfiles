@@ -8,4 +8,23 @@ _clone_nvim() {
     fi
 }
 
-_clone_nvim
+_set_up_python_molten() {
+    (
+        mkdir -p ~/.virtualenvs
+        python3 -m venv ~/.virtualenvs/neovim
+        # shellcheck disable=SC1090
+        source ~/.virtualenvs/neovim/bin/activate
+        pip install pynvim jupyter_client cairosvg plotly kaleido pnglatex pyperclip
+    )
+}
+
+_set_up_python_nvim() {
+    _set_up_python_molten
+}
+
+_set_up() {
+    _clone_nvim
+    _set_up_python_nvim
+}
+
+_set_up
