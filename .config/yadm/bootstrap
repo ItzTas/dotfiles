@@ -11,9 +11,6 @@ scripts=(
     "install_packages"
     "enables"
     "grub_theme"
-    "clone_nvim"
-    "create_dirs"
-    "source_tmux_conf"
 )
 
 for script in "${scripts[@]}"; do
