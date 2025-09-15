@@ -6,7 +6,7 @@ preview_command = "lsd --icon always --tree --depth 2 --color always {}"
 
 [[session]]
 name = "Projects 📂"
-path = "~/workspace/github.com/ItzTas"
+path = "~/Workspace/github.com/ItzTas"
 startup_command = "bash \"$HOME/.config/sesh/scripts/startups/projects_startup.sh\""
 
 [[session]]
