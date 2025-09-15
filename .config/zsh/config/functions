@@ -374,7 +374,7 @@ lsvenv() {
     ls -1 $VENV_HOME
 }
 
-venv() {
+activatevenv() {
     if [ $# -eq 0 ]
     then
         echo "Please provide venv name"
