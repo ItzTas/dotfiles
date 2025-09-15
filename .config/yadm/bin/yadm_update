@@ -14,10 +14,8 @@ yadm_update() {
 
         if command -v diff-so-fancy &>/dev/null; then
             yadm --no-pager diff | diff-so-fancy
-            echo ""
         else
             yadm --no-pager diff
-            echo ""
         fi
 
         yadm add "$package_lists_dir/pacmanlist"
@@ -46,7 +44,6 @@ yadm_update() {
 
         yadm commit -m "$commit_msg"
         yadm push
-        echo ""
     )
 }
 
