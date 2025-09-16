@@ -33,10 +33,6 @@ _set_up() {
         done
     fi
 
-    # sudo ufw allow ssh
-    # sudo ufw allow http
-    # sudo ufw allow https
-
     sudo ufw enable
 }
 
