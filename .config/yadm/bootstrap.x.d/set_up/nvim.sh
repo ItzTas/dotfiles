@@ -14,7 +14,7 @@ _set_up_python_molten() {
         python3 -m venv ~/.virtualenvs/neovim
         # shellcheck disable=SC1090
         source ~/.virtualenvs/neovim/bin/activate
-        pip install pynvim jupyter_client cairosvg plotly kaleido pnglatex pyperclip
+        pip install pynvim jupyter_client cairosvg plotly kaleido pnglatex pyperclip pyyaml nbformat nbclient
     )
 }
 

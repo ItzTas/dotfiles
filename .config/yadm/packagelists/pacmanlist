@@ -704,7 +704,7 @@ nvm 0.40.3-1
 nwg-look 1.0.6-1
 obs-studio-git 31.1.2.r175.g35c02e7-1
 ocl-icd 2.3.3-1
-oh-my-posh 26.22.0-1
+oh-my-posh 26.23.5-1
 onetbb 2022.2.0-1
 oniguruma 6.9.10-1
 openal 1.24.3-1
@@ -865,6 +865,7 @@ qt6-translations 6.9.2-1
 qt6-wayland 6.9.2-1
 qt6ct 0.10-5
 qtractor 1.5.8-1
+quarto-cli-bin 1.8.24-1
 rar 7.12-1
 rav1e 0.7.1-1
 re2 1:20240702-7
