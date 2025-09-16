@@ -1,7 +1,7 @@
 // ==== Privacy ====
 user_pref('privacy.resistFingerprinting', false); // Makes your browser appear more generic to resist fingerprinting
 user_pref('privacy.trackingprotection.enabled', true); // Enables built-in tracking protection
-user_pref('privacy.clearOnShutdown.cache', true); // Cleans cache on exit
+user_pref('privacy.clearOnShutdown.cache', false); // Cleans cache on exit
 
 // ==== Media ====
 user_pref('media.peerconnection.enabled', true); // WebRTC (if disabled prevents IP leaks)
