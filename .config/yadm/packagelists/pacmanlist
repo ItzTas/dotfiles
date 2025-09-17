@@ -14,7 +14,7 @@ alsa-plugins 1:1.2.12-4
 alsa-topology-conf 1.2.5.1-4
 alsa-ucm-conf 1.2.14-2
 aom 3.13.1-1
-appstream 1.0.6-1
+appstream 1.1.0-1
 aquamarine 0.9.4-1
 arch-update 3.15.6-1
 archlinux-contrib 20250219-1
@@ -438,6 +438,7 @@ libfdk-aac 2.0.3-1
 libffi 3.5.2-1
 libfontenc 1.1.8-1
 libfreeaptx 0.2.2-1
+libfyaml 0.9-1
 libgcrypt 1.11.2-1
 libgee 0.20.8-1
 libgexiv2 0.14.6-1
@@ -772,7 +773,7 @@ perl-timedate 2.33-8
 perl-try-tiny 0.32-3
 perl-uri 5.32-2
 perl-www-robotrules 6.02-15
-pinentry 1.3.2-1
+pinentry 1.3.2-2
 pipewire 1:1.4.8-1
 pipewire-alsa 1:1.4.8-1
 pipewire-audio 1:1.4.8-1
