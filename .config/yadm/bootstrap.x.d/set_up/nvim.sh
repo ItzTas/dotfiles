@@ -10,14 +10,26 @@ _clone_nvim() {
 
 _set_up_python_molten() {
     (
-        local installs=(
-            pynvim jupyter_client cairosvg plotly kaleido pnglatex pyperclip pyyaml nbformat nbclient
+        local packages=(
+            "pynvim"
+            "jupyter_client"
+            "cairosvg"
+            "plotly"
+            "kaleido"
+            "pnglatex"
+            "pyperclip"
+            "pyyaml"
+            "nbformat"
+            "nbclient"
         )
         mkdir -p ~/.virtualenvs
         python3 -m venv ~/.virtualenvs/neovim
         # shellcheck disable=SC1090
         source ~/.virtualenvs/neovim/bin/activate
-        pip install
+        local package
+        for package in "${packages[@]}"; do
+            pip install "$package"
+        done
     )
 }
 
