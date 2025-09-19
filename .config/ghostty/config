@@ -24,7 +24,6 @@ mouse-shift-capture = true
 # Others
 confirm-close-surface = false
 link-url = true
-gtk-adwaita = true
 desktop-notifications = true
 focus-follows-mouse = true
 mouse-scroll-multiplier = 0.7
@@ -46,7 +45,7 @@ keybind = ctrl+enter=unbind
 # background-opacity = 0.3
 
 # Ayu
-theme = ayu
+theme = Ayu
 background-opacity = 0.43
 cursor-color =  #cccccc
 
