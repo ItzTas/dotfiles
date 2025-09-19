@@ -69,6 +69,7 @@ _install_pacman_packages() {
         "arch-update"
         "xorg-xhost"
         "ufw"
+        "cuda"
 
         # Process Manegement
         "stacer-git"
