@@ -47,7 +47,7 @@ bluez-utils 5.83-1
 botan2 2.19.5-2
 brightnessctl 0.5.1-3
 brotli 1.1.0-3
-btop 1.4.4-1
+btop 1.4.5-1
 btrfs-progs 6.16.1-1
 bubblewrap 0.11.0-1
 bzip2 1.0.8-6
@@ -356,7 +356,7 @@ lib32-libxdmcp 1.1.5-1
 lib32-libxext 1.3.6-1
 lib32-libxfixes 6.0.1-2
 lib32-libxinerama 1.1.5-2
-lib32-libxml2 2.14.6-1
+lib32-libxml2 2.15.0-1
 lib32-libxshmfence 1.3.3-1
 lib32-libxss 1.2.4-2
 lib32-libxxf86vm 1.1.5-2
@@ -368,7 +368,7 @@ lib32-nspr 4.37-1
 lib32-nss 3.116-1
 lib32-nvidia-utils 580.82.09-1
 lib32-openssl 1:3.5.3-1
-lib32-p11-kit 0.25.7-1
+lib32-p11-kit 0.25.9-1
 lib32-pam 1.7.0-1
 lib32-pcre2 10.46-1
 lib32-pipewire 1:1.4.8-2
@@ -508,7 +508,7 @@ libnss_nis 3.4-1
 libnvme 1.15-1
 libogg 1.3.6-1
 libopenmpt 0.8.3-1
-libp11-kit 0.25.7-1
+libp11-kit 0.25.9-1
 libpaper 2.2.6-1
 libpcap 1.10.5-3
 libpciaccess 0.18.1-2
@@ -553,7 +553,7 @@ libthai 0.1.29-3
 libtheora 1.2.0-1
 libtiff 4.7.1-1
 libtirpc 1.3.7-1
-libtool 2.5.4+r62+g6389dce8-1
+libtool 2.6.0-1
 libunibreak 6.1-1
 libunistring 1.3-1
 libunwind 1.8.2-1
@@ -594,7 +594,7 @@ libxkbcommon 1.11.0-1
 libxkbcommon-x11 1.11.0-1
 libxkbfile 1.1.3-1
 libxklavier 5.4-6
-libxml2 2.14.6-1
+libxml2 2.15.0-1
 libxmlb 0.3.24-1
 libxmu 1.2.1-1
 libxnvctrl 580.82.09-1
@@ -615,7 +615,7 @@ libzen 0.4.41-2
 libzip 1.11.4-1
 licenses 20240728-1
 lilv 0.24.26-1
-linux 6.16.7.arch1-1
+linux 6.16.8.arch1-1
 linux-api-headers 6.16-2
 linux-firmware 20250917-1
 linux-firmware-amdgpu 20250917-1
@@ -629,8 +629,9 @@ linux-firmware-other 20250917-1
 linux-firmware-radeon 20250917-1
 linux-firmware-realtek 20250917-1
 linux-firmware-whence 20250917-1
-linux-headers 6.16.7.arch1-1
+linux-headers 6.16.8.arch1-1
 linuxconsole 1.8.1-1
+lld 20.1.8-1
 llhttp 9.2.1-2
 llvm-libs 20.1.8-1
 lm_sensors 1:3.6.2-1
@@ -701,7 +702,7 @@ npth 1.8-1
 nspr 4.37-1
 nss 3.116-1
 numlockx 1.2-6
-nvidia 580.82.09-2
+nvidia 580.82.09-3
 nvidia-settings 580.82.09-1
 nvidia-utils 580.82.09-1
 nvm 0.40.3-1
@@ -723,7 +724,7 @@ opus 1.5.2-1
 orc 0.4.41-1
 os-prober 1.83-1
 ostree 2025.6-1
-p11-kit 0.25.7-1
+p11-kit 0.25.9-1
 pacfiles 0.2.7-2
 pacman 7.0.0.r6.gc685ae6-6
 pacman-contrib 1.13.0-1
@@ -812,7 +813,7 @@ python-cffi 1.17.1-2
 python-click 8.2.1-1
 python-clickgen 2.2.5-1
 python-cogapp 3.3.0-7
-python-cryptography 45.0.7-1
+python-cryptography 46.0.1-1
 python-editables 0.5-5
 python-filelock 3.19.1-1
 python-gobject 3.52.3-3
@@ -886,7 +887,7 @@ rtkit 0.13-3
 rubberband 4.0.0-1
 run-parts 5.23.1-1
 runc 1.3.1-1
-rust 1:1.89.0-1
+rust 1:1.90.0-2
 sassc 3.6.2-5
 sbc 2.1-1
 scdoc 1.11.3-1
@@ -938,7 +939,7 @@ tar 1.35-2
 tdb 1.4.14-1
 termpicker 1.4.0-1
 texinfo 7.2-1
-thunderbird 142.0-1
+thunderbird 143.0-1
 tidy 5.8.0-3
 timeshift 25.07.7-1
 tinysparql 3.9.2-2
@@ -970,7 +971,7 @@ usbutils 018-1
 uthash 2.3.0-2
 util-linux 2.41.1-1
 util-linux-libs 2.41.1-1
-uv 0.8.18-1
+uv 0.8.19-1
 v4l-utils 1.30.1-1
 vapoursynth 72-1
 vesktop-git 1.5.8.r5.g497c251-1
