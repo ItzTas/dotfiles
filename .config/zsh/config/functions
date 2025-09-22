@@ -400,6 +400,11 @@ rmvenv() {
         rm -r $VENV_HOME/$1
     fi
 }
+
+jupyinit() {
+    jupytext --set-formats py:percent,ipynb "$@"
+}
+
 fi
 
 # others

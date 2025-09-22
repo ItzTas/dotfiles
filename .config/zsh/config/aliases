@@ -125,7 +125,6 @@ if (( ${+commands[direnv]} )); then
     alias da='direnv allow'
 fi
 alias jupywatch='watchmedo shell-command --patterns="*.py" --command="jupytext --sync \${watch_src_path}"'
-alias jupyinit='f(){ jupytext --set-formats py:percent,ipynb "$@"; }; f'
 
 # cat | bat
 if (( ${+commands[bat]} )); then
