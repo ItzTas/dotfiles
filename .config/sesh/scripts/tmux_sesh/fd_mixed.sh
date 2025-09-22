@@ -18,7 +18,8 @@ _fd_mixed() {
     local includes=(
         ". 2"
         "$HOME 3"
-        "$HOME/Workspace 5"
+        "$HOME/Workspace 4"
+        "$HOME/Workspace/github.com/ItzTas/facul 2"
     )
 
     for entry in "${includes[@]}"; do
