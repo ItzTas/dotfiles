@@ -1,15 +1,25 @@
 #!/usr/bin/env bash
 
-fd_mixed() {
+_fd_mixed() {
     local excludes=(".Trash" ".zen" "GLCache" "ferdium/Partitions" ".virtualenvs" "npm/_cacache")
     local exc_args=()
     for e in "${excludes[@]}"; do
         exc_args+=(-E "$e")
     done
 
-    fd -H -d 5 -t d "${exc_args[@]}" . "$HOME/Workspace/github.com" "$HOME/Workspace/github.com/ItzTas"
+    # path/depth
+    local includes=(
+        "$HOME/Workspace 5"
+        "$HOME 3"
+        ". 2"
+    )
 
-    fd -H -d 3 -t d "${exc_args[@]}" . "$HOME" .
+    for entry in "${includes[@]}"; do
+        local path="${entry% *}"
+        local depth="${entry##* }"
+
+        fd -H -d "$depth" -t d "${exc_args[@]}" . "$path"
+    done
 }
 
-fd_mixed
+_fd_mixed
