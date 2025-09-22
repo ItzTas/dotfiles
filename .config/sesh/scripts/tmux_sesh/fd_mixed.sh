@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 
 _fd_mixed() {
-    local excludes=(".Trash" ".zen" "GLCache" "ferdium/Partitions" ".virtualenvs" "npm/_cacache")
+    local excludes=(
+        ".Trash"
+        ".zen"
+        "GLCache"
+        "ferdium/Partitions"
+        ".virtualenvs"
+        "npm/_cacache"
+    )
     local exc_args=()
     for e in "${excludes[@]}"; do
         exc_args+=(-E "$e")
@@ -9,9 +16,9 @@ _fd_mixed() {
 
     # path/depth
     local includes=(
-        "$HOME/Workspace 5"
-        "$HOME 3"
         ". 2"
+        "$HOME 3"
+        "$HOME/Workspace 5"
     )
 
     for entry in "${includes[@]}"; do
