@@ -72,7 +72,6 @@ _install_pacman_packages() {
 
         # Firewall
         "ufw"
-        "iptables-nft"
 
         # Process Manegement
         "stacer-git"
