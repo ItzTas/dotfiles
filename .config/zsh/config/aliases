@@ -144,6 +144,11 @@ if (( ${+commands[psql]} )); then
     alias kpsql='sudo systemctl stop postgresql'
 fi
 
+# sqlite
+if (( ${+commands[sqlite3]} )); then
+    alias sqlite='sqlite3'
+fi
+
 # some more aliases
 if (( ${+commands[grip]} )); then
     alias renderMarkdown='grip'
