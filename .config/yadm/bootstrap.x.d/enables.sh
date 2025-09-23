@@ -8,6 +8,7 @@ _start_enables() {
         "ufw"
     )
     for enable in "${enables[@]}"; do
+        echo "enabling service: \"$enable\""
         sudo systemctl enable --now "$enable"
     done
 }

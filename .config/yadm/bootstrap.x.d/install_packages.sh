@@ -68,8 +68,11 @@ _install_pacman_packages() {
         "xorg-xrandr"
         "arch-update"
         "xorg-xhost"
-        "ufw"
         "cuda"
+
+        # Firewall
+        "ufw"
+        "iptables-nft"
 
         # Process Manegement
         "stacer-git"

@@ -280,7 +280,7 @@ iniparser 4.2.6-2
 inotify-tools 4.23.9.0-2
 intel-ucode 20250812-1
 iproute2 6.16.0-2
-iptables 1:1.8.11-2
+iptables-nft 1:1.8.11-2
 iputils 20250605-1
 iso-codes 4.18.0-1
 jansson 2.14.1-1
@@ -692,6 +692,7 @@ netpbm 10.86.47-1
 netstandard-targeting-pack 9.0.9.sdk110-1
 nettle 3.10.2-1
 networkmanager 1.54.1-1
+nftables 1:1.1.5-1
 ninja 1.12.1-2
 nlohmann-json 3.12.0-2
 node-gyp 11.4.2-1
