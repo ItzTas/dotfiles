@@ -117,6 +117,7 @@ _install_pacman_packages() {
 
         # Apps
         "nwg-look"
+        "qbittorrent"
         "alarm-clock-applet"
         "zsa-keymapp-bin"
         "spotify"
