@@ -1,0 +1,24 @@
+[icon-view]
+captions=['size', 'date_modified', 'none']
+
+[preferences]
+click-double-parent-folder=true
+context-menus-show-all-actions=true
+quick-renames-with-pause-in-between=true
+show-hidden-files=true
+show-open-in-terminal-toolbar=true
+thumbnail-limit=uint64 68719476736
+
+[preferences/menu-config]
+selection-menu-duplicate=true
+
+[search]
+search-reverse-sort=false
+search-sort-column='name'
+
+[window-state]
+bookmarks-expanded=true
+devices-expanded=true
+maximized=true
+sidebar-bookmark-breakpoint=0
+start-with-sidebar=true
