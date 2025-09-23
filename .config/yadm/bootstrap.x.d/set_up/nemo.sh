@@ -1,19 +1,17 @@
-#!/bin/env bash
-
-_set_preference() {
-    gsettings set org.nemo.preferences "$1" "$2"
-}
+#!/usr/bin/env bash
 
 _load_dconf() {
     local dconf_file="$HOME/.config/yadm/misc/nemo/nemo-settings.dconf"
+    dconf load /org/nemo <"$dconf_file"
 }
 
 _set_up() {
-    _set_preference click-double-parent-folder true
-    _set_preference quick-renames-with-pause-in-between true
-    _set_preference thumbnail-limit 'uint64 68719476736'
-    _set_preference show-open-in-terminal-toolbar true
-    _set_preference context-menus-show-all-actions true
+    _load_dconf
+    gsettings set org.nemo.preferences click-double-parent-folder true
+    gsettings set org.nemo.preferences quick-renames-with-pause-in-between true
+    gsettings set org.nemo.preferences thumbnail-limit 'uint64 68719476736'
+    gsettings set org.nemo.preferences show-open-in-terminal-toolbar true
+    gsettings set org.nemo.preferences context-menus-show-all-actions true
 
     gsettings set org.cinnamon.desktop.default-applications.terminal exec ghostty
     gsettings set org.cinnamon.desktop.default-applications.terminal exec-arg "-e"
