@@ -2,7 +2,11 @@
 
 _load_dconf() {
     local dconf_file="$HOME/.config/yadm/misc/nemo/nemo-settings.dconf"
-    dconf load /org/nemo <"$dconf_file"
+    if [[ -f "$dconf_file" ]]; then
+        dconf load /org/nemo <"$dconf_file"
+        return
+    fi
+    echo "nemo dconf file not found"
 }
 
 _set_up() {
