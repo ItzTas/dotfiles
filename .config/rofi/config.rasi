@@ -1,22 +1,14 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Configuration For Rofi Version: 1.7.3
- **/
-
 configuration {
 	/*---------- General setting ----------*/
 	modi: "drun,run,filebrowser,window";
 	case-sensitive: false;
 	cycle: true;
 	filter: "";
-	scroll-method: 0;
+	scroll-method: 1;
 	normalize-match: true;
 	show-icons: true;
-	icon-theme: "Papirus";
-/*	cache-dir: ;*/
+	icon-theme: "candy-icons";
+	// cache-dir: ;
 	steal-focus: false;
 /*	dpi: -1;*/
 
@@ -68,7 +60,7 @@ configuration {
 
 	/*---------- History and Sorting ----------*/
 	disable-history: false;
-	sorting-method: "normal";
+	sorting-method: "fzf";
 	max-history-size: 25;
 
 	/*---------- Display setting ----------*/
