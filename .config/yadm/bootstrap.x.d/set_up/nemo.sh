@@ -4,6 +4,10 @@ _set_preference() {
     gsettings set org.nemo.preferences "$1" "$2"
 }
 
+_load_dconf() {
+    local dconf_file="$HOME/.config/yadm/misc/nemo/nemo-settings.dconf"
+}
+
 _set_up() {
     _set_preference click-double-parent-folder true
     _set_preference quick-renames-with-pause-in-between true
