@@ -1,6 +1,7 @@
 #!/bin/env bash
 
 _set_up() {
+    sudo ufw disable
     sudo ufw logging full
 
     sudo ufw default deny incoming
