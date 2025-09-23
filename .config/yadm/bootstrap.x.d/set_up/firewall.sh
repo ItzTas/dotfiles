@@ -1,6 +1,10 @@
 #!/bin/env bash
 
-_set_up() {
+_set_up_nftables() {
+    yes | paru -S iptables-nft
+}
+
+_set_up_ufw() {
     sudo ufw disable
     sudo ufw logging full
 
@@ -15,6 +19,10 @@ _set_up() {
             allows+=("qBittorrent")
             ;;
         --localsend)
+            allows+=("53317/tcp")
+            ;;
+        --all)
+            allows+=("qBittorrent")
             allows+=("53317/tcp")
             ;;
         *)
@@ -35,6 +43,12 @@ _set_up() {
     fi
 
     sudo ufw enable
+    sudo systemctl enable --now ufw
+}
+
+_set_up() {
+    _set_up_nftables
+    _set_up_ufw "$@"
 }
 
 _set_up "$@"

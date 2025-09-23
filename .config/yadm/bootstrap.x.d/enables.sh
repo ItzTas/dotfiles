@@ -5,7 +5,6 @@ _start_enables() {
         "cronie"
         "docker"
         "swayosd-libinput-backend.service"
-        "ufw"
     )
     for enable in "${enables[@]}"; do
         echo "enabling service: \"$enable\""
