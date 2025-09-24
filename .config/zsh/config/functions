@@ -139,7 +139,7 @@ if (( ${+commands[sesh]} )); then
 	}
 
 	sc() {
-		sesh clone "$@"
+		sesh clone "$@" || return 1
 		local session_name="Projects 📂"
 		if tmux has-session -t "$session_name"; then
 			tmux kill-session -t "$session_name"
