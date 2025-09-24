@@ -1,6 +1,6 @@
 a52dec 0.8.0-2
 aalib 1.4rc5-19
-abseil-cpp 20250814.0-1
+abseil-cpp 20250814.1-1
 accountsservice 23.13.9-2
 acl 2.3.2-1
 adwaita-cursors 49.0-1
@@ -20,7 +20,7 @@ arch-update 3.15.6-1
 archlinux-contrib 20250219-1
 archlinux-keyring 20250807.1-1
 asar 4.0.1-1
-asio 1.34.2-1
+asio 1.36.0-1
 at-spi2-core 2.58.0-1
 atkmm 2.28.4-1
 attr 2.5.2-1
@@ -420,7 +420,7 @@ libcolord 1.4.8-1
 libcups 2:2.4.14-1
 libcurl-gnutls 8.16.0-1
 libdaemon 0.14-6
-libdatachannel 0.23.2-1
+libdatachannel 0.23.2-2
 libdatrie 0.2.13-4
 libdbusmenu-glib 16.04.0.r498-2
 libdbusmenu-gtk3 16.04.0.r498-2
@@ -945,7 +945,7 @@ tar 1.35-2
 tdb 1.4.14-1
 termpicker 1.4.0-1
 texinfo 7.2-1
-thunderbird 143.0-1
+thunderbird 143.0.1-1
 tidy 5.8.0-3
 timeshift 25.07.7-1
 tinysparql 3.10.0-1
@@ -977,7 +977,7 @@ usbutils 018-1
 uthash 2.3.0-2
 util-linux 2.41.2-1
 util-linux-libs 2.41.2-1
-uv 0.8.21-1
+uv 0.8.22-1
 v4l-utils 1.30.1-1
 vapoursynth 72-1
 vesktop-git 1.5.8.r5.g497c251-1
@@ -1026,7 +1026,7 @@ wayland 1.24.0-1
 wayland-protocols 1.45-1
 webkit2gtk-4.1 2.50.0-1
 webrtc-audio-processing-1 1.3-5
-websocketpp 0.8.2-3
+websocketpp 0.8.2-4
 weston 14.0.2-2
 wf-recorder 0.5.0-2
 wget 1.25.0-2
