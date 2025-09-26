@@ -1,6 +1,10 @@
 #!/bin/env zsh
 # vim: filetype=zsh
 
+
+# HOMES
+export ANDROID_HOME="$HOME/.AndroidS/Sdk"
+
 # ---- PATH EXPORTS ----
 if (( ${+commands[yarn]} )); then
     export PATH="$HOME/.yarn/bin:$PATH"

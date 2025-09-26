@@ -66,7 +66,3 @@ export XDG_DOCUMENTS_DIR="$HOME/Docs"
 export XDG_MUSIC_DIR="$HOME/Musics"
 export XDG_PICTURES_DIR="$HOME/Pictures"
 export XDG_VIDEOS_DIR="$HOME/Videos"
-
-# HOMES
-export ANDROID_HOME="$HOME/.AndroidS/Sdk"
-
