@@ -134,7 +134,7 @@
 
 [pull]
     default = current
-    rebase = true
+    rebase = false
 
 [apply]
     whitespace = fix

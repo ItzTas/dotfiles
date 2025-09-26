@@ -801,6 +801,8 @@ poppler-data 0.4.12-2
 poppler-glib 25.09.1-1
 popt 1.19-2
 portaudio 1:19.7.0-3
+postgresql 17.5-5
+postgresql-libs 17.5-5
 pps-tools 1.0.3-2
 procps-ng 4.0.5-3
 proto 0.53.0-1
@@ -1074,6 +1076,7 @@ xvidcore 1.3.7-3
 xxhash 0.8.3-1
 xz 5.8.1-1
 yadm 3.5.0-1
+yarn 1.22.22-2
 yazi 25.5.31-2
 yq 3.4.3-2
 yyjson 0.12.0-1

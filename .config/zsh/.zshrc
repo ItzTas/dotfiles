@@ -3,6 +3,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# load path before everything
+if [[ -f "$HOME/.config/zsh/config/path" ]]; then
+    source "$HOME/.config/zsh/config/path"
+fi
+
 # load history file before everything
 HISTFILE="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/history"
 
