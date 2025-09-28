@@ -6,42 +6,38 @@ mkdir -p "$BASH_COMPLETIONS_DIR"
 
 # Proto completions
 if command -v proto >/dev/null 2>&1; then
-    if [ ! -f "$HOME/.bash_completions/proto.sh" ]; then
-        mkdir -p ~/.bash_completions
-        proto completions --shell bash >~/.bash_completions/proto.sh
+    if [ ! -f "$BASH_COMPLETIONS_DIR/proto.sh" ]; then
+        proto completions --shell bash >"$BASH_COMPLETIONS_DIR/proto.sh"
     fi
     # shellcheck disable=SC1090
-    source "$HOME/.bash_completions/proto.sh"
+    source "$BASH_COMPLETIONS_DIR/proto.sh"
 fi
 
 # Bootdev completions
 if command -v bootdev >/dev/null 2>&1; then
-    if [ ! -f "$HOME/.bash_completions/bootdev.sh" ]; then
-        mkdir -p ~/.bash_completions
-        bootdev completion bash >~/.bash_completions/bootdev.sh
+    if [ ! -f "$BASH_COMPLETIONS_DIR/bootdev.sh" ]; then
+        bootdev completion bash >"$BASH_COMPLETIONS_DIR/bootdev.sh"
     fi
     # shellcheck disable=SC1090
-    source "$HOME/.bash_completions/bootdev.sh"
+    source "$BASH_COMPLETIONS_DIR/bootdev.sh"
 fi
 
 # Eww completions
 if command -v eww >/dev/null 2>&1; then
-    if [ ! -f "$HOME/.bash_completions/eww.sh" ]; then
-        mkdir -p ~/.bash_completions
-        eww shell-completions --shell bash >"$HOME/.bash_completions/eww.sh"
+    if [ ! -f "$BASH_COMPLETIONS_DIR/eww.sh" ]; then
+        eww shell-completions --shell bash >"$BASH_COMPLETIONS_DIR/eww.sh"
     fi
     # shellcheck disable=SC1090
-    source "$HOME/.bash_completions/eww.sh"
+    source "$BASH_COMPLETIONS_DIR/eww.sh"
 fi
 
 # GitBug completions
 if command -v git-bug >/dev/null 2>&1; then
-    if [ ! -f "$HOME/.bash_completions/gitbug.sh" ]; then
-        mkdir -p ~/.bash_completions
-        git bug completion bash >"$HOME/.bash_completions/gitbug.sh"
+    if [ ! -f "$BASH_COMPLETIONS_DIR/gitbug.sh" ]; then
+        git bug completion bash >"$BASH_COMPLETIONS_DIR/gitbug.sh"
     fi
     # shellcheck disable=SC1090
-    source "$HOME/.bash_completions/gitbug.sh"
+    source "$BASH_COMPLETIONS_DIR/gitbug.sh"
 fi
 
 # bash completion
