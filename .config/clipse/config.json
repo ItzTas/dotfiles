@@ -8,6 +8,7 @@
     "keyBindings": {
         "choose": "ctrl+y",
         "clearSelected": "C",
+        "up": "up",
         "down": "down",
         "end": "end",
         "filter": "/",
@@ -18,12 +19,11 @@
         "preview": " ",
         "quit": "q",
         "remove": "d",
+        "selectUp": "ctrl+k",
         "selectDown": "ctrl+j",
         "selectSingle": "v",
-        "selectUp": "ctrl+k",
         "togglePin": "p",
         "togglePinned": "tab",
-        "up": "up",
         "yankFilter": "ctrl+s"
     },
     "imageDisplay": {
