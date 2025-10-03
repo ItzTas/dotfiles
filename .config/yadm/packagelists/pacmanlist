@@ -14,7 +14,7 @@ alsa-plugins 1:1.2.12-4
 alsa-topology-conf 1.2.5.1-4
 alsa-ucm-conf 1.2.14-2
 aom 3.13.1-1
-appstream 1.1.0-1
+appstream 1.1.1-1
 aquamarine 0.9.4-2
 arch-update 3.15.7-1
 archlinux-contrib 20250219-1
@@ -109,7 +109,7 @@ dex 0.9.0-2
 diff-so-fancy 1.4.4-2
 diffutils 3.12-2
 direnv 2.37.1-1
-docker 1:28.4.0-1
+docker 1:28.5.0-1
 docker-buildx 0.28.0-1
 docker-compose 2.39.4-1
 dotnet-host 9.0.9.sdk110-1
@@ -647,7 +647,7 @@ libzip 1.11.4-1
 libzmf 0.0.2-18
 licenses 20240728-1
 lilv 0.24.26-1
-linux 6.16.8.arch3-1
+linux 6.16.10.arch1-1
 linux-api-headers 6.16-2
 linux-firmware 20250917-1
 linux-firmware-amdgpu 20250917-1
@@ -661,7 +661,7 @@ linux-firmware-other 20250917-1
 linux-firmware-radeon 20250917-1
 linux-firmware-realtek 20250917-1
 linux-firmware-whence 20250917-1
-linux-headers 6.16.8.arch3-1
+linux-headers 6.16.10.arch1-1
 linuxconsole 1.8.1-1
 lld 20.1.8-1
 llhttp 9.2.1-2
@@ -737,7 +737,7 @@ npth 1.8-1
 nspr 4.37-1
 nss 3.116-1
 numlockx 1.2-6
-nvidia 580.82.09-5
+nvidia 580.82.09-7
 nvidia-settings 580.82.09-1
 nvidia-utils 580.82.09-1
 nvm 0.40.3-1
@@ -824,7 +824,7 @@ pixman 0.46.4-1
 pkgconf 2.5.1-1
 playerctl 2.4.1-4
 plocate 1.1.23-1
-pnpm 10.17.1-1
+pnpm 10.18.0-1
 polkit 126-2
 polkit-gnome 0.105-11
 poppler 25.09.1-1
@@ -936,7 +936,7 @@ sdbus-cpp 2.1.0-2
 sddm 0.21.0-6
 sddm-sugar-candy-git 1.6r42.d31dbf5-1
 sdl2-compat 2.32.56-2
-sdl3 3.2.22-1
+sdl3 3.2.24-1
 seatd 0.9.1-1
 sed 4.9-3
 semver 7.7.2-1
@@ -1015,7 +1015,7 @@ util-linux-libs 2.41.2-1
 uv 0.8.22-1
 v4l-utils 1.30.1-1
 vapoursynth 72-1
-vesktop-git 1.5.8.r6.g0d9ca22-1
+vesktop-git 1.5.8.r7.g6e2da1d-1
 vid.stab 1.1.1-2
 vim 9.1.1734-1
 vim-runtime 9.1.1734-1
