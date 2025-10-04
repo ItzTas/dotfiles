@@ -7,6 +7,7 @@ _set_up() {
     local plugins=(
         "https://github.com/hyprwm/hyprland-plugins"
         "https://github.com/virtcode/hypr-dynamic-cursors"
+        "https://github.com/micha4w/Hypr-DarkWindow"
     )
 
     for plugin in "${plugins[@]}"; do
