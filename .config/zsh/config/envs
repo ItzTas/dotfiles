@@ -26,7 +26,7 @@ export MY_PROJECT_PATH="$PWD"
 export IGNOREEOF=999
 
 # pager
-export PAGER='less -FRX'
+export PAGER='less'
 export LESS='-FRX'
 
 # Don’t clear the screen after quitting a manual page
