@@ -55,7 +55,7 @@ bubblewrap 0.11.0-1
 bzip2 1.0.8-6
 c-ares 1.34.5-1
 ca-certificates 20240618-1
-ca-certificates-mozilla 3.116-1
+ca-certificates-mozilla 3.117-1
 ca-certificates-utils 20240618-1
 cairo 1.18.4-1
 cairo-perl 1.109-6
@@ -224,7 +224,7 @@ groff 1.23.0-7
 grub 2:2.12.r359.g19c698d12-1
 gsettings-desktop-schemas 49.0-1
 gsettings-system-schemas 49.0-1
-gsfonts 20200910-5
+gsfonts 20200910-6
 gsl 2.8-1
 gsm 1.0.22-2
 gssdp 1.6.4-1
@@ -375,10 +375,10 @@ lib32-lm_sensors 1:3.6.2-2
 lib32-mesa 1:25.2.4-1
 lib32-ncurses 6.5-2
 lib32-nspr 4.37-1
-lib32-nss 3.116-1
+lib32-nss 3.117-1
 lib32-nvidia-utils 580.82.09-1
 lib32-openssl 1:3.5.4-1
-lib32-p11-kit 0.25.9-1
+lib32-p11-kit 0.25.10-2
 lib32-pam 1.7.1-1
 lib32-pcre2 10.46-1
 lib32-pipewire 1:1.4.8-2
@@ -534,7 +534,7 @@ libodfgen 0.1.8-5
 libogg 1.3.6-1
 libopenmpt 0.8.3-1
 liborcus 0.21.0-1
-libp11-kit 0.25.9-1
+libp11-kit 0.25.10-2
 libpagemaker 0.0.4-4
 libpaper 2.2.6-1
 libpcap 1.10.5-3
@@ -740,7 +740,7 @@ noto-fonts-emoji 1:2.051-1
 npm 11.6.1-1
 npth 1.8-1
 nspr 4.37-1
-nss 3.116-1
+nss 3.117-1
 numlockx 1.2-6
 nvidia 580.82.09-7
 nvidia-settings 580.82.09-1
@@ -764,7 +764,7 @@ opus 1.5.2-1
 orc 0.4.41-1
 os-prober 1.83-1
 ostree 2025.6-1
-p11-kit 0.25.9-1
+p11-kit 0.25.10-2
 pacfiles 0.2.7-2
 pacman 7.0.0.r6.gc685ae6-6
 pacman-contrib 1.13.0-1
@@ -1017,7 +1017,7 @@ usbutils 018-1
 uthash 2.3.0-2
 util-linux 2.41.2-1
 util-linux-libs 2.41.2-1
-uv 0.8.22-1
+uv 0.8.23-1
 v4l-utils 1.30.1-1
 vapoursynth 72-1
 vesktop-git 1.5.8.r8.ge79635f-1
@@ -1096,7 +1096,7 @@ xdg-dbus-proxy 0.1.6-1
 xdg-desktop-portal 1.20.3-2
 xdg-desktop-portal-gtk 1.15.3-1
 xdg-desktop-portal-hyprland 1.3.10-2
-xdg-user-dirs 0.18-2
+xdg-user-dirs 0.19-2
 xdg-utils 1.2.1-1
 xdotool 3.20211022.1-2
 xf86-input-libinput 1.5.0-1
