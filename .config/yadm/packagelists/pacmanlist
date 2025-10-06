@@ -196,6 +196,7 @@ glib2-devel 2.86.0-2
 glibc 2.42+r17+gd7274d718e6f-1
 glibmm 2.66.8-1
 glibmm-2.68 2.86.0-1
+glow 2.1.1-1
 glslang 1:1.4.321.0-1
 glu 9.0.3-2
 glycin 2.0.2-2
@@ -217,7 +218,7 @@ gpsd 3.26.1-2
 granite7 7.6.0-1
 graphene 1.10.8-2
 graphite 1:1.3.14-5
-graphviz 14.0.0-1
+graphviz 14.0.1-1
 grep 3.12-2
 grim 1.5.0-2
 groff 1.23.0-7
@@ -699,6 +700,7 @@ man-db 2.13.1-1
 mbedtls 3.6.4-1
 md4c 0.5.2-1
 mdadm 4.4-2
+mdcat 2.7.1-1
 mesa 1:25.2.4-1
 meson 1.9.1-1
 minizip 1:1.3.1-2
@@ -749,7 +751,7 @@ nvm 0.40.3-1
 nwg-look 1.0.6-1
 obs-studio-git 32.0.1.r0.g0b12296-1
 ocl-icd 2.3.3-1
-oh-my-posh 26.26.3-1
+oh-my-posh 27.1.0-1
 onetbb 2022.2.0-1
 oniguruma 6.9.10-1
 openal 1.24.3-2
@@ -1020,7 +1022,7 @@ util-linux-libs 2.41.2-1
 uv 0.8.23-1
 v4l-utils 1.30.1-1
 vapoursynth 72-1
-vesktop-git 1.5.8.r9.ga55b1f0-1
+vesktop-git 1.5.8.r10.g8cc34e2-1
 vid.stab 1.1.1-2
 vim 9.1.1734-1
 vim-runtime 9.1.1734-1
