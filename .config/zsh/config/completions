@@ -14,17 +14,24 @@ mkdir -p "$_MANUAL_COMPLETIONS_DIR"
 
 # ---------------- Generated Completions ----------------
 
-# Bootdev completions
+# bootdev completions
 if (( ${+commands[bootdev]} )); then
     if [ ! -f "$_GENERATED_COMPLETIONS_DIR/_bootdev" ]; then
         bootdev completion zsh > "$_GENERATED_COMPLETIONS_DIR/_bootdev"
     fi
 fi
 
-# Eww completions
+# eww completions
 if (( ${+commands[eww]} )); then
     if [ ! -f "$_GENERATED_COMPLETIONS_DIR/_eww" ]; then
         eww shell-completions --shell zsh > "$_GENERATED_COMPLETIONS_DIR/_eww"
+    fi
+fi
+
+# mdcat completions
+if (( ${+commands[eww]} )); then
+    if [ ! -f "$_GENERATED_COMPLETIONS_DIR/_mdcat" ]; then
+        mdcat --completions zsh > "$_GENERATED_COMPLETIONS_DIR/_mdcat"
     fi
 fi
 
