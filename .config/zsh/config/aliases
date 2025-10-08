@@ -154,6 +154,13 @@ if (( ${+commands[sqlite3]} )); then
     alias sqlite='sqlite3'
 fi
 
+# steam
+if (( ${+commands[steam]} )); then
+    if (( ${+commands[mangohud]} )); then
+        alias steam='mangohud steam'
+    fi
+fi
+
 # some more aliases
 if (( ${+commands[grip]} )); then
     alias renderMarkdown='grip'
