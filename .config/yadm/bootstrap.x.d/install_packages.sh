@@ -118,6 +118,7 @@ _install_pacman_packages() {
         "hidapi"
 
         # Apps
+        "mangohud"
         "nwg-look"
         "qbittorrent"
         "alarm-clock-applet"
