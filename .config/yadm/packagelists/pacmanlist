@@ -749,7 +749,7 @@ nodejs-nopt 7.2.1-1
 noto-fonts 1:2025.10.01-1
 noto-fonts-cjk 20240730-1
 noto-fonts-emoji 1:2.051-1
-npm 11.6.1-1
+npm 11.6.2-1
 npth 1.8-1
 nspr 4.37-1
 nss 3.117-1
@@ -841,7 +841,7 @@ pixman 0.46.4-1
 pkgconf 2.5.1-1
 playerctl 2.4.1-4
 plocate 1.1.23-1
-pnpm 10.18.0-1
+pnpm 10.18.1-1
 polkit 126-2
 polkit-gnome 0.105-11
 poppler 25.09.1-1
@@ -969,7 +969,7 @@ sdl2-compat 2.32.56-2
 sdl3 3.2.24-1
 seatd 0.9.1-1
 sed 4.9-3
-semver 7.7.2-1
+semver 7.7.3-1
 serd 0.32.4-1
 sesh-bin 2.18.1-1
 shaderc 2025.3-1
@@ -1149,7 +1149,7 @@ yq 3.4.3-2
 yyjson 0.12.0-1
 zathura 0.5.13-1
 zathura-pdf-poppler 0.3.3-6
-zen-browser-bin 1.16.3b-1
+zen-browser-bin 1.16.4b-1
 zenity 4.2.0-1
 zeromq 4.3.5-2
 zimg 3.0.5-1
