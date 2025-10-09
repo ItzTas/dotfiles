@@ -606,6 +606,7 @@ libutempter 1.2.3-1
 libutf8proc 2.10.0-2
 libuv 1.51.0-1
 libva 2.22.0-1
+libva-nvidia-driver 0.0.14-1
 libva-utils 2.22.0-1
 libvdpau 1.5-3
 libverto 0.3.2-5
