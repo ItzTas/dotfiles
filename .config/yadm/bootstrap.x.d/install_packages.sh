@@ -68,6 +68,9 @@ _install_pacman_packages() {
         "xorg-xrandr"
         "arch-update"
         "xorg-xhost"
+        "libva-nvidia-driver"
+        "libva-utils"
+        "vdpauinfo"
         "cuda"
 
         # Firewall
