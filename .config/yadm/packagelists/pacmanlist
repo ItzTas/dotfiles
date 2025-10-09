@@ -253,6 +253,7 @@ gtk4 1:4.20.2-3
 gtk4-layer-shell 1.2.0-1
 gtkmm-4.0 4.20.0-1
 gtkmm3 3.24.10-1
+gtksourceview5 5.18.0-1
 gts 0.7.6.121130-5
 guile 3.0.10-1
 gupnp 1:1.6.9-1
