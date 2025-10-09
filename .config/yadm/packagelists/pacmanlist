@@ -606,6 +606,7 @@ libutempter 1.2.3-1
 libutf8proc 2.10.0-2
 libuv 1.51.0-1
 libva 2.22.0-1
+libva-utils 2.22.0-1
 libvdpau 1.5-3
 libverto 0.3.2-5
 libvisio 0.1.10-1
@@ -1045,6 +1046,7 @@ util-linux-libs 2.41.2-1
 uv 0.9.0-1
 v4l-utils 1.30.1-1
 vapoursynth 72-1
+vdpauinfo 1.5-2
 vesktop-git 1.5.8.r10.g8cc34e2-1
 vid.stab 1.1.1-2
 vim 9.1.1734-1
