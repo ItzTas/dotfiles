@@ -15,6 +15,7 @@ alsa-topology-conf 1.2.5.1-4
 alsa-ucm-conf 1.2.14-2
 aom 3.13.1-1
 appstream 1.1.1-1
+appstream-glib 0.8.3-2
 aquamarine-git 0.9.5.r2.g3b3d8a8-1
 arch-update 3.15.7-1
 archlinux-contrib 20251003-1
@@ -84,6 +85,8 @@ colord 1.4.8-1
 compiler-rt 20.1.8-1
 composefs 1.0.8-1
 containerd 2.1.4-1
+coolercontrol-bin 3.0.1-1
+coolercontrold-bin 3.0.1-1
 coreutils 9.8-2
 cpio 2.15-3
 cppdap 1.58.0-2
@@ -110,7 +113,7 @@ diff-so-fancy 1.4.4-2
 diffutils 3.12-2
 direnv 2.37.1-1
 dmidecode 3.6-1
-docker 1:28.5.0-1
+docker 1:28.5.1-1
 docker-buildx 0.29.1-1
 docker-compose 2.40.0-1
 dotnet-host 9.0.9.sdk110-1
@@ -270,7 +273,7 @@ hyphen 2.8.8-6
 hyprcursor-git 0.1.13.r0.g44e91d4-1
 hyprgraphics-git 0.2.0.r0.g9431db6-1
 hypridle-git 0.1.7.r1.gf158b2f-1
-hyprland-git 0.51.0.r67.gba24547-1
+hyprland-git 0.51.0.r69.g82759d4-1
 hyprland-protocols-git 0.7.0.r0.gbd153e7-1
 hyprland-qt-support-git 0.1.0.r10.g9ef7f69-1
 hyprland-qtutils-git 0.1.5.r2.g629b15c-1
@@ -927,10 +930,13 @@ qt5-x11extras 5.15.17-1
 qt6-base 6.9.2-1
 qt6-charts 6.9.2-1
 qt6-declarative 6.9.2-1
+qt6-positioning 6.9.2-1
 qt6-svg 6.9.2-2
 qt6-tools 6.9.2-1
 qt6-translations 6.9.2-1
 qt6-wayland 6.9.2-1
+qt6-webchannel 6.9.2-1
+qt6-webengine 6.9.2-3
 qt6ct 0.11-1
 qtractor 1.5.8-1
 quarto-cli-bin 1.8.25-1
@@ -1036,7 +1042,7 @@ usbutils 018-1
 uthash 2.3.0-2
 util-linux 2.41.2-1
 util-linux-libs 2.41.2-1
-uv 0.8.24-1
+uv 0.9.0-1
 v4l-utils 1.30.1-1
 vapoursynth 72-1
 vesktop-git 1.5.8.r10.g8cc34e2-1
