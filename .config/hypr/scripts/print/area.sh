@@ -17,7 +17,11 @@ print_selected_area() {
     ACTION=$(dunstify -a "sys_print" -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
 
     case "$ACTION" in
-    "default") nemo "$fullpath" & ;;
+    "default")
+        local id
+        id=$(hyprctl activeworkspace -j | jq -r '.id') || nemo "$fullpath"
+        hyprctl dispatch exec "[workspace $id] nemo $fullpath &" || nemo "$fullpath"
+        ;;
     esac
 }
 
