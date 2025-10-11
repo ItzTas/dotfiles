@@ -1,5 +1,18 @@
 #!/bin/env bash
 
+open() {
+    local path="$1"
+    local id
+
+    id=$(hyprctl activeworkspace -j | jq -r '.id')
+
+    if [[ -n "$id" && "$id" != "null" ]]; then
+        hyprctl dispatch exec "[workspace $id] nemo \"$path\"" || nemo "$path"
+        return
+    fi
+    nemo "$path"
+}
+
 print_img() {
     local filename
     filename="screenshot_$(date '+%Y-%m-%d_%H-%M-%S-%3N').png"
@@ -17,9 +30,7 @@ print_img() {
 
     case "$ACTION" in
     "default")
-        local id
-        id=$(hyprctl activeworkspace -j | jq -r '.id') || nemo "$fullpath"
-        hyprctl dispatch exec "[workspace $id] nemo $fullpath &" || nemo "$fullpath"
+        open "$fullpath"
         ;;
     esac
 }
