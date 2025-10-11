@@ -35,6 +35,13 @@ if (( ${+commands[eww]} )); then
     fi
 fi
 
+# git-bug completions
+if (( ${+commands[git-bug]} )); then
+    if [ ! -f "$_GENERATED_COMPLETIONS_DIR/_git-bug" ]; then
+        git-bug completion zsh > "$_GENERATED_COMPLETIONS_DIR/_git-bug"
+    fi
+fi
+
 # -------------------------------------------------------
 
 fpath=(
