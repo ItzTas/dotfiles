@@ -79,7 +79,6 @@ alias yay='paru'
 
 # git
 if (( ${+commands[git]} )); then
-    alias gitGraph='git --no-pager log --oneline --graph --all --decorate --stat --color --pretty=format:"%h %d %s %an %ar"'
     alias gl='git log'
 
     alias gb='git branch'
