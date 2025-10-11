@@ -148,6 +148,7 @@ _install_pacman_packages() {
         "noto-fonts-emoji"
 
         # Git
+        "gitify"
         "lazygit"
         "github-cli"
         "git-bug"
