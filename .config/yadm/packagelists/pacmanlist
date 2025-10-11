@@ -196,7 +196,7 @@ girara 0.4.5-1
 git 2.51.0-1
 git-bug 0.10.1-1
 github-cli 2.81.0-1
-gitify-bin 6.9.1-1
+gitify 6.9.1-1
 glaze 5.7.2-1
 glew 2.2.0-7
 glfw 1:3.4-1
