@@ -17,3 +17,11 @@ export PATH="$HOME/.phpenv/bin:$PATH"
 export PATH="$PATH:$HOME/.cargo/env"
 export PATH="$PATH:/var/lib/snapd/snap/bin"
 export PATH="$PATH:$HOME/.config/yadm/bin"
+
+# pnpm
+export PNPM_HOME="/home/talinux/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
