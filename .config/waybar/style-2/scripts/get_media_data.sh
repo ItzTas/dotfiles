@@ -22,11 +22,27 @@ _get_tooltip() {
 _get_text() {
     local option="$1"
 
+    if ! playerctl status &>/dev/null; then
+        echo ""
+        return
+    fi
+
+    local status
+    status=$(playerctl status 2>/dev/null)
+    if [ "$status" = "" ] || [ "$status" = "Stopped" ]; then
+        echo ""
+        return
+    fi
+
     local text=""
     if [ "$option" == "next" ]; then
-        text=""
+        if playerctl metadata --format '{{position}}' &>/dev/null; then
+            text=""
+        fi
     elif [ "$option" == "prev" ]; then
-        text=""
+        if playerctl metadata --format '{{position}}' &>/dev/null; then
+            text=""
+        fi
     fi
 
     echo "$text"
