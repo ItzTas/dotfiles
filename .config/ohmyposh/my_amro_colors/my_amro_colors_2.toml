@@ -1,4 +1,7 @@
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+final_space = true
 version = 3
+shell_integration = true
 
 [transient_prompt]
     background = "transparent"
@@ -101,7 +104,7 @@ version = 3
     type = 'python'
 
     [blocks.segments.properties]
-      display_mode = 'context'
+      display_mode = 'files'
 
   [[blocks.segments]]
     style = 'plain'
@@ -415,3 +418,4 @@ version = 3
     foreground = '#6A7FEA'
     background = ''
     type = 'text'
+
