@@ -134,11 +134,6 @@ if (( ${+commands[bat]} )); then
     alias c='bat --paging=never'
 fi
 
-# mdcat
-if (( ${+commands[bat]} )); then
-    alias mdcat='mdcat --paginate'
-fi
-
 # man & utilities
 if (( ${+commands[qman]} )); then
     alias man='qman'
