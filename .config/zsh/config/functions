@@ -155,19 +155,17 @@ if (( ${+commands[docker]} )); then
 		lines="$(docker ps --format "id: {{.ID}}\t name: {{.Names}}\t img: {{.Image}}")"
 		container="$(echo "$lines" | 
             fzf --header "exec -it" \
-            --preview 'echo "Status:"; docker ps -a --filter "id=$(echo "{2}" | xargs)" --format "{{.Status}}"; echo ""; echo "Command:"; docker ps -a --filter "id=$(echo "{2}" | xargs)" --format "{{.Command}}"; echo ""; echo "Últimos logs:"; docker logs --tail 10 {2}'
+            --preview 'echo "Status:"; docker ps -a --filter "id=$(echo "{2}" | xargs)" --format "{{.Status}}"; echo ""; echo "Command:"; docker ps -a --filter "id=$(echo "{2}" | xargs)" --format "{{.Command}}"; echo ""; echo "Logs: "; echo ""; docker logs --tail 10 {2}'
         )"
 
-        if [ $container == "" ]; then
+        if [[ -z "$container" ]]; then
             return
         fi
-
         local container_id
-        container_id=$(echo "$container" | awk '{print $1}' | xargs)
+        container_id=$(echo "$container" | awk '{print $2}' | xargs)
 
         docker exec -it "$container_id" bash
 	}
-
 fi
 
 # system update
