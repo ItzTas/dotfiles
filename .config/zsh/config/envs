@@ -54,6 +54,9 @@ export HYPRCURSOR_THEME="Bibata-Modern-Classic"
 # hyprshot
 export HYPRSHOT_DIR="$HOME/Pictures/screenshots/"
 
+# ptpython
+export PTPYTHON_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/ptpython/config"
+
 # XDG directories
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
