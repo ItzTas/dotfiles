@@ -1,0 +1,383 @@
+"$schema"                 = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+enable_cursor_positioning = true
+shell_integration         = true
+version                   = 3
+
+[transient_prompt]
+    background = "transparent"
+    foreground = "#6A7FEA"
+    template   = "[#]  "
+
+[[blocks]]
+    alignment = 'left'
+    type      = 'prompt'
+
+    [[blocks.segments]]
+        foreground = '#B4BEFE'
+        style      = 'plain'
+        template   = ' {{ .UserName }} on'
+        type       = 'session'
+
+    [[blocks.segments]]
+        foreground = '#6A7FEA'
+        style      = 'plain'
+        template   = '  {{ .Path }} '
+        type       = 'path'
+
+        [blocks.segments.properties]
+            folder_separator_icon = '/'
+            style                 = 'letter'
+            # style = 'agnoster'
+            # style = 'full'
+
+    [[blocks.segments]]
+        foreground       = '#14A5AE'
+        powerline_symbol = ''
+        style            = 'plain'
+        template         = '{{ .UpstreamIcon }} {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{end}}{{ if gt .Behind 0}}↓{{end}}{{ if gt .Ahead 0 }}↑{{end}}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
+        type             = 'git'
+
+        [blocks.segments.properties]
+            branch_icon         = ''
+            commit_icon         = '@'
+            fetch_stash_count   = true
+            fetch_status        = true
+            fetch_upstream_icon = true
+
+    [[blocks.segments]]
+        foreground = '#D0679D'
+        style      = 'plain'
+        template   = '(  {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} ){{ end }}{{ end }}'
+        type       = 'python'
+
+        [blocks.segments.properties]
+            display_mode         = 'environment'
+            fetch_virtual_env    = true
+            folder_name_fallback = false
+
+[[blocks]]
+    alignment = 'right'
+    type      = 'prompt'
+
+    [[blocks.segments]]
+        foreground = '#B8C4C7'
+        style      = 'plain'
+        template   = '{{ .CurrentDate | date "15:04:05" }}'
+        type       = 'time'
+
+    [[blocks.segments]]
+        foreground = '#6A7FEA'
+        style      = 'plain'
+        template   = ' {{.Icon}} '
+        type       = 'os'
+
+[[blocks]]
+    alignment = 'left'
+    newline   = true
+    type      = 'prompt'
+
+    [[blocks.segments]]
+        foreground = '#cd5e42'
+        style      = 'plain'
+        template   = ' '
+        type       = 'root'
+
+    [[blocks.segments]]
+        foreground = '#6A7FEA'
+        style      = 'plain'
+        template   = '['
+        type       = 'text'
+
+    [[blocks.segments]]
+        foreground = '#50C878'
+        style      = 'plain'
+        template   = '   '
+        type       = 'python'
+
+        [blocks.segments.properties]
+            display_mode = 'files'
+
+    [[blocks.segments]]
+        foreground = '#7FD5EA'
+        style      = 'plain'
+        template   = ' ‭ﳑ '
+        type       = 'go'
+
+    [[blocks.segments]]
+        foreground = '#342311'
+        style      = 'plain'
+        template   = '  '
+        type       = 'zig'
+
+    [[blocks.segments]]
+        foreground = '#6CA35E'
+        style      = 'plain'
+        template   = '  '
+        type       = 'node'
+
+    [[blocks.segments]]
+        foreground = '#D3672C'
+        style      = 'plain'
+        template   = '  '
+        type       = 'rust'
+
+    [[blocks.segments]]
+        foreground = '#422251'
+        style      = 'plain'
+        template   = '  '
+        type       = 'elixir'
+
+    [[blocks.segments]]
+        foreground = '#A51C30'
+        style      = 'plain'
+        template   = '  '
+        type       = 'java'
+
+    [[blocks.segments]]
+        foreground = '#75715E'
+        style      = 'plain'
+        template   = '  '
+        type       = 'php'
+
+    [[blocks.segments]]
+        foreground = '#906cff'
+        style      = 'plain'
+        template   = ' <b>K</b> '
+        type       = 'kotlin'
+
+    [[blocks.segments]]
+        foreground = '#D32F2F'
+        style      = 'plain'
+        template   = '  '
+        type       = 'ruby'
+
+    [[blocks.segments]]
+        foreground = '#8A3FFC'
+        style      = 'plain'
+        template   = '   '
+        type       = 'haskell'
+
+    [[blocks.segments]]
+        foreground = '#007ACC'
+        style      = 'plain'
+        template   = '   '
+        type       = 'dotnet'
+
+    [[blocks.segments]]
+        foreground = '#D9534F'
+        style      = 'plain'
+        template   = '  '
+        type       = 'angular'
+
+    [[blocks.segments]]
+        foreground = '#61DAFB'
+        style      = 'plain'
+        template   = '  '
+        type       = 'react'
+
+        [blocks.segments.properties]
+            extensions = ['*.jsx', '*.tsx']
+
+    [[blocks.segments]]
+        foreground = '#007ACC'
+        style      = 'plain'
+        template   = '   '
+        type       = 'cmake'
+
+    [[blocks.segments]]
+        foreground = '#d08770'
+        style      = 'plain'
+        template   = '  '
+        type       = 'ocaml'
+
+    [[blocks.segments]]
+        foreground = '#4063D8'
+        style      = 'plain'
+        template   = '  '
+        type       = 'perl'
+
+    [[blocks.segments]]
+        foreground = '#ADD8E6'
+        style      = 'plain'
+        template   = ' R '
+        type       = 'r'
+
+    [[blocks.segments]]
+        foreground = '#1E90FF'
+        style      = 'plain'
+        template   = '  '
+        type       = 'vala'
+
+    [[blocks.segments]]
+        foreground = '#FFD700'
+        style      = 'plain'
+        template   = '  '
+        type       = 'dart'
+
+    [[blocks.segments]]
+        foreground = '#FFA500'
+        style      = 'plain'
+        template   = '  '
+        type       = 'swift'
+
+    [[blocks.segments]]
+        foreground = '#8A2BE2'
+        style      = 'plain'
+        template   = '  '
+        type       = 'julia'
+
+    [[blocks.segments]]
+        foreground = '#56B6C2'
+        style      = 'plain'
+        template   = '  '
+        type       = 'lua'
+
+    [[blocks.segments]]
+        foreground = '#F7DF1E'
+        style      = 'plain'
+        template   = ' '
+        type       = 'node'
+
+        [blocks.segments.properties]
+            extensions = ['*.cjs', '*.js', '*.mjs']
+
+    [[blocks.segments]]
+        foreground = '#100e23'
+        style      = 'plain'
+        template   = ' 🔥 '
+        type       = 'mojo'
+
+    [[blocks.segments]]
+        foreground = '#007ACC'
+        style      = 'plain'
+        template   = '  '
+        type       = 'node'
+
+        [blocks.segments.properties]
+            extensions = ['*.cts', '*.mts', '*.ts']
+
+    [[blocks.segments]]
+        foreground = '#E5A50A'
+        style      = 'plain'
+        template   = '  '
+        type       = 'node'
+
+        [blocks.segments.properties]
+            extensions = ['*.bash', '*.sh', '.bashrc']
+            folders    = ['*.sh']
+
+    [[blocks.segments]]
+        foreground = '#4479A1'
+        style      = 'plain'
+        template   = '  '
+        type       = 'node'
+
+        [blocks.segments.properties]
+            extensions = ['*.db', '*.sql', '*.sqlite']
+
+    [[blocks.segments]]
+        foreground = '#0db7ed'
+        style      = 'plain'
+        template   = '  '
+        type       = 'node'
+
+        [blocks.segments.properties]
+            extensions = ['*Dockerfile*', 'Dockerfile', 'docker-compose.yml']
+
+    [[blocks.segments]]
+        foreground = '#ff79c6'
+        style      = 'plain'
+        template   = '  '
+        type       = 'node'
+
+        [blocks.segments.properties]
+            extensions = [
+                '*.conf',
+                '*.toml',
+                '.editorconfig',
+                '.vimrc',
+                '.zshrc',
+            ]
+
+    [[blocks.segments]]
+        foreground = '#e34c26'
+        style      = 'plain'
+        template   = '  '
+        type       = 'node'
+
+        [blocks.segments.properties]
+            extensions = ['*.html']
+
+    [[blocks.segments]]
+        foreground = '#563d7c'
+        style      = 'plain'
+        template   = '  '
+        type       = 'node'
+
+        [blocks.segments.properties]
+            extensions = ['*.css', '*.sass', '*.scss']
+
+    [[blocks.segments]]
+        foreground = '#FFD700'
+        style      = 'plain'
+        template   = '  '
+        type       = 'node'
+
+        [blocks.segments.properties]
+            extensions = ['*.gif', '*.jpeg', '*.jpg', '*.png', '*.svg']
+
+    [[blocks.segments]]
+        foreground = '#FF4500'
+        style      = 'plain'
+        template   = ' 🎬 '
+        type       = 'node'
+
+        [blocks.segments.properties]
+            extensions = ['*.avi', '*.mkv', '*.mov', '*.mp4', '*.wmv']
+
+    [[blocks.segments]]
+        foreground = '#2980B9'
+        style      = 'plain'
+        template   = '  '
+        type       = 'node'
+
+        [blocks.segments.properties]
+            extensions = ['*.flac', '*.mp3', '*.wav']
+
+    [[blocks.segments]]
+        foreground = '#8E44AD'
+        style      = 'plain'
+        template   = '  '
+        type       = 'node'
+
+        [blocks.segments.properties]
+            extensions = ['*.7p', '*.gz', '*.rar', '*.tar', '*.zip']
+
+    [[blocks.segments]]
+        foreground = '#F39C12'
+        style      = 'plain'
+        template   = '  '
+        type       = 'node'
+
+        [blocks.segments.properties]
+            extensions = ['*.otf', '*.ttf', '*.woff']
+
+    [[blocks.segments]]
+        foreground = '#3B82F6'
+        style      = 'plain'
+        template   = '  '
+        type       = 'node'
+
+        [blocks.segments.properties]
+            extensions = [
+                '*.pacman',
+                '.pkg.tar.gz',
+                '.pkg.tar.xz',
+                '.pkg.tar.zst',
+            ]
+
+    [[blocks.segments]]
+        foreground = '#6A7FEA'
+        style      = 'plain'
+        template   = ']  '
+        type       = 'text'

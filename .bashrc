@@ -7,7 +7,8 @@ case $- in
 esac
 
 if [ -f "$HOME/.config/bash/config/prompt" ]; then
-    source "$HOME.config/bash/config/prompt"
+    # shellcheck disable=SC1090
+    source "$HOME/.config/bash/config/prompt"
 fi
 
 __source_bash_files() {
