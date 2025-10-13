@@ -1,373 +1,373 @@
 "$schema"                 = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
 async                     = true
-version                   = 3
-shell_integration         = true
 enable_cursor_positioning = true
+shell_integration         = true
+version                   = 3
 
 [transient_prompt]
-background = "transparent"
-foreground = "#6A7FEA"
-template   = "[#]  "
+    background = "transparent"
+    foreground = "#6A7FEA"
+    template   = "[#]  "
 
 [[blocks]]
-type      = 'prompt'
-alignment = 'left'
+    alignment = 'left'
+    type      = 'prompt'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = ' {{ .UserName }} on'
-foreground = '#B4BEFE'
-type       = 'session'
+    foreground = '#B4BEFE'
+    style      = 'plain'
+    template   = ' {{ .UserName }} on'
+    type       = 'session'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  {{ .Path }} '
-foreground = '#6A7FEA'
-type       = 'path'
+    foreground = '#6A7FEA'
+    style      = 'plain'
+    template   = '  {{ .Path }} '
+    type       = 'path'
 
 [blocks.segments.properties]
-folder_separator_icon = '/'
-style                 = 'letter'
-# style = 'agnoster'
-# style = 'full'
+    folder_separator_icon = '/'
+    style                 = 'letter'
+    # style = 'agnoster'
+    # style = 'full'
 
 [[blocks.segments]]
-style            = 'plain'
-template         = '{{ .UpstreamIcon }} {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{end}}{{ if gt .Behind 0}}↓{{end}}{{ if gt .Ahead 0 }}↑{{end}}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
-foreground       = '#14A5AE'
-powerline_symbol = ''
-type             = 'git'
+    foreground       = '#14A5AE'
+    powerline_symbol = ''
+    style            = 'plain'
+    template         = '{{ .UpstreamIcon }} {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{end}}{{ if gt .Behind 0}}↓{{end}}{{ if gt .Ahead 0 }}↑{{end}}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
+    type             = 'git'
 
 [blocks.segments.properties]
-branch_icon         = ''
-commit_icon         = '@'
-fetch_stash_count   = true
-fetch_status        = true
-fetch_upstream_icon = true
+    branch_icon         = ''
+    commit_icon         = '@'
+    fetch_stash_count   = true
+    fetch_status        = true
+    fetch_upstream_icon = true
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '(  {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} ){{ end }}{{ end }}'
-foreground = '#D0679D'
-type       = 'python'
+    foreground = '#D0679D'
+    style      = 'plain'
+    template   = '(  {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} ){{ end }}{{ end }}'
+    type       = 'python'
 
 [blocks.segments.properties]
-display_mode         = 'environment'
-fetch_virtual_env    = true
-folder_name_fallback = false
+    display_mode         = 'environment'
+    fetch_virtual_env    = true
+    folder_name_fallback = false
 
 [[blocks]]
-type      = 'prompt'
-alignment = 'right'
+    alignment = 'right'
+    type      = 'prompt'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '{{ .CurrentDate | date "15:04:05" }}'
-foreground = '#B8C4C7'
-type       = 'time'
+    foreground = '#B8C4C7'
+    style      = 'plain'
+    template   = '{{ .CurrentDate | date "15:04:05" }}'
+    type       = 'time'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = ' {{.Icon}} '
-foreground = '#6A7FEA'
-type       = 'os'
+    foreground = '#6A7FEA'
+    style      = 'plain'
+    template   = ' {{.Icon}} '
+    type       = 'os'
 
 [[blocks]]
-type      = 'prompt'
-alignment = 'left'
-newline   = true
+    alignment = 'left'
+    newline   = true
+    type      = 'prompt'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = ' '
-foreground = '#cd5e42'
-type       = 'root'
+    foreground = '#cd5e42'
+    style      = 'plain'
+    template   = ' '
+    type       = 'root'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '['
-foreground = '#6A7FEA'
-type       = 'text'
+    foreground = '#6A7FEA'
+    style      = 'plain'
+    template   = '['
+    type       = 'text'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '   '
-foreground = '#50C878'
-type       = 'python'
+    foreground = '#50C878'
+    style      = 'plain'
+    template   = '   '
+    type       = 'python'
 
 [blocks.segments.properties]
-display_mode = 'files'
+    display_mode = 'files'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = ' ‭ﳑ '
-foreground = '#7FD5EA'
-type       = 'go'
+    foreground = '#7FD5EA'
+    style      = 'plain'
+    template   = ' ‭ﳑ '
+    type       = 'go'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#342311'
-type       = 'zig'
+    foreground = '#342311'
+    style      = 'plain'
+    template   = '  '
+    type       = 'zig'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#6CA35E'
-type       = 'node'
+    foreground = '#6CA35E'
+    style      = 'plain'
+    template   = '  '
+    type       = 'node'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#D3672C'
-type       = 'rust'
+    foreground = '#D3672C'
+    style      = 'plain'
+    template   = '  '
+    type       = 'rust'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#422251'
-type       = 'elixir'
+    foreground = '#422251'
+    style      = 'plain'
+    template   = '  '
+    type       = 'elixir'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#A51C30'
-type       = 'java'
+    foreground = '#A51C30'
+    style      = 'plain'
+    template   = '  '
+    type       = 'java'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#75715E'
-type       = 'php'
+    foreground = '#75715E'
+    style      = 'plain'
+    template   = '  '
+    type       = 'php'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = ' <b>K</b> '
-foreground = '#906cff'
-type       = 'kotlin'
+    foreground = '#906cff'
+    style      = 'plain'
+    template   = ' <b>K</b> '
+    type       = 'kotlin'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#D32F2F'
-type       = 'ruby'
+    foreground = '#D32F2F'
+    style      = 'plain'
+    template   = '  '
+    type       = 'ruby'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '   '
-foreground = '#8A3FFC'
-type       = 'haskell'
+    foreground = '#8A3FFC'
+    style      = 'plain'
+    template   = '   '
+    type       = 'haskell'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '   '
-foreground = '#007ACC'
-type       = 'dotnet'
+    foreground = '#007ACC'
+    style      = 'plain'
+    template   = '   '
+    type       = 'dotnet'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#D9534F'
-type       = 'angular'
+    foreground = '#D9534F'
+    style      = 'plain'
+    template   = '  '
+    type       = 'angular'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#61DAFB'
-type       = 'react'
+    foreground = '#61DAFB'
+    style      = 'plain'
+    template   = '  '
+    type       = 'react'
 
 [blocks.segments.properties]
-extensions = ['*.jsx', '*.tsx']
+    extensions = ['*.jsx', '*.tsx']
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '   '
-foreground = '#007ACC'
-type       = 'cmake'
+    foreground = '#007ACC'
+    style      = 'plain'
+    template   = '   '
+    type       = 'cmake'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#d08770'
-type       = 'ocaml'
+    foreground = '#d08770'
+    style      = 'plain'
+    template   = '  '
+    type       = 'ocaml'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#4063D8'
-type       = 'perl'
+    foreground = '#4063D8'
+    style      = 'plain'
+    template   = '  '
+    type       = 'perl'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = ' R '
-foreground = '#ADD8E6'
-type       = 'r'
+    foreground = '#ADD8E6'
+    style      = 'plain'
+    template   = ' R '
+    type       = 'r'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#1E90FF'
-type       = 'vala'
+    foreground = '#1E90FF'
+    style      = 'plain'
+    template   = '  '
+    type       = 'vala'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#FFD700'
-type       = 'dart'
+    foreground = '#FFD700'
+    style      = 'plain'
+    template   = '  '
+    type       = 'dart'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#FFA500'
-type       = 'swift'
+    foreground = '#FFA500'
+    style      = 'plain'
+    template   = '  '
+    type       = 'swift'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#8A2BE2'
-type       = 'julia'
+    foreground = '#8A2BE2'
+    style      = 'plain'
+    template   = '  '
+    type       = 'julia'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#56B6C2'
-type       = 'lua'
+    foreground = '#56B6C2'
+    style      = 'plain'
+    template   = '  '
+    type       = 'lua'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = ' '
-foreground = '#F7DF1E'
-type       = 'node'
+    foreground = '#F7DF1E'
+    style      = 'plain'
+    template   = ' '
+    type       = 'node'
 
 [blocks.segments.properties]
-extensions = ['*.js', '*.cjs', '*.mjs']
+    extensions = ['*.js', '*.cjs', '*.mjs']
 
 [[blocks.segments]]
-type       = 'mojo'
-style      = 'plain'
-foreground = '#100e23'
-template   = ' 🔥 '
+    foreground = '#100e23'
+    style      = 'plain'
+    template   = ' 🔥 '
+    type       = 'mojo'
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#007ACC'
-type       = 'node'
+    foreground = '#007ACC'
+    style      = 'plain'
+    template   = '  '
+    type       = 'node'
 
 [blocks.segments.properties]
-extensions = ['*.ts', '*.cts', '*.mts']
+    extensions = ['*.ts', '*.cts', '*.mts']
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#E5A50A'
-type       = 'node'
+    foreground = '#E5A50A'
+    style      = 'plain'
+    template   = '  '
+    type       = 'node'
 
 [blocks.segments.properties]
-extensions = ['*.sh', '.bashrc', '*.bash']
-folders    = ['*.sh']
+    extensions = ['*.sh', '.bashrc', '*.bash']
+    folders    = ['*.sh']
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#4479A1'
-type       = 'node'
+    foreground = '#4479A1'
+    style      = 'plain'
+    template   = '  '
+    type       = 'node'
 
 [blocks.segments.properties]
-extensions = ['*.sql', '*.db', '*.sqlite']
+    extensions = ['*.sql', '*.db', '*.sqlite']
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#0db7ed'
-type       = 'node'
+    foreground = '#0db7ed'
+    style      = 'plain'
+    template   = '  '
+    type       = 'node'
 
 [blocks.segments.properties]
-extensions = ['Dockerfile', 'docker-compose.yml', '*Dockerfile*']
+    extensions = ['Dockerfile', 'docker-compose.yml', '*Dockerfile*']
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#ff79c6'
-type       = 'node'
+    foreground = '#ff79c6'
+    style      = 'plain'
+    template   = '  '
+    type       = 'node'
 
 [blocks.segments.properties]
-extensions = ['.zshrc', '.vimrc', '.editorconfig', '*.conf', '*.toml']
+    extensions = ['.zshrc', '.vimrc', '.editorconfig', '*.conf', '*.toml']
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#e34c26'
-type       = 'node'
+    foreground = '#e34c26'
+    style      = 'plain'
+    template   = '  '
+    type       = 'node'
 
 [blocks.segments.properties]
-extensions = ['*.html']
+    extensions = ['*.html']
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#563d7c'
-type       = 'node'
+    foreground = '#563d7c'
+    style      = 'plain'
+    template   = '  '
+    type       = 'node'
 
 [blocks.segments.properties]
-extensions = ['*.css', '*.scss', '*.sass']
+    extensions = ['*.css', '*.scss', '*.sass']
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#FFD700'
-type       = 'node'
+    foreground = '#FFD700'
+    style      = 'plain'
+    template   = '  '
+    type       = 'node'
 
 [blocks.segments.properties]
-extensions = ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.svg']
+    extensions = ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.svg']
 
 [[blocks.segments]]
-style      = 'plain'
-template   = ' 🎬 '
-foreground = '#FF4500'
-type       = 'node'
+    foreground = '#FF4500'
+    style      = 'plain'
+    template   = ' 🎬 '
+    type       = 'node'
 
 [blocks.segments.properties]
-extensions = ['*.mp4', '*.mkv', '*.avi', '*.mov', '*.wmv']
+    extensions = ['*.mp4', '*.mkv', '*.avi', '*.mov', '*.wmv']
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#2980B9'
-type       = 'node'
+    foreground = '#2980B9'
+    style      = 'plain'
+    template   = '  '
+    type       = 'node'
 
 [blocks.segments.properties]
-extensions = ['*.mp3', '*.wav', '*.flac']
+    extensions = ['*.mp3', '*.wav', '*.flac']
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#8E44AD'
-type       = 'node'
+    foreground = '#8E44AD'
+    style      = 'plain'
+    template   = '  '
+    type       = 'node'
 
 [blocks.segments.properties]
-extensions = ['*.zip', '*.tar', '*.gz', '*.rar', '*.7p']
+    extensions = ['*.zip', '*.tar', '*.gz', '*.rar', '*.7p']
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#F39C12'
-type       = 'node'
+    foreground = '#F39C12'
+    style      = 'plain'
+    template   = '  '
+    type       = 'node'
 
 [blocks.segments.properties]
-extensions = ['*.ttf', '*.otf', '*.woff']
+    extensions = ['*.ttf', '*.otf', '*.woff']
 
 [[blocks.segments]]
-style      = 'plain'
-template   = '  '
-foreground = '#3B82F6'
-type       = 'node'
+    foreground = '#3B82F6'
+    style      = 'plain'
+    template   = '  '
+    type       = 'node'
 
 [blocks.segments.properties]
-extensions = ['.pkg.tar.zst', '.pkg.tar.xz', '.pkg.tar.gz', '*.pacman']
+    extensions = ['.pkg.tar.zst', '.pkg.tar.xz', '.pkg.tar.gz', '*.pacman']
 
 [[blocks.segments]]
-style      = 'plain'
-template   = ']  '
-foreground = '#6A7FEA'
-type       = 'text'
+    foreground = '#6A7FEA'
+    style      = 'plain'
+    template   = ']  '
+    type       = 'text'
