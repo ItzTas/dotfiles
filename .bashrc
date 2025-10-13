@@ -21,9 +21,9 @@ __source_bash_files() {
         "binds"
         "envs"
         "evals"
+        "fzf"
         "sources"
         "shopt"
-        "oh-my-zsh"
     )
 
     local file path
