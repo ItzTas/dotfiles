@@ -4,6 +4,7 @@ include = ["*.toml"]
 [formatting]
     align_comments        = true
     align_entries         = true
+    align_single_comments = true
     allowed_blank_lines   = 1
     indent_entries        = true
     indent_string         = "    "
