@@ -158,6 +158,11 @@ if (( ${+commands[steam]} )); then
     fi
 fi
 
+# glow
+if (( ${+commands[glow]} )); then
+    alias glow='glow -s "$HOME/.config/glow/themes/catppuccin-macchiato.json"'
+fi
+
 # some more aliases
 if (( ${+commands[grip]} )); then
     alias renderMarkdown='grip'
