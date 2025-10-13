@@ -6,6 +6,10 @@ case $- in
 *) return ;;
 esac
 
+if [ -f "$HOME/.config/bash/config/prompt" ]; then
+    source "$HOME.config/bash/config/prompt"
+fi
+
 __source_bash_files() {
     local bash_home="$HOME/.config/bash/config"
 
