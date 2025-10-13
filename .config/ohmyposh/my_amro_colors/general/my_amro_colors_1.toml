@@ -416,5 +416,5 @@ version = 3
         background = ''
         foreground = '#CD4277'
         style      = 'plain'
-        template   = ']  '
+        template   = '] '
         type       = 'text'

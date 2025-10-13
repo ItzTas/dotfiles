@@ -1,6 +1,7 @@
 "$schema"                 = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
 async                     = true
 enable_cursor_positioning = true
+final_space               = true
 shell_integration         = true
 version                   = 3
 
