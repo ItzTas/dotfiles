@@ -56,8 +56,8 @@ __source_zsh_config_files() {
         "sources"
         "setopt"
         "zstyle"
-        "fzf"
         "binds"
+        "fzf"
     )
 
     local path
