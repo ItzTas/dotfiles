@@ -169,8 +169,8 @@ if (( ${+commands[docker]} )); then
 fi
 
 
-# poman
-if (( ${+commands[docker]} )); then
+# podman
+if (( ${+commands[podman]} )); then
     fpex() {
         local lines container
 
