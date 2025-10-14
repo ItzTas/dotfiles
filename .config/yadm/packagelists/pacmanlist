@@ -123,6 +123,7 @@ dmidecode 3.6-1
 docker 1:28.5.1-1
 docker-buildx 0.29.1-1
 docker-compose 2.40.0-1
+docx2txt 1.4-6
 dotnet-host 9.0.9.sdk110-1
 dotnet-runtime 9.0.9.sdk110-1
 dotnet-sdk 9.0.9.sdk110-1
