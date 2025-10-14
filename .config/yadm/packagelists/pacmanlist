@@ -66,7 +66,7 @@ cairomm 1.14.5-1
 cairomm-1.16 1.18.0-2
 calf 0.90.8-4
 camunda-modeler 5.37.0-1
-candy-icons-git r1332.278998c-1
+candy-icons-git r1337.40cbbc8-1
 catatonit 0.2.1-2
 catppuccin-gtk-theme-mocha 1.0.3-1
 cava 0.10.6-1
@@ -112,7 +112,7 @@ dconf 0.49.0-1
 ddcutil 2.2.1-1
 debugedit 5.2-1
 default-cursors 3-1
-depot-tools-git r11775.81c128e08f-1
+depot-tools-git r11776.6af610f8f8-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.35-1
 dex 0.9.0-2
@@ -247,14 +247,14 @@ gsfonts 20200910-6
 gsl 2.8-1
 gsm 1.0.22-2
 gssdp 1.6.4-1
-gst-plugin-gtk 1.26.6-3
+gst-plugin-gtk 1.26.7-1
 gst-plugin-pipewire 1:1.4.9-1
-gst-plugins-bad-libs 1.26.6-3
-gst-plugins-base 1.26.6-3
-gst-plugins-base-libs 1.26.6-3
-gst-plugins-good 1.26.6-3
-gst-plugins-ugly 1.26.6-3
-gstreamer 1.26.6-3
+gst-plugins-bad-libs 1.26.7-1
+gst-plugins-base 1.26.7-1
+gst-plugins-base-libs 1.26.7-1
+gst-plugins-good 1.26.7-1
+gst-plugins-ugly 1.26.7-1
+gstreamer 1.26.7-1
 gtest 1.17.0-1
 gthumb 3.12.8-1
 gtk-layer-shell 0.9.2-1
@@ -410,7 +410,7 @@ lib32-pcre2 10.46-1
 lib32-pipewire 1:1.4.9-1
 lib32-spirv-tools 1:1.4.328.1-1
 lib32-sqlite 3.50.4-1
-lib32-systemd 258-1
+lib32-systemd 258.1-1
 lib32-util-linux 2.41.2-1
 lib32-vulkan-icd-loader 1.4.328.1-1
 lib32-wayland 1.24.0-1
@@ -684,7 +684,7 @@ libzip 1.11.4-1
 libzmf 0.0.2-18
 licenses 20240728-1
 lilv 0.24.26-1
-linux 6.17.1.arch1-1
+linux 6.17.2.arch1-1
 linux-api-headers 6.16-2
 linux-firmware 20251011-1
 linux-firmware-amdgpu 20251011-1
@@ -698,7 +698,7 @@ linux-firmware-other 20251011-1
 linux-firmware-radeon 20251011-1
 linux-firmware-realtek 20251011-1
 linux-firmware-whence 20251011-1
-linux-headers 6.17.1.arch1-1
+linux-headers 6.17.2.arch1-1
 linuxconsole 1.8.1-1
 lld 20.1.8-1
 llhttp 9.2.1-2
@@ -780,7 +780,7 @@ npth 1.8-1
 nspr 4.37-1
 nss 3.117-1
 numlockx 1.2-6
-nvidia 580.95.05-2
+nvidia 580.95.05-3
 nvidia-settings 580.95.05-1
 nvidia-utils 580.95.05-1
 nvm 0.40.3-1
@@ -893,7 +893,7 @@ python-attrs 25.4.0-1
 python-autocommand 2.2.2-7
 python-build 1.3.0-1
 python-cairo 1.28.0-1
-python-cffi 1.17.1-2
+python-cffi 2.0.0-1
 python-chevron 0.14.0-1
 python-click 8.2.1-1
 python-clickgen 2.2.5-1
@@ -1036,9 +1036,9 @@ swaync 0.12.2-1
 swayosd-gtk3 0.1.0-1
 swig 4.3.1-1
 sysd-manager 2.1.1-1
-systemd 258-4
-systemd-libs 258-4
-systemd-sysvcompat 258-4
+systemd 258.1-1
+systemd-libs 258.1-1
+systemd-sysvcompat 258.1-1
 taglib 2.1.1-1
 tar 1.35-2
 tdb 1.4.14-1
