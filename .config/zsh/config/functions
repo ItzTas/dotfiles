@@ -168,6 +168,30 @@ if (( ${+commands[docker]} )); then
 	}
 fi
 
+
+# poman
+if (( ${+commands[docker]} )); then
+    fpex() {
+        local lines container
+
+        lines="$(podman ps --format "id: {{.ID}}\t name: {{.Names}}\t img: {{.Image}}")"
+
+        container="$(echo "$lines" | 
+            fzf --header "exec -it" \
+            --preview 'echo "Status:"; podman ps -a --filter "id=$(echo "{2}" | xargs)" --format "{{.Status}}"; echo ""; echo "Command:"; podman ps -a --filter "id=$(echo "{2}" | xargs)" --format "{{.Command}}"; echo ""; echo "Logs:"; echo ""; podman logs --tail 10 {2}'
+        )"
+
+        if [[ -z "$container" ]]; then
+            return
+        fi
+
+        local container_id
+        container_id=$(echo "$container" | awk '{print $2}' | xargs)
+
+        podman exec -it "$container_id" bash
+    }
+fi
+
 # system update
 update_zsh_plugins() {
     local plugins_dir="$HOME/.config/zsh/plugins/repos"
