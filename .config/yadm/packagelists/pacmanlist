@@ -284,7 +284,7 @@ hyphen 2.8.8-6
 hyprcursor-git 0.1.13.r0.g44e91d4-1
 hyprgraphics-git 0.2.0.r1.g50fb9f0-1
 hypridle-git 0.1.7.r1.gf158b2f-1
-hyprland-git 0.51.0.r82.gbbb8331-1
+hyprland-git 0.51.0.r83.gee5d05f-1
 hyprland-protocols-git 0.7.0.r0.gbd153e7-1
 hyprland-qt-support-git 0.1.0.r10.g9ef7f69-1
 hyprland-qtutils-git 0.1.5.r2.g629b15c-1
@@ -1019,7 +1019,7 @@ spotify 1:1.2.63.394-1
 sqlite 3.50.4-2
 sratom 0.6.18-1
 srt 1.5.4-1
-stacer-git 1.5.0.r0.gfc97050-1
+stacer-git 1.5.0.r1.ge82e92c-1
 startup-notification 0.12-9
 steam 1.0.0.85-1
 sudo 1.9.17.p1-1
