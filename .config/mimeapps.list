@@ -28,6 +28,8 @@ message/rfc822=userapp-Thunderbird-QZ4BC3.desktop
 x-scheme-handler/mid=userapp-Thunderbird-QZ4BC3.desktop
 x-scheme-handler/kando=kando.desktop
 x-scheme-handler/gitify=gitify.desktop
+x-scheme-handler/magnet=org.qbittorrent.qBittorrent.desktop
+application/x-bittorrent=org.qbittorrent.qBittorrent.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;
@@ -42,3 +44,4 @@ application/x-extension-xhtml=zen.desktop;
 application/x-extension-xht=zen.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-QZ4BC3.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-QZ4BC3.desktop;
+application/x-bittorrent=org.qbittorrent.qBittorrent.desktop;
