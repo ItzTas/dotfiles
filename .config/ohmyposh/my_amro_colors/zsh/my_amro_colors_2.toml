@@ -381,5 +381,5 @@ version                   = 3
     [[blocks.segments]]
         foreground = '#6A7FEA'
         style      = 'plain'
-        template   = ']  '
+        template   = '] '
         type       = 'text'
