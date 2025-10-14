@@ -1,38 +1,59 @@
 #!/bin/bash
 
-if pgrep wf-recorder; then
-    killall wf-recorder
-    exit 0
-fi
+open() {
+    local path="$1"
+    local id
 
-DIR="$HOME/Videos/.recordings/system"
-mkdir -p "$DIR"
+    id=$(hyprctl activeworkspace -j | jq -r '.id')
 
-FILENAME="$DIR/recording_$(date '+%Y-%m-%d_%H-%M-%S').mp4"
-BASENAME=$(basename "$FILENAME")
+    if [[ -n "$id" && "$id" != "null" ]]; then
+        hyprctl dispatch exec "[workspace $id] nemo \"$path\"" || nemo "$path"
+        return
+    fi
+    nemo "$path"
+}
 
-notify-send -a "sys_recording" "Recording Started" "Recording to $FILENAME" || exit 1
+_record() {
+    if pgrep wf-recorder; then
+        killall wf-recorder
+        exit 0
+    fi
 
-if ! wf-recorder -f "$FILENAME"; then
-    dunstify "Error" "Failed to start recording"
-    exit 1
-fi
+    local dir="$HOME/Videos/.recordings/system"
+    mkdir -p "$dir"
 
-TMPDIR=$(mktemp -d)
-THUMBNAIL="$TMPDIR/thumbnail.png"
-rm -f "$THUMBNAIL"
-if ! ffmpeg -y -i "$FILENAME" -vframes 1 "$THUMBNAIL"; then
-    dunstify "Error" "Failed to generate thumbnail"
-    rm -rf "$TMPDIR"
-    exit 1
-fi
+    local filename basename
+    filename="$dir/recording_$(date '+%Y-%m-%d_%H-%M-%S').mp4"
+    basename=$(basename "$filename")
 
-ACTION=$(dunstify -a "sys_recording" -i "$THUMBNAIL" --action="default,open" "Recording Finished" "The recording has been saved as $BASENAME")
+    notify-send -a "sys_recording" "Recording Started" "Recording to $filename" || exit 1
 
-rm -rf "$TMPDIR"
+    if ! wf-recorder -f "$filename"; then
+        dunstify "Error" "Failed to start recording"
+        exit 1
+    fi
 
-case "$ACTION" in
-"default")
-    nemo "$FILENAME" &
-    ;;
-esac
+    local tmpdir
+    tmpdir=$(mktemp -d)
+    local thumbnail="$tmpdir/thumbnail.png"
+    rm -f "$thumbnail"
+
+    if ! ffmpeg -y -i "$filename" -vframes 1 "$thumbnail"; then
+        dunstify "Error" "Failed to generate thumbnail"
+        rm -rf "$tmpdir"
+        exit 1
+    fi
+
+    local action
+    action=$(dunstify -a "sys_recording" -i "$thumbnail" --action="default,open" "Recording Finished" "The recording has been saved as $basename")
+
+    rm -rf "$tmpdir"
+
+    case "$action" in
+    "default")
+        open "$filename"
+        ;;
+    esac
+}
+
+_record
