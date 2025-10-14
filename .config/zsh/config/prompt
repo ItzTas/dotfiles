@@ -6,6 +6,6 @@ if (( ! ${+commands[oh-my-posh]} )); then
 fi
 
 if [ -d "$HOME/.config/ohmyposh/my_amro_colors" ]; then
-    eval "$(oh-my-posh init zsh --config "$HOME"/.config/ohmyposh/my_amro_colors/zsh/my_amro_colors_2.toml)"
+    eval "$(oh-my-posh init zsh --config "$HOME/.config/ohmyposh/my_amro_colors/zsh/my_amro_colors_2.toml")"
 fi
 
