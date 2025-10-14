@@ -1,5 +1,6 @@
 a52dec 0.8.0-2
 aalib 1.4rc5-19
+aardvark-dns 1.16.0-1
 abseil-cpp 20250814.1-1
 accountsservice 23.13.9-2
 acl 2.3.2-1
@@ -66,6 +67,7 @@ cairomm-1.16 1.18.0-2
 calf 0.90.8-4
 camunda-modeler 5.37.0-1
 candy-icons-git r1332.278998c-1
+catatonit 0.2.1-2
 catppuccin-gtk-theme-mocha 1.0.3-1
 cava 0.10.6-1
 cblas 3.12.1-2
@@ -85,7 +87,9 @@ cogl 1.22.8-3
 colord 1.4.8-1
 compiler-rt 20.1.8-1
 composefs 1.0.8-1
+conmon 1:2.1.13-1
 containerd 2.1.4-1
+containers-common 1:0.64.2-1
 coolercontrol-bin 3.0.1-1
 coolercontrold-bin 3.0.1-1
 coreutils 9.8-2
@@ -750,6 +754,7 @@ nemo-terminal 6.4.0-3
 neon 0.35.0-1
 neovim 0.11.4-1
 net-tools 2.10-3
+netavark 1.16.1-1
 netpbm 10.86.48-1
 netstandard-targeting-pack 9.0.9.sdk110-1
 nettle 3.10.2-1
@@ -806,6 +811,7 @@ parsec-bin 150_97c-1
 parted 3.6-2
 paru 2.1.0-1
 paru-debug 2.1.0-1
+passt 2025_09_19.623dbf6-1
 patch 2.8-1
 patchelf 0.18.0-3
 pavucontrol 1:6.2-1
@@ -856,6 +862,8 @@ pkgconf 2.5.1-1
 playerctl 2.4.1-4
 plocate 1.1.23-1
 pnpm 10.18.2-1
+podman 5.6.2-1
+podman-desktop 1.22.0-1
 polkit 126-2
 polkit-gnome 0.105-11
 poppler 25.09.1-1
