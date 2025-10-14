@@ -243,14 +243,6 @@ menu>*:active {
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-#custom-os-button {
-    margin: 0px 3px;
-}
-
-#custom-next {
-    margin-right: 8px;
-}
-
 /* Hover effect for bar elements */
 #custom-swaync:hover,
 #tray>widget:hover,
@@ -272,6 +264,7 @@ menu>*:active {
     font-weight: bold;
     padding: 0px 10px;
     margin: 2px 0px;
+    margin-left: 8px;
     border-radius: 10px;
 }
 
