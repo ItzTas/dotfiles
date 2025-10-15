@@ -1,6 +1,21 @@
 #!/bin/env bash
 
 _change_grub_theme() {
+    if ! command -v grub-mkconfig &>/dev/null; then
+        echo "GRUB is not installed. Skipping theme configuration..."
+        return
+    fi
+
+    local GRUB_CONFIG="/etc/default/grub"
+    if [[ ! -f "$GRUB_CONFIG" ]]; then
+        echo "GRUB configuration file not found. Skipping..."
+        return
+    fi
+
+    if [[ ! -d "/boot/grub" ]]; then
+        echo "GRUB does not appear to be the system bootloader. Skipping..."
+        return
+    fi
     local THEME_PATH
     THEME_PATH="/boot/grub/themes/elegant-mojave"
     local GRUB_CONFIG
