@@ -16,6 +16,7 @@ _change_grub_theme() {
         echo "GRUB does not appear to be the system bootloader. Skipping..."
         return
     fi
+
     local THEME_PATH
     THEME_PATH="/boot/grub/themes/elegant-mojave"
     local GRUB_CONFIG
