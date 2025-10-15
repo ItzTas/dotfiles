@@ -9,14 +9,14 @@ _activate_swap() {
     local mapper="$2"
 
     if _is_system_encrypted; then
-        grep -q "$swapfile" /etc/crypttab ||
+        sudo grep -q "$swapfile" /etc/crypttab ||
             echo "swap $swapfile /dev/urandom swap,cipher=aes-xts-plain64" | sudo tee -a /etc/crypttab
-        grep -q "/dev/mapper/$mapper" /etc/fstab ||
+        sudo grep -q "/dev/mapper/$mapper" /etc/fstab ||
             echo "/dev/mapper/$mapper none swap defaults 0 0" | sudo tee -a /etc/fstab
         return
     fi
 
-    grep -q "$swapfile" /etc/fstab ||
+    sudo grep -q "$swapfile" /etc/fstab ||
         echo "$swapfile none swap defaults 0 0" | sudo tee -a /etc/fstab >/dev/null
 }
 
