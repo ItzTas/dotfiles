@@ -109,7 +109,7 @@
         }
     },
     "battery": {
-        "on-click": "bash ~/.config/hypr/scripts/actioncenter.sh &  eww close calendar",
+        "on-click": "bash ~/.config/hypr/scripts/actioncenter.sh & eww close calendar",
         "states": {
             "good": 95,
             "warning": 30,
