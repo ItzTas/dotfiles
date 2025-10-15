@@ -29,7 +29,7 @@ if (( ${+commands[eww]} )); then
 fi
 
 # mdcat completions
-if (( ${+commands[eww]} )); then
+if (( ${+commands[mdcat]} )); then
     if [ ! -f "$_GENERATED_COMPLETIONS_DIR/_mdcat" ]; then
         mdcat --completions zsh > "$_GENERATED_COMPLETIONS_DIR/_mdcat"
     fi
