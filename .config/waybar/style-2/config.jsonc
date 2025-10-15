@@ -144,7 +144,7 @@
         "max-volume": 150,
         "scroll-step": 1,
         "format": "{icon} {volume}%",
-        "tooltip-format": "{icon}  {volume}%",
+        "tooltip-format": "{icon} {volume}%",
         "format-muted": " 0%",
         "format-icons": {
             "headphone": " ",
