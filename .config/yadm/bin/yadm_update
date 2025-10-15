@@ -28,8 +28,6 @@ yadm_update() {
 
         local pacman_list flatpak_list
         read -r pacman_list flatpak_list < <(create_packagelists)
-        notify-send "$pacman_list"
-        notify-send "$flatpak_list"
 
         if command -v diff-so-fancy &>/dev/null; then
             yadm --no-pager diff | diff-so-fancy
