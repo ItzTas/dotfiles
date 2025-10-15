@@ -41,4 +41,8 @@ _change_grub_theme() {
     sudo grub-mkconfig -o /boot/grub/grub.cfg
 }
 
-_change_grub_theme
+_set_up() {
+    _change_grub_theme
+}
+
+_set_up
