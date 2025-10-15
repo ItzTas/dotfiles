@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-MONITOR1="DP-2"
+MONITOR1=""
 HYPRMONITOR1_FILE="$HOME/.config/hypr/config/hyprmonitor.conf"
 
 SATURATION_MONITOR1="1.45"
