@@ -1,15 +1,35 @@
 #!/bin/env bash
 # vim=sh
 
+create_packagelists() {
+    local package_lists_dir="${XDG_CONFIG_DIR:-$HOME/.config}/yadm/packagelists"
+    mkdir -p "$package_lists_dir"
+
+    local device_id
+    # device_id=$(findmnt -no UUID / 2>/dev/null || echo "unknown")
+    #
+    # if [ "$device_id" = "unknown" ] || [ "$device_id" = "" ]; then
+    #     device_id=$(printf "%s" "$(hostname)-$USER" | sha256sum | cut -c1-12)
+    # fi
+    device_id=$(printf "%s" "$(hostname)-$USER" | sha256sum | cut -c1-12)
+
+    local pacman_list="$package_lists_dir/pacmanlist_${device_id}"
+    local flatpak_list="$package_lists_dir/flatpaklist_${device_id}"
+
+    pacman -Q >"$pacman_list"
+    flatpak list --app --columns=application >"$flatpak_list"
+
+    echo "$pacman_list $flatpak_list"
+}
+
 yadm_update() {
     (
         set -e
 
-        # local package_lists_dir="${XDG_CONFIG_DIR:-$HOME/.config/}/yadm/packagelists"
-        # mkdir -p "$package_lists_dir"
-        #
-        # pacman -Q >"$package_lists_dir/pacmanlist"
-        # flatpak list --app --columns=application >"$package_lists_dir/flatpaklist"
+        local pacman_list flatpak_list
+        read -r pacman_list flatpak_list < <(create_packagelists)
+        notify-send "$pacman_list"
+        notify-send "$flatpak_list"
 
         if command -v diff-so-fancy &>/dev/null; then
             yadm --no-pager diff | diff-so-fancy
@@ -17,8 +37,8 @@ yadm_update() {
             yadm --no-pager diff
         fi
 
-        # yadm add "$package_lists_dir/pacmanlist"
-        # yadm add "$package_lists_dir/flatpaklist"
+        yadm add "$pacman_list"
+        yadm add "$flatpak_list"
 
         yadm add "$HOME/Pictures/.backgrounds"
         yadm add "$HOME/.config/yadm/bootstrap.x.d"
