@@ -116,8 +116,8 @@
             "critical": 20
         },
         "format": "{icon} {percentage}%",
-        "format-charging": " ",
-        "format-plugged": " ",
+        "format-charging": " {percentage}%",
+        "format-plugged": " {percentage}%",
         "format-alt": "{time} {icon}",
         "format-alt-icons": [
             "󰂎",
