@@ -67,6 +67,7 @@ _install_pacman_packages() {
         "os-prober"
         "xorg-xrandr"
         "arch-update"
+        "brightnessctl"
         "xorg-xhost"
         "libva-nvidia-driver"
         "libva-utils"
