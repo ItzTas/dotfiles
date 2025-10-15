@@ -31,7 +31,6 @@ _install_pacman_packages() {
 
     local packages=(
         # Terminals
-        "ghostty"
         "kitty"
 
         # Themes & Looks
