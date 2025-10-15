@@ -168,15 +168,15 @@
     "id": "642854b5-88b4-4c40-b256-e035532109df",
     "name": "Transparent Zen",
     "description": "Make the Zen Browser's tab background transparent, get smooth animations and more. Enable  features in mod settings and visit the homepage below to learn more about the features. 👇",
-    "homepage": "https://github.com/sameerasw/zen-themes/tree/main/TransparentZen",
+    "homepage": "https://www.sameerasw.com/zen",
     "style": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/642854b5-88b4-4c40-b256-e035532109df/chrome.css",
     "readme": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/642854b5-88b4-4c40-b256-e035532109df/readme.md",
     "image": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/642854b5-88b4-4c40-b256-e035532109df/image.png",
     "author": "sameerasw",
-    "version": "1.13.0",
+    "version": "1.16.3",
     "tags": [],
     "createdAt": "2025-02-04",
-    "updatedAt": "2025-06-22",
+    "updatedAt": "2025-10-05",
     "preferences": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/642854b5-88b4-4c40-b256-e035532109df/preferences.json",
     "enabled": true
   },
@@ -210,21 +210,6 @@
     "updatedAt": "2025-02-09",
     "enabled": true
   },
-  "378ba8b9-cd36-45f5-88df-595df5288795": {
-    "id": "378ba8b9-cd36-45f5-88df-595df5288795",
-    "name": "Add new tab urlbar icon",
-    "description": "Adds an icon and the text open in new tab to the urlbar if opened by pressing New Tab or Ctrl+T",
-    "homepage": "https://github.com/Evthestrike/zen-browser-add-new-tab-icon-to-urlbar",
-    "style": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/378ba8b9-cd36-45f5-88df-595df5288795/chrome.css",
-    "readme": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/378ba8b9-cd36-45f5-88df-595df5288795/readme.md",
-    "image": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/378ba8b9-cd36-45f5-88df-595df5288795/image.png",
-    "author": "Evthestrike",
-    "version": "1.0.0",
-    "tags": [],
-    "createdAt": "2025-02-20",
-    "updatedAt": "2025-02-24",
-    "enabled": true
-  },
   "e74cb40a-f3b8-445a-9826-1b1b6e41b846": {
     "id": "e74cb40a-f3b8-445a-9826-1b1b6e41b846",
     "name": "Custom uiFont",
@@ -256,6 +241,21 @@
     "updatedAt": "2025-01-26",
     "enabled": true
   },
+  "378ba8b9-cd36-45f5-88df-595df5288795": {
+    "id": "378ba8b9-cd36-45f5-88df-595df5288795",
+    "name": "Add new tab urlbar icon",
+    "description": "Adds an icon and the text open in new tab to the urlbar if opened by pressing New Tab or Ctrl+T",
+    "homepage": "https://github.com/Evthestrike/zen-browser-add-new-tab-icon-to-urlbar",
+    "style": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/378ba8b9-cd36-45f5-88df-595df5288795/chrome.css",
+    "readme": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/378ba8b9-cd36-45f5-88df-595df5288795/readme.md",
+    "image": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/378ba8b9-cd36-45f5-88df-595df5288795/image.png",
+    "author": "Evthestrike",
+    "version": "1.0.0",
+    "tags": [],
+    "createdAt": "2025-02-20",
+    "updatedAt": "2025-09-25",
+    "enabled": true
+  },
   "a5f6a231-e3c8-4ce8-8a8e-3e93efd6adec": {
     "id": "a5f6a231-e3c8-4ce8-8a8e-3e93efd6adec",
     "name": "Cleaned URL bar",
@@ -269,7 +269,7 @@
     "version": "1.0.4",
     "tags": [],
     "createdAt": "2024-11-01",
-    "updatedAt": "2025-03-09",
+    "updatedAt": "2025-10-05",
     "enabled": true
   }
 }
