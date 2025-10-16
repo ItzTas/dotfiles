@@ -51,4 +51,3 @@ if (( ${+commands[dircolors]} )); then
   [[ -f $dcfile ]] || dircolors -p > "$dcfile"
   eval "$(dircolors -b "$dcfile")"
 fi
-
