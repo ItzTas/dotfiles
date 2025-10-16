@@ -49,7 +49,7 @@ yadm_update() {
 
         filtered_output=$(echo "$status_output" | grep -vE '^\s*##' || true)
         if [ "$filtered_output" = "" ]; then
-            echo "Nothing to update"
+            yadm push
             return
         fi
         files=$(echo "$filtered_output" | awk '{$1=$1; print}' | tr '\n' ', ')
