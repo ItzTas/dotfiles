@@ -33,16 +33,7 @@ fi
 
 # keychain
 if (( ${+commands[keychain]} )); then
-    _SSH_KEYS=()
-    for key in ~/.ssh/id_*; do
-        [[ ! -f "$key" ]] && continue   
-        [[ "$key" == *.pub ]] && continue
-        _SSH_KEYS+=("$key")
-    done
-
-    if (( ${#_SSH_KEYS[@]} )); then
-        eval "$(keychain -q --noask "${_SSH_KEYS[@]}" 2>/dev/null)"
-    fi
+    eval "$(keychain -q --eval)"
 fi
 
 # dircolors
