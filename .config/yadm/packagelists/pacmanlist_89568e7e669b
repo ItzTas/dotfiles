@@ -1041,7 +1041,7 @@ systemd-sysvcompat 258.1-1
 taglib 2.1.1-1
 tar 1.35-2
 tdb 1.4.14-1
-termpicker 1.4.0-1
+termpicker 1.5.0-2
 texinfo 7.2-1
 thunderbird 143.0.1-2
 tidy 5.8.0-3
@@ -1079,7 +1079,7 @@ usbutils 018-1
 uthash 2.3.0-2
 util-linux 2.41.2-1
 util-linux-libs 2.41.2-1
-uv 0.9.2-1
+uv 0.9.3-1
 v4l-utils 1.30.1-1
 vapoursynth 72-1
 vdpauinfo 1.5-2
