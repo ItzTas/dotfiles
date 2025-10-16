@@ -31,6 +31,11 @@ if (( ${+commands[phpenv]} )); then
     eval "$(phpenv init -)"
 fi
 
+# keychain
+if (( ${+commands[keychain]} )); then
+    eval "$(keychain --eval --agents ssh id_ed25519)"
+fi
+
 # dircolors
 if (( ${+commands[dircolors]} )); then
   local dcfile="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/.dircolors"
