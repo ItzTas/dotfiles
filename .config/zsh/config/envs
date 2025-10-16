@@ -1,74 +1,43 @@
 #!/usr/bin/env zsh
-# vim: filetype=zsh
+# ~/.config/zsh/.zshrc
 
-export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH
-
-export VENV_HOME="$HOME/.virtualenvs"
-[[ -d $VENV_HOME ]] || mkdir $VENV_HOME
-
-# history settings
+# History settings
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILESIZE=2000
 HISTTIMEFORMAT='%m-%d %T '
 HISTDUP=erase
 
-# wgetrc path
-export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
-
-# curlrc path
-export CURL_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/curl"
-
-# initial path
-export MY_PROJECT_PATH="$PWD"
-
-# for not accidentally exiting with ctrl+d
+# Avoid exiting with Ctrl+D
 export IGNOREEOF=999
 
-# pager
+# Virtualenv home
+export VENV_HOME="$HOME/.virtualenvs"
+[[ -d $VENV_HOME ]] || mkdir -p $VENV_HOME
+
+# Prompt/Project
+export MY_PROJECT_PATH="$PWD"
+
+# Pager
 export PAGER='less'
 export LESS='-FRX'
-
-# Don’t clear the screen after quitting a manual page
 export MANPAGER='less -RX'
 
-# bat
+# Themes
 export BAT_THEME="Catppuccin Mocha"
-
-# browser
-export BROWSER='zen-browser'
-
-# editor
-export EDITOR='nvim'
-
-# terminal
-export TERMINAL="ghostty"
-export TERMINAL="kitty"
-
-# colors in gcc
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# hyprcursor
 export HYPRCURSOR_THEME="Bibata-Modern-Classic"
 
-# hyprshot
+# Hyprshot
 export HYPRSHOT_DIR="$HOME/Pictures/screenshots/"
 
-# ptpython
-export PTPYTHON_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/ptpython"
+# Browser
+export BROWSER='zen-browser'
 
-# buildKit for Docker/Podman builds
-export BUILDKIT=1
+# Editor
+export EDITOR='nvim'
 
-# XDG directories
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_DESKTOP_DIR="$HOME/Desktop"
-export XDG_DOWNLOAD_DIR="$HOME/Downloads"
-export XDG_TEMPLATES_DIR="$HOME/Templates"
-export XDG_PUBLICSHARE_DIR="$HOME/Public"
-export XDG_DOCUMENTS_DIR="$HOME/Docs"
-export XDG_MUSIC_DIR="$HOME/Musics"
-export XDG_PICTURES_DIR="$HOME/Pictures"
-export XDG_VIDEOS_DIR="$HOME/Videos"
+# Terminal
+export TERMINAL="kitty"
+
+# GCC colors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
