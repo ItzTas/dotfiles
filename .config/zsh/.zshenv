@@ -7,10 +7,6 @@ export ZDOTDIR="$HOME/.config/zsh"
 # PATH essencial
 export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH"
 
-# Virtualenv home
-export VENV_HOME="$HOME/.virtualenvs"
-[[ -d $VENV_HOME ]] || mkdir -p $VENV_HOME
-
 # XDG base directories
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -33,3 +29,26 @@ export BUILDKIT=1
 
 # PTPython config path
 export PTPYTHON_CONFIG_HOME="${XDG_CONFIG_HOME}/ptpython"
+
+# HOMES
+export ANDROID_HOME="$HOME/.AndroidS/Sdk"
+export PNPM_HOME="/home/talinux/.local/share/pnpm"
+
+# ---- PATH EXPORTS ----
+if (( ${+commands[yarn]} )); then
+    export PATH="$HOME/.yarn/bin:$PATH"
+fi
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:/home/talinux/.dotnet/tools"
+export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+export PATH="$PATH:$HOME/go/bin"
+export PATH="$HOME/.phpenv/bin:$PATH"
+export PATH="$PATH:$HOME/.cargo/env"
+export PATH="$PATH:/var/lib/snapd/snap/bin"
+export PATH="$PATH:$HOME/.config/yadm/bin"
+
+# pnpm
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
