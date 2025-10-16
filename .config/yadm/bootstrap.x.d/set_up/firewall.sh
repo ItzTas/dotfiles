@@ -21,8 +21,12 @@ _set_up_ufw() {
         --localsend)
             allows+=("53317/tcp")
             ;;
+        --ssh)
+            allows+=("ssh")
+            ;;
         --all)
             allows+=("qBittorrent")
+            allows+=("ssh")
             allows+=("53317/tcp")
             ;;
         *)
