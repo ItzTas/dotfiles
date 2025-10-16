@@ -26,3 +26,7 @@ fi
 if command -v phpenv &>/dev/null; then
 	eval "$(phpenv init -)"
 fi
+
+if command -v keychain &>/dev/null; then
+    eval "$(keychain -q --eval)"
+fi
