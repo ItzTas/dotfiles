@@ -4,7 +4,6 @@ _update_file() {
     local conf="$HOME/.config/minidlna/minidlna.conf"
     local target="/etc/minidlna.conf"
 
-    # Só adiciona se não existir ainda
     if ! sudo grep -Fxq "# DOTFILES CONFIG START" "$target"; then
         echo "→ Updating /etc/minidlna.conf with dotfiles content..."
         {
