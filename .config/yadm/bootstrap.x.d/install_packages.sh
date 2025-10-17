@@ -123,6 +123,7 @@ _install_pacman_packages() {
         "hidapi"
 
         # Apps
+        "seahorse"
         "mangohud"
         "nwg-look"
         "qbittorrent"
