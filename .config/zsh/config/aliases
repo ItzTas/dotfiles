@@ -163,11 +163,6 @@ if (( ${+commands[glow]} )); then
     alias glow='glow -s "$HOME/.config/glow/themes/catppuccin-macchiato.json"'
 fi
 
-# minidlnad
-if (( ${+commands[glow]} )); then
-    alias update-minidlnad='sudo minidlnad -R'
-fi
-
 # some more aliases
 if (( ${+commands[grip]} )); then
     alias renderMarkdown='grip'
