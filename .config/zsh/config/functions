@@ -432,7 +432,31 @@ rmvenv() {
 jupyinit() {
     jupytext --set-formats py:percent,ipynb "$@"
 }
+fi
 
+# minidlnad
+if (( ${+commands[minidlnad]} )); then
+update-minidlnad() {
+    local dirs=("Musics" "Pictures" "Videos")
+
+    for d in "${dirs[@]}"; do
+        local src="$HOME/$d/.minidlna"
+        local dst="/opt/media/$d"
+
+        if [[ -d "$src" ]]; then
+            echo "→ Copying $src to $dst..."
+            sudo cp -r "$src/." "$dst/"  # <- aqui é o truque
+            sudo chown -R minidlna:minidlna "$dst"
+        else
+            echo "⚠️  Source directory $src does not exist, skipping."
+        fi
+    done
+
+    echo "→ Rebuilding MiniDLNA database..."
+    sudo minidlnad -R
+
+    echo "✓ Update completed."
+}
 fi
 
 # others

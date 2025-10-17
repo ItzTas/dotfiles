@@ -6,6 +6,12 @@ _make_user_dirs() {
         "$HOME/Pictures/.minidlna"
         "$HOME/Videos/.minidlna"
     )
+
+    for dir in "${user_dirs[@]}"; do
+        mkdir -p "$dir"
+        chmod 755 "$dir"
+        echo "✓ Created $dir"
+    done
 }
 
 _update_file() {
@@ -39,6 +45,7 @@ _set_up() {
     sudo chown -R minidlna:minidlna /opt/media
     sudo chmod -R 755 /opt/media
 
+    _make_user_dirs
     _update_file
     echo "✓ Setup completed successfully."
 }
