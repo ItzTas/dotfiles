@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
 _make_user_dirs() {
+    local user_dirs=(
+        "$HOME/Musics/.minidlna"
+        "$HOME/Pictures/.minidlna"
+        "$HOME/Videos/.minidlna"
+    )
 }
 
 _update_file() {
@@ -13,6 +18,7 @@ _update_file() {
             echo ""
             echo "# DOTFILES CONFIG START"
             cat "$conf"
+            echo "friendly_name=$USER"
             echo "# DOTFILES CONFIG END"
         } | sudo tee -a "$target" >/dev/null
     else
