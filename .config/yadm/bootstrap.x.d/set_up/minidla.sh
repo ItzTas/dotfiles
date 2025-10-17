@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 _set_up() {
-    sudo mkdir -p /var/lib/minidlna/{music,pictures,videos}
-    sudo mkdir -p /var/log/minidlna
+    sudo mkdir -p /opt/media/{Musics,Pictures,Videos}
 
     if ! id -u minidlna &>/dev/null; then
         echo "→ Creating system user 'minidlna'..."
@@ -11,8 +10,8 @@ _set_up() {
         echo "✓ User 'minidlna' already exists."
     fi
 
-    sudo chown -R minidlna:minidlna /var/lib/minidlna
-    sudo chown -R minidlna:minidlna /var/log/minidlna
+    sudo chown -R minidlna:minidlna /opt/media
+    sudo chmod -R 755 /opt/media
 
     echo "✓ Setup completed successfully."
 }
