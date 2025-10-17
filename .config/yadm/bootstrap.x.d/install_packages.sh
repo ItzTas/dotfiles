@@ -56,6 +56,7 @@ _install_pacman_packages() {
         "xdg-desktop-portal-hyprland"
 
         # System utils
+        "gnome-keyring"
         "xdg-user-dirs"
         "keychain"
         "numlockx"
