@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+_make_user_dirs() {
+}
+
 _update_file() {
     local conf="$HOME/.config/minidlna/minidlna.conf"
     local target="/etc/minidlna.conf"
