@@ -221,14 +221,14 @@ _install_pacman_packages() {
         "rofi-emoji"
         "wlogout"
 
+        # Essentials
+        "cmake"
+        "polkit-gnome"
+
         # Others
         "timeshift"
         "termpicker"
         "zsh"
-
-        # Essentials
-        "cmake"
-        "polkit-gnome"
     )
 
     local installed=()
