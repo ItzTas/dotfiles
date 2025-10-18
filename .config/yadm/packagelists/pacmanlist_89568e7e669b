@@ -174,6 +174,7 @@ fluidsynth 2.5.0-2
 fmt 12.0.0-1
 fontconfig 2:2.17.1-1
 freeglut 3.6.0-2
+freerdp 2:3.17.2-2
 freetype2 2.14.1-1
 fribidi 1.0.16-2
 fuse-common 3.17.1-1
@@ -1001,6 +1002,7 @@ sdbus-cpp 2.1.0-2
 sddm 0.21.0-6
 sddm-sugar-candy-git 1.6r42.d31dbf5-1
 sdl2-compat 2.32.56-2
+sdl2_ttf 2.24.0-2
 sdl3 3.2.24-1
 seahorse 1:47.0.1-6
 seatd 0.9.1-1
@@ -1139,6 +1141,7 @@ weston 14.0.2-2
 wf-recorder 0.6.0-1
 wget 1.25.0-2
 which 2.23-1
+winboat-bin 0.8.7-1
 wiremix 0.7.0-1
 wireplumber 0.5.12-1
 wl-clip-persist 0.5.0-1
