@@ -125,7 +125,6 @@ _install_pacman_packages() {
 
         # Apps
         "seahorse"
-        "mangohud"
         "nwg-look"
         "qbittorrent"
         "alarm-clock-applet"
@@ -136,6 +135,11 @@ _install_pacman_packages() {
         "clamtk"
         "bitwarden-bin"
         "localsend-bin"
+
+        # games
+        "mangohud"
+        "gamemode"
+        "lib32-gamemode"
 
         # Docker
         "lazydocker"
