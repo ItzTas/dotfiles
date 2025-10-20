@@ -136,7 +136,8 @@ _install_pacman_packages() {
         "bitwarden-bin"
         "localsend-bin"
 
-        # games
+        # Games
+        "gamescope"
         "mangohud"
         "gamemode"
         "lib32-gamemode"
