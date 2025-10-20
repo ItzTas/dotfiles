@@ -137,6 +137,7 @@ _install_pacman_packages() {
         "localsend-bin"
 
         # Games
+        "lutris"
         "gamescope"
         "mangohud"
         "gamemode"
