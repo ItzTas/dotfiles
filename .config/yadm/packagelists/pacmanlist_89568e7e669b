@@ -115,7 +115,7 @@ dconf 0.49.0-1
 ddcutil 2.2.1-1
 debugedit 5.2-1
 default-cursors 3-1
-depot-tools-git r11793.6ca7d5af94-1
+depot-tools-git r11794.7709d4cdd7-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.35-1
 dex 0.9.0-2
@@ -1054,7 +1054,7 @@ speex 1.2.1-2
 speexdsp 1.2.1-2
 spicetify-cli 2.42.0-1
 spirv-tools 1:1.4.328.1-1
-spotify 1:1.2.63.394-1
+spotify 1:1.2.74.477-2
 sqlite 3.50.4-2
 sratom 0.6.18-1
 srt 1.5.4-1
