@@ -1,3 +1,4 @@
+7zip 25.01-1
 a52dec 0.8.0-2
 aalib 1.4rc5-19
 aardvark-dns 1.16.0-1
@@ -60,6 +61,7 @@ c-ares 1.34.5-1
 ca-certificates 20240618-1
 ca-certificates-mozilla 3.117-1
 ca-certificates-utils 20240618-1
+cabextract 1.11-2
 cairo 1.18.4-1
 cairo-perl 1.109-6
 cairomm 1.14.5-1
@@ -219,6 +221,8 @@ glu 9.0.3-2
 glycin 2.0.3-1
 gmp 6.3.0-2
 gn 0.2238.a84e399f-1
+gnome-desktop 1:44.4-1
+gnome-desktop-common 1:44.4-1
 gnome-keyring 1:48.0-1
 gnu-free-fonts 20120503-8
 gnulib-l10n 20241231-1
@@ -728,6 +732,7 @@ lsp-plugins-vst3 1.2.23-1
 lua 5.4.8-2
 lua51-lpeg 1.1.0-4
 luajit 2.1.1753364724-1
+lutris 0.5.19-6
 lv2 1.18.10-1
 lz4 1:1.10.0-2
 lzo 2.10-5
@@ -742,6 +747,7 @@ mdadm 4.4-2
 mdbook 0.4.52-1
 mesa 1:25.2.4-2
 mesa-demos 9.0.0-7
+mesa-utils 9.0.0-7
 meson 1.9.1-1
 minidlna 1.3.3-6
 minizip 1:1.3.1-2
@@ -898,9 +904,12 @@ python 3.13.7-1
 python-argcomplete 3.6.2-1
 python-attrs 25.4.0-1
 python-autocommand 2.2.2-7
+python-beautifulsoup4 4.14.2-1
 python-build 1.3.0-1
 python-cairo 1.28.0-1
+python-certifi 2025.10.05-1
 python-cffi 2.0.0-1
+python-charset-normalizer 3.4.4-1
 python-chevron 0.14.0-1
 python-click 8.2.1-1
 python-clickgen 2.2.5-1
@@ -909,11 +918,15 @@ python-contourpy 1.3.3-1
 python-cryptography 46.0.2-1
 python-cycler 0.12.1-3
 python-dateutil 2.9.0-6
+python-dbus 1.4.0-1
+python-distro 1.9.0-3
 python-editables 0.5-5
+python-evdev 1.9.2-1
 python-filelock 3.20.0-1
 python-fonttools 4.60.1-1
 python-gobject 3.54.5-1
 python-hatchling 1.27.0-1
+python-idna 3.10-2
 python-importlib-metadata 8.7.0-1
 python-installer 0.7.0-10
 python-jaraco.collections 5.1.0-1
@@ -921,10 +934,12 @@ python-jaraco.context 6.0.1-1
 python-jaraco.functools 4.1.0-1
 python-jaraco.text 4.0.0-2
 python-kiwisolver 1.4.7-1
+python-lxml 6.0.2-1
 python-mako 1.3.10-1
 python-markdown 3.9.0-1
 python-markupsafe 3.0.2-1
 python-matplotlib 3.10.6-1
+python-moddb 0.14.0-1
 python-more-itertools 10.8.0-1
 python-mutagen 1.47.0-3
 python-numpy 2.3.4-1
@@ -941,13 +956,17 @@ python-pypdf 6.1.1-1
 python-pyproject-hooks 1.2.0-3
 python-pyqt6 6.9.1-3
 python-pyqt6-sip 13.10.2-1
+python-requests 2.32.5-1
 python-setuptools 1:80.9.0-2
 python-six 1.17.0-1
+python-soupsieve 2.8-1
 python-stopit 1.1.2-9
 python-toml 0.10.2-12
 python-tomlkit 0.13.3-1
 python-tqdm 4.67.1-2
 python-trove-classifiers 2025.9.11.17-1
+python-typing_extensions 4.15.0-1
+python-urllib3 2.5.0-1
 python-wheel 0.45.1-1
 python-xmltodict 1.0.2-1
 python-yaml 6.0.3-1
