@@ -8,10 +8,10 @@ export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 # browser
-export BROWSER='zen-browser'
+export BROWSER="zen-browser"
 
 # editor
-export EDITOR='nvim'
+export EDITOR="nvim"
 
 # terminal
 export TERMINAL="ghostty"
