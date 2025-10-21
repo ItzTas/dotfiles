@@ -55,6 +55,10 @@ _install_pacman_packages() {
         "hypridle"
         "xdg-desktop-portal-hyprland"
 
+        # Compatibility
+        "wine"
+        "winetricks"
+
         # System utils
         "gnome-keyring"
         "xdg-user-dirs"
