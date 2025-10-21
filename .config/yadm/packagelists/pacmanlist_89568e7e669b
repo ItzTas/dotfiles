@@ -116,7 +116,7 @@ dconf 0.49.0-1
 ddcutil 2.2.1-1
 debugedit 5.2-1
 default-cursors 3-1
-depot-tools-git r11794.7709d4cdd7-1
+depot-tools-git r11795.16dfe4717b-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.35-1
 dex 0.9.0-2
@@ -1012,7 +1012,7 @@ qt5-wayland 5.15.17+kde+r57-1
 qt5-x11extras 5.15.17-1
 qt6-base 6.10.0-1
 qt6-charts 6.10.0-1
-qt6-declarative 6.10.0-1
+qt6-declarative 6.10.0-2
 qt6-multimedia 6.10.0-2
 qt6-multimedia-ffmpeg 6.10.0-2
 qt6-positioning 6.10.0-1
