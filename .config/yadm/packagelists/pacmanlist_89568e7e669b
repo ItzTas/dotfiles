@@ -234,6 +234,7 @@ gnutls 3.8.10-1
 go 2:1.25.3-1
 gobject-introspection 1.86.0-1
 gobject-introspection-runtime 1.86.0-1
+google-chrome 141.0.7390.122-1
 gperftools 2.17.2-1
 gpgme 2.0.1-1
 gpgmepp 2.0.0-2
