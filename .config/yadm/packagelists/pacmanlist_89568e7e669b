@@ -16,6 +16,7 @@ alsa-plugins 1:1.2.12-5
 alsa-topology-conf 1.2.5.1-4
 alsa-ucm-conf 1.2.14-2
 aom 3.13.1-1
+apparmor 4.1.2-1
 appstream 1.1.1-1
 appstream-glib 0.8.3-2
 aquamarine-git 0.9.5.r3.g1826a99-1
@@ -245,6 +246,7 @@ gnulib-l10n 20241231-1
 gnupg 2.4.8-1
 gnutls 3.8.10-1
 go 2:1.25.3-1
+go-tools 4:0.38.0-1
 gobject-introspection 1.86.0-1
 gobject-introspection-runtime 1.86.0-1
 google-chrome 141.0.7390.122-1
@@ -670,6 +672,7 @@ libtorrent-rasterbar 1:2.0.11-5
 libunibreak 6.1-1
 libunistring 1.3-1
 libunwind 1.8.2-1
+liburcu 0.15.3-1
 liburing 2.12-1
 libusb 1.0.29-1
 libusbmuxd 2.1.1-1
@@ -979,6 +982,7 @@ python-jaraco.functools 4.1.0-1
 python-jaraco.text 4.0.0-2
 python-jmespath 1.0.1-5
 python-kiwisolver 1.4.7-1
+python-legacy-cgi 2.6.3-2
 python-lxml 6.0.2-1
 python-mako 1.3.10-1
 python-markdown 3.9.0-1
@@ -1090,6 +1094,7 @@ simdjson 1:4.0.7-1
 skia-static 129-1
 slang 2.3.3-4
 slurp 1.5.0-1
+snapd 2.72-1
 snappy 1.2.2-2
 sndio 1.10.0-1
 socat 1.8.0.3-2
@@ -1103,6 +1108,7 @@ spicetify-cli 2.42.0-1
 spirv-tools 1:1.4.328.1-1
 spotify 1:1.2.74.477-2
 sqlite 3.50.4-2
+squashfs-tools 4.7.2-1
 sratom 0.6.18-1
 srt 1.5.4-1
 stacer-git 1.5.0.r1.ge82e92c-1
@@ -1245,6 +1251,7 @@ xdg-user-dirs 0.19-2
 xdg-utils 1.2.1-1
 xdotool 3.20211022.1-2
 xf86-input-libinput 1.5.0-1
+xfsprogs 6.16.0-3
 xkeyboard-config 2.46-1
 xmlsec 1.3.7-2
 xorg-fonts-encodings 1.1.0-1
