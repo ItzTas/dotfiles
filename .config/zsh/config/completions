@@ -57,6 +57,6 @@ fi
 fpath=(
     "$_GENERATED_COMPLETIONS_DIR"
     "$_MANUAL_COMPLETIONS_DIR"
-    "$HOME/.config/zsh/plugins/zsh-completions/src"
+    "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins/repos/zsh-completions/src"
     $fpath
 )
