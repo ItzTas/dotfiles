@@ -67,5 +67,4 @@ __source_zsh_config_files() {
 __source_zsh_config_files
 unset -f __source_zsh_config_files
 
-autoload -Uz compinit
-compinit 
+autoload -Uz compinit && compinit

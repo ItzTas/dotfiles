@@ -1,0 +1,4 @@
+#compdef aws
+
+autoload -Uz bashcompinit && bashcompinit
+complete -o default -C "$(command -v aws_completer)" aws
