@@ -8,7 +8,7 @@ _set_up() {
     xdg-mime default mpv.desktop video/mp4
     xdg-mime default mpv.desktop video/x-matroska
     xdg-mime default mpv.desktop video/webm
-    # xdg-mime default ghostty.desktop x-scheme-handler/terminal
+
     xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
     xdg-mime default nemo.desktop inode/directory
     xdg-mime default org.pwmt.zathura.desktop application/pdf
