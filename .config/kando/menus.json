@@ -1,189 +1,207 @@
 {
-    "menus": [
-        {
-            "shortcutID": "bookmarks",
-            "centered": false,
-            "root": {
-                "type": "submenu",
-                "name": "Bookmarks",
-                "icon": "award_star",
-                "iconTheme": "material-symbols-rounded",
-                "children": [
-                    {
-                        "type": "submenu",
-                        "name": "Extra",
-                        "icon": "folder",
-                        "iconTheme": "material-symbols-rounded",
-                        "children": [
-                            {
-                                "type": "command",
-                                "data": {
-                                    "command": "nemo \"$XDG_CONFIG_HOME\""
-                                },
-                                "name": ".config",
-                                "icon": "settings",
-                                "iconTheme": "material-symbols-rounded"
-                            },
-                            {
-                                "type": "command",
-                                "data": {
-                                    "command": "nemo \"$(xdg-user-dir PICTURES)/screenshots\""
-                                },
-                                "name": "Captures",
-                                "icon": "camera_alt",
-                                "iconTheme": "material-symbols-rounded"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "nemo \"$(xdg-user-dir DOWNLOAD)\""
-                        },
-                        "name": "Downloads",
-                        "icon": "download",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "nemo \"$(xdg-user-dir VIDEOS)\""
-                        },
-                        "name": "Videos",
-                        "icon": "video_camera_front",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "nemo \"$(xdg-user-dir PICTURES)\""
-                        },
-                        "name": "Pictures",
-                        "icon": "imagesmode",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "nemo \"$(xdg-user-dir DOCUMENTS)\""
-                        },
-                        "name": "Documents",
-                        "icon": "text_ad",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "nemo \"$(xdg-user-dir DESKTOP)\""
-                        },
-                        "name": "Desktop",
-                        "icon": "desktop_windows",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "nemo ~"
-                        },
-                        "name": "Home",
-                        "icon": "home",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "nemo \"$(xdg-user-dir MUSIC)\""
-                        },
-                        "name": "Music",
-                        "icon": "music_note",
-                        "iconTheme": "material-symbols-rounded"
-                    }
-                ]
-            }
-        },
-        {
-            "shortcutID": "shaders",
-            "centered": false,
-            "root": {
-                "type": "submenu",
-                "name": "Shaders",
-                "icon": "award_star",
-                "iconTheme": "material-symbols-rounded",
-                "children": [
-                    {
-                        "type": "submenu",
-                        "data": {},
-                        "name": "Extra",
-                        "icon": "scrollable_header",
-                        "iconTheme": "material-symbols-rounded",
-                        "children": []
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "hyprshade auto"
-                        },
-                        "name": "Auto",
-                        "icon": "auto_mode",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "hyprshade on colors"
-                        },
-                        "name": "Colors",
-                        "icon": "palette",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "submenu",
-                        "data": {},
-                        "name": "Dark",
-                        "icon": "dark_mode",
-                        "iconTheme": "material-symbols-rounded",
-                        "children": [
-                            {
-                                "type": "command",
-                                "data": {
-                                    "command": "hyprshade on extradark"
-                                },
-                                "name": "ExtraDark",
-                                "icon": "dark_mode",
-                                "iconTheme": "material-symbols-rounded"
-                            },
-                            {
-                                "type": "command",
-                                "data": {
-                                    "command": "hyprshade on blue-light-filter"
-                                },
-                                "name": "BLF",
-                                "icon": "filter_alt",
-                                "iconTheme": "material-symbols-rounded"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "hyprshade on vibrance"
-                        },
-                        "name": "Vibrance",
-                        "icon": "color_lens",
-                        "iconTheme": "material-symbols-rounded"
-                    },
-                    {
-                        "type": "command",
-                        "data": {
-                            "command": "hyprshade off"
-                        },
-                        "name": "OFF",
-                        "icon": "toggle_off",
-                        "iconTheme": "material-symbols-rounded"
-                    }
-                ]
-            }
-        }
-    ],
-    "templates": []
+  "version": "2.1.0",
+  "menus": [
+    {
+      "root": {
+        "type": "submenu",
+        "name": "Bookmarks",
+        "icon": "award_star",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "submenu",
+            "name": "Extra",
+            "icon": "folder",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "nemo \"$XDG_CONFIG_HOME\""
+                },
+                "name": ".config",
+                "icon": "settings",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "nemo \"$(xdg-user-dir PICTURES)/screenshots\""
+                },
+                "name": "Captures",
+                "icon": "camera_alt",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "nemo \"$(xdg-user-dir DOWNLOAD)\""
+            },
+            "name": "Downloads",
+            "icon": "download",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "nemo \"$(xdg-user-dir VIDEOS)\""
+            },
+            "name": "Videos",
+            "icon": "video_camera_front",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "nemo \"$(xdg-user-dir PICTURES)\""
+            },
+            "name": "Pictures",
+            "icon": "imagesmode",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "nemo \"$(xdg-user-dir DOCUMENTS)\""
+            },
+            "name": "Documents",
+            "icon": "text_ad",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "nemo \"$(xdg-user-dir DESKTOP)\""
+            },
+            "name": "Desktop",
+            "icon": "desktop_windows",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "nemo ~"
+            },
+            "name": "Home",
+            "icon": "home",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "nemo \"$(xdg-user-dir MUSIC)\""
+            },
+            "name": "Music",
+            "icon": "music_note",
+            "iconTheme": "material-symbols-rounded"
+          }
+        ]
+      },
+      "shortcut": "",
+      "shortcutID": "bookmarks",
+      "centered": false,
+      "anchored": false,
+      "hoverMode": false,
+      "tags": []
+    },
+    {
+      "root": {
+        "type": "submenu",
+        "name": "Shaders",
+        "icon": "award_star",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Extra",
+            "icon": "scrollable_header",
+            "iconTheme": "material-symbols-rounded",
+            "children": []
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "hyprshade auto"
+            },
+            "name": "Auto",
+            "icon": "auto_mode",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "hyprshade on colors"
+            },
+            "name": "Colors",
+            "icon": "palette",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Dark",
+            "icon": "dark_mode",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprshade on extradark"
+                },
+                "name": "ExtraDark",
+                "icon": "dark_mode",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprshade on blue-light-filter"
+                },
+                "name": "BLF",
+                "icon": "filter_alt",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "hyprshade on vibrance"
+            },
+            "name": "Vibrance",
+            "icon": "color_lens",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "hyprshade off"
+            },
+            "name": "OFF",
+            "icon": "toggle_off",
+            "iconTheme": "material-symbols-rounded"
+          }
+        ]
+      },
+      "shortcut": "",
+      "shortcutID": "shaders",
+      "centered": false,
+      "anchored": false,
+      "hoverMode": false,
+      "tags": []
+    }
+  ],
+  "collections": [
+    {
+      "name": "Favorites",
+      "icon": "favorite",
+      "iconTheme": "material-symbols-rounded",
+      "tags": [
+        "favs"
+      ]
+    }
+  ]
 }

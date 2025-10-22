@@ -31,6 +31,23 @@ x-scheme-handler/gitify=gitify.desktop
 x-scheme-handler/magnet=org.qbittorrent.qBittorrent.desktop
 application/x-bittorrent=org.qbittorrent.qBittorrent.desktop
 application/x-zerosize=nvim.desktop
+image/jpeg=org.gnome.gThumb.desktop
+image/png=org.gnome.gThumb.desktop
+image/gif=org.gnome.gThumb.desktop
+image/webp=org.gnome.gThumb.desktop
+image/tiff=org.gnome.gThumb.desktop
+image/bmp=org.gnome.gThumb.desktop
+image/x-xpixmap=org.gnome.gThumb.desktop
+image/x-tga=org.gnome.gThumb.desktop
+image/x-portable-bitmap=org.gnome.gThumb.desktop
+image/x-portable-graymap=org.gnome.gThumb.desktop
+image/x-portable-pixmap=org.gnome.gThumb.desktop
+image/x-xbitmap=org.gnome.gThumb.desktop
+image/x-icon=org.gnome.gThumb.desktop
+image/heif=org.gnome.gThumb.desktop
+image/heic=org.gnome.gThumb.desktop
+image/avif=org.gnome.gThumb.desktop
+image/svg+xml=org.gnome.gThumb.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;
