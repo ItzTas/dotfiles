@@ -42,6 +42,11 @@ if (( ${+commands[git-bug]} )); then
     fi
 fi
 
+# aws completions
+if (( ${+commands[aws]} )); then
+    # complete -C "$(which aws_completer)" aws
+fi
+
 # -------------------------------------------------------
 
 fpath=(
