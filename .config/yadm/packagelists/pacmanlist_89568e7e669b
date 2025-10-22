@@ -128,7 +128,7 @@ dconf 0.49.0-1
 ddcutil 2.2.1-1
 debugedit 5.2-1
 default-cursors 3-1
-depot-tools-git r11802.bafeb2db7a-1
+depot-tools-git r11803.d4e262a9c5-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.35-1
 dex 0.9.0-2
@@ -202,7 +202,7 @@ gameconqueror 0.17-10
 gamemode 1.8.2-1
 gamescope 3.16.17-1
 gawk 5.3.2-1
-gc 8.2.10-1
+gc 8.2.10-2
 gcc 15.2.1+r22+gc4e96a094636-1
 gcc-libs 15.2.1+r22+gc4e96a094636-1
 gcc14 14.3.1+r25+g42e99e057bd7-1
@@ -219,7 +219,7 @@ giflib 5.2.2-2
 girara 0.4.5-1
 git 2.51.1-2
 git-bug 0.10.1-1
-github-cli 2.82.0-1
+github-cli 2.82.1-1
 gitify 6.10.0-1
 glaze 6.0.1-1
 glew 2.2.0-7
@@ -342,7 +342,7 @@ java-environment-common 3-6
 java-runtime-common 3-6
 jbig2dec 0.20-1
 jbigkit 2.1-8
-jdk11-openjdk 11.0.28.u6-1
+jdk11-openjdk 11.0.29.u7-1
 jq 1.8.1-1
 json-c 0.18-2
 json-glib 1.10.8-1
@@ -880,7 +880,7 @@ pay-respects 0.7.9-1
 pciutils 3.14.0-1
 pcre 8.45-4
 pcre2 10.46-1
-pcsclite 2.4.0-2
+pcsclite 2.4.0-3
 perl 5.42.0-1
 perl-cairo-gobject 1.005-5
 perl-clone 0.47-2
@@ -970,7 +970,7 @@ python-filelock 3.20.0-1
 python-fonttools 4.60.1-1
 python-gobject 3.54.5-1
 python-hatchling 1.27.0-1
-python-idna 3.10-2
+python-idna 3.11-1
 python-importlib-metadata 8.7.0-1
 python-installer 0.7.0-10
 python-jaraco.collections 5.1.0-1
@@ -1158,7 +1158,7 @@ usbutils 018-1
 uthash 2.3.0-2
 util-linux 2.41.2-1
 util-linux-libs 2.41.2-1
-uv 0.9.4-1
+uv 0.9.5-1
 v4l-utils 1.32.0-1
 vapoursynth 72-1
 vdpauinfo 1.5-2
