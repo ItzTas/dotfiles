@@ -129,7 +129,7 @@ dconf 0.49.0-1
 ddcutil 2.2.1-1
 debugedit 5.2-1
 default-cursors 3-1
-depot-tools-git r11803.d4e262a9c5-1
+depot-tools-git r11804.8a1ec6a021-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.35-1
 dex 0.9.0-2
