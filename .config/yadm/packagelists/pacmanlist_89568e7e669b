@@ -129,7 +129,7 @@ dconf 0.49.0-1
 ddcutil 2.2.1-1
 debugedit 5.2-1
 default-cursors 3-1
-depot-tools-git r11804.8a1ec6a021-1
+depot-tools-git r11806.cd260a79de-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.35-1
 dex 0.9.0-2
@@ -263,7 +263,7 @@ graphviz 14.0.2-1
 grep 3.12-2
 grim 1.5.0-2
 groff 1.23.0-7
-grub 2:2.12.r418.g6b5c671d-1
+grub 2:2.12.r418.g6b5c671d-2
 gsettings-desktop-schemas 49.1-1
 gsettings-system-schemas 49.1-1
 gsfonts 20200910-6
@@ -451,7 +451,7 @@ lib32-openssl-1.1 1.1.1.w-2
 lib32-orc 0.4.41-1
 lib32-p11-kit 0.25.10-2
 lib32-pam 1.7.1-1
-lib32-pcre2 10.46-1
+lib32-pcre2 10.47-1
 lib32-pipewire 1:1.4.9-1
 lib32-speex 1.2.1-2
 lib32-spirv-tools 1:1.4.328.1-1
@@ -600,7 +600,7 @@ libnfnetlink 1.0.2-2
 libnftnl 1.3.0-1
 libnghttp2 1.67.1-1
 libnghttp3 1.12.0-1
-libngtcp2 1.16.0-1
+libngtcp2 1.17.0-1
 libnice 0.1.22-2
 libnl 3.11.0-1
 libnm 1.54.1-1
@@ -774,7 +774,7 @@ lsp-plugins-vst 1.2.23-1
 lsp-plugins-vst3 1.2.23-1
 lua 5.4.8-2
 lua51-lpeg 1.1.0-4
-luajit 2.1.1753364724-1
+luajit 2.1.1760617492-1
 lutris 0.5.19-6
 lv2 1.18.10-1
 lz4 1:1.10.0-2
@@ -882,7 +882,7 @@ pavucontrol 1:6.2-1
 pay-respects 0.7.9-1
 pciutils 3.14.0-1
 pcre 8.45-4
-pcre2 10.46-1
+pcre2 10.47-1
 pcsclite 2.4.0-3
 perl 5.42.0-1
 perl-cairo-gobject 1.005-5
@@ -1119,7 +1119,7 @@ svt-av1 3.1.2-1
 swaync 0.12.2-1
 swayosd-gtk3 0.1.0-1
 swig 4.3.1-1
-sysd-manager 2.5.1-1
+sysd-manager 2.5.2-1
 systemd 258.1-1
 systemd-libs 258.1-1
 systemd-sysvcompat 258.1-1
