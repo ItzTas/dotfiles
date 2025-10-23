@@ -1,3 +1,5 @@
 formatter:
   type: basic
   retain_line_breaks_single: true
+  continue_on_error: true
+  trim_trailing_whitespace: true
