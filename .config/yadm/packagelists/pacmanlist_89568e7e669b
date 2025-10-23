@@ -509,7 +509,7 @@ libdatrie 0.2.13-4
 libdbusmenu-glib 16.04.0.r498-2
 libdbusmenu-gtk3 16.04.0.r498-2
 libde265 1.0.16-2
-libdecor 0.2.3-1
+libdecor 0.2.4-1
 libdeflate 1.24-1
 libdisplay-info 0.3.0-1
 libdovi 3.3.2-1
@@ -1168,7 +1168,7 @@ uv 0.9.5-1
 v4l-utils 1.32.0-1
 vapoursynth 72-1
 vdpauinfo 1.5-2
-vesktop-git 1.6.0.r4.g800a971-1
+vesktop-git 1.6.0.r6.gcd1a40e-1
 vid.stab 1.1.1-2
 vim 9.1.1841-1
 vim-runtime 9.1.1841-1
@@ -1276,7 +1276,7 @@ yq 3.4.3-2
 yyjson 0.12.0-1
 zathura 0.5.13-1
 zathura-pdf-poppler 0.3.3-6
-zen-browser-bin 1.17b-1
+zen-browser-bin 1.17.1b-1
 zenity 4.2.0-1
 zeromq 4.3.5-2
 zimg 3.0.5-1
