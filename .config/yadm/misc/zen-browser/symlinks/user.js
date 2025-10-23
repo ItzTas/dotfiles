@@ -5,8 +5,8 @@ user_pref('privacy.clearOnShutdown.cache', false); // Cleans cache on exit
 
 // ==== Media ====
 user_pref('media.peerconnection.enabled', true); // WebRTC (if disabled prevents IP leaks)
-user_pref('media.peerconnection.ice.default_address_only', true); // Only use default network address for WebRTC (if enabled)
-user_pref('media.peerconnection.ice.no_host', true); // Prevents exposing local IPs in WebRTC (if enabled)
+user_pref('media.peerconnection.ice.default_address_only', false); // Only use default network address for WebRTC (if enabled)
+user_pref('media.peerconnection.ice.no_host', false); // Prevents exposing local IPs in WebRTC (if enabled)
 
 // ==== Browser Telemetry ====
 user_pref('browser.ping-centre.telemetry', false); // Telemetry sent to Mozilla via PingCentre
