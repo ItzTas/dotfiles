@@ -1,7 +1,7 @@
 [Nemo Action]
 Name=Copy image to clipboard
 Comment=Copy image content to clipboard
-Exec=wl-copy-file "%F"
+Exec=bash -c 'wl-copy < "$0"' "%F"
 Icon-Name=edit-copy
 Selection=single
 Extensions=png;jpg;jpeg;gif;bmp;webp
