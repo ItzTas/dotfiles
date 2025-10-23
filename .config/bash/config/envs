@@ -30,14 +30,14 @@ export BROWSER='zen-browser'
 
 # editor
 if command -v nvim &>/dev/null; then
-    export EDITOR='nvim'
+	export EDITOR='nvim'
 fi
 
 # terminal
 if command -v ghostty &>/dev/null; then
-    export TERMINAL="ghostty"
+	export TERMINAL="ghostty"
 elif command -v kitty &>/dev/null; then
-    export TERMINAL="kitty"
+	export TERMINAL="kitty"
 fi
 
 # colors in gcc
@@ -67,23 +67,24 @@ export XDG_VIDEOS_DIR="$HOME/Videos"
 export PATH="$PATH:/home/talinux/.dotnet/tools"
 export ANDROID_HOME=$HOME/.AndroidS/Sdk/
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
+export PATH="$HOME/.local/bin:$PATH"
 
 # go bin
 if command -v go &>/dev/null; then
-    export PATH=$PATH:$HOME/go/bin
+	export PATH=$PATH:$HOME/go/bin
 fi
 
 # phpenv
 if command -v phpenv &>/dev/null; then
-    export PATH="$HOME/.phpenv/bin:$PATH"
+	export PATH="$HOME/.phpenv/bin:$PATH"
 fi
 
 # cargo
 if command -v cargo &>/dev/null; then
-    export PATH=$PATH:~/.cargo/env
+	export PATH=$PATH:~/.cargo/env
 fi
 
 # snap
 if command -v snap &>/dev/null; then
-    export PATH="$PATH:/var/lib/snapd/snap/bin"
+	export PATH="$PATH:/var/lib/snapd/snap/bin"
 fi
