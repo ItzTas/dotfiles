@@ -843,7 +843,7 @@ nvidia-settings 580.95.05-1
 nvidia-utils 580.95.05-1
 nvm 0.40.3-1
 nwg-look 1.0.6-1
-obs-studio-git 32.0.1.r2.g5ec3af3-1
+obs-studio-git 32.0.2.r0.gc025f21-1
 ocl-icd 2.3.3-1
 oh-my-posh 27.2.1-1
 onetbb 2022.2.0-1
@@ -1170,7 +1170,7 @@ uv 0.9.5-1
 v4l-utils 1.32.0-1
 vapoursynth 72-1
 vdpauinfo 1.5-2
-vesktop-git 1.6.0.r6.gcd1a40e-1
+vesktop-git 1.6.0.r9.ga242d5d-1
 vid.stab 1.1.1-2
 vim 9.1.1841-1
 vim-runtime 9.1.1841-1
