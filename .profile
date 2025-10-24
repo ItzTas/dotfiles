@@ -17,7 +17,7 @@ export EDITOR="nvim"
 export TERMINAL="ghostty"
 
 # desktop dirs
-export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share:/usr/local/share:/usr/share:$XDG_DATA_DIRS"
+export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}"
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
