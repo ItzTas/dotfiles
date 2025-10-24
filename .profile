@@ -21,3 +21,4 @@ export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.config/yadm/bin:$PATH"
