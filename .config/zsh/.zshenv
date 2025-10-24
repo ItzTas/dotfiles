@@ -45,7 +45,6 @@ export PATH="$HOME/.phpenv/bin:$PATH"
 export PATH="$PATH:$HOME/.cargo/env"
 export PATH="$PATH:/var/lib/snapd/snap/bin"
 export PATH="$PATH:$HOME/.config/yadm/bin"
-export PATH="$HOME/.config/yadm/bin:$PATH"
 
 # pnpm
 case ":$PATH:" in
