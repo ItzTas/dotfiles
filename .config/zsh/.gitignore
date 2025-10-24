@@ -1,4 +1,5 @@
 .zcompdump
 history
+.dircolors
 plugins/repos/
 completions/generated/
