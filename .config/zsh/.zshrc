@@ -11,6 +11,7 @@ if [[ -f "$HOME/.config/zsh/config/prompt" ]]; then
     source "$HOME/.config/zsh/config/prompt"
 fi
 
+
 # --------------------- Plugins ---------------------
 
 __source_zsh_plugins() {
