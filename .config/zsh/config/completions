@@ -46,7 +46,7 @@ fi
 if (( ${+commands[aws]} )); then
   function _aws_lazy_completion() {
     autoload -Uz bashcompinit && bashcompinit
-    complete -C "$(which aws_completer)" aws
+    complete -C ${commands[aws_completer]} aws
     unfunction _aws_lazy_completion
   }
   add-zsh-hook precmd _aws_lazy_completion
