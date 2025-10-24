@@ -1,2 +1,4 @@
 .zcompdump
 history
+plugins/repos/
+completions/generated/
