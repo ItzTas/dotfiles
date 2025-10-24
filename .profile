@@ -18,12 +18,6 @@ export TERMINAL="ghostty"
 
 # desktop dirs
 export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share:/usr/local/share:/usr/share:$XDG_DATA_DIRS"
-for d in "$HOME/.virtualenvs"/*/share/applications; do
-	if [ -d "$d" ]; then
-		XDG_DATA_DIRS="$d:$XDG_DATA_DIRS"
-	fi
-done
-export XDG_DATA_DIRS
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
