@@ -1,7 +1,7 @@
 _create_symlinks() {
     [ ! -d ~/.local/bin ] && mkdir -p ~/.local/bin
-    [ ! -L ~/.local/bin/x-www-browser ] && ln -sf "$(which zen-browser)" ~/.local/bin/x-www-browser
-    [ ! -L ~/.local/bin/x-terminal-emulator ] && ln -s "$(which ghostty)" ~/.local/bin/x-terminal-emulator
+    [ ! -L ~/.local/bin/x-www-browser ] && ln -sf "$(command -v zen-browser)" ~/.local/bin/x-www-browser
+    [ ! -L ~/.local/bin/x-terminal-emulator ] && ln -s "$(command -v kitty)" ~/.local/bin/x-terminal-emulator
 }
 
 _set_up() {
