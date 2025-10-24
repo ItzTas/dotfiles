@@ -180,6 +180,7 @@ ffmpeg 2:8.0-3
 ffmpeg4.4 4.4.6-3
 ffnvcodec-headers 13.0.19.0-1
 fftw 3.3.10-7
+figlet 2.2.5-6
 file 5.46-5
 file-roller 44.6-1
 filesystem 2025.10.12-1
@@ -263,6 +264,7 @@ graphene 1.10.8-2
 graphite 1:1.3.14-5
 graphviz 14.0.2-1
 grep 3.12-2
+grex 1.4.5-1
 grim 1.5.0-2
 groff 1.23.0-7
 grub 2:2.12.r418.g6b5c671d-2
@@ -762,6 +764,7 @@ llvm-libs 21.1.4-1
 lm_sensors 1:3.6.2-1
 lmdb 0.9.33-1
 localsend-bin 1.17.0-1
+lolcat 100.0.1-5
 lpsolve 5.5.2.11-3
 lsb-release 2.0.r55.a25a4fc-1
 lsd 1.2.0-1
@@ -971,6 +974,7 @@ python-distro 1.9.0-3
 python-docutils 1:0.22.2-1
 python-editables 0.5-5
 python-evdev 1.9.2-1
+python-faker 37.11.0-1
 python-filelock 3.20.0-1
 python-fonttools 4.60.1-1
 python-gobject 3.54.5-1
@@ -1020,6 +1024,7 @@ python-tomlkit 0.13.3-1
 python-tqdm 4.67.1-2
 python-trove-classifiers 2025.9.11.17-1
 python-typing_extensions 4.15.0-1
+python-tzdata 2025.2.post0-1
 python-urllib3 2.5.0-2
 python-wcwidth 0.2.14-1
 python-wheel 0.45.1-1
@@ -1069,6 +1074,13 @@ rofi-emoji 4.1.0-2
 rsync 3.4.1-2
 rtkit 0.13-3
 rubberband 4.0.0-1
+ruby 3.4.7-1
+ruby-erb 4.0.4-9
+ruby-manpages 0.6.1-8
+ruby-optimist 3.1.0-5
+ruby-paint 2.3.0-6
+ruby-rdoc 6.14.0-1
+rubygems 3.6.9-1
 run-parts 5.23.2-1
 runc 1.3.2-1
 rust 1:1.90.0-4

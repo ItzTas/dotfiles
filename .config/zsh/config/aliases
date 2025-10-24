@@ -160,6 +160,10 @@ if (( ${+commands[glow]} )); then
     alias glow='glow -s "$HOME/.config/glow/themes/catppuccin-macchiato.json"'
 fi
 
+if (( ${+commands[grex]} )); then
+    alias grex='grex -c'
+fi
+
 # some more aliases
 if (( ${+commands[grip]} )); then
     alias renderMarkdown='grip'
