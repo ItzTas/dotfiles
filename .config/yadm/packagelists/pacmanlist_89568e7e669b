@@ -128,6 +128,7 @@ dbus-glib 0.114-1
 dbus-units 37-2
 dconf 0.49.0-1
 ddcutil 2.2.1-1
+debtap 3.6.3-1
 debugedit 5.2-1
 default-cursors 3-1
 depot-tools-git r11806.cd260a79de-1
@@ -541,6 +542,7 @@ libfreeaptx 0.2.2-1
 libfreehand 0.1.2-5
 libfyaml 0.9-1
 libgcrypt 1.11.2-1
+libgdiplus 6.2-1
 libgee 0.20.8-1
 libgexiv2 0.14.6-1
 libgirepository 1.86.0-1
@@ -803,6 +805,7 @@ miru-go-bin 0.0.21-1
 mkinitcpio 39.2-5
 mkinitcpio-busybox 1.36.1-1
 mobile-broadband-provider-info 20250613-1
+mono 6.12.0.206-1
 mpdecimal 4.0.1-1
 mpfr 4.2.2-1
 mpg123 1.33.2-1
@@ -810,6 +813,7 @@ mpv 1:0.40.0-7
 msgpack-c 6.1.0-2
 mtdev 1.1.7-1
 mujs 1.3.7-1
+namcap 3.6.0-2
 nasm 3.01-1
 ncdu 2.9.1-2
 ncurses 6.5-4
@@ -928,6 +932,7 @@ pipewire-jack 1:1.4.9-1
 pipewire-pulse 1:1.4.9-1
 pixman 0.46.4-1
 pkgconf 2.5.1-1
+pkgfile 25-1
 playerctl 2.4.1-4
 plocate 1.1.23-1
 pnpm 10.19.0-1
@@ -955,6 +960,7 @@ python-attrs 25.4.0-1
 python-autocommand 2.2.2-7
 python-awscrt 0.28.2-1
 python-beautifulsoup4 4.14.2-1
+python-boolean.py 5.0-1
 python-build 1.3.0-1
 python-cairo 1.28.0-1
 python-certifi 2025.10.05-1
@@ -989,6 +995,7 @@ python-jaraco.text 4.0.0-2
 python-jmespath 1.0.1-5
 python-kiwisolver 1.4.7-1
 python-legacy-cgi 2.6.3-2
+python-license-expression 30.4.4-1
 python-lxml 6.0.2-1
 python-mako 1.3.10-1
 python-markdown 3.9.0-1
@@ -1006,6 +1013,7 @@ python-platformdirs 4.5.0-1
 python-pluggy 1.6.0-1
 python-prompt_toolkit 3.0.52-1
 python-pycparser 2.23-1
+python-pyelftools 0.32-1
 python-pymediainfo 6.1.0-4
 python-pyparsing 3.2.5-1
 python-pypdf 6.1.3-1
@@ -1086,6 +1094,7 @@ runc 1.3.2-1
 rust 1:1.90.0-4
 s2n-tls 1.5.27-1
 sassc 3.6.2-5
+savewizard 1.0.7646.26709-1
 sbc 2.1-1
 scdoc 1.11.3-1
 sdbus-cpp 2.1.0-2
