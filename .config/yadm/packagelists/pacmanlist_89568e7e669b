@@ -80,7 +80,7 @@ cairo 1.18.4-1
 cairo-perl 1.109-6
 cairomm 1.14.5-1
 cairomm-1.16 1.18.0-2
-calf 0.90.8-4
+calf 0.90.8-5
 camunda-modeler 5.37.0-1
 candy-icons-git r1337.40cbbc8-1
 catatonit 0.2.1-2
@@ -848,7 +848,7 @@ nvm 0.40.3-1
 nwg-look 1.0.6-1
 obs-studio-git 32.0.2.r0.gc025f21-1
 ocl-icd 2.3.3-1
-oh-my-posh 27.2.1-1
+oh-my-posh 27.3.1-1
 onetbb 2022.2.0-1
 oniguruma 6.9.10-1
 onlyoffice-bin 9.1.0-1
@@ -857,7 +857,7 @@ opencl-nvidia 580.95.05-1
 opencore-amr 0.1.6-2
 openh264 2.6.0-1
 openjpeg2 2.5.4-1
-openssh 10.2p1-1
+openssh 10.2p1-2
 openssl 3.6.0-1
 openssl-1.1 1.1.1.w-2
 opus 1.5.2-1
