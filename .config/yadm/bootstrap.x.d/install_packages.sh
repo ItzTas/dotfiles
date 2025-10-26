@@ -60,6 +60,7 @@ _install_pacman_packages() {
         "winetricks"
 
         # System utils
+        "debtap"
         "gnome-keyring"
         "xdg-user-dirs"
         "keychain"
