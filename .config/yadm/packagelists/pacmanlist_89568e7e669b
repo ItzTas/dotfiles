@@ -131,7 +131,7 @@ ddcutil 2.2.1-1
 debtap 3.6.3-1
 debugedit 5.2-1
 default-cursors 3-1
-depot-tools-git r11806.cd260a79de-1
+depot-tools-git r11807.68c003435f-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.35-1
 dex 0.9.0-2
@@ -1105,7 +1105,7 @@ seatd 0.9.1-1
 sed 4.9-3
 semver 7.7.3-1
 serd 0.32.4-1
-sesh-bin 2.18.1-1
+sesh-bin 2.18.2-1
 shaderc 2025.4-2
 shadow 4.18.0-1
 shared-mime-info 2.4-2
