@@ -156,12 +156,13 @@ _install_pacman_packages() {
         "docker-buildx"
 
         # Cursor & Fonts
-        "ttf-jetbrains-mono-nerd"
         "bibata-cursor-theme"
-        "ttf-nerd-fonts-symbols"
         "noto-fonts"
+        "ttf-ms-fonts"
         "noto-fonts-cjk"
         "noto-fonts-emoji"
+        "ttf-nerd-fonts-symbols"
+        "ttf-jetbrains-mono-nerd"
 
         # Git
         "gitify"
