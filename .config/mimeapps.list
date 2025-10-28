@@ -48,6 +48,7 @@ image/heif=org.gnome.gThumb.desktop
 image/heic=org.gnome.gThumb.desktop
 image/avif=org.gnome.gThumb.desktop
 image/svg+xml=org.gnome.gThumb.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;
