@@ -131,7 +131,7 @@ ddcutil 2.2.1-1
 debtap 3.6.3-1
 debugedit 5.2-1
 default-cursors 3-1
-depot-tools-git r11812.13828a4918-1
+depot-tools-git r11816.2f32d6a0d5-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.36-1
 dex 0.9.0-2
@@ -850,7 +850,7 @@ nvidia-settings 580.95.05-1
 nvidia-utils 580.95.05-1
 nvm 0.40.3-1
 nwg-look 1.0.6-1
-obs-studio-git 32.0.2.r0.gc025f21-1
+obs-studio-git 32.0.2.r1.gea7078b-1
 ocl-icd 2.3.3-1
 oh-my-posh 27.4.0-1
 onetbb 2022.2.0-1
