@@ -186,7 +186,7 @@ file 5.46-5
 file-roller 44.6-1
 filesystem 2025.10.12-1
 findutils 4.10.0-3
-firefox 144.0-1
+firefox 144.0.2-1
 flac 1.5.0-1
 flameshot 13.3.0-1
 flatpak 1:1.16.1-1
@@ -268,7 +268,7 @@ grep 3.12-2
 grex 1.4.5-1
 grim 1.5.0-2
 groff 1.23.0-7
-grub 2:2.12.r418.g6b5c671d-2
+grub 2:2.14rc1-2
 gsettings-desktop-schemas 49.1-1
 gsettings-system-schemas 49.1-1
 gsfonts 20200910-6
