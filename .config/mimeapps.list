@@ -49,6 +49,11 @@ image/heic=org.gnome.gThumb.desktop
 image/avif=org.gnome.gThumb.desktop
 image/svg+xml=org.gnome.gThumb.desktop
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors.desktop
+x-scheme-handler/pttp=CiscoPacketTracerPtsa-9.0.0.desktop
+application/x-pka=CiscoPacketTracer-9.0.0.desktop
+application/x-pkt=CiscoPacketTracer-9.0.0.desktop
+application/x-pkz=CiscoPacketTracer-9.0.0.desktop
+application/x-pksz=CiscoPacketTracer-9.0.0.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;
