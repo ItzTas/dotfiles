@@ -870,6 +870,7 @@ os-prober 1.83-1
 ostree 2025.6-1
 p11-kit 0.25.10-2
 pacfiles 0.2.7-2
+packettracer 9.0.0-1
 pacman 7.0.0.r6.gc685ae6-6
 pacman-contrib 1.13.0-1
 pacman-mirrorlist 20251021-1
