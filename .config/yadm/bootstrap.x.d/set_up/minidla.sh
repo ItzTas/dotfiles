@@ -24,7 +24,7 @@ _update_file() {
             echo ""
             echo "# DOTFILES CONFIG START"
             cat "$conf"
-            echo "friendly_name=$USER"
+            echo "friendly_name=$(hostname)-$USER"
             echo "# DOTFILES CONFIG END"
         } | sudo tee -a "$target" >/dev/null
     else
