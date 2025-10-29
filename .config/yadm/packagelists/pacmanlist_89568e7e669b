@@ -188,7 +188,7 @@ filesystem 2025.10.12-1
 findutils 4.10.0-3
 firefox 144.0-1
 flac 1.5.0-1
-flameshot 13.2.0-1
+flameshot 13.3.0-1
 flatpak 1:1.16.1-1
 flex 2.6.4-5
 fluidsynth 2.5.0-3
@@ -253,7 +253,7 @@ go 2:1.25.3-1
 go-tools 4:0.38.0-1
 gobject-introspection 1.86.0-1
 gobject-introspection-runtime 1.86.0-1
-google-chrome 141.0.7390.122-1
+google-chrome 142.0.7444.59-1
 gperftools 2.17.2-1
 gpgme 2.0.1-1
 gpgmepp 2.0.0-2
