@@ -131,7 +131,7 @@ ddcutil 2.2.1-1
 debtap 3.6.3-1
 debugedit 5.2-1
 default-cursors 3-1
-depot-tools-git r11816.2f32d6a0d5-1
+depot-tools-git r11823.33744dc6bc-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.36-1
 dex 0.9.0-2
@@ -311,12 +311,12 @@ htmlq 0.4.0-2
 hunspell 1.7.2-2
 hwdata 0.400-1
 hwloc 2.12.2-1
-hydra-launcher-bin 3.7.1-1
+hydra-launcher-bin 3.7.2-1
 hyphen 2.8.8-6
 hyprcursor-git 0.1.13.r0.g44e91d4-1
 hyprgraphics-git 0.2.0.r1.g50fb9f0-1
 hypridle-git 0.1.7.r1.gf158b2f-1
-hyprland-git 0.51.0.r83.gee5d05f-1
+hyprland-git 0.51.0.r129.g6ade4d5-1
 hyprland-protocols-git 0.7.0.r0.gbd153e7-1
 hyprland-qt-support-git 0.1.0.r10.g9ef7f69-1
 hyprland-qtutils-git 0.1.5.r2.g629b15c-1
@@ -850,7 +850,7 @@ nvidia-settings 580.95.05-1
 nvidia-utils 580.95.05-1
 nvm 0.40.3-1
 nwg-look 1.0.6-1
-obs-studio-git 32.0.2.r1.gea7078b-1
+obs-studio-git 32.0.2.r4.g189ed7c-1
 ocl-icd 2.3.3-1
 oh-my-posh 27.4.0-1
 onetbb 2022.2.0-1
@@ -1188,7 +1188,7 @@ usbutils 019-1
 uthash 2.3.0-2
 util-linux 2.41.2-1
 util-linux-libs 2.41.2-1
-uv 0.9.5-1
+uv 0.9.6-1
 v4l-utils 1.32.0-1
 vapoursynth 72-1
 vdpauinfo 1.5-2
