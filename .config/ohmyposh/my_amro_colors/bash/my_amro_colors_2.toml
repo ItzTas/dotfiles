@@ -101,7 +101,7 @@ version                   = 3
     [[blocks.segments]]
         foreground = '#7FD5EA'
         style      = 'plain'
-        template   = ' ‭ﳑ '
+        template   = '  '
         type       = 'go'
 
     [[blocks.segments]]
