@@ -89,7 +89,7 @@
     statusHints = false
 
 [rerere]
-    enabled = true
+    enabled = false
 
 [help]
     autocorrect = 1
@@ -98,7 +98,7 @@
     textconv = hexdump -v -C
 
 [merge]
-    tool = nvimdiff
+    tool = meld
     log = true
 
 [mergetool "nvimdiff"]
