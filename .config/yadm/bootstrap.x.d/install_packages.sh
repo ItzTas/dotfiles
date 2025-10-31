@@ -165,6 +165,7 @@ _install_pacman_packages() {
         "ttf-jetbrains-mono-nerd"
 
         # Git
+        "meld"
         "gitify"
         "lazygit"
         "github-cli"
