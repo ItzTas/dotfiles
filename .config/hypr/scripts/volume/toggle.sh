@@ -12,5 +12,4 @@ fi
 notify-send "$message" -e \
     --icon="$HOME/.config/dunst/assets/$icon" \
     --expire-time=500 \
-    --replace-id=2593 \
-    -a "_transient"
+    --replace-id=2593
