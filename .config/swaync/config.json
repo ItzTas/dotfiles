@@ -40,7 +40,7 @@
         },
         "transient": {
             "state": "transient",
-            "app-name": "_transient"
+            "app-name": "__transient"
         }
     },
     "widgets": [
