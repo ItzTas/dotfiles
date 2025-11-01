@@ -292,7 +292,7 @@ gtk-update-icon-cache 1:4.20.2-3
 gtk2 2.24.33-5
 gtk3 1:3.24.51-1
 gtk4 1:4.20.2-3
-gtk4-layer-shell 1.2.0-1
+gtk4-layer-shell 1.3.0-1
 gtkmm-4.0 4.20.0-1
 gtkmm3 3.24.10-1
 gtksourceview4 4.8.4-2
@@ -883,7 +883,7 @@ nwg-look 1.0.6-1
 obs-studio-git 32.0.2.r5.g32ba0c3-1
 ocl-icd 2.3.3-1
 oh-my-posh 27.4.0-1
-onetbb 2022.2.0-1
+onetbb 2022.3.0-1
 oniguruma 6.9.10-1
 onlyoffice-bin 9.1.0-1
 openal 1.24.3-2
@@ -1175,7 +1175,7 @@ startup-notification 0.12-9
 steam 1.0.0.85-1
 sudo 1.9.17.p2-1
 svt-av1 3.1.2-1
-swaync 0.12.2-1
+swaync 0.12.2-2
 swayosd-gtk3 0.1.0-1
 swig 4.3.1-1
 sysd-manager 2.6.0-1
