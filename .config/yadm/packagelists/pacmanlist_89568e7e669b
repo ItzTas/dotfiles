@@ -982,7 +982,7 @@ postgresql 18.0-1
 postgresql-libs 18.0-1
 pps-tools 1.0.3-2
 procps-ng 4.0.5-3
-proto 0.53.4-1
+proto 0.54.0-1
 proton-ge-custom-bin 1:GE_Proton10_24-1
 psmisc 23.7-1
 pugixml 1.15-2
