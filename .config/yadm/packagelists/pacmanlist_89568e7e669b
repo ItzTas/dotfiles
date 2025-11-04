@@ -864,6 +864,7 @@ rust 1:1.91.0-1
 s2n-tls 1.6.0-1
 sassc 3.6.2-5
 sbc 2.1-1
+sbctl 0.18-1
 scdoc 1.11.3-1
 sdbus-cpp 2.1.0-2
 sddm 0.21.0-6
