@@ -1,6 +1,6 @@
 _set_up() {
-    sudo pacman -S base-devel
-    sudo pacman -S cmake meson cpio git
+    sudo pacman -S base-devel --no-confirm
+    sudo pacman -S cmake meson cpio git --no-confirm
 
     hyprpm update
 

@@ -45,4 +45,4 @@ _set_up() {
     _change_grub_theme
 }
 
-_set_up
+# _set_up
