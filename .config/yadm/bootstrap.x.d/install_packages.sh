@@ -241,7 +241,7 @@ _install_pacman_packages() {
 
         # Others
         "timeshift"
-        "termpicker"
+        "termpicker-bin"
         "zsh"
     )
 
