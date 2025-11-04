@@ -98,12 +98,13 @@ _install_pacman_packages() {
 
         # Cli tools
         "yq"
-        "dex"
         "jq"
+        "dex"
         "fzf"
         "wget"
         "qman"
         "curl"
+        "sbctl"
         "direnv"
         "man-db"
         "ddcutil"
