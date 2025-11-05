@@ -295,6 +295,10 @@ if (( ${+commands[proto]} )); then
 		proto run go -- "$@"
 	}
 
+	pyarn() {
+		proto run yarn -- "$@"
+	}
+
 	pnode() {
 		proto run node -- "$@"
 	}
