@@ -1,1 +1,4 @@
-/home/talinux/.prototools
+[settings]
+auto-install = true
+telemetry = false
+auto-clean = true
