@@ -1035,7 +1035,7 @@ tree-sitter-markdown 0.5.1-1
 tree-sitter-query 0.7.0-1
 tree-sitter-vim 0.7.0-1
 tree-sitter-vimdoc 4.0.0-1
-tslib 1.23-1
+tslib 1.24-1
 ttf-carlito 20230509-2
 ttf-dejavu 2.37+18+g9b5d1b2f-7
 ttf-jetbrains-mono-nerd 3.4.0-1
