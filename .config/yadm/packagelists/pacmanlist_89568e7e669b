@@ -117,6 +117,7 @@ dex 0.9.0-2
 diff-so-fancy 1.4.4-2
 diffutils 3.12-2
 direnv 2.37.1-1
+discord 1:0.0.113-1
 docker 1:28.5.1-1
 docker-buildx 0.29.1-1
 docker-compose 2.40.3-1
@@ -135,9 +136,11 @@ egl-gbm 1.1.2.1-1
 egl-wayland 4:1.1.20-1
 egl-x11 1.0.3-1
 eglexternalplatform 1.2.1-1
+electron 1:38-1
 electron35 35.7.5-1
 electron37 37.5.1-1
 electron38 38.5.0-1
+electron39-bin 39.1.0-1
 elfutils 0.194-1
 enchant 2.8.12-1
 eww 0.6.0-1
@@ -528,6 +531,7 @@ libnfnetlink 1.0.2-2
 libnftnl 1.3.0-1
 libnghttp2 1.68.0-1
 libnghttp3 1.12.0-1
+libngtcp2 1.17.0-1
 libnice 0.1.22-2
 libnl 3.11.0-1
 libnm 1.54.1-1
@@ -727,9 +731,13 @@ nettle 3.10.2-1
 networkmanager 1.54.1-1
 nftables 1:1.1.5-1
 ninja 1.13.1-2
+node-gyp 11.5.0-1
+nodejs 25.1.0-3
+nodejs-nopt 7.2.1-1
 noto-fonts 1:2025.11.01-1
 noto-fonts-cjk 20240730-1
 noto-fonts-emoji 1:2.051-1
+npm 11.6.2-1
 npth 1.8-1
 nspr 4.37-1
 nss 3.117-1
@@ -820,6 +828,7 @@ pkgconf 2.5.1-1
 pkgfile 25-1
 playerctl 2.4.1-4
 plocate 1.1.23-1
+pnpm 10.20.0-1
 podman 5.6.2-1
 podman-desktop 1.22.1-1
 polkit 126-2
@@ -966,11 +975,13 @@ sdl3 3.2.26-1
 seahorse 1:47.0.1-6
 seatd 0.9.1-1
 sed 4.9-3
+semver 7.7.3-1
 serd 0.32.4-1
 sesh-bin 2.18.2-1
 shaderc 2025.4-2
 shadow 4.18.0-1
 shared-mime-info 2.4-2
+simdjson 1:4.2.1-1
 slang 2.3.3-4
 slurp 1.5.0-1
 snapper 0.13.0-2
@@ -1041,7 +1052,7 @@ util-linux-libs 2.41.2-1
 v4l-utils 1.32.0-1
 vapoursynth 72-1
 vdpauinfo 1.5-2
-vesktop-git 1.6.1.r1.gf57245f-1
+vesktop-bin 1.6.1-1
 vid.stab 1.1.1-2
 vim 9.1.1841-1
 vim-runtime 9.1.1841-1
