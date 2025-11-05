@@ -137,7 +137,7 @@ _install_pacman_packages() {
         "alarm-clock-applet"
         "zsa-keymapp-bin"
         "spotify"
-        "vesktop-git"
+        "vesktop-bin"
         "ferdium"
         "clamtk"
         "bitwarden-bin"
