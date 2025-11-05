@@ -276,17 +276,6 @@ _install_pacman_packages() {
     echo ""
 }
 
-_install_rustup() {
-    set -e
-    if command -v rustup &>/dev/null; then
-        echo "Rustup is already installed. Skipping installation."
-        return
-    fi
-
-    echo "Installing rustup"
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
-}
-
 _install_tpm() {
     set -e
     local tpm_dir="$HOME/.config/tmux/plugins/tpm"
@@ -560,7 +549,6 @@ _source_installations() {
 
 _install_paru || true
 _install_pacman_packages || true
-_install_rustup || true
 _install_tpm || true
 _curl_and_wget_installations || true
 _source_installations || true

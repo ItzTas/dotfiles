@@ -1,4 +1,4 @@
 [settings]
 auto-install = true
 telemetry = false
-auto-clean = true
+auto-clean = false
