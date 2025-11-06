@@ -99,7 +99,7 @@ cronie 1.7.2-2
 cryptsetup 2.8.1-1
 cuda 13.0.2-1
 cunit 2.1.3-4
-curl 8.16.0-1
+curl 8.17.0-1
 dav1d 1.5.2-1
 db5.3 5.3.28-5
 dbus 1.16.2-1
@@ -283,7 +283,7 @@ hyprpaper 0.7.6-1
 hyprpicker 0.4.5-7
 hyprshade 4.0.0-1
 hyprshot 1.3.0-4
-hyprutils 0.10.0-1
+hyprutils 0.10.1-1
 hyprwayland-scanner 0.4.5-1
 i2c-tools 4.4-2
 iana-etc 20251030-1
@@ -331,7 +331,7 @@ lib32-alsa-plugins 1.2.12-1
 lib32-audit 4.1.2-1
 lib32-brotli 1.1.0-1
 lib32-bzip2 1.0.8-4
-lib32-curl 8.16.0-1
+lib32-curl 8.17.0-1
 lib32-dbus 1.16.2-1
 lib32-e2fsprogs 1.47.3-1
 lib32-expat 2.7.3-1
@@ -379,8 +379,8 @@ lib32-libvdpau 1.5-3
 lib32-libx11 1.8.12-2
 lib32-libxau 1.0.11-2
 lib32-libxcb 1.17.0-1
-lib32-libxcrypt 4.4.38-1
-lib32-libxcrypt-compat 4.4.38-1
+lib32-libxcrypt 4.5.0-1
+lib32-libxcrypt-compat 4.5.0-1
 lib32-libxdmcp 1.1.5-1
 lib32-libxext 1.3.6-1
 lib32-libxfixes 6.0.1-2
@@ -391,7 +391,7 @@ lib32-libxshmfence 1.3.3-1
 lib32-libxss 1.2.4-2
 lib32-libxv 1.0.12-2
 lib32-libxxf86vm 1.1.5-2
-lib32-llvm-libs 1:21.1.4-1
+lib32-llvm-libs 1:21.1.5-1
 lib32-lm_sensors 1:3.6.2-2
 lib32-mesa 1:25.2.6-1
 lib32-mpg123 1.33.3-1
@@ -451,7 +451,7 @@ libcdio-paranoia 10.2+2.0.2-1
 libcloudproviders 0.3.6-2
 libcolord 1.4.8-1
 libcups 2:2.4.14-1
-libcurl-gnutls 8.16.0-1
+libcurl-gnutls 8.17.0-1
 libdaemon 0.14-6
 libdatrie 0.2.13-4
 libdbusmenu-glib 18.10.20180917-1
@@ -616,8 +616,8 @@ libx11 1.8.12-1
 libxau 1.0.12-1
 libxcb 1.17.0-1
 libxcomposite 0.4.6-2
-libxcrypt 4.4.38-1
-libxcrypt-compat 4.4.38-1
+libxcrypt 4.5.0-1
+libxcrypt-compat 4.5.0-1
 libxcursor 1.2.3-1
 libxcvt 0.1.3-1
 libxdamage 1.1.6-2
@@ -669,7 +669,7 @@ linux-firmware-radeon 20251021-1
 linux-firmware-realtek 20251021-1
 linux-firmware-whence 20251021-1
 llhttp 9.2.1-2
-llvm-libs 21.1.4-1
+llvm-libs 21.1.5-1
 lm_sensors 1:3.6.2-1
 lmdb 0.9.33-1
 localsend-bin 1.17.0-1
@@ -687,7 +687,7 @@ lsp-plugins-vst 1.2.24-1
 lsp-plugins-vst3 1.2.24-1
 lua 5.4.8-2
 lua51-lpeg 1.1.0-4
-luajit 2.1.1761727121-1
+luajit 2.1.1762386122-1
 lutris 0.5.19-6
 lv2 1.18.10-2
 lz4 1:1.10.0-2
