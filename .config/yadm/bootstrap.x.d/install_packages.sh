@@ -89,9 +89,10 @@ _install_pacman_packages() {
         "btop"
 
         # Package managers
-        "flatpak"
-        "proto"
         "paru"
+        "snapd"
+        "proto"
+        "flatpak"
 
         # Package manager helpers
         "pacfiles"
