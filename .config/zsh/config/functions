@@ -213,45 +213,53 @@ update_zsh_plugins() {
 
 upgrady() {
 	(
-		# set -e
 		trap 'exit 0' SIGINT
 		{
-			if command -v arch-update; then
+			(( ${+commands[arch-update]} )) && {
 				nohup arch-update --check >/dev/null 2>&1 &
 				disown
-			fi
+			}
 		} >/dev/null 2>&1
 
-		if command -v paru >/dev/null; then
+		if (( ${+commands[paru]} )); then
 			paru -Syu --devel
 			paru -Fy
 		fi
+
 		pacclean
 
-		if command -v flatpak >/dev/null; then
+		if (( ${+commands[flatpak]} )); then
 			flatpak update
 			flatpak uninstall --unused
 		fi
 
-		if command -v freshclam >/dev/null; then
+		if (( ${+commands[freshclam]} )); then
 			sudo freshclam
 		fi
 
-        if command -v hyprpm >/dev/null; then
-		    hyprpm update
-        fi
+		if (( ${+commands[hyprpm]} )); then
+			hyprpm update
+		fi
 
-        if command -v omz >/dev/null; then
-            omz update
-        fi
-        update_zsh_plugins
-		yadm_update
+		if (( ${+commands[omz]} )); then
+			omz update
+		fi
+
+		if (( ${+commands[snap]} )); then
+			sudo snap refresh
+		fi
+
+		update_zsh_plugins
+
+		if (( ${+commands[yadm_update]} )); then
+			yadm_update
+		fi
 
 		{
-			if command -v arch-update; then
+			(( ${+commands[arch-update]} )) && {
 				nohup arch-update --check >/dev/null 2>&1 &
 				disown
-			fi
+			}
 		} >/dev/null 2>&1
 	)
 }
