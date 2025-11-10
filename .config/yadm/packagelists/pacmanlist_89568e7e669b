@@ -200,7 +200,7 @@ girara 0.4.5-1
 git 2.51.2-2
 git-bug 0.10.1-1
 github-cli 2.83.0-1
-gitify 6.10.0-1
+gitify 6.11.1-1
 glew 2.2.0-7
 glfw 1:3.4-1
 glib-networking 1:2.80.1-1
@@ -921,7 +921,7 @@ python-numpy 2.3.4-1
 python-packaging 25.0-1
 python-pathspec 0.12.1-3
 python-pexpect 4.9.0-4
-python-pillow 12.0.0-1
+python-pillow 12.0.0-2
 python-pip 25.2-1
 python-platformdirs 4.5.0-1
 python-pluggy 1.6.0-1
