@@ -5,16 +5,16 @@ _set_up_colors() {
     colors=$(
         cat <<'EOF'
 color:
-  gray: "223"
-  green: "153"
-  red: "167"
+  gray: 223
+  green: 153
+  red: 167
 EOF
     )
 
-    if ! grep -qF 'gray: "223"' "$HOME/.bootdev.yaml" ||
-        ! grep -qF 'green: "153"' "$HOME/.bootdev.yaml" ||
-        ! grep -qF 'red: "167"' "$HOME/.bootdev.yaml"; then
-        echo "$colors" >"$HOME/.bootdev.yaml"
+    if ! grep -qF 'gray: 223' "$HOME/.bootdev.yaml" ||
+        ! grep -qF 'green: 153' "$HOME/.bootdev.yaml" ||
+        ! grep -qF 'red: 167' "$HOME/.bootdev.yaml"; then
+        echo "$colors" >>"$HOME/.bootdev.yaml"
         echo "Colors added to the file."
     else
         echo "The file already has the specified colors. No changes made."
