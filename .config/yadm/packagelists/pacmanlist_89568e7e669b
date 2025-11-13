@@ -201,7 +201,7 @@ giflib 5.2.2-2
 girara 0.4.5-1
 git 2.51.2-2
 git-bug 0.10.1-1
-github-cli 2.83.0-1
+github-cli 2.83.1-1
 gitify 6.12.0-1
 glew 2.2.0-7
 glfw 1:3.4-1
@@ -296,7 +296,7 @@ hyprshot 1.3.0-4
 hyprtoolkit 0.3.0-1
 hyprutils 0.10.2-1
 hyprwayland-scanner 0.4.5-1
-i2c-tools 4.4-2
+i2c-tools 4.4-3
 iana-etc 20251030-1
 icoutils 0.32.3-3
 icu 78.1-1
@@ -856,7 +856,7 @@ perl-timedate 2.33-8
 perl-try-tiny 0.32-3
 perl-uri 5.34-1
 perl-www-robotrules 6.02-15
-pince-git r1645.2561957-1
+pince-git r1646.8441f8a-1
 pinentry 1.3.2-2
 pipewire 1:1.4.9-1
 pipewire-alsa 1:1.4.9-1
@@ -989,8 +989,8 @@ qt6-base 6.10.0-3
 qt6-charts 6.10.0-1
 qt6-declarative 6.10.0-2
 qt6-graphs 6.10.0-1
-qt6-multimedia 6.10.0-2
-qt6-multimedia-ffmpeg 6.10.0-2
+qt6-multimedia 6.10.0-3
+qt6-multimedia-ffmpeg 6.10.0-3
 qt6-positioning 6.10.0-1
 qt6-quick3d 6.10.0-1
 qt6-quicktimeline 6.10.0-1
