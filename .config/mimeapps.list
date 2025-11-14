@@ -55,6 +55,7 @@ application/x-pkt=CiscoPacketTracer-9.0.0.desktop
 application/x-pkz=CiscoPacketTracer-9.0.0.desktop
 application/x-pksz=CiscoPacketTracer-9.0.0.desktop
 x-scheme-handler/bruno=bruno.desktop
+x-scheme-handler/discord-647066573147996161=discord-647066573147996161.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;
