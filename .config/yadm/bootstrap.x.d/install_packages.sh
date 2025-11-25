@@ -117,6 +117,9 @@ _install_pacman_packages() {
         "pay-respects"
         "brightnessctl"
 
+        # Golang
+        "gomodifytags"
+
         # Cli file utils
         "unzip"
         "zip"
