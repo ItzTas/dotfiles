@@ -396,7 +396,7 @@ lib32-libidn2 2.3.7-1
 lib32-libjpeg-turbo 3.1.2-1
 lib32-libldap 2.6.10-1
 lib32-libnghttp2 1.68.0-1
-lib32-libnghttp3 1.12.0-1
+lib32-libnghttp3 1.13.1-1
 lib32-libnm 1.54.2-1
 lib32-libnsl 2.0.1-1
 lib32-libogg 1.3.6-1
@@ -572,7 +572,7 @@ libnewt 0.52.25-1
 libnfnetlink 1.0.2-2
 libnftnl 1.3.0-1
 libnghttp2 1.68.0-1
-libnghttp3 1.12.0-1
+libnghttp3 1.13.1-1
 libngtcp2 1.17.0-1
 libnice 0.1.22-2
 libnl 3.11.0-1
@@ -595,7 +595,7 @@ libplist 2.7.0-1
 libpng 1.6.51-1
 libportal 0.9.1-2
 libportal-qt6 0.9.1-2
-libproxy 0.5.11-1
+libproxy 0.5.12-1
 libpsl 0.21.5-2
 libpulse 17.0+r93+gbe2efb69b-1
 libpwquality 1.4.5-6
