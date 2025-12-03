@@ -63,7 +63,7 @@ botan2 2.19.5-2
 breeze-icons 6.20.0-1
 brightnessctl 0.5.1-3
 brotli 1.1.0-3
-bruno-bin 2.14.2-1
+bruno-bin 2.15.0-1
 btop 1.4.5-1
 btrfs-progs 6.17.1-1
 bubblewrap 0.11.0-1
@@ -674,8 +674,8 @@ libxfont2 2.0.7-1
 libxft 2.3.9-1
 libxi 1.8.2-1
 libxinerama 1.1.5-2
-libxkbcommon 1.13.0-1
-libxkbcommon-x11 1.13.0-1
+libxkbcommon 1.13.1-1
+libxkbcommon-x11 1.13.1-1
 libxkbfile 1.1.3-1
 libxklavier 5.4-7
 libxml2 2.15.1-4
@@ -699,7 +699,7 @@ libyuv r2426+464c51a03-1
 libzen 0.4.41-2
 libzip 1.11.4-1
 licenses 20240728-1
-lilv 0.24.26-1
+lilv 0.26.2-1
 linux 6.17.9.arch1-1
 linux-api-headers 6.17-1
 linux-firmware 20251125-1
@@ -1248,9 +1248,9 @@ zeromq 4.3.5-2
 zimg 3.0.5-1
 zip 3.0-11
 zita-convolver 4.0.3-4
-zix 0.6.2-1
+zix 0.8.0-1
 zlib 1:1.3.1-2
-zlib-ng 2.3.1-2
+zlib-ng 2.3.2-1
 zoxide 0.9.8-2
 zram-generator 1.2.1-1
 zsa-keymapp-bin 1.3.7-1
