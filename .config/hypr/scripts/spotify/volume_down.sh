@@ -1,10 +1,10 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
-current=$(playerctl --player=spotify volume)
+current=$(playerctl -p spotify volume)
 
 new=$(awk -v v="$current" 'BEGIN { v=v-0.05; if(v<0) v=0; print v }')
 
-playerctl --player=spotify volume "$new"
+playerctl -p spotify volume "$new"
 
 volume=$(awk -v v="$new" 'BEGIN { print int(v*100 + 0.5) }')
 
