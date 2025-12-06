@@ -1051,8 +1051,8 @@ scdoc 1.11.4-1
 sdbus-cpp 2.2.1-1
 sddm 0.21.0-6
 sddm-sugar-candy-git 1.6r42.d31dbf5-1
-sdl2-compat 2.32.58-1
-sdl3 3.2.26-1
+sdl2-compat 2.32.60-1
+sdl3 3.2.28-1
 seahorse 1:47.0.1-6
 seatd 0.9.1-1
 sed 4.9-3
