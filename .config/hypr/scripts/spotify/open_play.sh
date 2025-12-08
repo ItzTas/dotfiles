@@ -9,4 +9,3 @@ hyprctl dispatch exec "[workspace 9] spotify" || spotify &
 sleep 0.8
 
 playerctl -p spotify play
-
