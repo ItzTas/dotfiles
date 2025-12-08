@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-
 hyprctl dispatch exec "[workspace 9] spotify" || spotify &
 
-# while ! playerctl -p spotify status &>/dev/null; do
-#     sleep 0.05
-# done
+{
+    count=0
+    until playerctl -l 2>/dev/null | grep -q spotify || [ "$count" -ge 20 ]; do
+        sleep 0.5
+        ((count++))
+    done
+} || true
 
-sleep 0.8
-
-playerctl -p spotify volume 0
-
-playerctl -p spotify play
+playerctl -p spotify volume 0 2>/dev/null || true
+playerctl -p spotify play 2>/dev/null || true
