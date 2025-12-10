@@ -10,3 +10,9 @@
 [submodule ".local/share/Steam/steamui/skins/Zehn"]
 	path = .local/share/Steam/steamui/skins/Zehn
 	url = https://github.com/yurisuika/Zehn
+[submodule ".local/share/Steam/steamui/skins/ATOMS"]
+	path = .local/share/Steam/steamui/skins/ATOMS
+	url = https://github.com/Plaer1/ATOMS/
+[submodule ".local/share/Steam/steamui/skins/MetroSteam"]
+	path = .local/share/Steam/steamui/skins/MetroSteam
+	url = https://github.com/RoseTheFlower/MetroSteam/
