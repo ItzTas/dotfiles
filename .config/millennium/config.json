@@ -12,7 +12,7 @@
     "hasShownWelcomeModal": true
   },
   "themes": {
-    "activeTheme": "Zehn",
+    "activeTheme": "Steam",
     "allowedStyles": true,
     "allowedScripts": true,
     "conditions": {
@@ -245,6 +245,13 @@
         "Display Add Shelf Button": "no",
         "Display What's New Section": "no",
         "Display Time Divisions": "yes"
+      },
+      "ATOMS": {
+        "Use Custom Accent Color?": "no",
+        "Dim uninstalled games?": "yes",
+        "Enable Que Via Keyboard?": "yes",
+        "Enable Automatic Que Skipping?": "no",
+        "Enable shaded game/community backgrounds?": "yes"
       }
     },
     "themeColors": {
