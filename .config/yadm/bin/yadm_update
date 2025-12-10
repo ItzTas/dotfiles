@@ -59,6 +59,12 @@ yadm_update() {
         local commit_msg
         commit_msg="$(date '+%Y-%m-%d %H:%M') - Updated: $files"
 
+        local max_len=100
+
+        if [ ${#commit_msg} -gt "$max_len" ]; then
+            commit_msg="automated update"
+        fi
+
         yadm commit -m "$commit_msg"
         yadm push
     )
