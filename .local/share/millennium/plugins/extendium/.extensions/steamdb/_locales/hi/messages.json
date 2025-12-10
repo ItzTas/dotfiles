@@ -1,0 +1,695 @@
+{
+	"extension_description": {
+		"message": "SteamDB लिंक और नए विषेशताँऐ Steam स्टोर एवं स्टिम सम्प्रदाय पर जोड़े। देखे सबसे कम कीमत और आँकड़े।",
+		"description": "This value can be up to 132 characters."
+	},
+	"steamdb_options": {
+		"message": "SteamDB वरणाधिकार"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB गणना-यंत्र"
+	},
+	"steamstatus": {
+		"message": "$domain$ पर देखें",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "Steam पर प्रतीत होता है कि कुछ समय के लिए काम बंद हो गया है। "
+	},
+	"view_on_steamdb": {
+		"message": "SteamDB पर देखें"
+	},
+	"view_on_steam_hunters": {
+		"message": "स्टीम हंटर्स पर देखें",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "PCGamingWiki पर देखें"
+	},
+	"view_your_achievements": {
+		"message": "व्यक्तिगत उपलब्धियों"
+	},
+	"store_page": {
+		"message": "स्टोर पृष्ठ",
+		"description": "This translation should match how Steam translates it on community hubs"
+	},
+	"search": {
+		"message": "खोजें"
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB दर-निर्धारण:"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$total$ समीक्षाओं में से $positive$ सकारात्मक हैं (सभी प्रकार की खरीदारी)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "आखिरी अपडेट:"
+	},
+	"app_depots_updated_short": {
+		"message": "अपडेट किया गया",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "ऑनलाइन आँकड़े"
+	},
+	"app_stats_online_now": {
+		"message": "अभी ऑनलाइन:"
+	},
+	"app_stats_peak_today": {
+		"message": "२४-घंटे मे उच्च:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "सब से उच्च:"
+	},
+	"app_stats_followers": {
+		"message": "समर्थक:"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB पर सबसे कम दर्ज कीमत <b>$price$</b> है",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB पर सबसे कम दर्ज कीमत <b>$price$</b> पर <b>-$discount$%</b> है",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB पर सबसे कम दर्ज कीमत <b>$price$</b> पर है और 2 वर्ष का न्यूनतम मूल्य <b>$price_limited$</b> है |",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "$date$ ($relative$) पर सबसे कम कीमत देखने को मिली",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "ये $seen$ बार देखने को मिला, आखिरी बार $date$ ($relative$) को",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"agecheck_option_hint": {
+		"message": "SteamDB के पास इन आयु जांच पृष्ठों को स्वचालित रूप से छोड़ने का विकल्प है"
+	},
+	"explore_auto_discover": {
+		"message": "ऑटोमैटिक-खोज"
+	},
+	"explore_auto_discover_description": {
+		"message": "स्वचालित रूप से कतार का पता लगाएँ।"
+	},
+	"explore_generating": {
+		"message": "नई खोज कतार उत्पन्न हो रही है, यदि स्टीम अधिक लोड में है तो यह असफल हो सकता है..."
+	},
+	"explore_exploring": {
+		"message": "कतार में खोज की जा रही है... अनुरोध $current$ में $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "कई बार कतार खाली करने में विफल रहे। आप बाद में पुनः प्रयास कर सकते हैं."
+	},
+	"explore_finished": {
+		"message": "कतार की खोज हो चुकी है।"
+	},
+	"explore_saleitem_claim": {
+		"message": "इनाम दावा करें"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "यदि कोई मुफ्त दैनिक इनाम है तो दावा करें।"
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "दैनिक इनाम का दावा जारी…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "इस समय दावा करने के लिए कोई दैनिक इनाम नहीं।"
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "अगला आइटम उपलब्ध: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "दैनिक इनाम का दावा करने में विफल।"
+	},
+	"explore_saleitem_success": {
+		"message": "नया इनाम दावा: $item$।",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
+	"badges_idle_apps": {
+		"message": "ड्रॉप्स वाले ऐप्स: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "इस पेज पर निष्क्रिय रहने के लिए ऐप्स: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "शेष ड्रॉप: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "शेष ड्रॉप इस पृष्ठ पर: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "छिपा हुआ उपलब्धि: "
+	},
+	"achievement_global_unlock": {
+		"message": "$percent$ खिलाड़ियों के पास है यह उपलब्धि",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "उपलब्धियां अर्जित: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "बंद उपलब्धियाँ: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "समय के अनुसार क्रमबद्ध करें"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "उपलब्धि समूह Steam Hunters द्वारा SteamDB के माध्यम से प्रदान किए जाते हैं।",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "सीजन $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "दिनांक"
+	},
+	"achievements_csrating_name": {
+		"message": "CS रेटिंग"
+	},
+	"inventory_list_at": {
+		"message": "$price$ पर बेचें",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "$price$ पर बेचें",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "सबसे कम बिक्री मूल्य के अनुसार उत्पादों की सूची बनाएं \n\nप्रदर्शित राशि वह धन है जो आपको प्राप्त होगी (बिना किसी शुल्क के)"
+	},
+	"inventory_sell_at_title": {
+		"message": "सबसे अधिक बिक्री मूल्य के अनुसार उत्पादों की सूची बनाएं \n\nप्रदर्शित राशि वह धन है जो आपको प्राप्त होगी (बिना किसी शुल्क के)"
+	},
+	"inventory_badge_level": {
+		"message": "आपका बैज स्तर: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "आपका फ़ॉइल बैज स्तर: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "कोई बैज तैयार नहीं किया गया"
+	},
+	"spoilers_reveal": {
+		"message": "स्पॉइलर का खुलासा करें",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "चार्ट्स"
+	},
+	"popup_sales": {
+		"message": "बिक्री"
+	},
+	"popup_calendar": {
+		"message": "कैलेंडर"
+	},
+	"popup_patches": {
+		"message": "पैच"
+	},
+	"popup_calculator": {
+		"message": "गणक"
+	},
+	"options": {
+		"message": "वरणाधिकार"
+	},
+	"options_welcome_title": {
+		"message": "👋 SteamDB एक्सटेंशन इंस्टाल करने के लिए धन्यवाद!"
+	},
+	"options_welcome_description": {
+		"message": "नीचे दिए गए विकल्पों की समीक्षा करें व अपनी पसंद के विकल्पों को टॉगल करें। यहां वापस आने के लिए:"
+	},
+	"options_welcome_option1": {
+		"message": "स्टीमडीबी पर समायोजन"
+	},
+	"options_welcome_option2": {
+		"message": "स्टीम पेज पर खाता का ड्रॉपडाउन"
+	},
+	"options_welcome_option3": {
+		"message": "आपके ब्राउज़र का ऐड ऑन पेज"
+	},
+	"options_review": {
+		"message": "इस एक्सटेंशन की समीक्षा करे"
+	},
+	"options_permissions_description": {
+		"message": "इस एक्सटेंशन को स्टीमडीबी, स्टीम स्टोर और स्टीम कम्युनिटी पर सही ढंग से काम करने के लिए अतिरिक्त अनुमतियों की आवश्यकता है।"
+	},
+	"options_permissions_button": {
+		"message": "⚠️ अनुमति प्रदान करे"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "Steam China समर्थन सक्षम करें"
+	},
+	"options_footer1": {
+		"message": "💙 से बना है <a href=\"https://steamdb.info\" target=\"_blank\">स्टीमडीबी</a> जनसामान्य के द्वारा।"
+	},
+	"options_footer2": {
+		"message": "यह <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">ओपेन सोर्स</a>, धन्यवाद सभी कारणवर्ष योद्दानकर्ताओं के!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* अक्षम चेकबॉक्स अंतर्निहित सुविधाओं को दर्शाते हैं।"
+	},
+	"options_header_website": {
+		"message": "स्टीमडीबी वेबसाइट"
+	},
+	"options_header_extra_data": {
+		"message": "अतिरिक्त तथ्य"
+	},
+	"options_header_buttons_and_links": {
+		"message": "बटन और लिंक"
+	},
+	"options_header_inventory": {
+		"message": "वस्तु सूची भंडार"
+	},
+	"options_header_trade_offers": {
+		"message": "व्यापार प्रस्ताव"
+	},
+	"options_header_achievements": {
+		"message": "उपलब्धियों"
+	},
+	"options_header_enhancements": {
+		"message": "संवर्द्धनाऐ"
+	},
+	"options_website_explanation": {
+		"message": "स्पष्टीकरण"
+	},
+	"options_website_explanation1": {
+		"message": "जब यह विकल्प सक्षम किया जाता है, तो एक्सटेंशन <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> से कुछ उपयोगकर्ता डेटा (इच्छा-सूचीबद्ध, स्वामित्व, अनुसरण किए गए, उपेक्षित उत्पाद और कार्ट में उत्पाद) का अनुरोध करेगा और साइट पर हाइलाइट्स लागू करने के लिए इनका उपयोग करेगा।"
+	},
+	"options_website_explanation2": {
+		"message": "इसे काम करने के लिए आपको स्टोर पर लॉग इन करना होगा।"
+	},
+	"options_website_explanation3": {
+		"message": "यह पूरी तरह से आपके ब्राउज़र में समाहित है और इसे कभी भी SteamDB बैकएंड पर भी नहीं भेजा जाता है।"
+	},
+	"options_website_explanation4": {
+		"message": "स्टीम स्टोर पर अत्यधिक अनुरोधों को रोकने के लिए, आपका उपयोगकर्ता डेटा आपके ब्राउज़र के स्थानीय स्टोरेज में कैश किया जाता है।"
+	},
+	"options_website_highlight": {
+		"message": "$domain$ पर स्वामित्व वाले और वांछित उत्पादों को हाइलाइट करें",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "SteamDB से सीधे स्टीम स्टोर पर उत्पादों की इच्छा सूची बनाएं, उनका अनुसरण करें और उन्हें अनदेखा करें"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">निःशुल्क पैकेज स्क्रिप्ट सक्षम करें</a>"
+	},
+	"options_website_highlight3": {
+		"message": "अतिरिक्त फ़िल्टरिंग सक्षम करें<a href=\"https://steamdb.info/sales/\" target=\"_blank\">बिक्री पृष्ठ</a>और<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">बंडल पेज</a>"
+	},
+	"options_website_family": {
+		"message": "परिवार के स्वामित्व वाले ऐप्स हाइलाइट करें (एक अतिरिक्त अनुरोध की आवश्यकता है)"
+	},
+	"options_extra_data": {
+		"message": "$domain$ से अतिरिक्त डेटा प्राप्त किया गया",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "जब \"$options_online_stats$\" या \"$options_steamdb_last_update$\" विकल्प सक्षम हो जाता है, तो एक्सटेंशन खिलाड़ियों की वर्तमान संख्या और अंतिम गेम अपडेट प्राप्त करने के लिए $domain$ पर एक सुरक्षित अनुरोध करेगा।",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "जब \"$options_steamdb_lowest_price$\" विकल्प सक्षम होता है, तो एक्सटेंशन एक विशिष्ट गेम के लिए रिकॉर्ड की गई कीमत प्राप्त करने के लिए आपकी मुद्रा (Steam जो सोचता है) के साथ $domain$ के लिए एक सुरक्षित अनुरोध करेगा।",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "जब \"$options_achievement_groups$\" विकल्प सक्षम होता है, तो एक्सटेंशन Steam Hunters द्वारा उपलब्ध कराए गए डेटा के साथ व्यक्तिगत उपलब्धि पृष्ठ पर उपलब्धि समूह बनाने के लिए $domain$ पर एक सुरक्षित अनुरोध करेगा।",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "उत्पाद पृष्ठों पर न्यूनतम दर्ज कीमत प्रदर्शित करें"
+	},
+	"options_online_stats": {
+		"message": "उत्पाद पृष्ठों पर वर्तमान समवर्ती खिलाड़ियों और अधिकतम शिखरों को प्रदर्शित करें"
+	},
+	"options_steamdb_last_update": {
+		"message": "उत्पाद पृष्ठों पर अंतिम अद्यतन प्रदर्शित करें"
+	},
+	"options_button_app": {
+		"message": "उत्पाद पृष्ठों पर एक बटन प्रदर्शित करें"
+	},
+	"options_button_pcgw": {
+		"message": "उत्पाद पृष्ठों पर PCGamingWiki बटन प्रदर्शित करें"
+	},
+	"options_button_sub": {
+		"message": "पैकेज पृष्ठों पर एक बटन प्रदर्शित करें"
+	},
+	"options_button_gamehub": {
+		"message": "सामुदायिक केन्द्रों पर एक बटन प्रदर्शित करें"
+	},
+	"options_button_gamecards": {
+		"message": "गेम कार्ड पेज पर स्टीमडीबी और स्टोर पेज बटन प्रदर्शित करें"
+	},
+	"options_steamdb_dev_pub_links": {
+		"message": "डेवलपर और प्रकाशक नामों के बगल में स्टीमडीबी लिंक दिखाएँ"
+	},
+	"options_link_subid": {
+		"message": "प्रत्येक खरीद विकल्प के अंतर्गत SubID प्रदर्शित करें"
+	},
+	"options_link_subid_widget": {
+		"message": "एंबेड विजेट्स में SubID प्रदर्शित करें",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "प्रत्येक पैकेज को अपने लाइसेंस पृष्ठ पर लिंक करें"
+	},
+	"options_profile_calculator": {
+		"message": "समुदाय प्रोफ़ाइल पर एक कैलकुलेटर लिंक जोड़ें"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "इन्वेंट्री पेज पर गेम चयन को किनारे पर ले जाएँ"
+	},
+	"options_link_inventory": {
+		"message": "अपनी सूची में प्रत्येक उपहार और कूपन को SteamDB से लिंक करें"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "अपनी सूची में उपहार SubID का सही पता लगाएं"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "कोई वस्तु बेचते समय इन्वेंट्री को ताज़ा न करें"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "त्वरित विक्रय बटन जोड़ें"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "प्रारंभिक वेबसाइट बटन"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "बैज स्तर प्रदर्शित करें ट्रेडिंग कार्ड और बूस्टर पैक पर"
+	},
+	"options_display_market_price_others": {
+		"message": "अन्य उपयोगकर्ताओं की सूची में आइटम का बाज़ार मूल्य प्रदर्शित करें"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "$for_item$ और $my_item$ पैरामीटर का समर्थन करें",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "GitHub पर स्पष्टीकरण देखें"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "दबाएँ \"यह व्यापार संदिग्ध प्रतीत होता है\" और \"क्या आप निश्चित हैं कि यह एक उपहार है?\" व्यापार प्रस्ताव अलर्ट"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Valve की गुप्त त्रुटि संख्याओं के बजाय बेहतर त्रुटि संदेश प्रदर्शित करें"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "आयु जांच पृष्ठ छोड़ें"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "आयु जांच पृष्ठ छोड़ें"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "बाहरी साइटों से \"आप स्टीम छोड़ रहे हैं\" लिंक फ़िल्टर हटा दें",
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "बाज़ार, इन्वेंट्री पर सब्सक्राइबर अनुबंध स्वीकार करें और मुख्य पृष्ठों को स्वचालित रूप से सक्रिय करें",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "हेडर में \"इंस्टॉल स्टीम\" बटन छुपाएं",
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "\"ओपन इन द स्टीम\" बैनर छिपाएँ"
+	},
+	"options_steamdb_rating": {
+		"message": "उत्पाद पृष्ठों पर स्टीमडीबी रेटिंग बटन प्रदर्शित करें"
+	},
+	"options_enhancement_appicon": {
+		"message": "स्टोर और सामुदायिक पृष्ठों पर उत्पाद आइकन प्रदर्शित करें",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "व्यक्तिगत उपलब्धियाँ पृष्ठ सुधारें"
+	},
+	"options_achievements_global_unlock": {
+		"message": "वैश्विक उपलब्धि अनलॉक प्रतिशत प्रदर्शित करें"
+	},
+	"options_modernized_achievements": {
+		"message": "आधुनिकीकृत डिज़ाइन"
+	},
+	"options_achievement_groups": {
+		"message": "स्टीम हंटर्स के डेटा के साथ समूह की उपलब्धियाँ",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "छिपी हुई उपलब्धियों को बिगाड़ने वाले तत्व के पीछे रखें"
+	},
+	"options_prevent_store_images": {
+		"message": "उत्पाद के पेज पर चित्रों को लोड होने से रोकें"
+	},
+	"options_prevent_store_images_description": {
+		"message": "कुछ डेवलपर्स उत्पाद विवरण में मेगाबाइट छवियां डालते हैं जिन्हें लोड होने में कुछ समय लग सकता है, लोड करने के लिए छवि पर क्लिक करें"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "प्रोफ़ाइल और साझा फ़ाइल लिंक पर $award$ पैरामीटर का समर्थन करें",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "\"पहले से ही आपकी लाइब्रेरी में\" ब्लॉक को संक्षिप्त करने के लिए एक बटन जोड़ें"
+	},
+	"options_builtin_card_drops": {
+		"message": "बैज पृष्ठ पर शेष कार्ड ड्रॉप की कुल मात्रा प्रदर्शित करें"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "बिक्री के दौरान कतार को स्वचालित रूप से खोजने के लिए एक बटन जोड़ें"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "पुनः गेम कार्ड पृष्ठ पर वापस आएं शेष कार्ड खरीदने के बाद"
+	},
+	"options_builtin_achievements_global": {
+		"message": "उपलब्धियाँ के पेज को सुधारें"
+	},
+	"options_builtin_achievements_link": {
+		"message": "आपके व्यक्तिगत उपलब्धियां पृष्ठ का लिंक"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "लॉक की गई उपलब्धियों के लिए लॉक आइकन प्रदर्शित करें"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "CS2 उपलब्धियां पृष्ठ पर CS रेटिंग इतिहास प्रदर्शित करें"
+	},
+	"boostercreator_available_at_date": {
+		"message": "आप इस गेम के लिए एक और बूस्टर पैक बनाने में सक्षम नहीं होंगे $available_date$ तक।",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
+	}
+}
