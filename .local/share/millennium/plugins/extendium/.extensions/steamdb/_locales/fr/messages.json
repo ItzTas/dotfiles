@@ -1,0 +1,699 @@
+{
+	"extension_description": {
+		"message": "Ajoute des liens SteamDB, plus de fonctionnalités sur le magasin et la communauté Steam, les prix de jeu les plus bas et des stats.",
+		"description": "This value can be up to 132 characters."
+	},
+	"steamdb_options": {
+		"message": "Paramètres de SteamDB"
+	},
+	"steamdb_calculator": {
+		"message": "Calculateur SteamDB"
+	},
+	"steamstatus": {
+		"message": "Jette un œil à $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "Steam semble être en maintenance. "
+	},
+	"view_on_steamdb": {
+		"message": "Voir sur SteamDB"
+	},
+	"view_on_steam_hunters": {
+		"message": "Voir sur Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Voir sur PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Succès personnels"
+	},
+	"store_page": {
+		"message": "Page du magasin",
+		"description": "This translation should match how Steam translates it on community hubs"
+	},
+	"search": {
+		"message": "Recherche"
+	},
+	"in_library": {
+		"message": "Dans la bibliothèque",
+		"description": "Indicates that the user owns this product"
+	},
+	"app_steamdb_rating": {
+		"message": "Score SteamDB :"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ des $total$ avis sont positifs (tous les types d'achats)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Dernière mise à jour :"
+	},
+	"app_depots_updated_short": {
+		"message": "Mis à jour",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Statistiques en ligne"
+	},
+	"app_stats_online_now": {
+		"message": "En ligne :"
+	},
+	"app_stats_peak_today": {
+		"message": "Pic du jour :"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Plus haut pic atteint :"
+	},
+	"app_stats_followers": {
+		"message": "Abonnés :"
+	},
+	"app_lowest_price": {
+		"message": "Le prix le plus bas selon SteamDB est <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "Le prix le plus bas selon SteamDB est <b>$price$</b> à <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "Le prix le plus bas selon SteamDB est <b>$price$</b> et <b>$price_limited$</b> sur les 2 dernières années",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Prix vu le $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Prix vu $seen$ fois, pour la dernière fois le $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"agecheck_option_hint": {
+		"message": "SteamDB a un paramètre permettant d'ignorer automatiquement ces pages de vérification d'âge"
+	},
+	"explore_auto_discover": {
+		"message": "Découverte automatique"
+	},
+	"explore_auto_discover_description": {
+		"message": "Découvrir automatiquement la file d'attente."
+	},
+	"explore_generating": {
+		"message": "Génération d'une nouvelle liste de découverte, ceci peut ne pas marcher si Steam est fortement sollicité…"
+	},
+	"explore_exploring": {
+		"message": "Exploration de la liste de découverte... Requête $current$ sur $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Trop d'échecs de vidage de la file d'attente. Vous pourrez réessayer plus tard."
+	},
+	"explore_finished": {
+		"message": "Liste explorée."
+	},
+	"explore_saleitem_claim": {
+		"message": "Récupérer la récompense"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Réclamez la récompense quotidienne gratuite s'il y en a une."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Réclamation de la récompense quotidienne…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Aucune récompense quotidienne à réclamer pour le moment."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Prochain article disponible : $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Impossible de réclamer la récompense quotidienne."
+	},
+	"explore_saleitem_success": {
+		"message": "Nouvelle récompense réclamée : $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
+	"badges_idle_apps": {
+		"message": "Applications à collecter : $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Applications à collecter sur cette page : $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Cartes restantes : $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Cartes restantes sur cette page : $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Succès caché : "
+	},
+	"achievement_global_unlock": {
+		"message": "$percent$ des joueurs ont ce succès",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "SUCCÈS OBTENUS : $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "SUCCÈS VERROUILLÉS : $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Trier par date"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Les groupes de succès sont fournis par Steam Hunters via SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "Saison $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Date"
+	},
+	"achievements_csrating_name": {
+		"message": "Note CS"
+	},
+	"inventory_list_at": {
+		"message": "Lister à $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Vendre à $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Liste l'article pour le prix de vente le plus bas\n\nLe prix affiché est l'argent que vous recevez (sans frais)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Liste l'article pour le prix d'achat le plus élevé\n\nLe prix affiché est l'argent que vous recevez (sans frais)"
+	},
+	"inventory_badge_level": {
+		"message": "Votre niveau de badge : $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Votre niveau de badge premium : $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Aucun badge fabriqué"
+	},
+	"spoilers_reveal": {
+		"message": "Révéler les spoilers",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Statistiques"
+	},
+	"popup_sales": {
+		"message": "Promotions"
+	},
+	"popup_calendar": {
+		"message": "Calendrier"
+	},
+	"popup_patches": {
+		"message": "Correctifs"
+	},
+	"popup_calculator": {
+		"message": "Calculateur"
+	},
+	"options": {
+		"message": "Paramètres"
+	},
+	"options_welcome_title": {
+		"message": "👋 Merci d'avoir installé l'extension SteamDB !"
+	},
+	"options_welcome_description": {
+		"message": "Examinez les options ci-dessous et activer/désactiver celles que vous préférez. Pour revenir ici dans le futur :"
+	},
+	"options_welcome_option1": {
+		"message": "Page des paramètres sur SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Liste déroulante du compte sur les pages Steam"
+	},
+	"options_welcome_option3": {
+		"message": "La page des extensions de votre navigateur"
+	},
+	"options_review": {
+		"message": "Laisser un avis pour cette extension"
+	},
+	"options_permissions_description": {
+		"message": "Cette extension nécessite des permissions supplémentaires pour fonctionner correctement sur SteamDB, le magasin Steam et la communauté Steam."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Accorder les permissions"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Activer le support de Steam China"
+	},
+	"options_footer1": {
+		"message": "Fait avec le 💙 par <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "C'est <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, merci à tous les contributeurs !"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Les cases désactivées indiquent les fonctionnalités intégrées."
+	},
+	"options_header_website": {
+		"message": "Site Web SteamDB"
+	},
+	"options_header_extra_data": {
+		"message": "Données supplémentaires"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Boutons et liens"
+	},
+	"options_header_inventory": {
+		"message": "Inventaire"
+	},
+	"options_header_trade_offers": {
+		"message": "Offres d'échange"
+	},
+	"options_header_achievements": {
+		"message": "Succès"
+	},
+	"options_header_enhancements": {
+		"message": "Améliorations"
+	},
+	"options_website_explanation": {
+		"message": "Explication"
+	},
+	"options_website_explanation1": {
+		"message": "Lorsque cette option est activée, l'extension demandera des données utilisateur (produits souhaités, possédés, suivis, ignorés, et dans le panier) du magasin <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam</a> et les utilisera pour les mettre en avant sur le site."
+	},
+	"options_website_explanation2": {
+		"message": "Vous devez être connecté sur le magasin Steam pour que cela fonctionne."
+	},
+	"options_website_explanation3": {
+		"message": "Ceci est contenu entièrement dans votre navigateur et n'est jamais envoyé, même vers les serveurs de SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "Pour éviter les requêtes excessives sur le magasin Steam, vos données utilisateur sont mises en cache dans le stockage local de votre navigateur."
+	},
+	"options_website_highlight": {
+		"message": "Mettre en avant les produits possédés et désirés sur $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "Ajouter à la liste de souhaits, suivre et ignorer les produits sur le magasin Steam directement depuis SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Activer le script pour les packages gratuits</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Activer le filtrage supplémentaire sur <a href=\"https://steamdb.info/sales/\" target=\"_blank\">la page des soldes</a> et <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">la page des bundles</a>"
+	},
+	"options_website_family": {
+		"message": "Mettre en valeur les applications dans votre bibliothèque familiale (requiert une requête supplémentaire)"
+	},
+	"options_extra_data": {
+		"message": "Données supplémentaires récupérées depuis $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Lorsque l'option \"$options_online_stats$\" ou \"$options_steamdb_last_update$\" est activée, l'extension fera une requête sécurisée à $domain$ pour obtenir le nombre actuel de joueurs et la dernière mise à jour du jeu.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Lorsque l'option \"$options_steamdb_lowest_price$\" est activée, l'extension fera une requête sécurisée vers $domain$ avec votre monnaie (celle que Steam suppose être la vôtre) pour obtenir le prix enregistré pour un jeu spécifique.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Lorsqu'elle est activée, l'option \"$options_achievement_groups$\" permet à l'extension d'effectuer une requête sécurisée vers $domain$ afin de regrouper les succès sur la page des succès personnels avec les données fournies par Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Afficher le prix le plus bas historique sur les pages des produits"
+	},
+	"options_online_stats": {
+		"message": "Afficher le nombre actuel et maximum de joueurs sur les pages du produit"
+	},
+	"options_steamdb_last_update": {
+		"message": "Afficher la dernière mise à jour sur les pages du produit"
+	},
+	"options_button_app": {
+		"message": "Afficher le bouton sur les pages des produits"
+	},
+	"options_button_pcgw": {
+		"message": "Afficher le bouton PCGamingWiki sur les pages des produits"
+	},
+	"options_button_sub": {
+		"message": "Afficher un bouton sur les pages des packages"
+	},
+	"options_button_gamehub": {
+		"message": "Afficher un bouton sur le hub de la communauté"
+	},
+	"options_button_gamecards": {
+		"message": "Afficher les boutons de SteamDB et de la page du magasin sur la page des cartes de jeu"
+	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Afficher les liens SteamDB à côté des noms des développeurs et des éditeurs"
+	},
+	"options_link_subid": {
+		"message": "Afficher le SubID sous chaque option d'achat"
+	},
+	"options_link_subid_widget": {
+		"message": "Afficher le SubID dans les widgets",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "Lier chaque paquet sur votre page de licences"
+	},
+	"options_profile_calculator": {
+		"message": "Ajouter un lien calculateur sur les profils de la communauté"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Déplacer la sélection du jeu sur la page d'inventaire vers le côté"
+	},
+	"options_link_inventory": {
+		"message": "Lier chaque cadeau et coupon de votre inventaire à SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Retrouver le SubID d'un cadeau dans votre inventaire"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Ne pas actualiser l'inventaire lorsque vous vendez un objet"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Ajouter des boutons de vente rapide"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Accepter automatiquement les ventes rapides"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Afficher le niveau de badge sur les cartes à échanger et les booster packs"
+	},
+	"options_display_market_price_others": {
+		"message": "Afficher le prix du marché des articles dans l'inventaire des autres utilisateurs"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Prendre en charge les paramètres $for_item$ et $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Voir l'explication sur GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Supprimez les alertes d'échange \"cet échange semble suspect\" et \"êtes-vous sûr qu'il s'agit d'un cadeau ?\""
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Remplacer les codes d'erreurs cryptiques de Valve avec de meilleurs messages d'erreurs"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Passer la page de vérification de l'âge"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Définit l'âge et la date d'anniversaire des cookies pour toujours passer"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Supprimer l'avertissement \"Vous quittez Steam\" lorsque vous cliquez sur un lien externe",
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Accepter automatiquement les conditions d'utilisation de Steam sur le marché, l'inventaire et les pages d'activation de clés",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Cacher le bouton \"Installer Steam\" dans l'en-tête",
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Cacher la bannière \"Ouvrir dans l'application Steam\""
+	},
+	"options_steamdb_rating": {
+		"message": "Afficher la note SteamDB sur les pages de produits"
+	},
+	"options_enhancement_appicon": {
+		"message": "Afficher l'icône du produit sur les pages de la boutique et de la communauté",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "Améliorer la page de succès personnel"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Afficher le taux global de succès débloqué"
+	},
+	"options_modernized_achievements": {
+		"message": "Design modernisé"
+	},
+	"options_achievement_groups": {
+		"message": "Regrouper les succès avec les données de Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Mettre les succès cachés derrière une balise spoiler"
+	},
+	"options_prevent_store_images": {
+		"message": "Empêcher le chargement des images sur les pages de produits"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Certains développeurs utilisent des images de plusieurs mégas dans leurs descriptions de produit ce qui peut ralentir le chargement, cliquez sur ces images pour les charger"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Prise en charge des paramètres $award$ sur le profil et les liens de fichiers partagés",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "Ajouter un bouton pour réduire le bloc \"déjà dans votre bibliothèque\""
+	},
+	"options_builtin_card_drops": {
+		"message": "Afficher le nombre total de cartes restantes sur la page des badges"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Ajouter un bouton pour explorer automatiquement la liste de découverte pendant les soldes"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Rediriger vers la page des cartes de jeu après l'achat des cartes restantes"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Améliorer la page des succès mondiaux"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Afficher un lien vers votre page de succès personnelle"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Afficher un cadenas sur les succès verrouillés"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Afficher l'historique de note CS sur la page des succès de CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Vous ne serez pas en mesure de créer un autre Pack de Booster pour ce jeu avant $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
+	}
+}

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#1b1b24">
+
+	<title data-msg="options">Options · SteamDB</title>
+
+	<link rel="stylesheet" href="options.css">
+</head>
+<body>
+	<script src="../scripts/common.js" defer></script>
+	<script src="options.js" defer></script>
+
+	<header>
+		<div class="container">
+			<div class="logo">
+				<svg width="32" height="32" viewBox="0 0 128 128" aria-hidden="true"><path fill="#fff" fill-rule="evenodd" d="M63.9 0C30.5 0 3.1 11.9.1 27.1l35.6 6.7c2.9-.9 6.2-1.3 9.6-1.3l16.7-10c-.2-2.5 1.3-5.1 4.7-7.2 4.8-3.1 12.3-4.8 19.9-4.8 5.2-.1 10.5.7 15 2.2 11.2 3.8 13.7 11.1 5.7 16.3-5.1 3.3-13.3 5-21.4 4.8l-22 7.9c-.2 1.6-1.3 3.1-3.4 4.5-5.9 3.8-17.4 4.7-25.6 1.9-3.6-1.2-6-3-7-4.8L2.5 38.4c2.3 3.6 6 6.9 10.8 9.8C5 53 0 59 0 65.5c0 6.4 4.8 12.3 12.9 17.1C4.8 87.3 0 93.2 0 99.6 0 115.3 28.6 128 64 128c35.3 0 64-12.7 64-28.4 0-6.4-4.8-12.3-12.9-17 8.1-4.8 12.9-10.7 12.9-17.1 0-6.5-5-12.6-13.4-17.4 8.3-5.1 13.3-11.4 13.3-18.2 0-16.5-28.7-29.9-64-29.9zm22.8 14.2c-5.2.1-10.2 1.2-13.4 3.3-5.5 3.6-3.8 8.5 3.8 11.1 7.6 2.6 18.1 1.8 23.6-1.8s3.8-8.5-3.8-11c-3.1-1-6.7-1.5-10.2-1.5zm.3 1.7c7.4 0 13.3 2.8 13.3 6.2 0 3.4-5.9 6.2-13.3 6.2s-13.3-2.8-13.3-6.2c0-3.4 5.9-6.2 13.3-6.2zM45.3 34.4c-1.6.1-3.1.2-4.6.4l9.1 1.7a10.8 5 0 1 1-8.1 9.3l-8.9-1.7c1 .9 2.4 1.7 4.3 2.4 6.4 2.2 15.4 1.5 20-1.5s3.2-7.2-3.2-9.3c-2.6-.9-5.7-1.3-8.6-1.3zM109 51v9.3c0 11-20.2 19.9-45 19.9-24.9 0-45-8.9-45-19.9v-9.2c11.5 5.3 27.4 8.6 44.9 8.6 17.6 0 33.6-3.3 45.2-8.7zm0 34.6v8.8c0 11-20.2 19.9-45 19.9-24.9 0-45-8.9-45-19.9v-8.8c11.6 5.1 27.4 8.2 45 8.2s33.5-3.1 45-8.2z"></path></svg>
+				<span data-msg="options"></span>
+			</div>
+			<div class="search">
+				<input type="search" id="search-field" maxlength="255" accesskey="/">
+			</div>
+		</div>
+	</header>
+
+	<div id="localization">
+		<div class="container">
+			<!-- This is intentionally not translated. -->
+			See an issue with localization? <a href="https://crowdin.com/project/steamdb-extension" target="_blank">Translate on Crowdin</a>
+		</div>
+	</div>
+
+	<div class="container options-list">
+		<div id="welcome" hidden>
+			<h2 data-msg="options_welcome_title"></h2>
+			<p data-msg="options_welcome_description"></p>
+			<ul>
+				<li data-msg="options_welcome_option1"></li>
+				<li data-msg="options_welcome_option2"></li>
+				<li data-msg="options_welcome_option3"></li>
+			</ul>
+		</div>
+
+		<div id="permissions">
+			<p data-msg="options_permissions_description"></p>
+			<button type="button" id="js-get-permissions" data-msg="options_permissions_button"></button>
+		</div>
+
+		<div id="star" hidden>⭐ <a href="https://steamdb.info/extension/" target="_blank" data-msg="options_review"></a></div>
+
+		<h3 data-msg="options_header_website"></h3>
+
+		<details style="margin-bottom:1rem">
+			<summary data-msg="options_website_explanation"></summary>
+			<p data-msg="options_website_explanation1"></p>
+			<p data-msg="options_website_explanation2" style="font-weight:bold"></p>
+			<p data-msg="options_website_explanation3"></p>
+			<p data-msg="options_website_explanation4"></p>
+		</details>
+
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" data-option="steamdb-highlight" id="checkbox-steamdb-highlight" checked>
+			<div>
+				<label for="checkbox-steamdb-highlight" data-msg="options_website_highlight"></label>
+				<label class="checkbox">
+					<input type="checkbox" class="option-check" data-option="steamdb-highlight-family" checked>
+					<div data-msg="options_website_family"></div>
+				</label>
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					<div data-msg="options_website_highlight1"></div>
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					<div data-msg="options_website_highlight2"></div>
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					<div data-msg="options_website_highlight3"></div>
+				</div>
+			</div>
+		</div>
+
+		<h3 data-msg="options_header_extra_data"></h3>
+
+		<details style="margin-bottom:1rem">
+			<summary data-msg="options_extra_data"></summary>
+			<p data-msg="options_extra_data_prices"></p>
+			<p data-msg="options_extra_data_players"></p>
+			<p data-msg="options_extra_data_achievement_groups"></p>
+		</details>
+
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="steamdb-lowest-price" checked>
+			<div data-msg="options_steamdb_lowest_price"></div>
+		</label>
+
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="online-stats" checked>
+			<div data-msg="options_online_stats"></div>
+		</label>
+
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="steamdb-last-update" checked>
+			<div data-msg="options_steamdb_last_update"></div>
+		</label>
+
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="achievements-group-updates" checked>
+			<div data-msg="options_achievement_groups"></div>
+		</label>
+
+		<h3 data-msg="options_header_buttons_and_links"></h3>
+
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="button-app" checked>
+			<div data-msg="options_button_app"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="button-pcgw" checked>
+			<div data-msg="options_button_pcgw"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="button-sub" checked>
+			<div data-msg="options_button_sub"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="button-gamehub" checked>
+			<div data-msg="options_button_gamehub"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="button-gamecards" checked>
+			<div data-msg="options_button_gamecards"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="steamdb-dev-pub-links" checked>
+			<div data-msg="options_steamdb_dev_pub_links"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="link-subid" checked>
+			<div data-msg="options_link_subid"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="link-subid-widget" checked>
+			<div data-msg="options_link_subid_widget"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="link-accountpage" checked>
+			<div data-msg="options_link_accountpage"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="profile-calculator" checked>
+			<div data-msg="options_profile_calculator"></div>
+		</label>
+
+		<h3 data-msg="options_header_inventory" id="inventory"></h3>
+
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-inventory-sidebar" checked>
+			<div data-msg="options_enhancement_inventory_sidebar"></div>
+		</label>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" data-option="link-inventory" id="checkbox-link-inventory" checked>
+			<label for="checkbox-link-inventory" data-msg="options_link_inventory"></label>
+		</div>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-inventory-no-sell-reload" checked>
+			<div data-msg="options_enhancement_inventory_no_sell_reload"></div>
+		</label>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-inventory-quick-sell" id="checkbox-enhancement-inventory-quick-sell" checked>
+			<div>
+				<label for="checkbox-enhancement-inventory-quick-sell" data-msg="options_enhancement_inventory_quick_sell"></label>
+				<label class="checkbox">
+					<input type="checkbox" class="option-check" data-option="enhancement-inventory-quick-sell-auto">
+					<div data-msg="options_enhancement_inventory_quick_sell_auto"></div>
+				</label>
+			</div>
+		</div>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-inventory-badge-info" checked>
+			<div data-msg="options_enhancement_inventory_badge_info"></div>
+		</label>
+
+		<h3 data-msg="options_header_trade_offers"></h3>
+
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-tradeoffer-url-items" checked>
+			<div>
+				<div data-msg="options_enhancement_tradeoffer_url_items"></div>
+				<div><a href="https://github.com/SteamDatabase/BrowserExtension#trade-offers-support-for-for_item-and-my_item" target="_blank" class="muted" data-msg="options_github_explanation"></a></div>
+			</div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-tradeoffer-no-gift-confirm">
+			<div data-msg="options_enhancement_tradeoffer_no_gift_confirm"></div>
+		</label>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked disabled>
+			<div data-msg="options_enhancement_tradeoffer_better_errors"></div>
+		</div>
+
+		<h3 data-msg="options_header_achievements"></h3>
+
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" data-option="improve-achievements" checked id="checkbox-improve-achievements">
+			<div>
+				<label for="checkbox-improve-achievements" data-msg="options_improve_achievements"></label>
+				<label class="checkbox">
+					<input type="checkbox" class="option-check" data-option="spoiler-achievements" checked>
+					<div data-msg="options_spoiler_achievements"></div>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox" class="option-check" data-option="achievements-global-unlock" checked>
+					<div data-msg="options_achievements_global_unlock"></div>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox" class="option-check" data-option="achievements-group-updates" checked>
+					<div data-msg="options_achievement_groups"></div>
+				</label>
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					<div data-msg="options_modernized_achievements"></div>
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					<div><a href="https://steamcommunity.com/my/stats/CSGO" target="_blank" data-msg="options_builtin_achievements_csrating"></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked disabled>
+			<div>
+				<div data-msg="options_builtin_achievements_global"></div>
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					<div data-msg="options_builtin_achievements_link"></div>
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					<div data-msg="options_builtin_achievements_locked"></div>
+				</div>
+			</div>
+		</div>
+
+		<h3 data-msg="options_header_enhancements"></h3>
+
+		<label class="checkbox" id="skip_agecheck">
+			<input type="checkbox" class="option-check" data-option="enhancement-skip-agecheck">
+			<div>
+				<div data-msg="options_enhancement_skip_agecheck"></div>
+				<div class="muted" data-msg="options_enhancement_skip_agecheck_description"></div>
+			</div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-no-linkfilter">
+			<div data-msg="options_enhancement_no_linkfilter"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-market-ssa">
+			<div data-msg="options_enhancement_market_ssa"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-hide-install-button" checked>
+			<div data-msg="options_enhancement_hide_install_button"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-hide-mobile-app-button">
+			<div data-msg="options_enhancement_hide_mobile_app_button"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="steamdb-rating" checked>
+			<div data-msg="options_steamdb_rating"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-appicon" checked>
+			<div data-msg="options_enhancement_appicon"></div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="prevent-store-images">
+			<div>
+				<div data-msg="options_prevent_store_images"></div>
+				<div class="muted" data-msg="options_prevent_store_images_description"></div>
+			</div>
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-award-popup-url" checked>
+			<div>
+				<span data-msg="options_enhancement_award_popup_url"></span>
+				<div><a href="https://github.com/SteamDatabase/BrowserExtension#automatically-open-grant-an-award-popup-from-a-link-using-award" target="_blank" class="muted" data-msg="options_github_explanation"></a></div>
+			</div>
+		</label>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked disabled>
+		<div data-msg="options_builtin_collapse_library"></div>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked disabled>
+			<div data-msg="options_builtin_card_drops"></div>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked disabled>
+			<div data-msg="options_builtin_queue_cheat"></div>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked disabled>
+			<div data-msg="options_builtin_multibuy_redirect"></div>
+		</div>
+	</div>
+
+	<footer>
+		<p data-msg="options_footer1"></p>
+		<p data-msg="options_footer2"></p>
+		<p class="built-in-checkboxes" data-msg="options_disabled_checkboxes"></p>
+	</footer>
+</body>
+</html>
