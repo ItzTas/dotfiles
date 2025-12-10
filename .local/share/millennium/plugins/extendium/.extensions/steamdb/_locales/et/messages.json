@@ -1,0 +1,695 @@
+{
+	"extension_description": {
+		"message": "Lisab SteamDB lingid ja uued funktsioonid Steami poodi ja kogukonda. Vaadake mängude madalaimaid hindu ja statistikat.",
+		"description": "This value can be up to 132 characters."
+	},
+	"steamdb_options": {
+		"message": "SteamDB Sätted"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB kalkulaator"
+	},
+	"steamstatus": {
+		"message": "Rist on $domain$ peal",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "Tundub et Steam ootab mõningat seisakut. "
+	},
+	"view_on_steamdb": {
+		"message": "Vaata SteamDB-s"
+	},
+	"view_on_steam_hunters": {
+		"message": "Vaata Steam Hunters-is",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Vaata PCGamingWiki-s"
+	},
+	"view_your_achievements": {
+		"message": "Isiklikud saavutused"
+	},
+	"store_page": {
+		"message": "Poeleht",
+		"description": "This translation should match how Steam translates it on community hubs"
+	},
+	"search": {
+		"message": "Otsi"
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB Hinnang:"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ $total$est arvustustest on positiivsed (kõik maksmisvõimalused)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Viimane uuendus:"
+	},
+	"app_depots_updated_short": {
+		"message": "Uuendatud",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Veebistatistika"
+	},
+	"app_stats_online_now": {
+		"message": "Online praegu:"
+	},
+	"app_stats_peak_today": {
+		"message": "24-tunni tipp:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Kõigi aegade tipp:"
+	},
+	"app_stats_followers": {
+		"message": "Jälgijad:"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB madalaim registreeritud hind on <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB madalaim registreeritud hind on <b>$price$</b> allahindlusega <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB madalaim registreeritud hind on <b>$price$</b> ja 2-aasta madalaim on <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Hind nähtud $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Hind märgatud $seen$ korda, viimati $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"agecheck_option_hint": {
+		"message": "SteamDB-l on võimalus neid vanuse kontrollimise lehekülgi automaatselt vahele jätta"
+	},
+	"explore_auto_discover": {
+		"message": "Automaatselt avasta"
+	},
+	"explore_auto_discover_description": {
+		"message": "Avasta järjekord automaatselt."
+	},
+	"explore_generating": {
+		"message": "Uue avastamisjärjekorra loomine, see võib ebaõnnestuda, kui Steam on suure koormuse all…"
+	},
+	"explore_exploring": {
+		"message": "Avastan järjekorda… Päring $current$ $total$st",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Järjekorra tühjendamine ebaõnnestus liiga mitu korda. Saad hiljem uuesti proovida."
+	},
+	"explore_finished": {
+		"message": "Järjekord on avastatud."
+	},
+	"explore_saleitem_claim": {
+		"message": "Lunasta auhind"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Lunasta igapäevane tasuta auhind kui see on olemas."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Auhinda lunastatakse…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Hetkel ei ole igapäevast auhinda, mida taotleda."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Järgmine asi saadaval: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Igapäevase auhinna lunastamine ebaõnnestus."
+	},
+	"explore_saleitem_success": {
+		"message": "Uus auhind lunastatud: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
+	"badges_idle_apps": {
+		"message": "$amount$ Järelejäänud saavutusi",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "$amount$ Rakendusi millest on võimalik saada auhindu sellel lehel",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "$amount$ auhinda järel",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Sellel lehel on: $amount$ jäänud auhinda",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Peidetud saavutused: "
+	},
+	"achievement_global_unlock": {
+		"message": "$percent$ inimestest omab seda saavutust",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "TEENITUD SAAVUTUSED: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "LUKUSTATUD SAAVUTUSED: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Sordi aja järgi"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Saavutuste gruppe pakuvad Steam Hunters SteamDB kaudu.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "Hooaeg $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Kuupäev"
+	},
+	"achievements_csrating_name": {
+		"message": "CS hinnang"
+	},
+	"inventory_list_at": {
+		"message": "Lisa kuulutusse hinnaga $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Müüa $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Paneb toote müüki madalaima müüki pandud hinnaga\n\nMärgitud summa on see raha mis sa saad (ilma tasudeta)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Paneb toote müüki kõrgeima soovi hinnaga\n\nMärgitud hind on see raha mis sa saad (ilma tasudeta)"
+	},
+	"inventory_badge_level": {
+		"message": "Sinu märgi tase: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Teie fooliumimärgi tase: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Märki pole koostatud"
+	},
+	"spoilers_reveal": {
+		"message": "Näita spoilerid",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Diagrammid"
+	},
+	"popup_sales": {
+		"message": "Müügid"
+	},
+	"popup_calendar": {
+		"message": "Kalender"
+	},
+	"popup_patches": {
+		"message": "Uuendused"
+	},
+	"popup_calculator": {
+		"message": "Kalkulaator"
+	},
+	"options": {
+		"message": "Sätted"
+	},
+	"options_welcome_title": {
+		"message": "👋 Täname SteamDB laienduse paigaldamise eest!"
+	},
+	"options_welcome_description": {
+		"message": "Vaata valikuid allpool ja klõpsa nendel, mis sulle sobivad. Selleks, et saada siia tagasi tulevikus:"
+	},
+	"options_welcome_option1": {
+		"message": "Seadete lehekülg SteamDB-s"
+	},
+	"options_welcome_option2": {
+		"message": "Konto rippmenüü Steam'i lehekülgedel"
+	},
+	"options_welcome_option3": {
+		"message": "Teie brauseri lisade lehekülg"
+	},
+	"options_review": {
+		"message": "Jäta selle laienduse kohta arvustus"
+	},
+	"options_permissions_description": {
+		"message": "See laiendus nõuab täiendavaid õigusi, et töötada korrektselt SteamDB-s, Steam Store'is ja Steam Community's."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Anna load"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Luba Steam China tugi"
+	},
+	"options_footer1": {
+		"message": "Tehtud 💙 <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> rahva poolt."
+	},
+	"options_footer2": {
+		"message": "See on <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">vabavaraline</a>, tänu kõikidele panustajatele!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Väljalülitatud märkeruudud tähistavad sisseehitatud funktsioone."
+	},
+	"options_header_website": {
+		"message": "SteamDB Veebisait"
+	},
+	"options_header_extra_data": {
+		"message": "Täiendavad andmed"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Nupud ja lingid"
+	},
+	"options_header_inventory": {
+		"message": "Inventar"
+	},
+	"options_header_trade_offers": {
+		"message": "Kaubanduspakkumised"
+	},
+	"options_header_achievements": {
+		"message": "Saavutused"
+	},
+	"options_header_enhancements": {
+		"message": "Täiustused"
+	},
+	"options_website_explanation": {
+		"message": "Selgitus"
+	},
+	"options_website_explanation1": {
+		"message": "Kui see valik on sisse lülitatud, küsib laiendus <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam poest</a> mõned kasutaja andmed (soovide nimekiri, omandatud, järgitud, ignoreeritud tooted ja tooted ostukorvis) ja kasutab neid, et rakendada veebilehel esiletõstmisi."
+	},
+	"options_website_explanation2": {
+		"message": "Selleks, et see toimiks, peate olema poes sisse logitud."
+	},
+	"options_website_explanation3": {
+		"message": "See sisaldub täielikult teie brauseris ja seda ei saadeta kunagi isegi SteamDB taustsüsteemile."
+	},
+	"options_website_explanation4": {
+		"message": "Et vältida liigseid päringuid Steam Store'ile, salvestatakse teie kasutajaandmed veebilehitseja kohalikku mällu."
+	},
+	"options_website_highlight": {
+		"message": "Rõhutage omandatud ja soovitud tooteid $domain$ veebilehel",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "Soovinimekirja panemine, jälgimine ja toodete ignoreerimine Steami poes otse SteamDB-st"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Luba tasuta rakenduste skript</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Luba ekstra filtreerimine <a href=\"https://steamdb.info/sales/\" target=\"_blank\"> soodustuste leheküljel</a> ja <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pakendite leheküljel</a>"
+	},
+	"options_website_family": {
+		"message": "Tooge esile perekonna omanduses olevad rakendused (nõuab lisataotlust)"
+	},
+	"options_extra_data": {
+		"message": "Lisa andmed hangitud $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Kui \"$options_online_stats$\" või \"$options_steamdb_last_update$\" valikud in pealepandud, siis ekstentsioon teeb turvalise palve $domain$ selleks, et saada hetke seisuga mängus olevate inimeste arvu ja mängu viimase uuenduse.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Kui \"$options_steamdb_lowest_price$\" seade on lubatud, siis pikendus teeb turvalise küsitluse $domain$ sinu valitud valuutas (mis Steam arvab, et see on) selleks, et saada salvestatud hind sellele spetsiifilisele mängule.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Kui valik \"$options_achievement_groups$\" on lubatud, teeb laiendus turvalise päringu $domain$ teha saavutuste rühmitamine lehel isiklikud saavutused koos Steam Huntersi esitatud andmetega.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Näita madalaimat salvestatud hinda rakenduse lehel"
+	},
+	"options_online_stats": {
+		"message": "Näita hetkel mängus olevaid inimesi ja maksimum arvu rakenduse lehel"
+	},
+	"options_steamdb_last_update": {
+		"message": "Näita viimast uuendust rakenduse lehel"
+	},
+	"options_button_app": {
+		"message": "Kuva nuppu rakenduse lehel"
+	},
+	"options_button_pcgw": {
+		"message": "Kuva PCGamingWiki nuppu rakenduse lehel"
+	},
+	"options_button_sub": {
+		"message": "Näita nuppu pakkide lehel"
+	},
+	"options_button_gamehub": {
+		"message": "Kuva nuppu kogukonna lehel"
+	},
+	"options_button_gamecards": {
+		"message": "Näita SteamDB ja Steam poe nuppu mängu kaardi lehel"
+	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Kuva SteamDB lingid arendaja ja väljaandja nimede kõrval"
+	},
+	"options_link_subid": {
+		"message": "Näita SubID iga ostu all valik"
+	},
+	"options_link_subid_widget": {
+		"message": "Näita alam-id rakenduse seadmete all",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "Ühenda iga pakk oma litsensi lehel"
+	},
+	"options_profile_calculator": {
+		"message": "Lisa kalkulaatori lehekülg kogukonna profiilidele"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Vea mängu valik invetari lehel küljele"
+	},
+	"options_link_inventory": {
+		"message": "Ühenda iga kink ja kupong sinu invetaris SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Korrektselt uuri välja kingituse alam-id sinu inventaris"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Ära uuenda inventari kui sa müüd asja"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Lisa kiirmüüki paneku nupp"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Automaatselt aksepteeri kiirmüüke"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Märgise taseme kuvamine kauplemiskaartidel ja boosterpakkidel"
+	},
+	"options_display_market_price_others": {
+		"message": "Kuva asja poe hinda teiste kasutajate inventaris"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Toetus $for_item$ ja $my_item$ parameetritele",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Vaadae selgitust GitHub'ist"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Summuta \"this trade appears suspicious\" ja \"are you sure this is a gift?\" pakkumiste teavitused"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Kuva paremaid veateateid Valve'i oma krüptiliste vea numbrite asemel"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Jäta vahele vanuse kontrolli leht"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Seab ea ja sünnipäeva küpsised alati ületama"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Eemalda \"You are leaving Steam\" lingi filter välislehtedelt",
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Nõustu tellimislepinguga turu, inventari ja võtme koodide aktiveerimis lehtedel automaatselt",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Peida \"Install Steam\" nupp pealises",
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Peida \"Open in Steam\" bänner"
+	},
+	"options_steamdb_rating": {
+		"message": "Kuva SteamDB hinnang toote lehel"
+	},
+	"options_enhancement_appicon": {
+		"message": "Kuva toote icoon poe ja kogukondade lehtedel",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "Täiusta personaalsete saavutuste lehte"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Kuva globaalsete saavutuste lahti saamise protsent"
+	},
+	"options_modernized_achievements": {
+		"message": "Moderniseeritud disain"
+	},
+	"options_achievement_groups": {
+		"message": "Grupi kokku saavutused Steam Hunters andmetega",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Pane peidetud saavutused spoileri elemendi taha"
+	},
+	"options_prevent_store_images": {
+		"message": "Peata piltide laadimine toodete lehtedel"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Mõned arendajad panevad megabaitide viisi pilte toodete seltusse, mille laadimine võib võtta mõnda aega. Vajuta pildile, et see laadida"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Toeta $award$ parameetreid profiilil ja jagatud failide linkidel",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "Lisa nupp \"already in your library\" bloki kokku pakkimiseks"
+	},
+	"options_builtin_card_drops": {
+		"message": "Kuva olemasolevate kaardi drop'ide kogu hulk märkide lehel"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Lisa nupp, et automaatselt allahindluste ajal Discovery Queue'd uurida"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Pärast ülejäänud kaartide ostmist suunata tagasi mängukaartide lehele"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Täiusta globaalsete saavutuste lehte"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Lingi personaalsete saavutuste lehele"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Kuva luku ikoon lukus saavutustel"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "CS-i reitingute ajaloo kuvamine CS2 saavutuste lehel"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Sa ei saa selle mängu jaoks uut võimenduspaketti luua enne kuupäeva $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
+	}
+}

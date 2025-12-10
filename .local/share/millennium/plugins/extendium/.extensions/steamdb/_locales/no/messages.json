@@ -1,0 +1,699 @@
+{
+	"extension_description": {
+		"message": "Legger til SteamDB-lenker og nye funksjoner i Steam-butikken og samfunnet. Se laveste spillpriser og statistikk.",
+		"description": "This value can be up to 132 characters."
+	},
+	"steamdb_options": {
+		"message": "SteamDB-innstillinger"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB-kalkulator"
+	},
+	"steamstatus": {
+		"message": "Sjekk $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "Steam ser ut til å oppleve noe nedetid. "
+	},
+	"view_on_steamdb": {
+		"message": "Vis på SteamDB"
+	},
+	"view_on_steam_hunters": {
+		"message": "Vis på Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Vis på PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Personlige prestasjoner"
+	},
+	"store_page": {
+		"message": "Butikkside",
+		"description": "This translation should match how Steam translates it on community hubs"
+	},
+	"search": {
+		"message": "Søk"
+	},
+	"in_library": {
+		"message": "I biblioteket",
+		"description": "Indicates that the user owns this product"
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB-vurdering:"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ av $total$ anmeldelser er positive (alle kjøps-typer)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Sist oppdatert:"
+	},
+	"app_depots_updated_short": {
+		"message": "Oppdatert",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Online-statistikk"
+	},
+	"app_stats_online_now": {
+		"message": "Tilkoblet nå:"
+	},
+	"app_stats_peak_today": {
+		"message": "24-timers spillertopp:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Rekord-spillertopp:"
+	},
+	"app_stats_followers": {
+		"message": "Følgere:"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB laveste registrerte pris er <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB laveste registrerte pris er <b>$price$</b> ved <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB laveste registrerte pris er <b>$price$</b> og 2-års laveste er <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Pris sett den $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Pris sett $seen$ ganger, sist den $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"agecheck_option_hint": {
+		"message": "SteamDB har en innstilling for å automatisk hoppe over disse aldersjekk-sidene"
+	},
+	"explore_auto_discover": {
+		"message": "Auto-oppdag"
+	},
+	"explore_auto_discover_description": {
+		"message": "Oppdag køen automatisk."
+	},
+	"explore_generating": {
+		"message": "Genererer ny oppdagelseskø, dette kan feile hvis Steam opplever høy belastning…"
+	},
+	"explore_exploring": {
+		"message": "Utforsker køen… Forespørsel $current$ av $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Greide ikke å tømme køen for mange ganger. Du kan prøve igjen senere."
+	},
+	"explore_finished": {
+		"message": "Kø har blitt utforsket."
+	},
+	"explore_saleitem_claim": {
+		"message": "Krev belønning"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Krev inn den daglige belønningen hvis det er en."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Krever den daglige belønningen…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Ingen daglig belønning å kreve for øyeblikket."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Neste gjenstand tilgjengelig: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Kunne ikke kreve den daglige belønningen."
+	},
+	"explore_saleitem_success": {
+		"message": "Ny belønning krevd: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
+	"badges_idle_apps": {
+		"message": "Apper å la være åpne: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Apper å la være åpne på denne siden: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Gjenværende slipp: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Gjenværende slipp på denne siden: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Skjult prestasjon: "
+	},
+	"achievement_global_unlock": {
+		"message": "$percent$ av spillere har denne prestasjonen",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "TJENTE PRESTASJONER: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "UOPPNÅDDE PRESTASJONER: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Sorter etter tid"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Prestasjonsgrupper er skaffet av Steam Hunters via SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "Sesong $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Dato"
+	},
+	"achievements_csrating_name": {
+		"message": "CS-rangering"
+	},
+	"inventory_list_at": {
+		"message": "Legg ut for $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Selg for $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Legger ut gjenstanden for laveste oppgitte salgspris\n\nVist pris er pengene du mottar (uten gebyrer)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Legger ut gjenstanden for høyeste oppgitte kjøpsprisspris\n\nVist pris er pengene du mottar (uten gebyrer)"
+	},
+	"inventory_badge_level": {
+		"message": "Ditt merkenivå: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Ditt foile-merkenivå: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Ingen merke lagd"
+	},
+	"spoilers_reveal": {
+		"message": "Avslør spoilere",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Grafer"
+	},
+	"popup_sales": {
+		"message": "Salg"
+	},
+	"popup_calendar": {
+		"message": "Kalender"
+	},
+	"popup_patches": {
+		"message": "Oppdateringer"
+	},
+	"popup_calculator": {
+		"message": "Kalkulator"
+	},
+	"options": {
+		"message": "Innstillinger"
+	},
+	"options_welcome_title": {
+		"message": "👋 Takk for at du installerte SteamDB-utvidelsen!"
+	},
+	"options_welcome_description": {
+		"message": "Gjennomgå innstillingene nedenfor og veksle de du foretrekker. For å komme tilbake hit i fremtiden:"
+	},
+	"options_welcome_option1": {
+		"message": "Innstillingsside på SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Kontorullegardinsmeny på Steam-sider"
+	},
+	"options_welcome_option3": {
+		"message": "Nettleseren dins tilleggsside"
+	},
+	"options_review": {
+		"message": "Gi en anmeldelse av utvidelsen"
+	},
+	"options_permissions_description": {
+		"message": "Denne utvidelsen krever ytterligere tillatelser for å fungere riktig på SteamDB, Steam-butikken og Steam-fellesskapet."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Gi tillatelser"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Aktiver støtte for Steam Kina"
+	},
+	"options_footer1": {
+		"message": "Laget med 💙 av <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>-folkene."
+	},
+	"options_footer2": {
+		"message": "Det er <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">åpen kildekode</a>, takk til alle bidragsyterne!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Deaktiverte avmerkingsbokser indikerer innebygde funksjoner."
+	},
+	"options_header_website": {
+		"message": "SteamDB-nettsted"
+	},
+	"options_header_extra_data": {
+		"message": "Ekstra data"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Knapper og lenker"
+	},
+	"options_header_inventory": {
+		"message": "Lager"
+	},
+	"options_header_trade_offers": {
+		"message": "Tilbud om byttehandel"
+	},
+	"options_header_achievements": {
+		"message": "Prestasjoner"
+	},
+	"options_header_enhancements": {
+		"message": "Forbedringer"
+	},
+	"options_website_explanation": {
+		"message": "Forklaring"
+	},
+	"options_website_explanation1": {
+		"message": "Når dette alternativet er aktivert, vil utvidelsen be om noen brukerdata (ønskelistede, eide, fulgte, ignorerte produkter, og produkter i handlekurven) fra <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam-butikken</a> og vil bruke disse til å påføre høydepunkt på nettstedet."
+	},
+	"options_website_explanation2": {
+		"message": "Du må være logget inn på butikken for at dette skal fungere."
+	},
+	"options_website_explanation3": {
+		"message": "Dette holdes helt i nettleseren din og sendes aldri, selv til SteamDBs backend."
+	},
+	"options_website_explanation4": {
+		"message": "For å forhindre overdrevene mengder forespørsler til Steam-butikken, bufres brukerdataene din i nettleserens lokale lagringsplass."
+	},
+	"options_website_highlight": {
+		"message": "Fremhev eide og ønskelistede produkter på $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "Ønskelist, følg og ignorer spill på Steam-butikken direkte fra SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Aktiver gratis pakkeskript</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Aktiver ekstra filtrering på <a href=\"https://steamdb.info/sales/\" target=\"_blank\">salgssiden</a> og <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pakkesiden</a>"
+	},
+	"options_website_family": {
+		"message": "Fremhev familieeide apper (krever en ekstra forespørsel)"
+	},
+	"options_extra_data": {
+		"message": "Ekstra data hentet fra $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Når alternativet \"$options_online_stats$\" eller \"$options_steamdb_last_update$\" er aktivert, vil utvidelsen utføre en sikker forespørsel til $domain$ for å skaffe den nåværende mengden spillere og siste spilloppdatering.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Når alternativet \"$options_steamdb_lowest_price$\" er aktivert, vil utvidelsen utføre en sikker forespørsel til $domain$ med din valuta (med den Steam tror det er) for å få den registrerte prisen til et spesifikt spill.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Når $options_achievement_groups$-innstillingen er aktivert, vil utvidelsen sende en sikker forespørsel til $domain$ for å gruppere prestasjoner på den personlige prestasjonssiden med data skaffet av Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Vis laveste registrerte pris på produktsider"
+	},
+	"options_online_stats": {
+		"message": "Vis gjeldende spillertopp og rekord-spillertopper på produktsider"
+	},
+	"options_steamdb_last_update": {
+		"message": "Vis nyeste oppdatering på produktsider"
+	},
+	"options_button_app": {
+		"message": "Vis en knapp på produktsider"
+	},
+	"options_button_pcgw": {
+		"message": "Vis PCGamingWiki-knapp på produktsider"
+	},
+	"options_button_sub": {
+		"message": "Vis en knapp på pakkesider"
+	},
+	"options_button_gamehub": {
+		"message": "Vis en knapp på samfunnssentraler"
+	},
+	"options_button_gamecards": {
+		"message": "Vis SteamDB og butikksideknapper på spillkortsiden"
+	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Vis SteamDB-lenker ved siden av utvikler- og utgivernavn"
+	},
+	"options_link_subid": {
+		"message": "Vis SubID under hvert kjøpsalternativ"
+	},
+	"options_link_subid_widget": {
+		"message": "Vis SubID i innebygde moduler",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "Lenk hver pakke på lisenssiden din"
+	},
+	"options_profile_calculator": {
+		"message": "Legg til en kalkulator-lenke på fellesskapsprofiler"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Flytt spillvalg på lagersiden til siden"
+	},
+	"options_link_inventory": {
+		"message": "Koble sammen hver gave og kupong i lageret ditt til SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Finn ut av en gaves SubID i lageret ditt riktig"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Ikke oppdater lageret når en gjenstand selges"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Legg til hurtigselg-knapper"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Automatisk godta hurtigsalg"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Vis merkenivå på kort og booster-pakker"
+	},
+	"options_display_market_price_others": {
+		"message": "Vis markedspris for gjenstander i andre brukeres lager"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Støtt $for_item$ og $my_item$-parametere",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Se forklaring på GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Skjul \"denne handelen virker mistenkelig\" og \"er du sikker på at dette er en gave? byttehandelsvarslinger"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Vis bedre feilmeldinger i stedet for Valves kryptiske feilnummer"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Hopp over alderssjekk-siden"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Setter alder og bursdagsinformasjonskapsler til alltid bestå"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Fjern \"Du forlater Steam\" lenke-filter fra eksterne nettsteder",
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Godta abonnementsavtale på markedet, lageret og aktiver nøkkelsider automatisk",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Skjul \"Installer Steam\"-knappen i toppteksten",
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Skjul \"Åpne i Steam\"-banneren"
+	},
+	"options_steamdb_rating": {
+		"message": "Vis SteamDB-vurdering på produktsider"
+	},
+	"options_enhancement_appicon": {
+		"message": "Vis produktikon på butikk og samfunnssider",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "Forbedre personlig prestasjonsside"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Vis prosent av globale prestasjonsoppnåelser"
+	},
+	"options_modernized_achievements": {
+		"message": "Modernisert design"
+	},
+	"options_achievement_groups": {
+		"message": "Grupper prestasjoner med data fra Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Legg skjulte prestasjoner bak et spoiler-element"
+	},
+	"options_prevent_store_images": {
+		"message": "Stopp bilder fra å laste på produktsider"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Noen utviklere legger megabyte med bilder i produktbeskrivelser som kan ta en stund å laste, klikk på et bilde for å laste inn"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Støtt $award$-parametere på profil og delte fil-lenker",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "Legg til en knapp for å skjule \"allerede i biblioteket\"-blokken"
+	},
+	"options_builtin_card_drops": {
+		"message": "Vis det totale antallet av kort-slipp som gjenstår på merkesiden"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Legg til en knapp for å automatisk oppdage køen under salg"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Omdirigerer tilbake til kortsiden etter å ha kjøpt de resterende kortene"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Forbedre global prestasjonsside"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Lenke til personlig prestasjonsside"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Vis et låseikon for låste prestasjoner"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Vis CS-rangeringshistorikk på CS2-prestasjonssiden"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Du vil ikke kunne lage enda en booster-pakke for dette spille før $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
+	}
+}

@@ -1,0 +1,695 @@
+{
+	"extension_description": {
+		"message": "מוסיף קישורי SteamDB ותכונות חדשות בחנות ובקהילה של Steam. צפה במחירי המשחקים ובסטטיסטיקה הנמוכים ביותר.",
+		"description": "This value can be up to 132 characters."
+	},
+	"steamdb_options": {
+		"message": "הגדרות SteamDB"
+	},
+	"steamdb_calculator": {
+		"message": "מחשבון SteamDB"
+	},
+	"steamstatus": {
+		"message": "בדוק ב$domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "נראה כי יש בעיות שרת ב-Steam. "
+	},
+	"view_on_steamdb": {
+		"message": "הצג ב-SteamDB"
+	},
+	"view_on_steam_hunters": {
+		"message": "הצג ב-Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "הצג ב-PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "הישגים אישיים"
+	},
+	"store_page": {
+		"message": "עמוד המשחק בחנות",
+		"description": "This translation should match how Steam translates it on community hubs"
+	},
+	"search": {
+		"message": "חיפוש"
+	},
+	"app_steamdb_rating": {
+		"message": "דירוג SteamDB:"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ דירוגים חיובים מתוך $total$ (לכל סוגי הרכישות)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "עודכן לאחרונה:"
+	},
+	"app_depots_updated_short": {
+		"message": "עודכן ב",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "נתוני אונליין"
+	},
+	"app_stats_online_now": {
+		"message": "מחוברים כעת:"
+	},
+	"app_stats_peak_today": {
+		"message": "שיא 24-שעות:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "שיא כל הזמנים:"
+	},
+	"app_stats_followers": {
+		"message": "עוקבים:"
+	},
+	"app_lowest_price": {
+		"message": "המחיר הנמוך ביותר שנרשם ב SteamDB הוא <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "המחיר הנמוך ביותר שנרשם ב SteamDB הוא <b>$price$</b> בהנחה של <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "המחיר הנמוך ביותר שנרשם ב SteamDB הוא <b>$price$</b> והמחיר הנמוך ביותר בשנתיים האחרונות הוא <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "אומת בתאריך $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "המחיר נצפה $seen$ פעמים, אומת לאחרונה ב $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"agecheck_option_hint": {
+		"message": "ל-SteamDB יש את האפשרות לדלג על דפי בדיקות הגיל האלו באופן אוטומטי"
+	},
+	"explore_auto_discover": {
+		"message": "גילוי אוטומטי"
+	},
+	"explore_auto_discover_description": {
+		"message": "גלה את התור באופן אוטומטי."
+	},
+	"explore_generating": {
+		"message": "צור רשימת גילוי חדשה, פעולה זו עשויה להכשל אם Steam נמצא תחת עומס כבד…"
+	},
+	"explore_exploring": {
+		"message": "חוקר את הרשימה… בקשה $current$ מתוך $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "נכשל בניקוי רשימת הגילוי יותר מדי פעמים. ניתן לנסות שוב מאוחר יותר."
+	},
+	"explore_finished": {
+		"message": "הגילוי נצפה."
+	},
+	"explore_saleitem_claim": {
+		"message": "אסוף את הפרס"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "אסוף את הפרס החינמי היומי אם קיים כזה."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "אוסף את הפרס היומי…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "לא קיים פרס חינמי יומי לאסוף כרגע."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "זמינות הפריט הבא: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "כישלון באיסוף הפרס היומי."
+	},
+	"explore_saleitem_success": {
+		"message": "הפרס הבא נאסף: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
+	"badges_idle_apps": {
+		"message": "אפלקיציות להפסיק: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "אפלקיציות להפסיק בדף זה: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "דרופים שנותרו: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "דרופים שנותרו בעמוד זה: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "הישגים מוסתרים: "
+	},
+	"achievement_global_unlock": {
+		"message": "ל-$percent$ מהשחקנים יש הישג זה",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "הישגים שהושגו: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "הישגים נעולים: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "מיין לפי זמן"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "קבוצות הישגים מסופקות על ידי Steam Hunters באמצעות SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "עונה $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "תאריך"
+	},
+	"achievements_csrating_name": {
+		"message": "דרגות CS"
+	},
+	"inventory_list_at": {
+		"message": "פרסם במחיר $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "מכור במחיר $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "מכניס את הפריט במחיר הנמוך ביותר מממחיר השוק\n\nהמחיר המוצג הוא הכסף המתקבל (בלי עמלות)"
+	},
+	"inventory_sell_at_title": {
+		"message": "מכניס את הפריט במחיר הגבוהה ביותר מממחיר השוק\n\nהמחיר המוצג הוא הכסף המתקבל (בלי עמלות)"
+	},
+	"inventory_badge_level": {
+		"message": "רמת התג שלך: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "רמת התג הכסוף שלך: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "לא נוצר תג"
+	},
+	"spoilers_reveal": {
+		"message": "חשוף ספוילרים",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "תרשימים"
+	},
+	"popup_sales": {
+		"message": "מכירות"
+	},
+	"popup_calendar": {
+		"message": "לוח שנה"
+	},
+	"popup_patches": {
+		"message": "עדכונים"
+	},
+	"popup_calculator": {
+		"message": "מחשבון"
+	},
+	"options": {
+		"message": "הגדרות"
+	},
+	"options_welcome_title": {
+		"message": "תודה שהתקנתם את התוסף SteamDB!"
+	},
+	"options_welcome_description": {
+		"message": "בדוק/י את האפשריות מתחת, והפעל/י את אלה שאת/ה רוצה. כדי לחזור לפה בעתיד:"
+	},
+	"options_welcome_option1": {
+		"message": "עמוד ההגדרות ב SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "תפריט משתמש נשלף בעמודי סטים"
+	},
+	"options_welcome_option3": {
+		"message": "עמוד התוספים של הדפדפן"
+	},
+	"options_review": {
+		"message": "השאר ביקורת עבור התוסף"
+	},
+	"options_permissions_description": {
+		"message": "תוסף זה דורש הרשאות נוספות על מנת לעבוד בצורה תקינה מול SteamDB, חנות סטים וקהילות סטים."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ הענק הרשאות"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "הפעל תמיכה ב-Steam China"
+	},
+	"options_footer1": {
+		"message": "נוצר ב 💙 ע\"י הצוות של <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "זהו <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">קוד פתוח</a>, תודה לכל התורמים!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* כפתורים אפורים מציגים פיצרים מקובעים."
+	},
+	"options_header_website": {
+		"message": "אתר SteamDB"
+	},
+	"options_header_extra_data": {
+		"message": "נתונים נוספים"
+	},
+	"options_header_buttons_and_links": {
+		"message": "כפתורים ולינקים"
+	},
+	"options_header_inventory": {
+		"message": "תיק"
+	},
+	"options_header_trade_offers": {
+		"message": "הצעות החלפה"
+	},
+	"options_header_achievements": {
+		"message": "הישגים"
+	},
+	"options_header_enhancements": {
+		"message": "שידרוגים נוספים"
+	},
+	"options_website_explanation": {
+		"message": "הסבר"
+	},
+	"options_website_explanation1": {
+		"message": "כאשר האופציה הזו מופעלת, התוסף יבקש אי אלו מידע של המשתמש (רשימת משאלות, רשימת בעלות, רשימת מעקב, מוצרים שמתעלמים מהם, ומוצרים בעגלת הקניות) מ<a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">החנות של סטים</a> וישתמש בהם לישם דגשים על האתר."
+	},
+	"options_website_explanation2": {
+		"message": "עליך להיות מחובר לחנות על מנת שזה יעבוד."
+	},
+	"options_website_explanation3": {
+		"message": "מידע זה נשמע בדפדפן שלך ולא נשלח לעולם לשרתי SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "על מנת לחסוך בכמות הבקשות הנשלחות לחנות סטים, פרטי המשתמש נשמרים מוטמנים בזיכרון הלוקאלי של הדפדפן."
+	},
+	"options_website_highlight": {
+		"message": "הדגש מוצרים ברשימת המעקב\\בעלות ב$domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "הוסף מוצרים לרשימת המשאלות, מעקב או הסתרה בחנות סטים ישירות מ SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">הפעל את סקריפט הפעלת חבילות חינמיות</a>"
+	},
+	"options_website_highlight3": {
+		"message": "הפעל מסננים נוספים על <a href=\"https://steamdb.info/sales/\" target=\"_blank\">דפי מבצעים</a> ו<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">דפי חבילות</a>"
+	},
+	"options_website_family": {
+		"message": "הדגש אפליקציות בבעלות משפחתית (דורש בקשה נוספת)"
+	},
+	"options_extra_data": {
+		"message": "מידע נוסף שמיובא מ$domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "כאשר האופציה $options_online_stats$ או $options_steamdb_last_update$ פעילה, התוסף יבצע בקשה מאובטחת ל$domain$ כדי להשיג את כמות השחקנים כרגע ואת עדכון המשחק האחרון.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "כאשר האופציה $options_steamdb_lowest_price$ מופעלת, התוסף יבצע בקשה מאובטחת ל$domain$ עם המטבע (עם מה שסטים חושבים שזה) כדי להשיג את המחיר הרשום בשביל המשחק הספציפי.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "כשאפשרות \"$options_achievement_groups$\" מופעלת, ההרחבה תשלח בקשה מאובטחת ל-$domain$ לקבץ הישגים על דף הישגים אישיים עם מידע מסופק על ידי Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "הצג את המחיר הנמוך ביותר הרשום בדפי המוצרים"
+	},
+	"options_online_stats": {
+		"message": "הצג את כמות השחקנים כרגע, ובמקסימום בדפי המוצרים"
+	},
+	"options_steamdb_last_update": {
+		"message": "הצג עדכון מאגר אחרון על דפי המשחק"
+	},
+	"options_button_app": {
+		"message": "הצג כפתור בעמודי מוצרים"
+	},
+	"options_button_pcgw": {
+		"message": "הצג כפתור PCGamingWiki בעמודי המוצרים"
+	},
+	"options_button_sub": {
+		"message": "הצג כפתור בעמודי חבילות"
+	},
+	"options_button_gamehub": {
+		"message": "הצג כפתור במרכז הקהילתי"
+	},
+	"options_button_gamecards": {
+		"message": "הצג את כפתורי חנות סטים ו SteamDB בעמוד הקלפים"
+	},
+	"options_steamdb_dev_pub_links": {
+		"message": "הצג קישורים ל-SteamDB לצד שמות המפתח והמוציא לאור"
+	},
+	"options_link_subid": {
+		"message": "הצג את מזהה החבילה תחת כל אופצית רכישה"
+	},
+	"options_link_subid_widget": {
+		"message": "הצג את מזהה החבילה בווידג'ט של אפליקציות",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "קשר כל חבילה בדף הרשיונות שלך"
+	},
+	"options_profile_calculator": {
+		"message": "הוסף לינק למחשבון לעמודי פרופיל"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "הזז את בחירת המשחק בתיק לצד"
+	},
+	"options_link_inventory": {
+		"message": "קשר בין כל מתנה וקופון בתיק שלך ל SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "זהה בצורה תקינה SubID מהתיק"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "אל תעדכן את התיק שלך במכירת חפץ"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "הוסף כפתורי מכירה מהירה"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "אשר אוטומטית מכירה מהירה"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "הצג את רמת התג על כרטיסים וחבילות בוסטר"
+	},
+	"options_display_market_price_others": {
+		"message": "הצג מחירי חפצים בתיק של משתמש אחר"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "תמוך בפרמטרים מסוג $for_item$ ו $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "צפה בהסבר ב GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "דכא הודעות \"העיסקה הזו נראת חשודה\" ו\"האם אתה בטוח שזו מתנה?\" בהתראות של החלפות עם משתמשים"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "הצג הודעות שגיאה ברורות, במקום מספרי השגיאה המסתורים של וואלו"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "דלג על עמוד בדיקת גיל"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "מגדיר את עוגיות הגיל והתאריך לידה לוויתור"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "להסיר את \"אתה עוזב את סטים\" פילטר בלחיצה על לינק לאתר חיצוני",
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "אישרור אוטומטית של תנאי שימוש בחנות, תיק ועמודי הכנסת מפתח",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "הסתר את כפתור \"התקן את סטים\" בראש האתר",
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "הסתר את באנר \"פתח בסטים\""
+	},
+	"options_steamdb_rating": {
+		"message": "הצג ציוני SteamDB על דפי המוצרים"
+	},
+	"options_enhancement_appicon": {
+		"message": "הצג לוגו של המוצר בדף החנות והקהילה של המוצר",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "שפר את דף ההישגים האישיים"
+	},
+	"options_achievements_global_unlock": {
+		"message": "הצג את אחוז ההישגים הגלובלים"
+	},
+	"options_modernized_achievements": {
+		"message": "עיצוב חדשני"
+	},
+	"options_achievement_groups": {
+		"message": "קבץ הישגים עם מידע מ-Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "שים הישגים חבויים מאחורי אלמנט ספוילר"
+	},
+	"options_prevent_store_images": {
+		"message": "עצור טעינה של תמונות בדפי המוצרים"
+	},
+	"options_prevent_store_images_description": {
+		"message": "ישנם מפתחים אשר שמים תמונות גדולות בתיאור המוצר שיכול לקחת זמן לטעון, לחץ על התמונה לטעון"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "תמיכה ב$award$ קישור על פרופיל ותוכן משותף קהילתית",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "הוסף כפתור להפלת בלוק \"כבר בספרייה שלך\""
+	},
+	"options_builtin_card_drops": {
+		"message": "הצג סכום קלפים שנותרו לנפילה בעמוד הסיכות"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "הוסף כפתור לעבור על תור אוטומטית בזמן ימי מבצעים/אירועים"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "הפנה חזרה לדף קלפי המשחק לאחר קניית הקלפים שנותרו"
+	},
+	"options_builtin_achievements_global": {
+		"message": "שיפורים לעמוד ההישגים"
+	},
+	"options_builtin_achievements_link": {
+		"message": "קישור לעמוד ההישגים האישיים"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "הצג אייקון מנעול להישגים נעולים"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "הצג היסתורית דרגות CS על דף הישגים של CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "לא תוכל ליצור חבילת בוסטר נוספת עבור המשחק הזה עד ל \n$available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
+	}
+}

@@ -1,0 +1,699 @@
+{
+	"extension_description": {
+		"message": "Lisää SteamDB-linkkejä ja ominaisuuksia Steamin kauppa- ja yhteisösivuille. Katso pelien alhaisimmat hinnat ja tilastot.",
+		"description": "This value can be up to 132 characters."
+	},
+	"steamdb_options": {
+		"message": "SteamDB-asetukset"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB-laskuri"
+	},
+	"steamstatus": {
+		"message": "Katso $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "Steamissä näyttää olevan toimintahäiriöitä. "
+	},
+	"view_on_steamdb": {
+		"message": "Näytä SteamDB:ssä"
+	},
+	"view_on_steam_hunters": {
+		"message": "Näytä Steam Hunters -sivustolla",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Näytä PCGamingWikissä"
+	},
+	"view_your_achievements": {
+		"message": "Henkilökohtaiset saavutukset"
+	},
+	"store_page": {
+		"message": "Kauppasivu",
+		"description": "This translation should match how Steam translates it on community hubs"
+	},
+	"search": {
+		"message": "Haku"
+	},
+	"in_library": {
+		"message": "Kirjastossa",
+		"description": "Indicates that the user owns this product"
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB-arvostelu:"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$/$total$ arvosteluista ovat myönteisiä (kaikki ostotyypit)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Viimeisin päivitys:"
+	},
+	"app_depots_updated_short": {
+		"message": "Päivitetty",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Pelaajatilastot"
+	},
+	"app_stats_online_now": {
+		"message": "Pelaamassa nyt:"
+	},
+	"app_stats_peak_today": {
+		"message": "24 tunnin korkein:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Kaikkien aikojen korkein:"
+	},
+	"app_stats_followers": {
+		"message": "Seuraajat:"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB:n alin tilastoitu hinta on <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB:n alin tilastoitu hinta on <b>$price$</b> <b>-$discount$%</b> alennuksella",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB:n alin tilastoitu hinta on <b>$price$</b> ja 2 vuoden alin on <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Hinta nähty $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Hinta nähty $seen$ kertaa, viimeisimmin $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"agecheck_option_hint": {
+		"message": "SteamDB:ssä on asetus, jolla voi ohittaa iäntarkistussivut automaattisesti"
+	},
+	"explore_auto_discover": {
+		"message": "Automaattinen löytöjono"
+	},
+	"explore_auto_discover_description": {
+		"message": "Etsi jono automaattisesti."
+	},
+	"explore_generating": {
+		"message": "Luodaan uutta löytöjonoa, tämä voi epäonnistua jos Steam on kovassa kuormituksessa…"
+	},
+	"explore_exploring": {
+		"message": "Tutkitaan jonoa… Pyyntö $current$/$total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Jonon tyhjentäminen epäonnistui liian monta kertaa. Voit yrittää uudelleen myöhemmin."
+	},
+	"explore_finished": {
+		"message": "Jono on tutkittu."
+	},
+	"explore_saleitem_claim": {
+		"message": "Lunasta palkinto"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Lunasta ilmainen päivittäinen palkinto, jos sellainen on."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Lunastetaan päivittäistä palkkiota…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Tällä hetkellä ei ole päivittäistä palkkiota."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Seuraava tuote saatavilla: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Päivittäistä palkkiota ei voitu lunastaa."
+	},
+	"explore_saleitem_success": {
+		"message": "Uusi palkkio: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
+	"badges_idle_apps": {
+		"message": "Sovelluksia jäljellä: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Sovelluksia jäljellä tällä sivulla: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Löytöjä jäljellä: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Löytöjä jäljellä tällä sivulla: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Piilotettu saavutus: "
+	},
+	"achievement_global_unlock": {
+		"message": "$percent$ pelaajista ovat saaneet tämän saavutuksen",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "AVATUT SAAVUTUKSET: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "LUKITUT SAAVUTUKSET: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Lajittele ajan mukaan"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Saavutusryhmät tarjoaa Steam Hunter SteamDB: n kautta.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "Kausi $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Päivämäärä"
+	},
+	"achievements_csrating_name": {
+		"message": "CS Luokitus"
+	},
+	"inventory_list_at": {
+		"message": "Aseta myyntiin hintaan $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Myy hintaan $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Asettaa tavaran myyntiin alimpaan listattuun hintaan\n\nNäytetty hinta on summa, jonka saat (ilman kuluja)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Listaa tavaran korkeimpaan listattuun ostotilaushintaan\n\nNäytetty hinta on summa, jonka saat (ilman kuluja)"
+	},
+	"inventory_badge_level": {
+		"message": "Kunniamerkkisi taso: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Kiiltävän kunniamerkkisi taso: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Kunniamerkkiä ei ole luotu"
+	},
+	"spoilers_reveal": {
+		"message": "Paljasta spoilerit",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Kaaviot"
+	},
+	"popup_sales": {
+		"message": "Myynti"
+	},
+	"popup_calendar": {
+		"message": "Kalenteri"
+	},
+	"popup_patches": {
+		"message": "Paikat"
+	},
+	"popup_calculator": {
+		"message": "Laskin"
+	},
+	"options": {
+		"message": "Asetukset"
+	},
+	"options_welcome_title": {
+		"message": "👋 Kiitos, kun asensit SteamDB-laajennuksen!"
+	},
+	"options_welcome_description": {
+		"message": "Tutustu alla oleviin asetuksiin ja muuta haluamiasi asetuksia. Löydät tälle sivulle uudestaan seuraavilla keinoilla:"
+	},
+	"options_welcome_option1": {
+		"message": "SteamDB:n asetukset"
+	},
+	"options_welcome_option2": {
+		"message": "Steam-sivujen tilin pudotusvalikko"
+	},
+	"options_welcome_option3": {
+		"message": "Selaimesi laajennussivu"
+	},
+	"options_review": {
+		"message": "Jätä arvostelu tälle laajennukselle"
+	},
+	"options_permissions_description": {
+		"message": "Tämä laajennus vaatii lisäkäyttöoikeuksia toimiakseen oikein SteamDB:ssä, Steam-kaupassa ja -yhteisössä."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Myönnä käyttöoikeudet"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Ota käyttöön Steam China -tuki"
+	},
+	"options_footer1": {
+		"message": "Tehty 💙:lla <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB:n</a> porukan toimesta."
+	},
+	"options_footer2": {
+		"message": "Se on <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">avointa lähdekoodia</a>, kiitos kaikille avustajille!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "Poiskytketyt valintaruudut osoittavat sisäänrakennettuja ominaisuuksia."
+	},
+	"options_header_website": {
+		"message": "SteamDB-verkkosivu"
+	},
+	"options_header_extra_data": {
+		"message": "Lisätietoja"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Painikkeet ja linkit"
+	},
+	"options_header_inventory": {
+		"message": "Tavaraluettelo"
+	},
+	"options_header_trade_offers": {
+		"message": "Vaihtotarjoukset"
+	},
+	"options_header_achievements": {
+		"message": "Saavutukset"
+	},
+	"options_header_enhancements": {
+		"message": "Parannukset"
+	},
+	"options_website_explanation": {
+		"message": "Selitys"
+	},
+	"options_website_explanation1": {
+		"message": "Kun tämä asetus on käytössä, laajennus pyytää joitakin käyttäjätietoja (toivelista, omistetut, seuratut, ohitetut ja ostokorin tuotteet) <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam-kaupasta</a> ja käyttää näitä tuotteiden korostamiseen sivulla."
+	},
+	"options_website_explanation2": {
+		"message": "Sinun täytyy olla kirjautuneena kauppaan, jotta tämä toimii."
+	},
+	"options_website_explanation3": {
+		"message": "Tämä pysyy täysin selaimessasi ja tietojasi ei koskaan lähetetä edes SteamDB:lle."
+	},
+	"options_website_explanation4": {
+		"message": "Estääksemme liialliset pyynnöt Steam-kauppaan, käyttäjätietosi tallennetaan selaimesi välimuistiin."
+	},
+	"options_website_highlight": {
+		"message": "Korosta omistetut ja wishlistatut tuotteet $domain$:ssa",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "Lisää toivelistallesi, seuraa ja ohita Steam-kaupan tuotteita suoraan SteamDB:stä"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Ota käyttöön ilmaiset paketit -skripti</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Ota käyttöön lisäsuodatukset <a href=\"https://steamdb.info/sales/\" target=\"_blank\">alennukset</a> ja <a href=\"https://steamdb.info/bundles/\" target=\"_blank\"> paketit -sivuilla</a>"
+	},
+	"options_website_family": {
+		"message": "Korosta perheen omistamat sovellukset (vaatii ylimääräisen pyynnön)"
+	},
+	"options_extra_data": {
+		"message": "Lisätiedot haettu $domain$:sta",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Kun \"$options_online_stats$\" tai \"$options_steamdb_last_update$\" on käytössä, laajennus tekee salatun pyynnön $domain$:on saadakseen tämänhetkisen pelaajaluvun ja viimeisimmän pelin päivityksen.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Kun \"$options_steamdb_lowest_price$\" on käytössä, laajennus tekee salatun pyynnön $domain$:on sinun valuutallasi (tai minkä Steam luulee valuuttasi olevan) saadakseen tallennetun hinnan kyseiselle pelille.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Kun \"$options_achievement_groups$\" asetus on päällä, laajennus tekee suojatun pyynnön $domain$ :lle tehdäkseen saavutusryhmityksen henkilökohtaiselle saavutussivulle Steam Huntersin tarjoamalla tiedoilla.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Näytä alhaisin tallennettu hinta kauppasivuilla"
+	},
+	"options_online_stats": {
+		"message": "Näytä tämänhetkiset ja korkeimmat pelaajaluvut kauppasivuilla"
+	},
+	"options_steamdb_last_update": {
+		"message": "Näytä viimeisin päivitys kauppasivuilla"
+	},
+	"options_button_app": {
+		"message": "Näytä painike kauppasivuilla"
+	},
+	"options_button_pcgw": {
+		"message": "Näytä PCGamingWiki -painike kauppasivuilla"
+	},
+	"options_button_sub": {
+		"message": "Näytä painike pakettisivuilla"
+	},
+	"options_button_gamehub": {
+		"message": "Näytä painike yhteisökeskuksissa"
+	},
+	"options_button_gamecards": {
+		"message": "Näytä SteamDB ja kauppasivu -painikkeet keräilykorttisivulla"
+	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Näytä SteamDB linkit kehittäjän ja julkaisijan nimen vieressä"
+	},
+	"options_link_subid": {
+		"message": "Näytä SubID jokaisen ostovaihtoedon alla"
+	},
+	"options_link_subid_widget": {
+		"message": "Näytä SubID pienoisohjelmissa",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "Linkitä paketit käyttöoikeudet-sivullasi"
+	},
+	"options_profile_calculator": {
+		"message": "Lisää laskimen linkki käyttäjäprofiileihin"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Siirrä pelin valinta tavaraluettelosivulla sivuun"
+	},
+	"options_link_inventory": {
+		"message": "Linkitä jokainen lahja ja kuponki tavaraluettelossasi SteamDB:hen"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Selvitä lahjan SubID tavaraluettelossasi"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Älä päivitä tavaraluetteloa kun myyt tavaran"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Lisää pikamyyntipainikkeet"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Hyväksy pikamyynti automaattisesti"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Näytä kunniamerkin taso keräilykorteissa ja tehostepaketeissa"
+	},
+	"options_display_market_price_others": {
+		"message": "Näytä tavaroiden kauppahinta muiden käyttäjien tavaraluetteloissa"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Tue $for_item$ ja $my_item$ parametreja",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Katso selitys GitHubissa"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Estä \"tämä vaihto näyttää epäilyttävältä\" ja \"oletko varma, että tämä on lahja?\" vaihtotarjouksien varoitukset"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Näytä parempia virheviestejä Valven kryptisten virhenumeroiden sijaan"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Ohita iäntarkistussivu"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Asettaa iän ja syntymäpäivän evästeet aina läpäiseväksi"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Poista \"Olet poistumassa Steamista\" linkkisuodatin ulkoisilta sivustoilta",
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Hyväksy Steam-tilaussopimus kauppapaikka, tavaraluettelo ja aktivoi tuote -sivuilla automaattisesti",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Piilota \"Asenna Steam\" -painike ylätunnisteesta",
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Piilota \"Avaa Steamissa\" banneri"
+	},
+	"options_steamdb_rating": {
+		"message": "Näytä SteamDB arvostelut tuotesivuilla"
+	},
+	"options_enhancement_appicon": {
+		"message": "Näytä tuotekuvake kauppa- ja yhteisösivuilla",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "Paranna henkilökohtaiset saavutukset -sivua"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Näytä maailmanlaajuisten saavutusten avausprosentti"
+	},
+	"options_modernized_achievements": {
+		"message": "Modernisoitu tyyli"
+	},
+	"options_achievement_groups": {
+		"message": "Ryhmitä saavutukset Steam Huntersin tietoihin",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Laita piilotetut saavutukset spoiler-elementin taaakse"
+	},
+	"options_prevent_store_images": {
+		"message": "Estä kuvien lataaminen kauppasivuilla"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Jotkut kehittäjät laittavat megatavujen edestä kuvia pelien kuvauksiin, joiden lataus saatta kestää pitkään. Klikkaa kuvaa ladataksesi"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Tue $award$ parametriä profiileissa ja jaetuissa tiedostolinkeissä",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "Lisää painike sulkeaksesi \"kirjastossa\" -lohkon"
+	},
+	"options_builtin_card_drops": {
+		"message": "Näytä jäljellä olevien korttilöytöjen määrä kunniamerkit-sivulla"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Lisää painike löytöjonon automatisoimiseen alennusten aikana"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Uudelleenohjaa takaisin pelikortti sivulle jäljellä olevien korttien ostamisen jälkeen"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Paranna maailmanlaajuiset saavutukset -sivua"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Linkki henkilökohtaisiin saavutuksiin"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Näytä lukituskuvake lukituille saavutuksille"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Näytä CS-luokituksen historia CS2-saavutusten sivulla"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Et voi luoda toista Booster Pack tätä peliä ennen kuin $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
+	}
+}

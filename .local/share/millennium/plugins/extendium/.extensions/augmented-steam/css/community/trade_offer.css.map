@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/js/Content/Features/Community/TradeOffer/FCountTradeItems.css"],
+  "sourcesContent": ["#your_slots_count,\r\n#their_slots_count {\r\n\tpadding-bottom: 6px;\r\n\tdisplay: none;\r\n\tfont-weight:bold;\r\n}\r\n\r\n.es_higher {\r\n\tcolor: #48740a;\r\n}\r\n\r\n.es_same {\r\n\tcolor: #e1e10f;\r\n}\r\n\r\n.es_lower {\r\n\tcolor: #d93636;\r\n}\r\n"],
+  "mappings": "AAAA,CAAC,iBACD,CAAC,kBACA,eAAgB,IAChB,QAAS,KACT,YAAY,GACb,CAEA,CAAC,UACA,MAAO,OACR,CAEA,CAAC,QACA,MAAO,OACR,CAEA,CAAC,SACA,MAAO,OACR",
+  "names": []
+}
