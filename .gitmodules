@@ -4,3 +4,9 @@
 [submodule "/home/talinux/.local/share/Steam/steamui/skins/Steam"]
 	path = /home/talinux/.local/share/Steam/steamui/skins/Steam
 	url = https://github.com/SpaceTheme/Steam.git
+[submodule ".local/share/Steam/steamui/skins/simply-dark"]
+	path = .local/share/Steam/steamui/skins/simply-dark
+	url = https://github.com/shdwmtr/simply-dark
+[submodule ".local/share/Steam/steamui/skins/Zehn"]
+	path = .local/share/Steam/steamui/skins/Zehn
+	url = https://github.com/yurisuika/Zehn

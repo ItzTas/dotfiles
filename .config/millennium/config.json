@@ -12,7 +12,7 @@
     "hasShownWelcomeModal": true
   },
   "themes": {
-    "activeTheme": "Steam",
+    "activeTheme": "Zehn",
     "allowedStyles": true,
     "allowedScripts": true,
     "conditions": {
@@ -214,6 +214,37 @@
         "Blur Account Name": "no",
         "Blur Balance": "no",
         "Hide Balance": "yes"
+      },
+      "simply-dark": {
+        "Compacted Header": "Normal",
+        "Wallet Visibility": "Show",
+        "URL Visibility": "Show",
+        "What's New Visibility": "Show",
+        "Add Shelf Visibility": "Show",
+        "Friends Status Outline": "Hide",
+        "Steam News Visibility": "Show"
+      },
+      "Zehn": {
+        "Color Mode": "Dark",
+        "Automatic Mode": "no",
+        "Background Color Blend": "no",
+        "Foreground Color Blend": "no",
+        "Color Blend Amount": "50%",
+        "Color Blend Color Space": "sRGB",
+        "Avatar Shape": "Round",
+        "Blur": "Normal",
+        "Display Scrollbars": "no",
+        "Display Tooltips": "yes",
+        "Display Account Avatar": "no",
+        "Display Announcements Button": "no",
+        "Display Add Game Button": "no",
+        "Display VR Button": "no",
+        "Display Big Picture Button": "no",
+        "Display URL Bar": "no",
+        "Download Bar Width": "Normal",
+        "Display Add Shelf Button": "no",
+        "Display What's New Section": "no",
+        "Display Time Divisions": "yes"
       }
     },
     "themeColors": {
@@ -246,6 +277,40 @@
         "--ingameidle-status": "#62813B",
         "--green-color": "#769C1F",
         "--purple-color": "#834E8D"
+      },
+      "simply-dark": {
+        "--color-light": "rgb(48, 48, 48)",
+        "--color-dark": "#212121",
+        "--color-darker": "#191919",
+        "--color-darkest": "#141414",
+        "--scrollbar": "#303030",
+        "--black": "#000000",
+        "--blacker-ish": "#1b1b1b",
+        "--blacker": "#1c1c1c",
+        "--grey": "#2e2e2f",
+        "--lightgrey": "#3e3e3f",
+        "--lightergrey": "#353535",
+        "--grey-ish": "#454545",
+        "--darkergrey": "#151515",
+        "--thegrey": "#181818",
+        "--begrey": "#262627",
+        "--littlegrey": "#282828",
+        "--darkgrey": "#1e1e1f",
+        "--darkerwhite": "#b8b6b4",
+        "--darkwhite": "#d9dadd",
+        "--white": "#ffffff",
+        "--ingame": "#90ba3c",
+        "--online": "#57cbde",
+        "--offline": "#898989"
+      },
+      "Zehn": {
+        "--custom-color-background": "24, 47, 57",
+        "--custom-color-foreground": "67, 107, 127",
+        "--custom-color-ingame": "35, 165, 90",
+        "--custom-color-online": "35, 165, 90",
+        "--custom-color-away": "240, 178, 50",
+        "--custom-color-disturb": "242, 63, 67",
+        "--custom-color-offline": "128, 132, 142"
       }
     }
   },
