@@ -1,0 +1,179 @@
+body {
+	--steamdb-quick-sell-height: 156px;
+}
+
+.steamdb_sold > img {
+	filter: grayscale(1) opacity(0.5);
+}
+
+.steamdb_confirm_listed::before,
+.steamdb_confirm_mobile::before,
+.steamdb_confirm_email::before {
+	display: block;
+	padding: 4px 0;
+	background: #000;
+	bottom: calc(50% - 18px);
+	position: absolute;
+	content: "CONFIRM\aON MOBILE";
+	color: #fff;
+	text-align: center;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1;
+	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+	z-index: 1;
+	white-space: pre;
+	width: 100%;
+}
+
+.steamdb_confirm_email::before {
+	content: "CONFIRM\aBY EMAIL";
+}
+
+.steamdb_confirm_listed::before {
+	content: "LISTED\aON MARKET";
+}
+
+steamdb-iteminfo-footer {
+	display: block;
+	padding: 8px;
+	font-variant-numeric: tabular-nums;
+	border: 2px solid #2d3687;
+	border-top: 0;
+	background: #161920;
+	background-repeat: no-repeat;
+	/* stylelint-disable-next-line declaration-property-value-no-unknown */
+	background-image: radial-gradient(
+		600px 400px at top right in oklch,
+		#191c37,
+		#171724,
+		#161920
+	);
+
+	&[hidden] {
+		display: none;
+	}
+
+	.steamdb_gift_info {
+		display: flex;
+		gap: 10px;
+	}
+
+	.steamdb_quicksell {
+		min-height: var(--steamdb-quick-sell-height);
+		transition: opacity 0.2s ease-in;
+		opacity: 0;
+
+		&.steamdb_quicksell_visible {
+			opacity: 1;
+		}
+
+		.steamdb_order_header {
+			display: flex;
+			justify-content: space-between;
+			gap: 10px;
+
+			.steamdb_icon {
+				width: 24px;
+				height: 24px;
+				flex-shrink: 0;
+			}
+		}
+
+		.steamdb_order_row_clickable {
+			cursor: pointer;
+			color: #bbb;
+
+			&:hover {
+				background: #000;
+				color: #fff;
+				text-decoration: underline;
+			}
+		}
+
+		.steamdb_sell_summary {
+			cursor: pointer;
+			font-size: 15px;
+			color: #bbb;
+
+			.steamdb_orders_header_promote {
+				font-weight: bold;
+				color: #fff;
+			}
+
+			&:hover {
+				color: #fff;
+				text-decoration: underline;
+			}
+		}
+
+		.steamdb_buy_summary {
+			cursor: pointer;
+			font-size: 12px;
+			color: #999;
+
+			.steamdb_orders_header_promote {
+				font-weight: bold;
+				color: #ddd;
+			}
+
+			&:hover {
+				color: #fff;
+				text-decoration: underline;
+			}
+		}
+
+		.steamdb_orders_hover_text {
+			display: inline-block;
+			margin: 8px 0;
+			padding: 0 8px;
+			font-size: 15px;
+			border-radius: 6px;
+			font-weight: bold;
+			color: #d2e885;
+			border: 1px solid #799905;
+			opacity: 0;
+			transition: opacity 0.2s ease-in-out;
+
+			> span {
+				color: #a4d7f5;
+			}
+
+			&.steamdb_hover_visible {
+				opacity: 1;
+			}
+		}
+
+		.steamdb_orders_table {
+			width: 100%;
+			font-size: 12px;
+			line-height: 1.5;
+			border-spacing: 0;
+
+			tr:nth-child(odd):not(:first-child) {
+				background-color: rgb(255 255 255 / 2%);
+			}
+
+			th {
+				font-size: 10px;
+			}
+
+			th,
+			td {
+				text-align: left;
+				padding: 0 4px;
+			}
+		}
+	}
+
+	.steamdb_badge_info + .steamdb_quicksell {
+		margin-top: 10px;
+	}
+}
+
+/**
+ * Fix Valve's responsive style removing width/height which breaks gems display
+ */
+.trade_item_box .item {
+	aspect-ratio: 1 / 1;
+}
