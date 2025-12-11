@@ -995,7 +995,7 @@ python-tomlkit 0.13.3-1
 python-tqdm 4.67.1-2
 python-trove-classifiers 2025.12.1.14-1
 python-typing_extensions 4.15.0-1
-python-urllib3 2.6.1-1
+python-urllib3 2.6.2-1
 python-wcwidth 0.2.14-1
 python-wheel 0.45.1-1
 python-xmltodict 1.0.2-1
