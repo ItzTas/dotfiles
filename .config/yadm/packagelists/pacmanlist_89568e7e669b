@@ -71,7 +71,7 @@ bubblewrap 0.11.0-1
 bzip2 1.0.8-6
 c-ares 1.34.5-1
 ca-certificates 20240618-1
-ca-certificates-mozilla 3.119-1
+ca-certificates-mozilla 3.119.1-1
 ca-certificates-utils 20240618-1
 cabextract 1.11-2
 cairo 1.18.4-1
@@ -394,7 +394,7 @@ lib32-libelf 0.194-1
 lib32-libffi 3.5.2-1
 lib32-libgcrypt 1.11.2-1
 lib32-libglvnd 1.7.0-1
-lib32-libgpg-error 1.56-1
+lib32-libgpg-error 1.57-1
 lib32-libgudev 238-3
 lib32-libidn2 2.3.8-1
 lib32-libjpeg-turbo 3.1.2-1
@@ -438,7 +438,7 @@ lib32-mesa 1:25.3.1-2
 lib32-mpg123 1.33.3-1
 lib32-ncurses 6.5-2
 lib32-nspr 4.38.2-1
-lib32-nss 3.119-1
+lib32-nss 3.119.1-1
 lib32-nvidia-utils 580.105.08-1
 lib32-openal 1.24.3-1
 lib32-openssl 1:3.6.0-1
@@ -505,7 +505,7 @@ libdeflate 1.25-1
 libdispatch 6.1-1
 libdisplay-info 0.3.0-1
 libdovi 3.3.2-1
-libdrm 2.4.129-1
+libdrm 2.4.130-1
 libdv 1.0.0-11
 libdvdnav 7.0.0-1
 libdvdread 7.0.1-1
@@ -529,7 +529,7 @@ libgirepository 1.86.0-1
 libgit2 1:1.9.2-1
 libglvnd 1.7.0-3
 libgnomekbd 1:3.28.1-1
-libgpg-error 1.56-1
+libgpg-error 1.57-1
 libgudev 238-3
 libgusb 0.4.9-2
 libhandy 1.8.3-2
@@ -799,7 +799,7 @@ noto-fonts-emoji 1:2.051-1
 npm 11.6.4-1
 npth 1.8-1
 nspr 4.38.2-1
-nss 3.119-1
+nss 3.119.1-1
 numactl 2.0.19-1
 numlockx 1.2-6
 nvidia 580.105.08-4
@@ -808,7 +808,7 @@ nvidia-utils 580.105.08-5
 nvm 0.40.3-1
 nwg-look 1.0.6-1
 ocl-icd 2.3.4-1
-oh-my-posh 28.1.0-1
+oh-my-posh 28.2.0-1
 onetbb 2022.3.0-2
 oniguruma 6.9.10-1
 onlyoffice-bin 9.2.0-1
@@ -894,7 +894,7 @@ pkgfile 25-1
 playerctl 2.4.1-4
 plocate 1.1.23-1
 pnpm 10.24.0-1
-podman 5.7.0-1
+podman 5.7.1-1
 podman-desktop 1.23.1-1
 polkit 126-2
 polkit-gnome 0.105-12
