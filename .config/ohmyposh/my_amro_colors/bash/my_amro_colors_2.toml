@@ -1,384 +1,305 @@
-"$schema"                 = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+version = 4
+shell_integration = true
+final_space = true
 enable_cursor_positioning = true
-final_space               = true
-shell_integration         = true
-version                   = 3
 
 [transient_prompt]
-    background = "transparent"
-    foreground = "#6A7FEA"
-    template   = "[#]  "
+  template = '[#]  '
+  foreground = '#6A7FEA'
+  background = 'transparent'
 
 [[blocks]]
-    alignment = 'left'
-    type      = 'prompt'
+  type = 'prompt'
+  alignment = 'left'
 
-    [[blocks.segments]]
-        foreground = '#B4BEFE'
-        style      = 'plain'
-        template   = ' {{ .UserName }} on'
-        type       = 'session'
+  [[blocks.segments]]
+    template = ' {{ .UserName }} on'
+    foreground = '#B4BEFE'
+    type = 'session'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#6A7FEA'
-        style      = 'plain'
-        template   = '  {{ .Path }} '
-        type       = 'path'
+  [[blocks.segments]]
+    template = '  {{ .Path }} '
+    foreground = '#6A7FEA'
+    type = 'path'
+    style = 'plain'
 
-        [blocks.segments.properties]
-            folder_separator_icon = '/'
-            style                 = 'letter'
-            # style = 'agnoster'
-            # style = 'full'
+  [[blocks.segments]]
+    template = '{{ .UpstreamIcon }} {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{end}}{{ if gt .Behind 0}}↓{{end}}{{ if gt .Ahead 0 }}↑{{end}}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
+    foreground = '#14A5AE'
+    powerline_symbol = ''
+    type = 'git'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground       = '#14A5AE'
-        powerline_symbol = ''
-        style            = 'plain'
-        template         = '{{ .UpstreamIcon }} {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{end}}{{ if gt .Behind 0}}↓{{end}}{{ if gt .Ahead 0 }}↑{{end}}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
-        type             = 'git'
-
-        [blocks.segments.properties]
-            branch_icon         = ''
-            commit_icon         = '@'
-            fetch_stash_count   = true
-            fetch_status        = true
-            fetch_upstream_icon = true
-
-    [[blocks.segments]]
-        foreground = '#D0679D'
-        style      = 'plain'
-        template   = '(  {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} ){{ end }}{{ end }}'
-        type       = 'python'
-
-        [blocks.segments.properties]
-            display_mode         = 'environment'
-            fetch_virtual_env    = true
-            folder_name_fallback = false
+  [[blocks.segments]]
+    template = '(  {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} ){{ end }}{{ end }}'
+    foreground = '#D0679D'
+    type = 'python'
+    style = 'plain'
 
 [[blocks]]
-    alignment = 'right'
-    type      = 'prompt'
+  type = 'prompt'
+  alignment = 'right'
 
-    [[blocks.segments]]
-        foreground = '#B8C4C7'
-        style      = 'plain'
-        template   = '{{ .CurrentDate | date "15:04:05" }}'
-        type       = 'time'
+  [[blocks.segments]]
+    template = '{{ .CurrentDate | date "15:04:05" }}'
+    foreground = '#B8C4C7'
+    type = 'time'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#6A7FEA'
-        style      = 'plain'
-        template   = ' {{.Icon}} '
-        type       = 'os'
+  [[blocks.segments]]
+    template = ' {{.Icon}} '
+    foreground = '#6A7FEA'
+    type = 'os'
+    style = 'plain'
 
 [[blocks]]
-    alignment = 'left'
-    newline   = true
-    type      = 'prompt'
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
 
-    [[blocks.segments]]
-        foreground = '#cd5e42'
-        style      = 'plain'
-        template   = ' '
-        type       = 'root'
+  [[blocks.segments]]
+    template = ' '
+    foreground = '#cd5e42'
+    type = 'root'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#6A7FEA'
-        style      = 'plain'
-        template   = '['
-        type       = 'text'
+  [[blocks.segments]]
+    template = '['
+    foreground = '#6A7FEA'
+    type = 'text'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#50C878'
-        style      = 'plain'
-        template   = '   '
-        type       = 'python'
+  [[blocks.segments]]
+    template = '   '
+    foreground = '#50C878'
+    type = 'python'
+    style = 'plain'
 
-        [blocks.segments.properties]
-            display_mode = 'files'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#7FD5EA'
+    type = 'go'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#7FD5EA'
-        style      = 'plain'
-        template   = '  '
-        type       = 'go'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#342311'
+    type = 'zig'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#342311'
-        style      = 'plain'
-        template   = '  '
-        type       = 'zig'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#6CA35E'
+    type = 'node'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#6CA35E'
-        style      = 'plain'
-        template   = '  '
-        type       = 'node'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#D3672C'
+    type = 'rust'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#D3672C'
-        style      = 'plain'
-        template   = '  '
-        type       = 'rust'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#422251'
+    type = 'elixir'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#422251'
-        style      = 'plain'
-        template   = '  '
-        type       = 'elixir'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#A51C30'
+    type = 'java'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#A51C30'
-        style      = 'plain'
-        template   = '  '
-        type       = 'java'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#75715E'
+    type = 'php'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#75715E'
-        style      = 'plain'
-        template   = '  '
-        type       = 'php'
+  [[blocks.segments]]
+    template = ' <b>K</b> '
+    foreground = '#906cff'
+    type = 'kotlin'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#906cff'
-        style      = 'plain'
-        template   = ' <b>K</b> '
-        type       = 'kotlin'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#D32F2F'
+    type = 'ruby'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#D32F2F'
-        style      = 'plain'
-        template   = '  '
-        type       = 'ruby'
+  [[blocks.segments]]
+    template = '   '
+    foreground = '#8A3FFC'
+    type = 'haskell'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#8A3FFC'
-        style      = 'plain'
-        template   = '   '
-        type       = 'haskell'
+  [[blocks.segments]]
+    template = '   '
+    foreground = '#007ACC'
+    type = 'dotnet'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#007ACC'
-        style      = 'plain'
-        template   = '   '
-        type       = 'dotnet'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#D9534F'
+    type = 'angular'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#D9534F'
-        style      = 'plain'
-        template   = '  '
-        type       = 'angular'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#61DAFB'
+    type = 'react'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#61DAFB'
-        style      = 'plain'
-        template   = '  '
-        type       = 'react'
+  [[blocks.segments]]
+    template = '   '
+    foreground = '#007ACC'
+    type = 'cmake'
+    style = 'plain'
 
-        [blocks.segments.properties]
-            extensions = ['*.jsx', '*.tsx']
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#d08770'
+    type = 'ocaml'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#007ACC'
-        style      = 'plain'
-        template   = '   '
-        type       = 'cmake'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#4063D8'
+    type = 'perl'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#d08770'
-        style      = 'plain'
-        template   = '  '
-        type       = 'ocaml'
+  [[blocks.segments]]
+    template = ' R '
+    foreground = '#ADD8E6'
+    type = 'r'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#4063D8'
-        style      = 'plain'
-        template   = '  '
-        type       = 'perl'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#1E90FF'
+    type = 'vala'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#ADD8E6'
-        style      = 'plain'
-        template   = ' R '
-        type       = 'r'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#FFD700'
+    type = 'dart'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#1E90FF'
-        style      = 'plain'
-        template   = '  '
-        type       = 'vala'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#FFA500'
+    type = 'swift'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#FFD700'
-        style      = 'plain'
-        template   = '  '
-        type       = 'dart'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#8A2BE2'
+    type = 'julia'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#FFA500'
-        style      = 'plain'
-        template   = '  '
-        type       = 'swift'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#56B6C2'
+    type = 'lua'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#8A2BE2'
-        style      = 'plain'
-        template   = '  '
-        type       = 'julia'
+  [[blocks.segments]]
+    template = ' '
+    foreground = '#F7DF1E'
+    type = 'node'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#56B6C2'
-        style      = 'plain'
-        template   = '  '
-        type       = 'lua'
+  [[blocks.segments]]
+    template = ' 🔥 '
+    foreground = '#100e23'
+    type = 'mojo'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#F7DF1E'
-        style      = 'plain'
-        template   = ' '
-        type       = 'node'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#007ACC'
+    type = 'node'
+    style = 'plain'
 
-        [blocks.segments.properties]
-            extensions = ['*.cjs', '*.js', '*.mjs']
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#E5A50A'
+    type = 'node'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#100e23'
-        style      = 'plain'
-        template   = ' 🔥 '
-        type       = 'mojo'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#4479A1'
+    type = 'node'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#007ACC'
-        style      = 'plain'
-        template   = '  '
-        type       = 'node'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#0db7ed'
+    type = 'node'
+    style = 'plain'
 
-        [blocks.segments.properties]
-            extensions = ['*.cts', '*.mts', '*.ts']
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#ff79c6'
+    type = 'node'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#E5A50A'
-        style      = 'plain'
-        template   = '  '
-        type       = 'node'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#e34c26'
+    type = 'node'
+    style = 'plain'
 
-        [blocks.segments.properties]
-            extensions = ['*.bash', '*.sh', '.bashrc']
-            folders    = ['*.sh']
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#563d7c'
+    type = 'node'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#4479A1'
-        style      = 'plain'
-        template   = '  '
-        type       = 'node'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#FFD700'
+    type = 'node'
+    style = 'plain'
 
-        [blocks.segments.properties]
-            extensions = ['*.db', '*.sql', '*.sqlite']
+  [[blocks.segments]]
+    template = ' 🎬 '
+    foreground = '#FF4500'
+    type = 'node'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#0db7ed'
-        style      = 'plain'
-        template   = '  '
-        type       = 'node'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#2980B9'
+    type = 'node'
+    style = 'plain'
 
-        [blocks.segments.properties]
-            extensions = ['*Dockerfile*', 'Dockerfile', 'docker-compose.yml']
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#8E44AD'
+    type = 'node'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#ff79c6'
-        style      = 'plain'
-        template   = '  '
-        type       = 'node'
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#F39C12'
+    type = 'node'
+    style = 'plain'
 
-        [blocks.segments.properties]
-            extensions = [
-                '*.conf',
-                '*.toml',
-                '.editorconfig',
-                '.vimrc',
-                '.zshrc',
-            ]
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#3B82F6'
+    type = 'node'
+    style = 'plain'
 
-    [[blocks.segments]]
-        foreground = '#e34c26'
-        style      = 'plain'
-        template   = '  '
-        type       = 'node'
-
-        [blocks.segments.properties]
-            extensions = ['*.html']
-
-    [[blocks.segments]]
-        foreground = '#563d7c'
-        style      = 'plain'
-        template   = '  '
-        type       = 'node'
-
-        [blocks.segments.properties]
-            extensions = ['*.css', '*.sass', '*.scss']
-
-    [[blocks.segments]]
-        foreground = '#FFD700'
-        style      = 'plain'
-        template   = '  '
-        type       = 'node'
-
-        [blocks.segments.properties]
-            extensions = ['*.gif', '*.jpeg', '*.jpg', '*.png', '*.svg']
-
-    [[blocks.segments]]
-        foreground = '#FF4500'
-        style      = 'plain'
-        template   = ' 🎬 '
-        type       = 'node'
-
-        [blocks.segments.properties]
-            extensions = ['*.avi', '*.mkv', '*.mov', '*.mp4', '*.wmv']
-
-    [[blocks.segments]]
-        foreground = '#2980B9'
-        style      = 'plain'
-        template   = '  '
-        type       = 'node'
-
-        [blocks.segments.properties]
-            extensions = ['*.flac', '*.mp3', '*.wav']
-
-    [[blocks.segments]]
-        foreground = '#8E44AD'
-        style      = 'plain'
-        template   = '  '
-        type       = 'node'
-
-        [blocks.segments.properties]
-            extensions = ['*.7p', '*.gz', '*.rar', '*.tar', '*.zip']
-
-    [[blocks.segments]]
-        foreground = '#F39C12'
-        style      = 'plain'
-        template   = '  '
-        type       = 'node'
-
-        [blocks.segments.properties]
-            extensions = ['*.otf', '*.ttf', '*.woff']
-
-    [[blocks.segments]]
-        foreground = '#3B82F6'
-        style      = 'plain'
-        template   = '  '
-        type       = 'node'
-
-        [blocks.segments.properties]
-            extensions = [
-                '*.pacman',
-                '.pkg.tar.gz',
-                '.pkg.tar.xz',
-                '.pkg.tar.zst',
-            ]
-
-    [[blocks.segments]]
-        foreground = '#6A7FEA'
-        style      = 'plain'
-        template   = '] '
-        type       = 'text'
+  [[blocks.segments]]
+    template = '] '
+    foreground = '#6A7FEA'
+    type = 'text'
+    style = 'plain'
