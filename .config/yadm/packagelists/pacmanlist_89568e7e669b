@@ -942,7 +942,7 @@ python-docutils 1:0.22.3-1
 python-editables 0.5-5
 python-evdev 1.9.2-1
 python-filelock 3.20.0-1
-python-fonttools 4.61.0-1
+python-fonttools 4.61.1-1
 python-gobject 3.54.5-1
 python-hatchling 1.28.0-1
 python-idna 3.11-1
@@ -1155,10 +1155,11 @@ v4l-utils 1.32.0-1
 v4l2loopback-dkms 0.15.2-1
 vapoursynth 73-1
 vdpauinfo 1.5-2
+vencord-installer-bin 1.4.0-1
 vesktop-bin 1.6.1-1
 vid.stab 1.1.1-2
-vim 9.1.1908-1
-vim-runtime 9.1.1908-1
+vim 9.1.1975-1
+vim-runtime 9.1.1975-1
 vlc 3.0.21-32
 vlc-cli 3.0.21-32
 vlc-gui-qt 3.0.21-32
