@@ -71,8 +71,13 @@ if (( ${+commands[pacfiles]} )); then
     alias upacf='pacfiles --update-db *'
     alias pacf='pacfiles -l'
 fi
-alias premove='paru -Qq | fzf --multi --preview "paru -Qi {}" | xargs -r paru -Rns --noconfirm'
-alias yay='paru'
+if (( ${+commands[paru]} )); then
+    alias yay='paru'
+    alias premove='paru -Qq | fzf --multi --preview "paru -Qi {}" | xargs -r paru -Rns --noconfirm'
+elif (( ${+commands[yay]} )); then
+    alias premove='yay -Qq | fzf --multi --preview "yay -Qi {}" | xargs -r yay -Rns --noconfirm'
+    alias paru='yay'
+fi
 
 # git
 if (( ${+commands[git]} )); then

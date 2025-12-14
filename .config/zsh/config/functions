@@ -221,9 +221,18 @@ upgrady() {
 			}
 		} >/dev/null 2>&1
 
+		local AUR_HELPER=""
 		if (( ${+commands[paru]} )); then
-			paru -Syu --devel
-			paru -Fy
+			AUR_HELPER="paru"
+		elif (( ${+commands[yay]} )); then
+			AUR_HELPER="yay"
+		fi
+
+		if [[ -n "$AUR_HELPER" ]]; then
+			"$AUR_HELPER" -Syu --devel
+			"$AUR_HELPER" -Fy
+		else
+			echo "No AUR helper found (paru or yay)."
 		fi
 
 		pacclean
