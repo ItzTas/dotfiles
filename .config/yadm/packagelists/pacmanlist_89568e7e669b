@@ -146,8 +146,8 @@ easyeffects 8.0.8-1
 efibootmgr 18-3
 efivar 39-1
 egl-gbm 1.1.2.1-1
-egl-wayland 4:1.1.20-1
-egl-x11 1.0.3-1
+egl-wayland 4:1.1.21-1
+egl-x11 1.0.4-1
 eglexternalplatform 1.2.1-1
 electron 1:39-1
 electron35 35.7.5-1
@@ -441,7 +441,7 @@ lib32-python311-bin 3.11.8-6
 lib32-spirv-tools 1:1.4.335.0-1
 lib32-sqlite 3.51.1-1
 lib32-systemd 258.3-1
-lib32-util-linux 2.41.2-1
+lib32-util-linux 2.41.3-1
 lib32-vulkan-icd-loader 1.4.335.0-1
 lib32-wayland 1.24.0-1
 lib32-xz 5.8.1-1
@@ -487,7 +487,7 @@ libdatrie 0.2.14-1
 libdbusmenu-glib 18.10.20180917-1
 libdbusmenu-gtk3 18.10.20180917-1
 libde265 1.0.16-2
-libdecor 0.2.4-1
+libdecor 0.2.5-1
 libdeflate 1.25-1
 libdispatch 6.1-1
 libdisplay-info 0.3.0-1
@@ -573,7 +573,7 @@ libngtcp2 1.18.0-1
 libnice 0.1.23-1
 libnl 3.12.0-1
 libnm 1.54.3-1
-libnotify 0.8.7-1
+libnotify 0.8.7-2
 libnsl 2.0.1-1
 libnss_nis 3.4-1
 libnvme 1.16.1-1
@@ -810,7 +810,7 @@ openssh 10.2p1-2
 openssl 3.6.0-1
 openssl-1.1 1.1.1.w-2
 openxr 1.1.54-1
-opus 1.5.2-1
+opus 1.6-1
 orc 0.4.41-1
 os-prober 1.83-1
 ostree 2025.7-1
@@ -828,8 +828,9 @@ pangomm-2.48 2.56.1-1
 parallel 20251122-1
 parsec-bin 150_97c-1
 parted 3.6-2
-paru-debug 2.1.0-1
-passt 2025_12_10.d04c480-1
+paru 2.1.0-2
+paru-debug 2.1.0-2
+passt 2025_12_15.b40f5cd-1
 patch 2.8-1
 patchelf 0.18.0-3
 pavucontrol 1:6.2-1
@@ -1099,7 +1100,7 @@ systemd-sysvcompat 258.3-1
 taglib 2.1.1-1
 tar 1.35-2
 tdb 1.4.14-1
-telegram-desktop 6.3.6-1
+telegram-desktop 6.3.9-1
 termpicker-bin 1.5.1-1
 texinfo 7.2-1
 thunderbird 145.0-1
@@ -1136,8 +1137,8 @@ unibilium 2.1.2-1
 unzip 6.0-23
 upower 1.91.0-1
 usbutils 019-1
-util-linux 2.41.2-1
-util-linux-libs 2.41.2-1
+util-linux 2.41.3-1
+util-linux-libs 2.41.3-1
 v4l-utils 1.32.0-1
 v4l2loopback-dkms 0.15.3-1
 vapoursynth 73-1
@@ -1186,15 +1187,15 @@ vulkan-icd-loader 1.4.335.0-1
 wavpack 5.8.1-1
 waybar 0.14.0-5
 wayland 1.24.0-1
-wayland-protocols 1.46-1
-webkit2gtk-4.1 2.50.3-1
+wayland-protocols 1.47-1
+webkit2gtk-4.1 2.50.4-1
 webrtc-audio-processing 2.1-5
 webrtc-audio-processing-1 1.3-5
 weston 14.0.2-3
 wf-recorder 0.6.0-1
 wget 1.25.0-3
 which 2.23-1
-wine 10.20-1
+wine 10.20-2
 winetricks 20250102-1
 wiremix 0.8.0-1
 wireplumber 0.5.12-1
@@ -1241,8 +1242,6 @@ xvidcore 1.3.7-3
 xxhash 0.8.3-1
 xz 5.8.1-1
 yadm 3.5.0-1
-yay-bin 12.5.7-1
-yay-bin-debug 12.5.7-1
 yazi 25.5.31-2
 yq 3.4.3-2
 yyjson 0.12.0-1
