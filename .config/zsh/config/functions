@@ -480,6 +480,27 @@ update-minidlnad() {
 }
 fi
 
+# millennium
+millennium_plugin_add() {
+    local plugins_dir="$HOME/.local/share/millennium/plugins"
+
+    if [[ -z "$1" ]]; then
+        echo "Usage: millennium_plugin_add <plugin-url>"
+        return 1
+    fi
+
+    if [[ ! -d "$plugins_dir" ]]; then
+        echo "Directory not found: $plugins_dir"
+        return 1
+    fi
+
+    (
+        cd "$plugins_dir" || return 1
+        echo "Adding plugin submodule..."
+        yadm submodule add "$1"
+    )
+}
+
 # others
 copybuffer () {
   if builtin which wl-copy &>/dev/null; then
