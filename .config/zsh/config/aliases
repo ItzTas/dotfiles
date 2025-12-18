@@ -175,3 +175,5 @@ fi
 alias chgra='chmod +x gradlew'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias nlsplog='cat ~/.local/state/nvim/lsp.log'
+alias xroot='xhost +SI:localuser:root'
+alias xrootoff='xhost -SI:localuser:root'
