@@ -2421,33 +2421,40 @@ var recalcPrice = function (item) {
   // Проверка, указана ли цена в экземпляре элемента инвентаря
   if (rgItem.description.lowestPriceW === undefined && rgItem.description.buyerPrice === undefined) return;
 
-  var calPrice, info, sellerPrice, buyerPrice;
+  var calculateBuyerPrice, info, sellerPrice, buyerPrice;
 
   // Расчет комиссии площадки
-  var publisherFee = window.PriceUtils.publisherFee(rgItem, g_rgWalletInfo);
+  // var publisherFee = window.PriceUtils.publisherFee(rgItem, g_rgWalletInfo);
 
   // Расчен стоимости для покупателя
   buyerPrice = rgItem.description.buyerPrice || getPriceAsInt(rgItem.description.lowestPriceW);
   originalBuyerPrice = buyerPrice;
 
   // Расчет стоимости для покупателя
-  calPrice = CalculateSellingPrice(buyerPrice);
-  if (calPrice < 3) calPrice = buyerPrice; // minimal price is 0.03
+  calculateBuyerPrice = CalculateSellingPrice(buyerPrice);
+
+  const ppct = parseFloat(g_rgWalletInfo['wallet_publisher_fee_percent_default'] ?? 0.1);
+  const spct = parseFloat(g_rgWalletInfo['wallet_fee_percent'] ?? 0.05);
+  const minBuyerPrice = GetTotalWithFees(g_rgWalletInfo.wallet_market_minimum, ppct, spct, g_rgWalletInfo);
+
+  if (calculateBuyerPrice < minBuyerPrice) calculateBuyerPrice = buyerPrice;
 
   // Расчет комиссии
-  info = CalculateFeeAmount(calPrice, publisherFee);
+  // info = CalculateFeeAmount(calculateBuyerPrice, publisherFee);
 
   // Расчет цены для продавца
-  sellerPrice = calPrice - info.fees;
-  buyerPrice = calPrice;
+  sellerPrice = GetItemPriceFromTotal(calculateBuyerPrice, g_rgWalletInfo);
+  buyerPrice = GetTotalWithFees(sellerPrice, ppct, spct, g_rgWalletInfo);
 
   // Стоимость для покупателя из-за ошибок округления может быть несколько ниже (после опубликования в маркете),
   // чем расчетная buyerPrice.
   // Если buyerPrice выше, то необходимо использовать алгоритм расчета Steam.
-  const steamPriceForBuyer = window.PriceUtils.steamBuyerPrice(sellerPrice, publisherFee, g_rgWalletInfo);
-  if (steamPriceForBuyer < buyerPrice) {
-    buyerPrice = steamPriceForBuyer;
-  }
+  // const steamPriceForBuyer = window.PriceUtils.steamBuyerPrice(sellerPrice, publisherFee, g_rgWalletInfo);
+  // if (steamPriceForBuyer < buyerPrice) {
+  //   buyerPrice = steamPriceForBuyer;
+  // }
+
+  // GetItemPriceFromTotal(sellerPrice, g_rgWalletInfo);
 
   // В соответствующих полях ввода показываем пользователю расчетные значения цен
   $sellerPrice.val(v_currencyformat(sellerPrice, GetCurrencyCode(g_rgWalletInfo.wallet_currency)));
@@ -2692,6 +2699,8 @@ var ModifySellingFunctions = function () {
   if (window.selectallbuttons) $J('#Lnk_Sellall').show();
   else $J('#Lnk_Sellall').hide();
 
+  const walletCurrencyStepIncrement = (+g_rgWalletInfo['wallet_currency_increment'] || 1) / 100;
+
   $J('.market_dialog_content:has(#market_sell_dialog_input_area)').before(`
         <div class="tabs">
             <button id="manualsell" onclick="setSellingType(event, 'manual')" class="active">${SIHLang.queue.manualsell}</button>
@@ -2711,7 +2720,7 @@ var ModifySellingFunctions = function () {
             <input type="checkbox" id="ck_autoadjust" checked>
             <span>${SIHLang.autoadjust}</span>
         </label>
-        <input type="number" step="0.01" title="adjust amount" id="Txt_adjust" value="-0.01" disabled />
+        <input type="number" step="${walletCurrencyStepIncrement}" title="adjust amount" id="Txt_adjust" value="-${walletCurrencyStepIncrement}" disabled />
         <select id="cb_adtype" disabled><option value="1">Value</option><option value="2">Percentage</option></select><br/><br/>
         <label for="ck_showconfirm" id="auto-confirm-row">
             <input type="checkbox" id="ck_showconfirm" checked>
@@ -2784,9 +2793,25 @@ var ModifySellingFunctions = function () {
     }
   });
   $J('#Txt_adjust, #cb_adtype').change(function (e) {
-    if (e.target.id == 'Txt_adjust' && e.target.value === '') e.target.value = 0;
+    if (e.target.id === 'cb_adtype') {
+      if ($J('#cb_adtype').val() === '2') {
+        $J('#Txt_adjust').prop('step', 0.01);
+        $J('#Txt_adjust').val(-0.01);
+      } else {
+        const walletCurrencyStepIncrement = (+g_rgWalletInfo['wallet_currency_increment'] || 1) / 100;
+
+        $J('#Txt_adjust').prop('step', walletCurrencyStepIncrement);
+        $J('#Txt_adjust').val(-walletCurrencyStepIncrement);
+      }
+    }
+
+    if (e.target.id === 'Txt_adjust' && e.target.value === '') {
+      e.target.value = 0;
+    }
+
     recalcPrice();
   });
+
   $J('#market_sell_dialog_accept_ssa').change(function () {
     const isChecked = $J(this).prop('checked');
 
@@ -2806,7 +2831,9 @@ var ModifySellingFunctions = function () {
     $J('#auto-confirm-row').toggleClass('disabled');
 
     if (!isChecked) {
-      adjustInput.setValue(-0.01);
+      const walletCurrencyStepIncrement = (+g_rgWalletInfo['wallet_currency_increment'] || 1) / 100;
+
+      adjustInput.setValue(-walletCurrencyStepIncrement);
       $J('#market_sell_currency_input').val(0);
       $J('#market_sell_buyercurrency_input').val(0);
     } else {
@@ -3252,15 +3279,16 @@ var CalculateSellingPrice = function (basePrice) {
   // Шаг изменения цены
   const adjust = adjustInput.getValue();
 
-  if ($J('#cb_adtype').val() == '2') {
-    // Шаг выражен в денежных единицах
+  if ($J('#cb_adtype').val() === '2') {
+    // Шаг выражен в процентах
     let per = Math.round((basePrice * adjust) / 100);
+
     if (per == 0 && adjust != 0) {
       per = adjust < 0 ? -1 : 1;
     }
     calPrice = basePrice + per;
   } else {
-    // Шаг выражен в процентах
+    // Шаг выражен в денежных единицах
     calPrice = basePrice + Math.floor(adjust * 100);
   }
 
@@ -4295,8 +4323,10 @@ var ItemTreadLocks =
       items.each(function (index, el) {
         const item = this.rgItem;
         const { classid, instanceid } = item.description;
-        const { cache_expiration, tradable, marketable, sealed, owner_descriptions } =
+        const { cache_expiration, tradable, marketable, sealed, owner_descriptions, type } =
           additionalData[`${classid}_${instanceid}`] || {};
+
+        item.en_type = type;
 
         if (cache_expiration) {
           // add data about expiration date into each inventory item

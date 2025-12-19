@@ -195,5 +195,10 @@
     "id": "skinplace",
     "title": "Skin.Place",
     "color": "#ffffff"
+  },
+  {
+    "id": "gameboost",
+    "title": "GameBoost",
+    "color": "#ffffff"
   }
 ]

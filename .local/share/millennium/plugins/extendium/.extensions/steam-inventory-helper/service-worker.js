@@ -8,7 +8,7 @@ self.addEventListener('fetch', function (event) {
 });
 
 try {
-  importScripts('bundle/js/common.js', 'bundle/js/background.js');
+  importScripts('bundle/js/common.js', 'bundle/js/background.js', 'bundleAngular/backgroundAngular.js');
 } catch (e) {
   console.error(e);
 }
