@@ -193,7 +193,7 @@ fuse3 3.17.4-1
 fzf 0.67.0-1
 gameconqueror 0.17-10
 gamemode 1.8.2-1
-gamescope 3.16.18-1
+gamescope 3.16.19-1
 gawk 5.3.2-1
 gc 8.2.10-2
 gcc 15.2.1+r301+gf24307422d1d-1
@@ -596,7 +596,7 @@ libportal 0.9.1-2
 libportal-qt6 0.9.1-2
 libproxy 0.5.12-1
 libpsl 0.21.5-2
-libpulse 17.0+r93+gbe2efb69b-1
+libpulse 17.0+r98+gb096704c0-1
 libpwquality 1.4.5-6
 libraqm 0.10.3-1
 libraw1394 2.1.2-4
@@ -747,7 +747,7 @@ meld 3.22.3-1
 mesa 1:25.3.2-1
 mesa-utils 9.0.0-7
 meson 1.10.0-1
-millennium 2.31.0_beta.9-4
+millennium 2.31.1-4
 minidlna 1.3.3-6
 minizip 1:1.3.1-2
 miru-go-bin 0.0.21-1
@@ -1022,7 +1022,7 @@ qt6-wayland 6.10.1-1
 qt6-webchannel 6.10.1-1
 qt6-webengine 6.10.1-1
 qt6ct 0.11-3
-qtractor 1.5.9-1
+qtractor 1.5.10-1
 rar 7.12-1
 rav1e 0.8.1-2
 re2 1:20240702-7
