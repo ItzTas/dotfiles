@@ -174,10 +174,10 @@ file 5.46-5
 file-roller 44.6-1
 filesystem 2025.10.12-1
 findutils 4.10.0-3
-firefox 146.0-1
+firefox 146.0.1-1
 flac 1.5.0-1
 flameshot-git r2228.b99dc6e2-1
-flatpak 1:1.16.1-1
+flatpak 1:1.16.2-1
 flex 2.6.4-5
 fluidsynth 2.5.1-1
 fmt 12.1.0-1
@@ -427,7 +427,7 @@ lib32-libxss 1.2.4-2
 lib32-libxxf86vm 1.1.5-2
 lib32-llvm-libs 1:21.1.6-1
 lib32-lm_sensors 1:3.6.2-2
-lib32-mesa 1:25.3.1-2
+lib32-mesa 1:25.3.2-1
 lib32-ncurses 6.5-2
 lib32-nspr 4.38.2-1
 lib32-nss 3.119.1-1
@@ -741,7 +741,7 @@ mangohud 0.8.2-2
 md4c 0.5.2-1
 mdadm 4.4-2
 meld 3.22.3-1
-mesa 1:25.3.1-2
+mesa 1:25.3.2-1
 mesa-utils 9.0.0-7
 meson 1.10.0-1
 millennium 2.31.0_beta.9-4
@@ -885,7 +885,7 @@ plocate 1.1.23-1
 pnpm 10.25.0-1
 podman 5.7.1-1
 podman-desktop 1.23.1-1
-polkit 126-2
+polkit 127-1
 polkit-gnome 0.105-12
 poppler 25.12.0-1
 poppler-data 0.4.12-2
@@ -1220,6 +1220,7 @@ xcb-util-wm 0.4.2-2
 xcur2png 0.7.1-8
 xdg-dbus-proxy 0.1.6-1
 xdg-desktop-portal 1.20.3-2
+xdg-desktop-portal-gtk 1.15.3-1
 xdg-desktop-portal-hyprland 1.3.11-3
 xdg-user-dirs 0.19-2
 xdg-utils 1.2.1-2

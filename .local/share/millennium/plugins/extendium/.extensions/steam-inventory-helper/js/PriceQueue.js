@@ -1871,6 +1871,12 @@ var ExternalPrices = {
         api: MarketplaceSource,
         sort: 29,
       },
+      {
+        name: 'GameBoost',
+        nameForApi: 'gameboost',
+        api: MarketplaceSource,
+        sort: 30,
+      },
     ],
   },
   // PAYDAY 2

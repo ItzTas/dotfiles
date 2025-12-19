@@ -244,6 +244,42 @@ if (!EXCLUDE_SSR_URLS.some((url) => window.location.href.includes(url))) {
                 sSihGlobalHeader.src = chrome.runtime.getURL('js/sih_global_header.script.js');
                 (document.head || document.documentElement).appendChild(sSihGlobalHeader);
                 sSihGlobalHeader.onload = function () {
+                  const rootPage = document.createElement('sih-app-root');
+                  document.getElementsByTagName('body')[0].appendChild(rootPage);
+
+                  const cssAngularStyles = document.createElement('link');
+                  cssAngularStyles.href = chrome.runtime.getURL('js/angular/styles.css');
+                  cssAngularStyles.rel = 'stylesheet';
+                  cssAngularStyles.type = 'text/css';
+                  (document.head || document.documentElement).prepend(cssAngularStyles);
+
+                  const angularScript = document.createElement('script');
+                  angularScript.src = chrome.runtime.getURL('js/angular/main.js');
+                  document.body.appendChild(angularScript);
+
+                  angularScript.onload = function () {
+                    angularScript.parentNode.removeChild(angularScript);
+
+                    const angularRuntimeScript = document.createElement('script');
+                    angularRuntimeScript.src = chrome.runtime.getURL('js/angular/runtime.js');
+                    document.body.appendChild(angularRuntimeScript);
+
+                    angularRuntimeScript.onload = function () {
+                      try {
+                        const angularVendorScript = document.createElement('script');
+                        angularVendorScript.src = chrome.runtime.getURL('js/angular/vendor.js');
+
+                        document.body.appendChild(angularVendorScript);
+
+                        angularVendorScript.onload = function () {
+                          angularVendorScript.parentNode.removeChild(angularVendorScript);
+                        };
+                      } catch (e) {}
+
+                      angularRuntimeScript.parentNode.removeChild(angularRuntimeScript);
+                    };
+                  };
+
                   sSihGlobalHeader.parentNode.removeChild(sSihGlobalHeader);
                 };
 

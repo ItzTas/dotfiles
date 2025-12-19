@@ -84,6 +84,9 @@ _install_pacman_packages() {
         # Firewall
         "ufw"
 
+        # GTK
+        "xdg-desktop-portal-gtk"
+
         # Process Manegement
         "stacer-git"
         "btop"
@@ -210,6 +213,7 @@ _install_pacman_packages() {
         # File managers & extensions
         "yazi"
         "nemo"
+        "file-roller"
         "nemo-fileroller"
         "nemo-terminal"
         "nemo-image-converter"

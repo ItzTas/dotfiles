@@ -509,6 +509,13 @@
   background-size: 16px;
 }
 
+.p-price .price_flag.gameboost,
+.provider-item .provider.gameboost {
+  background-image: url('https://js.millennium.app//home/talinux/.local/share/millennium/plugins/extendium/.extensions/steam-inventory-helper/assets/marketplace/mini-icons/gameboost.svg');
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+
 #active_inventory_page .inventory_page .p-price,
 .queue-container .p-price,
 .trade_area #inventory_box .p-price {
