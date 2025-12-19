@@ -1,6 +1,3 @@
-[submodule ".local/share/Steam/steamui/skins/.local/share/Steam/steamui/skins/Steam"]
-	path = .local/share/Steam/steamui/skins/.local/share/Steam/steamui/skins/Steam
-	url = https://github.com/SpaceTheme/Steam.git
 [submodule "/home/talinux/.local/share/Steam/steamui/skins/Steam"]
 	path = /home/talinux/.local/share/Steam/steamui/skins/Steam
 	url = https://github.com/SpaceTheme/Steam.git

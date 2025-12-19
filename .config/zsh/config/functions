@@ -370,7 +370,7 @@ ex() {
 		*.deb) ar x "$1" ;;
 		*.tar.xz) tar xf "$1" ;;
 		*.tar.zst) unzstd "$1" ;;
-		*) echo "Cannot extract '$1' with ${FUNCNAME[0]}()" ;;
+		*) echo "Cannot extract '$1' with $0()" ;;
 		esac
 	else
 		echo "'$1' is not a valid file."
@@ -400,7 +400,7 @@ lse() {
 		*.7z) 7z l "$1" ;;
 		*.Z) uncompress -c "$1" | wc -c ;;
 		*.deb) ar t "$1" ;;
-		*) echo "'$1' cannot be listed by ${FUNCNAME[0]}()" ;;
+		*) echo "'$1' cannot be listed by $0()" ;;
 		esac
 	else
 		echo "'$1' is not a valid file"
@@ -481,21 +481,21 @@ update-minidlnad() {
 fi
 
 # millennium
-millennium_plugin_add() {
-    local plugins_dir="$HOME/.local/share/millennium/plugins"
+millennium_skin_add() {
+    local skins_dir="$HOME/.local/share/Steam/steamui/skins/Steam"
 
     if [[ -z "$1" ]]; then
-        echo "Usage: millennium_plugin_add <plugin-url>"
+        echo "Usage: $0 <skin-url>"
         return 1
     fi
 
-    if [[ ! -d "$plugins_dir" ]]; then
-        echo "Directory not found: $plugins_dir"
+    if [[ ! -d "$skins_dir" ]]; then
+        echo "Directory not found: $skins_dir"
         return 1
     fi
 
     (
-        cd "$plugins_dir" || return 1
+        cd "$skins_dir" || return 1
         echo "Adding plugin submodule..."
         yadm submodule add "$1"
     )
