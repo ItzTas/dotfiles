@@ -67,6 +67,7 @@ _install_pacman_packages() {
         "numlockx"
         "tidy"
         "reflector"
+        "dosfstools"
         "cronie"
         "socat"
         "inetutils"
