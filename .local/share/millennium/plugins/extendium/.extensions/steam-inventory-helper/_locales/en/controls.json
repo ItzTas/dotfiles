@@ -1610,7 +1610,8 @@
         "tooltip":"We require your email address in order to send you the virtual game key as well as the purchase confirmation. Please provide only a valid email address and make sure to check its accuracy. In case incorrect information is submitted, SIH does not take responsibility for the security of your data. If you did not see the message, please check your Spam folder.",
         "buy_btn": "Buy now",
         "refill_btn": "Top up balance and buy",
-        "wrong_region": "Activation is not available in your region"
+        "wrong_region": "Activation is not available in your region",
+        "is_rock_star": "The key is activated exclusively in Rockstar Social Club"
       },
       "success": {
         "title": "Your order has been successfully completed!",
@@ -1648,6 +1649,7 @@
         "games": "games",
         "my_balance":"My balance",
         "reset_all_btn": "Reset all",
+        "rockstar_tooltip":"This game is activated EXCLUSIVELY in Rockstar Social Club. After purchasing the digital key, you must download the official Rockstar Social Club application, register or log in to your account, and activate the digital key.",
         "filters": {
           "titles": {
             "platform": "Platform",

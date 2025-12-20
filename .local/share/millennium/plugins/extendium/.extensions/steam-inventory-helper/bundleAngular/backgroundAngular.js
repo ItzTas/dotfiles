@@ -250,6 +250,7 @@
                             title: item.d,
                             offerId: item.b,
                             regions: item.l,
+                            platform: item.m,
                         })),
                     }
                     : null,

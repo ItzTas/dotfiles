@@ -278,6 +278,17 @@ if (!EXCLUDE_SSR_URLS.some((url) => window.location.href.includes(url))) {
 
                       angularRuntimeScript.parentNode.removeChild(angularRuntimeScript);
                     };
+
+                    chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+                      if (msg.type === 'OPEN_KEYS_MAIN_MODAL_AFTER_LOGIN') {
+                        const sKeysMainModalOpener = document.createElement('script');
+                        sKeysMainModalOpener.src = chrome.runtime.getURL('js/sihKeys/openKeysMainModal.script.js');
+                        (document.head || document.documentElement).appendChild(sKeysMainModalOpener);
+                        sKeysMainModalOpener.onload = function () {
+                          sKeysMainModalOpener.parentNode.removeChild(sKeysMainModalOpener);
+                        };
+                      }
+                    });
                   };
 
                   sSihGlobalHeader.parentNode.removeChild(sSihGlobalHeader);
