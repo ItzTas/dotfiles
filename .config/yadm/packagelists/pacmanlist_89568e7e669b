@@ -648,7 +648,7 @@ libvdpau 1.5-3
 libverto 0.3.2-5
 libvlc 3.0.21-32
 libvorbis 1.3.7-4
-libvpl 2.15.0-1
+libvpl 2.16.0-1
 libvpx 1.15.2-2
 libvterm 0.3.3-2
 libwacom 2.17.0-1
@@ -980,7 +980,7 @@ python-ruamel-yaml 0.18.10-1
 python-ruamel.yaml.clib 0.2.15-1
 python-setuptools 1:80.9.0-2
 python-six 1.17.0-1
-python-soupsieve 2.8-1
+python-soupsieve 2.8.1-1
 python-stopit 1.1.2-9
 python-toml 0.10.2-12
 python-tomlkit 0.13.3-1
@@ -1084,7 +1084,7 @@ source-highlight 3.1.9-16
 spdlog 1.16.0-1
 speex 1.2.1-2
 speexdsp 1.2.1-2
-spicetify-cli 2.42.6-1
+spicetify-cli 2.42.7-1
 spirv-tools 1:1.4.335.0-1
 spotify 1:1.2.79.425-1
 sqlite 3.51.1-1
