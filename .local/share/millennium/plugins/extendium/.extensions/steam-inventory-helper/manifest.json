@@ -6,7 +6,7 @@
   "short_name": "SIH",
   "description": "__MSG_extension_description__",
   "default_locale": "en",
-  "version": "2.9.0",
+  "version": "2.9.1",
   "incognito": "split",
   "background": {
     "service_worker": "service-worker.js"
