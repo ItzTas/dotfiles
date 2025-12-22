@@ -1,6 +1,6 @@
 _set_up() {
-    sudo pacman -S base-devel --no-confirm
-    sudo pacman -S cmake meson cpio git --no-confirm
+    sudo pacman -S base-devel --noconfirm
+    sudo pacman -S cmake meson cpio git --noconfirm
 
     hyprpm update
 
@@ -11,7 +11,7 @@ _set_up() {
     )
 
     for plugin in "${plugins[@]}"; do
-        hyprpm add "$plugin"
+        yes | hyprpm add "$plugin"
     done
 
     local enables=(
