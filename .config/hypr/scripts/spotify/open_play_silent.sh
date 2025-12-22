@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-hyprctl dispatch exec "[workspace 9] spotify" || spotify &
+hyprctl dispatch exec "[workspace 9; silent] spotify" || spotify &
 
 {
     count=0
