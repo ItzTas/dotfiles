@@ -21,7 +21,8 @@
     "enabledPlugins": [
       "steam-easygrid",
       "achievement-groups",
-      "extendium"
+      "extendium",
+      "alowave.faceit_stats"
     ]
   },
   "themes": {
