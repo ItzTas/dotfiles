@@ -22,7 +22,10 @@
       "steam-easygrid",
       "achievement-groups",
       "extendium",
-      "alowave.faceit_stats"
+      "alowave.faceit_stats",
+      "steam-collections-plus",
+      "steam-librarian",
+      "browser_history"
     ]
   },
   "themes": {
