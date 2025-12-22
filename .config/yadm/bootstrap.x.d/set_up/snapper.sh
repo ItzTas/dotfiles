@@ -21,6 +21,7 @@ _set_up() {
         NUMBER_LIMIT="2" \
         NUMBER_LIMIT_IMPORTANT="1"
 
+    sudo snapper -c home set-config TIMELINE_CREATE="no"
 }
 
 if command -v snapper &>/dev/null; then
