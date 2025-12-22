@@ -949,7 +949,7 @@ python-fonttools 4.61.1-1
 python-gobject 3.54.5-1
 python-hatchling 1.28.0-1
 python-idna 3.11-1
-python-importlib-metadata 8.7.0-1
+python-importlib-metadata 8.7.1-1
 python-installer 0.7.0-10
 python-jaraco.collections 5.1.0-1
 python-jaraco.context 6.0.1-1
@@ -1082,7 +1082,7 @@ sesh-bin-debug 2.20.0-1
 shaderc 2025.5-1
 shadow 4.18.0-1
 shared-mime-info 2.4-2
-simdjson 1:4.2.2-1
+simdjson 1:4.2.4-1
 sklauncher-bin 3.2.12-4
 slang 2.3.3-4
 slurp 1.5.0-1
