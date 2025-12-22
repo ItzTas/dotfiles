@@ -8,7 +8,7 @@ _set_up() {
         TIMELINE_LIMIT_MONTHLY="3" \
         TIMELINE_LIMIT_YEARLY="0" \
         TIMELINE_LIMIT_QUARTERLY="0" \
-        NUMBER_LIMIT="5" \
+        NUMBER_LIMIT="3" \
         NUMBER_LIMIT_IMPORTANT="2"
 
     sudo snapper -c home set-config \
@@ -18,7 +18,7 @@ _set_up() {
         TIMELINE_LIMIT_MONTHLY="0" \
         TIMELINE_LIMIT_YEARLY="0" \
         TIMELINE_LIMIT_QUARTERLY="0" \
-        NUMBER_LIMIT="3" \
+        NUMBER_LIMIT="2" \
         NUMBER_LIMIT_IMPORTANT="1"
 
 }
