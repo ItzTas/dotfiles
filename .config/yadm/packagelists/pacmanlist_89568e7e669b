@@ -771,7 +771,7 @@ mobile-broadband-provider-info 20251101-1
 mokutil 0.7.2-2
 mpdecimal 4.0.1-1
 mpfr 4.2.2-1
-mpg123 1.33.3-1
+mpg123 1.33.4-1
 mpv 1:0.40.0-7
 msgpack-c 6.1.0-2
 mtdev 1.1.7-1
@@ -818,7 +818,7 @@ oh-my-posh 28.4.0-1
 onetbb 2022.3.0-2
 oniguruma 6.9.10-1
 onlyoffice-bin 9.2.0-1
-openal 1.24.3-2
+openal 1.25.0-1
 opencl-nvidia 590.48.01-1
 opencore-amr 0.1.6-2
 openh264 2.6.0-1
