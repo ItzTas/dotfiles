@@ -1,0 +1,59 @@
+# Collections+
+
+A Millennium plugin that adds extra functionality to collections on Steam.
+
+## Features
+- Replace or reset collection image
+- Add/remove applications to/from collections in bulk
+- Filter collection
+- Start or show random application from collection
+    - Can also choose from the installed ones only
+- Organize collections into folders
+    - Replace or reset folder image
+    - Add/remove collections in bulk
+- Collection manager UI for applications
+
+Big thanks to OsuCelsius!
+
+## Prerequisites
+- [Millennium](https://steambrew.app/)
+
+## Bulk add/remove filter language
+- Multiple predicates can be provided, delimited by `;`
+- Each predicate is made up of two or three parts: `<PROPERTY> <OPERATOR> <VALUE>`
+- Valid predicates:
+
+|PROPERTY                |VALID OPERATORS    |VALUE TYPE|DESCRIPTION                                                    |
+|------------------------|-------------------|----------|---------------------------------------------------------------|
+|collection              |= !=               |string    |application is (=) or is not (!=) part of the named collection |
+|category                |= !=               |number    |application is (=) or is not (!=) part of the given category   |
+|tag                     |= !=               |number    |application has (=) or does not have (!=) the given tag        |
+|\<ANY BOOLEAN PROPERTY\>|true false         |          |property is true or false                                      |
+|\<ANY STRING PROPERTY\> |= != begins        |string    |property equals, does not equal, or begins with the given value|
+|\<ANY NUMBER PROPERTY\> |= != \< \> \<= \>= |number    |yes                                                            |
+
+- Examples:
+    - Applications where the name begins with "W": `display_name begins W`
+    - Applications that are part of the "UTIL" Collection: `collection = UTIL`
+    - Applications where the name begins with "W", that are part of the "UTIL" collection and have been played for more than 10 minutes: `display_name begins W;collection = UTIL;minutes_playtime_forever > 10`
+
+## Collection Folders
+- On your Collections page, click `[UP]` to leave a folder,
+- Click `[C+]` to open a windows where you can create subfolders and add (or remove) collections to (from) the current folder,
+- They look like this, on the Collections page, with the default theme:
+
+![Collection buttons](screenshots/coll-buttons.png)
+
+- Right click a folder and choose `Delete folder` to delete a folder and ALL of its subfolders
+    - All contained collections will be moved out to the Root folder
+- Right click a folder and choose `Set folder image` or `Reset folder image` to set/unset an image for the folder
+
+## Colletion Management for Applications
+- On an application page, click the `C+` button to open the new Collections window
+
+## Known issues
+- Collection preview as Collection image does not work if any Folders are used
+    - This is a workaround because of the way Steam loads lists
+- Folder images might not work on some themes, including Simple Dark and Minimal Dark
+- Text-based filtering instead of a full-fledged UI
+    - Yeah...
