@@ -57,6 +57,7 @@ application/x-pksz=CiscoPacketTracer-9.0.0.desktop
 x-scheme-handler/bruno=bruno.desktop
 x-scheme-handler/discord-647066573147996161=discord-647066573147996161.desktop
 x-scheme-handler/discord-831593107883032657=discord-831593107883032657.desktop
+x-scheme-handler/hydralauncher=hydralauncher.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;
