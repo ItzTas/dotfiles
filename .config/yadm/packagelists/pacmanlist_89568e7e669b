@@ -67,7 +67,7 @@ breeze-icons 6.21.0-1
 brightnessctl 0.5.1-3
 brotli 1.1.0-3
 bruno-bin 2.15.1-1
-btop 1.4.5-1
+btop 1.4.6-1
 btrfs-progs 6.17.1-1
 bubblewrap 0.11.0-1
 bzip2 1.0.8-6
@@ -81,7 +81,7 @@ cairo-perl 1.109-6
 cairomm 1.14.5-1
 cairomm-1.16 1.18.0-2
 calf 0.90.8-6
-candy-icons-git r1354.93f38a6-1
+candy-icons-git r1356.1ec7ed3-1
 capstone 5.0.6-1
 catatonit 0.2.1-2
 catppuccin-gtk-theme-mocha 1.0.3-1
@@ -90,7 +90,7 @@ cdparanoia 10.2-9
 cinnamon-desktop 6.6.1-2
 clamav 1.5.1-1
 clamtk 6.18-1
-clipse 1.1.0-1
+clipse 1.2.0-1
 clutter 1.26.4-3
 clutter-gtk 1.8.4-4
 cmake 4.2.1-1
@@ -586,7 +586,7 @@ libnfnetlink 1.0.2-2
 libnftnl 1.3.1-1
 libnghttp2 1.68.0-1
 libnghttp3 1.13.1-1
-libngtcp2 1.18.0-1
+libngtcp2 1.19.0-1
 libnice 0.1.23-1
 libnl 3.12.0-1
 libnm 1.54.3-1
@@ -818,7 +818,7 @@ ocl-icd 2.3.4-1
 oh-my-posh 28.5.1-1
 onetbb 2022.3.0-2
 oniguruma 6.9.10-1
-onlyoffice-bin 9.2.0-1
+onlyoffice-bin 9.2.1-1
 openal 1.25.0-1
 opencl-nvidia 590.48.01-1
 opencore-amr 0.1.6-2
@@ -1110,7 +1110,7 @@ sqlite 3.51.1-1
 squashfs-tools 4.7.4-1
 sratom 0.6.20-1
 srt 1.5.4-1
-stacer-git 1.5.0.r6.g347bcbe-1
+stacer-git 1.5.0.r7.g9e88dde-1
 startup-notification 0.12-9
 steam 1.0.0.85-1
 sudo 1.9.17.p2-1
