@@ -9,7 +9,7 @@ hyprctl dispatch exec "[workspace 9; silent] spotify" || spotify &
     done
 } || true
 
-sleep 1
+sleep 2
 
 playerctl -p spotify volume 0 2>/dev/null || true
 playerctl -p spotify play 2>/dev/null || true
