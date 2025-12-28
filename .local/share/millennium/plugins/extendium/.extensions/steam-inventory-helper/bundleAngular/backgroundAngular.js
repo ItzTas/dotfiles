@@ -488,10 +488,112 @@
     }
     var Storage$1 = new Storage();
 
-    var _RatesService_instances, _RatesService_getConvertRates, _RatesService_fetchRates;
+    var _RatesUtils_instances, _RatesUtils_getNextNormalRateTime, _RatesUtils_getNextSteamRateTime;
+    class RatesUtils {
+        constructor() {
+            _RatesUtils_instances.add(this);
+            this.isNeedUpdateRates = (_a) => __awaiter(this, [_a], void 0, function* ({ base = 'USD', endPoint = 'rates', }) {
+                var _b, _c;
+                const storageKey = endPoint !== 'rates' ? 'cached_steam_rates' : 'cached_rates';
+                const storage = (yield Storage$1.get(storageKey))[storageKey] || {};
+                const updatedAt = (_c = (_b = storage === null || storage === void 0 ? void 0 : storage[base]) === null || _b === void 0 ? void 0 : _b.updatedAt) !== null && _c !== void 0 ? _c : 0;
+                if (!updatedAt)
+                    return true;
+                const nextUpdateTime = endPoint === 'rates' ? __classPrivateFieldGet(this, _RatesUtils_instances, "m", _RatesUtils_getNextNormalRateTime).call(this, updatedAt) : __classPrivateFieldGet(this, _RatesUtils_instances, "m", _RatesUtils_getNextSteamRateTime).call(this, updatedAt);
+                return Date.now() >= nextUpdateTime;
+            });
+            this.setRatesInCache = (_a) => __awaiter(this, [_a], void 0, function* ({ base, response, endPoint = 'rates', }) {
+                if (!base || !(response === null || response === void 0 ? void 0 : response.success))
+                    return;
+                const storageKey = endPoint !== 'rates' ? 'cached_steam_rates' : 'cached_rates';
+                const storage = (yield Storage$1.get(storageKey))[storageKey] || {};
+                storage[base] = Object.assign(Object.assign({}, response), { updatedAt: Date.now() });
+                yield Storage$1.set({ [storageKey]: storage });
+            });
+            this.getCachedRates = (_a) => __awaiter(this, [_a], void 0, function* ({ base = 'USD', endPoint = 'rates', }) {
+                const storageKey = endPoint !== 'rates' ? 'cached_steam_rates' : 'cached_rates';
+                const storage = (yield Storage$1.get(storageKey))[storageKey] || {};
+                return storage === null || storage === void 0 ? void 0 : storage[base];
+            });
+        }
+        // TODO: REFACTOR THIS
+        getConvertRates(rates) {
+            const amount = [1, 100, 1000, 10000];
+            const base = rates.data.base;
+            const convertCurrencyRates = {
+                base,
+                ts: rates.data.ts,
+                rates: {},
+            };
+            for (const strCode in rates.data.rates) {
+                if (strCode !== base) {
+                    let number = rates.data.rates[base] / rates.data.rates[strCode];
+                    const numberString = number.toString();
+                    let count = 0;
+                    if (numberString[0] === '0') {
+                        count = 1;
+                        for (let i = 2; i < numberString.length; i++) {
+                            if (numberString[i] === '0') {
+                                count++;
+                            }
+                            else {
+                                break;
+                            }
+                        }
+                        if (count >= 1 && count <= 3) {
+                            number *= amount[count];
+                        }
+                        else if (count > 3) {
+                            number *= amount[3];
+                        }
+                    }
+                    convertCurrencyRates.rates[strCode] = {
+                        count: count < 3 ? amount[count] : amount[3],
+                        number,
+                    };
+                }
+                else {
+                    convertCurrencyRates.rates[strCode] = {
+                        count: 1,
+                        number: rates.data.rates[base],
+                    };
+                }
+            }
+            return convertCurrencyRates;
+        }
+    }
+    _RatesUtils_instances = new WeakSet(), _RatesUtils_getNextNormalRateTime = function _RatesUtils_getNextNormalRateTime(fromTime = Date.now()) {
+        const date = new Date(fromTime);
+        if (date.getHours() < 12) {
+            date.setHours(12, 0, 0, 0); // сегодня в 12:00
+        }
+        else {
+            date.setDate(date.getDate() + 1); // завтра
+            date.setHours(0, 0, 0, 0); // в 00:00
+        }
+        date.setMinutes(date.getMinutes() + 5); // запас в 5 минут
+        return date.getTime();
+    }, _RatesUtils_getNextSteamRateTime = function _RatesUtils_getNextSteamRateTime(fromTime = Date.now()) {
+        const validHours = [1, 5, 9, 13, 17, 21];
+        const date = new Date(fromTime);
+        for (const hour of validHours) {
+            if (date.getHours() < hour || (date.getHours() === hour && date.getMinutes() < 1)) {
+                date.setHours(hour, 1, 0, 0);
+                date.setMinutes(date.getMinutes() + 5);
+                return date.getTime();
+            }
+        }
+        // если не нашли — следующий день в 01:01
+        date.setDate(date.getDate() + 1);
+        date.setHours(1, 1, 0, 0);
+        date.setMinutes(date.getMinutes() + 5);
+        return date.getTime();
+    };
+    var RatesUtils$1 = new RatesUtils();
+
+    var _RatesService_getConvertRates;
     class RatesService {
         constructor() {
-            _RatesService_instances.add(this);
             _RatesService_getConvertRates.set(this, (rates) => {
                 return new Promise((resolve) => {
                     const amount = [1, 100, 1000, 10000];
@@ -521,33 +623,39 @@
                 });
             });
         }
-        //TODO: REMOVE THIS METHOD AFTER TESTS
-        getTestRates() {
-            return __awaiter(this, void 0, void 0, function* () {
-                try {
-                    return yield Utils$1.apiRequest({
-                        url: 'https://api.steaminventoryhelper.com/rates?base=USD',
-                    });
-                }
-                catch (e) {
-                    return { success: false, error: e.message || e.responseJSON || 'Error, something went wrong' };
-                }
-            });
-        }
         setGlobalRates() {
             return __awaiter(this, void 0, void 0, function* () {
                 try {
                     const { currency_code } = yield Storage$1.get('currency_code');
                     const { userInfo } = yield Storage$1.getLocal('userInfo');
                     const { steamCurrency = { strCode: 'USD' } } = !(userInfo === null || userInfo === void 0 ? void 0 : userInfo.authorization) || (yield Storage$1.get({ steamCurrency: { strCode: 'USD' } }));
-                    const globalRatesByUserCurrency = yield __classPrivateFieldGet(this, _RatesService_instances, "m", _RatesService_fetchRates).call(this, currency_code || steamCurrency.strCode);
-                    const defaultGlobalRates = yield __classPrivateFieldGet(this, _RatesService_instances, "m", _RatesService_fetchRates).call(this, 'USD');
-                    if (globalRatesByUserCurrency.success) {
-                        yield Storage$1.set({ currency_rates: globalRatesByUserCurrency.data });
-                        yield Storage$1.set({ default_currency_rates: defaultGlobalRates.data });
-                        const convertCurrencyRates = yield __classPrivateFieldGet(this, _RatesService_getConvertRates, "f").call(this, globalRatesByUserCurrency);
-                        yield Storage$1.set({ global_currency_rates: convertCurrencyRates });
+                    const base = currency_code || steamCurrency.strCode;
+                    const isNeedUpdateDefaultRates = yield RatesUtils$1.isNeedUpdateRates({});
+                    const isNeedUpdateSelectedRates = yield RatesUtils$1.isNeedUpdateRates({ base });
+                    const defaultRates = isNeedUpdateDefaultRates
+                        ? yield this.fetchRates('USD')
+                        : yield RatesUtils$1.getCachedRates({});
+                    const selectedRates = isNeedUpdateSelectedRates
+                        ? yield this.fetchRates(base)
+                        : yield RatesUtils$1.getCachedRates({ base });
+                    if (!(defaultRates === null || defaultRates === void 0 ? void 0 : defaultRates.success) || !(selectedRates === null || selectedRates === void 0 ? void 0 : selectedRates.success))
+                        return;
+                    if (isNeedUpdateDefaultRates) {
+                        yield RatesUtils$1.setRatesInCache({
+                            base: 'USD',
+                            response: defaultRates,
+                        });
                     }
+                    if (isNeedUpdateSelectedRates) {
+                        yield RatesUtils$1.setRatesInCache({
+                            base,
+                            response: selectedRates,
+                        });
+                    }
+                    yield Storage$1.set({ default_currency_rates: defaultRates.data });
+                    yield Storage$1.set({ currency_rates: selectedRates.data });
+                    const convertCurrencyRates = RatesUtils$1.getConvertRates(selectedRates);
+                    yield Storage$1.set({ global_currency_rates: convertCurrencyRates });
                 }
                 catch (error) {
                     console.error(error);
@@ -560,44 +668,95 @@
                     const { currency_code } = yield Storage$1.get('currency_code');
                     const { userInfo } = yield Storage$1.getLocal('userInfo');
                     const { steamCurrency = { strCode: 'USD' } } = !(userInfo === null || userInfo === void 0 ? void 0 : userInfo.authorization) || (yield Storage$1.get({ steamCurrency: { strCode: 'USD' } }));
-                    const steamRatesByUserCurrency = yield __classPrivateFieldGet(this, _RatesService_instances, "m", _RatesService_fetchRates).call(this, currency_code || steamCurrency.strCode, 'steam-rates');
-                    const defaultSteamRates = yield __classPrivateFieldGet(this, _RatesService_instances, "m", _RatesService_fetchRates).call(this, 'USD', 'steam-rates');
-                    if (steamRatesByUserCurrency.success) {
-                        yield Storage$1.set({ steam_rates: steamRatesByUserCurrency.data });
-                        yield Storage$1.set({ default_steam_rates: defaultSteamRates.data });
-                        const convertCurrencyRates = yield __classPrivateFieldGet(this, _RatesService_getConvertRates, "f").call(this, steamRatesByUserCurrency);
-                        yield Storage$1.set({ steam_currency_rates: convertCurrencyRates });
+                    const base = currency_code || steamCurrency.strCode;
+                    const isNeedUpdateDefaultSteamRates = yield RatesUtils$1.isNeedUpdateRates({
+                        endPoint: 'steam-rates',
+                    });
+                    const isNeedUpdateSelectedSteamRates = yield RatesUtils$1.isNeedUpdateRates({
+                        base,
+                        endPoint: 'steam-rates',
+                    });
+                    const defaultSteamRates = isNeedUpdateDefaultSteamRates
+                        ? yield this.fetchRates('USD', 'steam-rates')
+                        : yield RatesUtils$1.getCachedRates({ endPoint: 'steam-rates' });
+                    const selectedSteamRates = isNeedUpdateSelectedSteamRates
+                        ? yield this.fetchRates(base, 'steam-rates')
+                        : yield RatesUtils$1.getCachedRates({ base, endPoint: 'steam-rates' });
+                    if (!(defaultSteamRates === null || defaultSteamRates === void 0 ? void 0 : defaultSteamRates.success) || !(selectedSteamRates === null || selectedSteamRates === void 0 ? void 0 : selectedSteamRates.success))
+                        return;
+                    if (isNeedUpdateDefaultSteamRates) {
+                        yield RatesUtils$1.setRatesInCache({
+                            base: 'USD',
+                            endPoint: 'steam-rates',
+                            response: defaultSteamRates,
+                        });
                     }
+                    if (isNeedUpdateSelectedSteamRates) {
+                        yield RatesUtils$1.setRatesInCache({
+                            base,
+                            endPoint: 'steam-rates',
+                            response: selectedSteamRates,
+                        });
+                    }
+                    yield Storage$1.set({ default_steam_rates: defaultSteamRates.data });
+                    yield Storage$1.set({ steam_rates: selectedSteamRates.data });
+                    const convertCurrencyRates = RatesUtils$1.getConvertRates(selectedSteamRates);
+                    yield Storage$1.set({ steam_currency_rates: convertCurrencyRates });
                 }
                 catch (error) {
                     console.error(error);
                 }
             });
         }
+        fetchRates(base = 'USD', endPoint = 'rates') {
+            return Utils$1.apiRequest({
+                url: `${SIH_API_URL}/${endPoint}`,
+                data: {
+                    base,
+                },
+            });
+        }
     }
-    _RatesService_getConvertRates = new WeakMap(), _RatesService_instances = new WeakSet(), _RatesService_fetchRates = function _RatesService_fetchRates(base, endPoint = 'rates') {
-        return Utils$1.apiRequest({
-            url: `${SIH_API_URL}/${endPoint}`,
-            data: {
-                base,
-            },
-        });
-    };
+    _RatesService_getConvertRates = new WeakMap();
     var RatesService$1 = new RatesService();
 
     var RatesController = {
         msg: {
-            //TODO: REMOVE THIS
-            getTestRates: {
-                code: 'TEST_MESSAGE',
+            getExchangeRate: {
+                code: 'exchangerate',
                 handler: (cb) => __awaiter(void 0, void 0, void 0, function* () {
                     try {
-                        const response = yield RatesService$1.getTestRates();
-                        cb(response);
-                        //TODO: Change any
+                        const isNeedUpdateDefaultRates = yield RatesUtils$1.isNeedUpdateRates({});
+                        const defaultRates = isNeedUpdateDefaultRates
+                            ? yield RatesService$1.fetchRates()
+                            : yield RatesUtils$1.getCachedRates({});
+                        if (isNeedUpdateDefaultRates && defaultRates) {
+                            yield RatesUtils$1.setRatesInCache({ base: 'USD', response: defaultRates });
+                        }
+                        cb(defaultRates);
                     }
                     catch (e) {
-                        cb(e);
+                        console.error(e);
+                        cb({ success: false });
+                    }
+                }),
+            },
+            getRates: {
+                code: 'GetRates',
+                handler: (_a, cb_1) => __awaiter(void 0, [_a, cb_1], void 0, function* ({ base = 'USD' }, cb) {
+                    try {
+                        const isNeedUpdateSelectedRates = yield RatesUtils$1.isNeedUpdateRates({ base });
+                        const defaultRates = isNeedUpdateSelectedRates
+                            ? yield RatesService$1.fetchRates(base)
+                            : yield RatesUtils$1.getCachedRates({ base });
+                        if (isNeedUpdateSelectedRates && defaultRates) {
+                            yield RatesUtils$1.setRatesInCache({ base, response: defaultRates });
+                        }
+                        cb(defaultRates);
+                    }
+                    catch (e) {
+                        console.error(e);
+                        cb({ success: false });
                     }
                 }),
             },
@@ -630,8 +789,11 @@
 
     const msgListenerHandler = (request, sender, sendResponse) => __awaiter(void 0, void 0, void 0, function* () {
         switch (request.type) {
-            case RatesController.msg.getTestRates.code:
-                RatesController.msg.getTestRates.handler(sendResponse);
+            case RatesController.msg.getExchangeRate.code:
+                RatesController.msg.getExchangeRate.handler(sendResponse);
+                break;
+            case RatesController.msg.getRates.code:
+                RatesController.msg.getRates.handler(request.data || {}, sendResponse);
                 break;
         }
         return true;
@@ -701,11 +863,18 @@
                 }
             },
         },
+        initGlobalFunctions: {
+            handler: () => {
+                self.setGlobalRates = () => RatesService$1.setGlobalRates();
+                self.setSteamRates = () => RatesService$1.setSteamRates();
+            },
+        },
     };
 
     /// <reference types="chrome"/>
     (() => {
         RatesGlobalHandler.initListener.handler();
+        RatesGlobalHandler.initGlobalFunctions.handler();
         KeysGlobalHandler.initListener.handler();
     })();
 

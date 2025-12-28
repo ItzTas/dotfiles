@@ -312,7 +312,8 @@
         "later": "Restart later",
         "now": "Restart now"
       },
-      "display_stream_embed": "Display esports broadcasts from SIH"
+      "display_stream_embed": "Display esports broadcasts from SIH",
+      "hide_sih_links_in_steam_menu": "Hide links to additional resources from the Steam menu"
     },
     "developer_options": {
       "title": "Developer settings",
