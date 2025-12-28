@@ -95,6 +95,7 @@
     "title37": "Inventory settings",
     "title38": "Simplified interface",
     "display_sih_market_tab": "Display SIH Market",
+    "sih_currency": "SIH currency",
     "backlight_brightness": "Adjusting Item Rarity Highlighting",
     "subscribe_button": "Become SIH Adept! >",
     "confirm_modal": {
@@ -361,7 +362,7 @@
       "new_price_discount_buy_1": "You have made a very large markup of",
       "new_price_discount_buy_2": "of the highest value of the buy request.",
       "new_price_bigger_1": "The new value of the purchase request is bigger than the previous value by ",
-      "relisting": "Relisting",
+      "relisting": "Relist",
       "market_price": "Market price",
       "reduce_by": "Reduce by",
       "increase_by": "Increase by",

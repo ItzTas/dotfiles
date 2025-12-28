@@ -2,7 +2,7 @@
 "update_url": "https://clients2.google.com/service/update2/crx",
 
 	"manifest_version": 3,
-	"version": "4.29",
+	"version": "4.31",
 	"author": "SteamDB",
 	"name": "SteamDB",
 	"short_name": "SteamDB",
