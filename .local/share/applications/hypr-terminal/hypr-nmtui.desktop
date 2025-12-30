@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=nmtui Hypr
 Comment=Network Manager TUI for Hyprland
-# Exec=hyprctl dispatch exec "[noborder; float] ghostty --background-opacity=0 -e nmtui"
 Exec=hyprctl dispatch exec "[no_border; float; center] kitty -o cursor_trail=0 -o background_opacity=0 -e nmtui"
 Icon=network-wireless
 Terminal=false
