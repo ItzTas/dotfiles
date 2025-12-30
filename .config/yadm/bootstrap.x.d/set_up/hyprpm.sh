@@ -18,6 +18,7 @@ _set_up() {
         "dynamic-cursors"
         "Hypr-DarkWindow"
         "hyprexpo"
+        "hyprfocus"
     )
 
     for enable in "${enables[@]}"; do
