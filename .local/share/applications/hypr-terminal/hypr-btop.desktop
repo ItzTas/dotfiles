@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Btop Hypr
 Comment=Resource monitor in Hyprland
-Exec=hyprctl dispatch exec "[no_border; float; size (monitor_w*0.85) (monitor_h*80)] kitty -o cursor_trail=0 -o background_opacity=0 -e btop"
+Exec=hyprctl dispatch exec "[no_border; float; size (monitor_w*0.85) (monitor_h*0.80); center] kitty -o cursor_trail=0 -o background_opacity=0 -e btop"
 Icon=btop
 Terminal=false
 Type=Application

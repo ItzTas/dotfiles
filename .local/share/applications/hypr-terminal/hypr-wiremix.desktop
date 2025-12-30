@@ -2,7 +2,7 @@
 Name=Wiremix Hypr
 Comment=Audio mixer in Hyprland
 # Exec=hyprctl dispatch exec "[float; size 90% 80%] ghostty --background-opacity=1 -e wiremix"
-Exec=hyprctl dispatch exec "[float; noblur 0; noborder 0; size 90% 80%] kitty -o cursor_trail=0 -o background_opacity=0.65 -e wiremix"
+Exec=hyprctl dispatch exec "[float; no_blur 0; no_border 0; size (monitor_w*0.90) (monitor_h*0.80); center] kitty -o cursor_trail=0 -o background_opacity=0.65 -e wiremix"
 Icon=audio-volume-high
 Terminal=false
 Type=Application
