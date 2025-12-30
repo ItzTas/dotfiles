@@ -1,8 +1,7 @@
 [Desktop Entry]
 Name=LazyDocker Hypr
 Comment=Docker UI in Hyprland
-# Exec=hyprctl dispatch exec "[noblur 0; noborder 0; float; size 90% 80%] ghostty --background-opacity=0.65 -e lazydocker"
-Exec=hyprctl dispatch exec "[noblur 0; no_border 0; float; size 90% 80%] kitty -o cursor_trail=0 -o background_opacity=0.65 -e lazydocker"
+Exec=hyprctl dispatch exec "[no_blur 0; no_border 0; float; size (monitor_w*0.90) (monitor_h*0.80); center] kitty -o cursor_trail=0 -o background_opacity=0.65 -e lazydocker"
 Icon=utilities-terminal
 Terminal=false
 Type=Application
