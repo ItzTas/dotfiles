@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ncdu Hypr
 Comment=Disk usage analyzer in Hyprland
-Exec=hyprctl dispatch exec "[no_blur 0; float; no_border 0; size (monitor_w*0.90) (monitor_h*0.80); center] kitty -o cursor_trail=0 -o background_opacity=0.65 -e ncdu /"
+Exec=hyprctl dispatch exec "[no_blur 0; float; size (monitor_w*0.90) (monitor_h*0.80); center] kitty -o cursor_trail=0 -o background_opacity=0.65 -e ncdu /"
 Icon=utilities-terminal
 Terminal=false
 Type=Application
