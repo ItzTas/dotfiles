@@ -178,7 +178,7 @@ filelight 25.12.0-1
 filesystem 2025.10.12-1
 findutils 4.10.0-3
 firefox 146.0.1-1
-fish 4.3.1-1
+fish 4.3.2-1
 flac 1.5.0-1
 flameshot-git r2230.bee989ec-1
 flatpak 1:1.16.2-1
@@ -538,7 +538,7 @@ libgpg-error 1.58-1
 libgudev 238-3
 libgusb 0.4.9-2
 libhandy 1.8.3-2
-libheif 1.20.2-3
+libheif 1.21.0-1
 libice 1.1.2-1
 libid3tag 0.16.3-2
 libidn 1.43-1
