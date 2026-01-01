@@ -30,7 +30,7 @@
     ]
   },
   "themes": {
-    "activeTheme": "Steam",
+    "activeTheme": "default",
     "allowedScripts": true,
     "allowedStyles": true,
     "conditions": {
