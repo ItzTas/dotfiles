@@ -12,10 +12,10 @@ adwaita-icon-theme 49.0-1
 adwaita-icon-theme-legacy 46.2-3
 alarm-clock-applet 1:0.4.1-5
 alsa-card-profiles 1:1.4.9-2
-alsa-lib 1.2.14-2
+alsa-lib 1.2.15.1-1
 alsa-plugins 1:1.2.12-5
 alsa-topology-conf 1.2.5.1-4
-alsa-ucm-conf 1.2.14-2
+alsa-ucm-conf 1.2.15.1-1
 ani-cli 4.10-1
 aom 3.13.1-2
 apparmor 4.1.2-1
@@ -90,7 +90,7 @@ cdparanoia 10.2-9
 cinnamon-desktop 6.6.1-2
 clamav 1.5.1-1
 clamtk 6.18-1
-clipse 1.2.0-1
+clipse 1.2.0-2
 clutter 1.26.4-3
 clutter-gtk 1.8.4-4
 cmake 4.2.1-1
@@ -235,7 +235,7 @@ gnome-disk-utility 46.1-2
 gnome-keyring 1:48.0-1
 gnu-free-fonts 20120503-8
 gnulib-l10n 20241231-1
-gnupg 2.4.8-4
+gnupg 2.4.9-1
 gnutls 3.8.11-2
 go 2:1.25.5-1
 go-tools 4:0.40.0-1
@@ -389,7 +389,7 @@ lazygit 0.57.0-1
 lcms2 2.17-1
 leancrypto 1.6.0-1
 less 1:685-1
-lib32-alsa-lib 1.2.14-2
+lib32-alsa-lib 1.2.15.1-1
 lib32-alsa-plugins 1.2.12-1
 lib32-audit 4.1.2-1
 lib32-brotli 1.1.0-1
@@ -1268,7 +1268,7 @@ xvidcore 1.3.7-3
 xxhash 0.8.3-1
 xz 5.8.2-1
 yadm 3.5.0-1
-yazi 25.5.31-2
+yazi 25.12.29-2
 yq 3.4.3-2
 yyjson 0.12.0-1
 zathura 0.5.14-1
