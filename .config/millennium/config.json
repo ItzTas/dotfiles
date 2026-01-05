@@ -222,6 +222,7 @@
         "General - Window Controls": "Show",
         "Library - Add shelf button": "no",
         "Library - Always show game infos": "no",
+        "Library - Banner Infos": "no",
         "Library - Banner position": "Middle (default)",
         "Library - Bigger banner": "no",
         "Library - Darken not installed games": "yes",
