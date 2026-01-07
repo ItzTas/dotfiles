@@ -244,7 +244,7 @@ gobject-introspection 1.86.0-1
 gobject-introspection-runtime 1.86.0-1
 golangci-lint 2.7.2-1
 gomodifytags 1.17.0-1
-google-chrome 143.0.7499.169-1
+google-chrome 143.0.7499.192-1
 gperftools 2.17.2-1
 gpgme 2.0.1-1
 gpgmepp 2.0.0-2
@@ -952,6 +952,7 @@ python-evdev 1.9.2-1
 python-filelock 3.20.0-2
 python-fonttools 4.61.1-1
 python-gobject 3.54.5-1
+python-gpgme 2.0.0-1
 python-hatchling 1.28.0-1
 python-idna 3.11-1
 python-importlib-metadata 8.7.1-1
@@ -991,8 +992,11 @@ python-pymediainfo 6.1.0-4
 python-pyparsing 3.3.1-1
 python-pypdf 6.5.0-1
 python-pyproject-hooks 1.2.0-3
+python-pyqt5 5.15.11-3
+python-pyqt5-sip 12.17.2-1
 python-pyqt6 6.10.1-1
 python-pyqt6-sip 13.10.3-1
+python-pysocks 1.7.1-10
 python-requests 2.32.5-1
 python-ruamel-yaml 0.18.10-1
 python-ruamel.yaml.clib 0.2.15-1
@@ -1136,6 +1140,8 @@ tinysparql 3.10.1-2
 tinyxml2 11.0.0-1
 tmux 3.6_a-1
 tomlplusplus 3.4.0-1
+tor 0.4.8.21-1
+torbrowser-launcher 0.3.7-3
 tpm2-tools 5.7-1
 tpm2-tss 4.1.3-1
 tree-sitter 0.25.10-1
