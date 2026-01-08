@@ -175,11 +175,11 @@ ffmpeg4.4 4.4.6-3
 fftw 3.3.10-7
 file 5.46-5
 file-roller 44.6-1
-filelight 25.12.0-1
+filelight 25.12.1-1
 filesystem 2025.10.12-1
 findutils 4.10.0-3
 firefox 146.0.1-1
-fish 4.3.2-1
+fish 4.3.3-1
 flac 1.5.0-1
 flameshot-git r2230.bee989ec-1
 flatpak 1:1.16.2-1
