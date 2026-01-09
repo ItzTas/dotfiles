@@ -21,7 +21,7 @@ aom 3.13.1-2
 apparmor 4.1.2-1
 appstream 1.1.1-1
 aquamarine 0.10.0-2
-arch-update 3.17.4-1
+arch-update 3.17.5-1
 archlinux-contrib 20251215-1
 archlinux-keyring 20260107-1
 aria2 1.37.0-2
@@ -998,7 +998,7 @@ python-pypdf 6.5.0-1
 python-pyproject-hooks 1.2.0-3
 python-pyqt5 5.15.11-3
 python-pyqt5-sip 12.17.2-1
-python-pyqt6 6.10.1-1
+python-pyqt6 6.10.2-1
 python-pyqt6-sip 13.10.3-1
 python-pysocks 1.7.1-10
 python-requests 2.32.5-1
