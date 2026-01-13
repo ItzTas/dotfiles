@@ -265,14 +265,14 @@ gsfonts 20200910-6
 gsl 2.8-1
 gsm 1.0.23-1
 gssdp 1.6.4-1
-gst-plugin-gtk 1.26.10-2
+gst-plugin-gtk 1.26.10-3
 gst-plugin-pipewire 1:1.4.9-2
-gst-plugins-bad-libs 1.26.10-2
-gst-plugins-base 1.26.10-2
-gst-plugins-base-libs 1.26.10-2
-gst-plugins-good 1.26.10-2
-gst-plugins-ugly 1.26.10-2
-gstreamer 1.26.10-2
+gst-plugins-bad-libs 1.26.10-3
+gst-plugins-base 1.26.10-3
+gst-plugins-base-libs 1.26.10-3
+gst-plugins-good 1.26.10-3
+gst-plugins-ugly 1.26.10-3
+gstreamer 1.26.10-3
 gtest 1.17.0-1
 gthumb 3.12.8.2-2
 gtk-layer-shell 0.10.0-1
@@ -428,7 +428,7 @@ lib32-libnm 1.54.3-1
 lib32-libnsl 2.0.1-1
 lib32-libpciaccess 0.18.1-1
 lib32-libpipewire 1:1.4.9-1
-lib32-libpng 1.6.53-1
+lib32-libpng 1.6.53-2
 lib32-libpsl 0.21.5-1
 lib32-libssh2 1.11.1-1
 lib32-libtasn1 4.21.0-1
@@ -612,7 +612,7 @@ libpipeline 1.5.8-1
 libpipewire 1:1.4.9-2
 libplacebo 7.351.0-4
 libplist 2.7.0-2
-libpng 1.6.53-1
+libpng 1.6.53-2
 libportal 0.9.1-2
 libportal-qt6 0.9.1-2
 libproxy 0.5.12-1
@@ -1111,7 +1111,7 @@ sord 0.16.20-1
 sound-theme-freedesktop 0.8-6
 soundtouch 2.4.0-1
 source-highlight 3.1.9-16
-spdlog 1.16.0-1
+spdlog 1.17.0-1
 speex 1.2.1-2
 speexdsp 1.2.1-2
 spicetify-cli 2.42.7-1
@@ -1222,7 +1222,7 @@ vte-common 0.82.3-1
 vte3 0.82.3-1
 vulkan-icd-loader 1.4.335.0-1
 wavpack 5.8.1-1
-waybar 0.14.0-5
+waybar 0.14.0-6
 wayland 1.24.0-1
 wayland-protocols 1.47-1
 webkit2gtk-4.1 2.50.4-1
