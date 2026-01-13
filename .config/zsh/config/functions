@@ -337,13 +337,15 @@ if (( ${+commands[proto]} )); then
 	}
 
     dumpproto() {
-        local proto_content="
-        [settings]
-        auto-install = true
-        telemetry = false
-        unstable-lockfile = true
-        auto-clean = true
-        "
+      local proto_content
+      proto_content=$(cat <<'EOF'
+[settings]
+auto-install = true
+telemetry = false
+unstable-lockfile = true
+auto-clean = true
+EOF
+        )
 
         if [[ -e .prototools ]]; then
             echo ".prototools already exists! Aborting." >&2
