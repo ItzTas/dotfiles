@@ -335,6 +335,24 @@ if (( ${+commands[proto]} )); then
 	ppython() {
 		proto run python -- "$@"
 	}
+
+    dumpproto() {
+        local proto_content="
+        [settings]
+        auto-install = true
+        telemetry = false
+        unstable-lockfile = true
+        auto-clean = true
+        "
+
+        if [[ -e .prototools ]]; then
+            echo ".prototools already exists! Aborting." >&2
+            return 1
+        fi
+
+        echo "$proto_content" > .prototools
+        echo ".prototools file created!"
+    }
 fi
 
 # miru
