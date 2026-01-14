@@ -150,7 +150,7 @@ efibootmgr 18-3
 efivar 39-1
 egl-gbm 1.1.2.1-1
 egl-wayland 4:1.1.21-1
-egl-wayland2 1.0.0.rc.r53.gf4a2d32-1
+egl-wayland2 1.0.0.rc.r57.g1893c37-1
 egl-x11 1.0.4-1
 eglexternalplatform 1.2.1-1
 electron 1:39-1
@@ -907,7 +907,7 @@ pixman 0.46.4-1
 pkgconf 2.5.1-1
 pkgfile 25-1
 playerctl 2.4.1-5
-plocate 1.1.23-1
+plocate 1.1.24-1
 pnpm 10.28.0-1
 podman 5.7.1-1
 podman-desktop 1.23.1-1

@@ -1,5 +1,5 @@
 exclude = []
-include = ["*.toml"]
+include = ["*.toml", "*.prototools"]
 
 [formatting]
     align_comments        = true
