@@ -107,6 +107,7 @@ _cht() {
         "c"
         "typescript"
         "nodejs"
+        "css"
     )
     local core_utilts_list=(
         "xargs"
