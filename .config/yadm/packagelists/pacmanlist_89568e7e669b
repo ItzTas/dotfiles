@@ -842,7 +842,7 @@ os-prober 1.83-1
 ostree 2025.7-1
 p11-kit 0.25.10-2
 pacfiles 0.2.7-2
-pacman 7.1.0.r7.gb9f7d4a-1
+pacman 7.1.0.r9.g54d9411-1
 pacman-contrib 1.13.1-1
 pacman-mirrorlist 20251021-1
 pahole 1:1.31-2
