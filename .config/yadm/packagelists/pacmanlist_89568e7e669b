@@ -94,7 +94,7 @@ clamtk 6.18-1
 clipse 1.2.0-2
 clutter 1.26.4-3
 clutter-gtk 1.8.4-4
-cmake 4.2.1-1
+cmake 4.2.2-1
 cogl 1.22.8-3
 colord 1.4.8-1
 compiler-rt 21.1.6-1
@@ -235,7 +235,7 @@ gnome-desktop 1:44.4-1
 gnome-desktop-common 1:44.4-1
 gnome-disk-utility 46.1-2
 gnome-keyring 1:48.0-1
-gnu-free-fonts 20120503-8
+gnu-free-fonts 20120503-9
 gnulib-l10n 20241231-1
 gnupg 2.4.9-1
 gnutls 3.8.11-2
@@ -856,7 +856,7 @@ parsec-bin 150_97c-1
 parted 3.6-2
 paru 2.1.0-2
 paru-debug 2.1.0-2
-passt 2025_12_23.2ba9fd5-1
+passt 2026_01_17.81c97f6-1
 patch 2.8-1
 patchelf 0.18.0-4
 pavucontrol 1:6.2-1
@@ -1138,7 +1138,7 @@ tdb 1.4.14-2
 telegram-desktop 6.4.2-1
 termpicker-bin 1.5.1-1
 texinfo 7.2-1
-thunderbird 145.0-1
+thunderbird 147.0-1
 tidy 5.8.0-3
 timeshift 25.12.4-1
 tinysparql 3.10.1-2
