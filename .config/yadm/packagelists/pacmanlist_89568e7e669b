@@ -167,7 +167,7 @@ exiv2 0.28.7-1
 expat 2.7.3-1
 eza 0.23.4-1
 faad2 2.11.2-1
-fakeroot 1.37.1.2-1
+fakeroot 1.37.2-1
 fastfetch 2.57.1-1
 fd 10.3.0-1
 ferdium 7.1.1-2
@@ -182,7 +182,7 @@ findutils 4.10.0-3
 firefox 147.0.1-1
 fish 4.3.3-1
 flac 1.5.0-1
-flameshot-git r2233.5a075c17-1
+flameshot-git r2238.f372c379-1
 flatpak 1:1.16.2-1
 flex 2.6.4-5
 fluidsynth 2.5.2-1
@@ -323,7 +323,7 @@ iana-etc 20251215-1
 icoutils 0.32.3-3
 icu 78.2-1
 ijs 0.35-6
-imagemagick 7.1.2.12-2
+imagemagick 7.1.2.13-1
 imlib2 1.12.6-1
 inetutils 2.6-1
 iniparser 4.2.6-2
@@ -1013,7 +1013,7 @@ python-stopit 1.1.2-11
 python-toml 0.10.2-13
 python-tomlkit 0.14.0-1
 python-tqdm 4.67.1-5
-python-trove-classifiers 2026.1.12.15-1
+python-trove-classifiers 2026.1.14.14-1
 python-typing_extensions 4.15.0-3
 python-urllib3 2.6.3-1
 python-wcwidth 0.2.14-2
@@ -1086,7 +1086,7 @@ sdbus-cpp 2.2.1-1
 sddm 0.21.0-6
 sddm-sugar-candy-git 1.6r42.d31dbf5-1
 sdl2-compat 2.32.62-1
-sdl3 3.4.0-1
+sdl3 3.4.0-2
 seahorse 1:47.0.1-6
 seatd 0.9.1-1
 sed 4.9-3
