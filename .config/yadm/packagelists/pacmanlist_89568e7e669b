@@ -450,7 +450,7 @@ lib32-libxss 1.2.4-2
 lib32-libxxf86vm 1.1.5-2
 lib32-llvm-libs 1:21.1.6-1
 lib32-lm_sensors 1:3.6.2-2
-lib32-mesa 1:25.3.3-3
+lib32-mesa 1:25.3.4-1
 lib32-ncurses 6.5-2
 lib32-nettle 3.10.2-1
 lib32-nspr 4.38.2-1
@@ -766,7 +766,7 @@ md4c 0.5.2-1
 mdadm 4.4-2
 media-player-info 26-1
 meld 3.22.3-2
-mesa 1:25.3.3-3
+mesa 1:25.3.4-1
 mesa-utils 9.0.0-7
 meson 1.10.1-1
 millennium 2.34.0-5
