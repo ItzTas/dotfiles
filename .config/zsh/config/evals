@@ -31,11 +31,6 @@ if (( ${+commands[keychain]} )); then
     eval "$(keychain -q --eval)"
 fi
 
-# proto
-if (( ${+commands[proto]} )); then
-    eval "$(proto activate zsh)"
-fi
-
 # dircolors
 if (( ${+commands[dircolors]} )); then
   local dcfile="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/.dircolors"
