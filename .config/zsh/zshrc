@@ -44,7 +44,6 @@ __source_zsh_config_files() {
     local zsh_home="$HOME/.config/zsh"
     local files=(
         "envs"
-        "evals"
         "aliases"
         "completions"
         "functions"
@@ -53,6 +52,7 @@ __source_zsh_config_files() {
         "zstyle"
         "binds"
         "fzf"
+        "evals"
     )
 
     local path
@@ -68,3 +68,12 @@ __source_zsh_config_files
 unset -f __source_zsh_config_files
 
 autoload -Uz compinit && compinit
+
+# -------------------- Main file specifics --------------------
+
+# proto activation needs to be on main file
+if (( ${+commands[proto]} )); then
+    eval "$(proto activate zsh)"
+fi
+
+# -------------------------------------------------------------
