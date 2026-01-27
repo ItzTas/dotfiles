@@ -94,7 +94,7 @@ clamtk 6.18-1
 clipse 1.2.0-2
 clutter 1.26.4-3
 clutter-gtk 1.8.4-4
-cmake 4.2.2-2
+cmake 4.2.3-1
 cogl 1.22.8-3
 colord 1.4.8-1
 compiler-rt 21.1.6-1
@@ -133,9 +133,9 @@ direnv 2.37.1-1
 discord 1:0.0.122-1
 dkms 3.3.0-1
 dmidecode 3.7-1
-docker 1:29.1.4-1
+docker 1:29.2.0-1
 docker-buildx 0.31.0-1
-docker-compose 5.0.1-1
+docker-compose 5.0.2-1
 dosfstools 4.2-5
 dotnet-host 10.0.0.sdk100-1
 dotnet-runtime 10.0.0.sdk100-1
@@ -804,7 +804,7 @@ networkmanager 1.54.3-1
 nftables 1:1.1.6-2
 ninja 1.13.2-2
 nlohmann-json 3.12.0-2
-node-gyp 12.1.0-1
+node-gyp 12.2.0-1
 nodejs 25.4.0-1
 nodejs-nopt 7.2.1-1
 noto-fonts 1:2026.01.01-1
