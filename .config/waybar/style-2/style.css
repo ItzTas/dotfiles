@@ -244,17 +244,17 @@ menu>*:active {
 }
 
 /* Hover effect for bar elements */
-#custom-swaync:hover,
-#tray>widget:hover,
-#custom-power:hover,
-#custom-os-button:hover,
-#custom-runner:hover,
-#mpris:hover,
-#custom-next:hover,
-#custom-prev:hover,
-#custom-cafein:hover,
-#clock:hover,
-#power-profiles-daemon:hover {
+/* #tray>widget:hover:not(:active):not(:focus), */
+#custom-swaync:hover:not(:active):not(:focus),
+#custom-power:hover:not(:active):not(:focus),
+#custom-os-button:hover:not(:active):not(:focus),
+#custom-runner:hover:not(:active):not(:focus),
+#mpris:hover:not(:active):not(:focus),
+#custom-next:hover:not(:active):not(:focus),
+#custom-prev:hover:not(:active):not(:focus),
+#custom-cafein:hover:not(:active):not(:focus),
+#clock:hover:not(:active):not(:focus),
+#power-profiles-daemon:hover:not(:active):not(:focus) {
     background-color: @bg-hover;
 }
 
