@@ -130,7 +130,7 @@ dex 0.10.1-1
 diff-so-fancy 1.4.4-2
 diffutils 3.12-2
 direnv 2.37.1-1
-discord 1:0.0.121-1
+discord 1:0.0.122-1
 dkms 3.3.0-1
 dmidecode 3.7-1
 docker 1:29.1.4-1
@@ -223,7 +223,7 @@ glib-networking 1:2.80.1-1
 glib-perl 1.329.4-3
 glib2 2.86.3-2
 glib2-devel 2.86.3-2
-glibc 2.42+r51+gcbf39c26b258-1
+glibc 2.42+r51+gcbf39c26b258-2
 glibmm 2.66.8-1
 glibmm-2.68 2.86.0-1
 glslang 1:1.4.335.0-1
@@ -333,7 +333,7 @@ iptables-nft 1:1.8.11-2
 iputils 20250605-1
 iriunwebcam-bin 2.9-1
 iso-codes 4.20.1-1
-jansson 2.14.1-1
+jansson 2.15.0-1
 jasper 4.2.8-1
 java-environment-common 3-6
 java-runtime-common 3-6
@@ -404,7 +404,7 @@ lib32-freetype2 2.14.1-1
 lib32-gamemode 1.8.2-1
 lib32-gcc-libs 15.2.1+r447+g6a64f6c3ebb8-1
 lib32-glib2 2.86.3-1
-lib32-glibc 2.42+r51+gcbf39c26b258-1
+lib32-glibc 2.42+r51+gcbf39c26b258-2
 lib32-gmp 6.3.0-2
 lib32-gnutls 3.8.11-1
 lib32-icu 78.2-1
@@ -1220,7 +1220,7 @@ volume_key 0.3.12-12
 vte-common 0.82.3-1
 vte3 0.82.3-1
 vulkan-icd-loader 1.4.335.0-1
-wavpack 5.8.1-1
+wavpack 5.9.0-1
 waybar 0.14.0-6
 wayland 1.24.0-1
 wayland-protocols 1.47-1
