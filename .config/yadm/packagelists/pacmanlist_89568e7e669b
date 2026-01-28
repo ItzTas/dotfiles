@@ -107,10 +107,10 @@ cpio 2.15-3
 cppdap 1.58.0-2
 cracklib 2.10.3-1
 cronie 1.7.2-2
-cryptsetup 2.8.3-1
+cryptsetup 2.8.4-1
 cuda 13.1.1-1
 cunit 2.1.3-4
-curl 8.18.0-2
+curl 8.18.0-3
 curseforge 1.296.4_30607-1
 dav1d 1.5.3-1
 db5.3 5.3.28-5
@@ -156,7 +156,7 @@ eglexternalplatform 1.2.1-1
 electron 1:39-1
 electron35 35.7.5-1
 electron37 37.5.1-1
-electron38 38.7.2-1
+electron38 38.8.0-1
 electron39-bin 39.3.0-1
 electron39-bin-debug 39.2.7-1
 elfutils 0.194-1
@@ -179,7 +179,7 @@ file-roller 44.6-1
 filelight 25.12.1-1
 filesystem 2025.10.12-1
 findutils 4.10.0-3
-firefox 147.0.1-1
+firefox 147.0.2-1
 fish 4.3.3-1
 flac 1.5.0-1
 flameshot-git r2240.6b0427b4-1
@@ -324,7 +324,7 @@ icu 78.2-1
 ijs 0.35-6
 imagemagick 7.1.2.13-1
 imlib2 1.12.6-1
-inetutils 2.6-1
+inetutils 2.7-2
 iniparser 4.2.6-2
 inotify-tools 4.25.9.0-1
 intel-ucode 20251111-1
@@ -395,7 +395,7 @@ lib32-alsa-plugins 1.2.12-1
 lib32-audit 4.1.2-1
 lib32-brotli 1.1.0-1
 lib32-bzip2 1.0.8-4
-lib32-curl 8.18.0-3
+lib32-curl 8.18.0-4
 lib32-dbus 1.16.2-1
 lib32-e2fsprogs 1.47.3-2
 lib32-expat 2.7.3-1
@@ -504,7 +504,7 @@ libcdio-paranoia 10.2+2.0.2-1
 libcloudproviders 0.4.0-1
 libcolord 1.4.8-1
 libcups 2:2.4.16-1
-libcurl-gnutls 8.18.0-2
+libcurl-gnutls 8.18.0-3
 libdaemon 0.14-6
 libdatrie 0.2.14-1
 libdbusmenu-glib 18.10.20180917-1
@@ -845,7 +845,7 @@ pacman 7.1.0.r9.g54d9411-1
 pacman-contrib 1.13.1-1
 pacman-mirrorlist 20260105-1
 pahole 1:1.31-2
-pam 1.7.1-1
+pam 1.7.2-2
 pambase 20250719-1
 pango 1:1.57.0-2
 pangomm 2.46.4-1
