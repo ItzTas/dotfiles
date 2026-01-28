@@ -716,7 +716,7 @@ libzen 0.4.41-2
 libzip 1.11.4-1
 licenses 20240728-1
 lilv 0.26.2-3
-linux 6.18.6.arch1-1
+linux 6.18.7.arch1-1
 linux-api-headers 6.18-1
 linux-firmware 20260110-1
 linux-firmware-amdgpu 20260110-1
@@ -730,7 +730,7 @@ linux-firmware-other 20260110-1
 linux-firmware-radeon 20260110-1
 linux-firmware-realtek 20260110-1
 linux-firmware-whence 20260110-1
-linux-headers 6.18.6.arch1-1
+linux-headers 6.18.7.arch1-1
 lld 21.1.6-1
 llhttp 9.2.1-2
 llvm-libs 21.1.6-2
@@ -816,7 +816,7 @@ nspr 4.38.2-1
 nss 3.120-1
 numactl 2.0.19-1
 numlockx 1.2-6
-nvidia-open 590.48.01-8
+nvidia-open 590.48.01-9
 nvidia-settings 590.48.01-1
 nvidia-utils 590.48.01-2
 nvm 0.40.3-1
