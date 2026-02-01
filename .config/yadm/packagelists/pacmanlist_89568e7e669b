@@ -5,7 +5,7 @@ aardvark-dns 1.17.0-1
 abseil-cpp 20250814.1-1
 accountsservice 23.13.9-2
 acl 2.3.2-1
-ada 3.4.1-1
+ada 3.4.2-1
 adwaita-cursors 49.0-1
 adwaita-fonts 49.0-2
 adwaita-icon-theme 49.0-1
@@ -23,7 +23,7 @@ appstream 1.1.2-1
 aquamarine 0.10.0-2
 arch-update 3.17.8-1
 archlinux-contrib 20251215-1
-archlinux-keyring 20260107-2
+archlinux-keyring 20260131-1
 aria2 1.37.0-2
 asar 4.0.1-1
 at-spi2-core 2.58.3-1
@@ -806,10 +806,10 @@ nlohmann-json 3.12.0-2
 node-gyp 12.2.0-1
 nodejs 25.4.0-1
 nodejs-nopt 7.2.1-1
-noto-fonts 1:2026.01.01-1
+noto-fonts 1:2026.02.01-1
 noto-fonts-cjk 20240730-1
 noto-fonts-emoji 1:2.051-1
-npm 11.7.0-1
+npm 11.8.0-1
 npth 1.8-1
 nspr 4.38.2-1
 nss 3.120-1
@@ -849,8 +849,8 @@ pambase 20250719-1
 pango 1:1.57.0-2
 pangomm 2.46.4-1
 pangomm-2.48 2.56.1-1
-parallel 20251222-1
-parsec-bin 150_97c-1
+parallel 20260122-1
+parsec-bin 150_97c-2
 parted 3.6-2
 paru-debug 2.1.0-2
 paru-git 2.1.0.r67.g9ac3578-1
@@ -906,7 +906,7 @@ pkgconf 2.5.1-1
 pkgfile 25-1
 playerctl 2.4.1-5
 plocate 1.1.24-1
-pnpm 10.28.0-1
+pnpm 10.28.2-1
 podman 5.7.1-1
 podman-desktop 1.23.1-1
 polkit 127-3
@@ -978,7 +978,7 @@ python-matplotlib 3.10.8-3
 python-moddb 0.14.0-2
 python-more-itertools 10.8.0-2
 python-mutagen 1.47.0-4
-python-numpy 2.4.1-1
+python-numpy 2.4.2-1
 python-packaging 26.0-1
 python-pathspec 0.12.1-4
 python-pexpect 4.9.0-7
@@ -1014,8 +1014,8 @@ python-tqdm 4.67.1-5
 python-trove-classifiers 2026.1.14.14-1
 python-typing_extensions 4.15.0-3
 python-urllib3 2.6.3-1
-python-wcwidth 0.3.5-1
-python-wheel 0.45.1-4
+python-wcwidth 0.5.3-1
+python-wheel 0.46.3-1
 python-xmltodict 1.0.2-2
 python-yaml 6.0.3-2
 python-zipp 3.21.0-4
@@ -1133,7 +1133,7 @@ systemd-sysvcompat 259-2
 taglib 2.1.1-1
 tar 1.35-2
 tdb 1.4.15-1
-telegram-desktop 6.4.2-2
+telegram-desktop 6.4.4-1
 termpicker-bin 1.5.1-1
 texinfo 7.2-1
 thunderbird 147.0.1-1
