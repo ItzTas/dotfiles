@@ -49,10 +49,10 @@ __source_zsh_config_files() {
         "functions"
         "sources"
         "setopt"
-        "zstyle"
         "binds"
         "fzf"
         "evals"
+        "zstyle"
     )
 
     local path
