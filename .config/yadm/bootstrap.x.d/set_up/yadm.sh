@@ -1,7 +1,6 @@
 _set_gpu_class() {
     set -e
 
-    # Não sobrescreve classe existente
     if yadm config --get local.class >/dev/null 2>&1; then
         return 0
     fi
