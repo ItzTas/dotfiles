@@ -38,6 +38,10 @@
             "state": "transient",
             "app-name": "[Ss]potify"
         },
+        "arch-update-transient": {
+            "state": "transient",
+            "app-name": "arch-update"
+        },
         "transient": {
             "state": "transient",
             "app-name": "__transient"
