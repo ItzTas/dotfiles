@@ -19,7 +19,10 @@ launch() {
 
     local style_file="$path/style.css"
 
-    waybar -c "$config_file" -s "$style_file" & disown
+    local log_file="$HOME/.cache/waybar-$style.log"
+
+    waybar -c "$config_file" -s "$style_file" >"$log_file" 2>&1 &
+    disown
 }
 
 launch "$@"
