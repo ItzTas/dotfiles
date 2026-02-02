@@ -19,7 +19,10 @@ launch() {
 
     local style_file="$path/style.css"
 
-    local log_file="$HOME/.cache/waybar-$style.log"
+    local log_dir="$HOME/.cache/waybar"
+    local log_file="$log_dir/$style.log"
+
+    mkdir -p "$log_dir"
 
     waybar -c "$config_file" -s "$style_file" >"$log_file" 2>&1 &
     disown
