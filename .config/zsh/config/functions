@@ -521,6 +521,11 @@ millennium_skin_add() {
     )
 }
 
+# yadm
+yadm() {
+    PYTHONWARNINGS="ignore:pkg_resources is deprecated" yadm "$@"
+}
+
 # others
 copybuffer () {
   if builtin which wl-copy &>/dev/null; then
