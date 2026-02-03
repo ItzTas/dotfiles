@@ -1,3 +1,7 @@
+yadm() {
+    PYTHONWARNINGS="ignore:pkg_resources is deprecated" command yadm "$@"
+}
+
 has_yadm_class() {
     local regex="$1"
     local classes
