@@ -7,7 +7,7 @@ exec-once = [workspace 1 silent] kitty -e bash -c 'sleep 0.5 && fastfetch && bas
 # Zen-browser
 exec-once = [workspace 2 silent] zen-browser
 
-{% if "talinux-desktop" in yadm.hostname %}
+{% if yadm.hostname == "talinux-desktop" %}
 # Ferdium
 exec-once = [workspace 7 silent] ferdium
 
