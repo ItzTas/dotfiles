@@ -1,6 +1,10 @@
 #!/bin/env bash
 # vim=sh
 
+yadm() {
+    PYTHONWARNINGS="ignore:pkg_resources is deprecated" command yadm "$@"
+}
+
 create_packagelists() {
     local package_lists_dir="${XDG_CONFIG_DIR:-$HOME/.config}/yadm/packagelists"
     mkdir -p "$package_lists_dir"

@@ -523,7 +523,7 @@ millennium_skin_add() {
 
 # yadm
 yadm() {
-    PYTHONWARNINGS="ignore:pkg_resources is deprecated" yadm "$@"
+    PYTHONWARNINGS="ignore:pkg_resources is deprecated" command yadm "$@"
 }
 
 # others
