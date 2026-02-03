@@ -66,6 +66,7 @@ _install_pacman_packages() {
         "keychain"
         "numlockx"
         "tidy"
+        "laptop-detect"
         "reflector"
         "dosfstools"
         "cronie"
