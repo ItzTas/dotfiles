@@ -6,11 +6,14 @@ exec-once = [workspace 1 silent] kitty -e bash -c 'sleep 0.5 && fastfetch && bas
 
 # Zen-browser
 exec-once = [workspace 2 silent] zen-browser
+
 <%
 ram_kb=$(grep -i '^MemTotal:' /proc/meminfo | awk '{print $2}')
 ram_gb=$((ram_kb / 1024 / 1024))
 %>
+
 <% if [ "$ram_gb" -gt 8 ]; then -%>
+
 # Ferdium
 exec-once = [workspace 7 silent] ferdium
 
@@ -19,4 +22,5 @@ exec-once = [workspace 6 silent] thunderbird
 
 # Spotify
 exec-once = [workspace 9] bash ~/.config/hypr/scripts/spotify/open_play_silent.sh
+
 <% fi -%>
