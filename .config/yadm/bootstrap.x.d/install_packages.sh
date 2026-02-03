@@ -55,6 +55,9 @@ _install_pacman_packages() {
         "hypridle"
         "xdg-desktop-portal-hyprland"
 
+        # Python
+        "python-j2cli"
+
         # Compatibility
         "wine"
         "winetricks"
