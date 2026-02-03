@@ -22,6 +22,7 @@ _set_gpu_class() {
 _set_up() {
     _set_gpu_class
     yadm submodule update --init --recursive || true
+    yadm alt
 }
 
 _set_up

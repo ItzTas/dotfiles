@@ -384,6 +384,7 @@ l-smash 2.14.5-4
 ladspa 1.17-6
 lame 3.100-6
 lapack 3.12.1-2
+laptop-detect 0.16-2
 lazydocker 0.24.2-1
 lazygit 0.58.1-1
 lcms2 2.18-1
