@@ -37,8 +37,28 @@ set_gpu_class() {
     echo "[yadm] class set to: $class"
 }
 
+set_device_class() {
+    set -e
+
+    local device_class
+
+    if command -v laptop-detect >/dev/null 2>&1 && laptop-detect >/dev/null 2>&1; then
+        device_class="laptop"
+    else
+        device_class="desktop"
+    fi
+
+    if has_yadm_class "$device_class"; then
+        echo "[yadm] device class already set: $device_class"
+    else
+        yadm config --add local.class "$device_class"
+        echo "[yadm] device class set to: $device_class"
+    fi
+}
+
 set_up() {
     set_gpu_class
+    set_device_class
     yadm submodule update --init --recursive || true
     yadm alt
 }

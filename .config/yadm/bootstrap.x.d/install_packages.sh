@@ -72,6 +72,7 @@ _install_pacman_packages() {
         "laptop-detect"
         "reflector"
         "dosfstools"
+        "esh"
         "cronie"
         "socat"
         "inetutils"

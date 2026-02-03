@@ -10,11 +10,6 @@ create_packagelists() {
     mkdir -p "$package_lists_dir"
 
     local device_id
-    # device_id=$(findmnt -no UUID / 2>/dev/null || echo "unknown")
-    #
-    # if [ "$device_id" = "unknown" ] || [ "$device_id" = "" ]; then
-    #     device_id=$(printf "%s" "$(hostname)-$USER" | sha256sum | cut -c1-12)
-    # fi
     device_id=$(printf "%s" "$(hostname)-$USER" | sha256sum | cut -c1-12)
 
     local pacman_list="$package_lists_dir/pacmanlist_${device_id}"
@@ -69,6 +64,7 @@ yadm_update() {
             commit_msg="automated update"
         fi
 
+        yadm alt
         yadm commit -m "$commit_msg"
         yadm push
     )
