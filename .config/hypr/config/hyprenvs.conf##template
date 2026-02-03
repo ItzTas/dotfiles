@@ -9,7 +9,7 @@ env = XDG_SESSION_TYPE,wayland
 env = XDG_CURRENT_DESKTOP,Hyprland
 env = XDG_SESSION_DESKTOP,Hyprland
 
-{% if yadm.class == "gpu-nvidia" %}
+{% if "gpu-nvidia" in yadm.classes %}
 # nvidia
 env = GBM_BACKEND,nvidia-drm
 env = DXVK_FILTER_DEVICE_NAME,NVIDIA GeForce RTX 4060
