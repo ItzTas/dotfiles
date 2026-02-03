@@ -495,7 +495,6 @@ _install_flatpak_packages() {
     done
 
     local flathub_packages=(
-        "com.stremio.Stremio"
         "com.protonvpn.www"
     )
 
