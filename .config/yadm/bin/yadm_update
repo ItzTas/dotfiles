@@ -41,6 +41,7 @@ yadm_update() {
         yadm add "$HOME/.config/yadm/bootstrap.x.d"
         yadm add "$HOME/.config/hypr/config"
         yadm add "$HOME/.local/share/millennium"
+        yadm alt
         yadm add -u
 
         local status_output filtered_output files
@@ -64,7 +65,6 @@ yadm_update() {
             commit_msg="automated update"
         fi
 
-        yadm alt
         yadm commit -m "$commit_msg"
         yadm push
     )
