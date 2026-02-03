@@ -34,7 +34,7 @@ set_gpu_class() {
     fi
 
     yadm config --add local.class "$class"
-    echo "[yadm] class set to: $class"
+    echo "[yadm] gpu class set to: $class"
 }
 
 set_device_class() {
