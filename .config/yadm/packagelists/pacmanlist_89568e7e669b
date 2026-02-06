@@ -56,7 +56,7 @@ bats 1.13.0-1
 bibata-cursor-theme 2.0.7-1
 binutils 2.45.1+r35+g12d0a1dbc1b9-1
 bison 3.8.2-8
-bitwarden-bin 2025.12.1-1
+bitwarden-bin 2026.1.0-1
 blas 3.12.1-2
 bluez 5.85-1
 bluez-libs 5.85-1
@@ -238,11 +238,11 @@ gnu-free-fonts 20120503-9
 gnulib-l10n 20241231-1
 gnupg 2.4.9-1
 gnutls 3.8.11-2
-go 2:1.25.6-1
-go-tools 4:0.41.0-2
+go 2:1.25.7-1
+go-tools 4:0.41.0-3
 gobject-introspection 1.86.0-2
 gobject-introspection-runtime 1.86.0-2
-golangci-lint 2.8.0-2
+golangci-lint 2.8.0-3
 gomodifytags 1.17.0-1
 google-chrome 144.0.7559.132-1
 gperf 3.3-1
@@ -319,7 +319,7 @@ hyprutils 0.11.0-1
 hyprwayland-scanner 0.4.5-1
 hyprwire 0.3.0-1
 i2c-tools 4.4-4
-iana-etc 20251215-1
+iana-etc 20260203-1
 icoutils 0.32.3-3
 icu 78.2-1
 ijs 0.35-6
@@ -417,7 +417,7 @@ lib32-libcap 2.77-1
 lib32-libdrm 2.4.131-1
 lib32-libelf 0.194-1
 lib32-libffi 3.5.2-1
-lib32-libgcrypt 1.11.2-1
+lib32-libgcrypt 1.12.0-1
 lib32-libglvnd 1.7.0-1
 lib32-libgpg-error 1.58-1
 lib32-libidn2 2.3.8-1
@@ -534,7 +534,7 @@ libffi 3.5.2-1
 libfontenc 1.1.8-1
 libfreeaptx 0.2.2-1
 libfyaml 0.9.4-1
-libgcrypt 1.11.2-1
+libgcrypt 1.12.0-1
 libgee 0.20.8-1
 libgexiv2 0.14.6-2
 libgirepository 1.86.0-2
