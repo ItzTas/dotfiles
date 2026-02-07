@@ -89,7 +89,7 @@ catppuccin-gtk-theme-mocha 1.0.3-1
 cblas 3.12.1-2
 cdparanoia 10.2-9
 cinnamon-desktop 6.6.2-1
-clamav 1.5.1-1
+clamav 1.5.1-2
 clamtk 6.18-1
 clipse 1.2.0-2
 cmake 4.2.3-1
@@ -195,7 +195,7 @@ fuse3 3.18.1-1
 fzf 0.67.0-2
 gameconqueror 0.17-11
 gamemode 1.8.2-1
-gamescope 3.16.19-3
+gamescope 3.16.20-1
 gawk 5.3.2-1
 gc 8.2.12-1
 gcc 15.2.1+r447+g6a64f6c3ebb8-1
@@ -387,7 +387,7 @@ lame 3.100-6
 lapack 3.12.1-2
 laptop-detect 0.16-2
 lazydocker 0.24.4-1
-lazygit 0.58.1-1
+lazygit 0.59.0-1
 lcms2 2.18-1
 leancrypto 1.6.0-1
 less 1:691-2
@@ -464,7 +464,7 @@ lib32-pipewire 1:1.4.10-1
 lib32-python311-bin 3.11.8-6
 lib32-spirv-tools 1:1.4.335.0-1
 lib32-sqlite 3.51.2-1
-lib32-systemd 259-1
+lib32-systemd 259.1-1
 lib32-util-linux 2.41.3-1
 lib32-vulkan-icd-loader 1.4.335.0-1
 lib32-wayland 1.24.0-1
@@ -573,6 +573,7 @@ libmanette 0.2.13-1
 libmd 1.1.0-2
 libmediainfo 26.01-1
 libmfx 23.2.2-5
+libmilter 8.18.2-1
 libmm-glib 1.24.2-1
 libmms 0.6.4-6
 libmng 2.0.3-4
@@ -1139,13 +1140,13 @@ svt-av1 4.0.1-1
 swaync 0.12.4-1
 swayosd-gtk3 0.1.0-1
 swww 0.11.2-1
-systemd 259-2
-systemd-libs 259-2
-systemd-sysvcompat 259-2
+systemd 259.1-1
+systemd-libs 259.1-1
+systemd-sysvcompat 259.1-1
 taglib 2.1.1-1
 tar 1.35-2
 tdb 1.4.15-1
-telegram-desktop 6.4.4-1
+telegram-desktop 6.5.0-1
 termpicker-bin 1.5.1-1
 texinfo 7.2-1
 thunderbird 147.0.1-1
