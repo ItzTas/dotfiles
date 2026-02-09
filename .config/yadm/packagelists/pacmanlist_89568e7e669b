@@ -178,6 +178,7 @@ file-roller 44.6-1
 filelight 25.12.2-1
 filesystem 2025.10.12-1
 findutils 4.10.0-3
+firefox-developer-edition 148.0b12-1
 fish 4.4.0-1
 flac 1.5.0-1
 flameshot-git r2244.739a8095-1
@@ -1131,7 +1132,7 @@ sqlite 3.51.2-1
 squashfs-tools 4.7.4-1
 sratom 0.6.20-1
 srt 1.5.4-1
-stacer-git 1.6.2.r3.gc34c2b0-1
+stacer-git 1.6.2.r4.gbf16794-1
 startup-notification 0.12-9
 steam 1.0.0.85-3
 steam-devices 1.0.0.85-3
