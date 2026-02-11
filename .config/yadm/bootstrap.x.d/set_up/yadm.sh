@@ -43,7 +43,7 @@ set_device_class() {
     local device_class
 
     if command -v laptop-detect >/dev/null 2>&1 && laptop-detect >/dev/null 2>&1; then
-        device_class="laptop"
+        device_class="notebook"
     else
         device_class="desktop"
     fi
