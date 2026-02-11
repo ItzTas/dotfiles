@@ -42,7 +42,6 @@ _install_pacman_packages() {
         "candy-icons-git"
         "swayosd-gtk3"
         "spicetify-cli"
-        "eww"
 
         # Hyprland ecosystem
         "hyprland"
