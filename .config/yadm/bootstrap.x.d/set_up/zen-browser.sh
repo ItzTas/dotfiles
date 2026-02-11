@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -u  # erro se variável não definida
-
 get_release_profile_path() {
     local profiles_ini="$HOME/.zen/profiles.ini"
 
@@ -23,7 +21,6 @@ create_symlinks() {
 
     misc_zen_dir="$HOME/.config/yadm/misc/zen-browser/symlinks"
 
-    # pega o path do profile release
     profile_path=$(get_release_profile_path) || {
         echo "⚠️ Não foi possível encontrar o profile release" >&2
         return 1
@@ -31,22 +28,18 @@ create_symlinks() {
 
     zen_dir="$HOME/.zen/$profile_path"
 
-    # garante que o diretório exista
     mkdir -p "$zen_dir"
 
     echo "➡️ Symlinks serão criados em: $zen_dir"
 
-    # percorre cada arquivo ou pasta
     for slink in "$misc_zen_dir"/*; do
-        # ignora se não existir nada
         [ -e "$slink" ] || continue
 
-        # se for diretório, usa -d para symlink com overwrite
         if [ -d "$slink" ]; then
-            ln -sfd "$slink" "$zen_dir" 2>/dev/null || \
+            ln -sfd "$slink" "$zen_dir" 2>/dev/null ||
                 echo "⚠️ Falha ao criar symlink para diretório: $slink"
         else
-            ln -sf "$slink" "$zen_dir" 2>/dev/null || \
+            ln -sf "$slink" "$zen_dir" 2>/dev/null ||
                 echo "⚠️ Falha ao criar symlink para arquivo: $slink"
         fi
     done
@@ -55,4 +48,3 @@ create_symlinks() {
 }
 
 create_symlinks
-
