@@ -92,7 +92,6 @@ _install_pacman_packages() {
         "xdg-desktop-portal-gtk"
 
         # Process Manegement
-        "stacer-git"
         "btop"
 
         # Package managers
