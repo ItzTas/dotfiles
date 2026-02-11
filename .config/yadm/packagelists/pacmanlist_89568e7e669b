@@ -824,7 +824,7 @@ nodejs-nopt 7.2.1-1
 noto-fonts 1:2026.02.01-1
 noto-fonts-cjk 20240730-1
 noto-fonts-emoji 1:2.051-1
-npm 11.8.0-1
+npm 11.9.0-1
 npth 1.8-1
 nspr 4.38.2-1
 nss 3.120-1
@@ -909,7 +909,7 @@ perl-timedate 2.33-9
 perl-try-tiny 0.32-4
 perl-uri 5.34-2
 perl-www-robotrules 6.02-16
-pince-git r1667.909d226-1
+pince-git r1669.2f79d9e-1
 pinentry 1.3.2-2
 pipewire 1:1.4.10-2
 pipewire-alsa 1:1.4.10-2
