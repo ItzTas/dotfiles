@@ -4,47 +4,59 @@ get_release_profile_path() {
     local profiles_ini="$HOME/.zen/profiles.ini"
 
     if [ ! -f "$profiles_ini" ]; then
-        echo "⚠️ profiles.ini não encontrado em $profiles_ini" >&2
+        echo "⚠️ profiles.ini not found at $profiles_ini" >&2
         return 1
     fi
 
     awk '
-        /^\[Profile/ { in_profile = 1; path=""; is_release=0 }
-        /^Name=Default \(release\)/ && in_profile { is_release=1 }
-        /^Path=/ && in_profile { sub(/^Path=/,"",$0); path=$0 }
-        is_release && path { print path; exit }
+        /^\[Profile/ {
+            in_profile = 1
+            path = ""
+            is_release = 0
+        }
+        /^Name=Default \(release\)/ && in_profile {
+            is_release = 1
+        }
+        /^Path=/ && in_profile {
+            sub(/^Path=/, "", $0)
+            path = $0
+        }
+        is_release && path {
+            print path
+            exit
+        }
     ' "$profiles_ini"
 }
 
 create_symlinks() {
-    local misc_zen_dir zen_dir profile_path slink
+    local misc_zen_dir zen_dir profile_path
 
     misc_zen_dir="$HOME/.config/yadm/misc/zen-browser/symlinks"
 
     profile_path=$(get_release_profile_path) || {
-        echo "⚠️ Não foi possível encontrar o profile release" >&2
+        echo "⚠️ Could not find the release profile" >&2
         return 1
     }
 
     zen_dir="$HOME/.zen/$profile_path"
-
     mkdir -p "$zen_dir"
 
-    echo "➡️ Symlinks serão criados em: $zen_dir"
+    echo "➡️ Symlinks will be created in: $zen_dir"
 
     for slink in "$misc_zen_dir"/*; do
         [ -e "$slink" ] || continue
 
         if [ -d "$slink" ]; then
             ln -sfd "$slink" "$zen_dir" 2>/dev/null ||
-                echo "⚠️ Falha ao criar symlink para diretório: $slink"
-        else
-            ln -sf "$slink" "$zen_dir" 2>/dev/null ||
-                echo "⚠️ Falha ao criar symlink para arquivo: $slink"
+                echo "⚠️ Failed to create symlink for directory: $slink"
+            continue
         fi
+
+        ln -sf "$slink" "$zen_dir" 2>/dev/null ||
+            echo "⚠️ Failed to create symlink for file: $slink"
     done
 
-    echo "✅ Todos os symlinks processados."
+    echo "✅ All symlinks processed."
 }
 
 create_symlinks
