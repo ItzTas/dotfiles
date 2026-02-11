@@ -41,7 +41,6 @@ _install_pacman_packages() {
         "catppuccin-gtk-theme-mocha"
         "candy-icons-git"
         "swayosd-gtk3"
-        "kando-bin"
         "spicetify-cli"
         "eww"
 
