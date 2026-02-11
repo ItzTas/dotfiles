@@ -10,6 +10,7 @@ fi
 scripts=(
     "install_packages"
     "enables"
+    "yadm"
 )
 
 for script in "${scripts[@]}"; do
