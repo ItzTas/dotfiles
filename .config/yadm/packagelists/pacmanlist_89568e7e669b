@@ -228,7 +228,7 @@ glibmm 2.66.8-1
 glibmm-2.68 2.86.0-1
 glslang 1:1.4.341.0-1
 glu 9.0.3-2
-glycin 2.0.7-1
+glycin 2.0.8-1
 gmp 6.3.0-2
 gnome-desktop 1:44.4-1
 gnome-desktop-common 1:44.4-1
@@ -244,7 +244,6 @@ gobject-introspection 1.86.0-2
 gobject-introspection-runtime 1.86.0-2
 golangci-lint 2.8.0-3
 gomodifytags 1.17.0-1
-google-chrome 144.0.7559.132-1
 gperf 3.3-1
 gperftools 2.17.2-1
 gpgme 2.0.1-1
@@ -664,7 +663,7 @@ libusb 1.0.29-1
 libusbmuxd 2.1.1-1
 libutempter 1.2.3-1
 libutf8proc 2.11.3-1
-libuv 1.51.0-1
+libuv 1.52.0-1
 libva 2.22.0-1
 libva-nvidia-driver 0.0.15-1
 libva-utils 2.22.0-1
