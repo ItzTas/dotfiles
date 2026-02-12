@@ -108,7 +108,7 @@ cryptsetup 2.8.4-1
 cuda 13.1.1-1
 cunit 2.1.3-4
 curl 8.18.0-3
-curseforge 1.297.3_30829-1
+curseforge 1.298.3_31077-1
 dav1d 1.5.3-1
 db5.3 5.3.28-5
 dbus 1.16.2-1
@@ -156,7 +156,7 @@ electron37 37.5.1-1
 electron38 38.8.0-1
 electron39 39.5.2-1
 electron39-bin-debug 39.2.7-1
-electron40-bin 40.3.0-1
+electron40-bin 40.4.0-1
 elfutils 0.194-1
 enchant 2.8.14-1
 esh 0.3.2-2
@@ -230,8 +230,8 @@ glslang 1:1.4.341.0-1
 glu 9.0.3-2
 glycin 2.0.8-1
 gmp 6.3.0-2
-gnome-desktop 1:44.4-1
-gnome-desktop-common 1:44.4-1
+gnome-desktop 1:44.5-1
+gnome-desktop-common 1:44.5-1
 gnome-disk-utility 46.1-2
 gnome-keyring 1:48.0-1
 gnu-free-fonts 20120503-9
@@ -384,7 +384,7 @@ kwidgetsaddons 6.22.0-1
 kwindowsystem 6.22.0-1
 l-smash 2.14.5-4
 ladspa 1.17-6
-lame 3.100-6
+lame 3.101.r6531-1
 lapack 3.12.1-2
 laptop-detect 0.16-2
 lazydocker 0.24.4-1
@@ -648,7 +648,7 @@ libsndfile 1.2.2-4
 libsodium 1.0.20-1
 libsoup3 3.6.5-1
 libsoxr 0.1.3-4
-libssh 0.11.3-1
+libssh 0.12.0-1
 libssh2 1.11.1-1
 libstdc++ 15.2.1+r604+g0b99615a8aef-1
 libstemmer 3.0.1-1
@@ -824,7 +824,7 @@ nodejs-nopt 7.2.1-1
 noto-fonts 1:2026.02.01-1
 noto-fonts-cjk 20240730-1
 noto-fonts-emoji 1:2.051-1
-npm 11.9.0-1
+npm 11.10.0-1
 npth 1.8-1
 nspr 4.38.2-1
 nss 3.120-1
@@ -909,7 +909,7 @@ perl-timedate 2.33-9
 perl-try-tiny 0.32-4
 perl-uri 5.34-2
 perl-www-robotrules 6.02-16
-pince-git r1669.2f79d9e-1
+pince-git r1671.00544d0-1
 pinentry 1.3.2-2
 pipewire 1:1.4.10-2
 pipewire-alsa 1:1.4.10-2
@@ -992,7 +992,7 @@ python-lxml 6.0.2-2
 python-mako 1.3.10-4
 python-markdown 3.10.2-1
 python-markupsafe 3.0.2-2
-python-matplotlib 3.10.8-3
+python-matplotlib 3.10.8-4
 python-moddb 0.14.0-2
 python-more-itertools 10.8.0-2
 python-mutagen 1.47.0-4
@@ -1197,7 +1197,7 @@ ufw 0.36.2-7
 unciv-bin 4.19.12-0
 unibilium 2.1.2-1
 unzip 6.0-23
-upower 1.91.0-1
+upower 1.91.1-1
 usbutils 019-1
 util-linux 2.41.3-2
 util-linux-libs 2.41.3-2
@@ -1206,7 +1206,7 @@ v4l2loopback-dkms 0.15.3-1
 vapoursynth 73-2
 vdpauinfo 1.5-2
 vencord-installer-bin 1.4.0-1
-vesktop-bin 1.6.4-1
+vesktop-bin 1.6.5-1
 vid.stab 1.1.1-2
 vim 9.1.2132-1
 vim-runtime 9.1.2132-1
