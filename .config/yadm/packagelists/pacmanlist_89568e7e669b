@@ -18,7 +18,7 @@ alsa-topology-conf 1.2.5.1-4
 alsa-ucm-conf 1.2.15.3-1
 ani-cli 4.10-1
 aom 3.13.1-2
-apparmor 4.1.4-1
+apparmor 4.1.6-1
 appstream 1.1.2-1
 aquamarine 0.10.0-2
 arch-update 3.17.11-1
@@ -59,9 +59,9 @@ binutils 2.46-1
 bison 3.8.2-8
 bitwarden-bin 2026.1.0-1
 blas 3.12.1-2
-bluez 5.85-1
-bluez-libs 5.85-1
-bluez-utils 5.85-1
+bluez 5.86-2
+bluez-libs 5.86-2
+bluez-utils 5.86-2
 boost-libs 1.89.0-4
 botan 3.10.0-2
 botan2 2.19.5-2
@@ -75,7 +75,7 @@ bubblewrap 0.11.0-1
 bzip2 1.0.8-6
 c-ares 1.34.6-1
 ca-certificates 20240618-1
-ca-certificates-mozilla 3.120-1
+ca-certificates-mozilla 3.120.1-1
 ca-certificates-utils 20240618-1
 cabextract 1.11-2
 cairo 1.18.4-1
@@ -170,10 +170,10 @@ expat 2.7.4-1
 eza 0.23.4-1
 faad2 2.11.2-1
 fakeroot 1.37.2-1
-fastfetch 2.58.0-1
+fastfetch 2.59.0-1
 fd 10.3.0-1
 ferdium 7.1.1-2
-ffmpeg 2:8.0.1-5
+ffmpeg 2:8.0.1-6
 ffmpeg4.4 4.4.6-4
 fftw 3.3.10-7
 file 5.46-5
@@ -458,7 +458,7 @@ lib32-mesa 1:25.3.5-1
 lib32-ncurses 6.5-2
 lib32-nettle 3.10.2-1
 lib32-nspr 4.38.2-1
-lib32-nss 3.120-1
+lib32-nss 3.120.1-1
 lib32-nvidia-utils 590.48.01-1
 lib32-openssl 1:3.6.1-1
 lib32-p11-kit 0.26.2-1
@@ -624,7 +624,7 @@ libpciaccess 0.18.1-2
 libpgm 5.3.128-3
 libpipeline 1.5.8-1
 libpipewire 1:1.4.10-2
-libplacebo 7.351.0-5
+libplacebo 7.360.0-1
 libplist 2.7.0-2
 libpng 1.6.55-1
 libportal 0.9.1-2
@@ -798,7 +798,7 @@ mokutil 0.7.2-2
 mpdecimal 4.0.1-1
 mpfr 4.2.2-1
 mpg123 1.33.4-1
-mpv 1:0.41.0-2
+mpv 1:0.41.0-3
 msgpack-c 6.1.0-2
 mtdev 1.1.7-1
 mtpfs 1.1-5
@@ -826,7 +826,7 @@ nftables 1:1.1.6-2
 ninja 1.13.2-2
 nlohmann-json 3.12.0-2
 node-gyp 12.2.0-1
-nodejs 25.6.0-1
+nodejs 25.6.1-1
 nodejs-nopt 7.2.1-1
 noto-fonts 1:2026.02.01-1
 noto-fonts-cjk 20240730-1
@@ -834,7 +834,7 @@ noto-fonts-emoji 1:2.051-1
 npm 11.10.0-1
 npth 1.8-1
 nspr 4.38.2-1
-nss 3.120-1
+nss 3.120.1-1
 numactl 2.0.19-1
 numlockx 1.2-6
 nvidia-open 590.48.01-12
@@ -917,7 +917,7 @@ perl-timedate 2.33-9
 perl-try-tiny 0.32-4
 perl-uri 5.34-2
 perl-www-robotrules 6.02-16
-pince-git r1671.00544d0-1
+pince-git r1672.e884b5e-1
 pinentry 1.3.2-2
 pipewire 1:1.4.10-2
 pipewire-alsa 1:1.4.10-2
@@ -1026,7 +1026,7 @@ python-numpy 2.4.2-1
 python-packaging 26.0-1
 python-pathspec 1.0.4-1
 python-pexpect 4.9.0-7
-python-pillow 12.1.0-2
+python-pillow 12.1.1-1
 python-pip 26.0.1-1
 python-pkg_resources 81.0.0-1
 python-platformdirs 4.5.1-3
@@ -1348,9 +1348,9 @@ yarn 1.22.22-2
 yazi 26.1.22-1
 yq 3.4.3-3
 yyjson 0.12.0-1
-zathura 2026.02.03-2
-zathura-pdf-poppler 2026.02.03-1
-zen-browser-bin 1.18.5b-1
+zathura 2026.02.09-1
+zathura-pdf-poppler 2026.02.03-2
+zen-browser-bin 1.18.6b-1
 zenity 4.2.1-1
 zeromq 4.3.5-2
 zimg 3.0.6-1
