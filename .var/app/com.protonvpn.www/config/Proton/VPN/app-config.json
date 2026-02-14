@@ -1,5 +1,7 @@
 {
-    "tray_pinned_servers": [],
+    "tray_pinned_servers": [
+        "US"
+    ],
     "connect_at_app_startup": null,
     "start_app_minimized": false
 }
