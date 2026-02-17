@@ -5,7 +5,7 @@ aardvark-dns 1.17.0-1
 abseil-cpp 20250814.1-1
 accountsservice 23.13.9-3
 acl 2.3.2-1
-ada 3.4.2-1
+ada 3.4.2-2
 adwaita-cursors 49.0-1
 adwaita-fonts 49.0-2
 adwaita-icon-theme 49.0-1
@@ -42,11 +42,11 @@ aws-c-compression 0.3.2-1
 aws-c-event-stream 0.5.9-1
 aws-c-http 0.10.10-1
 aws-c-io 0.26.1-1
-aws-c-mqtt 0.13.3-1
+aws-c-mqtt 0.13.4-1
 aws-c-s3 0.11.5-1
 aws-c-sdkutils 0.2.4-1
-aws-checksums 0.2.8-1
-aws-cli-v2 2.33.17-1
+aws-checksums 0.2.10-1
+aws-cli-v2 2.33.22-1
 ayatana-ido 0.10.4-1
 base 3-3
 base-devel 1-2
@@ -182,7 +182,7 @@ filelight 25.12.2-1
 filesystem 2025.10.12-1
 findutils 4.10.0-3
 firefox-developer-edition 148.0b13-1
-fish 4.4.0-1
+fish 4.5.0-2
 flac 1.5.0-1
 flameshot-git r2244.739a8095-1
 flatpak 1:1.16.3-1
@@ -212,7 +212,7 @@ gdb-common 17.1-2
 gdbm 1.26-2
 gdk-pixbuf2 2.44.4-1
 gendesk 1.0.10-1
-gettext 1.0-1
+gettext 1.0-2
 ghostscript 10.06.0-1
 giflib 5.2.2-2
 girara 2026.02.04-2
@@ -247,7 +247,7 @@ gobject-introspection 1.86.0-2
 gobject-introspection-runtime 1.86.0-2
 golangci-lint 2.9.0-1
 gomodifytags 1.17.0-1
-gperf 3.3-1
+gperf 3.3-2
 gperftools 2.17.2-1
 gpgme 2.0.1-1
 gpgmepp 2.0.0-2
@@ -260,7 +260,7 @@ graphite 1:1.3.14-6
 graphviz 14.1.2-1
 grep 3.12-2
 grim 1.5.0-2
-groff 1.23.0-7
+groff 1.23.0-8
 gsettings-desktop-schemas 49.1-1
 gsettings-system-schemas 49.1-1
 gsfonts 20200910-6
@@ -275,7 +275,7 @@ gst-plugins-base-libs 1.28.0-2
 gst-plugins-good 1.28.0-2
 gst-plugins-ugly 1.28.0-2
 gstreamer 1.28.0-2
-gtest 1.17.0-1
+gtest 1.17.0-2
 gthumb 3.12.10-1
 gtk-layer-shell 0.10.0-1
 gtk-update-icon-cache 1:4.20.3-1
@@ -298,7 +298,7 @@ heroic-games-launcher-bin 2.19.1-1
 hicolor-icon-theme 0.18-1
 hidapi 0.15.0-1
 highway 1.3.0-2
-htmlq 0.4.0-2
+htmlq 0.4.0-3
 hunspell 1.7.2-3
 hwdata 0.404-1
 hwloc 2.13.0-1
@@ -313,7 +313,7 @@ hyprland-qt-support 0.1.0-10
 hyprlang 0.6.8-1
 hyprlock 0.9.2-8
 hyprpaper 0.8.3-2
-hyprpicker 0.4.6-1
+hyprpicker 0.4.6-2
 hyprshade 4.0.1-1
 hyprshot 1.3.0-4
 hyprtoolkit 0.5.3-1
@@ -625,7 +625,7 @@ libpgm 5.3.128-3
 libpipeline 1.5.8-1
 libpipewire 1:1.4.10-2
 libplacebo 7.360.0-1
-libplist 2.7.0-2
+libplist 2.7.0-3
 libpng 1.6.55-1
 libportal 0.9.1-2
 libportal-qt6 0.9.1-2
@@ -676,7 +676,7 @@ libunwind 1.8.2-1
 liburcu 0.15.5-1
 liburing 2.14-1
 libusb 1.0.29-1
-libusbmuxd 2.1.1-1
+libusbmuxd 2.1.1-2
 libutempter 1.2.3-1
 libutf8proc 2.11.3-1
 libuv 1.52.0-1
@@ -803,7 +803,7 @@ msgpack-c 6.1.0-2
 mtdev 1.1.7-1
 mtpfs 1.1-5
 mujs 1.3.8-1
-muparser 2.3.5-1
+muparser 2.3.5-2
 namcap 3.6.0-3
 ncdu 2.9.2-1
 ncurses 6.6-1
@@ -823,7 +823,7 @@ networkmanager 1.54.3-1
 networkmanager-openvpn 1.12.5-1
 networkmanager-vpn-plugin-openvpn 1.12.5-1
 nftables 1:1.1.6-2
-ninja 1.13.2-2
+ninja 1.13.2-3
 nlohmann-json 3.12.0-2
 node-gyp 12.2.0-1
 nodejs 25.6.1-1
@@ -854,7 +854,7 @@ openh264 2.6.0-2
 openjpeg2 2.5.4-1
 openssh 10.2p1-2
 openssl 3.6.1-1
-openssl-1.1 1.1.1.w-7
+openssl-1.1 1.1.1.w-8
 openvpn 2.7.0-1
 openxr 1.1.54-1
 opus 1.6.1-1
@@ -954,14 +954,14 @@ proton-vpn-daemon 0.13.4-8
 psmisc 23.7-1
 pugixml 1.15-3
 pyalpm 0.11.1-1
-python 3.14.2-2
+python 3.14.3-1
 python-aiohappyeyeballs 2.6.1-4
 python-aiohttp 3.13.3-1
 python-aiosignal 1.4.0-3
 python-argcomplete 3.6.2-2
 python-attrs 25.4.0-3
 python-autocommand 2.2.2-9
-python-awscrt 0.31.1-1
+python-awscrt 0.31.2-1
 python-bcc 0.36.1-1
 python-bcrypt 5.0.0-2
 python-beautifulsoup4 4.14.3-2
@@ -977,7 +977,7 @@ python-clickgen 2.2.5-1
 python-cogapp 3.3.0-8
 python-colorama 0.4.6-6
 python-contourpy 1.3.3-3
-python-cryptography 46.0.5-1
+python-cryptography 46.0.5-2
 python-cycler 0.12.1-4
 python-dateutil 2.9.0-8
 python-dbus 1.4.0-2
@@ -987,7 +987,7 @@ python-docutils 1:0.22.3-2
 python-editables 0.5-7
 python-evdev 1.9.3-1
 python-fido2 2.1.1-1
-python-filelock 3.20.3-1
+python-filelock 3.24.0-1
 python-fonttools 4.61.1-2
 python-frozenlist 1.8.0-2
 python-gnupg 0.5.6-2
@@ -1046,7 +1046,7 @@ python-pymediainfo 6.1.0-5
 python-pynacl 1.6.2-1
 python-pyopenssl 25.3.0-2
 python-pyparsing 3.3.2-1
-python-pypdf 6.7.0-1
+python-pypdf 6.7.1-1
 python-pyproject-hooks 1.2.0-6
 python-pyqt5 5.15.11-5
 python-pyqt5-sip 12.18.0-1
@@ -1121,7 +1121,7 @@ re2 2:2025.11.05-1
 readline 8.3.003-1
 reflector 2023-5
 rhash 1.4.6-1
-ripgrep 15.1.0-1
+ripgrep 15.1.0-2
 rnnoise 1:0.2-1
 rofi 2.0.0-1
 rofi-emoji 4.1.0-2
@@ -1163,7 +1163,7 @@ sklauncher-bin 3.2.18-1
 slang 2.3.3-4
 slurp 1.5.0-1
 snapd 2.73-1
-snappy 1.2.2-2
+snappy 1.2.2-3
 sndio 1.10.0-1
 socat 1.8.1.1-1
 solid 6.23.0-1
@@ -1172,7 +1172,7 @@ sord 0.16.20-1
 sound-theme-freedesktop 0.8-6
 soundtouch 2.4.0-1
 source-highlight 3.1.9-16
-spdlog 1.17.0-1
+spdlog 1.17.0-2
 speex 1.2.1-2
 speexdsp 1.2.1-2
 spicetify-cli 2.42.10-1
