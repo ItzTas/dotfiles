@@ -3,7 +3,7 @@ a52dec 0.8.0-2
 aalib 1.4rc5-19
 aardvark-dns 1.17.0-1
 abseil-cpp 20250814.1-1
-accountsservice 23.13.9-2
+accountsservice 23.13.9-3
 acl 2.3.2-1
 ada 3.4.2-1
 adwaita-cursors 49.0-1
@@ -173,7 +173,7 @@ fakeroot 1.37.2-1
 fastfetch 2.59.0-1
 fd 10.3.0-2
 ferdium 7.1.1-2
-ffmpeg 2:8.0.1-6
+ffmpeg 2:8.0.1-7
 ffmpeg4.4 4.4.6-4
 fftw 3.3.10-8
 file 5.46-5
@@ -1246,8 +1246,8 @@ vdpauinfo 1.5-2
 vencord-installer-bin 1.4.0-1
 vesktop-bin 1.6.5-1
 vid.stab 1.1.1-2
-vim 9.1.2132-1
-vim-runtime 9.1.2132-1
+vim 9.2.0010-1
+vim-runtime 9.2.0010-1
 vlc 3.0.21-32
 vlc-cli 3.0.21-32
 vlc-gui-qt 3.0.21-32
