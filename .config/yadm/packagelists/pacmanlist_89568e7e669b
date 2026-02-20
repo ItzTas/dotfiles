@@ -16,6 +16,7 @@ alsa-lib 1.2.15.3-2
 alsa-plugins 1:1.2.12-5
 alsa-topology-conf 1.2.5.1-4
 alsa-ucm-conf 1.2.15.3-1
+alsa-utils 1.2.15.2-2
 ani-cli 4.10-1
 aom 3.13.1-2
 apparmor 4.1.6-1
