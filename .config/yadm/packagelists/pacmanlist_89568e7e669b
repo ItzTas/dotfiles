@@ -69,7 +69,7 @@ botan2 2.19.5-2
 breeze-icons 6.23.0-1
 brightnessctl 0.5.1-3
 brotli 1.2.0-1
-bruno-bin 3.0.2-1
+bruno-bin 3.1.3-1
 btop 1.4.6-1
 btrfs-progs 6.19-1
 bubblewrap 0.11.0-1
@@ -185,7 +185,7 @@ findutils 4.10.0-3
 firefox-developer-edition 148.0b15-1
 fish 4.5.0-2
 flac 1.5.0-1
-flameshot-git r2246.3ef8f093-1
+flameshot-git r2247.c2cae030-1
 flatpak 1:1.16.3-1
 flex 2.6.4-5
 fluidsynth 2.5.2-1
@@ -846,7 +846,7 @@ nvidia-utils 590.48.01-4
 nvm 0.40.4-1
 nwg-look 1.0.6-1
 ocl-icd 2.3.4-1
-oh-my-posh 29.4.1-1
+oh-my-posh 29.6.0-1
 onetbb 2022.3.0-4
 oniguruma 6.9.10-1
 onlyoffice-bin 9.2.1-2
@@ -1237,7 +1237,7 @@ tzdata 2025c-1
 uchardet 0.0.8-3
 udisks2 2.11.0-1
 ufw 0.36.2-7
-unciv-bin 4.19.14-0
+unciv-bin 4.19.14_patch1-0
 unibilium 2.1.2-1
 unzip 6.0-23
 upower 1.91.1-1
