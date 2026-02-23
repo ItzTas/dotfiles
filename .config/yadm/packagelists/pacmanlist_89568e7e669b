@@ -101,7 +101,7 @@ compiler-rt 21.1.8-1
 composefs 1.0.8-1
 conmon 1:2.2.1-1
 containerd 2.2.1-1
-containers-common 1:0.66.1-2
+containers-common 1:0.67.0-1
 coreutils 9.10-1
 cpio 2.15-3
 cppdap 1.58.0-2
@@ -131,7 +131,7 @@ dex 0.10.1-1
 diff-so-fancy 1.4.4-2
 diffutils 3.12-2
 direnv 2.37.1-1
-discord 1:0.0.125-1
+discord 1:0.0.126-1
 dkms 3.3.0-1
 dmidecode 3.7-1
 docker 1:29.2.1-1
@@ -185,7 +185,7 @@ findutils 4.10.0-3
 firefox-developer-edition 148.0b15-1
 fish 4.5.0-2
 flac 1.5.0-1
-flameshot-git r2247.c2cae030-1
+flameshot-git r2248.42c462bb-1
 flatpak 1:1.16.3-1
 flex 2.6.4-5
 fluidsynth 2.5.2-1
@@ -935,7 +935,7 @@ pkgfile 25-2
 playerctl 2.4.1-5
 plocate 1.1.24-1
 pnpm 10.28.2-1
-podman 5.7.1-1
+podman 5.8.0-1
 podman-desktop 1.25.1-1
 polkit 127-3
 polkit-gnome 0.105-12
