@@ -160,7 +160,7 @@ electron37 37.5.1-1
 electron38 38.8.0-1
 electron39 39.5.2-1
 electron39-bin-debug 39.2.7-1
-electron40-bin 40.6.0-1
+electron40-bin 40.6.1-1
 elfutils 0.194-1
 enchant 2.8.14-1
 esh 0.3.2-2
@@ -1058,7 +1058,7 @@ python-pyqt5-sip 12.18.0-1
 python-pyqt6 6.10.2-3
 python-pyqt6-sip 13.11.0-1
 python-pysocks 1.7.1-11
-python-requests 2.32.5-3
+python-requests 2.32.5-4
 python-ruamel-yaml 0.18.10-2
 python-ruamel.yaml.clib 0.2.15-2
 python-secretstorage 3.3.3-7
