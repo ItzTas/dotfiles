@@ -132,7 +132,7 @@ dex 0.10.1-1
 diff-so-fancy 1.4.4-2
 diffutils 3.12-2
 direnv 2.37.1-1
-discord 1:0.0.126-1
+discord 1:0.0.127-1
 dkms 3.3.0-1
 dmidecode 3.7-1
 docker 1:29.2.1-1
@@ -262,7 +262,7 @@ graphite 1:1.3.14-6
 graphviz 14.1.2-1
 grep 3.12-2
 grim 1.5.0-2
-groff 1.23.0-8
+groff 1.24.0-1
 gsettings-desktop-schemas 49.1-1
 gsettings-system-schemas 49.1-1
 gsfonts 20200910-6
@@ -369,11 +369,11 @@ keychain 2.9.8-1
 keystone 0.9.2-8
 keyutils 1.6.3-3
 kglobalaccel 6.23.0-1
-kguiaddons 6.23.0-1
+kguiaddons 6.23.1-1
 ki18n 6.23.0-1
 kiconthemes 6.23.0-1
 kio 6.23.0-1
-kirigami 6.23.0-1
+kirigami 6.23.1-1
 kirigami-addons 1.12.0-1
 kitemmodels 6.23.0-1
 kitemviews 6.23.0-1
@@ -384,7 +384,7 @@ kjobwidgets 6.23.0-1
 kmod 34.2-1
 knotifications 6.23.0-1
 krb5 1.21.3-2
-kservice 6.23.0-2
+kservice 6.23.1-1
 ksvg 6.23.0-1
 kwallet 6.23.0-1
 kwidgetsaddons 6.23.0-1
@@ -469,6 +469,7 @@ lib32-p11-kit 0.26.2-1
 lib32-pam 1.7.1-1
 lib32-pcre2 10.47-1
 lib32-pipewire 1:1.4.10-1
+lib32-python311-bin 3.11.8-6
 lib32-spirv-tools 1:1.4.341.0-1
 lib32-sqlite 3.51.2-1
 lib32-systemd 259.2-1
@@ -653,7 +654,7 @@ libsigc++-3.0 3.8.0-1
 libsixel 1.10.5-1
 libsm 1.2.6-1
 libsndfile 1.2.2-4
-libsodium 1.0.20-1
+libsodium 1.0.21-1
 libsoup3 3.6.6-1
 libsoxr 0.1.3-4
 libssh 0.12.0-1
@@ -757,7 +758,7 @@ lld 21.1.8-1
 llhttp 9.3.1-1
 llvm-libs 21.1.8-1
 lm_sensors 1:3.6.2-1
-lmdb 0.9.33-1
+lmdb 0.9.34-1
 localsend-bin 1.17.0-1
 lolcat 100.0.1-5
 lsb-release 2.0.r55.a25a4fc-1
@@ -834,7 +835,7 @@ nodejs-nopt 7.2.1-1
 noto-fonts 1:2026.03.01-1
 noto-fonts-cjk 20240730-1
 noto-fonts-emoji 1:2.051-1
-npm 11.10.1-1
+npm 11.11.0-1
 npth 1.8-1
 nspr 4.38.2-1
 nss 3.121-1
@@ -916,7 +917,7 @@ perl-mailtools 2.22-3
 perl-net-http 6.24-2
 perl-net-ssleay 1.94-3
 perl-text-csv 2.06-3
-perl-timedate 2.33-9
+perl-timedate 2.34-1
 perl-try-tiny 0.32-4
 perl-uri 5.34-2
 perl-www-robotrules 6.02-16
@@ -934,7 +935,7 @@ pkgconf 2.5.1-1
 pkgfile 25-2
 playerctl 2.4.1-5
 plocate 1.1.24-1
-pnpm 10.28.2-1
+pnpm 10.30.3-1
 podman 5.8.0-1
 podman-desktop 1.25.1-1
 polkit 127-3
@@ -950,7 +951,7 @@ powershell-bin 7.5.4-1
 pps-tools 1.0.3-2
 procps-ng 4.0.6-1
 proto 0.55.3-1
-protobuf 33.1-3
+protobuf 33.1-4
 proton-mail-bin 1.12.1-1
 proton-pass-bin 1.34.2-1
 proton-vpn-cli 0.1.6-1
@@ -1203,7 +1204,7 @@ systemd-sysvcompat 259.2-1
 taglib 2.2-1
 tar 1.35-2
 tdb 1.4.15-1
-telegram-desktop 6.6.0-1
+telegram-desktop 6.6.1-1
 termpicker-bin 1.5.1-1
 texinfo 7.2-1
 thunderbird 148.0-4
