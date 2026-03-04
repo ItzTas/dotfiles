@@ -309,7 +309,7 @@ hyphen 2.8.8-6
 hyprcursor 0.1.13-3
 hyprgraphics 0.5.0-1
 hypridle 0.1.7-6
-hyprland 0.54.0-1
+hyprland 0.54.1-1
 hyprland-guiutils 0.2.1-2
 hyprland-qt-support 0.1.0-10
 hyprlang 0.6.8-1
@@ -831,7 +831,7 @@ ninja 1.13.2-3
 nlohmann-json 3.12.0-2
 node-gyp 12.2.0-1
 nodejs 25.7.0-1
-nodejs-nopt 7.2.1-1
+nodejs-nopt 8.0.0-1
 noto-fonts 1:2026.03.01-1
 noto-fonts-cjk 20240730-1
 noto-fonts-emoji 1:2.051-1
