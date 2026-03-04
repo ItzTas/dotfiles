@@ -161,9 +161,9 @@ electron37 37.5.1-1
 electron38 38.8.0-1
 electron39 39.5.2-1
 electron39-bin-debug 39.2.7-1
-electron40-bin 40.6.1-1
+electron40-bin 40.7.0-1
 elfutils 0.194-1
-enchant 2.8.14-1
+enchant 2.8.15-1
 esh 0.3.2-2
 eww 0.6.0-1
 exempi 2.6.6-2
@@ -183,7 +183,7 @@ file-roller 44.6-1
 filelight 25.12.2-1
 filesystem 2025.10.12-1
 findutils 4.10.0-3
-firefox-developer-edition 149.0b3-1
+firefox-developer-edition 149.0b4-1
 fish 4.5.0-2
 flac 1.5.0-1
 flameshot-git r2251.4a32a7e8-1
@@ -472,7 +472,7 @@ lib32-pipewire 1:1.4.10-1
 lib32-python311-bin 3.11.8-6
 lib32-spirv-tools 1:1.4.341.0-1
 lib32-sqlite 3.51.2-1
-lib32-systemd 259.2-1
+lib32-systemd 259.3-1
 lib32-util-linux 2.41.3-1
 lib32-vulkan-icd-loader 1.4.341.0-1
 lib32-wayland 1.24.0-1
@@ -763,7 +763,7 @@ localsend-bin 1.17.0-1
 lolcat 100.0.1-5
 lsb-release 2.0.r55.a25a4fc-1
 lsd 1.2.0-1
-lsof 4.99.5-2
+lsof 4.99.6-1
 lsp-plugins 1.2.26-1
 lsp-plugins-clap 1.2.26-1
 lsp-plugins-gst 1.2.26-1
@@ -1063,7 +1063,7 @@ python-requests 2.32.5-4
 python-ruamel-yaml 0.18.10-2
 python-ruamel.yaml.clib 0.2.15-2
 python-secretstorage 3.4.0-1
-python-sentry_sdk 2.53.0-1
+python-sentry_sdk 2.54.0-1
 python-setproctitle 1.3.7-2
 python-setuptools 1:82.0.0-1
 python-six 1.17.0-2
@@ -1198,9 +1198,9 @@ svt-av1 4.0.1-1
 swaync 0.12.4-1
 swayosd-gtk3 0.1.0-1
 swww 0.11.2-1
-systemd 259.2-1
-systemd-libs 259.2-1
-systemd-sysvcompat 259.2-1
+systemd 259.3-1
+systemd-libs 259.3-1
+systemd-sysvcompat 259.3-1
 taglib 2.2-1
 tar 1.35-2
 tdb 1.4.15-1
@@ -1234,7 +1234,7 @@ ttf-ms-fonts 2.0-12
 ttf-nerd-fonts-symbols 3.4.0-1
 ttf-nerd-fonts-symbols-common 3.4.0-1
 twolame 0.4.0-4
-tzdata 2025c-1
+tzdata 2026a-1
 uchardet 0.0.8-3
 udisks2 2.11.1-2
 ufw 0.36.2-7
@@ -1356,7 +1356,7 @@ yq 3.4.3-3
 yyjson 0.12.0-1
 zathura 2026.02.22-1
 zathura-pdf-poppler 2026.02.03-3
-zen-browser-bin 1.19b-1
+zen-browser-bin 1.19.1b-1
 zenity 4.2.1-1
 zeromq 4.3.5-3
 zimg 3.0.6-1
