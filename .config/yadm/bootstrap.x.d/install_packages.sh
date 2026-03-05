@@ -233,6 +233,7 @@ _install_pacman_packages() {
         # Browsers & Emails
         "zen-browser-bin"
         "thunderbird"
+        "protonmail-bridge"
 
         # Editors
         "neovim"
