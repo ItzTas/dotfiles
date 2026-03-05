@@ -145,13 +145,9 @@ _install_pacman_packages() {
         "nwg-look"
         "qbittorrent"
         "alarm-clock-applet"
-        "zsa-keymapp-bin"
         "spotify"
-        "vesktop-bin"
         "ferdium"
         "clamtk"
-        "bitwarden-bin"
-        "localsend-bin"
 
         # Games
         "lutris"
