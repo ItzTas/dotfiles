@@ -20,13 +20,7 @@
   "plugins": {
     "enabledPlugins": [
       "steam-easygrid",
-      "achievement-groups",
-      "extendium",
-      "alowave.faceit_stats",
-      "steam-collections-plus",
-      "steam-librarian",
-      "browser_history",
-      "leetify-extension"
+      "extendium"
     ]
   },
   "themes": {
