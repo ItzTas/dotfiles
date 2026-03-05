@@ -17,6 +17,7 @@ exec-once = [workspace 7 silent] ferdium
 
 # Thunderbird
 exec-once = [workspace 6 silent] thunderbird
+exec-once = protonmail-bridge --no-window
 
 <% fi %>
 
