@@ -20,7 +20,9 @@
   "plugins": {
     "enabledPlugins": [
       "steam-easygrid",
-      "extendium"
+      "extendium",
+      "leetify-extension",
+      "alowave.faceit_stats"
     ]
   },
   "themes": {
