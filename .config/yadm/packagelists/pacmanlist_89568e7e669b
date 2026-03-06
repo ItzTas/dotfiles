@@ -85,7 +85,7 @@ cairo-perl 1.109-6
 cairomm 1.14.5-2
 cairomm-1.16 1.18.0-2
 calf 0.90.8-6
-candy-icons-git r1363.b0a85a7-1
+candy-icons-git r1369.83512fb-1
 capstone 5.0.7-2
 catatonit 0.2.1-2
 catppuccin-gtk-theme-mocha 1.0.3-1
@@ -135,7 +135,7 @@ direnv 2.37.1-1
 discord 1:0.0.127-1
 dkms 3.3.0-1
 dmidecode 3.7-1
-docker 1:29.2.1-1
+docker 1:29.3.0-1
 docker-buildx 0.32.1-1
 docker-compose 5.1.0-1
 dosfstools 4.2-5
@@ -243,11 +243,11 @@ gnu-free-fonts 20120503-9
 gnulib-l10n 20241231-1
 gnupg 2.4.9-1
 gnutls 3.8.12-2
-go 2:1.26.0-1
+go 2:1.26.1-1
 go-tools 4:0.42.0-2
 gobject-introspection 1.86.0-2
 gobject-introspection-runtime 1.86.0-2
-golangci-lint 2.10.1-1
+golangci-lint 2.11.1-1
 gomodifytags 1.17.0-1
 gperf 3.3-2
 gperftools 2.17.2-1
@@ -687,7 +687,7 @@ libusb 1.0.29-1
 libusbmuxd 2.1.1-2
 libutempter 1.2.3-1
 libutf8proc 2.11.3-1
-libuv 1.52.0-1
+libuv 1.52.1-1
 libva 2.22.0-1
 libva-nvidia-driver 0.0.16-1
 libva-utils 2.22.0-1
@@ -1043,7 +1043,7 @@ python-pexpect 4.9.0-7
 python-pillow 12.1.1-1
 python-pip 26.0.1-1
 python-pkg_resources 81.0.0-1
-python-platformdirs 4.9.3-1
+python-platformdirs 4.9.4-1
 python-pluggy 1.6.0-3
 python-prompt_toolkit 3.0.52-2
 python-propcache 0.4.1-2
@@ -1131,7 +1131,7 @@ qt6ct 0.11-4
 qtractor 1.5.11-2
 rar 7.20-1
 rav1e 0.8.1-2
-rclone 1.73.1-1
+rclone 1.73.2-1
 re2 2:2025.11.05-1
 readline 8.3.003-1
 reflector 2023-5
