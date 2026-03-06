@@ -13,14 +13,12 @@
         "vpn_accelerator": true,
         "port_forwarding": false,
         "split_tunneling": {
-            "enabled": true,
+            "enabled": false,
             "mode": "exclude",
             "config_by_mode": {
                 "exclude": {
                     "mode": "exclude",
-                    "app_paths": [
-                        "/opt/zen-browser-bin/zen-bin"
-                    ],
+                    "app_paths": [],
                     "ip_ranges": []
                 },
                 "include": {
