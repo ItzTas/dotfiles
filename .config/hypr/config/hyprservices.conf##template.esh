@@ -56,7 +56,7 @@ exec-once = systemctl --user start gamemoded
 <% if [[ "$YADM_CLASSES" =~ desktop ]]; then %>
 
 exec-once = alarm-clock-applet --hidden
-exec-once = flatpak run com.protonvpn.www --start-minimized
+exec-once = protonvpn-app --start-minimized
 
 <% fi %>
 
