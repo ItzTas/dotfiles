@@ -1,0 +1,8 @@
+{
+    "tray_pinned_servers": [
+        "US",
+        "BR"
+    ],
+    "connect_at_app_startup": "FASTEST",
+    "start_app_minimized": false
+}
