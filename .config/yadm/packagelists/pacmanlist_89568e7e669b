@@ -144,6 +144,7 @@ dotnet-runtime 10.0.3.sdk103-1
 dotnet-sdk 10.0.3.sdk103-1
 dotnet-targeting-pack 10.0.3.sdk103-1
 double-conversion 3.4.0-1
+downgrade 12.0.1-1
 duktape 2.7.0-7
 dunst 1.13.1-1
 e2fsprogs 1.47.3-2
@@ -306,7 +307,7 @@ htmlq 0.4.0-3
 hunspell 1.7.2-3
 hwdata 0.405-1
 hwloc 2.13.0-1
-hydra-launcher-bin 3.9.1-1
+hydra-launcher-bin 3.8.3-1
 hyphen 2.8.8-6
 hyprcursor 0.1.13-3
 hyprgraphics 0.5.0-1
