@@ -21,7 +21,6 @@ ani-cli 4.10-1
 aom 3.13.1-2
 apparmor 4.1.6-2
 appstream 1.1.2-1
-appstream-glib 0.8.3-3
 aquamarine 0.10.0-2
 arch-update 3.18.0-1
 archlinux-appstream-data 20260107-1
@@ -235,6 +234,7 @@ glfw 1:3.4-1
 glib-networking 1:2.80.1-1
 glib-perl 1.329.4-3
 glib2 2.86.4-1
+glib2-devel 2.86.4-1
 glib2-docs 2.86.4-1
 glibc 2.43+r5+g856c426a7534-1
 glibmm 2.66.8-1
@@ -654,7 +654,7 @@ libobjc 15.2.1+r604+g0b99615a8aef-1
 libogg 1.3.6-1
 libopenmpt 0.8.4-1
 libp11-kit 0.26.2-1
-libpamac-aur 11.7.4-2
+libpamac-full 1:11.7.4.3.gc7efe92-1
 libpaper 2.2.7-1
 libpcap 1.10.6-1
 libpciaccess 0.18.1-2
@@ -906,6 +906,8 @@ pacman-contrib 1.13.1-1
 pacman-mirrorlist 20260213-1
 pahole 1:1.31-2
 pam 1.7.2-2
+pamac-all 11.7.4-1
+pamac-cli 11.7.4-1
 pambase 20250719-1
 pango 1:1.57.0-2
 pangomm 2.46.4-1
@@ -1227,6 +1229,7 @@ sklauncher-bin 3.2.18-1
 slang 2.3.3-4
 slurp 1.5.0-1
 snapd 2.74.1-1
+snapd-glib 1.70-1
 snappy 1.2.2-3
 sndio 1.10.0-1
 socat 1.8.1.1-1
