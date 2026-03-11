@@ -74,3 +74,4 @@ x-scheme-handler/mailto=userapp-Thunderbird-QZ4BC3.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-QZ4BC3.desktop;
 application/x-bittorrent=org.qbittorrent.qBittorrent.desktop;
 application/x-zerosize=nvim.desktop;
+x-scheme-handler/discord=vesktop.desktop
