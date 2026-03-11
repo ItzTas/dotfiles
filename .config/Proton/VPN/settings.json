@@ -8,17 +8,29 @@
     "ipv6": true,
     "anonymous_crash_reports": false,
     "features": {
-        "netshield": 1,
+        "netshield": 2,
         "moderate_nat": false,
         "vpn_accelerator": true,
         "port_forwarding": false,
         "split_tunneling": {
-            "enabled": false,
+            "enabled": true,
             "mode": "exclude",
             "config_by_mode": {
                 "exclude": {
                     "mode": "exclude",
-                    "app_paths": [],
+                    "app_paths": [
+                        "/opt/Bruno/bruno",
+                        "/usr/bin/discord",
+                        "/usr/bin/flatpak run --branch=master --arch=x86_64 --command=hytale-launcher-wrapper com.hypixel.HytaleLauncher",
+                        "/usr/bin/lutris",
+                        "/usr/bin/steam",
+                        "/usr/bin/steam",
+                        "/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=sober --file-forwarding org.vinegarhq.Sober --",
+                        "/usr/bin/steam",
+                        "/usr/bin/steam",
+                        "/usr/bin/vesktop",
+                        "/opt/zen-browser-bin/zen-bin"
+                    ],
                     "ip_ranges": []
                 },
                 "include": {
