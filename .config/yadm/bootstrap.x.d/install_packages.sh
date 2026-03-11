@@ -38,6 +38,7 @@ _install_pacman_packages() {
         "sddm-sugar-candy-git"
         "oh-my-posh"
         "qt6ct"
+        "nvibrant-bin"
         "catppuccin-gtk-theme-mocha"
         "candy-icons-git"
         "swayosd-gtk3"

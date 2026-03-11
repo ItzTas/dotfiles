@@ -48,6 +48,12 @@ exec-once = /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec-once = chmod +x ~/.config/hypr/hyprlock/bh/lockscripts.sh
 exec-once = yadm alt
 
+<% if [[ "$YADM_CLASSES" =~ gpu-nvidia ]]; then %>
+
+exec-once = nvibrant 0 0 0 0 200
+
+<% fi %>
+
 <% if [ "$ram_gb" -gt 8 ]; then %>
 
 exec-once = easyeffects --gapplication-service
