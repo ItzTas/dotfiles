@@ -137,7 +137,7 @@ dbus-broker-units 37-3
 dbus-glib 0.114-1
 dbus-units 37-3
 dconf 0.49.0-1
-ddcutil 2.2.5-2
+ddcutil 2.2.6-1
 debtap 3.6.3-1
 debugedit 5.2-1
 default-cursors 3-1
@@ -166,7 +166,7 @@ downgrade 12.0.1-1
 duktape 2.7.0-7
 dunst 1.13.1-1
 e2fsprogs 1.47.3-2
-easyeffects 8.1.3-1
+easyeffects 8.1.4-1
 editorconfig-core-c 0.12.10-1
 efibootmgr 18-3
 efivar 39-1
@@ -250,7 +250,7 @@ giflib 5.2.2-2
 girara 2026.02.04-2
 git 2.53.0-1
 git-bug 0.10.1-2
-github-cli 2.87.3-1
+github-cli 2.88.0-1
 gitify 6.17.0-1
 gjs 2:1.86.0-2
 glew 2.3.1-1
@@ -389,7 +389,7 @@ htmlq 0.4.0-3
 hunspell 1.7.2-3
 hwdata 0.405-1
 hwloc 2.13.0-1
-hydra-launcher-bin 3.9.1-1
+hydra-launcher-bin 3.9.3-1
 hyphen 2.8.8-6
 hyprcursor 0.1.13-3
 hyprgraphics 0.5.0-1
@@ -467,9 +467,9 @@ kirigami 6.23.1-1
 kirigami-addons 1.12.0-1
 kitemmodels 6.23.0-1
 kitemviews 6.23.0-1
-kitty 0.45.0-4
-kitty-shell-integration 0.45.0-4
-kitty-terminfo 0.45.0-4
+kitty 0.46.0-1
+kitty-shell-integration 0.46.0-1
+kitty-terminfo 0.46.0-1
 kjobwidgets 6.23.0-1
 kmod 34.2-1
 knotifications 6.23.0-1
@@ -1128,8 +1128,8 @@ proton-ge-custom-bin 1:GE_Proton10_32-1
 proton-mail-bin 1.12.1-1
 proton-pass-bin 1.35.0-1
 proton-vpn-cli 0.1.6-1
-proton-vpn-daemon 0.13.5-2
-proton-vpn-gtk-app 4.14.2-1
+proton-vpn-daemon 0.13.6-1
+proton-vpn-gtk-app 4.15.0-1
 protonmail-bridge 3.22.0-4
 protonmail-bridge-core 3.22.0-4
 psmisc 23.7-1
@@ -1153,10 +1153,10 @@ python-cairo 1.29.0-2
 python-capstone 5.0.7-2
 python-certifi 2026.02.25-1
 python-cffi 2.0.0-2
-python-charset-normalizer 3.4.4-2
+python-charset-normalizer 3.4.5-1
 python-click 8.3.1-3
 python-clickgen 2.2.5-1
-python-cogapp 3.3.0-8
+python-cogapp 3.4.0-1
 python-colorama 0.4.6-6
 python-contourpy 1.3.3-3
 python-cryptography 46.0.5-2
@@ -1221,7 +1221,7 @@ python-prompt_toolkit 3.0.52-2
 python-propcache 0.4.1-2
 python-proton-core 0.7.0-3
 python-proton-keyring-linux 0.2.1-4
-python-proton-vpn-api-core 4.15.2-1
+python-proton-vpn-api-core 4.16.0-1
 python-proton-vpn-local-agent 1.6.0-3
 python-psutil 7.2.2-1
 python-ptyprocess 0.7.0-9
@@ -1435,7 +1435,7 @@ tpm2-tools 5.7-1
 tpm2-tss 4.1.3-1
 tree-sitter 0.25.10-3
 tree-sitter-c 0.24.1-1
-tree-sitter-lua 0.4.0-1
+tree-sitter-lua 0.5.0-1
 tree-sitter-markdown 0.5.1-1
 tree-sitter-query 0.7.0-1
 tree-sitter-vim 0.7.0-1
@@ -1581,7 +1581,7 @@ yyjson 0.12.0-1
 zathura 2026.02.22-1
 zathura-pdf-poppler 2026.02.03-3
 zbar 0.23.93-5
-zen-browser-bin 1.19.1b-1
+zen-browser-bin 1.19.2b-1
 zenity 4.2.1-1
 zeromq 4.3.5-3
 zimg 3.0.6-1
