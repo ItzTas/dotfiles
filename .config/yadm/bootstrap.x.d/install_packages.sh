@@ -84,7 +84,6 @@ _install_pacman_packages() {
         "libva-nvidia-driver"
         "libva-utils"
         "vdpauinfo"
-        "cuda"
 
         # Firewall
         "ufw"
@@ -250,7 +249,6 @@ _install_pacman_packages() {
         "polkit-gnome"
 
         # Others
-        "timeshift"
         "termpicker-bin"
         "zsh"
     )
