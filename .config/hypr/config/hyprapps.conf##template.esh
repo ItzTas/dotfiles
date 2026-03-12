@@ -17,7 +17,7 @@ exec-once = [workspace 7 silent] ferdium
 
 # Email
 exec-once = protonmail-bridge --no-window
-exec-once = [workspace 6 silent] sleep 20 && hyprctl dispatch exec "[workspace 6 silent] thunderbird"
+exec-once = [workspace 6 silent] sleep 25 && hyprctl dispatch exec "[workspace 6 silent] thunderbird"
 
 <% fi %>
 
