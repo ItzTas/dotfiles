@@ -8,7 +8,7 @@
     "ipv6": true,
     "anonymous_crash_reports": false,
     "features": {
-        "netshield": 1,
+        "netshield": 0,
         "moderate_nat": false,
         "vpn_accelerator": true,
         "port_forwarding": false,

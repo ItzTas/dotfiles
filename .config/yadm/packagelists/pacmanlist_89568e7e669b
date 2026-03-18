@@ -18,6 +18,7 @@ alsa-topology-conf 1.2.5.1-4
 alsa-ucm-conf 1.2.15.3-1
 alsa-utils 1.2.15.2-2
 ani-cli 4.10-1
+anytype-bin 0.54.9-1
 aom 3.13.1-2
 apache 2.4.66-1
 apparmor 4.1.7-1
@@ -180,7 +181,7 @@ electron37 37.5.1-1
 electron38 38.8.0-1
 electron39 39.5.2-1
 electron39-bin-debug 39.2.7-1
-electron40-bin 40.8.2-1
+electron40-bin 40.8.3-1
 elfutils 0.194-2
 enchant 2.8.15-1
 esh 0.3.2-2
@@ -633,7 +634,7 @@ libdbusmenu-glib 18.10.20180917-1
 libdbusmenu-gtk3 18.10.20180917-1
 libdc1394 2.2.7-1
 libdca 0.0.7-2
-libde265 1.0.16-2
+libde265 1.0.17-1
 libdecor 0.2.5-1
 libdeflate 1.25-1
 libdispatch 6.2.2-1
