@@ -380,8 +380,8 @@ gvfs-nfs 1.58.3-1
 gvfs-smb 1.58.3-1
 gvfs-wsdd 1.58.3-1
 gzip 1.14-2
-harfbuzz 13.1.1-2
-harfbuzz-icu 13.1.1-2
+harfbuzz 13.2.0-1
+harfbuzz-icu 13.2.0-1
 heroic-games-launcher-bin 2.20.1-1
 hicolor-icon-theme 0.18-1
 hidapi 0.15.0-1
@@ -998,7 +998,7 @@ nodejs-nopt 8.1.0-1
 noto-fonts 1:2026.03.01-1
 noto-fonts-cjk 20240730-1
 noto-fonts-emoji 1:2.051-1
-npm 11.11.1-1
+npm 11.12.0-1
 npth 1.8-1
 nspr 4.38.2-1
 nss 3.121-1
