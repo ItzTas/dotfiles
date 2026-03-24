@@ -1,9 +1,15 @@
 [General]
-{% if 'notebook' in YADM_CLASSES.split() %}
-DisplayServer=x11
-{% else %}
-DisplayServer=wayland
-{% endif %}
+<%
+if command -v laptop-detect >/dev/null 2>&1 && laptop-detect >/dev/null 2>&1; then
+    display="x11"
+elif [ -d /sys/class/power_supply/BAT0 ]; then
+    display="x11"
+else
+    display="wayland"
+fi
+
+echo "DisplayServer=$display"
+%>
 
 [Wayland]
 CompositorCommand=weston --shell=kiosk
