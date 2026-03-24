@@ -33,6 +33,7 @@
                         "/usr/bin/steam",
                         "/usr/bin/steam",
                         "/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=sober --file-forwarding org.vinegarhq.Sober --",
+                        "/usr/bin/spotify",
                         "/usr/bin/steam",
                         "/usr/bin/steam",
                         "/usr/bin/steam",
