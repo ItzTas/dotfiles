@@ -10,6 +10,7 @@ env = XDG_CURRENT_DESKTOP,Hyprland
 env = XDG_SESSION_DESKTOP,Hyprland
 
 <% if lspci | grep -qi nvidia; then %>
+
 # nvidia
 env = GBM_BACKEND,nvidia-drm
 env = DXVK_FILTER_DEVICE_NAME,NVIDIA GeForce RTX 4060
@@ -19,6 +20,7 @@ env = ELECTRON_OZONE_PLATFORM_HINT,auto
 # nvidia hardware VA-API hardware video acceleration
 env = LIBVA_DRIVER_NAME,nvidia
 env = NVD_BACKEND,direct
+
 <% fi %>
 
 # proton
