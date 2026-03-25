@@ -40,9 +40,13 @@
     },
     "arch-update-transient": {
       "state": "transient",
-      "app-name": "arch-update"
+      "app-name": "[Aa]rch-[Uu]pdate"
     },
-    "zen-browser-proton-vpn-transient": {
+    "proton-mail-bridge-transient": {
+      "state": "transient",
+      "app-name": "[Pp]roton [Mm]ail [Bb]ridge"
+    },
+    "zen-proton-vpn-transient": {
       "state": "transient",
       "app-name": "Zen",
       "summary": "Proton VPN",
