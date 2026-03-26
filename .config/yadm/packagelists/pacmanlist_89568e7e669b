@@ -33,7 +33,7 @@ archlinux-contrib 20251215-1
 archlinux-keyring 20260323-1
 argon2 20190702-6
 aria2 1.37.0-2
-asar 4.1.0-1
+asar 4.1.1-1
 asciidoc 10.2.1-3
 at-spi2-core 2.58.4-1
 atkmm 2.28.4-1
@@ -56,6 +56,7 @@ aws-c-s3 0.11.5-1
 aws-c-sdkutils 0.2.4-1
 aws-checksums 0.2.10-1
 aws-cli-v2 2.34.9-1
+awww 0.12.0-1
 ayatana-ido 0.10.4-1
 baobab 49.1-1
 base 3-3
@@ -83,7 +84,7 @@ botan2 2.19.5-4
 breeze-icons 6.24.0-1
 brightnessctl 0.5.1-3
 brotli 1.2.0-1
-bruno-bin 3.1.3-1
+bruno-bin 3.2.0-1
 btop 1.4.6-1
 btrfs-progs 6.19.1-1
 bubblewrap 0.11.1-1
@@ -156,7 +157,7 @@ dkms 3.3.0-1
 dmidecode 3.7-1
 docbook-xml 4.5-11
 docbook-xsl 1.79.2-9
-docker 1:29.3.0-1
+docker 1:29.3.1-1
 docker-buildx 0.32.1-1
 docker-compose 5.1.1-1
 dosfstools 4.2-5
@@ -186,7 +187,7 @@ electron39 39.5.2-1
 electron39-bin-debug 39.2.7-1
 electron40-bin 40.8.3-1
 electron41-bin 41.0.3-1
-electrum 4.7.1-1
+electrum 4.7.1-2
 elfutils 0.194-2
 enchant 2.8.15-2
 esh 0.3.2-2
@@ -212,10 +213,10 @@ file-roller 44.6-1
 filelight 25.12.3-1
 filesystem 2025.10.12-1
 findutils 4.10.0-3
-firefox-developer-edition 149.0b8-1
+firefox-developer-edition 150.0b1-1
 fish 4.5.0-2
 flac 1.5.0-1
-flameshot-git r2260.f9ea9543-1
+flameshot-git r2263.b26cf40e-1
 flatpak 1:1.16.3-1
 flex 2.6.4-5
 fluidsynth 2.5.3-1
@@ -223,7 +224,7 @@ fmt 12.1.0-2
 folks 0.15.9-2
 fontconfig 2:2.17.1-1
 freeglut 3.8.0-1
-freerdp 2:3.24.1-1
+freerdp 2:3.24.2-1
 freetype2 2.14.3-1
 fribidi 1.0.16-2
 fuse-common 3.18.2-1
@@ -257,7 +258,7 @@ girara 2026.02.04-2
 git 2.53.0-1
 git-bug 0.10.1-2
 github-cli 2.88.1-1
-gitify 6.17.0-1
+gitify 6.18.0-1
 gjs 2:1.86.0-2
 glew 2.3.1-1
 glfw 1:3.4-1
@@ -361,7 +362,7 @@ gtk-layer-shell 0.10.0-1
 gtk-update-icon-cache 1:4.20.3-1
 gtk-vnc 1.5.0-1
 gtk2 2.24.33-5
-gtk3 1:3.24.51-1
+gtk3 1:3.24.52-1
 gtk4 1:4.20.3-1
 gtk4-layer-shell 1.3.0-1
 gtkmm-4.0 4.20.0-1
@@ -509,7 +510,7 @@ lib32-dbus 1.16.2-1
 lib32-e2fsprogs 1.47.4-1
 lib32-expat 2.7.5-1
 lib32-fontconfig 2:2.17.1-1
-lib32-freetype2 2.14.2-1
+lib32-freetype2 2.14.3-1
 lib32-gamemode 1.8.2-1
 lib32-gcc-libs 15.2.1+r604+g0b99615a8aef-1
 lib32-glib2 2.86.4-1
@@ -766,7 +767,7 @@ libnvme 1.16.1-3
 liboauth 1:1.0.3+r16+gc26f038-2
 libobjc 15.2.1+r604+g0b99615a8aef-1
 libogg 1.3.6-1
-libopenmpt 0.8.5-1
+libopenmpt 0.8.6-1
 libosinfo 1.12.0-3
 libp11-kit 0.26.2-1
 libpamac-full 1:11.7.4.3.gc7efe92-1
@@ -1001,7 +1002,7 @@ nftables 1:1.1.6-3
 ninja 1.13.2-3
 nlohmann-json 3.12.0-2
 node-gyp 12.2.0-1
-nodejs 25.8.1-1
+nodejs 25.8.2-1
 nodejs-nopt 9.0.0-1
 noto-fonts 1:2026.03.01-1
 noto-fonts-cjk 20240730-1
@@ -1019,7 +1020,7 @@ nvidia-utils 590.48.01-4
 nvm 0.40.4-1
 nwg-look 1.0.6-1
 ocl-icd 2.3.4-1
-oh-my-posh 29.9.0-1
+oh-my-posh 29.9.2-1
 onetbb 2022.3.0-4
 oniguruma 6.9.10-1
 onlyoffice-bin 9.3.1-1
@@ -1049,7 +1050,7 @@ pam 1.7.2-2
 pamac-all 11.7.4-1
 pamac-cli 11.7.4-1
 pambase 20250719-1
-pango 1:1.57.0-2
+pango 1:1.57.1-1
 pangomm 2.46.4-1
 pangomm-2.48 2.56.1-1
 papers 49.4-2
@@ -1115,7 +1116,7 @@ pkgconf 2.5.1-1
 pkgfile 25-2
 playerctl 2.4.1-5
 plocate 1.1.24-1
-pnpm 10.32.1-1
+pnpm 10.33.0-1
 podman 5.8.1-1
 podman-desktop 1.25.1-1
 polkit 127-3
@@ -1133,8 +1134,8 @@ procps-ng 4.0.6-1
 proto 0.55.4-1
 protobuf 33.1-4
 protobuf-c 1.5.2-8
-proton-authenticator-bin 1.1.4-2
-proton-ge-custom-bin 1:GE_Proton10_33-1
+proton-authenticator-bin 1.1.4-3
+proton-ge-custom-bin 1:GE_Proton10_34-1
 proton-mail-bin 1.12.1-1
 proton-pass-bin 1.35.0-1
 proton-vpn-cli 0.1.7-1
@@ -1161,7 +1162,7 @@ python-bcc 0.36.1-3
 python-bcrypt 5.0.0-2
 python-beautifulsoup4 4.14.3-2
 python-boolean.py 5.0-2
-python-build 1.4.0-1
+python-build 1.4.2-1
 python-cairo 1.29.0-2
 python-capstone 5.0.7-2
 python-certifi 2026.02.25-1
@@ -1426,7 +1427,6 @@ svt-av1 4.0.1-1
 svt-hevc 1.5.1-3
 swaync 0.12.5-1
 swayosd-gtk3 0.1.0-1
-swww 0.11.2-1
 systemd 260.1-1
 systemd-libs 260.1-1
 systemd-sysvcompat 260.1-1
@@ -1447,7 +1447,7 @@ tinysparql 3.10.1-2
 tinyxml2 11.0.0-2
 tmux 3.6_a-1
 tomlplusplus 3.4.0-1
-tor 0.4.9.5-2
+tor 0.4.9.6-1
 torbrowser-launcher 0.3.7-4
 totem-pl-parser 3.26.6+r30+g51b8439-2
 tpm2-tools 5.7-1
@@ -1457,7 +1457,7 @@ tree-sitter-c 0.24.1-1
 tree-sitter-lua 0.5.0-1
 tree-sitter-markdown 0.5.1-1
 tree-sitter-query 0.7.0-1
-tree-sitter-vim 0.8.1-1
+tree-sitter-vim 0.8.1-2
 tree-sitter-vimdoc 4.0.0-1
 tslib 1.24-1
 ttf-carlito 20230509-2
@@ -1472,7 +1472,7 @@ tzdata 2026a-1
 uchardet 0.0.8-4
 udisks2 2.11.1-2
 ufw 0.36.2-7
-unciv-bin 4.19.18-0
+unciv-bin 4.19.19-0
 unibilium 2.1.2-1
 unzip 6.0-23
 upower 1.91.1-1
