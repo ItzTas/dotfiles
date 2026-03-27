@@ -57,6 +57,10 @@ _install_pacman_packages() {
         # Python
         "python-j2cli"
 
+        # Java
+        "maven"
+        "gradle"
+
         # Compatibility
         "wine"
         "winetricks"
