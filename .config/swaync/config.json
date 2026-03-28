@@ -48,8 +48,14 @@
     },
     "zen-proton-vpn-transient": {
       "state": "transient",
-      "app-name": "Zen",
+      "app-name": "[Zz]en",
       "summary": "Proton VPN",
+      "urgency": "Low"
+    },
+    "zen-history-deleted-transient": {
+      "state": "transient",
+      "app-name": "[Zz]en",
+      "summary": "[Hh]istory deleted",
       "urgency": "Low"
     },
     "__transient": {
