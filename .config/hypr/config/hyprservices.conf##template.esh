@@ -62,7 +62,7 @@ exec-once = systemctl --user start gamemoded
 <% if [[ "$YADM_CLASSES" =~ desktop ]]; then %>
 
 exec-once = alarm-clock-applet --hidden
-exec-once = sleep 5 && protonvpn-app --start-minimized
+exec-once = sleep 30 && protonvpn-app --start-minimized
 
 <% fi %>
 
