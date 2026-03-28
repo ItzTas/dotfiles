@@ -148,7 +148,7 @@ default-cursors 3-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.39-1
 dex 0.10.1-1
-diff-so-fancy 1.4.6-1
+diff-so-fancy 1.4.8-1
 diffutils 3.12-2
 direnv 2.37.1-1
 discord 1:0.0.130-1
@@ -314,7 +314,7 @@ go 2:1.26.1-1
 go-tools 4:0.43.0-1
 gobject-introspection 1.86.0-2
 gobject-introspection-runtime 1.86.0-2
-golangci-lint 2.11.3-1
+golangci-lint 2.11.4-1
 gom 0.5.6-1
 gomodifytags 1.17.0-1
 gperf 3.3-2
@@ -859,7 +859,7 @@ libvterm 0.3.3-2
 libwacom 2.18.0-2
 libwbclient 2:4.24.0-1
 libwebp 1.6.0-2
-libwireplumber 0.5.13-2
+libwireplumber 0.5.14-1
 libx11 1.8.13-1
 libxau 1.0.12-1
 libxcb 1.17.0-1
@@ -1552,7 +1552,7 @@ wine 11.5-1
 winetricks 20260125-1
 wireguard-tools 1.0.20260223-1
 wiremix 0.10.0-1
-wireplumber 0.5.13-2
+wireplumber 0.5.14-1
 wl-clip-persist 0.5.0-2
 wl-clipboard 1:2.3.0-1
 wlogout 1.2.2-0
