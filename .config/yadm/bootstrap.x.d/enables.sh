@@ -2,6 +2,7 @@
 
 _start_enables() {
     local enables=(
+        "tor"
         "cronie"
         "docker"
         "minidlna"
