@@ -13,3 +13,4 @@
 {"_id":"useDeArrowTitles","value":true}
 {"_id":"useProxy","value":true}
 {"_id":"useSponsorBlock","value":true}
+{"_id":"useSponsorBlock","value":false}
