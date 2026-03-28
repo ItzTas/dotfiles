@@ -1017,7 +1017,7 @@ nss 3.122-1
 numactl 2.0.19-1
 numlockx 1.2-6
 nvibrant-bin 1.2.0-2
-nvidia-open 595.58.03-1
+nvidia-open 595.58.03-2
 nvidia-settings 595.58.03-1
 nvidia-utils 595.58.03-1
 nvm 0.40.4-1
@@ -1607,7 +1607,7 @@ yyjson 0.12.0-1
 zathura 2026.02.22-1
 zathura-pdf-poppler 2026.02.03-3
 zbar 0.23.93-5
-zen-browser-bin 1.19.3b-1
+zen-browser-bin 1.19.5b-1
 zenity 4.2.2-1
 zeromq 4.3.5-3
 zimg 3.0.6-1
