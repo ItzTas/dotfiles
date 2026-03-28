@@ -14,3 +14,4 @@
 {"_id":"useProxy","value":true}
 {"_id":"useSponsorBlock","value":true}
 {"_id":"useSponsorBlock","value":false}
+{"_id":"useSponsorBlock","value":true}
