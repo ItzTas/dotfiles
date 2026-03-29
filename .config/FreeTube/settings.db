@@ -15,3 +15,6 @@
 {"_id":"useDeArrowTitles","value":true}
 {"_id":"useProxy","value":false}
 {"_id":"useSponsorBlock","value":true}
+{"_id":"quickBookmarkTargetPlaylistId","value":"favorites"}
+{"_id":"displayVideoPlayButton","value":true}
+{"_id":"displayVideoPlayButton","value":false}

@@ -12,12 +12,16 @@ fi
 # It is MY laptop
 
 <%
-hdmi_connected=1
-if [ -d /sys/class/drm/card0-HDMI-A-1 ]; then
-  if grep -q connected /sys/class/drm/card0-HDMI-A-1/status 2>/dev/null; then
-    hdmi_connected=1
+hdmi_connected=0
+
+for i in $(seq 0 5); do
+  if [ -d /sys/class/drm/card${i}-HDMI-A-1 ]; then
+    if grep -q connected /sys/class/drm/card${i}-HDMI-A-1/status 2>/dev/null; then
+      hdmi_connected=1
+      break
+    fi
   fi
-fi
+done
 %>
 
 <% if [ "$hdmi_connected" -eq 1 ]; then %>
@@ -25,7 +29,7 @@ fi
 monitorv2 {
     output = HDMI-A-1
     mode = preferred
-    position = 0x0
+    position = auto
     scale = 1
 
     bitdepth = 10
@@ -34,7 +38,7 @@ monitorv2 {
     supports_hdr = 1
 
     sdrbrightness = 1
-    sdrsaturation = 1.45
+    sdrsaturation = 1.6
 
     sdr_min_luminance = 0.005
     sdr_max_luminance = 90
@@ -47,19 +51,19 @@ monitor = eDP-1, disable
 monitorv2 {
     output = eDP-1
     mode = preferred
-    position = 0x0
+    position = auto
     scale = 1
 
-    bitdepth = 10
-    
-    cm = hdr
-    supports_hdr = 1
-    
-    sdrbrightness = 1
-    sdrsaturation = 1.45
-    
-    sdr_min_luminance = 0.005
-    sdr_max_luminance = 90
+    # bitdepth = 10
+    # 
+    # cm = hdr
+    # supports_hdr = 1
+    # 
+    # sdrbrightness = 1
+    # sdrsaturation = 1.45
+    # 
+    # sdr_min_luminance = 0.005
+    # sdr_max_luminance = 90
 }
 
 <% fi %>
