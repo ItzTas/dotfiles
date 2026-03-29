@@ -1,1 +1,3 @@
 system-monitor@gnome-shell-extensions.gcampax.github.com
+places-menu@gnome-shell-extensions.gcampax.github.com
+display-adjustment@w8jcik.gitlab.com
