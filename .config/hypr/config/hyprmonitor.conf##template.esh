@@ -1,3 +1,70 @@
+<%
+is_laptop=0
+
+if command -v laptop-detect >/dev/null 2>&1 && laptop-detect >/dev/null 2>&1; then
+  is_laptop=1
+elif [ -d /sys/class/power_supply/BAT0 ]; then
+  is_laptop=1
+fi
+%>
+
+<% if [ "$is_laptop" -eq 1 ]; then %>
+# It is MY laptop
+
+<%
+hdmi_connected=1
+if [ -d /sys/class/drm/card0-HDMI-A-1 ]; then
+  if grep -q connected /sys/class/drm/card0-HDMI-A-1/status 2>/dev/null; then
+    hdmi_connected=1
+  fi
+fi
+%>
+
+<% if [ "$hdmi_connected" -eq 1 ]; then %>
+
+monitorv2 {
+    output = HDMI-A-1
+    mode = preferred
+    position = 0x0
+    scale = 1
+
+    bitdepth = 10
+
+    cm = hdr
+    supports_hdr = 1
+
+    sdrbrightness = 1
+    sdrsaturation = 1.45
+
+    sdr_min_luminance = 0.005
+    sdr_max_luminance = 90
+}
+
+monitor = eDP-1, disable
+
+<% else %>
+
+monitorv2 {
+    output = eDP-1
+    mode = preferred
+    position = 0x0
+    scale = 1
+
+    bitdepth = 10
+    
+    cm = hdr
+    supports_hdr = 1
+    
+    sdrbrightness = 1
+    sdrsaturation = 1.45
+    
+    sdr_min_luminance = 0.005
+    sdr_max_luminance = 90
+}
+
+<% fi %>
+
+<% else %>
 
 monitorv2 {
     output = 
@@ -21,3 +88,5 @@ monitorv2 {
     # max_luminance = 1000
     # max_avg_luminance = 600
 }
+
+<% fi %>
