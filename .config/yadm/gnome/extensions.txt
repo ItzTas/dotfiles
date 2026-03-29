@@ -1,3 +1,9 @@
 system-monitor@gnome-shell-extensions.gcampax.github.com
 places-menu@gnome-shell-extensions.gcampax.github.com
 display-adjustment@w8jcik.gitlab.com
+windowsNavigator@gnome-shell-extensions.gcampax.github.com
+extension-list@tu.berry
+autohide-battery@sitnik.ru
+gnome-ui-tune@itstime.tech
+docker@stickman_0x00.com
+bottom-dash-panel@fthx
