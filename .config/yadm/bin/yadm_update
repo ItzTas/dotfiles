@@ -2,71 +2,86 @@
 # vim=sh
 
 yadm() {
-    PYTHONWARNINGS="ignore:pkg_resources is deprecated" command yadm "$@"
+	PYTHONWARNINGS="ignore:pkg_resources is deprecated" command yadm "$@"
+}
+
+save_gnome() {
+	local gnome_dir="${XDG_CONFIG_DIR:-$HOME/.config}/yadm/gnome"
+
+	if command -v gnome-extensions >/dev/null 2>&1; then
+		gnome-extensions list >"$gnome_dir/extensions.txt"
+	fi
+
+	dconf dump / >"$gnome_dir/settings.ini"
 }
 
 create_packagelists() {
-    local package_lists_dir="${XDG_CONFIG_DIR:-$HOME/.config}/yadm/packagelists"
-    mkdir -p "$package_lists_dir"
+	local base_dir="${XDG_CONFIG_DIR:-$HOME/.config}/yadm/packagelists"
+	local pacman_dir="$base_dir/pacman"
+	local flatpak_dir="$base_dir/flatpak"
 
-    local device_id
-    device_id=$(printf "%s" "$(hostname)-$USER" | sha256sum | cut -c1-12)
+	mkdir -p "$pacman_dir"
+	mkdir -p "$flatpak_dir"
 
-    local pacman_list="$package_lists_dir/pacmanlist_${device_id}"
-    local flatpak_list="$package_lists_dir/flatpaklist_${device_id}"
+	local device_id
+	device_id=$(printf "%s" "$(hostname)-$USER" | sha256sum | cut -c1-12)
 
-    pacman -Q >"$pacman_list"
-    flatpak list --app --columns=application >"$flatpak_list"
+	local pacman_list="$pacman_dir/pacmanlist_${device_id}"
+	local flatpak_list="$flatpak_dir/flatpaklist_${device_id}"
 
-    echo "$pacman_list $flatpak_list"
+	pacman -Q >"$pacman_list"
+	flatpak list --app --columns=application >"$flatpak_list"
+
+	echo "$pacman_list $flatpak_list"
 }
 
 yadm_update() {
-    (
-        set -e
+	(
+		set -e
 
-        local pacman_list flatpak_list
-        read -r pacman_list flatpak_list < <(create_packagelists)
+		local pacman_list flatpak_list
+		read -r pacman_list flatpak_list < <(create_packagelists)
 
-        if command -v diff-so-fancy &>/dev/null; then
-            yadm --no-pager diff | diff-so-fancy
-        else
-            yadm --no-pager diff
-        fi
+		if command -v diff-so-fancy &>/dev/null; then
+			yadm --no-pager diff | diff-so-fancy
+		else
+			yadm --no-pager diff
+		fi
 
-        yadm add "$pacman_list"
-        yadm add "$flatpak_list"
+		yadm add "$pacman_list"
+		yadm add "$flatpak_list"
+		yadm add "${XDG_CONFIG_DIR:-$HOME/.config}/yadm/gnome/"
 
-        yadm add "$HOME/Pictures/.backgrounds"
-        yadm add "$HOME/.config/yadm/bootstrap.x.d"
-        yadm add "$HOME/.config/hypr/config"
-        yadm add "$HOME/.local/share/millennium"
-        yadm add -u
+		yadm add "$HOME/Pictures/.backgrounds"
+		yadm add "$HOME/.config/yadm/bootstrap.x.d"
+		yadm add "$HOME/.config/hypr/config"
+		yadm add "$HOME/.local/share/millennium"
+		yadm add -u
 
-        local status_output filtered_output files
+		local status_output filtered_output files
 
-        status_output=$(yadm status -s)
+		status_output=$(yadm status -s)
 
-        filtered_output=$(echo "$status_output" | grep -vE '^\s*##' || true)
-        if [ "$filtered_output" = "" ]; then
-            yadm push
-            return
-        fi
-        files=$(echo "$filtered_output" | awk '{$1=$1; print}' | tr '\n' ', ')
-        files="${files%, }"
+		filtered_output=$(echo "$status_output" | grep -vE '^\s*##' || true)
+		if [ "$filtered_output" = "" ]; then
+			yadm push
+			return
+		fi
+		files=$(echo "$filtered_output" | awk '{$1=$1; print}' | tr '\n' ', ')
+		files="${files%, }"
 
-        local commit_msg
-        commit_msg="$(date '+%Y-%m-%d %H:%M') - Updated: $files"
+		local commit_msg
+		commit_msg="$(date '+%Y-%m-%d %H:%M') - Updated: $files"
 
-        local max_len=500
+		local max_len=500
 
-        if [ ${#commit_msg} -gt "$max_len" ]; then
-            commit_msg="automated update"
-        fi
+		if [ ${#commit_msg} -gt "$max_len" ]; then
+			commit_msg="automated update"
+		fi
 
-        yadm commit -m "$commit_msg"
-        yadm push
-    )
+		yadm commit -m "$commit_msg"
+		yadm push
+	)
 }
 
 yadm_update
