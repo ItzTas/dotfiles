@@ -11,20 +11,23 @@ fi
 <% if [ "$is_laptop" -eq 1 ]; then %>
 # It is MY laptop
 
-<%
-hdmi_connected=0
+monitorv2 {
+    output = eDP-1
+    mode = preferred
+    position = auto-left
+    scale = 1
 
-for i in $(seq 0 5); do
-  if [ -d /sys/class/drm/card${i}-HDMI-A-1 ]; then
-    if grep -q connected /sys/class/drm/card${i}-HDMI-A-1/status 2>/dev/null; then
-      hdmi_connected=1
-      break
-    fi
-  fi
-done
-%>
-
-<% if [ "$hdmi_connected" -eq 1 ]; then %>
+    # bitdepth = 10
+    # 
+    # cm = hdr
+    # supports_hdr = 1
+    # 
+    # sdrbrightness = 1
+    # sdrsaturation = 1.45
+    # 
+    # sdr_min_luminance = 0.005
+    # sdr_max_luminance = 90
+}
 
 monitorv2 {
     output = HDMI-A-1
@@ -44,29 +47,27 @@ monitorv2 {
     sdr_max_luminance = 90
 }
 
-monitor = eDP-1, disable
+workspace = 1, monitor:HDMI-A-1, default:true
+workspace = 2, monitor:HDMI-A-1, default:true
+workspace = 3, monitor:HDMI-A-1, default:true
+workspace = 4, monitor:HDMI-A-1, default:true
+workspace = 5, monitor:HDMI-A-1, default:true
+workspace = 6, monitor:HDMI-A-1, default:true
+workspace = 7, monitor:HDMI-A-1, default:true
+workspace = 8, monitor:HDMI-A-1, default:true
+workspace = 9, monitor:HDMI-A-1, default:true
+workspace = 10, monitor:HDMI-A-1, default:true
 
-<% else %>
-
-monitorv2 {
-    output = eDP-1
-    mode = preferred
-    position = auto
-    scale = 1
-
-    # bitdepth = 10
-    # 
-    # cm = hdr
-    # supports_hdr = 1
-    # 
-    # sdrbrightness = 1
-    # sdrsaturation = 1.45
-    # 
-    # sdr_min_luminance = 0.005
-    # sdr_max_luminance = 90
-}
-
-<% fi %>
+workspace = 11, monitor:eDP-1, default:true
+workspace = 12, monitor:eDP-1, default:true
+workspace = 13, monitor:eDP-1, default:true
+workspace = 14, monitor:eDP-1, default:true
+workspace = 15, monitor:eDP-1, default:true
+workspace = 16, monitor:eDP-1, default:true
+workspace = 17, monitor:eDP-1, default:true
+workspace = 18, monitor:eDP-1, default:true
+workspace = 19, monitor:eDP-1, default:true
+workspace = 20, monitor:eDP-1, default:true
 
 <% else %>
 
