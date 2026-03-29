@@ -8,3 +8,5 @@ gnome-ui-tune@itstime.tech
 docker@stickman_0x00.com
 bottom-dash-panel@fthx
 vim-altTab@kokong.info
+transparent-window-moving@noobsai.github.com
+compiz-windows-effect@hermes83.github.com
