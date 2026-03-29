@@ -13,6 +13,7 @@ save_gnome() {
 	fi
 
 	dconf dump / >"$gnome_dir/settings.ini"
+	yadm add "$gnome_dir"
 }
 
 create_packagelists() {
@@ -43,14 +44,13 @@ yadm_update() {
 		read -r pacman_list flatpak_list < <(create_packagelists)
 
 		if command -v diff-so-fancy &>/dev/null; then
-			yadm --no-pager diff | diff-so-fancy
+			yadm --no-pager diff | diff-so-fancy || yadm --no-pager diff
 		else
 			yadm --no-pager diff
 		fi
 
 		yadm add "$pacman_list"
 		yadm add "$flatpak_list"
-		yadm add "${XDG_CONFIG_DIR:-$HOME/.config}/yadm/gnome/"
 
 		yadm add "$HOME/Pictures/.backgrounds"
 		yadm add "$HOME/.config/yadm/bootstrap.x.d"
