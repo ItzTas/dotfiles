@@ -122,6 +122,7 @@ _install_pacman_packages() {
         "direnv"
         "man-db"
         "ddcutil"
+        "ddcutil-service"
         "ripgrep"
         "fastfetch"
         "net-tools"
