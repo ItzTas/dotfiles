@@ -67,6 +67,8 @@ _install_pacman_packages() {
 
         # System utils
         "tor"
+        "dconf"
+        "dconf-editor"
         "debtap"
         "gnome-keyring"
         "xdg-user-dirs"
