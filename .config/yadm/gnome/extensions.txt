@@ -10,3 +10,4 @@ bottom-dash-panel@fthx
 vim-altTab@kokong.info
 transparent-window-moving@noobsai.github.com
 compiz-windows-effect@hermes83.github.com
+hide-cursor@elcste.com
