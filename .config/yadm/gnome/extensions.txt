@@ -6,9 +6,14 @@ extension-list@tu.berry
 autohide-battery@sitnik.ru
 gnome-ui-tune@itstime.tech
 docker@stickman_0x00.com
-bottom-dash-panel@fthx
 vim-altTab@kokong.info
 transparent-window-moving@noobsai.github.com
 compiz-windows-effect@hermes83.github.com
 hide-cursor@elcste.com
 clipboard-indicator@tudmotu.com
+blur-my-shell@aunetx
+apps-menu@gnome-shell-extensions.gcampax.github.com
+dash-to-dock@micxgx.gmail.com
+just-perfection-desktop@just-perfection
+tilingshell@ferrarodomenico.com
+appindicatorsupport@rgcjonas.gmail.com
