@@ -84,7 +84,7 @@ cairo-perl 1.109-6
 cairomm 1.14.5-3
 cairomm-1.16 1.18.0-2
 calf 0.90.9-2
-candy-icons-git r1361.ade95a2-1
+candy-icons-git r1369.83512fb-1
 catppuccin-gtk-theme-mocha 1.0.3-1
 cblas 3.12.1-2
 cdparanoia 10.2-9
@@ -148,6 +148,7 @@ double-conversion 3.4.0-1
 duktape 2.7.0-7
 dunst 1.13.2-1
 e2fsprogs 1.47.4-1
+earlyoom 1.9.0-1
 easyeffects 8.1.7-1
 editorconfig-core-c 0.12.10-1
 efibootmgr 18-3
@@ -1198,7 +1199,7 @@ spice-gtk 0.42-5
 spice-protocol 0.14.5-1
 spicetify-cli 2.42.8-1
 spirv-tools 1:1.4.341.0-2
-spotify 1:1.2.82.428-1
+spotify 1:1.2.84.476-1
 sqlite 3.52.0-1
 squashfs-tools 4.7.5-1
 sratom 0.6.22-1
@@ -1347,7 +1348,7 @@ yyjson 0.12.0-1
 zathura 2026.02.22-1
 zathura-pdf-poppler 2026.02.03-3
 zbar 0.23.93-5
-zen-browser-bin 1.18.5b-1
+zen-browser-bin 1.19.5b-1
 zenity 4.2.2-1
 zeromq 4.3.5-3
 zimg 3.0.6-1
