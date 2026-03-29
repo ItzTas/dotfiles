@@ -7,3 +7,4 @@ autohide-battery@sitnik.ru
 gnome-ui-tune@itstime.tech
 docker@stickman_0x00.com
 bottom-dash-panel@fthx
+vim-altTab@kokong.info
