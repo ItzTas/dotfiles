@@ -1,6 +1,8 @@
 <%
+
 ram_kb=$(grep -i '^MemTotal:' /proc/meminfo | awk '{print $2}')
-ram_gb=$((ram_kb / 1024 / 1024))
+ram_gb=$(awk -v kb="$ram_kb" 'BEGIN {printf "%d\n", kb/1024/1024}')
+
 %>
 
 <%
