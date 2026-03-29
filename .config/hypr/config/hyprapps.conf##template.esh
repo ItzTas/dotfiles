@@ -1,7 +1,7 @@
 <%
 
 ram_kb=$(grep -i '^MemTotal:' /proc/meminfo | awk '{print $2}')
-ram_gb=$(awk '/MemTotal/ {printf "%.0f", $2/1024/1024}' /proc/meminfo)
+ram_gb=$(awk -v kb="$ram_kb" 'BEGIN {printf "%d\n", kb/1024/1024}')
 
 %>
 
