@@ -42,6 +42,7 @@ yadm_update() {
 
 		local pacman_list flatpak_list
 		read -r pacman_list flatpak_list < <(create_packagelists)
+        save_gnome
 
 		if command -v diff-so-fancy &>/dev/null; then
 			yadm --no-pager diff | diff-so-fancy || yadm --no-pager diff
