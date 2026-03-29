@@ -40,14 +40,14 @@ install_extensions() {
 }
 
 _set_up() {
+    if command -v gnome-extensions >/dev/null 2>&1; then
+        install_extensions
+    fi
+
     if command -v dconf >/dev/null 2>&1; then
         dconf load / <"$HOME/.config/yadm/gnome/settings.ini"
     else
         echo "dconf not found, skipping settings load."
-    fi
-
-    if command -v gnome-extensions >/dev/null 2>&1; then
-        install_extensions
     fi
 }
 
