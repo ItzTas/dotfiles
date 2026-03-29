@@ -13,7 +13,6 @@ save_gnome() {
     fi
 
     dconf dump / >"$gnome_dir/settings.ini"
-    yadm add "$gnome_dir"
 }
 
 create_packagelists() {
@@ -57,6 +56,7 @@ yadm_update() {
         yadm add "$HOME/.config/yadm/bootstrap.x.d"
         yadm add "$HOME/.config/hypr/config"
         yadm add "$HOME/.local/share/millennium"
+        yadm add "${XDG_CONFIG_DIR:-$HOME/.config}/yadm/gnome"
         yadm add -u
 
         local status_output filtered_output files
