@@ -41,8 +41,11 @@
         " - Show Balance in menu after Hover?": "yes",
         " - Show Balance near name after hover?": "yes",
         " - Show Name after Hover?": "yes",
+        " - Show Name in account change after Hover?": "yes",
+        " - Show Name in menu after Hover?": "yes",
         "Account Balance in Menu": "Blur",
         "Account Balance near Account Name": "Blur",
+        "Account Name in Account Change": "Blur",
         "Account Name in Menu": "Blur",
         "Achievements Icons Shape": "Circle",
         "Animations": "Enabled",
@@ -57,22 +60,26 @@
         "Game Icons Shape": "Circle",
         "Groups/Curators Picture Shape": "Circle",
         "Header Always Visible": "yes",
+        "Hide Add Shelf": "yes",
         "Hide Big Picture Mode Button": "yes",
         "Hide News Button": "no",
         "Hide Notifications Button": "no",
         "Hide Scrollbar": "yes",
+        "Hide Window Control Buttons": "no",
         "Icons": "Rounded",
         "Loading Style": "Material Design",
         "Online Indicator": "Alternative",
         "Profile Picture Shape": "Circle",
         "Rare Achievements based on Source Color": "yes",
         "Remove Shiny Effect": "Yes",
+        "Ripple Effect": "no",
         "Swap Dialog Buttons": "yes",
         "Toolbar Account": "Default",
         "Toolbar Icon": "Material Design",
         "Toolbar Title": "Default",
         "Toolbar Title Based on Icon": "yes",
         "Use Experimental Features": "no",
+        "VAC-Ban Visibility": "Show",
         "What's New": "Compact"
       },
       "Minimal-Dark-for-Steam": {
@@ -275,6 +282,9 @@
       }
     },
     "themeColors": {
+      "Material-Theme": {
+        "--custom-accent-color": "#4CB4FF"
+      },
       "NEVKO-UI": {
         "--custom-accent": "#1A9FFF",
         "--green-color": "#769C1F",

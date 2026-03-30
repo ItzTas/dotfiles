@@ -9,10 +9,10 @@ save_gnome() {
     local gnome_dir="${XDG_CONFIG_DIR:-$HOME/.config}/yadm/gnome"
 
     if command -v gnome-extensions >/dev/null 2>&1; then
-        gnome-extensions list --enabled >"$gnome_dir/extensions.txt"
+        gnome-extensions list --enabled >"$gnome_dir/extensions.txt" || true
     fi
 
-    dconf dump / >"$gnome_dir/settings.ini"
+    dconf dump / >"$gnome_dir/settings.ini" 
 }
 
 create_packagelists() {

@@ -104,7 +104,7 @@ _install_pacman_packages() {
         # Package managers
         "paru"
         "snapd"
-        "proto"
+        "proto-bin"
         "flatpak"
 
         # Package manager helpers
