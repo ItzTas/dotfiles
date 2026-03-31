@@ -8,32 +8,32 @@ yadm() {
 save_gnome() {
     local gnome_dir="${XDG_CONFIG_DIR:-$HOME/.config}/yadm/gnome"
     mkdir -p "$gnome_dir"
+    local output_file="$gnome_dir/settings.ini"
 
     if command -v gnome-extensions >/dev/null 2>&1; then
         gnome-extensions list --enabled >"$gnome_dir/extensions.txt" || true
     fi
 
-    local output_file="$gnome_dir/settings.ini"
-
     local exclude_paths=(
         "org/blueman/plugins/recentconns"
     )
 
-    local exclude_regex=""
+    local dump
+    dump=$(dconf dump /)
+
+    # Loop para remover cada path excluído
     for path in "${exclude_paths[@]}"; do
-        exclude_regex+="^\\[$path\\]\$|"
+        dump=$(echo "$dump" | awk -v pat="[$path]" '
+            BEGIN {skip=0}
+            /^\[.*\]$/ {
+                if ($0 == pat) { skip=1; next } 
+                else { skip=0 }
+            }
+            !skip { print }
+        ')
     done
-    exclude_regex="${exclude_regex%|}"
 
-    dconf dump / | awk -v excl="$exclude_regex" '
-        BEGIN {skip=0}
-        /^\[.*\]$/ {
-            if ($0 ~ excl) {skip=1} else {skip=0}
-        }
-        !skip {print}
-    ' >"$output_file"
-
-    echo "GNOME settings saved to $output_file"
+    echo "$dump" > "$output_file"
 }
 
 create_packagelists() {
