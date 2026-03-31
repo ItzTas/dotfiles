@@ -88,15 +88,33 @@
         "on-click-right": "dex ~/.local/share/applications/hypr-terminal/hypr-nmtui.desktop"
     },
     "bluetooth": {
+        "max-length": 7,
         "format": "",
+        "format-off": "󰂲",
+        "format-disabled": "󰂲",
+        "format-no-controller": "󰂲",
         "format-connected": " {device_alias}",
-        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        "format-connected-battery": "{icon} {device_battery_percentage}%",
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{icon}{device_battery_percentage}%",
+        "format-icons": [
+            "󰥇 ",
+            "󰤾 ",
+            "󰤿 ",
+            "󰥀 ",
+            "󰥁 ",
+            "󰥂 ",
+            "󰥃 ",
+            "󰥄 ",
+            "󰥅 ",
+            "󰥆 ",
+            "󰥈 "
+        ],
         "on-click": "blueman-manager"
     },
+
     "power-profiles-daemon": {
         "format": "{icon}",
         "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -157,8 +175,8 @@
         "on-click-right": "dex ~/.local/share/applications/hypr-terminal/hypr-wiremix.desktop",
         "menu-actions": {
             "ToggleSound": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-            "pavu": "nohup foot --override=colors.alpha=1 --app-id=Wiremix -e wiremix >/dev/null 2>&1 &",
-        },
+            "pavu": "nohup foot --override=colors.alpha=1 --app-id=Wiremix -e wiremix >/dev/null 2>&1 &"
+        }
     },
     "backlight": {
         "device": "intel_backlight",
@@ -174,7 +192,7 @@
             " ",
             " ",
             " "
-        ],
+        ]
     },
     "custom/swaync": {
         "tooltip": true,
@@ -258,9 +276,10 @@
         "orientation": "horizontal",
         "modules": [
             "network",
+            "backlight",
+            "bluetooth",
             "wireplumber",
-            "battery",
-            "backlight"
+            "battery"
         ]
     },
     "group/leftSide": {
