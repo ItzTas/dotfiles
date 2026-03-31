@@ -13,27 +13,27 @@ save_gnome() {
         gnome-extensions list --enabled >"$gnome_dir/extensions.txt" || true
     fi
 
+    local output_file="$gnome_dir/settings.ini"
+
     local exclude_paths=(
         "org/blueman/plugins/recentconns"
     )
 
-    local dump
-    dump=$(dconf dump /)
-
-    for key in "${exclude_keys[@]}"; do
-        # Extrai a seção (path até o schema)
-        local section="[${key%/*}]"  # tudo antes da última barra
-        local short_key="${key##*/}" # a última parte (recent-connections)
-
-        dump=$(echo "$dump" | awk -v sec="$section" -v k="$short_key" '
-            $0==sec { in_sec=1; print; next }
-            /^\[/ { in_sec=0 }
-            in_sec && $0 ~ "^"k"=" { next }
-            { print }
-        ')
+    local exclude_regex=""
+    for path in "${exclude_paths[@]}"; do
+        exclude_regex+="^\\[$path\\]\$|"
     done
+    exclude_regex="${exclude_regex%|}"
 
-    echo "$dump" >"$gnome_dir/settings.ini"
+    dconf dump / | awk -v excl="$exclude_regex" '
+        BEGIN {skip=0}
+        /^\[.*\]$/ {
+            if ($0 ~ excl) {skip=1} else {skip=0}
+        }
+        !skip {print}
+    ' >"$output_file"
+
+    echo "GNOME settings saved to $output_file"
 }
 
 create_packagelists() {
