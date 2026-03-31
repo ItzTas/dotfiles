@@ -21,7 +21,6 @@ save_gnome() {
     local dump
     dump=$(dconf dump /)
 
-    # Loop para remover cada path excluído
     for path in "${exclude_paths[@]}"; do
         dump=$(echo "$dump" | awk -v pat="[$path]" '
             BEGIN {skip=0}
@@ -33,7 +32,7 @@ save_gnome() {
         ')
     done
 
-    echo "$dump" > "$output_file"
+    echo "$dump" >"$output_file"
 }
 
 create_packagelists() {
