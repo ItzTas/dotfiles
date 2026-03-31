@@ -24,7 +24,7 @@ launch() {
 
     mkdir -p "$log_dir"
 
-    waybar -c "$config_file" -s "$style_file" >"$log_file" 2>&1 &
+    waybar -l debug -c "$config_file" -s "$style_file" >"$log_file" 2>&1 &
     disown
 }
 

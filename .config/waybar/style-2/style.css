@@ -184,8 +184,9 @@ menu>*:active {
 
 /* Bluetooth widget styling */
 #bluetooth {
-    padding: 0px 10px;
-    font-size: 14px;
+    padding: 0px 6px;
+    margin-left: -6px;
+    font-size: 15px;
     font-family: "Fira Code";
 }
 
@@ -193,11 +194,6 @@ menu>*:active {
 #bluetooth.disabled,
 #bluetooth.off {
     color: #565858;
-}
-
-#bluetooth.on,
-#bluetooth.connected {
-    color: #6f7dd8;
 }
 
 /* Sway notification custom widget and other widgets */
@@ -271,12 +267,6 @@ menu>*:active {
 #cpu,
 #memory {
     background-color: unset;
-}
-
-/* Bluetooth, network, wireplumber icon size adjustment */
-#bluetooth {
-    font-size: 15px;
-    /* Decrease icon size */
 }
 
 #leftSide {
