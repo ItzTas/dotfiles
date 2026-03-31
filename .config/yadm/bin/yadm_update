@@ -17,15 +17,23 @@ save_gnome() {
         "org/blueman/plugins/recentconns"
     )
 
-    local sed_expr=""
+    local dump
+    dump=$(dconf dump /)
+
     for key in "${exclude_keys[@]}"; do
-        # Pega só a última parte da chave (ex: recent-connections)
-        local short_key="${key##*/}"
-        # Remove qualquer linha que comece com essa chave
-        sed_expr+="/^$short_key=/d;"
+        # Extrai a seção (path até o schema)
+        local section="[${key%/*}]"  # tudo antes da última barra
+        local short_key="${key##*/}" # a última parte (recent-connections)
+
+        dump=$(echo "$dump" | awk -v sec="$section" -v k="$short_key" '
+            $0==sec { in_sec=1; print; next }
+            /^\[/ { in_sec=0 }
+            in_sec && $0 ~ "^"k"=" { next }
+            { print }
+        ')
     done
 
-    dconf dump / | sed "$sed_expr" >"$gnome_dir/settings.ini"
+    echo "$dump" >"$gnome_dir/settings.ini"
 }
 
 create_packagelists() {
