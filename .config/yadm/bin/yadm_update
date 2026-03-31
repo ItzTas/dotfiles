@@ -33,7 +33,9 @@ save_gnome() {
         ')
     done
 
-    echo "$dump" > "$output_file"
+    # echo "$dump" > "$output_file"
+    dconf dump / >"$gnome_dir/settings.ini"
+
 }
 
 create_packagelists() {
