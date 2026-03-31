@@ -187,7 +187,6 @@ menu>*:active {
     padding: 0px 6px;
     margin-left: -6px;
     font-size: 15px;
-    font-family: "Fira Code";
 }
 
 /* Bluetooth widget status colors */
@@ -305,6 +304,13 @@ menu>*:active {
 
 #controlCenter:hover {
     background-color: @fg-unactive;
+}
+
+#bluetooth
+
+/* #battery */
+    {
+    font-family: "Fira Code";
 }
 
 #network,

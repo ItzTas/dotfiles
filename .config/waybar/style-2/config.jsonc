@@ -133,6 +133,7 @@
             "warning": 30,
             "critical": 20
         },
+        "justify": "center",
         "format": "{icon} {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
@@ -278,8 +279,8 @@
             "network",
             "backlight",
             "bluetooth",
-            "wireplumber",
-            "battery"
+            "battery",
+            "wireplumber"
         ]
     },
     "group/leftSide": {
