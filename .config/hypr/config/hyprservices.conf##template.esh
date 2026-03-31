@@ -57,8 +57,9 @@ exec-once = systemctl --user start wireplumber
 
 exec-once = go telemetry off
 exec-once = mkdir -p ~/.winboat; ln -s /dev/null ~/.winboat/appUsage.json
-exec-once = npx next telemetry disable
 exec-once = yarn next telemetry disable
+
+exec-once = easyeffects --gapplication-service
 
 exec-once = swayosd-server
 exec-once = /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -73,7 +74,6 @@ exec-once = nvibrant 0 0 0 0 200
 
 <% if [ "$ram_gb" -gt 8 ]; then %>
 
-exec-once = easyeffects --gapplication-service
 exec-once = systemctl --user start gamemoded
 exec = eww --config ~/.config/eww/binaryharbinger daemon
 
