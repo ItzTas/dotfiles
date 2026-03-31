@@ -7,12 +7,25 @@ yadm() {
 
 save_gnome() {
     local gnome_dir="${XDG_CONFIG_DIR:-$HOME/.config}/yadm/gnome"
+    mkdir -p "$gnome_dir"
 
     if command -v gnome-extensions >/dev/null 2>&1; then
         gnome-extensions list --enabled >"$gnome_dir/extensions.txt" || true
     fi
 
-    dconf dump / >"$gnome_dir/settings.ini" 
+    local exclude_paths=(
+        "org/blueman/plugins/recentconns"
+    )
+
+    local sed_expr=""
+    for key in "${exclude_keys[@]}"; do
+        # Pega só a última parte da chave (ex: recent-connections)
+        local short_key="${key##*/}"
+        # Remove qualquer linha que comece com essa chave
+        sed_expr+="/^$short_key=/d;"
+    done
+
+    dconf dump / | sed "$sed_expr" >"$gnome_dir/settings.ini"
 }
 
 create_packagelists() {
