@@ -11,7 +11,7 @@ save_gnome() {
     local output_file="$gnome_dir/settings.ini"
 
     if command -v gnome-extensions >/dev/null 2>&1; then
-        gnome-extensions list --enabled >"$gnome_dir/extensions.txt" || true
+        gnome-extensions list --enabled >"$gnome_dir/extensions.txt" 2>/dev/null || true
     fi
 
     local exclude_paths=(
