@@ -922,7 +922,7 @@ nftables 1:1.1.6-3
 ninja 1.13.2-3
 nlohmann-json 3.12.0-2
 node-gyp 12.2.0-1
-nodejs 25.8.2-1
+nodejs 25.8.2-2
 nodejs-nopt 9.0.0-1
 noto-fonts 1:2026.03.01-1
 noto-fonts-cjk 20240730-1
@@ -966,7 +966,7 @@ pango 1:1.57.1-1
 pangomm 2.46.4-1
 pangomm-2.48 2.56.1-1
 papers 49.4-2
-parallel 20260222-1
+parallel 20260322-1
 parted 3.6-2
 paru 2.1.0-2
 paru-debug 2.1.0-2
@@ -1197,7 +1197,7 @@ shaderc 2026.1-2
 shadow 4.18.0-1
 shared-mime-info 2.4-3
 showtime 49.1-2
-simdjson 1:4.4.2-1
+simdjson 1:4.5.0-1
 simple-scan 49.1-1
 slang 2.3.3-4
 slurp 1.5.0-1
