@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+status=$(playerctl -p spotify status 2>&1)
+
+if [[ "$status" == *"No players found"* ]] || [[ -z "$status" ]]; then
+    exit 0
+fi
+
 current=$(playerctl -p spotify volume)
 
 new=$(awk -v v="$current" 'BEGIN { v=v+0.05; if(v>1) v=1; print v }')
