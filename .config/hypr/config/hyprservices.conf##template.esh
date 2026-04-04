@@ -30,7 +30,7 @@ exec-once = rm -rf ~/.config/Ferdium/Partitions/*/Cache/*
 exec-once = rm -rf ~/.config/Ferdium/Partitions/*/GPUCache/*
 
 exec-once = dbus-update-activation-environment --systemd $HYPRLAND_INSTANCE_SIGNATURE $WAYLAND_DISPLAY $XDG_CURRENT_DESKTOP
-exec-once = hypridle
+# exec-once = hypridle
 exec-once = hyprctl setcursor Bibata-Modern-Classic 24
 exec-once = hyprshade install
 exec-once = hyprshade on colors
