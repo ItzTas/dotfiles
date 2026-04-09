@@ -145,6 +145,16 @@ if (( ${+commands[sesh]} )); then
 			tmux kill-session -t "$session_name"
 		fi
 	}
+
+    fsc() {
+        local repo
+        repo=$(gh repo list --limit 200 --json name,url \
+            | jq -r '.[] | "\(.name)\t\(.url)"' \
+            | fzf --delimiter='\t' --with-nth=1 \
+            | awk -F '\t' '{print $2}')
+
+        [ -n "$repo" ] && sesh clone "$repo"
+    }
 fi
 
 # docker

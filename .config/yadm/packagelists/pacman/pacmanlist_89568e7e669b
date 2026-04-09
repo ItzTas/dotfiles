@@ -29,7 +29,7 @@ archlinux-contrib 20251215-1
 archlinux-keyring 20260323-1
 asar 4.2.0-1
 at-spi2-core 2.60.0-1
-atkmm 2.28.4-1
+atkmm 2.28.4-2
 attr 2.5.2-1
 audit 4.1.4-2
 autoconf 2.73-1
@@ -192,8 +192,8 @@ filesystem 2025.10.12-1
 findutils 4.10.0-3
 firefox 149.0.2-1
 flac 1.5.0-1
-flameshot-git r2268.bdb1eda4-1
-flatpak 1:1.16.4-1
+flameshot-git r2282.526fb82c-1
+flatpak 1:1.16.5-1
 flex 2.6.4-5
 fluidsynth 2.5.3-2
 fmt 12.1.0-2
@@ -218,7 +218,7 @@ gcr 3.41.2-2
 gcr-4 4.4.0.1-1
 gd 2.3.3-9
 gdbm 1.26-2
-gdk-pixbuf2 2.44.6-1
+gdk-pixbuf2 2.44.6-2
 gdm 50.0-1
 geoclue 2.8.0-2
 geocode-glib-2 3.26.4-5
@@ -402,7 +402,7 @@ inetutils 2.7-2
 iniparser 4.2.6-2
 inotify-tools 4.25.9.0-1
 iproute2 6.19.0-2
-iptables 1:1.8.11-4
+iptables 1:1.8.12-1
 iputils 20250605-1
 iso-codes 4.20.1-1
 jansson 2.15.0-1
@@ -764,7 +764,7 @@ libtatsu 1.0.5-1
 libteam 1.32-3
 libthai 0.1.30-1
 libtheora 1.2.0-1
-libtiff 4.7.1-1
+libtiff 4.7.1-2
 libtirpc 1.3.7-1
 libtool 2.6.0-4
 libtorrent-rasterbar 1:2.0.12-2
@@ -925,7 +925,7 @@ neon 0.37.1-1
 neovim 0.12.1-1
 net-snmp 5.9.5.2-1
 net-tools 2.10-3
-netpbm 10.86.49-1
+netpbm 10.86.49-2
 nettle 3.10.2-1
 networkmanager 1.56.0-1
 nftables 1:1.1.6-3
@@ -1108,7 +1108,7 @@ python-packaging 26.0-1
 python-pathspec 1.0.4-1
 python-pillow 12.2.0-1
 python-pkg_resources 81.0.0-1
-python-platformdirs 4.9.5-1
+python-platformdirs 4.9.6-1
 python-pluggy 1.6.0-3
 python-prompt_toolkit 3.0.52-2
 python-psutil 7.2.2-1
@@ -1242,7 +1242,7 @@ spice-gtk 0.42-5
 spice-protocol 0.14.5-1
 spicetify-cli 2.42.8-1
 spirv-tools 1:1.4.341.0-2
-spotify 1:1.2.84.476-1
+spotify 1:1.2.86.502-1
 sqlite 3.52.0-1
 squashfs-tools 4.7.5-1
 sratom 0.6.22-1
@@ -1269,7 +1269,7 @@ tecla 50.0-1
 termpicker-bin 1.5.1-1
 tevent 1:0.17.1-2
 texinfo 7.2-1
-thunderbird 149.0.1-1
+thunderbird 149.0.2-1
 tidy 5.8.0-3
 timeshift 25.12.4-1
 tinysparql 3.11.0-1
@@ -1311,6 +1311,7 @@ util-linux-libs 2.42-1
 v4l-utils 1.32.0-2
 vapoursynth 73-2
 vdpauinfo 1.5-2
+vesktop-bin 1.6.5-1
 vid.stab 1.1.1-2
 vim 9.2.0316-1
 vim-runtime 9.2.0316-1
@@ -1399,7 +1400,7 @@ yyjson 0.12.0-1
 zathura 2026.03.27-1
 zathura-pdf-poppler 2026.02.03-4
 zbar 0.23.93-5
-zen-browser-bin 1.19.6b-1
+zen-browser-bin 1.19.7b-1
 zenity 4.2.2-1
 zeromq 4.3.5-3
 zimg 3.0.6-1
