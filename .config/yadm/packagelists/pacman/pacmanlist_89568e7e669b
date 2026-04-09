@@ -394,7 +394,7 @@ iana-etc 20260328-1
 ibus 1.5.33-3
 icu 78.3-1
 iio-sensor-proxy 3.9-1
-ijs 0.35-6
+ijs 0.35-7
 imagemagick 7.1.2.18-2
 imath 3.2.2-4
 imlib2 1.12.6-1
@@ -408,7 +408,7 @@ iso-codes 4.20.1-1
 jansson 2.15.0-1
 java-environment-common 3-6
 java-runtime-common 3-6
-jbig2dec 0.20-1
+jbig2dec 0.20-2
 jbigkit 2.1-8
 jdk-openjdk 26.u35-1
 jemalloc 1:5.3.0-7
@@ -488,7 +488,7 @@ lib32-libngtcp2 1.22.0-1
 lib32-libnm 1.56.0-1
 lib32-libpciaccess 0.19-1
 lib32-libpipewire 1:1.6.2-1
-lib32-libpng 1.6.56-1
+lib32-libpng 1.6.57-1
 lib32-libpsl 0.21.5-1
 lib32-libssh2 1.11.1-1
 lib32-libtasn1 4.21.0-1
@@ -569,7 +569,7 @@ libcdio 2.3.0-1
 libcdio-paranoia 10.2+2.0.2-2
 libcloudproviders 0.4.0-1
 libcolord 1.4.8-1
-libcue 2.3.0-1
+libcue 2.3.0-2
 libcups 2:2.4.16-2
 libcupsfilters 2.1.1-4
 libcurl-gnutls 8.19.0-1
@@ -598,7 +598,7 @@ libepoxy 1.5.10-3
 libevdev 1.13.6-1
 libevent 2.1.12-5
 libexif 0.6.25-1
-libfdk-aac 2.0.3-1
+libfdk-aac 2.0.3-2
 libffi 3.5.2-1
 libfido2 1.16.0-3
 libfontenc 1.1.9-1
@@ -677,7 +677,7 @@ libmpc 1.4.0-1
 libmpcdec 1:0.1+r475-6
 libmpdclient 2.23-1
 libmpeg2 0.5.1-11
-libmspack 1:1.11-1
+libmspack 1:1.11-2
 libmtp 1.1.23-1
 libmysofa 1.3.3-1
 libnautilus-extension 50.0-1
@@ -709,13 +709,13 @@ libp11-kit 0.26.2-1
 libpaper 2.2.7-1
 libpcap 1.10.6-1
 libpciaccess 0.19-1
-libpgm 5.3.128-3
+libpgm 5.3.128-4
 libphonenumber 1:9.0.27-2
 libpipeline 1.5.8-1
 libpipewire 1:1.6.2-1
 libplacebo 7.360.1-1
 libplist 2.7.0-3
-libpng 1.6.56-1
+libpng 1.6.57-1
 libportal 0.9.1-3
 libportal-gtk4 0.9.1-3
 libppd 2.1.1-2
@@ -733,7 +733,7 @@ librsvg 2:2.62.1-1
 librsync 1:2.3.4-2
 libsamplerate 0.2.2-3
 libsasl 2.1.28-5
-libsass 3.6.6-1
+libsass 3.6.6-2
 libseccomp 2.6.0-1
 libsecret 0.21.7-1
 libshout 1:2.4.6-5
@@ -770,7 +770,7 @@ libtool 2.6.0-4
 libtorrent-rasterbar 1:2.0.12-2
 libtsan 15.2.1+r604+g0b99615a8aef-1
 libubsan 15.2.1+r604+g0b99615a8aef-1
-libunibreak 6.1-1
+libunibreak 6.1-2
 libunistring 1.4.1-1
 libunwind 1.8.2-1
 liburcu 0.15.6-1
@@ -797,7 +797,7 @@ libwireplumber 0.5.14-1
 libwnck3 43.3-1
 libx11 1.8.13-1
 libxau 1.0.12-1
-libxaw 1.0.16-1
+libxaw 1.0.16-2
 libxcb 1.17.0-1
 libxcomposite 0.4.7-1
 libxcrypt 4.5.2-1
@@ -805,7 +805,7 @@ libxcrypt-compat 4.5.2-1
 libxcursor 1.2.3-1
 libxcvt 0.1.3-1
 libxdamage 1.1.7-1
-libxdmcp 1.1.5-1
+libxdmcp 1.1.5-2
 libxext 1.3.7-1
 libxfixes 6.0.2-1
 libxfont2 2.0.7-1
@@ -887,7 +887,7 @@ malcontent 0.14.0-3
 man-db 2.13.1-1
 mangohud 0.8.2-3
 maven 3.9.14-1
-md4c 0.5.2-1
+md4c 0.5.2-2
 mdadm 4.6-1
 meld 3.22.3-2
 mesa 1:26.0.4-1
@@ -974,11 +974,11 @@ pacman-mirrorlist 20260406-1
 pam 1.7.2-2
 pambase 20250719-1
 pango 1:1.57.1-1
-pangomm 2.46.4-1
+pangomm 2.46.4-2
 pangomm-2.48 2.56.1-1
 papers 50.0-1
 parallel 20260322-1
-parted 3.6-2
+parted 3.7-1
 paru 2.1.0-2
 paru-debug 2.1.0-2
 patch 2.8-1
@@ -1220,7 +1220,7 @@ showtime 50.0-1
 simdjson 1:4.6.1-1
 simple-scan 50.0-1
 slang 2.3.3-4
-slurp 1.5.0-1
+slurp 1.5.0-2
 smbclient 2:4.24.0-1
 snapd 2.74.1-2
 snapper 0.13.0-3
@@ -1254,7 +1254,7 @@ steam-devices 1.0.0.85-6
 sudo 1.9.17.p2-2
 sushi 50rc.1-1
 svt-av1 4.1.0-1
-svt-hevc 1.5.1-3
+svt-hevc 1.5.1-4
 swaync 0.12.6-1
 swayosd-gtk3 0.1.0-1
 system-config-printer 1.5.18-6
@@ -1275,7 +1275,7 @@ timeshift 25.12.4-1
 tinysparql 3.11.0-1
 tinyxml2 11.0.0-2
 tmux 3.6_a-1
-tomlplusplus 3.4.0-1
+tomlplusplus 3.4.0-2
 tor 0.4.9.6-1
 tor-browser-bin 15.0.9-1
 totem-pl-parser 3.26.6+r30+g51b8439-2
@@ -1289,7 +1289,7 @@ tree-sitter-vim 0.8.1-3
 tree-sitter-vimdoc 4.1.0-2
 tslib 1.24-1
 ttf-carlito 20230509-2
-ttf-dejavu 2.37+18+g9b5d1b2f-7
+ttf-dejavu 2.37+18+g9b5d1b2f-8
 ttf-jetbrains-mono-nerd 3.4.0-2
 ttf-liberation 2.1.5-2
 ttf-ms-fonts 2.0-12
@@ -1375,7 +1375,7 @@ xdotool 4.20260303.1-1
 xf86-input-libinput 1.5.0-1
 xfsprogs 6.19.0-1
 xkeyboard-config 2.47-1
-xorg-fonts-encodings 1.1.0-1
+xorg-fonts-encodings 1.1.0-2
 xorg-server 21.1.21-1
 xorg-server-common 21.1.21-1
 xorg-setxkbmap 1.3.5-1
@@ -1406,7 +1406,7 @@ zenity 4.2.2-1
 zeromq 4.3.5-3
 zimg 3.0.6-1
 zint 2.16.0-1
-zip 3.0-11
+zip 3.0-12
 zita-convolver 4.0.3-5
 zix 0.8.0-1
 zlib 1:1.3.2-3
