@@ -154,6 +154,11 @@ if (( ${+commands[sesh]} )); then
             | awk -F '\t' '{print $2}')
 
         [ -n "$repo" ] && sesh clone "$repo"
+
+        local projects_session="Projects 📂"
+        if tmux has-session -t "$projects_session"; then
+            tmux kill-session -t "$projects_session"
+        fi
     }
 fi
 
