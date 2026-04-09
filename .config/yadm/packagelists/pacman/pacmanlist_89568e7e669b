@@ -256,7 +256,6 @@ gnome-characters 50.0-1
 gnome-clocks 50.0-2
 gnome-color-manager 3.36.2-1
 gnome-connections 50.0-1
-gnome-console 50.0-1
 gnome-contacts 50.0-1
 gnome-control-center 50.0-1
 gnome-desktop 1:44.5-1
@@ -1400,7 +1399,7 @@ yyjson 0.12.0-1
 zathura 2026.03.27-1
 zathura-pdf-poppler 2026.02.03-4
 zbar 0.23.93-5
-zen-browser-bin 1.19.7b-1
+zen-browser-bin 1.19.8b-1
 zenity 4.2.2-1
 zeromq 4.3.5-3
 zimg 3.0.6-1
