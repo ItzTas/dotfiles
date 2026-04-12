@@ -19,7 +19,9 @@
   },
   "plugins": {
     "enabledPlugins": [
-      "hltb-for-millennium"
+      "hltb-for-millennium",
+      "size-on-disk",
+      "browser_history"
     ]
   },
   "themes": {
