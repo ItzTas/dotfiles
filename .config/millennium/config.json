@@ -18,7 +18,9 @@
     "showUpdateNotifications": true
   },
   "plugins": {
-    "enabledPlugins": []
+    "enabledPlugins": [
+      "hltb-for-millennium"
+    ]
   },
   "themes": {
     "activeTheme": "Steam",
