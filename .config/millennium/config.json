@@ -18,12 +18,7 @@
     "showUpdateNotifications": true
   },
   "plugins": {
-    "enabledPlugins": [
-      "steam-easygrid",
-      "extendium",
-      "leetify-extension",
-      "alowave.faceit_stats"
-    ]
+    "enabledPlugins": []
   },
   "themes": {
     "activeTheme": "Steam",
@@ -229,6 +224,7 @@
         "Library - Banner position": "Middle (default)",
         "Library - Bigger banner": "no",
         "Library - Darken not installed games": "yes",
+        "Library - Dynamic banner height": "no",
         "Library - Game cover shiny effect": "no",
         "Library - Game info box artwork": "no",
         "Library - Sidebar on left": "no",
