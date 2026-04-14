@@ -41,7 +41,7 @@ monitorv2 {
     supports_hdr = 1
 
     sdrbrightness = 1
-    sdrsaturation = 1.6
+    sdrsaturation = 1.7
 
     sdr_min_luminance = 0.005
     sdr_max_luminance = 90
