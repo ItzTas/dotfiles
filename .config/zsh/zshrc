@@ -76,4 +76,12 @@ if (( ${+commands[proto]} )); then
     eval "$(proto activate zsh)"
 fi
 
+# PATH
+if (( ${+commands[npm]} )); then
+    prefix=$(npm config get prefix 2>/dev/null)
+    if [[ -n "$prefix" ]]; then
+        export PATH="$prefix/bin:$PATH"
+    fi
+fi
+
 # -------------------------------------------------------------
