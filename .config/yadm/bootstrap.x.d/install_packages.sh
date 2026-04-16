@@ -94,6 +94,7 @@ _install_pacman_packages() {
 
         # Firewall
         "ufw"
+        "opensnitch"
 
         # GTK
         "xdg-desktop-portal-gtk"
