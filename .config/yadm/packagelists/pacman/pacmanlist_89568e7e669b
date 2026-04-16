@@ -61,16 +61,16 @@ bison 3.8.2-8
 bitwarden-bin 2026.3.1-2
 blas 3.12.1-2
 blueman 2.4.6-2
-bluez 5.86-4
-bluez-libs 5.86-4
-bluez-obex 5.86-4
-bluez-utils 5.86-4
+bluez 5.86-5
+bluez-libs 5.86-5
+bluez-obex 5.86-5
+bluez-utils 5.86-5
 bolt 0.9.11-1
 boost-libs 1.90.0-4
 botan 3.11.1-1
 breeze-icons 6.25.0-1
 brightnessctl 0.5.1-3
-brltty 6.9-3
+brltty 6.9.1-1
 brotli 1.2.0-1
 btop 1.4.6-2
 btrfs-progs 6.19.1-1
@@ -145,7 +145,7 @@ djvulibre 3.5.29-2
 dmidecode 3.7-1
 docker 1:29.4.0-1
 docker-buildx 0.33.0-1
-docker-compose 5.1.2-1
+docker-compose 5.1.3-1
 dosfstools 4.2-5
 dotconf 1.4.1-1
 dotnet-host 10.0.4.sdk104-1
@@ -158,15 +158,15 @@ duktape 2.7.0-7
 dunst 1.13.2-1
 e2fsprogs 1.47.4-1
 earlyoom 1.9.0-1
-easyeffects 8.1.9-1
-editorconfig-core-c 0.12.10-1
+easyeffects 8.2.0-1
+editorconfig-core-c 0.12.11-1
 efibootmgr 18-3
 efivar 39-1
 egl-wayland 4:1.1.21-1
 eglexternalplatform 1.2.1-1
 electron-castlab-bin v41.1.1+wvcus-1
 electron37 37.5.1-1
-electron40-bin 40.8.5-1
+electron40-bin 40.9.1-1
 elfutils 0.194-2
 enchant 2.8.15-2
 epiphany 50.3-1
@@ -194,7 +194,7 @@ filesystem 2025.10.12-1
 findutils 4.10.0-3
 firefox 149.0.2-1
 flac 1.5.0-1
-flameshot-git r2282.526fb82c-1
+flameshot-git r2289.caf17033-1
 flatpak 1:1.16.6-1
 flex 2.6.4-6
 fluidsynth 2.5.3-2
@@ -233,7 +233,7 @@ girara 2026.02.04-2
 git 2.53.0-1
 git-bug 0.10.1-2
 github-cli 2.89.0-1
-gitkraken 11.10.0-1
+gitkraken 12.0.0-1
 gjs 2:1.88.0-1
 glfw 1:3.4-1
 glib-networking 1:2.80.1-1
@@ -275,8 +275,8 @@ gnome-music 1:49.1-2
 gnome-online-accounts 3.58.1-1
 gnome-remote-desktop 50.0-1
 gnome-session 50.0-1
-gnome-settings-daemon 50.0-1
-gnome-shell 1:50.0-1
+gnome-settings-daemon 50.1-1
+gnome-shell 1:50.1-1
 gnome-software 50.1-1
 gnome-system-monitor 50.0-1
 gnome-text-editor 50.0-1
@@ -313,8 +313,8 @@ grilo-plugins 1:0.3.18-3
 grim 1.5.0-2
 groff 1.24.1-1
 grpc 1.80.0-1
-gsettings-desktop-schemas 50.0-1
-gsettings-system-schemas 50.0-1
+gsettings-desktop-schemas 50.1-1
+gsettings-system-schemas 50.1-1
 gsfonts 20200910-6
 gsl 2.8-1
 gsm 1.0.24-1
@@ -384,7 +384,7 @@ hypridle 0.1.7-8
 hyprland 0.54.3-2
 hyprland-guiutils 0.2.1-3
 hyprlang 0.6.8-3
-hyprlock 0.9.3-2
+hyprlock 0.9.4-1
 hyprpaper 0.8.3-4
 hyprpicker 0.4.6-3
 hyprshade 4.0.1-1
@@ -405,7 +405,7 @@ imlib2 1.12.6-1
 inetutils 2.7-2
 iniparser 4.2.6-2
 inotify-tools 4.25.9.0-1
-iproute2 6.19.0-2
+iproute2 7.0.0-1
 iptables 1:1.8.13-1
 iputils 20250605-1
 iso-codes 4.20.1-1
@@ -416,7 +416,7 @@ jbig2dec 0.20-2
 jbigkit 2.1-8
 jdk-openjdk 26.u35-1
 jemalloc 1:5.3.1-1
-jq 1.8.1-1
+jq 1.8.1-2
 js140 140.9.1-1
 json-c 0.18-2
 json-glib 1.10.8-1
@@ -481,7 +481,7 @@ lib32-libdisplay-info 0.3.0-1
 lib32-libdrm 2.4.131-1
 lib32-libelf 0.194-1
 lib32-libffi 3.5.2-1
-lib32-libgcrypt 1.12.1-1
+lib32-libgcrypt 1.12.2-1
 lib32-libglvnd 1.7.0-1
 lib32-libgpg-error 1.59-1
 lib32-libidn2 2.3.8-1
@@ -492,7 +492,7 @@ lib32-libngtcp2 1.22.0-1
 lib32-libnm 1.56.0-1
 lib32-libpciaccess 0.19-1
 lib32-libpipewire 1:1.6.3-1
-lib32-libpng 1.6.57-1
+lib32-libpng 1.6.58-1
 lib32-libpsl 0.21.5-1
 lib32-libssh2 1.11.1-1
 lib32-libtasn1 4.21.0-1
@@ -610,7 +610,7 @@ libfontenc 1.1.9-1
 libfreeaptx 0.2.2-1
 libfyaml 0.9.6-2
 libgcc 15.2.1+r604+g0b99615a8aef-1
-libgcrypt 1.12.1-1
+libgcrypt 1.12.2-1
 libgdata 0.18.1-5
 libgdm 50.0-2
 libgee 0.20.8-1
@@ -720,7 +720,7 @@ libpipeline 1.5.8-1
 libpipewire 1:1.6.3-1
 libplacebo 7.360.1-1
 libplist 2.7.0-3
-libpng 1.6.57-1
+libpng 1.6.58-1
 libportal 0.9.1-3
 libportal-gtk4 0.9.1-3
 libppd 2.1.1-2
@@ -861,7 +861,7 @@ llhttp 9.3.1-1
 llvm-libs 22.1.3-1
 lm_sensors 1:3.6.2-1
 lmdb 0.9.35-1
-localsearch 3.11.0-1
+localsearch 3.11.1-1
 localsend-bin 1.17.0-1
 loupe 50.0-1
 lsb-release 2.0.r55.a25a4fc-1
@@ -916,7 +916,7 @@ msgraph 0.3.4-1
 mtdev 1.1.7-1
 mujs 1.3.9-1
 muparser 2.3.5-2
-mutter 50.0-2
+mutter 50.1-1
 namcap 3.6.0-3
 nautilus 50.1-1
 ncdu 2.9.2-1
@@ -958,7 +958,7 @@ onetbb 2022.3.0-4
 oniguruma 6.9.10-1
 onlyoffice-bin 9.3.1-1
 openal 1.25.1-1
-opencl-nvidia 595.58.03-1
+opencl-nvidia 595.58.03-2
 opencore-amr 0.1.6-2
 openexr 3.4.9-2
 openh264 2.6.0-2
@@ -969,7 +969,7 @@ openssl 3.6.2-1
 openxr 1.1.57-1
 opus 1.6.1-1
 orc 0.4.42-1
-orca 50.0.9-1
+orca 50.1.2-1
 os-prober 1.84-1
 osinfo-db 20251212-1
 ostree 2025.7-3
@@ -1050,7 +1050,7 @@ power-options-daemon 1.2.3-1
 power-profiles-daemon 0.30-1
 pps-tools 1.0.3-2
 procps-ng 4.0.6-1
-proto-bin 0.56.1-1
+proto-bin 0.56.2-1
 protobuf 34.1-1
 protobuf-c 1.5.2-9
 protonmail-bridge 3.23.1-2
@@ -1065,7 +1065,7 @@ python-autocommand 2.2.2-9
 python-awscrt 0.32.0-1
 python-beautifulsoup4 4.14.3-2
 python-boolean.py 5.0-2
-python-brltty 6.9-3
+python-brltty 6.9.1-1
 python-build 1.4.3-1
 python-cairo 1.29.0-2
 python-certifi 2026.02.25-1
@@ -1082,7 +1082,7 @@ python-dbus 1.4.0-2
 python-defusedxml 0.7.1-8
 python-distro 1.9.0-4
 python-docutils 1:0.22.4-1
-python-editables 0.5-7
+python-editables 0.6-1
 python-evdev 1.9.3-1
 python-fonttools 4.62.1-1
 python-gobject 3.56.2-1
@@ -1111,7 +1111,7 @@ python-moddb 0.14.0-2
 python-more-itertools 11.0.2-1
 python-mutagen 1.47.0-4
 python-numpy 2.4.4-1
-python-packaging 26.0-1
+python-packaging 26.1-1
 python-pathspec 1.0.4-1
 python-pillow 12.2.0-1
 python-pkg_resources 81.0.0-1
@@ -1124,7 +1124,7 @@ python-pyelftools 0.32-2
 python-pygments 2.20.0-1
 python-pymediainfo 6.1.0-5
 python-pyparsing 3.3.2-1
-python-pypdf 6.10.0-1
+python-pypdf 6.10.2-1
 python-pyproject-hooks 1.2.0-6
 python-pyqt6 6.11.0-1
 python-pyqt6-sip 13.11.1-1
@@ -1169,7 +1169,7 @@ qt5-translations 5.15.18-1
 qt5-webchannel 5.15.18+kde+r3-1
 qt6-base 6.11.0-2
 qt6-charts 6.11.0-1
-qt6-declarative 6.11.0-1
+qt6-declarative 6.11.0-4
 qt6-graphs 6.11.0-1
 qt6-multimedia 6.11.0-1
 qt6-multimedia-ffmpeg 6.11.0-1
@@ -1254,7 +1254,7 @@ sqlite 3.53.0-2
 squashfs-tools 4.7.5-1
 sratom 0.6.22-1
 srt 1.5.4-1
-stacer-git 1.6.3.r1.g9da0901-1
+stacer-git 1.6.3.r3.g2b537c9-1
 startup-notification 0.12-9
 steam 1.0.0.85-6
 steam-devices 1.0.0.85-6
@@ -1279,7 +1279,7 @@ texinfo 7.3-1
 thunderbird 149.0.2-1
 tidy 5.8.0-3
 timeshift 25.12.4-1
-tinysparql 3.11.0-1
+tinysparql 3.11.1-1
 tinyxml2 11.0.0-2
 tmux 3.6_a-1
 tomlplusplus 3.4.0-2
@@ -1320,8 +1320,8 @@ vapoursynth 73-2
 vdpauinfo 1.5-2
 vesktop-bin 1.6.5-1
 vid.stab 1.1.1-2
-vim 9.2.0316-1
-vim-runtime 9.2.0316-1
+vim 9.2.0357-1
+vim-runtime 9.2.0357-1
 vmaf 3.1.0-1
 volume_key 0.3.12-12
 vscodium-bin 1.112.01907-1
@@ -1413,7 +1413,7 @@ zenity 4.2.2-1
 zeromq 4.3.5-3
 zimg 3.0.6-1
 zint 2.16.0-1
-zip 3.0-12
+zip 3.0-13
 zita-convolver 4.0.3-5
 zix 0.8.0-1
 zlib 1:1.3.2-3
