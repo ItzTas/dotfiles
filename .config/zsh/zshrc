@@ -67,6 +67,25 @@ __source_zsh_config_files() {
 __source_zsh_config_files
 unset -f __source_zsh_config_files
 
+__source_zsh_secrets() {
+    local zsh_home="$HOME/.config/zsh"
+    
+    local files=(
+        "tokens"
+    )
+
+    local path
+    for file in "${files[@]}"; do
+        path="$zsh_home/secrets/$file"
+        if [[ -f $path ]]; then
+            source "$path"
+        fi
+    done
+}
+
+__source_zsh_secrets
+unset -f __source_zsh_secrets
+
 autoload -Uz compinit && compinit
 
 # -------------------- Main file specifics --------------------
