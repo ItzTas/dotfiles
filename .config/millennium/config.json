@@ -21,7 +21,8 @@
     "enabledPlugins": [
       "hltb-for-millennium",
       "size-on-disk",
-      "browser_history"
+      "browser_history",
+      "extendium"
     ]
   },
   "themes": {

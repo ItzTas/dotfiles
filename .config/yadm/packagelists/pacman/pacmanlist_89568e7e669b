@@ -194,7 +194,6 @@ file 5.47-3
 file-roller 44.6-2
 filesystem 2025.10.12-1
 findutils 4.10.0-3
-firefox 149.0.2-1
 firewall-config 2.4.1-1
 firewalld 2.4.1-1
 flac 1.5.0-1
@@ -298,7 +297,6 @@ gobject-introspection 1.86.0-2
 gobject-introspection-runtime 1.86.0-2
 gom 0.5.6-1
 gomodifytags 1.17.0-1
-google-chrome 147.0.7727.101-1
 gperf 3.3-2
 gperftools 2.18.1-1
 gpgme 2.0.1-3
