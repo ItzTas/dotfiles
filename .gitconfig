@@ -1,6 +1,7 @@
 [user]
 	name = Tales
 	email = 59647566+ItzTas@users.noreply.github.com
+	signingkey = 718CEF80FEBF3E33
 
 [credential "https://github.com"]
 	helper = 

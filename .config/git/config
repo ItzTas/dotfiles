@@ -107,7 +107,7 @@
 
 [commit]
     verbose = true
-    ; gpgSign = true
+    gpgSign = true
 
 [merge]
     conflictstyle = diff3 ; may conflict with diff tools in some projects
