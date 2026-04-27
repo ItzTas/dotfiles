@@ -48,7 +48,6 @@ _install_pacman_packages() {
         "hyprland"
         "hyprpicker"
         "hyprpaper"
-        "hyprshade"
         "hyprshot"
         "hyprlock"
         "hypridle"
