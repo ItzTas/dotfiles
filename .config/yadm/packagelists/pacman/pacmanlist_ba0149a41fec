@@ -138,7 +138,7 @@ debugedit 5.2-1
 decibels 49.6.1-1
 default-cursors 3-1
 desktop-file-utils 0.28-1
-device-mapper 2.03.39-1
+device-mapper 2.03.40-1
 dex 0.10.1-1
 diff-so-fancy 1.4.10-1
 diffutils 3.12-2
@@ -215,7 +215,7 @@ fribidi 1.0.16-2
 fuse-common 3.18.2-1
 fuse2 2.9.9-5
 fuse3 3.18.2-1
-fzf 0.71.0-1
+fzf 0.72.0-1
 gamemode 1.8.2-2
 gamescope 3.16.23-1
 gawk 5.4.0-1
@@ -345,10 +345,10 @@ gstreamer 1.28.2-1
 gtest 1.17.0-2
 gthumb 3.12.10-3
 gtk-layer-shell 0.10.1-1
-gtk-update-icon-cache 1:4.22.3-1
+gtk-update-icon-cache 1:4.22.4-1
 gtk-vnc 1.5.0-1
 gtk3 1:3.24.52-1
-gtk4 1:4.22.3-1
+gtk4 1:4.22.4-1
 gtk4-layer-shell 1.3.0-1
 gtkmm-4.0 4.22.0-1
 gtkmm3 3.24.10-1
@@ -539,7 +539,7 @@ lib32-util-linux 2.42-1
 lib32-vulkan-icd-loader 1.4.341.0-1
 lib32-vulkan-mesa-implicit-layers 1:26.0.5-1
 lib32-vulkan-radeon 1:26.0.5-1
-lib32-wayland 1.24.0-1
+lib32-wayland 1.25.0-1
 lib32-xcb-util-keysyms 0.4.1-2
 lib32-xz 5.8.3-1
 lib32-zlib 1.3.2-1
@@ -570,7 +570,7 @@ libblockdev-part 3.5.0-1
 libblockdev-smart 3.5.0-1
 libblockdev-swap 3.5.0-1
 libbluray 1.4.1-1
-libbpf 1.6.2-1
+libbpf 1.7.0-1
 libbs2b 3.1.0-10
 libbsd 0.12.2-2
 libbytesize 2.12-3
@@ -636,7 +636,7 @@ libgoa 3.58.1-1
 libgomp 15.2.1+r604+g0b99615a8aef-1
 libgpg-error 1.60-1
 libgphoto2 2.5.33-1
-libgsf 1.14.56-1
+libgsf 1.14.57-1
 libgsystemservice 0.3.0-2
 libgtop 2.41.3-2
 libgudev 238-3
@@ -973,15 +973,15 @@ nvibrant-bin 1.2.0-2
 nvm 0.40.4-1
 nwg-look 1.0.6-1
 ocl-icd 2.3.4-1
-oh-my-posh 29.11.0-1
-ollama 0.22.0-1
+oh-my-posh 29.12.0-1
+ollama 0.22.1-1
 onetbb 2022.3.0-4
 oniguruma 6.9.10-1
 onlyoffice-bin 9.3.1-1
 openal 1.25.1-1
 opencl-nvidia 595.71.05-1
 opencore-amr 0.1.6-2
-openexr 3.4.10-1
+openexr 3.4.11-1
 openh264 2.6.0-2
 openjpeg2 2.5.4-1
 openjph 0.27.0-1
@@ -1218,7 +1218,7 @@ qt6-translations 6.11.0-1
 qt6ct 0.11-5
 qtractor 1.5.12-1
 raptor 2.0.16-9
-rar 7.20-1
+rar 7.21-1
 rav1e 0.8.1-2
 re2 2:2025.11.05-3
 readline 8.3.003-1
@@ -1328,7 +1328,7 @@ sqlite 3.53.0-2
 squashfs-tools 4.7.5-1
 sratom 0.6.22-1
 srt 1.5.4-1
-stacer-git 1.6.3.r4.g7e48ca2-1
+stacer-git 1.6.3.r5.gb476469-1
 startup-notification 0.12-9
 steam 1.0.0.85-6
 steam-devices 1.0.0.85-6
@@ -1483,7 +1483,7 @@ yyjson 0.12.0-1
 zathura 2026.03.27-1
 zathura-pdf-poppler 2026.02.03-4
 zbar 0.23.93-5
-zen-browser-bin 1.19.10b-1
+zen-browser-bin 1.19.11b-1
 zenity 4.2.2-1
 zeromq 4.3.5-3
 zimg 3.0.6-1
