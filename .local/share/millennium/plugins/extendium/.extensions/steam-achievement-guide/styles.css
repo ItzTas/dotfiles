@@ -1,0 +1,239 @@
+/* General styles */
+.achievement-guide {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
+    /* Removed border-radius */
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Panel {
+    .achievement-guide {
+        background: #405163e6;
+    }
+}
+
+.guide-links-container {
+    min-height: 12px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: end;
+    font-size: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.achievement-guide h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.guide-link-title {
+    color: #66c0f4; /* Steam's link color */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.guide-link-title .link-icon {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.guide-link-title:hover {
+    text-decoration: underline;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 5px;
+}
+
+.stat-box {
+    border-radius: 2px; /* Set border-radius to 2px */
+    padding: 8px 0;
+    text-align: center;
+    color: #fff; /* Ensure text is white */
+    align-content: center;
+}
+
+.stat-value {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.stat-label {
+    font-size: 8px;
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    word-break: break-word;
+}
+
+.no-guide {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
+    text-align: center;
+    color: #cccccc;
+    font-size: 14px;
+    margin: 0;
+    padding: 10px;
+}
+
+.links-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    font-size: 10px;
+    min-height: 12px;
+}
+
+.link {
+    color: #66c0f4;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #4a9dd8;
+}
+
+.achievement-guide.loading {
+    background: #405163e6;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+.loading-indicator {
+    /* Simple spinner or any loading animation */
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.stat-box-link {
+  display: block; /* Makes the <a> tag a block-level element */
+  text-decoration: none; /* Removes the default underline from links */
+  color: inherit; /* Inherits the text color from the parent */
+}
+
+.stat-box-link:hover .stat-box {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.stg-games-guide {
+    margin-top: 8px;
+    width: 100%;
+    min-width: 0;
+    display: block;
+    flex: 1 0 100%;
+    grid-column: 1 / -1;
+}
+
+.stg-games-guide .achievement-guide {
+    background: transparent;
+    border-radius: 4px;
+    padding: 6px 8px;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+
+.stg-games-guide .guide-links-container {
+    justify-content: flex-end;
+    gap: 5px;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.stg-games-guide .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 5px;
+    overflow: hidden;
+}
+
+.stg-games-guide .stat-box {
+    border-radius: 4px;
+    padding: 6px 5px;
+}
+
+.stg-games-guide .stat-value {
+    font-size: 15px;
+}
+
+.stg-games-guide .stat-label {
+    font-size: 8px;
+    letter-spacing: 0.2px;
+    line-height: 1.05;
+}
+
+.stg-games-guide .links-container {
+    justify-content: flex-end;
+    gap: 6px;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.stg-games-guide .achievement-guide .guide-links-container:empty {
+    margin-bottom: 0;
+}
+
+.mtoll770TDI- .stg-games-guide {
+    grid-column: 1 / -1;
+}
+
+.stg-hover-popup {
+    position: absolute;
+    z-index: 2147483647;
+    width: 240px;
+    max-width: 240px;
+    min-width: 240px;
+    display: block;
+    opacity: 0;
+    transform: translateY(4px) scale(0.98);
+    transition: opacity 140ms ease, transform 140ms ease;
+    pointer-events: none;
+    will-change: opacity, transform;
+}
+
+.stg-hover-popup.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.stg-hover-popup .achievement-guide {
+    margin: 0;
+    border-radius: 6px;
+    background: #1b2838;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.stg-hover-popup .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+}
+
+.stg-hover-popup .stat-value {
+    font-size: 15px;
+}

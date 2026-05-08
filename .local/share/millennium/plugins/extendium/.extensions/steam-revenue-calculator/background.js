@@ -1,0 +1,7 @@
+//////////////////////////////////////////////////////////////////////////
+// Autoupdate                                                           //
+//////////////////////////////////////////////////////////////////////////
+chrome.runtime.onUpdateAvailable.addListener(function(details) {
+  // console.log("updating to version " + details.version);
+  chrome.runtime.reload();
+});
