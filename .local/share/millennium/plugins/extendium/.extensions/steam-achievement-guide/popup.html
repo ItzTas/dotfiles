@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Steam Achievement Guide Extension</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1b2838, #0e1a2b);
+            color: #c7d5e0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            width: 420px;
+            overflow-x: hidden;
+            /* width: 450px; */
+            /* min-height: 100vh; */
+            /* min-width: 450px;
+            max-width: 450px; */
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 20px;
+            text-align: center;
+        }
+
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .buttons-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .buttons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 10px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #4a90e2;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        .buttons a:hover {
+            background-color: #357ab8;
+            transform: translateY(-3px);
+        }
+
+        .buttons a img {
+            height: 24px;
+            width: 24px;
+            margin-right: 10px;
+        }
+
+        .buttons a.discord-button {
+            background-color: #7289DA;
+        }
+
+        .buttons a.discord-button:hover {
+            background-color: #5b6eae;
+        }
+
+        .buttons a.donate-button {
+            background-color: #FF9900;
+        }
+
+        .buttons a.donate-button:hover {
+            background-color: #e68a00;
+        }
+
+        .buttons a.patreon-button {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .buttons a.patreon-button:hover {
+            background-color: #f3f3f3;
+            color: #000;
+        }
+
+        .options-item {
+            display: flex;
+            gap: 5px;
+        }
+
+        .footer {
+            padding-bottom: 30px;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        .footer a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-wrapper">
+            <h1>Steam Achievement Guide</h1>
+        </div>
+        <div class="footer">
+            <p>Developed by <strong><a href="https://github.com/jansivans" target="_blank">jansivans</a></strong>,
+                <strong><a href="mailto:jans.ivans@gmail.com">email</a></strong>
+            </p>
+        </div>
+        <div class="buttons-wrapper">
+            <div class="buttons">
+                <a href="https://steam-achievement-guide.onrender.com/" target="_blank" rel="noopener">
+                    <img src="assets/achievement.svg" alt="Achievement Icon">
+                    Visit website
+                </a>
+                <a href="https://discord.gg/t8cBtPAczE" target="_blank" rel="noopener"
+                    aria-label="Join our Discord Community" class="discord-button">
+                    <img src="assets/discord.png" alt="Discord Icon">
+                    Discord
+                </a>
+                <a href="https://buymeacoffee.com/jansivans" target="_blank" rel="noopener"
+                    aria-label="Support us with a donation" class="donate-button">
+                    <img src="assets/donate.png" alt="Donate Icon">
+                    Buy me a coffee
+                </a>
+                <a href="https://patreon.com/jansivans" target="_blank" rel="noopener"
+                    aria-label="Support us with a donation" class="patreon-button">
+                    <img src="assets/patreon.png" alt="Patreon Icon">
+                    Patreon
+                </a>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 5px;">
+            <h3>Options</h3>
+            <label class="options-item">
+                Disable on wishlist page
+                <input type="checkbox" id="disable-on-wishlist-page" />
+            </label>
+            <label class="options-item">
+                Hide N/A values
+                <input type="checkbox" id="hide-na-values" />
+            </label>
+            <label class="options-item">
+                Hide DIFFICULTY box
+                <input type="checkbox" id="hide-difficulty" />
+            </label>
+            <label class="options-item">
+                Hide PLAYTHROUGHS box
+                <input type="checkbox" id="hide-playthroughs" />
+            </label>
+            <label class="options-item">
+                Hide HOURS box
+                <input type="checkbox" id="hide-hours" />
+            </label>
+            <label class="options-item">
+                Hide MISSABLES box
+                <input type="checkbox" id="hide-missables" />
+            </label>
+            <label class="options-item">
+                Hide ONLINE box
+                <input type="checkbox" id="hide-online" />
+            </label>
+            <label class="options-item">
+                Hide POST LAUNCH ACHVS box
+                <input type="checkbox" id="hide-post-launch-achvs" />
+            </label>
+            <label class="options-item">
+                Hide PAID DLC REQUIRED box
+                <input type="checkbox" id="hide-paid-dlc-required" />
+            </label>
+            <label class="options-item">
+                Hide DIFFICULTY SPECIFIC box
+                <input type="checkbox" id="hide-difficulty-specific" />
+            </label>
+            <label class="options-item">
+                Hide UNOBTAINABLES box
+                <input type="checkbox" id="hide-unobtainables" />
+            </label>
+            <label class="options-item">
+                Hide COND. OBTAINABLES box
+                <input type="checkbox" id="hide-cond-obtainables" />
+            </label>
+            <label class="options-item">
+                Hide BROKEN box
+                <input type="checkbox" id="hide-broken" />
+            </label>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 5px; padding-top: 20px;">
+            <h3>Subscriber options</h3>
+            <label class="options-item">
+                Token
+                <input type="text" id="token" style="width: 250px; text-align: center;" />
+            </label>
+            <label class="options-item">
+                Disable on hover
+                <input type="checkbox" id="disable-on-hover" />
+            </label>
+        </div>
+    </div>
+    <script src="options.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+.DFM_ButtonBGOuter
+{
+    margin-left: 12px;
+    border-radius: 3px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+}
+.DFM_ButtonBGInner
+{
+    flex: 1;
+    font-size: 18px;
+    text-align: center;
+    color: #efeaea;
+    background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+    background-position: 25%;
+    background-size: 330% 100%;
+    padding: 7px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+}

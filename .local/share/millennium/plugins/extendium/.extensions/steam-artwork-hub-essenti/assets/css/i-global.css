@@ -1,0 +1,87 @@
+#DFM_Dev_Console
+{
+    display: block;
+    position: fixed;
+    z-index: 100000;
+    width: 100%;
+    height: var(--h, 0px);
+    background: #333;
+    bottom: calc(0px - var(--h, 0px));
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    transition-property: opacity, bottom;
+    pointer-events: none;
+}
+
+#DFM_Dev_Console.visible
+{
+    display: table;
+    opacity: 1;
+    bottom: 0px;
+    pointer-events: all;
+}
+
+#DFM_Dev_Console_Log_Container_Outer
+{
+    width: 100%;
+    overflow-y: scroll;
+    height: calc(var(--h) - 24px);
+    display: block;
+}
+
+#DFM_Dev_Console_Log_Container_Inner
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+}
+
+.DFM_Dev_Console_Log
+{
+    display: block;
+    padding: 6px;
+    margin: 6px;
+    background: #0002;
+    color: #aaa;
+}
+
+#DFM_Dev_Console_Input_Container_Outer
+{
+    display: table-row;
+    width: 100%;
+    height: 24px;
+}
+
+
+#DFM_Dev_Console_Input_Container_Inner
+{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    display: block;
+    padding: 6px;
+    width: -webkit-fill-available;
+    height: 24px;
+    line-height: 24px;
+    background: #0004;
+    color: #aaa;
+    font-size: 14px;
+    font-weight: 500;
+    resize: none;
+}
+
+.DFM_ArtworkHub_Badge
+{
+    width: 21px;
+    height: 16px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-image: url('https://steamartworkhub.com/assets/svg/artworkhub_icon_white.svg');
+}
