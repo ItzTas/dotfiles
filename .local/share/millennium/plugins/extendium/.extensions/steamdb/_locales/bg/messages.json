@@ -1,0 +1,657 @@
+{
+	"extension_description": {
+		"message": "Добавя SteamDB връзки и нови функции в магазина и общността на Steam. Вижте най-ниските цени и статистики.",
+		"description": "This value can be up to 132 characters."
+	},
+	"steamdb_options": {
+		"message": "SteamDB опции"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB калкулатор"
+	},
+	"steamstatus": {
+		"message": "Провери на $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "Изглежда, че Steam е временно недостъпен. "
+	},
+	"view_on_steamdb": {
+		"message": "Вижте в SteamDB"
+	},
+	"view_on_steam_hunters": {
+		"message": "Вижте в Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Вижте в PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Лични постижения"
+	},
+	"store_page": {
+		"message": "Страница в магазина",
+		"description": "This translation should match how Steam translates it on community hubs"
+	},
+	"search": {
+		"message": "Търсене"
+	},
+	"in_library": {
+		"message": "В библиотеката",
+		"description": "Indicates that the user owns this product"
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB рейтинг:"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ от $total$ рецензии са позитивни (всички видове покупки)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Последно обновление:"
+	},
+	"app_depots_updated_short": {
+		"message": "Обновено",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Онлайн статистика"
+	},
+	"app_stats_online_now": {
+		"message": "Онлайн в момента:"
+	},
+	"app_stats_peak_today": {
+		"message": "24-часов пик:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Пик за всички времена:"
+	},
+	"app_stats_followers": {
+		"message": "Последователи:"
+	},
+	"app_lowest_price": {
+		"message": "Най-ниската регистрирана цена в SteamDB е <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "Най-ниската регистрирана цена в SteamDB е <b>$price$</b> с <b>-$discount$%</b> отстъпка",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "Най-ниската регистрирана цена в SteamDB е <b>$price$</b>, а за последните 2 години е <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Цената е видяна на $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Цената е видяна $seen$ пъти, последно на $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"agecheck_option_hint": {
+		"message": "SteamDB има опция за автоматично прескачане на страниците за проверка на възрастта"
+	},
+	"explore_auto_discover": {
+		"message": "Автоматично откриване"
+	},
+	"explore_auto_discover_description": {
+		"message": "Автоматично изследване на опашката."
+	},
+	"explore_generating": {
+		"message": "Генериране на нова опашка, тази функция може да не работи, ако Steam е под голямо натоварване…"
+	},
+	"explore_exploring": {
+		"message": "Изследване на опашката… Заявка $current$ от $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Твърде много неуспешни опити за изчистване на опашката. Може да опитате отново по-късно."
+	},
+	"explore_finished": {
+		"message": "Опашката е разгледана."
+	},
+	"badges_idle_apps": {
+		"message": "Приложения с оставащи падания: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Приложения с оставащи падания на тази страница: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Оставащи падания на карти: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Оставащи падания на карти на тази страница: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Скрито постижение: "
+	},
+	"achievement_global_unlock": {
+		"message": "$percent$ от играчите имат това постижение",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "СПЕЧЕЛЕНИ ПОСТИЖЕНИЯ: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "ЗАКЛЮЧЕНИ ПОСТИЖЕНИЯ: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Сортирай по време"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Групираните постижения са предоставени от Steam Hunters чрез SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "Сезон $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Дата"
+	},
+	"achievements_csrating_name": {
+		"message": "CS рейтинг"
+	},
+	"inventory_quick_sell_tip": {
+		"message": "Задръжте върху цена за продажба",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
+	"inventory_list_at": {
+		"message": "Пускане за $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Продай за $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_badge_level": {
+		"message": "Ниво на значка: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Ниво на ламинирана значка: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Няма изработена значка"
+	},
+	"spoilers_reveal": {
+		"message": "Покажи спойлъри",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Статистики"
+	},
+	"popup_sales": {
+		"message": "Намаления"
+	},
+	"popup_calendar": {
+		"message": "Календар"
+	},
+	"popup_patches": {
+		"message": "Обновления"
+	},
+	"popup_calculator": {
+		"message": "Калкулатор"
+	},
+	"options": {
+		"message": "Опции"
+	},
+	"options_welcome_title": {
+		"message": "👋 Благодарим ви, че инсталирахте SteamDB разширението!"
+	},
+	"options_welcome_description": {
+		"message": "Прегледайте опциите по-долу и изберете тези, които предпочитате. За да се върнете тук в бъдеще:"
+	},
+	"options_welcome_option1": {
+		"message": "Страница с настройки в SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Падащо меню за акаунт в страници на Steam"
+	},
+	"options_welcome_option3": {
+		"message": "Страницата с разширения на вашия браузър"
+	},
+	"options_review": {
+		"message": "Оставете отзив за това разширение"
+	},
+	"options_permissions_description": {
+		"message": "Това разширение изисква допълнителни разрешения, за да работи правилно в SteamDB, Steam магазин и Steam общност."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Разреши"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Активиране на поддръжка за Steam China"
+	},
+	"options_footer1": {
+		"message": "Направено с 💙 от <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> общността."
+	},
+	"options_footer2": {
+		"message": "Разширението е с <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">отворен код</a>, благодарение на всички сътрудници!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Деактивираните квадратчета за отметка означават вградени функции."
+	},
+	"options_header_website": {
+		"message": "SteamDB уебсайт"
+	},
+	"options_header_extra_data": {
+		"message": "Допълнителни данни"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Бутони и връзки"
+	},
+	"options_header_inventory": {
+		"message": "Инвентар"
+	},
+	"options_header_trade_offers": {
+		"message": "Оферти за търговия"
+	},
+	"options_header_achievements": {
+		"message": "Постижения"
+	},
+	"options_header_enhancements": {
+		"message": "Подобрения"
+	},
+	"options_website_explanation": {
+		"message": "Пояснение"
+	},
+	"options_website_explanation1": {
+		"message": "Когато тази опция е активирана, разширението ще заяви достъп до някои потребителски данни (списък с желания, притежавани, следвани, игнорирани продукти и продукти в кошницата) от <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">магазина на Steam</a>, като ще ги използва, за да прилага акценти в уебсайта."
+	},
+	"options_website_explanation2": {
+		"message": "Трябва да сте влезли в магазина, за да може тази опция да работи."
+	},
+	"options_website_explanation3": {
+		"message": "Това се съдържа изцяло във вашия браузър и никога не се изпраща до бекенда на SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "За да се предотвратят прекомерни заявки към магазина на Steam, потребителските Ви данни се кешират в локалното хранилище на вашия браузър."
+	},
+	"options_website_highlight": {
+		"message": "Отбелязване на притежавани и желани продукти на $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "Добавяне в списъка с желания, следване и игнориране на продукти в магазина на Steam директно от SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Активиране на скрипта за безплатни пакети</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Покажи допълнителни филтри на страниците за <a href=\"https://steamdb.info/sales/\" target=\"_blank\">разпродажби</a> и <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">комплекти</a>"
+	},
+	"options_website_family": {
+		"message": "Отбелязване на приложения притежавани от членове на семейство (изисква допълнителна заявка)"
+	},
+	"options_extra_data": {
+		"message": "Допълнителна информация взета от $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Когато опцията „$options_online_stats$“ или „$options_steamdb_last_update$“ е активирана, разширението ще направи защитена заявка към $domain$ за да получи текущия брой играчи и последното обновление на играта.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Когато опцията \"$options_steamdb_lowest_price$\" е активирана, разширението ще направи защитена заявка към $domain$ с вашата валута (с тази която Steam мисли, че ползвате) за да вземе записаната цена за специфична игра.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Когато опцията „$options_achievement_groups$“ е активирана, разширението ще направи защитена заявка до $domain$ за групиране постиженията на страницата с лични постижения с данни, предоставени от Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Покажи най-ниската записана цена на продуктовата страница"
+	},
+	"options_online_stats": {
+		"message": "Покажи текущ и пиков брой играчи на продуктовата страница"
+	},
+	"options_steamdb_last_update": {
+		"message": "Покажи последно обновление на продуктовата страница"
+	},
+	"options_button_app": {
+		"message": "Покажи бутон на продуктовата страница"
+	},
+	"options_button_pcgw": {
+		"message": "Покажи бутон за PCGamingWiki на продуктовата страница"
+	},
+	"options_button_sub": {
+		"message": "Покажи бутон на страници на комплекти/пакети"
+	},
+	"options_button_gamehub": {
+		"message": "Покажи бутон на страници на общности"
+	},
+	"options_button_gamecards": {
+		"message": "Покажи бутони SteamDB и „Страница в магазина“ на страницата за напредък на значка"
+	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Показване на връзки към SteamDB до имената на разработчика и издателя"
+	},
+	"options_link_subid": {
+		"message": "Покажи SubID под всяка опция за покупка"
+	},
+	"options_link_subid_widget": {
+		"message": "Покажи SubID в притурки на продукти",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "Добави връзки към пакети на страницата с лицензи"
+	},
+	"options_profile_calculator": {
+		"message": "Добави връзка към калкулатор в обществени профили"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Премести списъка с игри в инвентара настрани"
+	},
+	"options_link_inventory": {
+		"message": "Добави връзка към SteamDB за подаръци и купони за намаление в инвентара"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Не обновявай инвентара, когато се продаде артикул"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Добави бутони за бърза продажба"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Автоматично приемане на бърза продажба"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Покажи ниво на значка при карти за размяна и допълнителни пакети"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Поддръжка на $for_item$ и $my_item$ параметри",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Вижте обяснението в GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Потискане на предупрежденията „Тази оферта изглежда подозрително“ и „Сигурни ли сте, че това е подарък?“ при оферти за търговия"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Показване на детайлни съобщения за грешки, вместо загадъчните кодове на Valve"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Прескочи проверката на възрастта"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Наглася бисквитките за възраст и дата на раждане да се приемат винаги"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Премахни предупреждението „Напускате Steam“ за външни сайтове",
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Автоматично приеми „Условия за ползване на Steam“ на страниците на пазара, инвентара и активиране на ключове",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Скрий бутона „Инсталирайте Steam“ в горната лента",
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Скрий банера „Отвори в Steam“"
+	},
+	"options_steamdb_rating": {
+		"message": "Покажи SteamDB рейтинг на продуктовата страница"
+	},
+	"options_enhancement_appicon": {
+		"message": "Покажи икона на продукта на страниците на магазина и общността",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "Подобряване на страницата с лични постижения"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Покажи процента на играчите отключили постиженията"
+	},
+	"options_modernized_achievements": {
+		"message": "Модернизиран дизайн"
+	},
+	"options_achievement_groups": {
+		"message": "Групиране на постиженията с данни от Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Постави скрити постижения зад спойлър"
+	},
+	"options_prevent_store_images": {
+		"message": "Спри зареждането на изображения на продуктовите страници"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Някои разработчици слагат в описанията на продуктите по-тежки изображения, които може да се зареждат по-бавно. Щракнете върху дадено изображение, за да се зареди"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Поддръжка на $award$ параметри на връзки към профили и споделени файлове",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "Добави бутон за свиване на блока „вече е в библиотеката Ви“"
+	},
+	"options_builtin_card_drops": {
+		"message": "Покажи общия брой оставащи падания на карти на страницата със значки"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Добави бутон за прескачане на опашката за откриване по време на разпродажби"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Връщане към страницата за напредък на значка след закупуване на оставащите карти"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Подобряване на страницата с глобални постижения"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Връзка към страницата с лични постижения"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Отбележи с катинар заключените постижения"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Покажи история на CS рейтинга на страницата с постижения на CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Няма да можете да създадете нов допълнителен пакет за тази игра до $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
+	}
+}

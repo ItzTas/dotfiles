@@ -1,0 +1,657 @@
+{
+	"extension_description": {
+		"message": "إضافة روابط SteamDB والميزات الجديدة على متجر ومجتمع Steam. عرض أقل الأسعار وإحصائيات اللعبة.",
+		"description": "This value can be up to 132 characters."
+	},
+	"steamdb_options": {
+		"message": "خيارات SteamDB"
+	},
+	"steamdb_calculator": {
+		"message": "حاسبة SteamDB"
+	},
+	"steamstatus": {
+		"message": "تحقق في $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "يبدو أن Steam يعاني بعض الأعطال. "
+	},
+	"view_on_steamdb": {
+		"message": "عرض على SteamDB"
+	},
+	"view_on_steam_hunters": {
+		"message": "عرض على Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "عرض على PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "الإنجازات الشخصية"
+	},
+	"store_page": {
+		"message": "صفحة المتجر",
+		"description": "This translation should match how Steam translates it on community hubs"
+	},
+	"search": {
+		"message": "البحث"
+	},
+	"in_library": {
+		"message": "في المكتبة",
+		"description": "Indicates that the user owns this product"
+	},
+	"app_steamdb_rating": {
+		"message": "تقييم SteamDB:"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ من $total$ مراجعات إيجابية (جميع طرق الشراء)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "آخر تحديث:"
+	},
+	"app_depots_updated_short": {
+		"message": "تاريخ التحديث",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "إحصائيات المتصلين"
+	},
+	"app_stats_online_now": {
+		"message": "متصل الآن:"
+	},
+	"app_stats_peak_today": {
+		"message": "الذروة على مدار 24 ساعة:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "الذروة الإجمالية:"
+	},
+	"app_stats_followers": {
+		"message": "المتابِعون:"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB أدنى سعر متاح هو <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB أدنى سعر مسجل هو <b>$price$</b> بخصم <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "أدنى سعر مسجل لـ SteamDB هو <b>$price$</b> و أدنى سعر في العامين الماضيين هو <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "السعر شوهد بتاريخ $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "سعر شوهد $seen$ مرات، آخر مرة بتاريخ $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"agecheck_option_hint": {
+		"message": "SteamDB لديه خِيار لتخطي صفحات التحقق من العمر تلقائياً"
+	},
+	"explore_auto_discover": {
+		"message": "اكتشاف تلقائي"
+	},
+	"explore_auto_discover_description": {
+		"message": "اكتشف قائمة الانتظار تلقائياً."
+	},
+	"explore_generating": {
+		"message": "إنشاء قائمة انتظار اكتشاف جديدة، هذا يمكن أن يفشل إذا كان Steam تحت ضغط عالي…"
+	},
+	"explore_exploring": {
+		"message": "استكشاف قائمة الانتظار… طلب $current$ من $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "فشل مسح قائمة الانتظار مرات عديده. يمكنك المحاولة مرة أخرى لاحقاً."
+	},
+	"explore_finished": {
+		"message": "تم استكشاف قائمة الانتظار."
+	},
+	"badges_idle_apps": {
+		"message": "تطبيقات في حالة خمول: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "تطبيقات في حالة الخمول على هذه الصفحة: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "العناصر المتبقية: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "العناصر المتبقية في هذه الصفحة: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "الإنجازات المخفية: "
+	},
+	"achievement_global_unlock": {
+		"message": "$percent$ من اللاعبين لديهم هذا الإنجاز",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "الإنجازات المفتوحة: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "الإنجازات المغلقة: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "ترتيب حسب الوقت"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "مجموعات الإنجازات متوفرة من قبل Steam Hunters عن طريق SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "الموسم $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "التاريخ"
+	},
+	"achievements_csrating_name": {
+		"message": "تصنيف CS"
+	},
+	"inventory_quick_sell_tip": {
+		"message": "حرك الماوس فوق السعر للبيع",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
+	"inventory_list_at": {
+		"message": "إعرض بسعر $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "بيع بسعر $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_badge_level": {
+		"message": "مستوى الشارة الخاصة بك: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "مستوى الشارة الخاصة بك: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "لا توجد شارة مصنوعة"
+	},
+	"spoilers_reveal": {
+		"message": "كشف تفاصيل القصة",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "الرسوم البيانية"
+	},
+	"popup_sales": {
+		"message": "المبيعات"
+	},
+	"popup_calendar": {
+		"message": "التقويم"
+	},
+	"popup_patches": {
+		"message": "التصحيحات"
+	},
+	"popup_calculator": {
+		"message": "حاسبة"
+	},
+	"options": {
+		"message": "الخيارات"
+	},
+	"options_welcome_title": {
+		"message": "👋 شكرًا لتثبيت إضافة SteamDB!"
+	},
+	"options_welcome_description": {
+		"message": "راجع الخيارات أدناه وقم بتحديد الخيارات التي تفضلها. للعودة إلى هنا في المستقبل:"
+	},
+	"options_welcome_option1": {
+		"message": "صفحة الإعدادات على SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "القائمة المنسدلة للحساب على صفحات Steam"
+	},
+	"options_welcome_option3": {
+		"message": "صفحة الإضافات في متصفحك"
+	},
+	"options_review": {
+		"message": "أترك تعليقًا على هذه الإضافة"
+	},
+	"options_permissions_description": {
+		"message": "هذه الإضافة تتطلب أذونات إضافية للعمل بشكل صحيح على SteamDB و Steam Store، و Steam Community."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ منح الصلاحيات"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 تمكين دعم Steam China"
+	},
+	"options_footer1": {
+		"message": "صنع مع 💙 بواسطة <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "إنه <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">مفتوح المصدر</a>، شكراً لكل المساهمين!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* الاختيارات المعطلة تشير إلى ميزات مدمجة."
+	},
+	"options_header_website": {
+		"message": "موقع SteamDB"
+	},
+	"options_header_extra_data": {
+		"message": "بيانات إضافية"
+	},
+	"options_header_buttons_and_links": {
+		"message": "الأزرار والروابط"
+	},
+	"options_header_inventory": {
+		"message": "المخزون"
+	},
+	"options_header_trade_offers": {
+		"message": "عروض المبادلة"
+	},
+	"options_header_achievements": {
+		"message": "الإنجازات"
+	},
+	"options_header_enhancements": {
+		"message": "التحسينات"
+	},
+	"options_website_explanation": {
+		"message": "الشرح"
+	},
+	"options_website_explanation1": {
+		"message": "عند تفعيل هذا الخيار، ستطلب الإضافة بعض من بيانات المستخدم (قائمة الأمنيات، المملوكة، المتابعة، المنتجات المتجاهله، والمنتجات في عربة التسوق) من <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> وسوف يتم استخدام هذه البيانات لأضافة highlights على الموقع."
+	},
+	"options_website_explanation2": {
+		"message": "يجب عليك تسجيل الدخول في المتجر من أجل أن يعمل هذا."
+	},
+	"options_website_explanation3": {
+		"message": "هذا موجود بالكامل داخل المتصفح الخاص بك ولن يتم إرساله إلى الواجهة الخلفية لـ SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "لمنع الطلبات الزائدة على متجر Steam، يتم تخزين بيانات المستخدم الخاص بك في التخزين المحلي لمتصفحك."
+	},
+	"options_website_highlight": {
+		"message": "إبراز المنتجات المملوكة والمتمنية على $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "قائمة الرغبات، متابعة، وتجاهل المنتجات على متجر Steam مباشرة من SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">تفعيل البرنامَج النصي للحزم المجانية</a>"
+	},
+	"options_website_highlight3": {
+		"message": "تفعيل التصفية الإضافية على <a href=\"https://steamdb.info/sales/\" target=\"_blank\">صفحة التخفيضات</a> و <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">صفحة الحزم</a>"
+	},
+	"options_website_family": {
+		"message": "تمييز التطبيقات المملوكة من قبل أفراد العائلة (يتطلب طلب إضافي)"
+	},
+	"options_extra_data": {
+		"message": "بيانات إضافية تم جلبها من $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "عندما يتم تفعيل خيار \"$options_online_stats$\" أو \"$options_steamdb_last_update$\"، ستقوم الإضافة بإجراء طلب آمن إلى $domain$ للحصول على العدد الحالي من اللاعبين و آخر تحديث للعبة.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "عندما يتم تفعيل خيار \"$options_steamdb_lowest_price$\" ، ستقوم الإضافة بإجراء طلب آمن إلى $domain$ بعملتك (مع ما يعتقد Steam أنها موجودة) للحصول على السعر المسجل للعبة معينة.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "عندما يتم تفعيل خيار \"$options_achievement_groups$\"، الإضافة سوف تقدم طلباً آمناً إلى $domain$ للقيام بتجميع الإنجازات في صفحة الإنجازات الشخصية مع البيانات المقدمة من Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "عرض أقل سعر مسجل على صفحات المنتج"
+	},
+	"options_online_stats": {
+		"message": "عرض عدد اللاعبين الحاليين وأعلى عدد لاعبين تم تسجيله على صفحات المنتج"
+	},
+	"options_steamdb_last_update": {
+		"message": "عرض آخر تحديث على صفحات المنتج"
+	},
+	"options_button_app": {
+		"message": "عرض زر على صفحات المنتج"
+	},
+	"options_button_pcgw": {
+		"message": "عرض زر PCGamingWiki على صفحات المنتج"
+	},
+	"options_button_sub": {
+		"message": "عرض زر على صفحات الحزمة"
+	},
+	"options_button_gamehub": {
+		"message": "عرض زر على صفحات المجتمع"
+	},
+	"options_button_gamecards": {
+		"message": "عرض أزرار صفحة SteamDB وصفحة المتجر على صفحة بطاقات الألعاب"
+	},
+	"options_steamdb_dev_pub_links": {
+		"message": "عرض روابط SteamDB بجانب أسماء المطور والناشر"
+	},
+	"options_link_subid": {
+		"message": "عرض SubID تحت كل خيار شراء"
+	},
+	"options_link_subid_widget": {
+		"message": "عرض SubID في عناصر واجهة المستخدم في التطبيق",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "ربط كل حزمة على صفحة التراخيص الخاصة بك"
+	},
+	"options_profile_calculator": {
+		"message": "أضف رابط آلة حاسبة على ملفات المجتمع الشخصيّة"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "نقل اختيار اللعبة في صفحة المخزون إلى الجانب"
+	},
+	"options_link_inventory": {
+		"message": "ربط كل هدية وقسيمة في مخزونك ب SteamDB"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "لا تقم بتحديث المخزون عند بيع عنصر ما"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "إضافة أزرار البيع السريع"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "قبول البيع السريع تلقائياً"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "عرض مستوى الشارة على بطاقات التداول وحزم التعزيز"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "دعم المعلمات $for_item$ و $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "رؤية الشرح على GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "إيقاف تنبيهات المبادلة \"تبدو هذه التجارة مشبوهة\" و \"هل أنت متأكد أن هذه هدية؟\""
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "عرض رسائل الأخطاء بشكل أفضل, بدلاً من أرقام الأخطاء المشفرة من Valve"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "تخطي صفحة التحقق من العمر"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "يحدد ملفات تعريف الارتباط للعمر وتاريخ الميلاد لتكون دائمًا صالحة"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "إزالة فلتر الروابط التحذيرية \"أنت سوف تترك موقع Steam\" عن المواقع الخارجية",
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "قَبُول الشروط, لتصفح السوق والمخزن وصفحة تنشيط المفتاح",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "إخفاء زر \"تثبيت الشاشة\" في رأس الصفحة",
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "إخفاء شعار ”فتح في Steam“"
+	},
+	"options_steamdb_rating": {
+		"message": "عرض تقييم SteamDB في صفحات المنتج"
+	},
+	"options_enhancement_appicon": {
+		"message": "عرض أيقونة المنتج على صفحات المتجر والمجتمع",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "تحسين صفحة الإنجازات الشخصية"
+	},
+	"options_achievements_global_unlock": {
+		"message": "عرض نسبة فتح الإنجازات العالمية"
+	},
+	"options_modernized_achievements": {
+		"message": "تصميم حديث"
+	},
+	"options_achievement_groups": {
+		"message": "تجميع الإنجازات مع البيانات من Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "وضع الإنجازات المخفية وراء عنصر حرق أحداث"
+	},
+	"options_prevent_store_images": {
+		"message": "إيقاف الصور من التحميل على صفحات المنتج"
+	},
+	"options_prevent_store_images_description": {
+		"message": "بعض المطورين يضعون ميغابايت من الصور في أوصاف المنتجات التي يمكن أن تستغرق بعض الوقت لتحميلها، انقر على صورة لتحميلها"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "دعم معلمات $award$ على الروابط الشخصية وروابط الملفات المشتركة",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "أضف زر لطي قسم \"يوجد في مكتبتك\""
+	},
+	"options_builtin_card_drops": {
+		"message": "عرض المبلغ الإجمالي لإسقاط البطاقات المتبقية على صفحة الشارات"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "إضافة زر لعرض قائمة الانتظار تِلْقائيًا في أثناء الخصومات"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "إعادة التوجيه إلى صفحة بطاقات اللعبة بعد شراء البطاقات المتبقية"
+	},
+	"options_builtin_achievements_global": {
+		"message": "تحسين صفحة الإنجازات العالمية"
+	},
+	"options_builtin_achievements_link": {
+		"message": "الربط بصفحة الإنجازات الخاصة بك"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "عرض أيقونة قُفْل للإنجازات المغلقة"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "عرض سجل تصنيف CS على صفحة إنجازات CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "لن تتمكن من إنشاء حزمة معززة أخرى لهذه اللعبة حتى $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
+	}
+}

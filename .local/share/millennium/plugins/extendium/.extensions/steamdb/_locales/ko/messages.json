@@ -1,0 +1,657 @@
+{
+	"extension_description": {
+		"message": "SteamDB 링크와 새로운 기능을 Steam 스토어 및 커뮤니티에 추가해 최저 게임 가격 및 통계를 볼 수 있습니다.",
+		"description": "This value can be up to 132 characters."
+	},
+	"steamdb_options": {
+		"message": "SteamDB 설정"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB 계산기"
+	},
+	"steamstatus": {
+		"message": "$domain$에서 확인",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "Steam에 약간의 다운타임이 발생하고 있는 것 같습니다. "
+	},
+	"view_on_steamdb": {
+		"message": "SteamDB에서 보기"
+	},
+	"view_on_steam_hunters": {
+		"message": "Steam Hunters에서 보기",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "PCGamingWiki 에서 보기"
+	},
+	"view_your_achievements": {
+		"message": "개인 도전 과제"
+	},
+	"store_page": {
+		"message": "상점 페이지",
+		"description": "This translation should match how Steam translates it on community hubs"
+	},
+	"search": {
+		"message": "검색"
+	},
+	"in_library": {
+		"message": "라이브러리에 있음",
+		"description": "Indicates that the user owns this product"
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB 평가:"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$total$개의 리뷰 중 $positive$개 리뷰가 긍정적 (모든 구매 유형)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "최근 업데이트:"
+	},
+	"app_depots_updated_short": {
+		"message": "업데이트",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "온라인 통계"
+	},
+	"app_stats_online_now": {
+		"message": "현재 온라인:"
+	},
+	"app_stats_peak_today": {
+		"message": "24시간 동시접속자:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "최고 동시접속자:"
+	},
+	"app_stats_followers": {
+		"message": "팔로워:"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB에 기록된 최저가격: <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB에 기록된 최저가격: <b>$price$</b>, 할인율: <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB에 기록된 최저가격: <b>$price$</b>, 최근 2년 이내 최저가격: <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "$date$에 표시된 가격 ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "$seen$번 표시된 가격, 마지막으로 $date$에 표시 ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"agecheck_option_hint": {
+		"message": "SteamDB에는 이러한 연령 확인 페이지를 자동으로 건너뛸 수 있는 설정이 있습니다"
+	},
+	"explore_auto_discover": {
+		"message": "자동 탐색"
+	},
+	"explore_auto_discover_description": {
+		"message": "대기열을 자동으로 탐색합니다."
+	},
+	"explore_generating": {
+		"message": "새로운 탐색 대기열을 생성하는 중입니다. Steam 부하가 높으면 실패할 수 있습니다…"
+	},
+	"explore_exploring": {
+		"message": "대기열 탐색 중... $total$번 중 $current$번째 요청",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "대기열을 여러번 탐색하지 못했습니다. 나중에 다시 시도하세요."
+	},
+	"explore_finished": {
+		"message": "대기열 탐색이 완료되었습니다."
+	},
+	"badges_idle_apps": {
+		"message": "카드 획득 가능한 제품: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "이 페이지에서 카드 획득 가능한 제품: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "남은 카드: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "이 페이지에 남은 카드: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "숨겨진 도전 과제: "
+	},
+	"achievement_global_unlock": {
+		"message": "$percent$의 플레이어가 이 도전 과제를 달성했습니다.",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "달성한 도전 과제: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "잠긴 도전 과제: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "시간순으로 정렬"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "도전 과제 그룹은 SteamDB를 통해 Steam Hunters에서 제공됩니다.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "시즌 $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "날짜"
+	},
+	"achievements_csrating_name": {
+		"message": "CS 등급"
+	},
+	"inventory_quick_sell_tip": {
+		"message": "가격에 마우스를 올려 판매",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
+	"inventory_list_at": {
+		"message": "$price$에 등록",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "$price$에 판매",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_badge_level": {
+		"message": "배지 레벨: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "은박 배지 레벨: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "배지가 제작되지 않았습니다"
+	},
+	"spoilers_reveal": {
+		"message": "스포일러 표시",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "차트"
+	},
+	"popup_sales": {
+		"message": "할인"
+	},
+	"popup_calendar": {
+		"message": "캘린더"
+	},
+	"popup_patches": {
+		"message": "패치"
+	},
+	"popup_calculator": {
+		"message": "계산기"
+	},
+	"options": {
+		"message": "설정"
+	},
+	"options_welcome_title": {
+		"message": "👋 SteamDB 확장 프로그램을 설치해주셔서 감사합니다!"
+	},
+	"options_welcome_description": {
+		"message": "아래의 설정을 확인하고 적용하고 싶은 항목을 선택하세요. 다시 설정창으로 돌아오려면 아래의 위치에서 확인할 수 있습니다."
+	},
+	"options_welcome_option1": {
+		"message": "SteamDB 설정 페이지"
+	},
+	"options_welcome_option2": {
+		"message": "Steam 계정 드롭다운 창"
+	},
+	"options_welcome_option3": {
+		"message": "사용 중인 브라우저 확장 프로그램 관리 페이지"
+	},
+	"options_review": {
+		"message": "이 확장 프로그램에 대한 리뷰를 남겨주세요"
+	},
+	"options_permissions_description": {
+		"message": "이 확장 프로그램은 SteamDB, Steam 상점, Steam 커뮤니티에서 정상적인 동작을 위해 추가적인 권한이 필요합니다."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ 권한 부여"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Steam China 지원 활성화"
+	},
+	"options_footer1": {
+		"message": "<a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> 친구들이 💙과 함께 만들었습니다."
+	},
+	"options_footer2": {
+		"message": "이 확장 프로그램은 <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">오픈 소스</a>입니다. 모든 기여자 분들께 감사의 인사를 드립니다!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* 비활성화된 체크박스는 내장된 기능을 나타냅니다."
+	},
+	"options_header_website": {
+		"message": "SteamDB 웹사이트"
+	},
+	"options_header_extra_data": {
+		"message": "추가 데이터"
+	},
+	"options_header_buttons_and_links": {
+		"message": "버튼과 링크"
+	},
+	"options_header_inventory": {
+		"message": "보관함"
+	},
+	"options_header_trade_offers": {
+		"message": "거래 제안"
+	},
+	"options_header_achievements": {
+		"message": "도전 과제"
+	},
+	"options_header_enhancements": {
+		"message": "개선사항"
+	},
+	"options_website_explanation": {
+		"message": "설명"
+	},
+	"options_website_explanation1": {
+		"message": "이 설정을 활성화하면, <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam 상점</a>에 일부 사용자 데이터(찜하기, 소유함, 팔로우, 제외하기 되거나 장바구니에 있는 아이템)를 요청하며 이를 현재 사이트에서 하이라이트 하는 데 사용합니다."
+	},
+	"options_website_explanation2": {
+		"message": "이 설정이 작동하려면 상점에 로그인되어 있어야합니다."
+	},
+	"options_website_explanation3": {
+		"message": "이 정보는 오직 브라우저에만 저장되며, 절대 SteamDB 백엔드로 전송되지 않습니다."
+	},
+	"options_website_explanation4": {
+		"message": "Steam 상점에 과도한 요청 전송을 막기 위해, 귀하의 정보는 브라우저의 로컬 스토리지에 캐시되어 있습니다."
+	},
+	"options_website_highlight": {
+		"message": "$domain$에서 소유하거나 찜한 제품 강조",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "SteamDB에서 Steam 상점의 제품을 직접 찜 목록에 추가, 팔로우, 제외 가능"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">무료 패키지 스크립트 활성화</a>"
+	},
+	"options_website_highlight3": {
+		"message": "<a href=\"https://steamdb.info/sales/\" target=\"_blank\">할인 페이지</a> 및 <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">번들 페이지</a> 추가 필터링 활성화"
+	},
+	"options_website_family": {
+		"message": "가족 소유 앱 강조 표시(추가 요청 필요)"
+	},
+	"options_extra_data": {
+		"message": "$domain$에서 가져온 추가 데이터",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "\"$options_online_stats$\" 또는 \"$options_steamdb_last_update$\" 설정이 활성화되면, 확장 프로그램은 $domain$에 보안 요청을 수행하여 현재 플레이어 수와 마지막 게임 업데이트를 가져옵니다.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "\"$options_steamdb_lowest_price$\" 설정이 활성화되면, 확장 프로그램은 특정 게임에 대해 기록된 가격을 얻기 위해 귀하의 통화(Steam 에 설정된 통화) 를 사용하여 $domain$에 보안 요청을 수행합니다.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "\"$options_achievement_groups$\" 설정이 활성화되면, 확장 프로그램은 Steam Hunters가 제공한 데이터를 사용하여 개인 도전 과제 페이지에서 도전 과제 그룹화를 수행하도록 $domain$에 보안 요청을 수행합니다.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "제품 페이지에 기록된 최저가 표시"
+	},
+	"options_online_stats": {
+		"message": "제품 페이지에 동시 접속 플레이어 및 최고치 표시"
+	},
+	"options_steamdb_last_update": {
+		"message": "제품 페이지에 최근 업데이트 표시"
+	},
+	"options_button_app": {
+		"message": "제품 페이지에 버튼 표시"
+	},
+	"options_button_pcgw": {
+		"message": "제품 페이지에 PCGamingWiki 버튼 표시"
+	},
+	"options_button_sub": {
+		"message": "패키지 페이지에 버튼 표시"
+	},
+	"options_button_gamehub": {
+		"message": "커뮤니티 허브에 버튼 표시"
+	},
+	"options_button_gamecards": {
+		"message": "게임 카드 페이지에 SteamDB 및 상점 페이지 버튼 표시"
+	},
+	"options_steamdb_dev_pub_links": {
+		"message": "개발자 및 배급사 이름 옆에 SteamDB 링크 표시"
+	},
+	"options_link_subid": {
+		"message": "각 구매 옵션 아래에 SubID 표시"
+	},
+	"options_link_subid_widget": {
+		"message": "임베드 위젯에 SubID 표시",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "라이선스 페이지에 각 패키지 연결"
+	},
+	"options_profile_calculator": {
+		"message": "커뮤니티 프로필에 계산기 주소 추가"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "보관함 페이지의 게임 선택을 옆으로 이동"
+	},
+	"options_link_inventory": {
+		"message": "보관함에 보유한 선물과 쿠폰을 SteamDB에 연결하기"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "아이템을 판매할 때 보관함 새로고침 하지 않기"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "빠른 판매 버튼 추가"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "자동으로 빠른 판매 수락"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "트레이딩 카드 및 부스터 팩에 배지 레벨 표시"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "$for_item$ 및 $my_item$ 매개변수 지원",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "GitHub 에서 설명 확인하기"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "거래 제안 알림 \"이 거래가 의심스러워 보입니다\" 및 \"선물이 확실합니까?\" 차단"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Valve의 암호화된 오류 숫자들 대신, 더 나은 오류 문구들을 표시"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "나이 확인 페이지 건너뛰기"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "나이와 생일 쿠키를 설정하고 항상 건너뛰기"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "외부 사이트에서 “Steam 을 벗어납니다” 링크 필터 제거",
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "장터, 보관함, 키 활성화 페이지에서 이용 약관 수락 자동 활성화",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "\"Steam 설치\" 버튼 숨기기",
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "\"Steam 에서 열기\" 배너 숨기기"
+	},
+	"options_steamdb_rating": {
+		"message": "제품 페이지에 SteamDB 평가 표시"
+	},
+	"options_enhancement_appicon": {
+		"message": "상점과 커뮤니티 페이지에 제품 아이콘 표시",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "개인 도전 과제 페이지 개선하기"
+	},
+	"options_achievements_global_unlock": {
+		"message": "전체 도전 과제 달성률 표시하기"
+	},
+	"options_modernized_achievements": {
+		"message": "모던 디자인 적용하기"
+	},
+	"options_achievement_groups": {
+		"message": "Steam Hunters의 데이터를 사용한 도전 과제 그룹화",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "숨겨진 도전 과제를 스포일러로 취급하기"
+	},
+	"options_prevent_store_images": {
+		"message": "제품 페이지의 이미지 불러오지 않기"
+	},
+	"options_prevent_store_images_description": {
+		"message": "일부 개발사는 제품 설명란에 큰 이미지를 넣어 로딩이 길어질 수 있습니다. 클릭하여 이미지를 로딩하세요."
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "프로필 및 공유 파일 링크에서 $award$ 매개변수 지원",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "\"이미 라이브러리에 있음\" 블록 축소 버튼 추가"
+	},
+	"options_builtin_card_drops": {
+		"message": "배지 페이지에 남은 카드 개수 표시"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "할인 중에 대기열을 자동으로 탐색하는 버튼 추가"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "남은 카드 구매 후 게임 카드 페이지로 리디렉션"
+	},
+	"options_builtin_achievements_global": {
+		"message": "전체 도전 과제 페이지 향상"
+	},
+	"options_builtin_achievements_link": {
+		"message": "내 도전 과제 페이지로 바로가기"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "잠긴 도전 과제에 자물쇠 아이콘 표시"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "CS2 도전 과제 페이지에 CS 등급 기록 표시"
+	},
+	"boostercreator_available_at_date": {
+		"message": "$available_date$까지 이 게임에 대한 다른 부스터 팩을 제작할 수 없습니다.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
+	}
+}
