@@ -275,6 +275,10 @@ upgrady() {
 
 		update_zsh_plugins
 
+		if (( ${+commands[yadm]} )); then
+            yadm submodule update --init --remote --merge
+        fi
+
 		if (( ${+commands[yadm_update]} )); then
 			yadm_update
 		fi

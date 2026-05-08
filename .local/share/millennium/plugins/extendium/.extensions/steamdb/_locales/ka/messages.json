@@ -1,0 +1,657 @@
+{
+	"extension_description": {
+		"message": "ამატებს SteamDB-ს ლინკებს და ახალ ფუნქციებს Steam-ის მაღაზიასა და ქომუნითში. ნახე თამაშების უმცირესი ფასები და მათი მონაცემები.",
+		"description": "This value can be up to 132 characters."
+	},
+	"steamdb_options": {
+		"message": "SteamDB პარამეტრები"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB კალკულატორი"
+	},
+	"steamstatus": {
+		"message": "შეამოწმე $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "როგორც ჩანს Steam-ზე შეფერხება არის. "
+	},
+	"view_on_steamdb": {
+		"message": "ნახე SteamDB-ზე"
+	},
+	"view_on_steam_hunters": {
+		"message": "Steam Hunters -ზე ნახვა",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "ნახე PCGamingWiki-ზე"
+	},
+	"view_your_achievements": {
+		"message": "პირადი მიღწევები"
+	},
+	"store_page": {
+		"message": "მაღაზია",
+		"description": "This translation should match how Steam translates it on community hubs"
+	},
+	"search": {
+		"message": "ძებნა"
+	},
+	"in_library": {
+		"message": "ბიბლიოთეკაში",
+		"description": "Indicates that the user owns this product"
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB შეფასება:"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$total$ მიმოხილვიდან $positive$ არის პოზიტიური (ყიდვის ყველა ტიპი)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "ბოლი განახლება:"
+	},
+	"app_depots_updated_short": {
+		"message": "განახლებულია",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "ონლაინ მონაცემები"
+	},
+	"app_stats_online_now": {
+		"message": "ონლაინ ახლა:"
+	},
+	"app_stats_peak_today": {
+		"message": "24-საათიანი პიკი:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "ყველა დროის პიკი:"
+	},
+	"app_stats_followers": {
+		"message": "ფოლოვერები:"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB-ზე ყველაზე დაბალი დაფიქსირებული ფასი არის <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB-ზე ყველაზე დაბალი დაფიქსირებული ფასი არის <b>$price$</b> <b>$discount$</b>-ან ფასდაკლებაზე",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB-ზე ყველაზე დაბალი დაფიქსირებული ფასი არის <b>$price$</b> და ბოლო 2 წლის განმავლობაში ყველაზე დაბალი ფასია <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "ფასი ნანახია $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "ფასი ნანახია $seen$- ჯერ, ბოლოს $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"agecheck_option_hint": {
+		"message": "SteamDB-ს შეუძლია ავტომატურად გამოტოვოს ეს წლოვანების შესამოწმებელი გვერდი"
+	},
+	"explore_auto_discover": {
+		"message": "ავტომატური აღმოჩენა"
+	},
+	"explore_auto_discover_description": {
+		"message": "ავტომატურად გამოაჩინე რიგი."
+	},
+	"explore_generating": {
+		"message": "იქმნება ახალი აღმოჩენის რიგი, ეს შეიძლება არ მოხდეს თუ Steam დიდი დატვირთვის ქვეშაა…"
+	},
+	"explore_exploring": {
+		"message": "მოწმდება რიგი... მოთხოვნა $current$ $total$-დან",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "სიის ნახვის ძალიან ბევრი მცდელობა. გთხოვთ, სცადოთ მოგვიანებით."
+	},
+	"explore_finished": {
+		"message": "რიგი დათვალიერებულია."
+	},
+	"badges_idle_apps": {
+		"message": "აპების რაოდენობა სადაც შესაძლებელია დროპების დაგდება: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "აპების რაოდენობა სადაც შესაძლებელია დროპების დაგდება ამ გვერდზე: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "დარჩა $amount$ დროპი",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "ამ გვერდზე დარჩა $amount$ დროპი",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "დამალული მიღწევა: "
+	},
+	"achievement_global_unlock": {
+		"message": "მოთამაშეების $percent$ -ს აქვს ეს ჯილდო",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "მიღწეული ჯილდოები: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "ჩაკეტილი ჯილდოები: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "სორტირება დროის მიხედვით"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "მიღწევების ჯგუფებს უზრუნველყოფენ Steam Hunters-ის მეშვეობით SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "სეზონი $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "თარიღი"
+	},
+	"achievements_csrating_name": {
+		"message": "რეიტინგი CS"
+	},
+	"inventory_quick_sell_tip": {
+		"message": "გასაყიდად მიიტანეთ მაუსი ფასზე",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
+	"inventory_list_at": {
+		"message": "დადე მარკეტზე $price$-ად",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "გაყიდე მარკეტზე $price$-ად",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_badge_level": {
+		"message": "თქვენი ბეჯის დონე: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "თქვენი ლითონის ბეჯის დონე: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "ბეჯი არ არის დამუშავებული"
+	},
+	"spoilers_reveal": {
+		"message": "სპოილერების ნახვა",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "სქემები"
+	},
+	"popup_sales": {
+		"message": "ფასდაკლებები"
+	},
+	"popup_calendar": {
+		"message": "კალენდარი"
+	},
+	"popup_patches": {
+		"message": "განახლებები"
+	},
+	"popup_calculator": {
+		"message": "კალკულატორი"
+	},
+	"options": {
+		"message": "პარამეტრები"
+	},
+	"options_welcome_title": {
+		"message": "👋 მადლობა SteamDB-ს გადმოწერისთვის!"
+	},
+	"options_welcome_description": {
+		"message": "გადახედე პარამეტრებს და ჩართე რომლებიც გირჩევნია. ამ გვერდზე დასაბრუნებლად:"
+	},
+	"options_welcome_option1": {
+		"message": "პარამეტრების გვერდი SteamDB-ზე"
+	},
+	"options_welcome_option2": {
+		"message": "ექაუნთების არჩევანი Steam-ის გვერდებზე"
+	},
+	"options_welcome_option3": {
+		"message": "შენი ბრაუზერის addon-ების გვერდი"
+	},
+	"options_review": {
+		"message": "დატოვე შეფასება ამ extension-ისთვის"
+	},
+	"options_permissions_description": {
+		"message": "ამ extension-ს ჭირდება დამატებითი უფლებები რომ იმუშავოს სწორად SteamDB, Steam-ის მაღაზიასა და Steam-ის ქომუნითიზე."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ მიანიჭე უფლებები"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 ჩართე Steam China მხარდაჭერა"
+	},
+	"options_footer1": {
+		"message": "გაკეთებული💙-ით <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB-ს</a> ხალხისგან."
+	},
+	"options_footer2": {
+		"message": "ის არის<a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">გახსნილი</a>, მადლობას ვუხდით ყველას ვინც მონაწილეობა მიიღო!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* გამორთული ჩექბოქსები მიანიშნებენ ჩაშენებულ ფუნქციებს."
+	},
+	"options_header_website": {
+		"message": "SteamDB-ს საიტი"
+	},
+	"options_header_extra_data": {
+		"message": "დამატებითი ინფორმაცია"
+	},
+	"options_header_buttons_and_links": {
+		"message": "ღილაკები და ლინკები"
+	},
+	"options_header_inventory": {
+		"message": "ინვენტარი"
+	},
+	"options_header_trade_offers": {
+		"message": "ტრეიდის შემოთავაზებები"
+	},
+	"options_header_achievements": {
+		"message": "ჯილდოები"
+	},
+	"options_header_enhancements": {
+		"message": "ენჰანსმენტები"
+	},
+	"options_website_explanation": {
+		"message": "ახსნა"
+	},
+	"options_website_explanation1": {
+		"message": "როდესაც ეს ფუნქცია ჩართულია extension მოითხოვს მონაცემებს(ვიშლისთშ, ნაყიდ თამაშებს, დაფოლოვებულს, დაიგნორებულ პროდუქტებს, და კალათაში დამატებულ პროდუქტებს) <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam-ის მაღაზიიდან</a> და გამოიყენებს მას საიტზე მონაცემების გამოსაკვეთად."
+	},
+	"options_website_explanation2": {
+		"message": "უნდა იყო შესული Steam-ის მაღაზიაში რომ ამან იმუშავოს."
+	},
+	"options_website_explanation3": {
+		"message": "ეს მთლიანად თქვენს ბრაუზერშია და არასდროს იგზავნება SteamDB-ის შიდა სისტემებშიც კი."
+	},
+	"options_website_explanation4": {
+		"message": "შენი მონაცემები ინახება შენს ბრაუზერში რომ არ ზედმეტი მოთხოვნა Steam-ის მაღაზიაზე."
+	},
+	"options_website_highlight": {
+		"message": "გამოკვეთე ნაქონი და ვიშლისთში დამატებული პროდუქტები $domain$-ზე",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "დაავიშლისთე, დააფოლოვე და დააიგნორე პროდუქტები Steam-ის მაღაზიაზე პირდაპის SteamDB-ს საშუალებით"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">გააქტიურე უფასო პროდუქტების სკრიპტი</a>"
+	},
+	"options_website_highlight3": {
+		"message": "დაუშვი დამატებითი გაფილტვრა <a href=\"https://steamdb.info/sales/\" target=\"_blank\">-ს გაყიდვების გვერდზე</a> და <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">-ს კრებულების გვერდზე </a>"
+	},
+	"options_website_family": {
+		"message": "მონიშნეთ ოჯახით კუთვნილი აპები (საჭიროებს დამატებით მოთხოვნას)"
+	},
+	"options_extra_data": {
+		"message": "დამატებითი მონაცემები აღებულია $domain$-დან",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "როდესაც \"$options_online_stats$\"-ს ან \"$options_steamdb_last_update$\"-ს ფუნქციები ჩართულია, SteamDB გააგზავნის დაცულ მოთხოვნას $domain$ რომ მიიღოს ამჟამინდელი მოთამაშეების რაოდენობა და თამაშის ბოლო განახლება.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "როდესაც \"$options_steamdb_lowest_price$\" არის ჩართული, SteamDB გააგზავნის უსაფრთხო მოთხოვნას $domain$-ზე და მისცემს მას შენს ვალუტას (იმ ვალუტას რომელიც Steam-ს გონია) რომ გამოსახოს ჩაწერილი ფასი კონკრეტულ თამაშისთვის.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "როდესაც \"$options_achievement_groups$\" ოფცია არის ჩართული, გაფართოება გააკეთებს დაცულ მოთხოვნას $domain$ -ზე რომ გააკეთოს ჯილდოების დაჯგუფება პირადი ჯილდოების გვერდზე ინფორმაციით რომელიც წარმოდგენილია Steam Hunters -ის მიერ.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "გამოაჩინოს ყველაზე დაბალი ჩაწერილი ფასი პროდუქტის გვერდებზე"
+	},
+	"options_online_stats": {
+		"message": "გამოაჩინოს ახლანდელი მოთამაშეების რაოდენობა და მაქსიმალური პიკები პროდუქტის გვერდებზე"
+	},
+	"options_steamdb_last_update": {
+		"message": "გამოაჩინოს ბოლო განახლება პროდუქტის გვერდებზე"
+	},
+	"options_button_app": {
+		"message": "გამოაჩინოს ღილაკი პროდუქტის გვერდებზე"
+	},
+	"options_button_pcgw": {
+		"message": "გამოაჩინოს PCGamingWiki-ს ღილაკი პროდუქტის გვერდებზე"
+	},
+	"options_button_sub": {
+		"message": "გამოაჩინოს ღილაკი ფექეჯების გვერდებზე"
+	},
+	"options_button_gamehub": {
+		"message": "გამოაჩინოს ღილაკი ქომუნითის ჰაბებზე"
+	},
+	"options_button_gamecards": {
+		"message": "გამოაჩინოს SteamDB-ს და მაღაზიის გვერდის ღილაკები თამაშის კარტების გვერდეზე"
+	},
+	"options_steamdb_dev_pub_links": {
+		"message": "გამოაჩინე SteamDB-ს ლინკები დეველოპერისა და გამომცემელის სახელების გვერდით"
+	},
+	"options_link_subid": {
+		"message": "გამოაჩინოს საბ აიდი ყველა ყიდვის არჩევანზე"
+	},
+	"options_link_subid_widget": {
+		"message": "გამოაჩინოს საბ აიდი მიბმულ ვიჯეტებში",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "მიაბი თითო პექეჯი შენი ლიცენზიების გვერდზე"
+	},
+	"options_profile_calculator": {
+		"message": "დაამატოს კალკულატორის ლინკი ქომუნითის პროფილებზე"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "გადაწიე თამაშების ასარჩევი ინვენტარის გვერდზე"
+	},
+	"options_link_inventory": {
+		"message": "მიაბი თითოეული საჩუქარი და კუპონი შენს ინვენტარში SteamDB-ზე"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "არ გაანახლო ინვენტარი ნივტის გაყიდვის დროს"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "დაამატე სწრაფად გაყიდვის ღილაკები"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "ავტომატურად დაეთანხმე სწრაფად გაყიდვას"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "აჩვენეთ ხატის დონე ბარათებისა და ბარათების კომპლექტების თვისებებში"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "მხარდაჭერა $for_item$ და $my_item$ პარამეტრებისთვის",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "ნახე ახსნა GitHub-ზე"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "არ გამოაჩინო \"this trade appears suspicious\" და \"are you sure this is a gift?\" ალერტები"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "გამოაჩინე უკეთესი ერორის მესიჯები"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "გამოტოვე ასაკის შემოწმება"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "აყენებს ასაკის და დაბადების დღის ქუქიებს ისე რომ ყოველთვის გაუშვას Steam-მა"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "მოაშორე \"You are leaving Steam\"-ის გვერდი სხვა საიტებზე გადასვლისას",
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "დაეთანხმე პირობებს ავტომატურად მარკეტზე, ინვენტარში და გააქტიურე key-ს გვერდები ავტომატურად",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "დამალდე \"Install Steam\" -ის ღილაკი",
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "დამალე \"Open in the Steam\"-ის ბანერი"
+	},
+	"options_steamdb_rating": {
+		"message": "გამოაჩინე SteamDB-ს რეიტინგები პროდუქტის გვერდებზე"
+	},
+	"options_enhancement_appicon": {
+		"message": "გამოაჩინე პროდუქტის სურათები მაღაზიის და ქომუნითის გვერდებზე",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "გააუმჯობესე პირადი ჯილდოების გვერდი"
+	},
+	"options_achievements_global_unlock": {
+		"message": "გლობალური ჯილდოების განბლოკვის პროცენტების ჩვენება"
+	},
+	"options_modernized_achievements": {
+		"message": "მოდერნიზებული დიზაინი"
+	},
+	"options_achievement_groups": {
+		"message": "დააჯგუფე ჯილდოები Steam Hunters -ის მონაცემებით",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "ფარული ჯილდოების სპოილერის ელემენტის უკან მოთავსება"
+	},
+	"options_prevent_store_images": {
+		"message": "არ ჩატვირთო სურათები პროდუქტის გვერდებზე"
+	},
+	"options_prevent_store_images_description": {
+		"message": "ზოგი დეველოპერი დებს მეგაბაიტობით სურათებს პროდუქტის აღწერაში რასაც შეიძლება დიდი ხანი დასჭირდეს, დააჭირე სურათს რომ ჩატვირთო ის"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "მხარს უჭერს $award$-ის პარამეტრებს პროფილებზე და გაზიარებულ ფაილის ლინკებზე",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "დაამატეთ ღილაკი \"უკვე თქვენს ბიბლიოთეკაშია\"-ის ბლოკის დასაკეცად"
+	},
+	"options_builtin_card_drops": {
+		"message": "გამოაჩინე დროპებისა და დარჩენილი ბედჯების რაოდენობა"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "დაამატე ღილაკი რომ ავტომატურად აღმოაჩინო რიგი ფასდაკლებების დროს"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "გადამისამართდით თამაშის ბარათების გვერდზე დარჩენილი ბარათების შეძენის შემდეგ"
+	},
+	"options_builtin_achievements_global": {
+		"message": "გააუმჯობესე გლობალური მიღწევების გვერდი"
+	},
+	"options_builtin_achievements_link": {
+		"message": "პირადი ჯილდოების გვერდის მიბმა"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "ლუქის სურათის ჩვენება ჩაკეთილ ჯილდოებზე"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "CS2 მიღწევების გვერდზე CS შეფასების ისტორიის ჩვენება"
+	},
+	"boostercreator_available_at_date": {
+		"message": "ვერ შეძლებთ აღარ შექმნათ Booster Pack ამ თამაშისთვის $available_date$-მდე.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
+	}
+}

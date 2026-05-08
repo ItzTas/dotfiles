@@ -1,0 +1,657 @@
+{
+	"extension_description": {
+		"message": "Thêm liên kết và tính năng mới của SteamDB vào trang cửa hàng và cộng đồng của Steam. Xem giá thấp nhất và số liệu mỗi trò chơi.",
+		"description": "This value can be up to 132 characters."
+	},
+	"steamdb_options": {
+		"message": "Cài đặt SteamDB"
+	},
+	"steamdb_calculator": {
+		"message": "Máy tính SteamDB"
+	},
+	"steamstatus": {
+		"message": "Kiểm tra trên $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "Steam có vẻ như đang gặp sự cố. "
+	},
+	"view_on_steamdb": {
+		"message": "Xem trên SteamDB"
+	},
+	"view_on_steam_hunters": {
+		"message": "Xem trên Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Xem trên PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Thành tựu cá nhân"
+	},
+	"store_page": {
+		"message": "Trang cửa hàng",
+		"description": "This translation should match how Steam translates it on community hubs"
+	},
+	"search": {
+		"message": "Tìm kiếm"
+	},
+	"in_library": {
+		"message": "Trong thư viện",
+		"description": "Indicates that the user owns this product"
+	},
+	"app_steamdb_rating": {
+		"message": "Đánh giá SteamDB:"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ trên $total$ người dùng đánh giá tích cực trò chơi này (tính trên toàn bộ hình thức mua hàng)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Cập nhật gần nhất:"
+	},
+	"app_depots_updated_short": {
+		"message": "Ngày cập nhật",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Thống kê người chơi"
+	},
+	"app_stats_online_now": {
+		"message": "Hiện tại:"
+	},
+	"app_stats_peak_today": {
+		"message": "Đỉnh hôm nay:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Đỉnh lịch sử:"
+	},
+	"app_stats_followers": {
+		"message": "Người theo dõi:"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB ghi nhận giá thấp nhất là <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB ghi nhận giá thấp nhất là <b>$price$</b> (<b>-$discount$%</b>)",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB ghi nhận giá thấp nhất là <b>$price$</b> và thấp nhất trong vòng 2 năm trở lại đây là <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Giá ghi nhận vào $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Giá được ghi nhận $seen$ lần, lần cuối vào ngày $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"agecheck_option_hint": {
+		"message": "SteamDB có thể giúp bạn bỏ qua các trang kiểm tra độ tuổi"
+	},
+	"explore_auto_discover": {
+		"message": "Tự động khám phá"
+	},
+	"explore_auto_discover_description": {
+		"message": "Giúp bạn lướt qua hàng khám phá mà không phải thao tác thủ công."
+	},
+	"explore_generating": {
+		"message": "Đang tạo hàng chờ khám phá mới, có thể không thành công nếu Steam bị quá tải…"
+	},
+	"explore_exploring": {
+		"message": "Đang khám phá hàng chờ… Số lượng $current$ trên $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Không thể hoàn thành hàng chờ quá nhiều lần. Vui lòng thử lại sau."
+	},
+	"explore_finished": {
+		"message": "Đã xem hết hàng chờ."
+	},
+	"badges_idle_apps": {
+		"message": "Cần treo $amount$ ứng dụng",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Cần treo $amount$ ứng dụng trong trang này",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Còn $amount$ lần rớt thẻ",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Còn $amount$ lần rớt thẻ trong trang này",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Thành tựu bị ẩn: "
+	},
+	"achievement_global_unlock": {
+		"message": "$percent$ người chơi đã mở khóa thành tựu này",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "THÀNH TỰU ĐÃ MỞ KHÓA: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "THÀNH TỰU CHƯA MỞ KHÓA: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Sắp xếp theo thời gian"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Dữ liệu dùng gộp nhóm thành tựu được cung cấp bởi Steam Hunters thông qua SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "Mùa $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Ngày"
+	},
+	"achievements_csrating_name": {
+		"message": "Hệ số CS"
+	},
+	"inventory_quick_sell_tip": {
+		"message": "Nhấn một giá để đặt lệnh bán",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
+	"inventory_list_at": {
+		"message": "Đăng bán với giá $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Bán ngay với giá $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_badge_level": {
+		"message": "Cấp huy hiệu: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Cấp huy hiệu cao cấp: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Chưa tạo huy hiệu"
+	},
+	"spoilers_reveal": {
+		"message": "Hiển thị nội dung bị ẩn",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Thống kê"
+	},
+	"popup_sales": {
+		"message": "Khuyến mãi"
+	},
+	"popup_calendar": {
+		"message": "Lịch phát hành"
+	},
+	"popup_patches": {
+		"message": "Cập nhật"
+	},
+	"popup_calculator": {
+		"message": "Máy tính"
+	},
+	"options": {
+		"message": "Cài đặt"
+	},
+	"options_welcome_title": {
+		"message": "👋 Cảm ơn vì đã cài tiện ích SteamDB!"
+	},
+	"options_welcome_description": {
+		"message": "Xem lại và tùy chỉnh cài đặt theo ý bạn. Để mở lại trang này:"
+	},
+	"options_welcome_option1": {
+		"message": "Trang cài đặt của SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Menu tài khoản xổ xuống trên Steam"
+	},
+	"options_welcome_option3": {
+		"message": "Trang tiện ích bổ sung của trình duyệt"
+	},
+	"options_review": {
+		"message": "Đánh giá tiện ích này"
+	},
+	"options_permissions_description": {
+		"message": "Tiện ích này yêu cầu thêm quyền truy cập để hoạt động trên SteamDB, cửa hàng Steam và cộng đồng Steam."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Cấp quyền truy cập"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Cấp quyền để SteamDB truy cập vào Steam China (nếu cần)"
+	},
+	"options_footer1": {
+		"message": "Được phát triển với 💙 bởi <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "Đây là dự án <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">mã nguồn mở</a>, xin cảm ơn những người đã đóng góp!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Những ô tối màu chỉ các tính năng được tích hợp sẵn."
+	},
+	"options_header_website": {
+		"message": "Trang web SteamDB"
+	},
+	"options_header_extra_data": {
+		"message": "Dữ liệu bổ sung"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Nút bấm và liên kết"
+	},
+	"options_header_inventory": {
+		"message": "Kho đồ"
+	},
+	"options_header_trade_offers": {
+		"message": "Đề nghị trao đổi"
+	},
+	"options_header_achievements": {
+		"message": "Thành tựu"
+	},
+	"options_header_enhancements": {
+		"message": "Cải thiện"
+	},
+	"options_website_explanation": {
+		"message": "Giải thích"
+	},
+	"options_website_explanation1": {
+		"message": "Khi tùy chọn này được bật, tiện ích sẽ yêu cầu một số dữ liệu người dùng (sản phẩm trong danh sách ước, sản phẩm đã sở hữu, sản phẩm đã theo dõi, sản phẩm bị phớt lờ và sản phẩm trong giỏ hàng) từ <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">cửa hàng Steam</a> và sẽ sử dụng chúng để bổ sung thông tin trên trang web."
+	},
+	"options_website_explanation2": {
+		"message": "Vui lòng đăng nhập vào cửa hàng để sử dụng các tính năng này."
+	},
+	"options_website_explanation3": {
+		"message": "Những thông tin này được lưu trữ hoàn toàn trong trình duyệt của bạn và sẽ không bao giờ bị gửi đi đâu kể cả đến hệ thống của SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "Để tránh việc gửi yêu cầu dư thừa tới Cửa hàng Steam, dữ liệu người dùng của bạn sẽ được lưu vào bộ nhớ cục bộ của trình duyệt."
+	},
+	"options_website_highlight": {
+		"message": "Làm nổi bật các sản phẩm đã sở hữu hoặc trong danh sách ước trên $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "Thêm vào danh sách ước, theo dõi và phớt lờ sản phẩm trên cửa hàng Steam trực tiếp từ giao diện SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Bật tập lệnh kích hoạt gói miễn phí</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Bật tính năng lọc bổ sung trên <a href=\"https://steamdb.info/sales/\" target=\"_blank\">trang giảm giá</a> và <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">trang các gói</a>"
+	},
+	"options_website_family": {
+		"message": "Làm nổi bật ứng dụng đã sở hữu trong thư viện gia đình (cần thêm một yêu cầu)"
+	},
+	"options_extra_data": {
+		"message": "Dữ liệu bổ sung được lấy từ $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Khi tùy chọn \"$options_online_stats$\" hoặc \"$options_steamdb_last_update$\" được bật, tiện ích sẽ gửi yêu cầu đã được bảo mật tới $domain$ để lấy số lượng người đang chơi hiện tại cùng ngày cập nhật gần nhất cho trò chơi đó.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Khi tùy chọn \"$options_steamdb_lowest_price$\" được bật, tiện ích sẽ gửi yêu cầu đã được bảo mật tới $domain$ kèm đơn vị tiền của bạn (theo thông tin được Steam xác định) để hiển thị giá được ghi nhận cho trò chơi nhất định.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Khi tùy chọn \"$options_achievement_groups$\" được bật, tiện ích sẽ gửi yêu cầu đã được bảo mật tới $domain$ để gộp nhóm thành tựu trên trang thành tựu cá nhân bằng dữ liệu cung cấp bởi Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Hiển thị mức giá thấp nhất được ghi nhận trên trang sản phẩm"
+	},
+	"options_online_stats": {
+		"message": "Hiển thị số lượng người chơi hiện tại và đỉnh điểm trên trang sản phẩm"
+	},
+	"options_steamdb_last_update": {
+		"message": "Hiển thị lần cập nhật cuối trên trang sản phẩm"
+	},
+	"options_button_app": {
+		"message": "Hiển thị nút trên trang sản phẩm"
+	},
+	"options_button_pcgw": {
+		"message": "Hiển thị nút PCGamingWiki trên trang sản phẩm"
+	},
+	"options_button_sub": {
+		"message": "Hiển thị nút trên trang của gói"
+	},
+	"options_button_gamehub": {
+		"message": "Hiển thị nút trên trang cộng đồng"
+	},
+	"options_button_gamecards": {
+		"message": "Hiển thị đường dẫn tới SteamDB và trang cửa hàng trên trang huy hiệu"
+	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Đính kèm đường dẫn tới SteamDB cạnh tên nhà phát triển và nhà phát hành"
+	},
+	"options_link_subid": {
+		"message": "Hiển thị SubID (mã gói) dưới mỗi món hàng"
+	},
+	"options_link_subid_widget": {
+		"message": "Hiển thị SubID (mã gói) trên các widget",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "Đính kèm liên kết tới từng gói trên trang giấy phép"
+	},
+	"options_profile_calculator": {
+		"message": "Thêm liên kết tới máy tính trên hồ sơ người khác"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Di chuyển mục liệt kê trò chơi trên trang kho đồ sang một bên"
+	},
+	"options_link_inventory": {
+		"message": "Đính kèm liên kết tới SteamDB khi xem quà tặng và phiếu giảm giá trong kho đồ của bạn"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Không làm mới kho đồ khi bán một món"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Thêm nút bán nhanh"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Tự động chấp nhận bán nhanh"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Đính kèm cấp huy hiệu trong thông tin của thẻ trao đổi và gói bổ sung"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Hỗ trợ thông số $for_item$ và $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Xem giải thích trên GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Bỏ qua cảnh báo giao dịch đáng ngờ và xác nhận tặng vật phẩm khi tạo yêu cầu trao đổi"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Hiển thị thông báo lỗi kèm giải thích thay vì bộ mã lỗi khó hiểu của Valve"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Bỏ qua trang kiểm tra độ tuổi"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Can thiệp vào cookie để luôn bỏ qua xác nhận tuổi và sinh nhật"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Bỏ qua bộ lọc \"Bạn đang rời khỏi Steam\" dẫn tới liên kết ngoài",
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Tự động chấp nhận Thỏa thuận người đăng ký Steam trong chợ, kho đồ và trang kích hoạt sản phẩm",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Ẩn nút \"Cài đặt Steam\" ở đầu trang",
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Ẩn biểu ngữ \"Mở trong phần mềm Steam\""
+	},
+	"options_steamdb_rating": {
+		"message": "Hiển thị số liệu đánh giá theo SteamDB trên trang sản phẩm"
+	},
+	"options_enhancement_appicon": {
+		"message": "Hiển thị biểu tượng ứng dụng trên các trang cửa hàng và cộng đồng",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "Cải thiện trang thành tựu cá nhân"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Hiển thị tỷ lệ mở khóa thành tựu toàn cầu"
+	},
+	"options_modernized_achievements": {
+		"message": "Thiết kế hiện đại hóa"
+	},
+	"options_achievement_groups": {
+		"message": "Gộp nhóm thành tựu bằng dữ liệu từ Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Đem thành tựu bị ẩn xuống bên dưới lớp phủ tiết lộ nội dung"
+	},
+	"options_prevent_store_images": {
+		"message": "Dừng tải hình ảnh trên các trang sản phẩm"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Một số nhà phát triển đưa hàng megabyte hình ảnh vào mô tả sản phẩm khiến trang sản phẩm mất một lúc để tải, hãy nhấp vào hình ảnh nếu vẫn cần tải"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Hỗ trợ thông số $award$ trên trang cá nhân và trang nội dung được chia sẻ",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "Thêm nút thu gọn biểu ngữ \"đã ở trong thư viện\""
+	},
+	"options_builtin_card_drops": {
+		"message": "Hiển thị tổng số lượng thẻ rơi còn lại trên trang huy hiệu"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Thêm một nút để tự động khám phá hàng chờ trong các đợt giảm giá"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Quay lại trang huy hiệu sau khi mua những thẻ còn lại"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Cải thiện trang thành tựu toàn cầu"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Liên kết đến trang thành tựu cá nhân"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Hiển thị biểu tượng ổ khóa cho các thành tựu chưa mở khóa"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Đính kèm lịch sử hệ số CS trên trang thành tựu Steam của CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Bạn hiện chưa thể tạo thêm gói bổ sung cho trò chơi này, vui lòng thử lại sau thời điểm $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
+	}
+}

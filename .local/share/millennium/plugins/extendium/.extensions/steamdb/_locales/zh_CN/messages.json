@@ -1,0 +1,657 @@
+{
+	"extension_description": {
+		"message": "在 Steam 商店和社区页面中添加 SteamDB 链接和新功能，可查阅游戏史低价格和在线统计数据。",
+		"description": "This value can be up to 132 characters."
+	},
+	"steamdb_options": {
+		"message": "SteamDB 设置"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB 账号价值计算器"
+	},
+	"steamstatus": {
+		"message": "在 $domain$ 上查看详情",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "Steam 似乎出现了一些故障。 "
+	},
+	"view_on_steamdb": {
+		"message": "在 SteamDB 上查看"
+	},
+	"view_on_steam_hunters": {
+		"message": "在 Steam Hunters 上查看",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "在 PCGamingWiki 上查看"
+	},
+	"view_your_achievements": {
+		"message": "个人成就"
+	},
+	"store_page": {
+		"message": "商店页面",
+		"description": "This translation should match how Steam translates it on community hubs"
+	},
+	"search": {
+		"message": "搜索"
+	},
+	"in_library": {
+		"message": "在库中",
+		"description": "Indicates that the user owns this product"
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB 好评率："
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "此游戏的 $total$ 篇用户评测中有 $positive$ 篇好评 (所有购买类型)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "最近更新日期："
+	},
+	"app_depots_updated_short": {
+		"message": "最近更新于",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "在线状态统计"
+	},
+	"app_stats_online_now": {
+		"message": "实时在线人数："
+	},
+	"app_stats_peak_today": {
+		"message": "24小时峰值人数："
+	},
+	"app_stats_alL_time_peak": {
+		"message": "历史峰值人数："
+	},
+	"app_stats_followers": {
+		"message": "关注数："
+	},
+	"app_lowest_price": {
+		"message": "SteamDB 记录的历史最低价格为 <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB 记录的历史最低价格为 <b>$price$</b>，折扣为 <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB 记录的历史最低价格为 <b>$price$</b>，2 年内史低为 <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "此价格出现于 $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "此价格已出现 $seen$ 次，上一次出现于 $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"agecheck_option_hint": {
+		"message": "SteamDB 能够自动跳过此类年龄检查页面"
+	},
+	"explore_auto_discover": {
+		"message": "自动探索队列"
+	},
+	"explore_auto_discover_description": {
+		"message": "自动探索队列。"
+	},
+	"explore_generating": {
+		"message": "正在生成新的探索队列（Steam 负载较高时可能会失败）..."
+	},
+	"explore_exploring": {
+		"message": "正在探索队列中... $current$ / $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "多次尝试清空探索队列失败，请稍后再试。"
+	},
+	"explore_finished": {
+		"message": "队列探索完成。"
+	},
+	"badges_idle_apps": {
+		"message": "可掉落卡牌的应用数：$amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "本页可掉落卡牌的应用数：$amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "剩余卡牌掉落数：$amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "本页剩余卡牌掉落数：$amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "隐藏成就: "
+	},
+	"achievement_global_unlock": {
+		"message": "$percent$ 的玩家拥有此成就",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "已解锁成就数：$count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "未解锁的成就数：$count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "按解锁时间顺序"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "成就分组信息由 Steam Hunters 通过 SteamDB 提供。",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "第 $season$ 赛季",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "日期"
+	},
+	"achievements_csrating_name": {
+		"message": "CS 段位分"
+	},
+	"inventory_quick_sell_tip": {
+		"message": "鼠标移动到价格上以出售",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
+	"inventory_list_at": {
+		"message": "以 $price$ 上架",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "以 $price$ 售出",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_badge_level": {
+		"message": "您的徽章等级：$level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "您的闪亮徽章等级：$level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "徽章未合成"
+	},
+	"spoilers_reveal": {
+		"message": "显示隐藏文本",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "在线人数"
+	},
+	"popup_sales": {
+		"message": "特卖"
+	},
+	"popup_calendar": {
+		"message": "发行日历"
+	},
+	"popup_patches": {
+		"message": "补丁说明"
+	},
+	"popup_calculator": {
+		"message": "账号价值计算器"
+	},
+	"options": {
+		"message": "设置"
+	},
+	"options_welcome_title": {
+		"message": "👋 感谢您安装 SteamDB 扩展！"
+	},
+	"options_welcome_description": {
+		"message": "请根据需要启用或关闭页面下方的各个选项。之后如需返回本页，您可以访问："
+	},
+	"options_welcome_option1": {
+		"message": "SteamDB 设置页面"
+	},
+	"options_welcome_option2": {
+		"message": "Steam 页面上的账号下拉列表"
+	},
+	"options_welcome_option3": {
+		"message": "您的浏览器插件页面"
+	},
+	"options_review": {
+		"message": "评价此扩展"
+	},
+	"options_permissions_description": {
+		"message": "此扩展需要额外的权限才能在 SteamDB、Steam 商店和 Steam 社区正常工作。"
+	},
+	"options_permissions_button": {
+		"message": "⚠️ 授予权限"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 启用 Steam 中国支持"
+	},
+	"options_footer1": {
+		"message": "由 <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> 团队用 💙 制作。"
+	},
+	"options_footer2": {
+		"message": "这是<a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">开源项目</a>，感谢所有贡献者！"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* 内置功能的复选框不可修改"
+	},
+	"options_header_website": {
+		"message": "SteamDB 网站"
+	},
+	"options_header_extra_data": {
+		"message": "额外数据"
+	},
+	"options_header_buttons_and_links": {
+		"message": "按钮和链接"
+	},
+	"options_header_inventory": {
+		"message": "库存"
+	},
+	"options_header_trade_offers": {
+		"message": "交易报价"
+	},
+	"options_header_achievements": {
+		"message": "成就"
+	},
+	"options_header_enhancements": {
+		"message": "增强功能"
+	},
+	"options_website_explanation": {
+		"message": "说明"
+	},
+	"options_website_explanation1": {
+		"message": "启用此选项后，扩展将从 <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam 商店</a>请求一些用户数据（例如已添加至愿望单、购物车、已拥有、已关注、已忽略的产品）并在网站上用高亮标记这些条目。"
+	},
+	"options_website_explanation2": {
+		"message": "您必须登录商店才能使用此功能。"
+	},
+	"options_website_explanation3": {
+		"message": "这些数据完全存储在您的浏览器中，不会被发送到 SteamDB。"
+	},
+	"options_website_explanation4": {
+		"message": "为了避免向 Steam 发送过多的请求，您的用户数据被缓存在您浏览器的本地存储中。"
+	},
+	"options_website_highlight": {
+		"message": "在 $domain$ 上高亮显示您已拥有和在愿望单中的产品",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "直接在 SteamDB 上管理 Steam 商店的愿望单、关注和忽略内容"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">启用批量激活免费游戏包脚本</a>"
+	},
+	"options_website_highlight3": {
+		"message": "在<a href=\"https://steamdb.info/sales/\" target=\"_blank\">特卖页面</a>和<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">捆绑包页</a>上启用额外的筛选器"
+	},
+	"options_website_family": {
+		"message": "高亮显示家庭共享的应用（需要额外请求）"
+	},
+	"options_extra_data": {
+		"message": "从 $domain$ 获取的额外数据",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "启用“$options_online_stats$”或“$options_steamdb_last_update$”时，扩展程序将通过安全请求从 $domain$ 获取当前玩家在线数量和游戏的最终更新日期。",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "启用“$options_steamdb_lowest_price$”选项时，扩展程序将通过安全请求将您的货币（即现在 Steam 上使用的货币）发送给 $domain$ 来获取特定游戏的历史最低价格。",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "启用“$options_achievement_groups$”时，扩展程序会向 $domain$ 发送安全请求，来利用 Steam Hunters 提供的数据对个人成就页面的成就进行分组。",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "在产品页面显示历史最低价格"
+	},
+	"options_online_stats": {
+		"message": "在产品页面显示实时在线人数和历史在线人数峰值"
+	},
+	"options_steamdb_last_update": {
+		"message": "在产品页面显示最后更新时间"
+	},
+	"options_button_app": {
+		"message": "在产品页面显示 SteamDB 按钮"
+	},
+	"options_button_pcgw": {
+		"message": "在产品页面显示 PCGamingWiki 按钮"
+	},
+	"options_button_sub": {
+		"message": "在包页面上显示 SteamDB 按钮"
+	},
+	"options_button_gamehub": {
+		"message": "在社区中心显示 SteamDB 按钮"
+	},
+	"options_button_gamecards": {
+		"message": "在卡牌页面上显示 SteamDB 和商店页面按钮"
+	},
+	"options_steamdb_dev_pub_links": {
+		"message": "在开发者和发行商名称旁显示对应的 SteamDB 链接"
+	},
+	"options_link_subid": {
+		"message": "在每个购买选项下显示 SubID"
+	},
+	"options_link_subid_widget": {
+		"message": "在 Widget 中显示 SubID",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "在您的许可页面上显示每条许可的 SteamDB 链接"
+	},
+	"options_profile_calculator": {
+		"message": "在个人资料页面上添加账号价值计算链接"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "将库存页面上的游戏筛选栏移到侧边"
+	},
+	"options_link_inventory": {
+		"message": "显示您库存中礼物和优惠券的 SteamDB 链接"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "上架物品时阻止库存页面刷新"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "添加快速出售按钮"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "自动接受快速售出"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "在集换式卡牌和补充包上显示相应徽章的等级"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "支持 $for_item$ 和 $my_item$ 参数",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "请参见 GitHub 上的说明"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "禁用“此交易看起来可疑”和“您确定这是一份礼物吗?”的交易报价警告"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "显示更详细的错误信息，而不是 Valve 的模糊错误代码"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "跳过年龄检查页面"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "添加年龄和生日的 cookie 以便随时跳过年龄确认"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "移除“您正在离开 Steam”的中转页面",
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "在市场、库存和激活密钥页面上自动接受 Steam 订户协议。",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "隐藏顶部的“安装 Steam”按钮",
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "隐藏未登录时页面顶部的“在 Steam 应用中打开”横幅"
+	},
+	"options_steamdb_rating": {
+		"message": "在产品页面显示 SteamDB 评分"
+	},
+	"options_enhancement_appicon": {
+		"message": "在商店与社区页面显示产品图标",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "改进个人成就页面"
+	},
+	"options_achievements_global_unlock": {
+		"message": "显示全球成就解锁率"
+	},
+	"options_modernized_achievements": {
+		"message": "使用现代化设计"
+	},
+	"options_achievement_groups": {
+		"message": "使用来自 Steam Hunters 的数据对成就进行分组",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "对隐藏成就的解锁文字启用防剧透"
+	},
+	"options_prevent_store_images": {
+		"message": "在产品页面阻止图像加载"
+	},
+	"options_prevent_store_images_description": {
+		"message": "一些开发者可能会在产品介绍中加入较大的图像，从而使得页面加载变慢，点击这些图片来使其加载"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "支持个人资料和共享文件链接上的 $award$ 参数",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "在商店页面的“您的 Steam 库中已有”模块添加折叠按钮"
+	},
+	"options_builtin_card_drops": {
+		"message": "在徽章页面显示剩余可掉落卡片总数量"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "在特卖期间启用“自动探索队列”按钮"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "购买剩余卡牌后，重定向到原游戏卡牌页面"
+	},
+	"options_builtin_achievements_global": {
+		"message": "改善全球成就统计页面"
+	},
+	"options_builtin_achievements_link": {
+		"message": "添加跳转到个人成就页面的链接"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "在未解锁的成就旁显示锁定图标"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "在 CS2 成就页面显示 CS 段位历史"
+	},
+	"boostercreator_available_at_date": {
+		"message": "$available_date$ 以后，你才能为此游戏制作更多补充包。",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
+	}
+}
