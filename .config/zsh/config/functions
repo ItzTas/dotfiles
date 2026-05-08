@@ -517,7 +517,8 @@ fi
 
 # millennium
 millennium_skin_add() {
-    local skins_dir="$HOME/.local/share/Steam/steamui/skins/Steam"
+    local skins_dir="$HOME/.local/share/Steam/steamui/skins"
+    mkdir -p "$skins_dir"
 
     if [[ -z "$1" ]]; then
         echo "Usage: $0 <skin-url>"
