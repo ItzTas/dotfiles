@@ -1484,7 +1484,7 @@ spice-protocol 0.14.5-1
 spicetify-cli 2.43.2-1
 spirv-headers 1:1.4.341.0-2
 spirv-tools 1:1.4.341.0-2
-spotify 1:1.2.84.476-1
+spotify 1:1.2.86.502-1
 sqlite 3.53.1-1
 squashfs-tools 4.7.5-1
 sratom 0.6.22-1
@@ -1546,7 +1546,7 @@ udisks2 2.11.1-2
 ufw 0.36.2-7
 unciv-bin 4.19.19-0
 unibilium 2.1.2-1
-unityhub 3.16.2-1
+unityhub 3.18.0-1
 unzip 6.0-23
 upower 1.91.2-1
 usbmuxd 1.1.1-4
@@ -1677,7 +1677,7 @@ yyjson 0.12.0-1
 zathura 2026.03.27-1
 zathura-pdf-poppler 2026.02.03-4
 zbar 0.23.93-5
-zen-browser-bin 1.19.5b-1
+zen-browser-bin 1.19.11b-1
 zenity 4.2.2-1
 zeromq 4.3.5-3
 zimg 3.0.6-1
