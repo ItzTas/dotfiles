@@ -3,6 +3,6 @@
         "US",
         "BR"
     ],
-    "connect_at_app_startup": "",
+    "connect_at_app_startup": "FASTEST",
     "start_app_minimized": false
 }
