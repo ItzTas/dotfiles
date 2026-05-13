@@ -6,6 +6,16 @@ ram_gb=$(awk -v kb="$ram_kb" 'BEGIN {printf "%d\n", kb/1024/1024}')
 %>
 
 <%
+is_laptop=0
+
+if command -v laptop-detect >/dev/null 2>&1 && laptop-detect >/dev/null 2>&1; then
+  is_laptop=1
+elif [ -d /sys/class/power_supply/BAT0 ]; then
+  is_laptop=1
+fi
+%>
+
+<%
 gpu="other"
 
 __detect() {
@@ -63,6 +73,7 @@ exec-once = opensnitch-ui --background
 exec-once = swayosd-server
 exec-once = /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec-once = chmod +x ~/.config/hypr/hyprlock/bh/lockscripts.sh
+exec-once = sleep 30 && protonvpn-app --start-minimized
 exec-once = yadm alt
 
 <% if [ "$gpu" = "nvidia" ]; then %>
@@ -76,10 +87,9 @@ exec-once = nvibrant 0 0 0 0 500
 exec-once = systemctl --user start gamemoded
 exec = eww --config ~/.config/eww/binaryharbinger daemon
 
-<% if [[ "$YADM_CLASSES" =~ desktop ]]; then %>
+<% if [[ "$is_laptop" -ne 1 ]]; then %>
 
 exec-once = alarm-clock-applet --hidden
-exec-once = sleep 30 && protonvpn-app --start-minimized
 
 <% fi %>
 
