@@ -67,13 +67,9 @@ exec-once = go telemetry off
 exec-once = mkdir -p ~/.winboat; ln -s /dev/null ~/.winboat/appUsage.json
 exec-once = yarn next telemetry disable
 
-exec-once = easyeffects --gapplication-service
-exec-once = opensnitch-ui --background
-
 exec-once = swayosd-server
 exec-once = /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec-once = chmod +x ~/.config/hypr/hyprlock/bh/lockscripts.sh
-exec-once = sleep 30 && protonvpn-app --start-minimized
 exec-once = yadm alt
 
 <% if [ "$gpu" = "nvidia" ]; then %>
@@ -85,7 +81,9 @@ exec-once = nvibrant 0 0 0 0 500
 <% if [ "$ram_gb" -gt 8 ]; then %>
 
 exec-once = systemctl --user start gamemoded
+exec-once = easyeffects --gapplication-service
 exec = eww --config ~/.config/eww/binaryharbinger daemon
+exec-once = sleep 30 && protonvpn-app --start-minimized
 
 <% if [[ "$is_laptop" -ne 1 ]]; then %>
 
