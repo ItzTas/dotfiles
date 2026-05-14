@@ -50,4 +50,4 @@ _set_up() {
     echo "✓ Setup completed successfully."
 }
 
-_set_up
+# _set_up
