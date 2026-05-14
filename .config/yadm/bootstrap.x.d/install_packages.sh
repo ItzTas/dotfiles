@@ -84,7 +84,7 @@ _install_pacman_packages() {
         "os-prober"
         "xorg-xrandr"
         "arch-update"
-        "minidlna"
+        # "minidlna"
         "brightnessctl"
         "xorg-xhost"
         "libva-nvidia-driver"
