@@ -59,8 +59,8 @@ yadm_update() {
     (
         set -e
 
-        local pacman_list flatpak_list
-        read -r pacman_list flatpak_list < <(create_packagelists)
+        # local pacman_list flatpak_list
+        # read -r pacman_list flatpak_list < <(create_packagelists)
         save_gnome
 
         if command -v diff-so-fancy &>/dev/null; then
@@ -69,8 +69,8 @@ yadm_update() {
             yadm --no-pager diff
         fi
 
-        yadm add "$pacman_list"
-        yadm add "$flatpak_list"
+        # yadm add "$pacman_list"
+        # yadm add "$flatpak_list"
 
         yadm add "$HOME/Pictures/.backgrounds"
         yadm add "$HOME/.config/yadm/bootstrap.x.d"
