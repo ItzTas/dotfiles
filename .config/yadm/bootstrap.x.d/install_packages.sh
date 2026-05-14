@@ -94,7 +94,7 @@ _install_pacman_packages() {
         # Firewall
         "ufw"
         "gufw"
-        "opensnitch"
+        # "opensnitch"
 
         # GTK
         "xdg-desktop-portal-gtk"
@@ -159,7 +159,6 @@ _install_pacman_packages() {
         "clamtk"
 
         # Games
-        "lutris"
         "gamescope"
         "mangohud"
         "gamemode"
