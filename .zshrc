@@ -1,0 +1,1 @@
+/home/talinux/.config/zsh/zshrc
