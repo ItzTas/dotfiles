@@ -1,0 +1,32 @@
+{
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "/usr/bin/zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    },
+    "editor.fontFamily": "'JetBrainsMonoNL Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontSize": 17,
+    "terminal.integrated.fontSize": 17,
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "editor.fontLigatures": true,
+    "editor.smoothScrolling": false,
+    "editor.lineNumbers": "relative"
+}
