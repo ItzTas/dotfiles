@@ -1,3 +1,5 @@
+local gpu = require("functions.gpu")
+
 -- cursor
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Classic")
@@ -9,11 +11,12 @@ hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 
--- nvidia
-hl.env("GBM_BACKEND", "nvidia-drm")
-hl.env("DXVK_FILTER_DEVICE_NAME", "NVIDIA GeForce RTX 4060")
-hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
-hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+if gpu.is_nvidia() then
+    hl.env("GBM_BACKEND", "nvidia-drm")
+    hl.env("DXVK_FILTER_DEVICE_NAME", "NVIDIA GeForce RTX 4060")
+    hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
+    hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+end
 
 -- nvidia hardware VA-API hardware video acceleration
 hl.env("LIBVA_DRIVER_NAME", "nvidia")

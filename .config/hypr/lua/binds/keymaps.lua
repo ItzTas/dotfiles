@@ -1,14 +1,13 @@
--- Variables
-local terminal = "kitty"
-local fileManager = "nemo"
-local browser = "zen-browser"
+local mods = require("env.mods")
+local apps = require("envs.apps")
 
--- Modifiers
-local mainMod = "LEFTALT"
-local scndMod = "SUPER"
-local shiftMod = "SHIFT"
-local ctrlMod = "CONTROL"
-local hyperMod = "LEFTALT SUPER SHIFT CONTROL"
+local mainMod = mods.mainMod
+local scndMod = mods.scndMod
+local shiftMod = mods.shiftMod
+local hyperMod = mods.hyperMod
+local terminal = apps.terminal
+local fileManager = apps.fileManager
+local browser = apps.browser
 
 -- Open terminal and navigation
 hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal))
@@ -172,48 +171,3 @@ hl.bind(hyperMod .. " + X", hl.dsp.exec_cmd("ddcutil setvcp 10 100"))
 hl.bind(hyperMod .. " + W", hl.dsp.exec_cmd("alarm-clock-applet -s"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd('killall waybar || bash -c "~/.config/waybar/lauch_waybar.sh 2"'))
 hl.bind(scndMod .. " " .. shiftMod .. " + F5", hl.dsp.exit())
-
--- --- Submaps ---
-
--- Resize windows
-hl.bind(scndMod .. " + R", hl.dsp.submap("resize"))
-
-hl.submap("resize")
-
-hl.bind("L", hl.dsp.window.resize({ x = 20, y = 0 }), { repeating = true })
-hl.bind("H", hl.dsp.window.resize({ x = -20, y = 0 }), { repeating = true })
-hl.bind("K", hl.dsp.window.resize({ x = 0, y = -20 }), { repeating = true })
-hl.bind("J", hl.dsp.window.resize({ x = 0, y = 20 }), { repeating = true })
-
-hl.bind(mainMod .. " + L", hl.dsp.window.resize({ x = 60, y = 0 }), { repeating = true })
-hl.bind(mainMod .. " + H", hl.dsp.window.resize({ x = -60, y = 0 }), { repeating = true })
-hl.bind(mainMod .. " + K", hl.dsp.window.resize({ x = 0, y = -60 }), { repeating = true })
-hl.bind(mainMod .. " + J", hl.dsp.window.resize({ x = 0, y = 60 }), { repeating = true })
-
-hl.bind(shiftMod .. " + L", hl.dsp.window.resize({ x = 120, y = 0 }), { repeating = true })
-hl.bind(shiftMod .. " + H", hl.dsp.window.resize({ x = -120, y = 0 }), { repeating = true })
-hl.bind(shiftMod .. " + K", hl.dsp.window.resize({ x = 0, y = -120 }), { repeating = true })
-hl.bind(shiftMod .. " + J", hl.dsp.window.resize({ x = 0, y = 120 }), { repeating = true })
-
-hl.bind(scndMod .. " + L", hl.dsp.window.resize({ x = 240, y = 0 }), { repeating = true })
-hl.bind(scndMod .. " + H", hl.dsp.window.resize({ x = -240, y = 0 }), { repeating = true })
-hl.bind(scndMod .. " + K", hl.dsp.window.resize({ x = 0, y = -240 }), { repeating = true })
-hl.bind(scndMod .. " + J", hl.dsp.window.resize({ x = 0, y = 240 }), { repeating = true })
-
-hl.bind(hyperMod .. " + L", hl.dsp.window.resize({ x = 500, y = 0 }), { repeating = true })
-hl.bind(hyperMod .. " + H", hl.dsp.window.resize({ x = -500, y = 0 }), { repeating = true })
-hl.bind(hyperMod .. " + K", hl.dsp.window.resize({ x = 0, y = -500 }), { repeating = true })
-hl.bind(hyperMod .. " + J", hl.dsp.window.resize({ x = 0, y = 500 }), { repeating = true })
-
-hl.bind(scndMod .. " + R", hl.dsp.submap("reset"))
-
-hl.submap("reset")
-
--- No bindings submap
-hl.bind(hyperMod .. " + I", hl.dsp.submap("no_bindings"))
-
-hl.submap("no_bindings")
-
-hl.bind(hyperMod .. " + catchall", hl.dsp.submap("reset"))
-
-hl.submap("reset")
