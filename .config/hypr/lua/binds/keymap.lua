@@ -1,13 +1,13 @@
 -- Variables
-local terminal    = "kitty"
+local terminal = "kitty"
 local fileManager = "nemo"
-local browser     = "zen-browser"
+local browser = "zen-browser"
 
 -- Modifiers
-local mainMod  = "LEFTALT"
-local scndMod  = "SUPER"
+local mainMod = "LEFTALT"
+local scndMod = "SUPER"
 local shiftMod = "SHIFT"
-local ctrlMod  = "CONTROL"
+local ctrlMod = "CONTROL"
 local hyperMod = "LEFTALT SUPER SHIFT CONTROL"
 
 -- Open terminal and navigation
@@ -47,10 +47,30 @@ hl.bind(hyperMod .. " + P", hl.dsp.exec_cmd("dex ~/.local/share/applications/hyp
 hl.bind(hyperMod .. " + H", hl.dsp.exec_cmd("dex ~/.local/share/applications/hypr-terminal/hypr-btop.desktop"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("[float; noblur 0; size 90% 80%] kitty -o background_opacity=0.9 -e yazi"))
 hl.bind(hyperMod .. " + O", hl.dsp.exec_cmd("[float; size 90% 80%] kitty -o background_opacity=1 -e gping google.com"))
-hl.bind(hyperMod .. " + S", hl.dsp.exec_cmd('[float; noblur 0; noborder 0; size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh"'))
-hl.bind(hyperMod .. " + A", hl.dsp.exec_cmd('[float; noblur 0; noborder 0;size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" root'))
-hl.bind(hyperMod .. " + F", hl.dsp.exec_cmd('[float; noblur 0; noborder 0; size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" file'))
-hl.bind(hyperMod .. " + G", hl.dsp.exec_cmd('[float; noblur 0; noborder 0;size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" file root'))
+hl.bind(
+    hyperMod .. " + S",
+    hl.dsp.exec_cmd(
+        '[float; noblur 0; noborder 0; size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh"'
+    )
+)
+hl.bind(
+    hyperMod .. " + A",
+    hl.dsp.exec_cmd(
+        '[float; noblur 0; noborder 0;size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" root'
+    )
+)
+hl.bind(
+    hyperMod .. " + F",
+    hl.dsp.exec_cmd(
+        '[float; noblur 0; noborder 0; size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" file'
+    )
+)
+hl.bind(
+    hyperMod .. " + G",
+    hl.dsp.exec_cmd(
+        '[float; noblur 0; noborder 0;size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" file root'
+    )
+)
 
 -- Menus and widgets
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd('killall rofi; bash -c "~/.config/rofi/launchers/type-7/launcher.sh"'))
@@ -98,10 +118,22 @@ hl.bind(mainMod .. " " .. shiftMod .. " + k", hl.dsp.window.swap({ direction = "
 hl.bind(mainMod .. " " .. shiftMod .. " + j", hl.dsp.window.swap({ direction = "down" }))
 
 -- Multimedia controls (volume and brightness)
-hl.bind(shiftMod .. " + XF86AudioRaiseVolume", hl.dsp.exec_cmd("bash ~/.config/hypr/scripts/spotify/volume_up.sh"), { repeating = true })
-hl.bind(shiftMod .. " + XF86AudioLowerVolume", hl.dsp.exec_cmd("bash ~/.config/hypr/scripts/spotify/volume_down.sh"), { repeating = true })
+hl.bind(
+    shiftMod .. " + XF86AudioRaiseVolume",
+    hl.dsp.exec_cmd("bash ~/.config/hypr/scripts/spotify/volume_up.sh"),
+    { repeating = true }
+)
+hl.bind(
+    shiftMod .. " + XF86AudioLowerVolume",
+    hl.dsp.exec_cmd("bash ~/.config/hypr/scripts/spotify/volume_down.sh"),
+    { repeating = true }
+)
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/volume/up.sh"'), { repeating = true })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/volume/down.sh"'), { repeating = true })
+hl.bind(
+    "XF86AudioLowerVolume",
+    hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/volume/down.sh"'),
+    { repeating = true }
+)
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/volume/toggle.sh"'))
 hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/mic_toggle.sh"'))
 
@@ -116,7 +148,10 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 -- Screen recording
-hl.bind(mainMod .. " " .. shiftMod .. " + G", hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/recording/screen_record.sh"'))
+hl.bind(
+    mainMod .. " " .. shiftMod .. " + G",
+    hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/recording/screen_record.sh"')
+)
 
 -- Screenshots
 hl.bind("PRINT", hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/print/screen.sh"'))
