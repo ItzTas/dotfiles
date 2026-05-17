@@ -1,3 +1,3 @@
-require("keymaps")
-require("resize")
-require("no-binds")
+require("binds.keymaps")
+require("binds.resize")
+require("binds.no-binds")

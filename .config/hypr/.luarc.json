@@ -1,7 +1,16 @@
 {
   "workspace": {
     "library": [
-      "/usr/share/hypr/stubs"
+      "/usr/share/hypr/stubs",
+      "${env:HOME}/.config/hypr/lua"
+    ]
+  },
+  "runtime": {
+    "path": [
+      "?.lua",
+      "?/init.lua",
+      "lua/?.lua",
+      "lua/?/init.lua"
     ]
   },
   "diagnostics": {
