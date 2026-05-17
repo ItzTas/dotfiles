@@ -3,6 +3,7 @@ local apps = require("envs.apps")
 local binds = require("functions.binds")
 
 local mm = binds.make_mod
+local bs = binds.bind_scratchpad
 
 local alt = mods.alt
 local super = mods.super
@@ -40,11 +41,11 @@ bind(mm("I", super), exec("hyprctl dispatch invertactivewindow"))
 bind(mm("T", super), exec("hyprctl dispatch hyprexpo:expo toggle"))
 
 -- Specific workspace and multimedia commands
-bind(mm("B", meh), exec("[workspace 8] stacer"))
-bind(mm("Z", meh), exec("[workspace 8] hyprctl dispatch workspace 8; easyeffects"))
+bind(mm("B", meh), exec("stacer", { workspace = 8 }))
+bind(mm("Z", meh), exec("hyprctl dispatch workspace 8; easyeffects", { workspace = 8 }))
 
 -- Spotify
-bind(mm("Q", meh), exec('[workspace 9] bash "$HOME/.config/hypr/scripts/spotify/open_play.sh"', { workspace = 9 }))
+bind(mm("Q", meh), exec('bash "$HOME/.config/hypr/scripts/spotify/open_play.sh"', { workspace = 9 }))
 bind(mm("F", super), exec('bash "$HOME/.config/hypr/scripts/spotify/next.sh"', { workspace = 9 }))
 bind(mm("D", super), exec('bash "$HOME/.config/hypr/scripts/spotify/prev.sh"', { workspace = 9 }))
 
@@ -55,42 +56,12 @@ bind(mm("Tab", alt), focus({ last = true }))
 bind(mm("D", meh), exec("dex ~/.local/share/applications/hypr-terminal/hypr-lazydocker.desktop"))
 bind(mm("P", meh), exec("dex ~/.local/share/applications/hypr-terminal/hypr-ncdu.desktop"))
 bind(mm("H", meh), exec("dex ~/.local/share/applications/hypr-terminal/hypr-btop.desktop"))
-bind(
-    mm("A", alt),
-    exec("kitty -o background_opacity=0.9 -e yazi", {
-        float = true,
-        no_blur = false,
-        size = {
-            "(monitor_w*0.9)",
-            "(monitor_h*0.8)",
-        },
-    })
-)
-bind(mm("O", meh), exec("[float; size 90% 80%] kitty -o background_opacity=1 -e gping google.com"))
-bind(
-    mm("S", meh),
-    exec(
-        '[float; noblur 0; noborder 0; size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh"'
-    )
-)
-bind(
-    mm("A", meh),
-    exec(
-        '[float; noblur 0; noborder 0;size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" root'
-    )
-)
-bind(
-    mm("F", meh),
-    exec(
-        '[float; noblur 0; noborder 0; size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" file'
-    )
-)
-bind(
-    mm("G", meh),
-    exec(
-        '[float; noblur 0; noborder 0;size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" file root'
-    )
-)
+bs(mm("A", alt), "kitty -o background_opacity=0.9 -e yazi", { no_blur = false })
+bs(mm("O", meh), "kitty -o background_opacity=1 -e gping google.com")
+bs(mm("S", meh), 'kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh"')
+bs(mm("A", meh), 'kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" root')
+bs(mm("F", meh), 'kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" file')
+bs(mm("G", meh), 'kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" file root')
 
 -- Menus and widgets
 bind(mm("SPACE", alt), exec('killall rofi; bash -c "~/.config/rofi/launchers/type-7/launcher.sh"'))

@@ -18,7 +18,7 @@ local M = {
 }
 
 M.hyper = string.format("%s + %s + %s + %s", M.alt, M.super, M.shift, M.ctrl)
-M.meh = string.format("%s + %s", M.alt, M.shift, M.ctrl)
+M.meh = string.format("%s + %s + %s", M.alt, M.shift, M.ctrl)
 
 ---@cast M BindMods
 
