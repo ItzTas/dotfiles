@@ -12,4 +12,16 @@ function M.memoize(fn)
     end
 end
 
+function M.run_cmd(cmd)
+    local h = io.popen(cmd)
+    if not h then
+        return nil
+    end
+
+    local out = h:read("*a")
+    h:close()
+
+    return (out and out ~= "") and out or nil
+end
+
 return M

@@ -1,5 +1,6 @@
 local M = {}
 local file = require("functions.file")
+local utils = require("functions.utils")
 
 local function parse_vendor(text)
     if not text or text == "" then
@@ -21,20 +22,8 @@ local function parse_vendor(text)
     return nil
 end
 
-local function run_cmd(cmd)
-    local h = io.popen(cmd)
-    if not h then
-        return nil
-    end
-
-    local out = h:read("*a")
-    h:close()
-
-    return (out and out ~= "") and out or nil
-end
-
 local function detect_via_hyprctl()
-    return parse_vendor(run_cmd("hyprctl systeminfo 2>/dev/null"))
+    return parse_vendor(utils.run_cmd("hyprctl systeminfo 2>/dev/null"))
 end
 
 local function detect_via_proc_nvidia()
@@ -45,7 +34,7 @@ local function detect_via_proc_nvidia()
 end
 
 local function detect_via_lspci()
-    return parse_vendor(run_cmd("lspci -nn 2>/dev/null | grep -iE 'vga|3d|display' 2>/dev/null"))
+    return parse_vendor(utils.run_cmd("lspci -nn 2>/dev/null | grep -iE 'vga|3d|display' 2>/dev/null"))
 end
 
 local function detect_via_sysfs()
@@ -68,7 +57,9 @@ local function detect_via_sysfs()
         if content then
             local trimmed = content:match("^%s*(.-)%s*$")
             for id, vendor in pairs(pci_vendors) do
-                if trimmed == id then return vendor end
+                if trimmed == id then
+                    return vendor
+                end
             end
         end
     end
@@ -77,7 +68,7 @@ local function detect_via_sysfs()
 end
 
 local function detect_via_glxinfo()
-    return parse_vendor(run_cmd("glxinfo 2>/dev/null | grep -i 'opengl vendor' 2>/dev/null"))
+    return parse_vendor(utils.run_cmd("glxinfo 2>/dev/null | grep -i 'opengl vendor' 2>/dev/null"))
 end
 
 local detection_chain = {
@@ -87,8 +78,6 @@ local detection_chain = {
     detect_via_sysfs,
     detect_via_glxinfo,
 }
-
-local utils = require("functions.utils")
 
 local detect_vendor = utils.memoize(function()
     for _, detect_fn in ipairs(detection_chain) do
