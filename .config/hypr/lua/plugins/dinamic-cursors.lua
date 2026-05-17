@@ -1,89 +1,89 @@
-hl.config({
-    plugin = {
-        ["dynamic-cursors"] = {
-            enabled = true,
-
-            -- tilt    - tilt the cursor based on x-velocity
-            -- rotate  - rotate the cursor based on movement direction
-            -- stretch - stretch the cursor shape based on direction and velocity
-            -- none    - do not change the cursors behaviour
-            mode = "stretch",
-
-            tilt = {
-                -- controls how powerful the tilt is, the lower, the more power
-                -- this value controls at which speed (px/s) the full tilt is reached
-                limit = 5000,
-
-                -- relationship between speed and tilt
-                -- linear / quadratic / negative_quadratic
-                func = "negative_quadratic",
-            },
-
-            rotate = {
-                -- length in px of the simulated stick used to rotate the cursor
-                length = 20,
-
-                -- clockwise offset applied to the angle in degrees
-                offset = 0.0,
-            },
-
-            stretch = {
-                -- controls how much the cursor is stretched
-                -- this value controls at which speed (px/s) the full stretch is reached
-                limit = 1700,
-
-                -- relationship between speed and stretch amount
-                -- linear / quadratic / negative_quadratic
-                func = "linear",
-            },
-
-            shake = {
-                -- enables shake to find
-                enabled = true,
-
-                -- use nearest-neighbour (pixelated) scaling when shaking
-                nearest = true,
-
-                -- controls how soon a shake is detected (lower = sooner)
-                threshold = 8.0,
-
-                -- magnification level immediately after shake start
-                base = 4.0,
-                -- magnification increase per second when continuing to shake
-                speed = 4.0,
-                -- how much the speed is influenced by the current shake intensity
-                influence = 0.0,
-
-                -- maximal magnification the cursor can reach (0 disables the limit)
-                limit = 0.0,
-
-                -- time in milliseconds the cursor will stay magnified after a shake has ended
-                timeout = 1000,
-
-                -- show cursor behaviour while shaking
-                effects = true,
-
-                -- enable ipc events for shake
-                ipc = false,
-            },
-
-            hyprcursor = {
-                -- use nearest-neighbour (pixelated) scaling when magnifying beyond texture size
-                -- 0 - never use pixelated scaling
-                -- 1 - use pixelated when no highres image
-                -- 2 - always use pixelated scaling
-                nearest = 0,
-
-                -- enable dedicated hyprcursor support
-                enabled = true,
-
-                -- resolution in pixels to load the magnified shapes at
-                -- -1 means [normal cursor size] * [shake:base option]
-                resolution = -1,
-
-                -- shape to use when clientside cursors are being magnified
-                fallback = "clientside",
-            },
-        },
-    },
-})
+-- hl.config({
+--     plugin = {
+--         ["dynamic-cursors"] = {
+--             enabled = true,
+--
+--             -- tilt    - tilt the cursor based on x-velocity
+--             -- rotate  - rotate the cursor based on movement direction
+--             -- stretch - stretch the cursor shape based on direction and velocity
+--             -- none    - do not change the cursors behaviour
+--             mode = "stretch",
+--
+--             tilt = {
+--                 -- controls how powerful the tilt is, the lower, the more power
+--                 -- this value controls at which speed (px/s) the full tilt is reached
+--                 limit = 5000,
+--
+--                 -- relationship between speed and tilt
+--                 -- linear / quadratic / negative_quadratic
+--                 func = "negative_quadratic",
+--             },
+--
+--             rotate = {
+--                 -- length in px of the simulated stick used to rotate the cursor
+--                 length = 20,
+--
+--                 -- clockwise offset applied to the angle in degrees
+--                 offset = 0.0,
+--             },
+--
+--             stretch = {
+--                 -- controls how much the cursor is stretched
+--                 -- this value controls at which speed (px/s) the full stretch is reached
+--                 limit = 1700,
+--
+--                 -- relationship between speed and stretch amount
+--                 -- linear / quadratic / negative_quadratic
+--                 func = "linear",
+--             },
+--
+--             shake = {
+--                 -- enables shake to find
+--                 enabled = true,
+--
+--                 -- use nearest-neighbour (pixelated) scaling when shaking
+--                 nearest = true,
+--
+--                 -- controls how soon a shake is detected (lower = sooner)
+--                 threshold = 8.0,
+--
+--                 -- magnification level immediately after shake start
+--                 base = 4.0,
+--                 -- magnification increase per second when continuing to shake
+--                 speed = 4.0,
+--                 -- how much the speed is influenced by the current shake intensity
+--                 influence = 0.0,
+--
+--                 -- maximal magnification the cursor can reach (0 disables the limit)
+--                 limit = 0.0,
+--
+--                 -- time in milliseconds the cursor will stay magnified after a shake has ended
+--                 timeout = 1000,
+--
+--                 -- show cursor behaviour while shaking
+--                 effects = true,
+--
+--                 -- enable ipc events for shake
+--                 ipc = false,
+--             },
+--
+--             hyprcursor = {
+--                 -- use nearest-neighbour (pixelated) scaling when magnifying beyond texture size
+--                 -- 0 - never use pixelated scaling
+--                 -- 1 - use pixelated when no highres image
+--                 -- 2 - always use pixelated scaling
+--                 nearest = 0,
+--
+--                 -- enable dedicated hyprcursor support
+--                 enabled = true,
+--
+--                 -- resolution in pixels to load the magnified shapes at
+--                 -- -1 means [normal cursor size] * [shake:base option]
+--                 resolution = -1,
+--
+--                 -- shape to use when clientside cursors are being magnified
+--                 fallback = "clientside",
+--             },
+--         },
+--     },
+-- })

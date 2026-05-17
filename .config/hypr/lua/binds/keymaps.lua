@@ -1,173 +1,183 @@
-local mods = require("env.mods")
+local mods = require("envs.mods")
 local apps = require("envs.apps")
+local binds = require("functions.binds")
 
-local mainMod = mods.mainMod
-local scndMod = mods.scndMod
-local shiftMod = mods.shiftMod
-local hyperMod = mods.hyperMod
+local mm = binds.make_mod
+
+local alt = mods.alt
+local super = mods.super
+local shift = mods.shift
+local meh = mods.meh
+local _ = mods.hyper
+
 local terminal = apps.terminal
 local fileManager = apps.fileManager
 local browser = apps.browser
 
+local bind = hl.bind
+local window = hl.dsp.window
+local exec = hl.dsp.exec_cmd
+local focus = hl.dsp.focus
+local workspace = hl.dsp.workspace
+
 -- Open terminal and navigation
-hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal))
-hl.bind(hyperMod .. " + return", hl.dsp.exec_cmd("[workspace special:magic] " .. terminal))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(fileManager))
+bind(mm("return", alt), exec(terminal))
+bind(mm("return", meh), exec(terminal, { workspace = "special:magic" }))
+bind(mm("B", alt), exec(fileManager))
 
 -- Window control commands
-hl.bind(mainMod .. " " .. shiftMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + F11", hl.dsp.window.fullscreen())
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
-hl.bind(mainMod .. " + Q", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("$menu"))
-hl.bind(mainMod .. " + T", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
-hl.bind(scndMod .. " + Tab", hl.dsp.exec_cmd("hyprctl dispatch toggleswallow"))
+bind(mm("Q", { alt, shift }), window.close())
+bind(mm("F11", alt), window.fullscreen())
+bind(mm("F", alt), window.fullscreen())
+bind(mm("Q", alt), window.float({ action = "toggle" }))
+bind(mm("R", alt), exec("$menu"))
+bind(mm("T", alt), window.pseudo())
+bind(mm("J", alt), hl.dsp.layout("togglesplit"))
+bind(mm("Tab", super), exec("hyprctl dispatch toggleswallow"))
 
 -- Plugins
-hl.bind(scndMod .. " + I", hl.dsp.exec_cmd("hyprctl dispatch invertactivewindow"))
-hl.bind(scndMod .. " + T", hl.dsp.exec_cmd("hyprctl dispatch hyprexpo:expo toggle"))
+bind(mm("I", super), exec("hyprctl dispatch invertactivewindow"))
+bind(mm("T", super), exec("hyprctl dispatch hyprexpo:expo toggle"))
 
 -- Specific workspace and multimedia commands
-hl.bind(hyperMod .. " + B", hl.dsp.exec_cmd("[workspace 8] stacer"))
-hl.bind(hyperMod .. " + Z", hl.dsp.exec_cmd("[workspace 8] hyprctl dispatch workspace 8; easyeffects"))
+bind(mm("B", meh), exec("[workspace 8] stacer"))
+bind(mm("Z", meh), exec("[workspace 8] hyprctl dispatch workspace 8; easyeffects"))
 
 -- Spotify
-hl.bind(hyperMod .. " + Q", hl.dsp.exec_cmd('[workspace 9] bash "$HOME/.config/hypr/scripts/spotify/open_play.sh"'))
-hl.bind(scndMod .. " + F", hl.dsp.exec_cmd('[workspace 9] bash "$HOME/.config/hypr/scripts/spotify/next.sh"'))
-hl.bind(scndMod .. " + D", hl.dsp.exec_cmd('[workspace 9] bash "$HOME/.config/hypr/scripts/spotify/prev.sh"'))
+bind(mm("Q", meh), exec('[workspace 9] bash "$HOME/.config/hypr/scripts/spotify/open_play.sh"', { workspace = 9 }))
+bind(mm("F", super), exec('bash "$HOME/.config/hypr/scripts/spotify/next.sh"', { workspace = 9 }))
+bind(mm("D", super), exec('bash "$HOME/.config/hypr/scripts/spotify/prev.sh"', { workspace = 9 }))
 
 -- Window focus and workspace navigation
-hl.bind(mainMod .. " + Tab", hl.dsp.focus({ cycle = "next" }))
+bind(mm("Tab", alt), focus({ last = true }))
 
 -- Scratchpad (temporary windows)
-hl.bind(hyperMod .. " + D", hl.dsp.exec_cmd("dex ~/.local/share/applications/hypr-terminal/hypr-lazydocker.desktop"))
-hl.bind(hyperMod .. " + P", hl.dsp.exec_cmd("dex ~/.local/share/applications/hypr-terminal/hypr-ncdu.desktop"))
-hl.bind(hyperMod .. " + H", hl.dsp.exec_cmd("dex ~/.local/share/applications/hypr-terminal/hypr-btop.desktop"))
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("[float; noblur 0; size 90% 80%] kitty -o background_opacity=0.9 -e yazi"))
-hl.bind(hyperMod .. " + O", hl.dsp.exec_cmd("[float; size 90% 80%] kitty -o background_opacity=1 -e gping google.com"))
-hl.bind(
-    hyperMod .. " + S",
-    hl.dsp.exec_cmd(
+bind(mm("D", meh), exec("dex ~/.local/share/applications/hypr-terminal/hypr-lazydocker.desktop"))
+bind(mm("P", meh), exec("dex ~/.local/share/applications/hypr-terminal/hypr-ncdu.desktop"))
+bind(mm("H", meh), exec("dex ~/.local/share/applications/hypr-terminal/hypr-btop.desktop"))
+bind(
+    mm("A", alt),
+    exec("kitty -o background_opacity=0.9 -e yazi", {
+        float = true,
+        no_blur = false,
+        size = {
+            "(monitor_w*0.9)",
+            "(monitor_h*0.8)",
+        },
+    })
+)
+bind(mm("O", meh), exec("[float; size 90% 80%] kitty -o background_opacity=1 -e gping google.com"))
+bind(
+    mm("S", meh),
+    exec(
         '[float; noblur 0; noborder 0; size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh"'
     )
 )
-hl.bind(
-    hyperMod .. " + A",
-    hl.dsp.exec_cmd(
+bind(
+    mm("A", meh),
+    exec(
         '[float; noblur 0; noborder 0;size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" root'
     )
 )
-hl.bind(
-    hyperMod .. " + F",
-    hl.dsp.exec_cmd(
+bind(
+    mm("F", meh),
+    exec(
         '[float; noblur 0; noborder 0; size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" file'
     )
 )
-hl.bind(
-    hyperMod .. " + G",
-    hl.dsp.exec_cmd(
+bind(
+    mm("G", meh),
+    exec(
         '[float; noblur 0; noborder 0;size 90% 80%] kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" file root'
     )
 )
 
 -- Menus and widgets
-hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd('killall rofi; bash -c "~/.config/rofi/launchers/type-7/launcher.sh"'))
-hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("killall rofi; wlogout"))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("dex ~/.local/share/applications/hypr-terminal/hypr-clipse.desktop"))
-hl.bind(scndMod .. " + V", hl.dsp.exec_cmd("clipse-gui"))
-hl.bind(hyperMod .. " + SPACE", hl.dsp.exec_cmd('killall rofi; bash -c "~/.config/rofi/emoji/emoji.sh"'))
+bind(mm("SPACE", alt), exec('killall rofi; bash -c "~/.config/rofi/launchers/type-7/launcher.sh"'))
+bind(mm("X", alt), exec("killall rofi; wlogout"))
+bind(mm("V", alt), exec("dex ~/.local/share/applications/hypr-terminal/hypr-clipse.desktop"))
+bind(mm("V", super), exec("clipse-gui"))
+bind(mm("SPACE", meh), exec('killall rofi; bash -c "~/.config/rofi/emoji/emoji.sh"'))
 
 -- Moving window focus between windows
-hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down" }))
+bind(mm("h", alt), focus({ direction = "left" }))
+bind(mm("l", alt), focus({ direction = "right" }))
+bind(mm("k", alt), focus({ direction = "up" }))
+bind(mm("j", alt), focus({ direction = "down" }))
 
 -- Switch workspaces with mainMod + numbers
 for i = 1, 10 do
     local key = i % 10
-    hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
-    hl.bind(mainMod .. " " .. shiftMod .. " + " .. key, hl.dsp.window.move({ workspace = i }))
+    bind(mm(key, alt), focus({ workspace = i }))
+    bind(mm(key, { alt, shift }), window.move({ workspace = i }))
 end
 
 -- Switch workspaces with scndMod + numbers (11-20)
 for i = 1, 10 do
     local key = i % 10
-    hl.bind(scndMod .. " + " .. key, hl.dsp.focus({ workspace = i + 10 }))
-    hl.bind(scndMod .. " " .. shiftMod .. " + " .. key, hl.dsp.window.move({ workspace = i + 10 }))
+    bind(mm(key, super), focus({ workspace = i + 10 }))
+    bind(mm(key, { super, shift }), window.move({ workspace = i + 10 }))
 end
 
 -- Special workspace (scratchpad)
-hl.bind(mainMod .. " + U", hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " " .. shiftMod .. " + U", hl.dsp.window.move({ workspace = "special:magic" }))
+bind(mm("U", alt), workspace.toggle_special("magic"))
+bind(mm("U", { alt, shift }), window.move({ workspace = "special:magic" }))
 
 -- Scroll to navigate between workspaces
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
+bind(mm("mouse_down", alt), focus({ workspace = "e+1" }))
+bind(mm("mouse_up", alt), focus({ workspace = "e-1" }))
 
 -- Move/Resize windows with the mouse
-hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
-hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+bind(mm("mouse:272", alt), window.drag(), { mouse = true })
+bind(mm("mouse:273", alt), window.resize(), { mouse = true })
 
 -- Swap windows
-hl.bind(mainMod .. " " .. shiftMod .. " + l", hl.dsp.window.swap({ direction = "right" }))
-hl.bind(mainMod .. " " .. shiftMod .. " + h", hl.dsp.window.swap({ direction = "left" }))
-hl.bind(mainMod .. " " .. shiftMod .. " + k", hl.dsp.window.swap({ direction = "up" }))
-hl.bind(mainMod .. " " .. shiftMod .. " + j", hl.dsp.window.swap({ direction = "down" }))
+bind(mm("L", { alt, shift }), window.swap({ direction = "right" }))
+bind(mm("H", { alt, shift }), window.swap({ direction = "left" }))
+bind(mm("K", { alt, shift }), window.swap({ direction = "up" }))
+bind(mm("J", { alt, shift }), window.swap({ direction = "down" }))
 
 -- Multimedia controls (volume and brightness)
-hl.bind(
-    shiftMod .. " + XF86AudioRaiseVolume",
-    hl.dsp.exec_cmd("bash ~/.config/hypr/scripts/spotify/volume_up.sh"),
+bind(mm("XF86AudioRaiseVolume", shift), exec("bash ~/.config/hypr/scripts/spotify/volume_up.sh"), { repeating = true })
+bind(
+    mm("XF86AudioLowerVolume", shift),
+    exec("bash ~/.config/hypr/scripts/spotify/volume_down.sh"),
     { repeating = true }
 )
-hl.bind(
-    shiftMod .. " + XF86AudioLowerVolume",
-    hl.dsp.exec_cmd("bash ~/.config/hypr/scripts/spotify/volume_down.sh"),
-    { repeating = true }
-)
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/volume/up.sh"'), { repeating = true })
-hl.bind(
-    "XF86AudioLowerVolume",
-    hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/volume/down.sh"'),
-    { repeating = true }
-)
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/volume/toggle.sh"'))
-hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/mic_toggle.sh"'))
+bind("XF86AudioRaiseVolume", exec('bash -c "~/.config/hypr/scripts/volume/up.sh"'), { repeating = true })
+bind("XF86AudioLowerVolume", exec('bash -c "~/.config/hypr/scripts/volume/down.sh"'), { repeating = true })
+bind("XF86AudioMute", exec('bash -c "~/.config/hypr/scripts/volume/toggle.sh"'))
+bind("XF86AudioMicMute", exec('bash -c "~/.config/hypr/scripts/mic_toggle.sh"'))
 
 -- Brightness control
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set +5%"), { repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-"), { repeating = true })
+bind("XF86MonBrightnessUp", exec("brightnessctl set +5%"), { repeating = true })
+bind("XF86MonBrightnessDown", exec("brightnessctl set 5%-"), { repeating = true })
 
 -- Multimedia control with playerctl
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
+bind("XF86AudioNext", exec("playerctl next"), { locked = true })
+bind("XF86AudioPause", exec("playerctl play-pause"), { locked = true })
+bind("XF86AudioPlay", exec("playerctl play-pause"), { locked = true })
+bind("XF86AudioPrev", exec("playerctl previous"), { locked = true })
 
 -- Screen recording
-hl.bind(
-    mainMod .. " " .. shiftMod .. " + G",
-    hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/recording/screen_record.sh"')
-)
+bind(mm("G", { alt, shift }), exec('bash -c "~/.config/hypr/scripts/recording/screen_record.sh"'))
 
 -- Screenshots
-hl.bind("PRINT", hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/print/screen.sh"'))
-hl.bind(shiftMod .. " + PRINT", hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/print/area.sh"'))
-hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/print/window.sh"'))
-hl.bind(scndMod .. " + PRINT", hl.dsp.exec_cmd("flameshot gui"))
+bind("PRINT", exec('bash -c "~/.config/hypr/scripts/print/screen.sh"'))
+bind(mm("PRINT", shift), exec('bash -c "~/.config/hypr/scripts/print/area.sh"'))
+bind(mm("PRINT", alt), exec('bash -c "~/.config/hypr/scripts/print/window.sh"'))
+bind(mm("PRINT", super), exec("flameshot gui"))
 
 -- Scripts
--- hl.bind(hyperMod .. " + T", hl.dsp.exec_cmd('bash -c "~/.config/hypr/scripts/toggle_hdr.sh"'))
+-- bind(mm("T", hyperMod), exec('bash -c "~/.config/hypr/scripts/toggle_hdr.sh"'))
 
 -- Browsing
-hl.bind(hyperMod .. " + R", hl.dsp.exec_cmd(browser .. " https://www.startpage.com"))
-hl.bind(hyperMod .. " + E", hl.dsp.exec_cmd(browser .. " https://translate.google.com/?sl=auto&tl=pt"))
+bind(mm("R", meh), exec(browser .. " https://www.startpage.com"))
+bind(mm("E", meh), exec(browser .. " https://translate.google.com/?sl=auto&tl=pt"))
 
 -- Others
-hl.bind(hyperMod .. " + C", hl.dsp.exec_cmd("hyprpicker -a"))
-hl.bind(hyperMod .. " + X", hl.dsp.exec_cmd("ddcutil setvcp 10 100"))
-hl.bind(hyperMod .. " + W", hl.dsp.exec_cmd("alarm-clock-applet -s"))
-hl.bind(mainMod .. " + W", hl.dsp.exec_cmd('killall waybar || bash -c "~/.config/waybar/lauch_waybar.sh 2"'))
-hl.bind(scndMod .. " " .. shiftMod .. " + F5", hl.dsp.exit())
+bind(mm("C", meh), exec("hyprpicker -a"))
+bind(mm("X", meh), exec("ddcutil setvcp 10 100"))
+bind(mm("W", meh), exec("alarm-clock-applet -s"))
+bind(mm("W", alt), exec('killall waybar || bash -c "~/.config/waybar/lauch_waybar.sh 2"'))
+bind(mm("F5", { super, shift }), hl.dsp.exit())

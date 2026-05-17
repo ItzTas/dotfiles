@@ -1,4 +1,4 @@
-local M
+local M = {}
 
 M.terminal = "kitty"
 M.fileManager = "nemo"

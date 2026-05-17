@@ -1,22 +1,81 @@
-hl.monitor({
-    output   = "",
-    mode     = "preferred",
-    position = "auto",
-    scale    = 1,
+local device = require("functions.device")
 
-    -- vrr = 1,
-    bitdepth = 10,
+local monitor = hl.monitor
+local rule = hl.workspace_rule
 
-    cm = "edid",
-    supports_hdr = 1,
+if device.is_laptop() then
+    monitor({
+        output = "eDP-1",
+        mode = "preferred",
+        position = "auto-left",
+        scale = 1,
 
-    sdrbrightness = 1,
-    sdrsaturation = 1.45,
+        bitdepth = 10,
+        --
+        -- cm = "hdr",
+        -- supports_hdr = 1,
+        --
+        -- sdrbrightness = 1,
+        -- sdrsaturation = 1.45,
+        --
+        -- sdr_min_luminance = 0.005,
+        -- sdr_max_luminance = 90,
+    })
 
-    sdr_min_luminance = 0.005,
-    sdr_max_luminance = 90,
+    monitor({
+        output = "HDMI-A-1",
+        mode = "preferred",
+        position = "auto",
+        scale = 1,
 
-    -- min_luminance = 0.005,
-    -- max_luminance = 1000,
-    -- max_avg_luminance = 600,
-})
+        bitdepth = 10,
+
+        cm = "hdr",
+        supports_hdr = 1,
+
+        sdrbrightness = 1,
+        sdrsaturation = 1.7,
+
+        sdr_min_luminance = 0.005,
+        sdr_max_luminance = 90,
+    })
+
+    for i = 1, 10 do
+        rule({
+            workspace = tostring(i),
+            monitor = "HDMI-A-1",
+            default = true,
+        })
+    end
+
+    for i = 11, 20 do
+        rule({
+            workspace = tostring(i),
+            monitor = "eDP-1",
+            default = true,
+        })
+    end
+else
+    monitor({
+        output = "",
+        mode = "preferred",
+        position = "auto",
+        scale = 1,
+
+        -- vrr = 1,
+        bitdepth = 10,
+
+        cm = "edid",
+        supports_hdr = 1,
+
+        sdrbrightness = 1,
+        sdrsaturation = 1.45,
+
+        sdr_min_luminance = 0.005,
+        sdr_max_luminance = 90,
+
+        -- min_luminance = 0.005,
+        -- max_luminance = 1000,
+        -- max_avg_luminance = 600,
+    })
+end

@@ -1,145 +1,147 @@
-hl.window_rule({
+local rule = hl.window_rule
+
+rule({
     name = "all-windows",
     match = { class = ".*" },
 })
 
-hl.window_rule({
+rule({
     name = "empty-xwayland",
     match = {
-        class      = "^$",
-        title      = "^$",
-        xwayland   = true,
-        float      = true,
+        class = "^$",
+        title = "^$",
+        xwayland = true,
+        float = true,
         fullscreen = false,
-        pin        = false,
+        pin = false,
     },
     no_focus = true,
 })
 
-hl.window_rule({
+rule({
     name = "mpv",
     match = { class = "mpv" },
     fullscreen = true,
 })
 
-hl.window_rule({
+rule({
     name = "parsec",
     match = {
-        class      = "parsecd",
-        title      = "[Pp]arsec",
+        class = "parsecd",
+        title = "[Pp]arsec",
         fullscreen = true,
     },
     immediate = true,
 })
 
-hl.window_rule({
+rule({
     name = "vlc",
     match = { class = "vlc" },
     fullscreen = true,
 })
 
-hl.window_rule({
+rule({
     name = "hyprpwmenu",
     match = { class = "title:hyprpwmenu" },
     fullscreen = true,
 })
 
-hl.window_rule({
+rule({
     name = "zathura",
     match = { class = "zathura" },
     fullscreen = true,
 })
 
-hl.window_rule({
+rule({
     name = "zathura-org",
     match = { class = "org.pwmt.zathura" },
     fullscreen = true,
 })
 
-hl.window_rule({
+rule({
     name = "wlogout",
     match = { class = "title:wlogout" },
     fullscreen = true,
 })
 
-hl.window_rule({
+rule({
     name = "steam-games",
     match = { class = "(steam_app_)(.*)" },
     fullscreen = true,
-    immediate  = true,
+    immediate = true,
 })
 
-hl.window_rule({
+rule({
     name = "wonderlands",
     match = { class = "wonderlands\\.exe" },
     fullscreen = true,
 })
 
-hl.window_rule({
+rule({
     name = "rimworld",
     match = { class = "RimWorldLinux" },
     fullscreen = true,
 })
 
-hl.window_rule({
+rule({
     name = "hyprnav",
     match = { class = "hyprnav" },
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "gameconqueror",
     match = { class = "^([Gg]ame[Cc]onqueror.py)$" },
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "screenshot-gui",
     match = { class = "^(screenshot-gui)$" },
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "steam-friends-pt",
     match = {
         class = "[Ss]team",
         title = "^(Lista de amigos)$",
     },
-    float   = true,
+    float = true,
     opacity = "1.0 0.5 override",
     no_blur = true,
 })
 
-hl.window_rule({
+rule({
     name = "steam-friends-en",
     match = {
         class = "^([Ss]team)$",
         title = "^([Ff]riends [Ll]ist)$",
     },
-    float   = true,
+    float = true,
     opacity = "1.0 0.5 override",
     no_blur = true,
 })
 
-hl.window_rule({
+rule({
     name = "dialogs",
     match = { class = "confirm|dialog|error|splash|notification|download|file_progress" },
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "file-managers",
     match = { class = "[Nn]emo|nautilus|org.gnome.Nautilus|dolphin|thunar|Pcmanfm" },
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "thunderbird",
     match = { class = "^(org.mozilla.Thunderbird)$" },
     focus_on_activate = true,
 })
 
-hl.window_rule({
+rule({
     name = "thunderbird-new-message",
     match = {
         class = "^(org.mozilla.Thunderbird)$",
@@ -148,31 +150,34 @@ hl.window_rule({
     workspace = 6,
 })
 
-hl.window_rule({
+rule({
     name = "image-viewers",
     match = { class = "org.kde.gwenview|org.gnome.gThumb|imv|viewnior" },
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "misc-apps",
-    match = { class = "Lxappearance|ncmpcpp|Rofi|pavucontrol-qt|gucharmap|gnome-font|org.gnome.Settings|file-roller|obs|wdisplays|keepassxc|imFile|clipse-gui|confirmreset" },
+    match = {
+        class =
+        "Lxappearance|ncmpcpp|Rofi|pavucontrol-qt|gucharmap|gnome-font|org.gnome.Settings|file-roller|obs|wdisplays|keepassxc|imFile|clipse-gui|confirmreset",
+    },
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "git-apps",
     match = { class = "[Gg]itk|GitAhead" },
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "zoom",
     match = { class = "zoom" },
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "xdg-portal-gtk-open",
     match = {
         class = "^xdg-desktop-portal-gtk$",
@@ -181,19 +186,22 @@ hl.window_rule({
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "media-titles",
-    match = { title = "^(Media viewer)$|^(Transmission)$|^(Volume Control)$|^(Picture-in-Picture)$|^(Winetricks)(.*)?$|^(Steam Achievement Notifier \\(V1\\.9\\): Notification)$" },
+    match = {
+        title =
+        "^(Media viewer)$|^(Transmission)$|^(Volume Control)$|^(Picture-in-Picture)$|^(Winetricks)(.*)?$|^(Steam Achievement Notifier \\(V1\\.9\\): Notification)$",
+    },
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "file-roller",
     match = { class = "org.gnome.FileRoller" },
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "whatsapp-electron",
     match = {
         class = "electron",
@@ -202,13 +210,13 @@ hl.window_rule({
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "xdg-portal",
     match = { class = "xdg-desktop-portal-gtk" },
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "filelight",
     match = {
         class = "org\\.kde\\.filelight",
@@ -217,7 +225,7 @@ hl.window_rule({
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "flameshot-save",
     match = {
         class = "flameshot",
@@ -226,28 +234,28 @@ hl.window_rule({
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "zathura-print",
     match = {
         class = "org.pwmt.zathura",
         title = "^([Pp]rint)$",
     },
-    float   = true,
+    float = true,
     opacity = "1 0.6",
     no_blur = true,
-    size    = "800 600",
-    center  = true,
-})
-
-hl.window_rule({
-    name = "alarm-clock",
-    match = { class = "^(alarm-clock-applet)$" },
-    float  = true,
-    size   = "900 700",
+    size = "800 600",
     center = true,
 })
 
-hl.window_rule({
+rule({
+    name = "alarm-clock",
+    match = { class = "^(alarm-clock-applet)$" },
+    float = true,
+    size = "900 700",
+    center = true,
+})
+
+rule({
     name = "meld",
     match = {
         class = "^(org.gnome.Meld)$",
@@ -256,7 +264,7 @@ hl.window_rule({
     float = true,
 })
 
-hl.window_rule({
+rule({
     name = "steam-main",
     match = {
         class = "^([Ss]team)$",
@@ -266,7 +274,7 @@ hl.window_rule({
     no_blur = true,
 })
 
-hl.window_rule({
+rule({
     name = "steam-empty",
     match = {
         class = "^([Ss]team)$",
@@ -275,33 +283,33 @@ hl.window_rule({
     opacity = "1.0 0.8 override",
 })
 
-hl.window_rule({
+rule({
     name = "vesktop",
     match = { class = "vesktop" },
-    opacity          = "0.93 0.65",
-    no_blur          = true,
+    opacity = "0.93 0.65",
+    no_blur = true,
     focus_on_activate = true,
 })
 
-hl.window_rule({
+rule({
     name = "spotify",
     match = { class = "[Ss]potify" },
-    opacity          = "0.97 0.8",
-    no_blur          = true,
-    workspace        = 9,
+    opacity = "0.97 0.8",
+    no_blur = true,
+    workspace = 9,
     focus_on_activate = true,
 })
 
-hl.window_rule({
+rule({
     name = "nemo",
     match = { class = "^([Nn]emo)$" },
     opacity = "1.0 0.4 override",
     no_blur = true,
-    size    = "(monitor_w*0.4) (monitor_h*0.60)",
-    center  = true,
+    size = "(monitor_w*0.4) (monitor_h*0.60)",
+    center = true,
 })
 
-hl.window_rule({
+rule({
     name = "nemo-screenshots",
     match = {
         class = "^([Nn]emo)$",
@@ -310,37 +318,37 @@ hl.window_rule({
     opacity = "1.0 0.3 override",
 })
 
-hl.window_rule({
+rule({
     name = "fileroller",
     match = { class = "^(org.gnome.[Ff]ile[Rr]oller)$" },
     opacity = "1.0 0.4 override",
 })
 
-hl.window_rule({
+rule({
     name = "ghostty",
     match = { class = "^(com.mitchellh.ghostty)$" },
     no_blur = true,
 })
 
-hl.window_rule({
+rule({
     name = "kitty",
     match = { class = "^(kitty)$" },
     no_blur = true,
 })
 
-hl.window_rule({
+rule({
     name = "kando",
     match = { class = "^(kando)$" },
     no_blur = true,
 })
 
-hl.window_rule({
+rule({
     name = "bitwarden",
     match = { class = "^([Bb]itwarden)$" },
     no_screen_share = true,
 })
 
-hl.window_rule({
+rule({
     name = "steam-pagseguro",
     match = {
         class = "^([Ss]team)$",
@@ -349,7 +357,7 @@ hl.window_rule({
     no_screen_share = true,
 })
 
-hl.window_rule({
+rule({
     name = "steam-apm",
     match = {
         class = "^([Ss]team)$",
@@ -358,7 +366,7 @@ hl.window_rule({
     no_screen_share = true,
 })
 
-hl.window_rule({
+rule({
     name = "zen-bitwarden",
     match = {
         class = "^(zen)$",
@@ -367,7 +375,7 @@ hl.window_rule({
     no_screen_share = true,
 })
 
-hl.window_rule({
+rule({
     name = "zen-amazon",
     match = {
         class = "^(zen)$",
@@ -376,13 +384,13 @@ hl.window_rule({
     no_screen_share = true,
 })
 
-hl.window_rule({
+rule({
     name = "zen",
     match = { class = "^(zen)$" },
     focus_on_activate = true,
 })
 
-hl.window_rule({
+rule({
     name = "zen-inter",
     match = {
         class = "^(zen)$",
@@ -391,7 +399,7 @@ hl.window_rule({
     no_screen_share = true,
 })
 
-hl.window_rule({
+rule({
     name = "ferdium",
     match = {
         class = "^([Ff]erdium)$",
@@ -400,7 +408,7 @@ hl.window_rule({
     focus_on_activate = true,
 })
 
-hl.window_rule({
+rule({
     name = "p3r",
     match = {
         title = "P3R(.*)",
@@ -409,27 +417,27 @@ hl.window_rule({
     immediate = true,
 })
 
-hl.window_rule({
+rule({
     name = "gitahead",
     match = { class = "GitAhead" },
-    size   = "1300 800",
+    size = "1300 800",
     center = true,
 })
 
-hl.window_rule({
+rule({
     name = "gthumb",
     match = { class = "org.gnome.gThumb" },
     size = "1300 800",
 })
 
-hl.window_rule({
+rule({
     name = "volume-control",
     match = { title = "^(Volume Control)$" },
     size = "800 600",
     move = "(monitor_w*0.75) (monitor_h*0.44)",
 })
 
-hl.window_rule({
+rule({
     name = "floating",
     match = {
         class = "(.*)",
@@ -438,28 +446,28 @@ hl.window_rule({
     decorate = false,
 })
 
-hl.window_rule({
+rule({
     name = "hyprland-dialog",
     match = {
         class = "hyprland-dialog",
         title = "Application Not Responding",
         float = true,
     },
-    move             = "onscreen (monitor_w*0.95) (monitor_h*0.10)",
+    move = "onscreen (monitor_w*0.95) (monitor_h*0.10)",
     no_initial_focus = true,
 })
 
-hl.window_rule({
+rule({
     name = "gitify",
     match = {
         class = "^(gitify)$",
         title = "^([Gg]itify)$",
     },
-    move             = "(monitor_w*0.705) (monitor_h*0.045)",
+    move = "(monitor_w*0.705) (monitor_h*0.045)",
     no_initial_focus = true,
 })
 
-hl.window_rule({
+rule({
     name = "kando-menu",
     match = {
         title = "[Kk]ando [Mm]enu",
@@ -468,12 +476,12 @@ hl.window_rule({
     pin = true,
 })
 
-hl.window_rule({
+rule({
     name = "timeshift",
     match = { class = "(Timeshift-gtk)" },
 })
 
-hl.window_rule({
+rule({
     name = "flameshot-config",
     match = {
         class = "^(flameshot)$",
@@ -481,18 +489,18 @@ hl.window_rule({
     },
 })
 
-hl.window_rule({
+rule({
     name = "persona-5-royal",
     match = {
         class = "steam_app_(.*)",
         title = "^(Persona 5 Royal)$",
     },
-    workspace        = 4,
+    workspace = 4,
     focus_on_activate = false,
-    fullscreen       = true,
+    fullscreen = true,
 })
 
-hl.window_rule({
+rule({
     name = "proton-authenticator",
     match = {
         class = "^(proton-authenticator)$",
@@ -501,7 +509,7 @@ hl.window_rule({
     no_screen_share = true,
 })
 
-hl.window_rule({
+rule({
     name = "proton-wallet-zen",
     match = {
         class = "zen",
@@ -510,7 +518,7 @@ hl.window_rule({
     no_screen_share = true,
 })
 
-hl.window_rule({
+rule({
     name = "proton-pass",
     match = {
         class = "^(Proton Pass)$",
@@ -519,13 +527,13 @@ hl.window_rule({
     no_screen_share = true,
 })
 
-hl.window_rule({
+rule({
     name = "until-then",
     match = { class = "^(Until Then)$" },
     fullscreen = true,
 })
 
-hl.window_rule({
+rule({
     name = "binance-desktop",
     match = {
         class = "^(Binance)$",
@@ -534,7 +542,7 @@ hl.window_rule({
     no_screen_share = true,
 })
 
-hl.window_rule({
+rule({
     name = "exodus",
     match = {
         class = "[Ee]xodus",
@@ -543,7 +551,7 @@ hl.window_rule({
     no_screen_share = true,
 })
 
-hl.window_rule({
+rule({
     name = "hydralauncher",
     match = {
         class = "^(hydralauncher)$",
@@ -552,7 +560,7 @@ hl.window_rule({
     focus_on_activate = true,
 })
 
-hl.window_rule({
+rule({
     name = "dome-keeper",
     match = {
         class = "^(Dome Keeper)$",
