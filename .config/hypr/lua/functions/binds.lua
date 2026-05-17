@@ -1,6 +1,6 @@
 local M = {}
 
----@alias MakeModFn fun(k: string, mods: (Mods|string)[]|Mods|string|nil): string
+---@alias MakeModFn fun(k: string|integer, mods: (Mods|string)[]|Mods|string|nil): string
 
 ---@type table<table, string>
 local mods_join_cache = {}
@@ -33,10 +33,13 @@ local function make_mod_string(k, mods)
 end
 
 ---@type MakeModFn
----@param k string
+---@param k string|integer
 ---@param mods (Mods|string)[]|Mods|string|nil
 ---@return string
 function M.make_mod(k, mods)
+    if type(k) ~= "string" then
+        k = tostring(k)
+    end
     if not mods or #mods == 0 then
         return k
     end
@@ -52,6 +55,29 @@ function M.make_mod(k, mods)
     end
 
     return k
+end
+
+---@type table
+M.scratchpad_opts = {
+    float = true,
+    no_blur = true,
+    size = { "(monitor_w*0.9)", "(monitor_h*0.8)" },
+}
+
+---@param key string
+---@param cmd string
+---@param opts? HL.BindOptions
+function M.bind_scratchpad(key, cmd, opts)
+    local merged = M.scratchpad_opts
+    for k, v in pairs(M.scratchpad_opts) do
+        merged[k] = v
+    end
+    if opts then
+        for k, v in pairs(opts) do
+            merged[k] = v
+        end
+    end
+    hl.bind(key, hl.dsp.exec_cmd(cmd, merged))
 end
 
 return M
