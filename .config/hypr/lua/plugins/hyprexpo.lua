@@ -1,0 +1,12 @@
+hl.config({
+    plugin = {
+        hyprexpo = {
+            columns  = 4,
+            gap_size = 2,
+            bg_col   = "rgb(111111)",
+
+            -- [center/first] [workspace]
+            workspace_method = "first 1",
+        },
+    },
+})
