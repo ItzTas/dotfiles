@@ -101,8 +101,8 @@ x-scheme-handler/gitkraken=GitKraken.desktop
 [Added Associations]
 x-scheme-handler/http=zen.desktop;firefox.desktop;
 x-scheme-handler/https=zen.desktop;firefox.desktop;
-text/html=zen.desktop;firefox.desktop;
-application/xhtml+xml=zen.desktop;firefox.desktop;
+text/html=firefox.desktop;
+application/xhtml+xml=firefox.desktop;
 x-scheme-handler/mailto=org.mozilla.Thunderbird.desktop
 x-scheme-handler/mid=org.mozilla.Thunderbird.desktop
 application/x-bittorrent=org.qbittorrent.qBittorrent.desktop
