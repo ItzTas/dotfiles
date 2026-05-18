@@ -28,5 +28,8 @@
     "editor.minimap.enabled": false,
     "editor.fontLigatures": true,
     "editor.smoothScrolling": false,
-    "editor.lineNumbers": "relative"
+    "editor.lineNumbers": "relative",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    }
 }
