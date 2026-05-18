@@ -220,8 +220,8 @@
         "format": "{icon}",
         "icon-size": 32,
         "spacing": 16,
-        "on-scroll-up": "hyprctl dispatch workspace r+1",
-        "on-scroll-down": "hyprctl dispatch workspace r-1",
+        "on-scroll-up": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"r+1\" }))'",
+        "on-scroll-down": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"r-1\" }))'",
         "persistent-workspaces": {
         },
         "format-icons": {
