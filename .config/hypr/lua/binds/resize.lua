@@ -11,8 +11,6 @@ local hyper = mods.hyper
 local bind = hl.bind
 local resize = hl.dsp.window.resize
 
-bind(mm("R", super), hl.dsp.submap("resize"))
-
 hl.define_submap("resize", function()
     bind("L", resize({ x = 20, y = 0 }), { repeating = true })
     bind("H", resize({ x = -20, y = 0 }), { repeating = true })
@@ -41,3 +39,5 @@ hl.define_submap("resize", function()
 
     bind(mm("R", super), hl.dsp.submap("reset"))
 end)
+
+bind(mm("R", super), hl.dsp.submap("resize"))
