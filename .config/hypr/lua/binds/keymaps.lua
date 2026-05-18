@@ -2,6 +2,10 @@ local mods = require("envs.mods")
 local apps = require("envs.apps")
 local binds = require("functions.binds")
 
+local volume = require("scripts.volume")
+local mic = require("scripts.mic")
+local spotify = require("scripts.spotify")
+
 local mm = binds.make_mod
 local bs = binds.bind_scratchpad
 
@@ -45,9 +49,9 @@ bind(mm("B", meh), exec("stacer", { workspace = 8 }))
 bind(mm("Z", meh), exec("hyprctl dispatch workspace 8; easyeffects", { workspace = 8 }))
 
 -- Spotify
-bind(mm("Q", meh), exec('bash "$HOME/.config/hypr/scripts/spotify/open_play.sh"', { workspace = 9 }))
-bind(mm("F", super), exec('bash "$HOME/.config/hypr/scripts/spotify/next.sh"', { workspace = 9 }))
-bind(mm("D", super), exec('bash "$HOME/.config/hypr/scripts/spotify/prev.sh"', { workspace = 9 }))
+bind(mm("Q", meh), spotify.open_play)
+bind(mm("F", super), spotify.next)
+bind(mm("D", super), spotify.prev)
 
 -- Window focus and workspace navigation
 bind(mm("Tab", alt), focus({ last = true }))
@@ -109,16 +113,16 @@ bind(mm("K", { alt, shift }), window.swap({ direction = "up" }))
 bind(mm("J", { alt, shift }), window.swap({ direction = "down" }))
 
 -- Multimedia controls (volume and brightness)
-bind(mm("XF86AudioRaiseVolume", shift), exec("bash ~/.config/hypr/scripts/spotify/volume_up.sh"), { repeating = true })
-bind(
-    mm("XF86AudioLowerVolume", shift),
-    exec("bash ~/.config/hypr/scripts/spotify/volume_down.sh"),
-    { repeating = true }
-)
-bind("XF86AudioRaiseVolume", exec('bash -c "~/.config/hypr/scripts/volume/up.sh"'), { repeating = true })
-bind("XF86AudioLowerVolume", exec('bash -c "~/.config/hypr/scripts/volume/down.sh"'), { repeating = true })
-bind("XF86AudioMute", exec('bash -c "~/.config/hypr/scripts/volume/toggle.sh"'))
-bind("XF86AudioMicMute", exec('bash -c "~/.config/hypr/scripts/mic_toggle.sh"'))
+bind(mm("XF86AudioRaiseVolume", shift), spotify.volume_up, { repeating = true })
+bind(mm("XF86AudioLowerVolume", shift), spotify.volume_down, { repeating = true })
+bind("XF86AudioRaiseVolume", function()
+    volume.adjust(5)
+end, { repeating = true })
+bind("XF86AudioLowerVolume", function()
+    volume.adjust(-5)
+end, { repeating = true })
+bind("XF86AudioMute", volume.toggle_mute)
+bind("XF86AudioMicMute", mic.toggle_mute)
 
 -- Brightness control
 bind("XF86MonBrightnessUp", exec("brightnessctl set +5%"), { repeating = true })
@@ -140,7 +144,8 @@ bind(mm("PRINT", alt), exec('bash -c "~/.config/hypr/scripts/print/window.sh"'))
 bind(mm("PRINT", super), exec("flameshot gui"))
 
 -- Scripts
--- bind(mm("T", hyperMod), exec('bash -c "~/.config/hypr/scripts/toggle_hdr.sh"'))
+-- local hdr = require("scripts.hdr")
+-- bind(mm("T", hyperMod), hdr.toggle)
 
 -- Browsing
 bind(mm("R", meh), exec(browser .. " https://www.startpage.com"))
