@@ -1,4 +1,5 @@
 local ram = require("functions.ram")
+local utils = require("functions.utils")
 
 local exec = hl.exec_cmd
 local on = hl.on
@@ -6,27 +7,32 @@ local on = hl.on
 on("hyprland.start", function()
     -- Terminal
     -- kitty
-    exec("[workspace 1 silent] kitty -e bash -c 'sleep 0.5 && fastfetch && bash --login'")
+    exec("kitty -e bash -c 'sleep 0.5 && fastfetch && bash --login'", { workspace = 1, silent = true })
 
     -- Zen-browser
-    exec("[workspace 2 silent] zen-browser")
+    exec("zen-browser", { workspace = 2 })
 
     if ram.has_above(8) then
         -- Email
         exec("protonmail-bridge --no-window")
-        exec('[workspace 6 silent] sleep 40 && hyprctl dispatch exec "[workspace 6 silent] thunderbird"')
+
+        utils.defer(function()
+            exec("thunderbird", { workspace = 6, silent = true })
+        end, 40000)
     end
 
     if ram.has_above(12) then
-        -- Todoist
-        exec("[workspace 10 silent] sleep 5 && todoist")
-
         -- Ferdium
-        exec("[workspace 7 silent] ferdium")
+        exec("ferdium", { workspace = 7, silent = true })
+
+        -- Todoist
+        utils.defer(function()
+            exec("todoist", { workspace = 10, silent = true })
+        end, 5000)
     end
 
     if ram.has_above(16) then
         -- Spotify
-        exec("[workspace 9] bash ~/.config/hypr/scripts/spotify/open_play_silent.sh")
+        exec("bash ~/.config/hypr/scripts/spotify/open_play_silent.sh", { workspace = 9, silent = true })
     end
 end)
