@@ -30,7 +30,7 @@ export BUILDKIT=1
 export PTPYTHON_CONFIG_HOME="${XDG_CONFIG_HOME}/ptpython"
 
 # HOMES
-export ANDROID_HOME="$HOME/.AndroidS/Sdk"
+export ANDROID_HOME="$HOME/Android/Sdk"
 export PNPM_HOME="/home/talinux/.local/share/pnpm"
 
 # ---- PATH EXPORTS ----
