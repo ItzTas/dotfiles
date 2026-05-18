@@ -1,14 +1,14 @@
 local mods = require("envs.mods")
 local fb = require("functions.binds")
 
-local hyperMod = mods.hyper
-local mainMod = mods.alt
+local alt_l = mods.alt_l
+local meh = mods.meh
 
 local mm = fb.make_mod
 
-hl.bind(hyperMod .. " + I", hl.dsp.submap("no-binds"))
+hl.bind(mm("I", meh), hl.dsp.submap("no-binds"))
 
 hl.define_submap("no-binds", function()
-    -- hl.bind(hyperMod .. " + catchall", hl.dsp.submap("reset"))
-    hl.bind(mm("escape", mainMod), hl.dsp.submap("reset"))
+    -- hl.bind(mm("catchall", meh), hl.dsp.submap("reset"))
+    hl.bind(mm("escape", alt_l), hl.dsp.submap("reset"))
 end)
