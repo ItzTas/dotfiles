@@ -29,9 +29,16 @@ export BUILDKIT=1
 # PTPython config path
 export PTPYTHON_CONFIG_HOME="${XDG_CONFIG_HOME}/ptpython"
 
-# HOMES
+# ANDODROID
 export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_AVD_HOME=$HOME/.config/.android/avd
+export PATH="$PATH:$HOME/Android/Sdk/emulator/emulator"
+
+# HOMES
 export PNPM_HOME="/home/talinux/.local/share/pnpm"
+
+# OTHER
+export NODE_OPTIONS="--max-old-space-size=8192"
 
 # ---- PATH EXPORTS ----
 if (( ${+commands[yarn]} )); then

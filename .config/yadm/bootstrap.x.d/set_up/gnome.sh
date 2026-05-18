@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 install_extensions() {
-    local extensions_file="${XDG_CONFIG_DIR:-$HOME/.config}/yadm/gnome/extensions-list.txt"
+    local extensions_file="${XDG_CONFIG_DIR:-$HOME/.config}/yadm/gnome/extensions.txt"
     local failed_extensions=()
 
     if [ ! -f "$extensions_file" ]; then
