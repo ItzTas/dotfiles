@@ -5,6 +5,7 @@ _start_enables() {
         "cronie"
         "docker"
         "minidlna"
+        "status systemd-oomd"
         "swayosd-libinput-backend.service"
     )
 
