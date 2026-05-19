@@ -103,9 +103,9 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # proto activation needs to be on main file
-if (( ${+commands[proto]} )); then
-    eval "$(proto activate zsh)"
-fi
+# if (( ${+commands[proto]} )); then
+#     eval "$(proto activate zsh)"
+# fi
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

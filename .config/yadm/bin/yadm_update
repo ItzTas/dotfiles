@@ -5,36 +5,6 @@ yadm() {
     PYTHONWARNINGS="ignore:pkg_resources is deprecated" command yadm "$@"
 }
 
-save_gnome() {
-    local gnome_dir="${XDG_CONFIG_DIR:-$HOME/.config}/yadm/gnome"
-    mkdir -p "$gnome_dir"
-    local output_file="$gnome_dir/settings.ini"
-
-    if command -v gnome-extensions >/dev/null 2>&1; then
-        gnome-extensions list --enabled >"$gnome_dir/extensions.txt" 2>/dev/null || true
-    fi
-
-    local exclude_paths=(
-        "org/blueman/plugins/recentconns"
-    )
-
-    local dump
-    dump=$(dconf dump /)
-
-    for path in "${exclude_paths[@]}"; do
-        dump=$(echo "$dump" | awk -v pat="[$path]" '
-            BEGIN {skip=0}
-            /^\[.*\]$/ {
-                if ($0 == pat) { skip=1; next } 
-                else { skip=0 }
-            }
-            !skip { print }
-        ')
-    done
-
-    echo "$dump" >"$output_file"
-}
-
 create_packagelists() {
     local base_dir="${XDG_CONFIG_DIR:-$HOME/.config}/yadm/packagelists"
     local pacman_dir="$base_dir/pacman"
@@ -61,7 +31,6 @@ yadm_update() {
 
         # local pacman_list flatpak_list
         # read -r pacman_list flatpak_list < <(create_packagelists)
-        save_gnome
 
         if command -v diff-so-fancy &>/dev/null; then
             yadm --no-pager diff | diff-so-fancy || yadm --no-pager diff
