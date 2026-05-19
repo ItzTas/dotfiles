@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 get_release_profile_path() {
-    local profiles_ini="$HOME/.zen/profiles.ini"
+    local profiles_ini="$HOME/.config/zen/profiles.ini"
 
     if [ ! -f "$profiles_ini" ]; then
         echo "⚠️ profiles.ini not found at $profiles_ini" >&2
@@ -38,7 +38,7 @@ create_symlinks() {
         return 1
     }
 
-    zen_dir="$HOME/.zen/$profile_path"
+    zen_dir="$HOME/.config/zen/$profile_path"
     mkdir -p "$zen_dir"
 
     echo "➡️ Symlinks will be created in: $zen_dir"
