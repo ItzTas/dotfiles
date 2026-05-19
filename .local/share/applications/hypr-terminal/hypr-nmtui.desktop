@@ -1,7 +1,9 @@
 [Desktop Entry]
 Name=nmtui Hypr
 Comment=Network Manager TUI for Hyprland
-Exec=hyprctl dispatch exec "[float; center] kitty -o cursor_trail=0 -o background_opacity=0 -e nmtui"
+# Old syntax (hyprlang dispatcher):
+# Exec=hyprctl dispatch exec "[float; center] kitty -o cursor_trail=0 -o background_opacity=0 -e nmtui"
+Exec=hyprctl eval 'hl.exec_cmd("kitty -o cursor_trail=0 -o background_opacity=0 -e nmtui", { float = true, no_anim = true, center = true })'
 Icon=network-wireless
 Terminal=false
 Type=Application

@@ -31,5 +31,11 @@
     "editor.lineNumbers": "relative",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
