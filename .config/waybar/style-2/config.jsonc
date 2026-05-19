@@ -114,7 +114,6 @@
         ],
         "on-click": "blueman-manager"
     },
-
     "power-profiles-daemon": {
         "format": "{icon}",
         "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -222,8 +221,7 @@
         "spacing": 16,
         "on-scroll-up": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"r+1\" }))'",
         "on-scroll-down": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"r-1\" }))'",
-        "persistent-workspaces": {
-        },
+        "persistent-workspaces": {},
         "format-icons": {
             //"1": "一",
             //"2": "二",
