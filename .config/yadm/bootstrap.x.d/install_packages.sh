@@ -45,13 +45,14 @@ _install_pacman_packages() {
         "spicetify-cli"
 
         # Hyprland ecosystem
-        "hyprland"
+        "hyprshutdown"
+        "xdg-desktop-portal-hyprland"
         "hyprpicker"
         "hyprpaper"
+        "hyprland"
         "hyprshot"
         "hyprlock"
         "hypridle"
-        "xdg-desktop-portal-hyprland"
 
         # Python
         "python-j2cli"

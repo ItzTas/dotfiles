@@ -22,7 +22,6 @@ end
 function M.open_play_silent()
     hl.exec_cmd("spotify", {
         workspace = 9,
-        silent = true,
     })
 
     hl.timer(function()

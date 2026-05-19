@@ -69,7 +69,7 @@ bs(mm("G", meh), 'kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/s
 
 -- Menus and widgets
 bind(mm("SPACE", alt), exec('killall rofi; bash -c "~/.config/rofi/launchers/type-7/launcher.sh"'))
-bind(mm("X", alt), exec("killall rofi; wlogout"))
+bind(mm("X", alt), exec("killall wlogout || wlogout"))
 bind(mm("V", alt), exec("dex ~/.local/share/applications/hypr-terminal/hypr-clipse.desktop"))
 bind(mm("V", super), exec("clipse-gui"))
 bind(mm("SPACE", meh), exec('killall rofi; bash -c "~/.config/rofi/emoji/emoji.sh"'))
