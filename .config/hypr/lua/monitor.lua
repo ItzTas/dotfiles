@@ -34,7 +34,7 @@ if device.is_laptop() then
         supports_hdr = 1,
 
         sdrbrightness = 1,
-        sdrsaturation = 1.7,
+        sdrsaturation = 1.4,
 
         sdr_min_luminance = 0.005,
         sdr_max_luminance = 90,

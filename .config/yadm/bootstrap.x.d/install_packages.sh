@@ -154,6 +154,7 @@ _install_pacman_packages() {
         "seahorse"
         "nwg-look"
         "qbittorrent"
+        "bitwarden"
         "alarm-clock-applet"
         "spotify"
         "ferdium"
