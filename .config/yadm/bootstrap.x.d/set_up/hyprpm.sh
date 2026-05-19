@@ -8,6 +8,7 @@ _set_up() {
         "https://github.com/hyprwm/hyprland-plugins"
         "https://github.com/virtcode/hypr-dynamic-cursors"
         "https://github.com/micha4w/Hypr-DarkWindow"
+        "https://github.com/gfhdhytghd/hymission"
     )
 
     for plugin in "${plugins[@]}"; do
@@ -18,6 +19,7 @@ _set_up() {
         "dynamic-cursors"
         "Hypr-DarkWindow"
         "hyprexpo"
+        "hymission"
     )
 
     for enable in "${enables[@]}"; do

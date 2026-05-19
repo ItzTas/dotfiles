@@ -7,7 +7,7 @@ local on = hl.on
 on("hyprland.start", function()
     -- Terminal
     -- kitty
-    exec("kitty -e bash -c 'sleep 0.5 && fastfetch && bash --login'", { workspace = 1, silent = true })
+    exec("kitty -e bash -c 'sleep 0.5 && fastfetch && bash --login'", { workspace = 1 })
 
     -- Zen-browser
     exec("zen-browser", { workspace = 2 })
@@ -17,22 +17,22 @@ on("hyprland.start", function()
         exec("protonmail-bridge --no-window")
 
         utils.defer(function()
-            exec("thunderbird", { workspace = 6, silent = true })
+            exec("thunderbird", { workspace = 6 })
         end, 40000)
     end
 
     if ram.has_above(12) then
         -- Ferdium
-        exec("ferdium", { workspace = 7, silent = true })
+        exec("ferdium", { workspace = 7 })
 
         -- Todoist
         utils.defer(function()
-            exec("todoist", { workspace = 10, silent = true })
+            exec("todoist", { workspace = 10 })
         end, 5000)
     end
 
     if ram.has_above(16) then
         -- Spotify
-        exec("bash ~/.config/hypr/scripts/spotify/open_play_silent.sh", { workspace = 9, silent = true })
+        exec("bash ~/.config/hypr/scripts/spotify/open_play_silent.sh", { workspace = 9 })
     end
 end)

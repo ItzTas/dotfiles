@@ -34,6 +34,9 @@ export ANDROID_HOME="$HOME/Android/Sdk"
 export ANDROID_AVD_HOME=$HOME/.config/.android/avd
 export PATH="$PATH:$HOME/Android/Sdk/emulator/emulator"
 
+# Android
+export ANDROID_HOME="$HOME/Android/Sdk"
+
 # HOMES
 export PNPM_HOME="/home/talinux/.local/share/pnpm"
 
