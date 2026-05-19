@@ -8,8 +8,10 @@ local mod_types = require("types.binds.mods")
 ---@field alt Mods
 ---@field hyper string
 ---@field meh string
+---@field super_l Mods
 
 local M = {
+    super_l = mod_types.Mods.SUPER_L,
     super = mod_types.Mods.SUPER,
     alt_l = mod_types.Mods.ALT_L,
     shift = mod_types.Mods.SHIFT,
