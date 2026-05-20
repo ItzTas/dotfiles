@@ -7,7 +7,7 @@ if device.is_laptop() then
     monitor({
         output = "eDP-1",
         mode = "preferred",
-        position = "auto-left",
+        position = "auto-right",
         scale = 1,
 
         bitdepth = 10,
@@ -25,7 +25,7 @@ if device.is_laptop() then
     monitor({
         output = "HDMI-A-1",
         mode = "preferred",
-        position = "auto",
+        position = "auto-left",
         scale = 1,
 
         bitdepth = 10,

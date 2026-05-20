@@ -31,7 +31,9 @@ local function enable_open_bind()
         open_bind:remove()
         enable_close_bind()
         hymission.open()
-    end)
+    end, {
+        long_press = true
+    })
 end
 
 function enable_close_bind()
