@@ -6,6 +6,7 @@ local volume = require("scripts.volume")
 local mic = require("scripts.mic")
 local spotify = require("scripts.spotify")
 local print = require("scripts.print")
+local recording = require("scripts.recording")
 
 local mm = binds.make_mod
 local bs = binds.bind_scratchpad
@@ -136,7 +137,7 @@ bind("XF86AudioPlay", exec("playerctl play-pause"), { locked = true })
 bind("XF86AudioPrev", exec("playerctl previous"), { locked = true })
 
 -- Screen recording
-bind(mm("G", { alt, shift }), exec('bash -c "~/.config/hypr/scripts/recording/screen_record.sh"'))
+bind(mm("G", { alt, shift }), recording.toggle)
 
 -- Screenshots
 bind("PRINT", print.screen)
