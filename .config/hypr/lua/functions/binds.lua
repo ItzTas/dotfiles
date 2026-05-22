@@ -80,4 +80,42 @@ function M.bind_scratchpad(key, cmd, opts)
     hl.bind(key, hl.dsp.exec_cmd(cmd, merged))
 end
 
+---@param base table
+---@param overrides table
+---@return table
+local function merge_opts(base, overrides)
+    local result = {}
+    for k, v in pairs(base) do
+        result[k] = v
+    end
+    for k, v in pairs(overrides) do
+        result[k] = v
+    end
+    return result
+end
+
+---@class HoldActions
+---@field tap? any
+---@field hold? any
+---@field release? any
+
+---@param key string
+---@param actions HoldActions
+---@param opts? table
+function M.bind_hold(key, actions, opts)
+    opts = opts or {}
+
+    if actions.hold then
+        hl.bind(key, actions.hold, merge_opts(opts, { long_press = true }))
+    end
+
+    if actions.tap then
+        hl.bind(key, actions.tap, opts)
+    end
+
+    if actions.release then
+        hl.bind(key, actions.release, merge_opts(opts, { release = true }))
+    end
+end
+
 return M
