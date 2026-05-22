@@ -1,24 +1,10 @@
 local utils = require("functions.utils")
+local shell = require("functions.shell")
 
 local M = {}
 
-local shell_header = [=[
-open_screenshot() {
-    local path="$1"
-    local id
-
-    id=$(hyprctl activeworkspace -j | jq -r '.id')
-
-    if [[ -n "$id" && "$id" != "null" ]]; then
-        hyprctl eval "hl.exec_cmd('nemo \"$path\"', { workspace = '$id' })"
-        return
-    fi
-    nemo "$path"
-}
-]=]
-
 function M.area()
-    utils.run_async_cmd(shell_header .. [=[
+    utils.run_async_cmd(shell.inject({ shell.open_path }, [=[
         filename="screenshot_$(date '+%Y-%m-%d_%H-%M-%S-%3N').png"
         path="$(xdg-user-dir PICTURES)/screenshots"
         fullpath="$path/$filename"
@@ -31,14 +17,14 @@ function M.area()
 
         case "$ACTION" in
         "default")
-            open_screenshot "$fullpath"
+            open_path "$fullpath"
             ;;
         esac
-    ]=])
+    ]=]))
 end
 
 function M.screen()
-    utils.run_async_cmd(shell_header .. [=[
+    utils.run_async_cmd(shell.inject({ shell.open_path }, [=[
         filename="screenshot_$(date '+%Y-%m-%d_%H-%M-%S-%3N').png"
         path="$(xdg-user-dir PICTURES)/screenshots"
         fullpath="$path/$filename"
@@ -52,14 +38,14 @@ function M.screen()
 
         case "$ACTION" in
         "default")
-            open_screenshot "$fullpath"
+            open_path "$fullpath"
             ;;
         esac
-    ]=])
+    ]=]))
 end
 
 function M.window()
-    utils.run_async_cmd(shell_header .. [=[
+    utils.run_async_cmd(shell.inject({ shell.open_path }, [=[
         filename="screenshot_$(date '+%Y-%m-%d_%H-%M-%S-%3N').png"
         path="$(xdg-user-dir PICTURES)/screenshots"
         fullpath="$path/$filename"
@@ -82,10 +68,10 @@ function M.window()
 
         case "$ACTION" in
         "default")
-            open_screenshot "$fullpath"
+            open_path "$fullpath"
             ;;
         esac
-    ]=])
+    ]=]))
 end
 
 return M
