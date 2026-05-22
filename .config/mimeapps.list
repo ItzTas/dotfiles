@@ -97,6 +97,7 @@ video/3gpp2=mpv.desktop
 video/dv=mpv.desktop
 video/vnd.avi=mpv.desktop
 x-scheme-handler/gitkraken=GitKraken.desktop
+x-scheme-handler/antigravity=antigravity.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;firefox.desktop;
