@@ -31,17 +31,9 @@ local function enable_open_bind()
         open_bind:remove()
         enable_close_bind()
         hymission.open()
-<<<<<<< HEAD
-    end, {
-        long_press = true
-    })
-||||||| parent of a2f38fed6 (2026-05-21 21:33 - Updated: M ../../hypr/lua/functions/binds.lua,M ../../hypr/lua/plugins/hymission.lua,D ../bootstrap.x.d/set_up/git.sh,M ../bootstrap.x.d/set_up/zen-browser.sh,)
-    end)
-=======
     end, {
         long_press = true,
     })
->>>>>>> a2f38fed6 (2026-05-21 21:33 - Updated: M ../../hypr/lua/functions/binds.lua,M ../../hypr/lua/plugins/hymission.lua,D ../bootstrap.x.d/set_up/git.sh,M ../bootstrap.x.d/set_up/zen-browser.sh,)
 end
 
 function enable_close_bind()
