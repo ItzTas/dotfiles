@@ -1,7 +1,8 @@
 local utils = require("functions.utils")
+local notify = require("envs.notify")
 
-local DUNST_ICON = os.getenv("HOME") .. "/.config/dunst/assets"
-local REPLACE_ID = 2593
+local ICON_DIR = notify.ICON_DIR
+local REPLACE_ID = notify.REPLACE_ID
 
 local M = {}
 
@@ -53,7 +54,7 @@ local function adjust_volume(delta)
             .. ' notify-send -e -h "int:value:$vol" -i "%s/volume.svg" -t 500 -r %d "Spotify: $vol%%"',
             sign,
             abs_val,
-            DUNST_ICON,
+            ICON_DIR,
             REPLACE_ID
         )
     )

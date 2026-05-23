@@ -1,7 +1,8 @@
 local utils = require("functions.utils")
+local notify = require("envs.notify")
 
-local DUNST_ICON = os.getenv("HOME") .. "/.config/dunst/assets"
-local REPLACE_ID = 2593
+local ICON_DIR = notify.ICON_DIR
+local REPLACE_ID = notify.REPLACE_ID
 
 local M = {}
 
@@ -16,7 +17,7 @@ function M.toggle_mute()
                 .. '   icon="mic.svg"; msg="Microphone: Unmuted";'
                 .. " fi;"
                 .. ' notify-send -e -i "%s/$icon" -r %d "$msg"',
-            DUNST_ICON, REPLACE_ID
+            ICON_DIR, REPLACE_ID
         )
     )
 end

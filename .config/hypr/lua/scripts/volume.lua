@@ -1,7 +1,8 @@
 local utils = require("functions.utils")
+local notify = require("envs.notify")
 
-local DUNST_ICON = os.getenv("HOME") .. "/.config/dunst/assets"
-local REPLACE_ID = 2593
+local ICON_DIR = notify.ICON_DIR
+local REPLACE_ID = notify.REPLACE_ID
 
 local M = {}
 
@@ -18,7 +19,7 @@ function M.adjust(step)
             "wpctl set-volume %s@DEFAULT_AUDIO_SINK@ %d%%%s;"
                 .. " vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}');"
                 .. ' notify-send -e -h "int:value:$vol" -i "%s/volume.svg" -t 500 -r %d "Volume: $vol%%"',
-            limit, abs, sign, DUNST_ICON, REPLACE_ID
+            limit, abs, sign, ICON_DIR, REPLACE_ID
         )
     )
 end
@@ -34,7 +35,7 @@ function M.toggle_mute()
                 .. '   icon="volume.svg"; msg="Audio: Unmuted";'
                 .. " fi;"
                 .. ' notify-send "$msg" -e --icon="%s/$icon" --expire-time=500 --replace-id=%d',
-            DUNST_ICON, REPLACE_ID
+            ICON_DIR, REPLACE_ID
         )
     )
 end
