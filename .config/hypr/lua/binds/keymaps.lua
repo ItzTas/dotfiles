@@ -5,6 +5,7 @@ local binds = require("functions.binds")
 local volume = require("scripts.volume")
 local mic = require("scripts.mic")
 local spotify = require("scripts.spotify")
+local print = require("scripts.print")
 
 local mm = binds.make_mod
 local bs = binds.bind_scratchpad
@@ -138,9 +139,9 @@ bind("XF86AudioPrev", exec("playerctl previous"), { locked = true })
 bind(mm("G", { alt, shift }), exec('bash -c "~/.config/hypr/scripts/recording/screen_record.sh"'))
 
 -- Screenshots
-bind("PRINT", exec('bash -c "~/.config/hypr/scripts/print/screen.sh"'))
-bind(mm("PRINT", shift), exec('bash -c "~/.config/hypr/scripts/print/area.sh"'))
-bind(mm("PRINT", alt), exec('bash -c "~/.config/hypr/scripts/print/window.sh"'))
+bind("PRINT", print.screen)
+bind(mm("PRINT", shift), print.area)
+bind(mm("PRINT", alt), print.window)
 bind(mm("PRINT", super), exec("flameshot gui"))
 
 -- Scripts
