@@ -82,6 +82,10 @@ bind(mm("l", alt), focus({ direction = "right" }))
 bind(mm("k", alt), focus({ direction = "up" }))
 bind(mm("j", alt), focus({ direction = "down" }))
 
+-- Moving window focus between monitors
+bind(mm("H", meh), focus({ monitor = "left" }))
+bind(mm("L", meh), focus({ monitor = "right" }))
+
 -- Switch workspaces with mainMod + numbers
 for i = 1, 10 do
     local key = i % 10
