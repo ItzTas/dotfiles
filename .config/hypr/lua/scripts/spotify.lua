@@ -14,9 +14,10 @@ function M.prev()
 end
 
 function M.open_play()
-    utils.run_async_cmd(
-        'hyprctl dispatch exec "[workspace 9] spotify" || spotify;' .. " sleep 0.8;" .. " playerctl -p spotify play"
-    )
+    hl.exec_cmd("spotify", { workspace = 9 })
+    utils.defer(function()
+        utils.run_cmd("playerctl -p spotify play")
+    end, 800)
 end
 
 function M.open_play_silent()
