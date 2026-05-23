@@ -57,29 +57,6 @@ function M.make_mod(k, mods)
     return k
 end
 
----@type table
-M.scratchpad_opts = {
-    float = true,
-    no_blur = true,
-    size = { "(monitor_w*0.9)", "(monitor_h*0.8)" },
-}
-
----@param key string
----@param cmd string
----@param opts? HL.BindOptions
-function M.bind_scratchpad(key, cmd, opts)
-    local merged = M.scratchpad_opts
-    for k, v in pairs(M.scratchpad_opts) do
-        merged[k] = v
-    end
-    if opts then
-        for k, v in pairs(opts) do
-            merged[k] = v
-        end
-    end
-    hl.bind(key, hl.dsp.exec_cmd(cmd, merged))
-end
-
 ---@param base table
 ---@param overrides table
 ---@return table
@@ -93,6 +70,23 @@ local function merge_opts(base, overrides)
     end
     return result
 end
+
+---@type table
+M.scratchpad_opts = {
+    float = true,
+    no_blur = true,
+    size = { "(monitor_w*0.9)", "(monitor_h*0.8)" },
+}
+
+---@param key string
+---@param cmd string
+---@param opts? HL.BindOptions
+function M.bind_scratchpad(key, cmd, opts)
+    local merged = merge_opts(M.scratchpad_opts, opts or {})
+    hl.bind(key, hl.dsp.exec_cmd(cmd, merged))
+end
+
+
 
 ---@class HoldActions
 ---@field tap? any
