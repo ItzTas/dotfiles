@@ -25,8 +25,8 @@ function M.open_play_silent()
         workspace = 9,
     })
 
-    hl.timer(function()
-        utils.run_async_cmd(
+    utils.defer(function()
+        utils.run_cmd(
             "count=0; "
             .. 'until playerctl -l 2>/dev/null | grep -q spotify || [ "$count" -ge 20 ]; do '
             .. "sleep 0.5; count=$((count+1)); done; "
@@ -34,7 +34,7 @@ function M.open_play_silent()
             .. "playerctl -p spotify volume 0 2>/dev/null; "
             .. "playerctl -p spotify play 2>/dev/null"
         )
-    end, { timeout = 1000, type = "oneshot" })
+    end)
 end
 
 ---@param delta number
