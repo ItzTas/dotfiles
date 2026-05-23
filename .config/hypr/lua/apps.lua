@@ -1,5 +1,6 @@
 local ram = require("functions.ram")
 local utils = require("functions.utils")
+local spotify = require("scripts.spotify")
 
 local exec = hl.exec_cmd
 local on = hl.on
@@ -33,6 +34,6 @@ on("hyprland.start", function()
 
     if ram.has_above(16) then
         -- Spotify
-        exec("bash ~/.config/hypr/scripts/spotify/open_play_silent.sh", { workspace = 9 })
+        spotify.open_play_silent()
     end
 end)
