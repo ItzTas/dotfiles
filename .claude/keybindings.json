@@ -1,0 +1,17 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-keybindings.json",
+  "$docs": "https://code.claude.com/docs/en/keybindings",
+  "bindings": [
+    {
+      "context": "Chat",
+      "bindings": {
+        "enter": "chat:submit",
+        "up": "history:previous",
+        "down": "history:next",
+        "escape": "chat:cancel",
+        "ctrl+j": "history:next",
+        "ctrl+k": "history:previous"
+      }
+    }
+  ]
+}

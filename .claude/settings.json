@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "defaultMode": "default"
+  },
+  "model": "opus",
+  "theme": "dark",
+  "verbose": true,
+  "autoCompactEnabled": true
+}
