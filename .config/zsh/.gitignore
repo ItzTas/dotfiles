@@ -3,4 +3,4 @@ history
 .dircolors
 plugins/repos/
 completions/generated/
-secrets/
+/secrets/
