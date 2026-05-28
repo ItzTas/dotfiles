@@ -124,7 +124,6 @@ _install_pacman_packages() {
         "direnv"
         "man-db"
         "ddcutil"
-        "ddcutil-service"
         "ripgrep"
         "fastfetch"
         "net-tools"
@@ -132,6 +131,8 @@ _install_pacman_packages() {
         "miru-go-bin"
         "pay-respects"
         "brightnessctl"
+        "ddcutil-service"
+        "tree-sitter-cli"
 
         # Golang
         "gomodifytags"
