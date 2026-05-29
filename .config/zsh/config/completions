@@ -52,6 +52,16 @@ if (( ${+commands[aws]} )); then
   add-zsh-hook precmd _aws_lazy_completion
 fi
 
+# ----------------- Remote Completions ------------------
+
+# claude completions (fetched from upstream repo)
+if (( ${+commands[claude]} )) && (( ${+commands[curl]} )); then
+    if [ ! -f "$_GENERATED_COMPLETIONS_DIR/_claude" ]; then
+        curl -fsSL "https://raw.githubusercontent.com/1160054/claude-code-zsh-completion/main/completions/_claude" \
+            -o "$_GENERATED_COMPLETIONS_DIR/_claude"
+    fi
+fi
+
 # -------------------------------------------------------
 
 fpath=(

@@ -4,85 +4,83 @@ local ram = require("functions.ram")
 local exec = hl.exec_cmd
 local on = hl.on
 
+local function cleanup()
+	exec("paru -Sc --noconfirm")
+	exec("rm -rf ~/.cache/electron/*")
+	exec("rm -rf ~/Desktop/*")
+	exec("rm -rf ~/.cache/spotify/*")
+	exec("rm -rf ~/.config/Ferdium/Partitions/*/Cache/*")
+	exec("rm -rf ~/.config/Ferdium/Partitions/*/GPUCache/*")
+	exec("rm -rf ~/.cache/thumbnails/*")
+	exec("rm ~/steam-*.log")
+end
+
 on("hyprland.start", function()
-    -- Cache cleanup
-    exec("paru -Sc --noconfirm")
-    exec("rm -rf ~/.cache/electron/*")
-    exec("rm -rf ~/Desktop/*")
-    exec("rm -rf ~/.cache/spotify/*")
-    exec("rm -rf ~/.config/Ferdium/Partitions/*/Cache/*")
-    exec("rm -rf ~/.config/Ferdium/Partitions/*/GPUCache/*")
-    exec("rm ~/steam-*.log")
+	cleanup()
 
-    -- Core services
-    exec(
-        "dbus-update-activation-environment --systemd $HYPRLAND_INSTANCE_SIGNATURE $WAYLAND_DISPLAY $XDG_CURRENT_DESKTOP"
-    )
-    exec("hypridle")
-    exec("hyprctl setcursor Bibata-Modern-Classic 24")
-    exec("hyprpaper")
+	-- Core services
+	exec(
+		"dbus-update-activation-environment --systemd $HYPRLAND_INSTANCE_SIGNATURE $WAYLAND_DISPLAY $XDG_CURRENT_DESKTOP"
+	)
+	exec("hypridle")
+	exec("hyprctl setcursor Bibata-Modern-Classic 24")
+	exec("hyprpaper")
 
-    -- Desktop services
-    exec("gnome-keyring-daemon --start --daemonize --components=pkcs11,secrets,ssh")
-    exec("systemctl --user start xdg-desktop-portal-hyprland")
-    exec('bash ~/.config/waybar/lauch_waybar.sh "2"')
-    exec("swaync")
+	-- Desktop services
+	exec("gnome-keyring-daemon --start --daemonize --components=pkcs11,secrets,ssh")
+	exec("systemctl --user start xdg-desktop-portal-hyprland")
+	exec('bash ~/.config/waybar/lauch_waybar.sh "2"')
+	exec("swaync")
 
-    -- Gitify
-    exec("sleep 11; gitify --password-store=gnome-libsecret")
+	-- Gitify
+	exec("sleep 11; gitify --password-store=gnome-libsecret")
 
-    -- Clipboard
-    exec("wl-clip-persist --clipboard regular")
-    exec("clipse -listen")
+	-- Clipboard
+	exec("wl-clip-persist --clipboard regular")
+	exec("clipse -listen")
 
-    -- Updates
-    exec("sleep 10; arch-update --tray")
-    exec("sleep 10; systemctl --user start arch-update.timer")
+	-- Updates
+	exec("sleep 10; arch-update --tray")
+	exec("sleep 10; systemctl --user start arch-update.timer")
 
-    -- Audio
-    exec("systemctl --user start pipewire")
-    exec("systemctl --user start pipewire-pulse")
-    exec("systemctl --user start wireplumber")
+	-- Audio
+	exec("systemctl --user start pipewire")
+	exec("systemctl --user start pipewire-pulse")
+	exec("systemctl --user start wireplumber")
 
-    -- Telemetry off
-    exec("go telemetry off")
-    exec("mkdir -p ~/.winboat; ln -s /dev/null ~/.winboat/appUsage.json")
-    exec("yarn next telemetry disable")
+	-- Telemetry off
+	exec("go telemetry off")
+	exec("mkdir -p ~/.winboat; ln -s /dev/null ~/.winboat/appUsage.json")
+	exec("yarn next telemetry disable")
 
-    -- System utilities
-    exec("swayosd-server")
-    exec("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
-    exec("chmod +x ~/.config/hypr/hyprlock/bh/lockscripts.sh")
-    exec("yadm alt")
+	-- System utilities
+	exec("swayosd-server")
+	exec("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
+	exec("chmod +x ~/.config/hypr/hyprlock/bh/lockscripts.sh")
+	exec("yadm alt")
 
-    -- Alarm
-    exec("alarm-clock-applet --hidden")
+	-- Alarm
+	exec("alarm-clock-applet --hidden")
 
-    if gpu.is_nvidia() then
-        exec("nvibrant 0 0 0 0 500")
-    end
+	if gpu.is_nvidia() then
+		exec("nvibrant 0 0 0 0 500")
+	end
 
-    if ram.has_above(8) then
-        exec("sleep 30 && protonvpn-app --start-minimized")
-        exec("systemctl --user start gamemoded")
-        exec("easyeffects --gapplication-service")
-    end
+	if ram.has_above(8) then
+		exec("sleep 30 && protonvpn-app --start-minimized")
+		exec("systemctl --user start gamemoded")
+		exec("easyeffects --gapplication-service")
+	end
 end)
 
 on("hyprland.shutdown", function()
-    exec("paru -Sc --noconfirm")
-    exec("rm -rf ~/.cache/electron/*")
-    exec("rm -rf ~/Desktop/*")
-    exec("rm -rf ~/.cache/spotify/*")
-    exec("rm -rf ~/.config/Ferdium/Partitions/*/Cache/*")
-    exec("rm -rf ~/.config/Ferdium/Partitions/*/GPUCache/*")
-    exec("rm ~/steam-*.log")
+	cleanup()
 end)
 
 on("config.reloaded", function()
-    exec("hyprpm reload")
+	exec("hyprpm reload")
 
-    if ram.has_above(8) then
-        exec("eww --config ~/.config/eww/binaryharbinger daemon")
-    end
+	if ram.has_above(8) then
+		exec("eww --config ~/.config/eww/binaryharbinger daemon")
+	end
 end)

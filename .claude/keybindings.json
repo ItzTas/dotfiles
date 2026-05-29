@@ -6,6 +6,7 @@
       "context": "Chat",
       "bindings": {
         "enter": "chat:submit",
+        "shift+enter": "chat:newline",
         "up": "history:previous",
         "down": "history:next",
         "escape": "chat:cancel",
