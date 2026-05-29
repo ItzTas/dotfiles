@@ -30,6 +30,18 @@ if [ -n "$remaining" ]; then
     ctx_part="ctx:$(printf '%.0f' "$remaining")%"
 fi
 
+# Python virtual env (active venv/conda inherited from the launching shell)
+venv_name=""
+if [ -n "$VIRTUAL_ENV" ]; then
+    venv_name=$(basename "$VIRTUAL_ENV")
+    # generic names like .venv/venv/env: use the parent dir for a useful label
+    case "$venv_name" in
+        .venv|venv|env|.env) venv_name=$(basename "$(dirname "$VIRTUAL_ENV")") ;;
+    esac
+elif [ -n "$CONDA_DEFAULT_ENV" ] && [ "$CONDA_DEFAULT_ENV" != "base" ]; then
+    venv_name="$CONDA_DEFAULT_ENV"
+fi
+
 # Time
 time_part=$(date +%H:%M:%S)
 
@@ -41,13 +53,20 @@ C_GIT='\033[38;2;20;165;174m'     # #14A5AE  teal
 C_TIME='\033[38;2;184;196;199m'   # #B8C4C7  light grey
 C_MODEL='\033[38;2;208;103;157m'  # #D0679D  pink
 C_CTX='\033[38;2;80;200;120m'     # soft green
+C_VENV='\033[38;2;208;103;157m'   # #D0679D  (ohmyposh python/venv color)
 R='\033[0m'
 
 line=""
 
+# python venv — shown first, with python icon, wrapped in () (matches ohmyposh)
+if [ -n "$venv_name" ]; then
+    venv_icon=$''   # U+E235 python glyph
+    line+="${C_VENV}( ${venv_icon} ${venv_name} )${R} "
+fi
+
 # leading icon (Nerd Font glyph built from its codepoint so the file stays ASCII)
 # Change U+F007 to whatever icon you want.
-icon=$(printf ' ')
+icon=$(printf '')
 line+="${C_USER}${icon}${R}"
 
 # user segment
@@ -67,12 +86,14 @@ line+=" |"
 
 # model
 if [ -n "$model" ]; then
-    line+=" ${C_MODEL}${model}${R}"
+    model_icon=$'\uf544'   # U+F544 robot glyph
+    line+=" ${C_MODEL}${model_icon} ${model}${R}"
 fi
 
 # context
 if [ -n "$ctx_part" ]; then
-    line+=" ${C_CTX}${ctx_part}${R}"
+    ctx_icon=$'\uf625'   # U+F625 gauge glyph
+    line+=" ${C_CTX}${ctx_icon} ${ctx_part}${R}"
 fi
 
 # time
