@@ -12,6 +12,13 @@
         "ctrl+j": "history:next",
         "ctrl+k": "history:previous"
       }
+    },
+    {
+      "context": "HistorySearch",
+      "bindings": {
+        "ctrl+j": "history:next",
+        "ctrl+k": "history:previous"
+      }
     }
   ]
 }
