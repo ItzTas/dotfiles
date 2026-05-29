@@ -7,7 +7,7 @@ input=$(cat)
 # --- Extract fields ---
 user=$(whoami)
 cwd=$(echo "$input" | jq -r '.workspace.current_dir // .cwd // empty')
-cwd_display="${cwd/#$HOME/~}"
+cwd_display="${cwd/#$HOME/\~}"
 
 model=$(echo "$input" | jq -r '.model.display_name // empty')
 
@@ -45,11 +45,17 @@ R='\033[0m'
 
 line=""
 
+# leading icon (Nerd Font glyph built from its codepoint so the file stays ASCII)
+# Change U+F007 to whatever icon you want.
+icon=$(printf ' ')
+line+="${C_USER}${icon}${R}"
+
 # user segment
 line+="${C_USER} ${user}${R}"
 
-# path segment
-line+=" ${C_PATH} ${cwd_display}${R}"
+# path segment (U+F115 folder icon, built from codepoint)
+path_icon=$(printf '')
+line+=" ${C_PATH}${path_icon} ${cwd_display}${R}"
 
 # git segment
 if [ -n "$git_branch" ]; then
