@@ -3,11 +3,12 @@
     "defaultMode": "default"
   },
   "model": "opus",
-  "theme": "dark",
-  "verbose": true,
-  "autoCompactEnabled": true,
   "statusLine": {
     "type": "command",
     "command": "bash ~/.claude/statusline-command.sh"
-  }
+  },
+  "theme": "dark",
+  "verbose": true,
+  "autoCompactEnabled": true,
+  "effortLevel": "xhigh"
 }
