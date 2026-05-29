@@ -14,12 +14,21 @@ model=$(echo "$input" | jq -r '.model.display_name // empty')
 # Git info (from workspace repo / worktree branch)
 git_branch=""
 git_dirty=""
+git_behind=""   # ↓ commits behind upstream (need pull)
+git_ahead=""    # ↑ commits ahead of upstream (need push)
 if [ -n "$cwd" ]; then
     branch=$(git -C "$cwd" --no-optional-locks rev-parse --abbrev-ref HEAD 2>/dev/null)
     if [ -n "$branch" ]; then
         git_branch="$branch"
         dirty=$(git -C "$cwd" --no-optional-locks status --porcelain 2>/dev/null)
         [ -n "$dirty" ] && git_dirty="*"
+        # ahead/behind vs upstream (empty if no upstream is configured)
+        counts=$(git -C "$cwd" --no-optional-locks rev-list --left-right --count '@{upstream}...HEAD' 2>/dev/null)
+        if [ -n "$counts" ]; then
+            read -r behind ahead <<< "$counts"
+            [ "${behind:-0}" -gt 0 ] 2>/dev/null && git_behind=$'↓'
+            [ "${ahead:-0}" -gt 0 ] 2>/dev/null && git_ahead=$'↑'
+        fi
     fi
 fi
 
@@ -76,9 +85,10 @@ line+="${C_USER} ${user}${R}"
 path_icon=$(printf '')
 line+=" ${C_PATH}${path_icon} ${cwd_display}${R}"
 
-# git segment
+# git segment (U+E0A0 branch icon; * = uncommitted, ↓ = behind/pull, ↑ = ahead/push)
 if [ -n "$git_branch" ]; then
-    line+=" ${C_GIT} ${git_branch}${git_dirty}${R}"
+    git_icon=$''
+    line+=" ${C_GIT}${git_icon} ${git_branch}${git_dirty}${git_behind}${git_ahead}${R}"
 fi
 
 # separator
