@@ -70,6 +70,7 @@ end)
 
 on("hyprland.shutdown", function()
 	cleanup()
+	exec("yadm alt")
 end)
 
 on("config.reloaded", function()
