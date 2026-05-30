@@ -10,3 +10,5 @@ require("services")
 require("binds")
 require("rules")
 require("plugins")
+
+require("_silenttest")
