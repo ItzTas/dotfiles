@@ -59,9 +59,6 @@ on("hyprland.start", function()
 	exec("chmod +x ~/.config/hypr/hyprlock/bh/lockscripts.sh")
 	exec("yadm alt")
 
-	-- Alarm
-	exec("alarm-clock-applet --hidden")
-
 	if gpu.is_nvidia() then
 		exec("nvibrant 0 0 0 0 500")
 	end
