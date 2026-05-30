@@ -1,6 +1,6 @@
-if not hl.plugin.dynamic_cursors then
-    return
-end
+local plugins = require("functions.plugins")
+
+if not plugins.ensure_plugin("dynamic_cursors") then return end
 
 hl.config({
     plugin = {

@@ -23,7 +23,7 @@ end
 
 function M.open_play_silent()
     hl.exec_cmd("spotify", {
-        workspace = 9,
+        workspace = "9 silent",
     })
 
     utils.defer(function()

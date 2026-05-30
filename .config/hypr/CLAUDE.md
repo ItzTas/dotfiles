@@ -4,6 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a personal Hyprland (Wayland compositor) configuration, version-controlled as part of a [yadm](https://yadm.io/) dotfiles setup. There is no build/test/lint step — changes are validated by reloading the live compositor.
 
+> **REQUIRED after every change:** run `hyprctl reload` then `hyprctl configerrors`. If `hyprctl configerrors` reports any error, fix it and re-run until it comes back clean — do not finish the task while errors remain.
+>
+> If `hyprctl` instead fails with an error about not being able to connect to the Hyprland socket, that happens rarely when modifying the Hyprland config and can be ignored.
+
 ## Two parallel config systems (this is the key thing to understand)
 
 The same configuration exists twice, written two different ways:
@@ -44,6 +48,7 @@ The `.esh` templates use shell `<% … %>` blocks to branch on hardware at rende
 ## Common commands
 
 - `hyprctl reload` — apply config changes to the running compositor (always do this after edits).
+- `hyprctl configerrors` — check the running config for errors. **Run this after every change (following `hyprctl reload`) and fix anything it reports before considering the task done.**
 - `yadm alt` — re-render the `.esh` templates after editing them.
 - `hyprctl systeminfo` / `hyprctl version` — inspect the live session; useful when debugging the hardware-detection helpers.
 - Lua editing is checked by `lua-language-server` per `.luarc.json` (globals: `hl`; library: `/usr/share/hypr/stubs` + this config's `lua/`). There are no unit tests.
