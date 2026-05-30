@@ -56,7 +56,6 @@ on("hyprland.start", function()
 	-- System utilities
 	exec("swayosd-server")
 	exec("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
-	exec("chmod +x ~/.config/hypr/hyprlock/bh/lockscripts.sh")
 	exec("yadm alt")
 
 	if gpu.is_nvidia() then
@@ -75,7 +74,6 @@ on("hyprland.shutdown", function()
 end)
 
 on("config.reloaded", function()
-
 	if ram.has_above(8) then
 		exec("eww --config ~/.config/eww/binaryharbinger daemon")
 	end
