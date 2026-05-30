@@ -5,7 +5,6 @@ local exec = hl.exec_cmd
 local on = hl.on
 
 local function cleanup()
-	exec("paru -Sc --noconfirm")
 	exec("rm -rf ~/.cache/electron/*")
 	exec("rm -rf ~/Desktop/*")
 	exec("rm -rf ~/.cache/spotify/*")
@@ -17,6 +16,7 @@ end
 
 on("hyprland.start", function()
 	cleanup()
+	exec("paru -Sc --noconfirm")
 
 	-- Core services
 	exec(
@@ -78,7 +78,6 @@ on("hyprland.shutdown", function()
 end)
 
 on("config.reloaded", function()
-	exec("hyprpm reload")
 
 	if ram.has_above(8) then
 		exec("eww --config ~/.config/eww/binaryharbinger daemon")

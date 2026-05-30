@@ -11,7 +11,7 @@ on("hyprland.start", function()
     exec("kitty -e bash -c 'sleep 0.5 && fastfetch && bash --login'", { workspace = "1 silent" })
 
     -- Zen-browser
-    exec("zen-browser", { workspace = "2 silent" })
+    exec("zen-browser", { workspace = "2" })
 
     if ram.has_above(8) then
         -- Email
