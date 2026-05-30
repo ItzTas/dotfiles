@@ -1,6 +1,6 @@
-if not hl.plugin.darkwindow then
-    return
-end
+local plugins = require("functions.plugins")
+
+if not plugins.ensure_plugin("darkwindow") then return end
 
 hl.config({
     plugin = {

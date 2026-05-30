@@ -1,6 +1,6 @@
-if not hl.plugin.hyprexpo then
-    return
-end
+local plugins = require("functions.plugins")
+
+if not plugins.ensure_plugin("hyprexpo") then return end
 
 hl.config({
     plugin = {

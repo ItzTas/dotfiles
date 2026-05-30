@@ -17,4 +17,33 @@ zig-out/
 # JavaScript | TypeScript specific
 node_modules/
 
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Desktop.ini
+.directory
+.fuse_hidden*
+.nfs*
+
+# Editor | IDE specific
+*.swp
+*.swo
+*~
+*.iml
+.netrwhist
+
+# Tooling | misc
+*.bak
+*.tmp
+*.orig
+.cache/
+.env.local
+.direnv/
+.devenv/
+.ccls-cache/
+
 **/.claude/settings.local.json

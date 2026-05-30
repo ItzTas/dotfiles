@@ -1,6 +1,7 @@
-if not hl.plugin.hymission then
-    return
-end
+local plugins = require("functions.plugins")
+
+local hymission = plugins.ensure_plugin("hymission")
+if not hymission then return end
 
 local binds = require("functions.binds")
 local mods = require("envs.mods")
@@ -11,7 +12,6 @@ local super = mods.super
 local alt = mods.alt
 local super_l = mods.super_l
 
-local hymission = hl.plugin.hymission
 local bind = hl.bind
 
 bind(mm("A", alt), function()

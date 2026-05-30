@@ -7,8 +7,9 @@
     "type": "command",
     "command": "bash ~/.claude/statusline-command.sh"
   },
+  "effortLevel": "high",
+  "skipWorkflowUsageWarning": true,
   "theme": "dark",
   "verbose": true,
-  "autoCompactEnabled": true,
-  "effortLevel": "xhigh"
+  "autoCompactEnabled": true
 }
