@@ -56,7 +56,6 @@ on("hyprland.start", function()
 	-- System utilities
 	exec("swayosd-server")
 	exec("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
-	exec("yadm alt")
 
 	if gpu.is_nvidia() then
 		exec("nvibrant 0 0 0 0 500")
