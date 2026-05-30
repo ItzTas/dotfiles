@@ -156,7 +156,6 @@ _install_pacman_packages() {
         "nwg-look"
         "qbittorrent"
         "bitwarden"
-        "alarm-clock-applet"
         "spotify"
         "ferdium"
         "clamtk"

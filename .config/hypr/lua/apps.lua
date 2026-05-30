@@ -27,9 +27,9 @@ on("hyprland.start", function()
         exec("ferdium", { workspace = "7 silent" })
 
         -- Todoist
-        utils.defer(function()
-            exec("todoist", { workspace = "10 silent" })
-        end, 5000)
+        -- utils.defer(function()
+        --     exec("todoist", { workspace = "10 silent" })
+        -- end, 5000)
     end
 
     if ram.has_above(16) then

@@ -4,78 +4,79 @@ local monitor = hl.monitor
 local rule = hl.workspace_rule
 
 if device.is_laptop() then
-    monitor({
-        output = "eDP-1",
-        mode = "preferred",
-        position = "auto-right",
-        scale = 1,
+	monitor({
+		output = "eDP-1",
+		mode = "preferred",
+		position = "auto-right",
+		scale = 1,
 
-        bitdepth = 10,
-        --
-        -- cm = "hdr",
-        -- supports_hdr = 1,
-        --
-        -- sdrbrightness = 1,
-        -- sdrsaturation = 1.45,
-        --
-        -- sdr_min_luminance = 0.005,
-        -- sdr_max_luminance = 90,
-    })
+		bitdepth = 10,
 
-    monitor({
-        output = "HDMI-A-1",
-        mode = "preferred",
-        position = "auto-left",
-        scale = 1,
+		cm = "srgb",
+		supports_hdr = 1,
 
-        bitdepth = 10,
+		sdrbrightness = 1,
+		sdrsaturation = 1.15,
 
-        cm = "hdr",
-        supports_hdr = 1,
+		sdr_min_luminance = 0.005,
+		sdr_max_luminance = 90,
+	})
 
-        sdrbrightness = 1,
-        sdrsaturation = 1.4,
+	monitor({
+		output = "HDMI-A-1",
+		mode = "preferred",
+		position = "auto-left",
+		scale = 1,
 
-        sdr_min_luminance = 0.005,
-        sdr_max_luminance = 90,
-    })
+		bitdepth = 10,
 
-    for i = 1, 10 do
-        rule({
-            workspace = tostring(i),
-            monitor = "HDMI-A-1",
-            default = true,
-        })
-    end
+		cm = "srgb",
+		supports_hdr = 1,
 
-    for i = 11, 20 do
-        rule({
-            workspace = tostring(i),
-            monitor = "eDP-1",
-            default = true,
-        })
-    end
-else
-    monitor({
-        output = "",
-        mode = "preferred",
-        position = "auto",
-        scale = 1,
+		sdrbrightness = 1,
+		sdrsaturation = 1.4,
 
-        -- vrr = 1,
-        bitdepth = 10,
+		sdr_min_luminance = 0.005,
+		sdr_max_luminance = 90,
+	})
 
-        cm = "edid",
-        supports_hdr = 1,
+	for i = 1, 10 do
+		rule({
+			workspace = tostring(i),
+			monitor = "HDMI-A-1",
+			default = true,
+		})
+	end
 
-        sdrbrightness = 1,
-        sdrsaturation = 1.1,
-
-        sdr_min_luminance = 0.005,
-        sdr_max_luminance = 90,
-
-        -- min_luminance = 0.005,
-        -- max_luminance = 1000,
-        -- max_avg_luminance = 600,
-    })
+	for i = 11, 20 do
+		rule({
+			workspace = tostring(i),
+			monitor = "eDP-1",
+			default = true,
+		})
+	end
+	return
 end
+
+monitor({
+	output = "",
+	mode = "preferred",
+	position = "auto",
+	scale = 1,
+
+	-- vrr = 1,
+	bitdepth = 10,
+
+	cm = "srgb",
+	supports_hdr = 1,
+
+	sdrbrightness = 1,
+	sdrsaturation = 1.15,
+
+	sdr_min_luminance = 0.005,
+	sdr_max_luminance = 90,
+
+	-- min_luminance = 0.005,
+	-- max_luminance = 1000,
+	-- max_avg_luminance = 600,
+})
