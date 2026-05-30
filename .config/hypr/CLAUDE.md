@@ -47,3 +47,8 @@ The `.esh` templates use shell `<% … %>` blocks to branch on hardware at rende
 - `yadm alt` — re-render the `.esh` templates after editing them.
 - `hyprctl systeminfo` / `hyprctl version` — inspect the live session; useful when debugging the hardware-detection helpers.
 - Lua editing is checked by `lua-language-server` per `.luarc.json` (globals: `hl`; library: `/usr/share/hypr/stubs` + this config's `lua/`). There are no unit tests.
+
+## References
+
+- 📖 [Hyprland Wiki](https://wiki.hypr.land) — official docs for config options, dispatchers, window/workspace rules, and the Hypr ecosystem tools (hypridle, hyprshutdown, hyprlock, …).
+- 🧩 [Hyprland Plugins](https://hypr.land/plugins) — official plugin catalog (relevant for `lua/plugins/`, e.g. hyprexpo).
