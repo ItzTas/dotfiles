@@ -73,10 +73,10 @@ local function detect_via_glxinfo()
 end
 
 local detection_chain = {
-    detect_via_hyprctl,
     detect_via_proc_nvidia,
-    detect_via_lspci,
     detect_via_sysfs,
+    detect_via_hyprctl,
+    detect_via_lspci,
     detect_via_glxinfo,
 }
 
