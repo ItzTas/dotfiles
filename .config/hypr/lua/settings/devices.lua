@@ -27,3 +27,9 @@ hl.device({
     name = "-usb-optical-mouse",
     sensitivity = 0.5
 })
+
+hl.device({
+    name = "telink-wireless-receiver-mouse",
+    sensitivity = 0.6
+}
+)
