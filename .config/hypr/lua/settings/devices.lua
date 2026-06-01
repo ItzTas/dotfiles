@@ -31,5 +31,4 @@ hl.device({
 hl.device({
     name = "telink-wireless-receiver-mouse",
     sensitivity = 0.6
-}
-)
+})
