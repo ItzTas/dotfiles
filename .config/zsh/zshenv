@@ -43,7 +43,12 @@ export PNPM_HOME="/home/talinux/.local/share/pnpm"
 # Claude
 export CLAUDE_TELEMETRY_DISABLED=1
 export CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY=1
-export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
+
+# Telemetry
+export DISABLE_TELEMETRY=1
+export DISABLE_ERROR_REPORTING=1
+export DISABLE_FEEDBACK_COMMAND=1
+export DO_NOT_TRACK=1
 
 # OTHER
 export NODE_OPTIONS="--max-old-space-size=8192"
