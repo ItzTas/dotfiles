@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Clipse Hypr
 Comment=Clipse TUI in hyprland
-Exec=hyprctl eval 'hl.exec_cmd("kitty -o cursor_trail=0 -o background_opacity=0.65 -e clipse", { float = true, no_anim = true, no_blur = true, size = { "(monitor_w * 0.9)", "(monitor_h * 0.8)" }, center = true })'
+Exec=hyprctl eval 'hl.exec_cmd("kitty -o cursor_trail=0 -o background_opacity=0.95 -e clipse", { float = true, no_anim = true, no_blur = true, size = { "(monitor_w * 0.9)", "(monitor_h * 0.8)" }, center = true })'
 Icon=clipse-gui
 Terminal=false
 Type=Application
