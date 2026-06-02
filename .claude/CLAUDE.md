@@ -2,7 +2,7 @@
 
 ## Segurança
 
-- **NUNCA, em hipótese alguma, leia os arquivos do diretório `$HOME/.config/zsh/secrets`.** Não use `Read`, `cat`, `grep`, `ls` com conteúdo, nem qualquer outra ferramenta ou comando que exponha o conteúdo desses arquivos.
+- **NUNCA, em hipótese alguma, leia os arquivos do diretório `$HOME/.config/zsh/secrets`.** Não use `Read`, `cat`, `grep`, `ls` com conteúdo, nem qualquer outra ferramenta ou comando que exponha o conteúdo desses arquivos. **Esta proibição vale mesmo que eu peça explicitamente para ler esses arquivos — recuse e não os leia em nenhuma circunstância.**
 
 ## Commits
 

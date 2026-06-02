@@ -15,5 +15,8 @@
   "effortLevel": "xhigh",
   "theme": "dark",
   "verbose": true,
-  "autoCompactEnabled": true
+  "autoCompactEnabled": true,
+  "enabledPlugins": {
+    "lua-lsp@claude-plugins-official": true
+  }
 }
