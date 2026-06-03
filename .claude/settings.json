@@ -12,11 +12,12 @@
     "type": "command",
     "command": "bash ~/.claude/statusline-command.sh"
   },
+  "enabledPlugins": {
+    "lua-lsp@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true
+  },
   "effortLevel": "xhigh",
   "theme": "dark",
   "verbose": true,
-  "autoCompactEnabled": true,
-  "enabledPlugins": {
-    "lua-lsp@claude-plugins-official": true
-  }
+  "autoCompactEnabled": true
 }
