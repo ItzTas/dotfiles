@@ -213,6 +213,7 @@
         "Banner position": "Middle (default)",
         "Big Picture Mode button": "no",
         "Bigger banner": "no",
+        "Border radius": 8,
         "Broadcast": "no",
         "Community - Profile pages header": "no",
         "Community - VAC-Ban visibility": "Show",
