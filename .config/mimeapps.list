@@ -126,6 +126,7 @@ application/wps-office.wps=wps-office-wps.desktop
 application/wps-office.wpss=wps-office-wps.desktop
 application/wps-office.wpso=wps-office-wps.desktop
 application/wps-office.wpt=wps-office-wps.desktop
+x-scheme-handler/insomnia=insomnia.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;firefox.desktop;
