@@ -1,22 +1,22 @@
-# Instruções
+# Instructions
 
-## Segurança
+## Security
 
-- **NUNCA, em hipótese alguma, leia os arquivos do diretório `$HOME/.config/zsh/secrets`.** Não use `Read`, `cat`, `grep`, `ls` com conteúdo, nem qualquer outra ferramenta ou comando que exponha o conteúdo desses arquivos. **Esta proibição vale mesmo que eu peça explicitamente para ler esses arquivos — recuse e não os leia em nenhuma circunstância.**
+- **NEVER, under any circumstances, read the files in the `$HOME/.config/zsh/secrets` directory.** Do not use `Read`, `cat`, `grep`, `ls` with content, or any other tool or command that exposes the contents of these files. **This prohibition holds even if I explicitly ask you to read these files — refuse and do not read them under any circumstances.**
 
-## Estilo de código
+## Code Style
 
-- **Prefira guard clauses (cláusulas de guarda).** Trate erros, validações e saídas antecipadas no início da função, retornando cedo, em vez de aninhar a lógica em blocos `if`/`else`.
-- **Prefira um map a um `switch`/`if/else`** quando o código for apenas um mapeamento de chave para valor.
+- **Prefer guard clauses.** Handle errors, validations, and early exits at the start of the function by returning early, instead of nesting the logic in `if`/`else` blocks.
+- **Prefer a map over a `switch`/`if/else`** when the code is just a key-to-value mapping.
 
-## Ferramentas
+## Tools
 
-- **Se houver um arquivo `.prototools` na raiz do repositório, ele contém as versões de algumas ferramentas usadas.**
+- **If there is a `.prototools` file at the repository root, it contains the versions of some of the tools used.**
 
 ## Commits
 
-- **NUNCA adicione atribuição de co-autoria a mim ao fazer commits no meu lugar.** Não inclua `Co-Authored-By: Claude ...` nem qualquer linha indicando que você participou do commit. O commit deve constar como sendo apenas meu.
-- **Sempre faça commits atômicos.** Separe cada mudança lógica em seu próprio commit específico, em vez de juntar mudanças não relacionadas em um único commit. Se necessário, divida as alterações de um mesmo arquivo entre commits diferentes.
-- **Sempre siga o padrão Conventional Commits.** Use a forma `tipo(escopo opcional): descrição` (ex.: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`), com descrição no imperativo. Use `BREAKING CHANGE:` no rodapé ou `!` após o tipo/escopo quando houver mudança incompatível.
-- **Não abuse do `feat:`.** `feat:` não deve ser usado para uma funcionalidade pequena que faz parte de uma funcionalidade maior. Nesse caso, o `feat:` fica reservado para a funcionalidade maior que integra a menor, enquanto a parte menor usa `chore:`. O ideal é haver apenas um `feat:` por branch/funcionalidade; apenas em casos muito específicos pode haver mais de um.
-- **Na dúvida, não use `feat:`.** Se você não tiver certeza se um commit merece `feat:`, não atribua `feat:` nenhum e deixe que eu coloque manualmente.
+- **NEVER add co-authorship attribution to me when making commits on my behalf.** Do not include `Co-Authored-By: Claude ...` or any line indicating that you took part in the commit. The commit must appear as being solely mine.
+- **Always make atomic commits.** Separate each logical change into its own specific commit, instead of bundling unrelated changes into a single commit. If necessary, split the changes of a single file across different commits.
+- **Always follow the Conventional Commits standard.** Use the form `type(optional scope): description` (e.g., `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`), with the description in the imperative. Use `BREAKING CHANGE:` in the footer or `!` after the type/scope when there is an incompatible change.
+- **Don't overuse `feat:`.** `feat:` should not be used for a small piece of functionality that is part of a larger feature. In that case, `feat:` is reserved for the larger feature that incorporates the smaller one, while the smaller part uses `chore:`. Ideally there is only one `feat:` per branch/feature; only in very specific cases may there be more than one.
+- **When in doubt, don't use `feat:`.** If you're not sure whether a commit deserves `feat:`, don't assign any `feat:` and let me set it manually.
