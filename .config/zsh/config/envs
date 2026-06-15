@@ -47,12 +47,3 @@ export NEXT_TELEMETRY_DISABLED=1
 
 # Askpass
 export SUDO_ASKPASS=/usr/lib/seahorse/ssh-askpass
-
-# PostgreSQL (psql) — banco dev dos painéis SEPLAN.
-# Faz o `psql` (sem argumentos) conectar nesse banco por padrão.
-# A senha NÃO fica aqui: vem do ~/.pgpass (chmod 600). Conexões explícitas
-# (psql "postgresql://...") continuam sobrescrevendo estas variáveis.
-export PGHOST=localhost
-export PGPORT=5432
-export PGUSER=paineis
-export PGDATABASE=paineis
