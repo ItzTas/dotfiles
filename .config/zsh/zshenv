@@ -37,7 +37,7 @@ export PATH="$PATH:$HOME/Android/Sdk/emulator/emulator"
 # Android
 export ANDROID_HOME="$HOME/Android/Sdk"
 
-# HOMES
+# Pnpm
 export PNPM_HOME="/home/talinux/.local/share/pnpm"
 
 # Claude
@@ -49,6 +49,9 @@ export DISABLE_TELEMETRY=1
 export DISABLE_ERROR_REPORTING=1
 export DISABLE_FEEDBACK_COMMAND=1
 export DO_NOT_TRACK=1
+
+# Storybook
+export STORYBOOK_DISABLE_TELEMETRY=1
 
 # OTHER
 export NODE_OPTIONS="--max-old-space-size=8192"
