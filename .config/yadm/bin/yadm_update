@@ -41,7 +41,8 @@ yadm_update() {
         # yadm add "$pacman_list"
         # yadm add "$flatpak_list"
 
-        yadm add "$HOME/Pictures/.backgrounds"
+        yadm add "$HOME/Pictures/Wallpapers"
+        yadm add "$HOME/Pictures/Faces"
         yadm add "$HOME/.config/yadm/bootstrap.x.d"
         yadm add "$HOME/.config/hypr"
         yadm add "$HOME/.local/share/millennium"
