@@ -171,6 +171,15 @@
                 },
                 {
                     "defaultSettings": {
+                        "connectedColor": "primary",
+                        "disconnectedColor": "none",
+                        "displayMode": "alwaysShow",
+                        "pollInterval": 5000
+                    },
+                    "id": "plugin:protonvpn"
+                },
+                {
+                    "defaultSettings": {
                         "activeColor": "primary",
                         "camFilterRegex": "",
                         "enableToast": true,
@@ -181,15 +190,6 @@
                         "removeMargins": false
                     },
                     "id": "plugin:privacy-indicator"
-                },
-                {
-                    "defaultSettings": {
-                        "connectedColor": "primary",
-                        "disconnectedColor": "none",
-                        "displayMode": "alwaysShow",
-                        "pollInterval": 5000
-                    },
-                    "id": "plugin:protonvpn"
                 }
             ],
             "right": [
