@@ -251,6 +251,9 @@
                     "id": "plugin:github-feed"
                 },
                 {
+                    "id": "plugin:video-wallpaper"
+                },
+                {
                     "defaultSettings": {
                         "iconColor": "none"
                     },
