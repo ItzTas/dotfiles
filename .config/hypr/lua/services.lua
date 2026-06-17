@@ -20,14 +20,13 @@ on("hyprland.start", function()
 
 	-- Core services
 	exec(
-		"dbus-update-activation-environment --systemd $HYPRLAND_INSTANCE_SIGNATURE $WAYLAND_DISPLAY $XDG_CURRENT_DESKTOP"
+		"dbus-update-activation-environment --systemd HYPRLAND_INSTANCE_SIGNATURE WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 	)
 	exec("hypridle")
 	exec("hyprctl setcursor Bibata-Modern-Classic 24")
 
 	-- Desktop services
 	exec("gnome-keyring-daemon --start --daemonize --components=pkcs11,secrets,ssh")
-	exec("systemctl --user start xdg-desktop-portal-hyprland")
 	exec("qs -c noctalia-shell")
 
 	-- Gitify
@@ -51,9 +50,14 @@ on("hyprland.start", function()
 	exec("mkdir -p ~/.winboat; ln -s /dev/null ~/.winboat/appUsage.json")
 	exec("yarn next telemetry disable")
 
-	-- Screen sharing
-	exec("/usr/lib/xdg-desktop-portal-hyprland")
-	exec("/usr/lib/xdg-desktop-portal")
+	-- Screen sharing: update the activation env, THEN (re)start the portal.
+	-- Chained with `&&` so the portal never comes up before WAYLAND_DISPLAY is set;
+	-- that race (plus the old triple-launch) is what made screen sharing work only sometimes.
+	-- xdg-desktop-portal (base) is D-Bus-activated on demand, so it must NOT be launched by hand.
+	exec(
+		"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE && "
+			.. "systemctl --user restart xdg-desktop-portal-hyprland.service"
+	)
 
 	-- System utilities
 	-- exec("swayosd-server")
