@@ -6,12 +6,12 @@
   "mpvSocket": "/tmp/mpv-socket",
   "profile": "default",
   "volume": 1,
-  "wallpapersFolder": "~/Pictures/Wallpapers",
+  "wallpapersFolder": "/home/talinux/Pictures/Wallpapers",
   "thumbCacheReady": true,
-  "enabled": false,
+  "enabled": true,
   "monitorSpecific": false,
   "DP-2": {
-    "currentWallpaper": "",
+    "currentWallpaper": "/home/talinux/Pictures/Wallpapers/bmw-m4-rainy-night_wallsflow.mp4",
     "volume": 1,
     "automation": false,
     "automationMode": "random",
@@ -19,7 +19,9 @@
     "hardwareAcceleration": false,
     "profile": "default",
     "fillMode": "",
-    "orientation": 0
+    "orientation": 0,
+    "isPlaying": true,
+    "noctaliaWallpaper": "/home/talinux/Pictures/Wallpapers/blood-moon-mountains.jpg"
   },
   "automationCustomTime": []
 }

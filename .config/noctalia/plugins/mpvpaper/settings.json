@@ -1,7 +1,9 @@
 {
   "mpvSocket": "/tmp/mpv-socket",
-  "wallpapersFolder": "~/Pictures/Wallpapers",
+  "wallpapersFolder": "/home/talinux/Pictures/Wallpapers",
   "profile": "default",
   "fillMode": "fit",
-  "thumbCacheReady": false
+  "thumbCacheReady": true,
+  "currentWallpaper": "/home/talinux/Pictures/Wallpapers/Cool-Cat.mp4",
+  "isPlaying": true
 }
