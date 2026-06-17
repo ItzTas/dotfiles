@@ -202,7 +202,8 @@
                     "hidePassive": false,
                     "id": "Tray",
                     "pinned": [
-                        "Arch-Update"
+                        "Arch-Update",
+                        "proton.vpn.app.gtk"
                     ]
                 },
                 {
@@ -251,6 +252,16 @@
                     "id": "plugin:github-feed"
                 },
                 {
+                    "defaultSettings": {
+                        "activeBackend": "qt6-multimedia",
+                        "automationMode": "random",
+                        "automationTime": 300,
+                        "fillMode": "fit",
+                        "mpvSocket": "/tmp/mpv-socket",
+                        "profile": "default",
+                        "volume": 1,
+                        "wallpapersFolder": "~/Pictures/Wallpapers"
+                    },
                     "id": "plugin:video-wallpaper"
                 },
                 {

@@ -51,6 +51,10 @@ on("hyprland.start", function()
 	exec("mkdir -p ~/.winboat; ln -s /dev/null ~/.winboat/appUsage.json")
 	exec("yarn next telemetry disable")
 
+	-- Screen sharing
+	exec("/usr/lib/xdg-desktop-portal-hyprland")
+	exec("/usr/lib/xdg-desktop-portal")
+
 	-- System utilities
 	-- exec("swayosd-server")
 	exec("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
