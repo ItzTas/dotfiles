@@ -47,6 +47,7 @@ yadm_update() {
         yadm add "$HOME/.config/hypr"
         yadm add "$HOME/.local/share/millennium"
         yadm add "${XDG_CONFIG_DIR:-$HOME/.config}/yadm/gnome"
+        yadm add "${XDG_CONFIG_DIR:-$HOME/.config}/noctalia"
         yadm add -u
 
         local status_output filtered_output files
