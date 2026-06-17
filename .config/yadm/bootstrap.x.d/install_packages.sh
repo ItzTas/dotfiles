@@ -34,6 +34,7 @@ _install_pacman_packages() {
         "kitty"
 
         # Themes & Looks
+        "mpvpaper"
         "sddm-sugar-candy-git"
         "oh-my-posh"
         "qt6ct"
@@ -48,7 +49,6 @@ _install_pacman_packages() {
         "hyprshutdown"
         "xdg-desktop-portal-hyprland"
         "hyprpicker"
-        "hyprpaper"
         "hyprland"
         "hyprshot"
         "hyprlock"

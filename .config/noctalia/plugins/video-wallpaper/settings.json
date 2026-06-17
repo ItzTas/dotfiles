@@ -1,5 +1,5 @@
 {
-  "activeBackend": "mpvpaper",
+  "activeBackend": "qt6-multimedia",
   "automationMode": "random",
   "automationTime": 300,
   "fillMode": "fit",
@@ -11,7 +11,7 @@
   "enabled": true,
   "monitorSpecific": false,
   "DP-2": {
-    "currentWallpaper": "/home/talinux/Videos/Wallpapers/bmw-m4-rainy-night_wallsflow.mp4",
+    "currentWallpaper": "/home/talinux/Videos/Wallpapers/dark-eclipse-knight-anime-live-wallpaper-wallsflow-com.mp4",
     "volume": 1,
     "automation": false,
     "automationMode": "random",
