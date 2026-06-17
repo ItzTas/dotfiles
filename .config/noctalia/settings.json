@@ -251,6 +251,16 @@
                     "id": "plugin:github-feed"
                 },
                 {
+                    "defaultSettings": {
+                        "activeBackend": "qt6-multimedia",
+                        "automationMode": "random",
+                        "automationTime": 300,
+                        "fillMode": "fit",
+                        "mpvSocket": "/tmp/mpv-socket",
+                        "profile": "default",
+                        "volume": 1,
+                        "wallpapersFolder": "~/Pictures/Wallpapers"
+                    },
                     "id": "plugin:video-wallpaper"
                 },
                 {
@@ -430,7 +440,7 @@
         "animationDisabled": false,
         "animationSpeed": 1,
         "autoStartAuth": false,
-        "avatarImage": "/home/talinux/Pictures/Faces/face-1.png",
+        "avatarImage": "/home/talinux/Pictures/Faces/ArchFatGuy.jpg",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
@@ -555,7 +565,7 @@
         "disableWallpaper": true
     },
     "notifications": {
-        "backgroundOpacity": 0.5,
+        "backgroundOpacity": 0.6,
         "clearDismissed": true,
         "criticalUrgencyDuration": 15,
         "density": "default",

@@ -19,8 +19,20 @@
     "typescript-lsp@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true
   },
-  "effortLevel": "high",
+  "effortLevel": "xhigh",
   "theme": "dark",
   "verbose": true,
-  "autoCompactEnabled": true
+  "autoCompactEnabled": true,
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq '.effortLevel = \"xhigh\"' ~/.claude/settings.json > ~/.claude/settings.json.tmp && mv ~/.claude/settings.json.tmp ~/.claude/settings.json"
+          }
+        ]
+      }
+    ]
+  }
 }
