@@ -24,7 +24,6 @@ on("hyprland.start", function()
 	)
 	exec("hypridle")
 	exec("hyprctl setcursor Bibata-Modern-Classic 24")
-	exec("hyprpaper")
 
 	-- Desktop services
 	exec("gnome-keyring-daemon --start --daemonize --components=pkcs11,secrets,ssh")

@@ -1,0 +1,15 @@
+[idle.behavior.screen-off]
+timeout        = 600
+command        = "noctalia:dpms-off"
+resume_command = "noctalia:dpms-on"
+enabled        = true
+
+[idle.behavior.lock]
+timeout = 660
+command = "noctalia:session lock"
+enabled = true
+
+[idle.behavior.suspend]
+timeout = 1800
+command = "noctalia:session suspend"
+enabled = true
