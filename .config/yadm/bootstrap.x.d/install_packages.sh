@@ -184,6 +184,7 @@ _install_pacman_packages() {
         # Git
         "meld"
         "gitify"
+        "git-lfs"
         "lazygit"
         "github-cli"
         "git-bug"
