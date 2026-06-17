@@ -29,8 +29,7 @@ on("hyprland.start", function()
 	-- Desktop services
 	exec("gnome-keyring-daemon --start --daemonize --components=pkcs11,secrets,ssh")
 	exec("systemctl --user start xdg-desktop-portal-hyprland")
-	exec('bash ~/.config/waybar/lauch_waybar.sh "2"')
-	exec("swaync")
+	exec("qs -c noctalia-shell")
 
 	-- Gitify
 	exec("sleep 11; gitify --password-store=gnome-libsecret")
@@ -54,7 +53,7 @@ on("hyprland.start", function()
 	exec("yarn next telemetry disable")
 
 	-- System utilities
-	exec("swayosd-server")
+	-- exec("swayosd-server")
 	exec("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 
 	if gpu.is_nvidia() then
@@ -71,10 +70,4 @@ end)
 on("hyprland.shutdown", function()
 	cleanup()
 	exec("yadm alt")
-end)
-
-on("config.reloaded", function()
-	if ram.has_above(8) then
-		exec("eww --config ~/.config/eww/binaryharbinger daemon")
-	end
 end)

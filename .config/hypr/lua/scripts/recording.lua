@@ -4,7 +4,7 @@ local shell = require("functions.shell")
 local M = {}
 
 function M.toggle()
-    utils.run_async_cmd(shell.inject({ shell.open_path }, [=[
+    utils.run_async_cmd(shell.inject({ shell.open_path, shell.open_on }, [=[
         if pgrep wf-recorder >/dev/null; then
             killall -q wf-recorder
             exit 0
@@ -33,15 +33,9 @@ function M.toggle()
             exit 1
         fi
 
-        action=$(dunstify -a "sys_recording" -i "$thumbnail" --action="default,open" "Recording Finished" "The recording has been saved as $basename")
+        open_on "sys_recording" "$thumbnail" "Recording Finished" "The recording has been saved as $basename" "$filename"
 
         rm -rf "$tmpdir"
-
-        case "$action" in
-        "default")
-            open_path "$filename"
-            ;;
-        esac
     ]=]))
 end
 

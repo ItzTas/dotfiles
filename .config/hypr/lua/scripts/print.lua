@@ -4,7 +4,7 @@ local shell = require("functions.shell")
 local M = {}
 
 function M.area()
-    utils.run_async_cmd(shell.inject({ shell.open_path }, [=[
+    utils.run_async_cmd(shell.inject({ shell.open_path, shell.open_on }, [=[
         filename="screenshot_$(date '+%Y-%m-%d_%H-%M-%S-%3N').png"
         path="$(xdg-user-dir PICTURES)/screenshots"
         fullpath="$path/$filename"
@@ -13,18 +13,12 @@ function M.area()
 
         grim -g "$(slurp)" "$fullpath"
 
-        ACTION=$(dunstify -a "sys_print" -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
-
-        case "$ACTION" in
-        "default")
-            open_path "$fullpath"
-            ;;
-        esac
+        open_on "sys_print" "$fullpath" "Screenshot saved" "Image saved in $fullpath" "$fullpath"
     ]=]))
 end
 
 function M.screen()
-    utils.run_async_cmd(shell.inject({ shell.open_path }, [=[
+    utils.run_async_cmd(shell.inject({ shell.open_path, shell.open_on }, [=[
         filename="screenshot_$(date '+%Y-%m-%d_%H-%M-%S-%3N').png"
         path="$(xdg-user-dir PICTURES)/screenshots"
         fullpath="$path/$filename"
@@ -34,18 +28,12 @@ function M.screen()
         grim "$fullpath"
 
         sleep 0.2
-        ACTION=$(dunstify -a "sys_print" -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
-
-        case "$ACTION" in
-        "default")
-            open_path "$fullpath"
-            ;;
-        esac
+        open_on "sys_print" "$fullpath" "Screenshot saved" "Image saved in $fullpath" "$fullpath"
     ]=]))
 end
 
 function M.window()
-    utils.run_async_cmd(shell.inject({ shell.open_path }, [=[
+    utils.run_async_cmd(shell.inject({ shell.open_path, shell.open_on }, [=[
         filename="screenshot_$(date '+%Y-%m-%d_%H-%M-%S-%3N').png"
         path="$(xdg-user-dir PICTURES)/screenshots"
         fullpath="$path/$filename"
@@ -64,13 +52,7 @@ function M.window()
             sleep "$retry_interval"
         done
 
-        ACTION=$(dunstify -a "sys_print" -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
-
-        case "$ACTION" in
-        "default")
-            open_path "$fullpath"
-            ;;
-        esac
+        open_on "sys_print" "$fullpath" "Screenshot saved" "Image saved in $fullpath" "$fullpath"
     ]=]))
 end
 

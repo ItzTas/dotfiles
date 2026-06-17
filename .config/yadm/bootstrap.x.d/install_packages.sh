@@ -34,12 +34,12 @@ _install_pacman_packages() {
         "kitty"
 
         # Themes & Looks
-        "waybar"
         "sddm-sugar-candy-git"
         "oh-my-posh"
         "qt6ct"
         "nvibrant-bin"
         "catppuccin-gtk-theme-mocha"
+        "noctalia-shell"
         "candy-icons-git"
         "swayosd-gtk3"
         "spicetify-cli"
@@ -199,7 +199,6 @@ _install_pacman_packages() {
 
         # Notifications
         "dunst"
-        "swaync"
         "inotify-tools"
 
         # Displayers

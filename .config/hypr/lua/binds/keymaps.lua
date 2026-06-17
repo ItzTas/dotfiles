@@ -70,7 +70,7 @@ bs(mm("F", meh), 'kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/s
 bs(mm("G", meh), 'kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" file root')
 
 -- Menus and widgets
-bind(mm("SPACE", alt), exec('killall rofi; bash -c "~/.config/rofi/launchers/type-7/launcher.sh"'))
+bind(mm("SPACE", alt), exec('qs -c noctalia-shell ipc call launcher toggle'))
 bind(mm("X", alt), exec("killall wlogout || wlogout"))
 bind(mm("V", alt), exec("dex ~/.local/share/applications/hypr-terminal/hypr-clipse.desktop"))
 bind(mm("V", super), exec("clipse-gui"))
@@ -161,6 +161,6 @@ bind(mm("E", meh), exec(browser .. " https://translate.google.com/?sl=auto&tl=pt
 bind(mm("C", meh), exec("hyprpicker -a"))
 bind(mm("X", meh), exec("ddcutil setvcp 10 100"))
 bind(mm("W", meh), exec("alarm-clock-applet -s"))
-bind(mm("W", alt), exec('killall waybar || bash -c "~/.config/waybar/lauch_waybar.sh 2"'))
+bind(mm("W", alt), exec('killall qs || qs -c noctalia-shell'))
 bind(mm("F5", { super, shift }), hl.dsp.exit())
 bind(mm("L", meh), exec("pidof hyprlock || hyprlock -c ~/.config/hypr/hyprlock/mocha/hyprlock.conf"))

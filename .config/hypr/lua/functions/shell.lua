@@ -1,20 +1,21 @@
 local M = {}
 
 function M.open_path()
-    local apps = require("envs.apps")
-    local fm = apps.fileManager
+	local apps = require("envs.apps")
+	local fm = apps.fileManager
 
-    if not fm or fm == "" then
-        local utils = require("functions.utils")
-        local desktop = utils.run_cmd("xdg-mime query default inode/directory")
-        if desktop then
-            fm = desktop:gsub("%.desktop%s*$", "")
-        end
-    end
+	if not fm or fm == "" then
+		local utils = require("functions.utils")
+		local desktop = utils.run_cmd("xdg-mime query default inode/directory")
+		if desktop then
+			fm = desktop:gsub("%.desktop%s*$", "")
+		end
+	end
 
-    fm = (fm and fm ~= "") and fm or "nemo"
+	fm = (fm and fm ~= "") and fm or "nemo"
 
-    return string.format([=[
+	return string.format(
+		[=[
 open_path() {
     local path="$1"
     local id
@@ -27,23 +28,64 @@ open_path() {
     fi
     %s "$path"
 }
-]=], fm, fm)
+]=],
+		fm,
+		fm
+	)
 end
 
+---@return string
+function M.open_on()
+	return [=[
+open_on() {
+    local app="$1"
+    local icon="$2"
+    local title="$3"
+    local body="$4"
+    local path="$5"
+
+    local action
+    action=$(dunstify -a "$app" -I "$icon" \
+        --action="default,open" --action="copy,copy" \
+        "$title" "$body")
+
+    case "$action" in
+    "default" | "open")
+        open_path "$path"
+        ;;
+    "copy")
+        wl-copy --type "$(file -b --mime-type "$path")" < "$path"
+        ;;
+    esac
+}
+]=]
+end
+
+---@class InjectOpts
+---@field position? "before" | "after"
 ---@param deps (fun(): string | string)[]
 ---@param cmd string
+---@param opts? InjectOpts
 ---@return string
-function M.inject(deps, cmd)
-    local parts = {}
-    for _, dep in ipairs(deps) do
-        if type(dep) == "function" then
-            parts[#parts + 1] = dep()
-        else
-            parts[#parts + 1] = dep
-        end
-    end
-    parts[#parts + 1] = cmd
-    return table.concat(parts)
+function M.inject(deps, cmd, opts)
+	local position = opts and opts.position or "before"
+
+	local parts = {}
+	for _, dep in ipairs(deps) do
+		if type(dep) == "function" then
+			parts[#parts + 1] = dep()
+		else
+			parts[#parts + 1] = dep
+		end
+	end
+
+	if position == "after" then
+		table.insert(parts, 1, cmd)
+	else
+		parts[#parts + 1] = cmd
+	end
+
+	return table.concat(parts)
 end
 
 return M
