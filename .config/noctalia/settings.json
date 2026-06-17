@@ -206,15 +206,6 @@
                     ]
                 },
                 {
-                    "deviceNativePath": "__default__",
-                    "displayMode": "graphic-clean",
-                    "hideIfIdle": false,
-                    "hideIfNotDetected": true,
-                    "id": "Battery",
-                    "showNoctaliaPerformance": false,
-                    "showPowerProfiles": false
-                },
-                {
                     "displayMode": "onhover",
                     "iconColor": "none",
                     "id": "Volume",
@@ -282,6 +273,15 @@
                     "id": "NotificationHistory",
                     "showUnreadBadge": true,
                     "unreadBadgeColor": "primary"
+                },
+                {
+                    "deviceNativePath": "__default__",
+                    "displayMode": "icon-always",
+                    "hideIfIdle": false,
+                    "hideIfNotDetected": true,
+                    "id": "Battery",
+                    "showNoctaliaPerformance": true,
+                    "showPowerProfiles": true
                 }
             ]
         }
@@ -744,6 +744,20 @@
                     "#f38ba8"
                 ],
                 "path": "/home/talinux/Pictures/Wallpapers/beautiful_river.png",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Catppuccin Lavender",
+                "darkMode": true,
+                "generationMethod": "tonal-spot",
+                "paletteColors": [
+                    "#b4befe",
+                    "#f5bde6",
+                    "#c6a0f6",
+                    "#f38ba8"
+                ],
+                "path": "/home/talinux/Pictures/Wallpapers/blood-moon-mountains.jpg",
                 "useWallpaperColors": false
             }
         ],
