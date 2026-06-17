@@ -223,6 +223,12 @@
                     "icon": "noctalia",
                     "id": "ControlCenter",
                     "useDistroLogo": false
+                },
+                {
+                    "id": "plugin:privacy-indicator"
+                },
+                {
+                    "id": "plugin:protonvpn"
                 }
             ]
         }
@@ -231,7 +237,7 @@
         "backlightDeviceMappings": [
         ],
         "brightnessStep": 5,
-        "enableDdcSupport": false,
+        "enableDdcSupport": true,
         "enforceMinimum": true
     },
     "calendar": {
@@ -430,7 +436,7 @@
     "hooks": {
         "colorGeneration": "",
         "darkModeChange": "",
-        "enabled": false,
+        "enabled": true,
         "performanceModeDisabled": "",
         "performanceModeEnabled": "",
         "screenLock": "",
@@ -462,7 +468,7 @@
         "name": "",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
-        "showWeekNumberInCalendar": false,
+        "showWeekNumberInCalendar": true,
         "use12hourFormat": false,
         "useFahrenheit": false,
         "weatherEnabled": true,
@@ -616,7 +622,7 @@
         "batteryWarningThreshold": 20,
         "cpuCriticalThreshold": 90,
         "cpuWarningThreshold": 80,
-        "criticalColor": "",
+        "criticalColor": "#f38ba8",
         "diskAvailCriticalThreshold": 10,
         "diskAvailWarningThreshold": 20,
         "diskCriticalThreshold": 90,
@@ -632,7 +638,7 @@
         "tempCriticalThreshold": 90,
         "tempWarningThreshold": 80,
         "useCustomColors": false,
-        "warningColor": ""
+        "warningColor": "#c6a0f6"
     },
     "templates": {
         "activeTemplates": [
