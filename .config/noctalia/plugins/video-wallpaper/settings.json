@@ -21,7 +21,8 @@
     "fillMode": "",
     "orientation": 0,
     "isPlaying": true,
-    "noctaliaWallpaper": "/home/talinux/Pictures/Wallpapers/blood-moon-mountains.jpg"
+    "noctaliaWallpaper": "/home/talinux/Pictures/Wallpapers/blood-moon-mountains.jpg",
+    "isMuted": true
   },
   "automationCustomTime": []
 }
