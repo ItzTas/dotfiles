@@ -252,19 +252,6 @@
                 },
                 {
                     "defaultSettings": {
-                        "activeBackend": "qt6-multimedia",
-                        "automationMode": "random",
-                        "automationTime": 300,
-                        "fillMode": "fit",
-                        "mpvSocket": "/tmp/mpv-socket",
-                        "profile": "default",
-                        "volume": 1,
-                        "wallpapersFolder": "~/Pictures/Wallpapers"
-                    },
-                    "id": "plugin:video-wallpaper"
-                },
-                {
-                    "defaultSettings": {
                         "iconColor": "none"
                     },
                     "id": "plugin:color-scheme-creator"
@@ -295,6 +282,12 @@
                     "id": "Battery",
                     "showNoctaliaPerformance": true,
                     "showPowerProfiles": true
+                },
+                {
+                    "id": "plugin:mpvpaper"
+                },
+                {
+                    "id": "plugin:linux-wallpaperengine-controller"
                 }
             ]
         }
@@ -572,7 +565,7 @@
         "enableBatteryToast": true,
         "enableKeyboardLayoutToast": true,
         "enableMarkdown": true,
-        "enableMediaToast": false,
+        "enableMediaToast": true,
         "enabled": true,
         "location": "top_right",
         "lowUrgencyDuration": 3,
