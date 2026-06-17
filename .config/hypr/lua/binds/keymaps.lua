@@ -71,7 +71,7 @@ bs(mm("G", meh), 'kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/s
 
 -- Menus and widgets
 bind(mm("SPACE", alt), exec('qs -c noctalia-shell ipc call launcher toggle'))
-bind(mm("X", alt), exec("killall wlogout || wlogout"))
+bind(mm("X", alt), exec("qs -c noctalia-shell ipc call sessionMenu toggle"))
 bind(mm("V", alt), exec("dex ~/.local/share/applications/hypr-terminal/hypr-clipse.desktop"))
 bind(mm("V", super), exec("clipse-gui"))
 bind(mm("SPACE", meh), exec('killall rofi; bash -c "~/.config/rofi/emoji/emoji.sh"'))
