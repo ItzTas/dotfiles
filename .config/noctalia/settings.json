@@ -168,6 +168,28 @@
                     "textColor": "none",
                     "useFixedWidth": false,
                     "visualizerType": "linear"
+                },
+                {
+                    "defaultSettings": {
+                        "activeColor": "primary",
+                        "camFilterRegex": "",
+                        "enableToast": true,
+                        "hideInactive": false,
+                        "iconSpacing": 4,
+                        "inactiveColor": "none",
+                        "micFilterRegex": "",
+                        "removeMargins": false
+                    },
+                    "id": "plugin:privacy-indicator"
+                },
+                {
+                    "defaultSettings": {
+                        "connectedColor": "primary",
+                        "disconnectedColor": "none",
+                        "displayMode": "alwaysShow",
+                        "pollInterval": 5000
+                    },
+                    "id": "plugin:protonvpn"
                 }
             ],
             "right": [
@@ -182,14 +204,6 @@
                     "pinned": [
                         "Arch-Update"
                     ]
-                },
-                {
-                    "hideWhenZero": false,
-                    "hideWhenZeroUnread": false,
-                    "iconColor": "none",
-                    "id": "NotificationHistory",
-                    "showUnreadBadge": true,
-                    "unreadBadgeColor": "primary"
                 },
                 {
                     "deviceNativePath": "__default__",
@@ -215,6 +229,43 @@
                     "textColor": "none"
                 },
                 {
+                    "defaultSettings": {
+                        "colorizationBadge": "Primary",
+                        "colorizationBadgeText": "Primary",
+                        "colorizationEnabled": false,
+                        "colorizationIcon": "Primary",
+                        "defaultTab": 0,
+                        "enableSystemNotifications": false,
+                        "githubUrl": "",
+                        "maxEvents": 50,
+                        "notifyForks": true,
+                        "notifyGitHubNotifications": true,
+                        "notifyMyRepoForks": true,
+                        "notifyMyRepoStars": true,
+                        "notifyPRs": true,
+                        "notifyRepoCreations": true,
+                        "notifyStars": true,
+                        "openInBrowser": true,
+                        "refreshInterval": 1800,
+                        "showForks": true,
+                        "showMyRepoForks": true,
+                        "showMyRepoStars": true,
+                        "showNotificationBadge": true,
+                        "showPRs": true,
+                        "showRepoCreations": true,
+                        "showStars": true,
+                        "token": "",
+                        "username": ""
+                    },
+                    "id": "plugin:github-feed"
+                },
+                {
+                    "defaultSettings": {
+                        "iconColor": "none"
+                    },
+                    "id": "plugin:color-scheme-creator"
+                },
+                {
                     "colorizeDistroLogo": false,
                     "colorizeSystemIcon": "none",
                     "colorizeSystemText": "none",
@@ -225,10 +276,12 @@
                     "useDistroLogo": false
                 },
                 {
-                    "id": "plugin:privacy-indicator"
-                },
-                {
-                    "id": "plugin:protonvpn"
+                    "hideWhenZero": false,
+                    "hideWhenZeroUnread": false,
+                    "iconColor": "none",
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true,
+                    "unreadBadgeColor": "primary"
                 }
             ]
         }
