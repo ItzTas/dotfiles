@@ -46,12 +46,17 @@ open_on() {
 
     local action
     action=$(dunstify -a "$app" -I "$icon" \
-        --action="default,open" --action="copy,copy" \
+        --action="copy_path,copy path" \
+        --action="default,open" \
+        --action="copy,copy" \
         "$title" "$body")
 
     case "$action" in
     "default" | "open")
         open_path "$path"
+        ;;
+    "copy_path")
+        wl-copy "$path"
         ;;
     "copy")
         wl-copy --type "$(file -b --mime-type "$path")" < "$path"
