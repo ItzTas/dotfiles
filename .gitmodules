@@ -1,3 +1,0 @@
-[submodule ".local/share/Steam/steamui/skins/Steam"]
-	path = .local/share/Steam/steamui/skins/Steam
-	url = https://github.com/SpaceTheme/Steam

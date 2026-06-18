@@ -282,7 +282,7 @@
                 {
                     "deviceNativePath": "__default__",
                     "displayMode": "icon-always",
-                    "hideIfIdle": false,
+                    "hideIfIdle": true,
                     "hideIfNotDetected": true,
                     "id": "Battery",
                     "showNoctaliaPerformance": true,
@@ -446,26 +446,30 @@
         "iRadiusRatio": 1,
         "keybinds": {
             "keyDown": [
-                "Down"
+                "Down",
+                "Ctrl+J"
             ],
             "keyEnter": [
                 "Return",
-                "Enter"
+                "Ctrl+Y"
             ],
             "keyEscape": [
                 "Esc"
             ],
             "keyLeft": [
-                "Left"
+                "Left",
+                "Ctrl+H"
             ],
             "keyRemove": [
                 "Del"
             ],
             "keyRight": [
-                "Right"
+                "Right",
+                "Ctrl+L"
             ],
             "keyUp": [
-                "Up"
+                "Up",
+                "Ctrl+K"
             ]
         },
         "language": "",
