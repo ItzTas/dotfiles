@@ -3,6 +3,12 @@
   "$docs": "https://code.claude.com/docs/en/keybindings",
   "bindings": [
     {
+      "context": "Global",
+      "bindings": {
+        "ctrl+z": null
+      }
+    },
+    {
       "context": "Chat",
       "bindings": {
         "enter": "chat:submit",

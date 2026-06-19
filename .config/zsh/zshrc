@@ -11,6 +11,8 @@ if [[ -f "$HOME/.config/zsh/config/prompt" ]]; then
     source "$HOME/.config/zsh/config/prompt"
 fi
 
+stty susp undef
+
 # --------------------- Plugins ---------------------
 
 __source_zsh_plugins() {
