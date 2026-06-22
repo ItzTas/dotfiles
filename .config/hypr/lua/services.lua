@@ -63,6 +63,9 @@ on("hyprland.start", function()
 	-- exec("swayosd-server")
 	exec("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 
+    -- Others
+    exec("killall dunst; sleep 30 && killall dunst; sleep 120 && killall dunst ")
+
 	if gpu.is_nvidia() then
 		exec("nvibrant 0 0 0 0 500")
 	end
