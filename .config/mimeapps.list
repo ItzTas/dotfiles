@@ -127,6 +127,13 @@ application/wps-office.wpss=wps-office-wps.desktop
 application/wps-office.wpso=wps-office-wps.desktop
 application/wps-office.wpt=wps-office-wps.desktop
 x-scheme-handler/insomnia=insomnia.desktop
+x-scheme-handler/news=userapp-Thunderbird-4TFKR3.desktop
+x-scheme-handler/snews=userapp-Thunderbird-4TFKR3.desktop
+x-scheme-handler/nntp=userapp-Thunderbird-4TFKR3.desktop
+x-scheme-handler/feed=userapp-Thunderbird-2KVJR3.desktop
+application/rss+xml=userapp-Thunderbird-2KVJR3.desktop
+application/x-extension-rss=userapp-Thunderbird-2KVJR3.desktop
+x-scheme-handler/net.thunderbird=userapp-Thunderbird-66UIR3.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;firefox.desktop;
@@ -188,3 +195,10 @@ application/wps-office.docx=wps-office-wps.desktop;
 application/wps-office.dotx=wps-office-wps.desktop;
 application/wps-office.wpss=wps-office-wps.desktop;
 application/wps-office.wpso=wps-office-wps.desktop;
+x-scheme-handler/news=userapp-Thunderbird-4TFKR3.desktop;
+x-scheme-handler/snews=userapp-Thunderbird-4TFKR3.desktop;
+x-scheme-handler/nntp=userapp-Thunderbird-4TFKR3.desktop;
+x-scheme-handler/feed=userapp-Thunderbird-2KVJR3.desktop;
+application/rss+xml=userapp-Thunderbird-2KVJR3.desktop;
+application/x-extension-rss=userapp-Thunderbird-2KVJR3.desktop;
+x-scheme-handler/net.thunderbird=userapp-Thunderbird-66UIR3.desktop;
