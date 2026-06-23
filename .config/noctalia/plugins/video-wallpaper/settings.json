@@ -8,7 +8,7 @@
   "volume": 1,
   "wallpapersFolder": "/home/talinux/Videos/Wallpapers",
   "thumbCacheReady": true,
-  "enabled": true,
+  "enabled": false,
   "eDP-1": {
     "currentWallpaper": "/home/talinux/Videos/Wallpapers/starry-night-lake-canoe-live-wallpaper-wallsflow-com.mp4",
     "noctaliaWallpaper": "/home/talinux/Pictures/Wallpapers/blood-moon-mountains.jpg",
@@ -16,6 +16,6 @@
   },
   "DP-2": {
     "currentWallpaper": "/home/talinux/Videos/Wallpapers/Cool-Cat.mp4",
-    "isPlaying": true
+    "isPlaying": false
   }
 }

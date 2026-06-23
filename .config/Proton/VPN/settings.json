@@ -38,8 +38,7 @@
                         "/usr/bin/steam",
                         "/usr/bin/steam",
                         "/usr/bin/steam",
-                        "/usr/bin/vesktop",
-                        "/opt/zen-browser-bin/zen-bin"
+                        "/usr/bin/vesktop"
                     ],
                     "ip_ranges": []
                 },
