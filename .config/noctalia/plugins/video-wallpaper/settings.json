@@ -10,12 +10,8 @@
   "thumbCacheReady": true,
   "enabled": true,
   "eDP-1": {
-    "currentWallpaper": "/home/talinux/Videos/Wallpapers/ocean_and_moonlight_4k-wallsflow-com.mp4",
-    "noctaliaWallpaper": "/home/talinux/Pictures/Wallpapers/blood-moon-mountains.jpg",
-    "isPlaying": true
-  },
-  "DP-2": {
     "currentWallpaper": "/home/talinux/Videos/Wallpapers/Cool-Cat.mp4",
+    "noctaliaWallpaper": "/home/talinux/Pictures/Wallpapers/blood-moon-mountains.jpg",
     "isPlaying": true
   }
 }
