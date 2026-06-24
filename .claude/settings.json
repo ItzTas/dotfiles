@@ -34,5 +34,6 @@
   "effortLevel": "xhigh",
   "theme": "dark",
   "verbose": true,
-  "autoCompactEnabled": true
+  "autoCompactEnabled": true,
+  "skipWorkflowUsageWarning": true
 }
