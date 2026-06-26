@@ -149,6 +149,19 @@ application/vnd.ms-word.template.macroEnabled.12=wps-office-wps.desktop
 application/vnd.oasis.opendocument.text=wps-office-wps.desktop
 application/vnd.oasis.opendocument.text-template=wps-office-wps.desktop
 application/rtf=wps-office-wps.desktop
+application/vnd.ms-word=wps-office-wps.desktop
+application/x-msword=wps-office-wps.desktop
+application/msword-template=wps-office-wps.desktop
+application/msexcel=wps-office-et.desktop
+application/x-msexcel=wps-office-et.desktop
+application/vnd.ms-powerpoint=wps-office-wpp.desktop
+application/vnd.mspowerpoint=wps-office-wpp.desktop
+application/mspowerpoint=wps-office-wpp.desktop
+application/powerpoint=wps-office-wpp.desktop
+application/x-mspowerpoint=wps-office-wpp.desktop
+application/vnd.openxmlformats-officedocument.presentationml.presentation=wps-office-wpp.desktop
+application/vnd.openxmlformats-officedocument.presentationml.slideshow=wps-office-wpp.desktop
+application/vnd.oasis.opendocument.presentation=wps-office-wpp.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;firefox.desktop;
