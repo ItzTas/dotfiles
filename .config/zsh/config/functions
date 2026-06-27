@@ -584,3 +584,63 @@ save_gnome() {
 
     echo "$dump" >"$output_file"
 }
+
+# Net
+net-rescue() {
+  local octet=20
+  local connection="Wired connection 1"
+  local OPTIND opt
+
+  while getopts "i:c:h" opt; do
+    case "$opt" in
+      i) octet="$OPTARG" ;;
+      c) connection="$OPTARG" ;;
+      h)
+        echo "Usage: net-rescue [-i octet] [-c connection]"
+        echo "  -i  final octet (default: 20)"
+        echo "  -c  connection name (default: Wired connection 1)"
+        return 0
+        ;;
+      *)
+        echo "❌ Invalid flag. Use -h for help."
+        return 1
+        ;;
+    esac
+  done
+
+  if ! [[ "$octet" =~ ^[0-9]+$ ]] || (( octet < 2 || octet > 254 )); then
+    echo "❌ Invalid octet: '$octet'. Use a number between 2 and 254."
+    return 1
+  fi
+
+  sudo nmcli connection modify "$connection" \
+    ipv4.method manual \
+    ipv4.addresses "192.168.100.${octet}/24" \
+    ipv4.gateway 192.168.100.1 \
+    ipv4.dns "192.168.100.1" \
+    && sudo nmcli connection up "$connection" \
+    && echo "✅ Static IP 192.168.100.${octet} active on \"$connection\""
+}
+
+net-auto() {
+  local connection="Wired connection 1"
+  local OPTIND opt
+
+  while getopts "c:h" opt; do
+    case "$opt" in
+      c) connection="$OPTARG" ;;
+      h)
+        echo "Usage: net-auto [-c connection]"
+        return 0
+        ;;
+      *)
+        echo "❌ Invalid flag. Use -h for help."
+        return 1
+        ;;
+    esac
+  done
+
+  sudo nmcli connection modify "$connection" ipv4.method auto \
+    && sudo nmcli connection up "$connection" \
+    && echo "✅ Automatic DHCP restored on \"$connection\""
+}
