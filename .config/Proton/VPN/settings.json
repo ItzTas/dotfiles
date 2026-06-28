@@ -2,13 +2,22 @@
     "protocol": "wireguard",
     "killswitch": 0,
     "custom_dns": {
-        "enabled": false,
-        "ip_list": []
+        "enabled": true,
+        "ip_list": [
+            {
+                "ip": "192.168.100.10",
+                "enabled": true
+            },
+            {
+                "ip": "1.1.1.1",
+                "enabled": true
+            }
+        ]
     },
     "ipv6": true,
     "anonymous_crash_reports": false,
     "features": {
-        "netshield": 2,
+        "netshield": 0,
         "moderate_nat": false,
         "vpn_accelerator": true,
         "port_forwarding": false,

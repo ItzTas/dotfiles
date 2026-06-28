@@ -212,6 +212,9 @@
                     "textColor": "none"
                 },
                 {
+                    "id": "plugin:network-manager-vpn"
+                },
+                {
                     "defaultSettings": {
                         "colorizationBadge": "Primary",
                         "colorizationBadgeText": "Primary",
