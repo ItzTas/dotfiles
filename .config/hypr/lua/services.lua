@@ -16,7 +16,6 @@ end
 
 on("hyprland.start", function()
 	cleanup()
-	exec("paru -Sc --noconfirm")
 
 	-- Core services
 	exec(
@@ -30,7 +29,7 @@ on("hyprland.start", function()
 	exec("qs -c noctalia-shell")
 
 	-- Gitify
-	exec("sleep 11; gitify --password-store=gnome-libsecret")
+	-- exec("sleep 11; gitify --password-store=gnome-libsecret")
 
 	-- Clipboard
 	exec("wl-clip-persist --clipboard regular")
