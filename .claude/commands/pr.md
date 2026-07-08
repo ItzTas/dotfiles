@@ -7,14 +7,25 @@ allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(yadm*), Read, Glob
 Open a pull request (GitHub) and/or merge request (GitLab) from the current branch to the target
 branch, committing and pushing all changes first.
 
-Target branch argument: `$1`
+This command takes a single optional argument — the target branch: `$ARGUMENTS`
+
+Separately, I may include **other requests** in the same message, either before or after the
+`/pr` invocation (e.g. "do this, that and the other `/pr`" or "`/pr` do this, that and the
+other"). Those are not command arguments — they are work to do first.
 
 Follow exactly these steps:
 
+## 0. Handle any extra requests first
+- If, in the same message, I asked for other changes (anything besides the target branch, whether
+  it came before or after `/pr`), **carry those out first** — make the requested changes and get
+  them working.
+- Only after those changes are done should you proceed with the steps below. Those changes will be
+  included in the commit/push and the PR/MR just like any other change.
+
 ## 1. Determine the target branch
-- If `$1` is provided, use it as the target branch.
-- If `$1` is empty, **ask me** which branch to open the PR/MR against before continuing.
-  Do not assume `main`/`master` on your own.
+- If a target branch was given as the argument, use it.
+- If no target branch was given, **ask me** which branch to open the PR/MR against before
+  continuing. Do not assume `main`/`master` on your own.
 
 ## 2. Detect the remotes (GitHub and GitLab)
 - Run `git remote -v` and identify which remotes point to `github.com` and/or `gitlab.com`
