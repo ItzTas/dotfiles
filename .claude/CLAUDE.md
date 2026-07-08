@@ -17,6 +17,10 @@
 
 - **If there is a `.prototools` file at the repository root, it contains the versions of some of the tools used.**
 
+## Docker
+
+- **Always run both `hadolint` and `trivy config` after editing or creating a Dockerfile.** Whenever you edit or create a Dockerfile, run `hadolint <file>` and `trivy config <file>` on it and fix any issues either one reports before considering the task complete.
+
 ## Commits
 
 - **NEVER add co-authorship attribution to me when making commits on my behalf.** Do not include `Co-Authored-By: Claude ...` or any line indicating that you took part in the commit. The commit must appear as being solely mine.

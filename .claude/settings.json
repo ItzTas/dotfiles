@@ -18,6 +18,18 @@
           }
         ]
       }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/dockerfile-lint.sh",
+            "statusMessage": "Running hadolint + trivy on Dockerfile"
+          }
+        ]
+      }
     ]
   },
   "enableWorkflows": true,
