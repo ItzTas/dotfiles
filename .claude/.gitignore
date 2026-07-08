@@ -1,0 +1,12 @@
+.claude/
+backups/
+cache/
+file-history/
+ide/
+paste-cache/
+plugins/
+projects/
+session-env/
+sessions/
+shell-snapshots/
+tasks/
