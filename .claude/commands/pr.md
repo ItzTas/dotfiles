@@ -1,48 +1,48 @@
 ---
-description: Comita, dá push e abre PR (GitHub) e/ou MR (GitLab) da branch atual para a branch alvo
-argument-hint: [branch-alvo]
+description: Commit, push and open a PR (GitHub) and/or MR (GitLab) from the current branch to the target branch
+argument-hint: [target-branch]
 allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(yadm*), Read, Glob
 ---
 
-Abra uma pull request (GitHub) e/ou merge request (GitLab) da branch atual para a branch alvo,
-comitando e dando push de todas as mudanças antes.
+Open a pull request (GitHub) and/or merge request (GitLab) from the current branch to the target
+branch, committing and pushing all changes first.
 
-Argumento recebido (branch alvo): `$1`
+Target branch argument: `$1`
 
-Siga exatamente estes passos:
+Follow exactly these steps:
 
-## 1. Determinar a branch alvo
-- Se `$1` foi informado, use-o como branch alvo.
-- Se `$1` estiver vazio, **pergunte-me** para qual branch devo abrir a PR/MR antes de continuar.
-  Não assuma `main`/`master` sozinho.
+## 1. Determine the target branch
+- If `$1` is provided, use it as the target branch.
+- If `$1` is empty, **ask me** which branch to open the PR/MR against before continuing.
+  Do not assume `main`/`master` on your own.
 
-## 2. Detectar os remotes (GitHub e GitLab)
-- Rode `git remote -v` e identifique quais remotes apontam para `github.com` e/ou `gitlab.com`
-  (ou instâncias self-hosted equivalentes).
-- Guarde o resultado: pode haver **só GitHub**, **só GitLab**, ou **os dois**.
-- Se houver os dois, você criará **uma PR no GitHub E uma MR no GitLab**.
+## 2. Detect the remotes (GitHub and GitLab)
+- Run `git remote -v` and identify which remotes point to `github.com` and/or `gitlab.com`
+  (or equivalent self-hosted instances).
+- Record the result: there may be **only GitHub**, **only GitLab**, or **both**.
+- If both exist, you will create **a PR on GitHub AND an MR on GitLab**.
 
-## 3. Comitar e dar push de todas as mudanças
-- Verifique o estado com `git status` e `git diff`.
-- Comite **todas** as mudanças pendentes seguindo as regras do meu `CLAUDE.md`:
-  commits atômicos, Conventional Commits, imperativo, **sem** `Co-Authored-By` nem qualquer
-  atribuição a você (o commit é só meu).
-- Faça `git push` da branch atual (use `-u` se ela ainda não tiver upstream).
+## 3. Commit and push all changes
+- Check the state with `git status` and `git diff`.
+- Commit **all** pending changes following the rules in my `CLAUDE.md`:
+  atomic commits, Conventional Commits, imperative mood, **no** `Co-Authored-By` or any
+  attribution to you (the commit is solely mine).
+- Run `git push` for the current branch (use `-u` if it has no upstream yet).
 
-## 4. Procurar template no repositório
-Procure templates antes de escrever o corpo da PR/MR:
+## 4. Look for a template in the repository
+Look for templates before writing the PR/MR body:
 - GitHub: `.github/PULL_REQUEST_TEMPLATE.md`, `.github/pull_request_template.md`,
-  `.github/PULL_REQUEST_TEMPLATE/` (pasta), `docs/PULL_REQUEST_TEMPLATE.md`,
-  `PULL_REQUEST_TEMPLATE.md` na raiz.
+  `.github/PULL_REQUEST_TEMPLATE/` (folder), `docs/PULL_REQUEST_TEMPLATE.md`,
+  `PULL_REQUEST_TEMPLATE.md` at the root.
 - GitLab: `.gitlab/merge_request_templates/*.md`.
-- Se encontrar template, **use-o** como base do corpo, preenchendo as seções com base nas mudanças.
-- Se não encontrar, escreva um corpo conciso: resumo do que mudou e por quê.
+- If a template is found, **use it** as the base for the body, filling the sections based on the changes.
+- If none is found, write a concise body: a summary of what changed and why.
 
-## 5. Criar a(s) PR/MR
-- **GitHub** (se houver remote do GitHub): `gh pr create --base <alvo> --head <branch-atual>`
-  com título (Conventional Commits) e corpo (template preenchido ou resumo).
-- **GitLab** (se houver remote do GitLab): `glab mr create --target-branch <alvo>
-  --source-branch <branch-atual>` com título e corpo equivalentes.
-- Se ambos existirem, crie os dois e me mostre os dois links no final.
+## 5. Create the PR/MR
+- **GitHub** (if a GitHub remote exists): `gh pr create --base <target> --head <current-branch>`
+  with a title (Conventional Commits) and body (filled template or summary).
+- **GitLab** (if a GitLab remote exists): `glab mr create --target-branch <target>
+  --source-branch <current-branch>` with an equivalent title and body.
+- If both exist, create both and show me both links at the end.
 
-Ao terminar, mostre um resumo: branch alvo, o que foi comitado, e os links da(s) PR/MR criada(s).
+When done, show a summary: target branch, what was committed, and the link(s) to the created PR/MR.
