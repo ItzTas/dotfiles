@@ -10,7 +10,7 @@ the working tree so I can re-commit, edit, or split them.
 This command takes a single optional argument — how many commits to undo: `$ARGUMENTS`
 If no number is given, undo **one** commit.
 
-Separately, I may include **other requests** in the same message, before or after `/undo`. Those
+Separately, I may include **other requests** in the same message, before or after `/uncommit`. Those
 are not the argument — handle them as normal work.
 
 ## Steps
