@@ -9,8 +9,13 @@ Run quality/lint/validation checks against a target and **fix** what they report
 Arguments — the first is **what** to check, the rest (optional) are **which tools** to use:
 `$ARGUMENTS`
 
-- **First argument = the target.** A file (`Dockerfile`, `src/main.go`), a directory (`src`), a
-  glob (`**/*.ts`), or a keyword like `.` (whole project) or `diff`/`staged` (only what changed).
+- **First argument = the target.** It can be:
+  - a **file** (`Dockerfile`, `src/main.go`),
+  - a **directory** (`src`),
+  - a **file type / language** — a bare extension or language name like `js`, `ts`, `py`, `go`,
+    `lua`, `php`, `vue`, `sh`, `yaml` → every file of that type in the project,
+  - a **glob / pattern** like `*.js`, `**/*.ts`, `src/**/*.py`,
+  - or a **keyword**: `.` (whole project) or `diff`/`staged`/`changes` (only what changed).
 - **Remaining arguments = the tools** to run (e.g. `eslint`, `hadolint`, `trivy`, `ruff`, `tsc`,
   `shellcheck`). There may be **zero or more**; more than one is fine and they all run.
 
@@ -23,8 +28,14 @@ are not arguments — handle them as normal work.
 - If I asked for other changes in the same message (beyond the target and tools), do those first.
 
 ### 1. Parse the arguments
-- First token → the **target**. Resolve `diff`/`staged`/`changes` to the changed files via
-  `git diff --name-only` (or `--staged`).
+- First token → the **target**. Resolve it to the concrete set of files to check:
+  - `diff`/`staged`/`changes` → the changed files via `git diff --name-only` (or `--staged`).
+  - A **bare file type / language** (`js`, `ts`, `py`, `go`, `lua`, `php`, `vue`, `sh`, `yaml`, …)
+    → expand to all matching files in the repo, e.g. `git ls-files '*.js'` (map `python`→`py`,
+    `golang`→`go`, `shell`→`sh`, etc.).
+  - A **glob / pattern** (`*.js`, `**/*.ts`, `src/**/*.py`) → expand it yourself (Glob tool or
+    `git ls-files`); **quote it** in any shell command so the shell doesn't pre-expand it.
+  - A plain file or directory → use as-is.
 - Remaining tokens → the **explicit tool list**.
 
 ### 2. Decide which tools to run
