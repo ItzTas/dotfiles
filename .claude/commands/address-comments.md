@@ -31,7 +31,9 @@ Follow exactly these steps:
 ## 2. Fetch the review comments
 - **GitHub**: general + review comments via `gh pr view --comments` and the inline review comments
   (`gh api repos/{owner}/{repo}/pulls/{n}/comments`). Fallback: `mcp__github__pull_request_read`.
-- **GitLab**: discussion threads via `glab mr note list` / `mcp__gitlab__mr_discussions`.
+- **GitLab**: read the discussion threads via `mcp__gitlab__mr_discussions` (or
+  `glab api "projects/:id/merge_requests/:iid/discussions"`); `glab mr view` shows the summary.
+  (Note: `glab mr note` only *adds* notes — it's not for listing them.)
 - Pull down the latest first (`git pull`) so I'm editing against the reviewed state.
 
 ## 3. Triage the feedback
@@ -55,8 +57,9 @@ Follow exactly these steps:
 
 ## 6. Reply and resolve — outward-facing, confirm first
 - **Ask before posting anything.** Then, for each thread, reply briefly (e.g. `Done in <sha>` or the
-  answer to a question) and resolve it — GitHub via `gh`/GraphQL `resolveReviewThread`, GitLab via
-  `glab` / `mcp__gitlab__resolve_merge_request_thread`.
+  answer to a question) and resolve it — GitHub: reply via `gh`/GraphQL and resolve with
+  `resolveReviewThread`; GitLab: reply with `glab mr note <id> -m "…"` and resolve via
+  `mcp__gitlab__resolve_merge_request_thread`.
 - Leave threads I disagreed with open, with a reply explaining why.
 
 ## 7. Report

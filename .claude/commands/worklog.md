@@ -50,8 +50,11 @@ Map the period argument to a `--since` value (default `yesterday`):
   where it reads better.
 
 ## 6. (Optional) include work in flight
-- Briefly list open PRs/MRs I authored as "in review": GitHub `gh pr list --author "@me"`, GitLab
-  `glab mr list --author=@me`. Include only if a corresponding remote exists.
+- Briefly list open PRs/MRs I authored as "in review", only if the corresponding remote exists:
+  - GitHub: `gh pr list --author "@me"` (`@me` is valid here).
+  - GitLab: `glab`'s `--author` takes a **username**, not `@me` (only `--assignee`/`--reviewer`
+    accept `@me`). Resolve my username first — `glab api user --jq .username` — and pass it:
+    `glab mr list --author=<username>`.
 
 ## 7. Output
 - A clean, paste-ready summary: the window covered, then the grouped bullets. Lead with a one-line
