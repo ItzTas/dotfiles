@@ -1,6 +1,6 @@
 ---
-description: Commit all pending changes as atomic Conventional Commits, optionally fast (wip/quick) and optionally push and/or open a PR
-argument-hint: [wip|quick|fast] [push] [pr]
+description: Commit all pending changes as atomic Conventional Commits, optionally fast (wip/quick), detailed, and optionally push and/or open a PR
+argument-hint: [wip|quick|fast] [detailed] [push] [pr]
 allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(yadm*), Read, Glob
 ---
 
@@ -12,7 +12,8 @@ Commit all pending changes following the commit rules in my `CLAUDE.md`
 This command takes zero or more **flags** as arguments: `$ARGUMENTS`
 
 Flags may appear in **any order** and **more than one** may be given
-(e.g. `/commit wip push`, `/commit fast pr`, `/commit quick push pr`).
+(e.g. `/commit wip push`, `/commit fast pr`, `/commit quick push pr`, `/commit detailed`,
+`/commit detailed push`).
 
 Separately, I may include **other requests** in the same message, either before or after the
 `/commit` invocation (e.g. "do this, that and the other `/commit`" or "`/commit` do this, that
@@ -27,6 +28,14 @@ and the other"). Those are **not** flags — they are work to do first.
 - **`quick`** / **`fast`** — Synonyms for the fast behavior: commit quickly without spending too
   long, while still keeping commits atomic and Conventional-Commits compliant. Treat these the
   same as `wip`'s speed behavior.
+- **`detailed`** — Write **richly detailed** commit messages. Beyond the Conventional Commits
+  subject line, give **every** commit a full body: a blank line after the subject, then a wrapped
+  (~72 col) prose/bulleted body explaining **what** changed and **why** (the motivation and
+  context, not a restatement of the diff), and relevant footers (`BREAKING CHANGE:`, `Refs:`,
+  etc.) where applicable. Keep commits **atomic** and Conventional-Commits compliant as always;
+  `detailed` only affects message thoroughness, not the split. This is the **opposite** of the
+  fast modes — take the time to describe each commit well. If combined with `wip`/`quick`/`fast`,
+  `detailed` **wins** for message quality (still keep the split reasonably quick).
 - **`push`** — After committing, `git push` the current branch (use `-u` if it has no upstream).
 - **`pr`** — After committing (and pushing), open a PR/MR. Implies `push`.
 
@@ -41,8 +50,10 @@ about the best atomic split and the most accurate Conventional Commits messages.
   them working. Only then proceed. Those changes get committed like any other.
 
 ### 1. Parse the flags
-- Read `$ARGUMENTS` and detect which of `wip`, `quick`, `fast`, `push`, `pr` are present.
-- `wip`, `quick` and `fast` all select **fast mode**. `pr` implies `push`.
+- Read `$ARGUMENTS` and detect which of `wip`, `quick`, `fast`, `detailed`, `push`, `pr` are present.
+- `wip`, `quick` and `fast` all select **fast mode**. `detailed` selects **detailed-message mode**.
+  `pr` implies `push`. If both a fast flag and `detailed` are present, `detailed` wins for message
+  quality (see the flag description).
 - Ignore unrecognized tokens (they were likely extra requests handled in step 0).
 
 ### 2. Inspect and commit
@@ -58,6 +69,12 @@ about the best atomic split and the most accurate Conventional Commits messages.
 - **Fast mode (`wip`/`quick`/`fast`):** move quickly — pick a sensible atomic grouping and a
   correct-enough conventional message without long deliberation. Do not sacrifice atomicity or the
   conventional format for speed.
+- **Detailed mode (`detailed`):** give **every** commit a full multi-line message — the
+  Conventional Commits subject, a blank line, then a wrapped (~72 col) body explaining what changed
+  and, above all, **why** (motivation and context, not a line-by-line echo of the diff), plus any
+  relevant footers (`BREAKING CHANGE:`, `Refs:`, …). Pass the body via repeated `-m` flags (one
+  per paragraph/blank-line block) or a here-doc / `-F` file — never cram it into the subject.
+  Atomicity and the conventional format are unchanged; only the message is more thorough.
 - **NEVER** add `Co-Authored-By` or any attribution to me-the-assistant. The commits are solely mine.
 
 ### 3. Push (if `push` or `pr`)

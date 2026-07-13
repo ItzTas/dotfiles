@@ -43,11 +43,12 @@ Follow exactly these steps:
 - If both exist, you will create **a PR on GitHub AND an MR on GitLab**.
 
 ## 3. Commit and push all changes
+- Make sure you are on the **source branch** determined in step 1 before committing.
 - Check the state with `git status` and `git diff`.
 - Commit **all** pending changes following the rules in my `CLAUDE.md`:
   atomic commits, Conventional Commits, imperative mood, **no** `Co-Authored-By` or any
   attribution to you (the commit is solely mine).
-- Run `git push` for the current branch (use `-u` if it has no upstream yet).
+- Run `git push` for the source branch (use `-u` if it has no upstream yet).
 
 ## 4. Look for a template in the repository
 Look for templates before writing the PR/MR body:
@@ -59,10 +60,11 @@ Look for templates before writing the PR/MR body:
 - If none is found, write a concise body: a summary of what changed and why.
 
 ## 5. Create the PR/MR
-- **GitHub** (if a GitHub remote exists): `gh pr create --base <target> --head <current-branch>`
+- **GitHub** (if a GitHub remote exists): `gh pr create --base <target> --head <source-branch>`
   with a title (Conventional Commits) and body (filled template or summary).
 - **GitLab** (if a GitLab remote exists): `glab mr create --target-branch <target>
-  --source-branch <current-branch>` with an equivalent title and body.
+  --source-branch <source-branch>` with an equivalent title and body.
 - If both exist, create both and show me both links at the end.
 
-When done, show a summary: target branch, what was committed, and the link(s) to the created PR/MR.
+When done, show a summary: source branch, target branch, what was committed, and the link(s) to the
+created PR/MR.
