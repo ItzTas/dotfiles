@@ -16,6 +16,7 @@
 ## Tools
 
 - **If there is a `.prototools` file at the repository root, it contains the versions of some of the tools used.**
+- **Never change versions already set in `.prototools`.** If a tool/version is already declared in `.prototools`, do not modify, "upgrade", "downgrade", or "fix" it — treat those pinned versions as established and authoritative, even if they look inconsistent with the rest of the project. Only add a tool that is missing, or change a version if I explicitly ask for it.
 
 ## Docker
 
