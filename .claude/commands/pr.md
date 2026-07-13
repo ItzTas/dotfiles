@@ -1,13 +1,16 @@
 ---
-description: Commit, push and open a PR (GitHub) and/or MR (GitLab) from the current branch to the target branch
-argument-hint: [target-branch]
+description: Commit, push and open a PR (GitHub) and/or MR (GitLab) from the source branch to the target branch
+argument-hint: [target-branch] [source-branch]
 allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(yadm*), Read, Glob
 ---
 
-Open a pull request (GitHub) and/or merge request (GitLab) from the current branch to the target
+Open a pull request (GitHub) and/or merge request (GitLab) from the source branch to the target
 branch, committing and pushing all changes first.
 
-This command takes a single optional argument — the target branch: `$ARGUMENTS`
+This command takes two optional arguments:
+- **Target branch** (first argument): `$1`
+- **Source branch** (second argument): `$2` — the branch the PR/MR is opened **from**. If omitted,
+  the current branch is used as the source.
 
 Separately, I may include **other requests** in the same message, either before or after the
 `/pr` invocation (e.g. "do this, that and the other `/pr`" or "`/pr` do this, that and the
@@ -22,10 +25,16 @@ Follow exactly these steps:
 - Only after those changes are done should you proceed with the steps below. Those changes will be
   included in the commit/push and the PR/MR just like any other change.
 
-## 1. Determine the target branch
-- If a target branch was given as the argument, use it.
-- If no target branch was given, **ask me** which branch to open the PR/MR against before
-  continuing. Do not assume `main`/`master` on your own.
+## 1. Determine the target and source branches
+- **Target branch**: if it was given as the first argument, use it. If no target branch was given,
+  **ask me** which branch to open the PR/MR against before continuing. Do not assume `main`/`master`
+  on your own.
+- **Source branch**: if a source branch was given as the second argument, use it as the branch the
+  PR/MR is opened from. If it was omitted, use the current branch (`git branch --show-current`) as
+  the source.
+- If a source branch was given and it differs from the current branch, **check it out first**
+  (`git switch <source>`) so that the commit and push land on the source branch. If the working tree
+  is dirty and switching would be unsafe, tell me instead of forcing it.
 
 ## 2. Detect the remotes (GitHub and GitLab)
 - Run `git remote -v` and identify which remotes point to `github.com` and/or `gitlab.com`
