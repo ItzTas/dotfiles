@@ -441,7 +441,7 @@
         "animationDisabled": false,
         "animationSpeed": 1,
         "autoStartAuth": false,
-        "avatarImage": "/home/talinux/Pictures/Faces/fitz___sylphiette___minimalist___mushoku_tensei_ii_by_imo7_dg1t8o1-pre.jpg",
+        "avatarImage": "/home/talinux/Pictures/Faces/ArchFatGuy.jpg",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
@@ -776,6 +776,20 @@
                     "#f38ba8"
                 ],
                 "path": "/home/talinux/Pictures/Wallpapers/blood-moon-mountains.jpg",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Catppuccin Lavender",
+                "darkMode": true,
+                "generationMethod": "tonal-spot",
+                "paletteColors": [
+                    "#b4befe",
+                    "#f5bde6",
+                    "#c6a0f6",
+                    "#f38ba8"
+                ],
+                "path": "/home/talinux/Pictures/Wallpapers/blue-dragon-space.png",
                 "useWallpaperColors": false
             }
         ],
