@@ -64,7 +64,20 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
 - Only treat it as a real contradiction when the requests are truly **incompatible**. Requests that
   merely add to or complement each other are **not** contradictions — just queue both.
 
+## Exiting FLOW MODE
+- I leave the mode by running the command again with an exit keyword as the argument — i.e.
+  **`/flow end`** or **`/flow out`** (also accept `stop`, `off`, `exit`, case-insensitive). I may
+  also just say "exit flow" / "end flow" in plain words.
+- When that happens, **do not** treat the keyword as a new work item. Instead, leave FLOW MODE:
+  stop treating my messages as backlog items and stop applying the rules above.
+- Before leaving, if there are still `pending` / `in progress` items, tell me what's left and ask
+  whether you should **finish them first** or **drop them** — don't silently discard queued work
+  (that would violate rule 6). Once the queue is empty or I've decided, confirm in one line that
+  you've exited FLOW MODE.
+
 ## On activation
-Confirm in one line that you've entered **FLOW MODE**, create the initial TODO list (including the
-first request if it came in `$ARGUMENTS`/this message), and start working. From then on, follow the
-rules above for everything I send.
+- **If `$ARGUMENTS` is exactly an exit keyword** (`end`, `out`, `stop`, `off`, `exit`), follow
+  "Exiting FLOW MODE" above instead of entering the mode.
+- **Otherwise**, confirm in one line that you've entered **FLOW MODE**, create the initial TODO list
+  (including the first request if it came in `$ARGUMENTS`/this message), and start working. From
+  then on, follow the rules above for everything I send.
