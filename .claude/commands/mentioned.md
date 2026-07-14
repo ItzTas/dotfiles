@@ -15,7 +15,7 @@ Everything I passed with the command: `$ARGUMENTS`
 - **Everything after that quote** is the **instruction**: what I want you to do regarding that
   excerpt.
 - Example: `/mentioned "eu fiz isso" me explique o que vc fez` means → find where you said
-  "eu fiz isso" and then explain what you did.
+  "i did this" and then explain what you did.
 
 ## Steps
 
