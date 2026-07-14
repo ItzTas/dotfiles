@@ -42,4 +42,4 @@ Everything I passed with the command: `$ARGUMENTS`
   earlier statement and ask what I'd like to do with it.
 
 ### 4. Answer in my language
-- Respond in the same language I used in the instruction (Portuguese if I wrote in Portuguese).
+- Respond in the same language I used in the instruction.
