@@ -1,6 +1,6 @@
 ---
-description: Register a shell command to run last (after everything else); --durable persists it across sessions
-argument-hint: [--durable] <shell command, e.g. ls>
+description: Register a shell command to run after everything else (--durable persists it), or at the start of every session (--persistent)
+argument-hint: [--durable|--persistent] <shell command, e.g. ls>
 allowed-tools: Task, Agent, Read, Edit, Write, Glob, Grep, Bash
 ---
 
@@ -10,9 +10,9 @@ command** to run in the terminal **at the very end**, after all other work is fi
 ## Rules
 
 - The argument is a **shell command**, not a natural-language instruction. **Do not run it now** and
-  **do not rewrite or "improve" it** — run it **verbatim** later. A leading **`--durable`** (or
-  `durable`) is a flag, not part of the command — strip it and treat the rest as the command (see
-  "Durable" below).
+  **do not rewrite or "improve" it** — run it **verbatim** later. A leading **`--durable`** or
+  **`--persistent`** (with or without the `--`) is a flag, not part of the command — strip it and
+  treat the rest as the command (see "Durable" and "Persistent" below).
 - **If this arrives while you're mid-work** — thinking, executing another prompt, or with a subagent
   running — **do not interrupt** that work to run it, and don't run it right after that piece
   finishes either. Just register it and keep going; it runs **only at the very end of everything**.
@@ -29,20 +29,40 @@ command** to run in the terminal **at the very end**, after all other work is fi
 
 ## Durable (`--durable`)
 - **Without the flag**, a registration lasts **only for the current session** — it runs at the end
-  and is then gone.
-- **With `--durable`**, the command must **persist across sessions**. Store it **per project**, by
-  **appending the exact command as its own line** to the durable store file
-  **`.claude/flow-durable-commands.txt`** — the **project's** `.claude/` directory (the one at the
-  current project/repo root), **not** the global `~/.claude`. Create the `.claude/` dir and the file
-  if they don't exist. Don't add duplicates — if the exact line is already there, leave it.
-- **At the final step of every session**, read the project's `.claude/flow-durable-commands.txt` (if
-  it exists) and run each command in it, in file order, **after** the session-only commands — so
-  durable commands fire at the end of *this* session and every future one in **this project** too.
-- **To stop a durable command**, I remove its line from `.claude/flow-durable-commands.txt` (I may
-  ask you to do it — then delete exactly that line and confirm). Never clear the file on your own.
+  and is then gone (if the session ends before it runs, it's lost).
+- **With `--durable`**, the registration **survives across sessions** but is a **one-shot**: store it
+  **per project** by appending the exact command as its own line to
+  **`.claude/flow-durable-commands.txt`** in the **project's** `.claude/` directory (not the global
+  `~/.claude`; create the dir/file if needed; no duplicate lines). Persisting it just means it won't
+  be **lost** if the session ends before it runs — it still runs **only once**.
+- **At the final step of every session**, read `.claude/flow-durable-commands.txt` (if it exists) and
+  run each command in it, in file order, **after** the session-only commands. **Remove each line
+  right after it runs** — so every durable command executes **exactly once** (in this session, or in
+  the next one if it never got to run).
+- **To cancel a durable command before it runs**, I remove its line from the file (or ask you to
+  delete exactly that line and confirm). Never clear the file on your own.
+
+## Persistent (`--persistent`)
+- The line **persists across sessions** and, **unlike `--durable`, is never removed after running**
+  — it **stays in the file and repeats every session**.
+- **Difference from durable:** durable is a **one-shot** (runs once at the end, then removed); a
+  persistent command **runs every session** and fires **twice per session — at the start and at the
+  end**.
+- Store it **per project** by appending the exact command as its own line to
+  **`.claude/flow-persistent-commands.txt`** in the **project's** `.claude/` directory (create the
+  dir/file if needed; no duplicates — leave an existing identical line as is).
+- Read `.claude/flow-persistent-commands.txt` (if it exists) and run each command in it, in file
+  order, at **both** of these points, every session: at the **start** (**before** other work) and at
+  the **final step** (**after** the session-only and durable commands). Nothing is removed — the
+  file stays intact.
+- When I register one now, also **run it once immediately** so it takes effect right away; from then
+  on it auto-runs at the start and end of every future session.
+- **To stop a persistent command**, I remove its line from `.claude/flow-persistent-commands.txt`
+  (or ask you to delete exactly that line and confirm). Never clear the file on your own.
 
 ## On activation
-Confirm in one line that you've registered the final shell command (echo it back), say whether it's
-**durable** (persisted to the store) or **session-only**, and note that it will run at the very end.
-Then continue with whatever else is in progress — don't run the registered command until everything
-else is done.
+Confirm in one line that you've registered the command (echo it back) and say which kind it is:
+**session-only** (runs once at the very end), **durable** (persisted one-shot; runs once at the end,
+then removed), or **persistent** (persisted; runs at the start **and** end of every session — and
+run it once now). Then continue with whatever else is in progress — don't run an end-of-session
+command until everything else is done.

@@ -14,7 +14,7 @@ Everything I passed with the command: `$ARGUMENTS`
   said earlier** in this conversation. It is the *mention* — a pointer, not a new instruction.
 - **Everything after that quote** is the **instruction**: what I want you to do regarding that
   excerpt.
-- Example: `/mentioned "eu fiz isso" me explique o que vc fez` means → find where you said
+- Example: `/mentioned "i did this" me explique o que vc fez` means → find where you said
   "i did this" and then explain what you did.
 
 ## Steps
