@@ -47,6 +47,17 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
 - Keep the TODO list **continuously updated**: `pending` / `in progress` / `done`, so I can see
   what's queued and what's already out.
 - Mark an item done **the moment** you finish it.
+- **For very complex items**, the short TODO entry may not be enough. You **may** write the item's
+  full details — plan, sub-steps, decisions, context — to its own file. Store these files under
+  **`.claude/tasks/`** in the **project's** `.claude/` directory (the one at the current project/repo
+  root, not the global `~/.claude`), and **inside it in a subdirectory named after the current
+  session** (its id/number) — i.e. **`.claude/tasks/<session-id>/`**. Create those directories if
+  they don't exist, and put each task file there with a short kebab-case filename (e.g.
+  `.claude/tasks/<session-id>/refactor-auth.md`). Keep the file updated as you work and reference it
+  from the TODO entry. Only do this when the complexity warrants it — don't create a file for trivial
+  items.
+- **When you no longer need one of these task files** (the item is done and the details won't be
+  needed anymore), you **may delete it**.
 
 ### 6. Cancel only on an explicit request
 - **Never** drop, skip, or silently deprioritize an item.

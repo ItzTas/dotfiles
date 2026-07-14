@@ -47,3 +47,4 @@ Desktop.ini
 .ccls-cache/
 
 **/.claude/settings.local.json
+**/.claude/tasks/**
