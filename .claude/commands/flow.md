@@ -51,7 +51,8 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
 ### 6. Cancel only on an explicit request
 - **Never** drop, skip, or silently deprioritize an item.
 - The **only** reason to remove an item from the queue is me **explicitly asking to cancel it**
-  (e.g., "cancel X", "drop X", "don't do Y anymore").
+  (e.g., "cancel X", "drop X", "don't do Y anymore", or the explicit form
+  **`/flow canceltask <task>`**).
 - When I ask, remove **exactly that item** (if it's already in progress, stop it), tell me it was
   cancelled, and **carry on** with the rest of the queue as normal.
 
@@ -59,7 +60,11 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
 - If a new request **contradicts** another item in the queue (pending, in progress, **or already
   done**) — e.g. "make the button blue" then "make the button red", or "remove Y" then "improve Y"
   — **don't guess**.
-- **Stop and ask me** which option I want (ask clearly, with the alternatives). If possible, **keep
+- The moment you notice a possible contradiction, **flag it out loud in your reasoning/thinking**
+  (name the two conflicting items) as soon as it comes up, so I can see it while you're still going.
+- **If I see that and reply with a prompt resolving it before you'd ask** (telling you which one to
+  do), just **follow my resolution — no question needed.** Only fall back to **stopping and asking
+  me** (clearly, with the alternatives) if I *haven't* already clarified. If possible, **keep
   working through the rest of the queue** while you wait for my answer.
 - Only treat it as a real contradiction when the requests are truly **incompatible**. Requests that
   merely add to or complement each other are **not** contradictions — just queue both.
@@ -78,6 +83,11 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
 ## On activation
 - **If `$ARGUMENTS` is exactly an exit keyword** (`end`, `out`, `stop`, `off`, `exit`), follow
   "Exiting FLOW MODE" above instead of entering the mode.
+- **If `$ARGUMENTS` starts with `canceltask`** (i.e. `/flow canceltask <task>`), don't treat it as
+  a new work item — instead **cancel that specific task** per rule 6: find the item the `<task>`
+  refers to, remove it from the queue (if it's already in progress, stop it), tell me it was
+  cancelled, and **carry on** with the rest of the queue. If `<task>` is ambiguous or matches no
+  queued item, ask me which one I mean.
 - **Otherwise**, confirm in one line that you've entered **FLOW MODE**, create the initial TODO list
   (including the first request if it came in `$ARGUMENTS`/this message), and start working. From
   then on, follow the rules above for everything I send.
