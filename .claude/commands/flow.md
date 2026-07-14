@@ -109,8 +109,9 @@ stays active (except for the exit keywords).
 
 ## Exiting FLOW MODE
 - I leave the mode by running the command again with an exit keyword as the argument — i.e.
-  **`/flow end`** or **`/flow out`** (also accept `stop`, `off`, `exit`, case-insensitive). I may
-  also just say "exit flow" / "end flow" in plain words.
+  **`/flow end`**, **`/flow out`**, **`/flow off`**, **`/flow stop`**, or **`/flow exit`**
+  (case-insensitive). Any of these **ends FLOW MODE**. I may also just say "exit flow" / "end flow"
+  in plain words.
 - When that happens, **do not** treat the keyword as a new work item. Instead, leave FLOW MODE:
   stop treating my messages as backlog items and stop applying the rules above.
 - Before leaving, if there are still `pending` / `in progress` items, tell me what's left and ask
