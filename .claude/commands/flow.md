@@ -1,6 +1,6 @@
 ---
 description: Continuous flow mode — take requests as a stream and do them all without me repeating
-argument-hint: [first request | end]
+argument-hint: [first request | subcommand]
 allowed-tools: Task, Agent, Read, Edit, Write, Glob, Grep, Bash
 ---
 
@@ -69,6 +69,33 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
 - Only treat it as a real contradiction when the requests are truly **incompatible**. Requests that
   merely add to or complement each other are **not** contradictions — just queue both.
 
+## Control subcommands
+These are run as `/flow <keyword> [args]` while in FLOW MODE. When the argument is one of these
+keywords, **don't treat it as a new work item** — carry out the control action instead. The mode
+stays active (except for the exit keywords).
+
+- **`/flow status`** — Show the current queue grouped as `pending` / `in progress` / `done`. Just
+  report it; don't add or run anything.
+- **`/flow recap`** — Summarize what's been **completed** so far (the `done` items), in a short
+  readable list. Don't add or run anything.
+- **`/flow clear`** — Cancel **all `pending` items at once** and stay in the mode. Since rule 6
+  forbids silent drops, **confirm first** (show how many/which will be dropped). Don't touch an
+  `in progress` item unless I say so — ask if I also want to stop it.
+- **`/flow pause`** — **Stop starting new work.** Bring any `in progress` item to a safe stopping
+  point and hold. Keep **accepting and queueing** everything I send (rule 1 still applies), but
+  don't execute until I resume. Confirm you're paused.
+- **`/flow resume`** — Leave the paused state and **start working through the queue again** from
+  where it left off, following the normal rules.
+- **`/flow parallel [on|off]`** — Control rule 4's parallelism. `on` (also the default when bare)
+  lets you spawn parallel subagents for independent items; `off` forces **serial** execution (one
+  item at a time, no parallel subagents). The setting persists until I change it or exit the mode.
+- **`/flow defer <task>`** — **Deprioritize** the matching task: move it to the **end** of the
+  queue without cancelling it (if it's `in progress`, hold it and pick it up later). If `<task>` is
+  ambiguous or matches no queued item, ask me which one I mean.
+- **`/flow help`** — List all the subcommands with a one-line description of each (every keyword in
+  this section, plus `canceltask <task>` and the exit keywords). Just print the list; don't add or
+  run anything and don't change the mode.
+
 ## Exiting FLOW MODE
 - I leave the mode by running the command again with an exit keyword as the argument — i.e.
   **`/flow end`** or **`/flow out`** (also accept `stop`, `off`, `exit`, case-insensitive). I may
@@ -81,13 +108,16 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
   you've exited FLOW MODE.
 
 ## On activation
-- **If `$ARGUMENTS` is exactly an exit keyword** (`end`, `out`, `stop`, `off`, `exit`), follow
-  "Exiting FLOW MODE" above instead of entering the mode.
-- **If `$ARGUMENTS` starts with `canceltask`** (i.e. `/flow canceltask <task>`), don't treat it as
-  a new work item — instead **cancel that specific task** per rule 6: find the item the `<task>`
-  refers to, remove it from the queue (if it's already in progress, stop it), tell me it was
-  cancelled, and **carry on** with the rest of the queue. If `<task>` is ambiguous or matches no
-  queued item, ask me which one I mean.
-- **Otherwise**, confirm in one line that you've entered **FLOW MODE**, create the initial TODO list
-  (including the first request if it came in `$ARGUMENTS`/this message), and start working. From
-  then on, follow the rules above for everything I send.
+Dispatch on `$ARGUMENTS` (first word, case-insensitive):
+- **Exit keyword** (`end`, `out`, `stop`, `off`, `exit`) → follow "Exiting FLOW MODE" above instead
+  of entering the mode.
+- **`canceltask <task>`** → don't treat it as a new work item; **cancel that specific task** per
+  rule 6: find the item the `<task>` refers to, remove it from the queue (if it's already in
+  progress, stop it), tell me it was cancelled, and **carry on** with the rest of the queue. If
+  `<task>` is ambiguous or matches no queued item, ask me which one I mean.
+- **A control keyword** (`status`, `recap`, `clear`, `pause`, `resume`, `parallel`, `defer`,
+  `help`) → don't treat it as a new work item; carry out the matching action from "Control
+  subcommands" above.
+- **Otherwise** → confirm in one line that you've entered **FLOW MODE**, create the initial TODO
+  list (including the first request if it came in `$ARGUMENTS`/this message), and start working.
+  From then on, follow the rules above for everything I send.
