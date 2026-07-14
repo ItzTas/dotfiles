@@ -30,14 +30,15 @@ command** to run in the terminal **at the very end**, after all other work is fi
 ## Durable (`--durable`)
 - **Without the flag**, a registration lasts **only for the current session** — it runs at the end
   and is then gone.
-- **With `--durable`**, the command must **persist across sessions**. Store it by **appending the
-  exact command as its own line** to the durable store file **`~/.claude/flow-durable-commands.txt`**
-  (create the file if it doesn't exist). Don't add duplicates — if the exact line is already there,
-  leave it.
-- **At the final step of every session**, read `~/.claude/flow-durable-commands.txt` (if it exists)
-  and run each command in it, in file order, **after** the session-only commands — so durable
-  commands fire at the end of *this* session and every future one too.
-- **To stop a durable command**, I remove its line from `~/.claude/flow-durable-commands.txt` (I may
+- **With `--durable`**, the command must **persist across sessions**. Store it **per project**, by
+  **appending the exact command as its own line** to the durable store file
+  **`.claude/flow-durable-commands.txt`** — the **project's** `.claude/` directory (the one at the
+  current project/repo root), **not** the global `~/.claude`. Create the `.claude/` dir and the file
+  if they don't exist. Don't add duplicates — if the exact line is already there, leave it.
+- **At the final step of every session**, read the project's `.claude/flow-durable-commands.txt` (if
+  it exists) and run each command in it, in file order, **after** the session-only commands — so
+  durable commands fire at the end of *this* session and every future one in **this project** too.
+- **To stop a durable command**, I remove its line from `.claude/flow-durable-commands.txt` (I may
   ask you to do it — then delete exactly that line and confirm). Never clear the file on your own.
 
 ## On activation
