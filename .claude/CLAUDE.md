@@ -24,6 +24,26 @@
 - **If there is a `.prototools` file at the repository root, it contains the versions of some of the tools used.**
 - **Never change versions already set in `.prototools`.** If a tool/version is already declared in `.prototools`, do not modify, "upgrade", "downgrade", or "fix" it — treat those pinned versions as established and authoritative, even if they look inconsistent with the rest of the project. Only add a tool that is missing, or change a version if I explicitly ask for it.
 
+## LSP under Yarn PnP
+
+When a project uses Yarn Plug'n'Play (`.yarnrc.yml` has `nodeLinker: pnp`, there is a `.pnp.cjs` and no `node_modules`), the editor's language server can't resolve packages on its own — it must go through Yarn's PnP-patched TypeScript. Symptoms of a broken setup: `Cannot find module 'x'` / TS `2307` on packages that are installed, missing types/intellisense, or (for Vue/Svelte SFCs) the template parsing as raw TS with `';' expected` errors. The fix is always: point the editor at the **Yarn SDK**, never disable PnP.
+
+**Fast fix (all editors):** generate/refresh the SDKs from the project root, then reload the editor.
+
+```
+yarn dlx @yarnpkg/sdks base      # editor-agnostic SDK
+yarn dlx @yarnpkg/sdks vscode    # VSCode (also writes .vscode/settings.json)
+```
+
+This creates `.yarn/sdks/` (commit it). A missing or stale `.yarn/sdks/` is the usual reason a server "doesn't read the files" — regenerate it after dependency or TypeScript-version changes.
+
+- **VSCode:** run `yarn dlx @yarnpkg/sdks vscode`, install the **ZipFS** extension (to open files inside zipped deps), then command palette → "TypeScript: Select TypeScript Version" → **Use Workspace Version**.
+- **Neovim (and any manual LSP):** use **`vtsls`**, not `ts_ls` — `ts_ls` does not activate PnP even when pointed at the SDK shim (persistent `Cannot find module`). The settings that actually work:
+  - `settings.typescript.tsdk = ".yarn/sdks/typescript/lib"` — keep it **relative** so it resolves per-project and non-PnP projects fall back to bundled TS.
+  - `settings.vtsls.autoUseWorkspaceTsdk = true` — **required**, or vtsls ignores `tsdk` and uses its bundled (non-PnP) TypeScript.
+  - For Vue/Svelte SFCs, register the framework tsserver plugin as a `vtsls.tsserver.globalPlugins` entry with **`enableForWorkspaceTypeScriptVersions = true`** — TypeScript silently skips tsserver plugins under a *workspace* TS version (which the SDK is), so without this flag SFCs parse as raw TS.
+- **General rule:** if the SDK is present and the server still can't resolve modules, the server is running its own bundled TypeScript instead of the workspace SDK — force the workspace/PnP TS version. Do **not** "fix" it by setting `nodeLinker: node-modules` locally.
+
 ## Docker
 
 - **Always run both `hadolint` and `trivy config` after editing or creating a Dockerfile.** Whenever you edit or create a Dockerfile, run `hadolint <file>` and `trivy config <file>` on it and fix any issues either one reports before considering the task complete.
