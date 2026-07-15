@@ -1,14 +1,16 @@
 ---
-description: Bring the current branch up to date — fetch with prune and rebase onto the latest base branch, safely handling a dirty tree and conflicts
-argument-hint: [base-branch]
+description: Bring the current branch up to date — fetch with prune and rebase onto the latest base branch, safely handling a dirty tree and conflicts; --all-branches also fast-forwards every other local branch
+argument-hint: [base-branch] [--all-branches]
 allowed-tools: Bash(git*)
 ---
 
 Sync the current branch with the remote: fetch the latest, prune gone refs, and rebase the branch
 onto the up-to-date base so it's current.
 
-This command takes a single optional argument — the **base branch** to rebase onto: `$ARGUMENTS`
-If none is given, detect it (see step 2).
+This command takes optional arguments: `$ARGUMENTS`
+- The **base branch** to rebase onto. If none is given, detect it (see step 2).
+- The flag **`--all-branches`** (also accept `--all` or a bare `all-branches`): besides syncing the
+  current branch as usual, fast-forward **every other local branch** to its upstream (see step 4b).
 
 Separately, I may include **other requests** in the same message, before or after `/sync`. Those
 are not the argument — handle them as normal work.
@@ -36,6 +38,19 @@ are not the argument — handle them as normal work.
 ### 4. Rebase onto the base
 - Rebase the current branch onto the freshly fetched base: `git rebase --autostash origin/<base>`.
 
+### 4b. All-branches mode (only with `--all-branches`)
+- After syncing the current branch, update every **other** local branch that tracks an upstream,
+  **fast-forward only** — never rebase or force branches that aren't checked out:
+  - List them: `git for-each-ref refs/heads --format='%(refname:short) %(upstream:short) %(upstream:track)'`.
+  - For each branch (skipping the current one), fast-forward it without checking it out:
+    `git fetch . <upstream>:<branch>` — this refuses non-fast-forward updates, which is exactly
+    what we want.
+- **Skip and report** (don't touch):
+  - Branches that have **diverged** from their upstream (local commits + remote commits) — a
+    fast-forward is impossible; tell me so I can rebase/merge them myself.
+  - Branches whose upstream is **gone** (pruned) — suggest deleting them if merged.
+  - Branches with **no upstream** — nothing to sync against.
+
 ### 5. Handle conflicts
 - If the rebase stops on conflicts, **don't force anything**: report which files conflict and help
   me resolve them, then continue (`git rebase --continue`). If I'd rather bail, `git rebase --abort`
@@ -48,3 +63,5 @@ are not the argument — handle them as normal work.
 ### 7. Summary
 - Show the base it synced against, how many commits were replayed / how far behind it was, whether
   a stash was applied back, and whether a force-push is now needed.
+- In all-branches mode, also list per branch: fast-forwarded (and by how many commits), already
+  up to date, or skipped (diverged / upstream gone / no upstream) and why.
