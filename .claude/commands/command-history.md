@@ -20,15 +20,24 @@ part of this — only commands I asked for explicitly.
 - **`!` commands are recorded automatically.** Commands I run with the `!` prefix are appended by
   the `UserPromptSubmit` hook (`~/.claude/hooks/command-history.sh`) at submission time — don't
   record those manually a second time.
+- **Remove entries that turn out to fail.** The hook records a `!` command at **submission**,
+  before it runs — so when you see in its output that it **errored** (non-zero exit,
+  `command not found`, bad pathspec, etc.), **delete that entry** from both history files (the
+  last matching line). Likewise for any already-recorded command that later proves wrong: a
+  failing command must not stay in the history.
 
 ## Wrong / non-existent commands
 
 - **Never record a wrong command.** If the command I asked for turns out to be **wrong** — it fails
   when run (typo, `command not found`, bad pathspec, etc.) — or simply **doesn't exist**, do **not**
-  write it to the history. Instead, **search both history files** for entries that resemble what I
-  wrote and **suggest** the closest match (e.g. "did you mean `yadm add commands && yadm_update`?"),
-  waiting for my confirmation before running the suggestion. **Always suggest — even if
+  write it to the history. Instead, **suggest the most likely intended command** (e.g. "did you mean
+  `yadm add commands && yadm_update`?"), waiting for my confirmation before running the suggestion.
+  **Search both history files** for entries resembling what I wrote, but the history is a **source,
+  not a constraint**: when another **known command** is the more likely intent — an obvious typo fix
+  (`gti status` → `git status`), a tool you know exists on my system, a command from the current
+  context — suggest that one instead of forcing a history match. **Always suggest — even if
   auto-accept/auto mode is on**; a guessed correction never auto-runs without the flag below.
 - **`auto` / `--auto` flag**: if I passed it with the request (e.g. `/command --auto <cmd>`), skip
-  the suggestion step — find the closest match in the histories and **execute it directly** without
-  asking, then record the **corrected** command (the one that actually ran) in the history.
+  the suggestion step — pick the best correction (from the histories or a known command, as above)
+  and **execute it directly** without asking, then record the **corrected** command (the one that
+  actually ran) in the history.
