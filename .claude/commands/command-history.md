@@ -3,9 +3,10 @@ description: Load my shell-command history rules — record every command I expl
 ---
 
 These are my rules for keeping a history of shell commands. They apply whenever I **explicitly ask
-you to run a shell command** — directly in a message ("run X"), or through a registration like
-`/command` or a final-mode `/defer`. Commands you choose to run on your own initiative (builds,
-searches, checks, etc.) are **not** part of this — only commands I asked for explicitly.
+you to run a shell command** — directly in a message ("run X"), through a registration like
+`/command` or a final-mode `/defer`, or when I run one myself with the **`!` prefix** in the input
+box. Commands you choose to run on your own initiative (builds, searches, checks, etc.) are **not**
+part of this — only commands I asked for explicitly.
 
 ## History files
 
@@ -14,8 +15,11 @@ searches, checks, etc.) are **not** part of this — only commands I asked for e
   **global** one (create the folder/file if needed).
 - Every explicitly-requested command that **runs successfully** is appended, as its own line, to
   **both** files at the moment it runs.
-- **500-line cap per file.** After appending, if a file has more than **500 lines**, delete the
-  **oldest** entries (the top lines) until it's back at 500.
+- **Line caps: 500 for the project file, 1000 for the global file.** After appending, if a file has
+  more than its cap, delete the **oldest** entries (the top lines) until it's back at the cap.
+- **`!` commands are recorded automatically.** Commands I run with the `!` prefix are appended by
+  the `UserPromptSubmit` hook (`~/.claude/hooks/command-history.sh`) at submission time — don't
+  record those manually a second time.
 
 ## Wrong / non-existent commands
 

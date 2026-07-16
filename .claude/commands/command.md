@@ -65,9 +65,9 @@ command** to run in the terminal **at the very end**, after all other work is fi
 
 - Registered commands follow my general **command-history rules** — load
   `~/.claude/commands/command-history.md` (the `command-history` command/skill) and apply them:
-  successful commands are recorded in `.claude/command-history/history.txt` (project and global,
-  500-line cap); a **wrong** command is never recorded — suggest the closest match from the
-  history instead, even in auto-accept mode.
+  successful commands are recorded in `.claude/command-history/history.txt` (project capped at
+  500 lines, global at 1000); a **wrong** command is never recorded — suggest the closest match
+  from the history instead, even in auto-accept mode.
 - **`auto` / `--auto` flag** (e.g. `/command --auto <cmd>`): per those rules, skips the suggestion
   step — the closest history match runs directly and the corrected command is recorded. Like the
   other flags, `--auto` is stripped and is not part of the command.

@@ -18,7 +18,7 @@
 
 ## Shell commands
 
-- **Whenever I explicitly ask you to run a shell command, first load `~/.claude/commands/command-history.md`** (the `command-history` command/skill) and follow it — commands that run successfully get recorded in the history (500-line cap); a wrong/non-existent command is never recorded — search the history and suggest the closest match instead (with `auto`/`--auto`, run the match directly).
+- **Whenever I explicitly ask you to run a shell command, first load `~/.claude/commands/command-history.md`** (the `command-history` command/skill) and follow it — commands that run successfully get recorded in the history (capped: 500 lines project, 1000 global); a wrong/non-existent command is never recorded — search the history and suggest the closest match instead (with `auto`/`--auto`, run the match directly).
 
 ## Code Style
 
