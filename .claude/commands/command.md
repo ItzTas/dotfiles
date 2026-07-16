@@ -1,6 +1,6 @@
 ---
 description: Register a shell command to run after everything else (--durable persists it), or at the start of every session (--persistent)
-argument-hint: [--durable|--persistent] <shell command, e.g. ls>
+argument-hint: [--durable|--persistent] [--auto] <shell command, e.g. ls>
 allowed-tools: Task, Agent, Read, Edit, Write, Glob, Grep, Bash
 ---
 
@@ -10,9 +10,10 @@ command** to run in the terminal **at the very end**, after all other work is fi
 ## Rules
 
 - The argument is a **shell command**, not a natural-language instruction. **Do not run it now** and
-  **do not rewrite or "improve" it** — run it **verbatim** later. A leading **`--durable`** or
-  **`--persistent`** (with or without the `--`) is a flag, not part of the command — strip it and
-  treat the rest as the command (see "Durable" and "Persistent" below).
+  **do not rewrite or "improve" it** — run it **verbatim** later. A leading **`--durable`**,
+  **`--persistent`**, or **`--auto`** (with or without the `--`) is a flag, not part of the command —
+  strip it and treat the rest as the command (see "Durable", "Persistent" and "Command history"
+  below).
 - **If this arrives while you're mid-work** — thinking, executing another prompt, or with a subagent
   running — **do not interrupt** that work to run it, and don't run it right after that piece
   finishes either. Just register it and keep going; it runs **only at the very end of everything**.
@@ -59,6 +60,26 @@ command** to run in the terminal **at the very end**, after all other work is fi
   on it auto-runs at the start and end of every future session.
 - **To stop a persistent command**, I remove its line from `.claude/flow-persistent-commands.txt`
   (or ask you to delete exactly that line and confirm). Never clear the file on your own.
+
+## Command history
+
+- Keep a **history of the commands I register**, in two files — one per scope: 
+  **`.claude/command-history.txt`** in the **project's** `.claude/` directory and
+  **`~/.claude/command-history.txt`** in the **global** one (create either if needed). Every
+  registered command that **runs successfully** is appended, as its own line, to **both** files at
+  the moment it runs.
+- **500-line cap per file.** After appending, if a file has more than **500 lines**, delete the
+  **oldest** entries (the top lines) until it's back at 500.
+- **Wrong commands are never recorded.** If a registered command turns out to be **wrong** — it
+  fails when run (typo, `command not found`, bad pathspec, etc.) — do **not** write it to the
+  history. Instead, **search both history files** for entries that resemble what I wrote and
+  **suggest** the closest match (e.g. "did you mean `yadm add commands && yadm_update`?"), waiting
+  for my confirmation before running the suggestion. **Always suggest — even if auto-accept/auto
+  mode is on**; a guessed correction never auto-runs without the `--auto` flag below.
+- **`auto` / `--auto` flag** (e.g. `/command --auto <cmd>`): skips the suggestion step. If the
+  command is wrong, find the closest match in the histories and **execute it directly** without
+  suggesting or waiting, then record the **corrected** command (the one that actually ran) in the
+  history. Like the other flags, `--auto` is stripped and is not part of the command.
 
 ## On activation
 Confirm in one line that you've registered the command (echo it back) and say which kind it is:
