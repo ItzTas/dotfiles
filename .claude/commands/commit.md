@@ -1,5 +1,5 @@
 ---
-description: Commit all pending changes as atomic Conventional Commits, optionally fast (wip/quick), detailed, and optionally push and/or open a PR
+description: Commit all pending changes as atomic Conventional Commits, optionally fast (wip/quick) or fastest (quickest), detailed, and optionally push and/or open a PR
 argument-hint: [wip|quick|fast|fastest|quickest] [detailed] [push] [pr]
 allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(yadm*), Read, Glob
 ---
