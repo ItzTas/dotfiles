@@ -1,6 +1,6 @@
 ---
-description: Commit all pending changes as atomic Conventional Commits, optionally fast (wip/quick) or fastest (quickest), detailed, and optionally push and/or open a PR
-argument-hint: [wip|quick|fast|fastest|quickest] [detailed] [push] [pr]
+description: Commit all pending changes as atomic Conventional Commits, optionally fast (wip/quick) or fastest (quickest), detailed or verbose, and optionally push and/or open a PR
+argument-hint: [wip|quick|fast|fastest|quickest] [detailed|verbose] [push] [pr]
 allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(yadm*), Read, Glob
 ---
 
@@ -13,7 +13,7 @@ This command takes zero or more **flags** as arguments: `$ARGUMENTS`
 
 Flags may appear in **any order** and **more than one** may be given
 (e.g. `/commit wip push`, `/commit fast pr`, `/commit quick push pr`, `/commit fastest`,
-`/commit detailed`, `/commit detailed push`).
+`/commit detailed`, `/commit detailed push`, `/commit verbose`, `/commit verbose pr`).
 
 Separately, I may include **other requests** in the same message, either before or after the
 `/commit` invocation (e.g. "do this, that and the other `/commit`" or "`/commit` do this, that
@@ -45,13 +45,25 @@ and the other"). Those are **not** flags — they are work to do first.
   fast modes — take the time to describe each commit well. If combined with any fast mode
   (`wip`/`quick`/`fast`/`fastest`/`quickest`), `detailed` **wins** for message quality (still keep
   the split quick, per that mode).
+- **`verbose`** — **Be as detailed as you possibly can, about every detail.** Stronger than
+  `detailed`: `detailed` explains a commit, `verbose` **documents** it exhaustively. Read the diff
+  closely and account for **everything** in the commit — go area by area (or file by file) through
+  what changed, spell out the reasoning behind each decision, note alternatives you considered and
+  why you rejected them, call out side effects, edge cases, assumptions and anything a future
+  reader would otherwise have to reconstruct from the diff, and add every footer that applies. Long
+  is fine — there's no length budget here, so don't compress at the cost of a detail. Still wrap at
+  ~72 cols, keep the subject line a normal Conventional Commits subject, and keep the split
+  **atomic** and careful (`verbose` implies the non-fast split — take the time to get it right).
+  Asking for `verbose` is me wanting the full record, not a summary.
 - **`push`** — After committing, `git push` the current branch (use `-u` if it has no upstream).
 - **`pr`** — After committing (and pushing), open a PR/MR. Implies `push`.
 
 If **none** of the fast modes is given, commit in the **normal, careful** mode: think about the
 best atomic split and the most accurate Conventional Commits messages.
 
-Speed order, slowest to fastest: `detailed` → (default) → `wip`/`quick`/`fast` → `fastest`/`quickest`.
+Speed order, slowest to fastest: `verbose` → `detailed` → (default) → `wip`/`quick`/`fast` →
+`fastest`/`quickest`. The two ends are opposites: `verbose` spares no detail, `fastest` spares
+every one it can.
 
 ## Steps
 
@@ -62,11 +74,13 @@ Speed order, slowest to fastest: `detailed` → (default) → `wip`/`quick`/`fas
 
 ### 1. Parse the flags
 - Read `$ARGUMENTS` and detect which of `wip`, `quick`, `fast`, `fastest`, `quickest`, `detailed`,
-  `push`, `pr` are present.
+  `verbose`, `push`, `pr` are present.
 - `wip`, `quick` and `fast` select **fast mode**; `fastest` and `quickest` select **fastest mode**.
-  If both are present, `fastest` wins. `detailed` selects **detailed-message mode**. `pr` implies
-  `push`. If both a fast flag and `detailed` are present, `detailed` wins for message quality (see
-  the flag description).
+  If both are present, `fastest` wins. `detailed` selects **detailed-message mode**; `verbose`
+  selects **verbose mode**. If both are present, `verbose` wins. `pr` implies `push`.
+- If a fast flag is combined with `detailed`/`verbose`, the message flag **wins** for message
+  quality (see the flag descriptions). `verbose` additionally overrides the fast split — a
+  `fastest verbose` request is contradictory, so honor `verbose` and commit carefully.
 - Match `fastest`/`quickest` before `fast`/`quick` so the superlative isn't read as the base flag.
 - Ignore unrecognized tokens (they were likely extra requests handled in step 0).
 
@@ -96,6 +110,13 @@ Speed order, slowest to fastest: `detailed` → (default) → `wip`/`quick`/`fas
   relevant footers (`BREAKING CHANGE:`, `Refs:`, …). Pass the body via repeated `-m` flags (one
   per paragraph/blank-line block) or a here-doc / `-F` file — never cram it into the subject.
   Atomicity and the conventional format are unchanged; only the message is more thorough.
+- **Verbose mode (`verbose`):** as `detailed`, but exhaustive — read the diff closely and document
+  **every** detail of each commit: a structured body walking through what changed area by area (or
+  file by file), the reasoning behind each decision, alternatives considered and rejected, side
+  effects, edge cases, assumptions, and every applicable footer. Nothing a future reader would have
+  to reconstruct from the diff gets left out, and length is not a constraint. Use a here-doc or
+  `-F` file for bodies this long rather than a pile of `-m` flags. Split carefully and atomically
+  as in normal mode.
 - **NEVER** add `Co-Authored-By` or any attribution to me-the-assistant. The commits are solely mine.
 
 ### 3. Push (if `push` or `pr`)
