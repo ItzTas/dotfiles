@@ -63,11 +63,12 @@ command** to run in the terminal **at the very end**, after all other work is fi
 
 ## Command history
 
-- Keep a **history of the commands I register**, in two files — one per scope: 
-  **`.claude/command-history.txt`** in the **project's** `.claude/` directory and
-  **`~/.claude/command-history.txt`** in the **global** one (create either if needed). Every
-  registered command that **runs successfully** is appended, as its own line, to **both** files at
-  the moment it runs.
+- Keep a **history of the commands I register**, in two files — one per scope, each inside a
+  **`command/` folder** (this skill's own folder) in the respective `.claude/` directory:
+  **`.claude/command/command-history.txt`** in the **project's** `.claude/` and
+  **`~/.claude/command/command-history.txt`** in the **global** one (create the folder/file if
+  needed). Every registered command that **runs successfully** is appended, as its own line, to
+  **both** files at the moment it runs.
 - **500-line cap per file.** After appending, if a file has more than **500 lines**, delete the
   **oldest** entries (the top lines) until it's back at 500.
 - **Wrong commands are never recorded.** If a registered command turns out to be **wrong** — it

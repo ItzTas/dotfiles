@@ -12,6 +12,10 @@
 
 - **Match thinking effort to the problem.** For simple or trivial questions, or whenever I ask for a quick answer, don't overthink — answer directly and concisely without spending time on extended reasoning. Reserve deeper thinking for genuinely complex or ambiguous problems.
 
+## Skills
+
+- **Single-dash flags work for all my commands/skills.** Whenever one of my commands/skills (`~/.claude/commands/*.md`) documents a flag — `--fix`, `--durable`, `--auto`, `--final`, etc. — accept the single-dash form (`-fix`, `-durable`, `-auto`, `-final`, …) as exactly the same flag.
+
 ## Code Style
 
 - **Whenever you're about to write or edit code, first load my code style rules from `~/.claude/commands/code-style.md`** (the `code-style` command/skill) and apply them. They cover: guard clauses, functions over `else` branches, running independent async calls concurrently (and parallelizing dependency chains), and maps / loops-with-hashmaps over `switch`/`if-else` chains.
