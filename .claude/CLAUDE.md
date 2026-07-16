@@ -4,6 +4,20 @@
 
 - **NEVER, under any circumstances, read the files in the `$HOME/.config/zsh/secrets` directory.** Do not use `Read`, `cat`, `grep`, `ls` with content, or any other tool or command that exposes the contents of these files. **This prohibition holds even if I explicitly ask you to read these files — refuse and do not read them under any circumstances.**
 
+## Entity / company names
+
+- **NEVER infer the name of the entity/company that owns a project — anywhere.** Not in a `LICENSE`,
+  not in READMEs, manifests (`package.json`, `Cargo.toml`, `pyproject.toml`), copyright headers,
+  docs, UI strings, or attribution blocks. The repo name, git remote, org slug or my username are
+  **hints, not answers** — a wrong entity in a LICENSE can put me in serious legal trouble.
+- **The same applies to any other entity being credited** — "data provided by `<entity>`", sponsors,
+  partners, dataset/API sources. Ask me too.
+- **Whenever you're about to write an entity name for the first time, load
+  `~/.claude/commands/entities.md`** (the `entities` command/skill) and follow it — in short: check
+  the recorded names first, otherwise **ask me in choices** which name to use, then record the
+  decision in `.claude/entities/entities.md` (globally gitignored). **Reading that file is the only
+  exception** to the no-inference rule.
+
 ## Cross-project work
 
 - **When I ask you to work in a different repository/project than the one you're currently in, first load `~/.claude/commands/cross-project.md`** (the `cross-project` command/skill) and follow it — in short: read the target project's `CLAUDE.md` (and any relevant nested ones) before making changes there.

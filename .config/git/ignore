@@ -49,3 +49,4 @@ Desktop.ini
 **/.claude/settings.local.json
 **/.claude/tasks/**
 **/.claude/command-history/**
+**/.claude/entities/**
