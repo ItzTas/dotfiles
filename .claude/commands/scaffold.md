@@ -1,5 +1,5 @@
 ---
-description: Scaffold a new file/component/module of the given kind, mirroring the structure and conventions of an existing sibling in the project
+description: Scaffold a new file/component/module of the given kind, mirroring an existing sibling's conventions
 argument-hint: <type> <name>
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 ---

@@ -1,5 +1,5 @@
 ---
-description: Generate a Mermaid diagram (architecture, flowchart, sequence, class/ER, state) from the actual code — accurate to what's there, at a readable altitude — and optionally save or render it
+description: Generate a Mermaid diagram (arch, flow, sequence, class/ER, state) accurate to the actual code; optionally save or render it
 argument-hint: [flow|arch|sequence|class|er|state] [path|module]
 allowed-tools: Read, Glob, Grep, Bash(rg*), Bash(git*), Bash(mmdc*), Bash(npx*), Write, Edit
 ---

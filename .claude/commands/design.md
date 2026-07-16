@@ -1,5 +1,5 @@
 ---
-description: Work with Claude Design (claude.ai/design) — list, inspect, create, and sync design-system projects, with all Claude Design tools allowed
+description: Work with Claude Design (claude.ai/design) — list, inspect, create, and sync design-system projects
 argument-hint: [list|status|pull|push|create] [--project <uuid>] [component|path]
 allowed-tools: DesignSync, Read, Glob, Grep, Write, Edit, Bash(git*), Bash(rg*)
 ---

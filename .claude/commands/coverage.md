@@ -1,5 +1,5 @@
 ---
-description: Run the project's test coverage, report the overall numbers and the least-covered files with the specific uncovered lines/branches, and optionally add tests for the most important gaps
+description: Run test coverage, report the least-covered files with their uncovered lines, and optionally add tests for key gaps
 argument-hint: [path]
 allowed-tools: Bash(cargo*), Bash(npm*), Bash(npx*), Bash(pnpm*), Bash(proto*), Read, Edit, Glob, Grep
 ---

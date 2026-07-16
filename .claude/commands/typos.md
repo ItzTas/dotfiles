@@ -1,5 +1,5 @@
 ---
-description: Spellcheck the project's comments, docs, strings, and identifiers; report the typos, and with --fix apply the safe corrections while allowlisting genuine domain terms
+description: Spellcheck comments, docs, strings, and identifiers; --fix applies safe corrections, allowlisting domain terms
 argument-hint: [--fix] [path]
 allowed-tools: Bash(typos*), Bash(codespell*), Bash(rg*), Bash(git*), Read, Edit, Glob
 ---

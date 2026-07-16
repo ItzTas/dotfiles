@@ -1,5 +1,5 @@
 ---
-description: Check a target (file, dir, glob, or the diff) with the given tools — or auto-detected ones — report the findings and fix them
+description: Check a target (file, dir, glob, or diff) with given or auto-detected tools; report and fix findings
 argument-hint: <target> [tool ...]
 allowed-tools: Bash, Read, Glob, Grep, Edit
 ---

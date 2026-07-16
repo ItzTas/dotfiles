@@ -1,5 +1,5 @@
 ---
-description: Load my personal code style rules — read/invoke this before writing or editing any code, in any project
+description: Load my personal code style rules before writing or editing any code
 ---
 
 These are my personal code style rules. Whenever you are about to **write or edit code** — in any

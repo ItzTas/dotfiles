@@ -1,5 +1,5 @@
 ---
-description: Safely revert an already-pushed commit, range, or PR/MR merge by creating a revert commit — no history rewriting — handling merge commits and conflicts, and pushing only after I confirm
+description: Revert a pushed commit, range, or PR/MR merge via revert commits (no history rewriting), pushing only after I confirm
 argument-hint: [commit sha | range | PR/MR number | last]
 allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Read, Glob, Grep
 ---

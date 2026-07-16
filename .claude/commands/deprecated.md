@@ -1,5 +1,5 @@
 ---
-description: Find deprecated code, APIs, and libraries used in the project and report them; with --fix, migrate the code to the recommended non-deprecated equivalents while preserving the exact same behavior
+description: Find deprecated code, APIs, and libraries; --fix migrates to the recommended equivalents preserving behavior
 argument-hint: [--fix] [lib|path]
 allowed-tools: Bash(cargo*), Bash(npm*), Bash(npx*), Bash(pnpm*), Bash(tsc*), Bash(rg*), Bash(proto*), Bash(git*), Read, Edit, Glob, Grep, WebFetch, mcp__context7__resolve-library-id, mcp__context7__query-docs
 ---

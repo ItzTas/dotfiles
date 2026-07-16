@@ -1,5 +1,5 @@
 ---
-description: Find duplicated (copy-pasted) code across the project and report the clusters; optionally refactor them into a shared abstraction, one cluster at a time, preserving behavior
+description: Find duplicated-code clusters; optionally refactor each into a shared abstraction, preserving behavior
 argument-hint: [--fix] [path]
 allowed-tools: Bash(jscpd*), Bash(npx*), Bash(rg*), Bash(git*), Read, Edit, Glob, Grep
 ---

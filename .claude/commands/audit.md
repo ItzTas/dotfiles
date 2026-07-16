@@ -1,5 +1,5 @@
 ---
-description: Scan the repo for leaked secrets and credentials (working tree, and optionally staged changes or full git history), with a secondary dependency/misconfig vulnerability pass — findings reported redacted, never printing secret values
+description: Scan the repo for leaked secrets (working tree, --staged, or full --history) plus a dependency/misconfig pass — findings always redacted
 argument-hint: [path | --staged | --history]
 allowed-tools: Bash(gitleaks*), Bash(trufflehog*), Bash(trivy*), Bash(git*), Bash(cargo*), Bash(npm*), Bash(rg*), Grep, Glob, Read
 ---

@@ -1,5 +1,5 @@
 ---
-description: Create a well-structured issue from a short description on GitHub, GitLab, or Linear (or another connected tracker) — picking the destination, applying the repo's issue template, and drafting title/body/labels before creating
+description: Create a well-structured issue (GitHub, GitLab, or Linear) from a short description, using the repo's template and drafting title/body/labels first
 argument-hint: [github|gitlab|linear] <description>
 allowed-tools: Bash(gh*), Bash(glab*), Bash(git*), Read, Glob, mcp__github__issue_write, mcp__gitlab__create_issue, mcp__linear__authenticate, mcp__linear__complete_authentication, mcp__linear__*
 ---

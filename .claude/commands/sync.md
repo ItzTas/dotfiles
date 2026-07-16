@@ -1,5 +1,5 @@
 ---
-description: Bring the current branch up to date — fetch with prune and rebase onto the latest base branch, safely handling a dirty tree and conflicts; --all-branches also fast-forwards every other local branch
+description: Fetch with prune and rebase the current branch onto its base, handling dirty tree and conflicts; --all-branches fast-forwards the rest
 argument-hint: [base-branch] [--all-branches]
 allowed-tools: Bash(git*)
 ---

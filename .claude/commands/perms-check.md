@@ -1,5 +1,5 @@
 ---
-description: Find sensitive files with loose permissions (world/group readable or writable keys, .env, credentials) and report current vs recommended mode — metadata only, never reading file contents
+description: Find sensitive files with loose permissions (keys, .env, credentials) and report current vs recommended mode — metadata only
 argument-hint: [path]
 allowed-tools: Bash(find*), Bash(stat*), Bash(ls*), Bash(git*), Bash(chmod*), Glob
 ---

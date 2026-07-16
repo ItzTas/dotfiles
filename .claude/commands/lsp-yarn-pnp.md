@@ -1,5 +1,5 @@
 ---
-description: Load my Yarn PnP LSP setup guide — fix editor/language-server module resolution in Yarn Plug'n'Play projects (Yarn SDKs, vtsls settings, SFC tsserver plugins); never disable PnP
+description: Load my Yarn PnP LSP guide — fix editor/LSP module resolution in PnP projects (Yarn SDKs, vtsls); never disable PnP
 ---
 
 This is my guide for making editors/LSPs work in **Yarn Plug'n'Play** projects. Load it whenever

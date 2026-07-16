@@ -1,5 +1,5 @@
 ---
-description: Load my shell-command history rules — record every command I explicitly ask you to run, and use the history to suggest corrections when a requested command is wrong or doesn't exist
+description: Load my shell-command history rules — record commands I explicitly ask to run; suggest corrections for wrong ones
 ---
 
 These are my rules for keeping a history of shell commands. They apply whenever I **explicitly ask

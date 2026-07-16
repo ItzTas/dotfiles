@@ -1,5 +1,5 @@
 ---
-description: Cut a release — infer the version bump from Conventional Commits, update the manifest and changelog, tag, and publish a GitHub/GitLab release. First detects any existing automated release setup and warns before touching anything.
+description: Cut a release — infer the bump from Conventional Commits, update manifest/changelog, tag, publish (GitHub/GitLab); warns first if release automation exists
 argument-hint: [major|minor|patch|<version>]
 allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(cargo*), Bash(npm*), Bash(npx*), Bash(git-cliff*), Read, Edit, Glob, Grep
 ---

@@ -1,5 +1,5 @@
 ---
-description: Summarize my recent commits into a readable work log / standup — grouped by Conventional Commit type (and by repo when scanning several), over a chosen time window
+description: Summarize my recent commits into a work log/standup, grouped by commit type, over a chosen time window
 argument-hint: [period | path]
 allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Glob
 ---

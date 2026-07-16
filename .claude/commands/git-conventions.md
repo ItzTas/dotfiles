@@ -1,5 +1,5 @@
 ---
-description: Load my git conventions (branching and commit rules) — read/invoke this before any git work (branching, committing, PRs/MRs)
+description: Load my git conventions (branching and commit rules) before any git work
 ---
 
 These are my personal git conventions. Whenever you are about to do **any git work** — creating

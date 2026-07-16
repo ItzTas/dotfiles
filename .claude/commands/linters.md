@@ -1,5 +1,5 @@
 ---
-description: Load my mandatory linter rules — linters that must be run after editing certain file types (currently Dockerfiles → hadolint + trivy config)
+description: Load my mandatory linter rules per file type (currently Dockerfiles → hadolint + trivy config)
 ---
 
 These are my mandatory linter rules, per file type. Whenever you edit or create a file of one of

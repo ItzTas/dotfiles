@@ -1,5 +1,5 @@
 ---
-description: Collect TODO/FIXME-style markers scattered across the repo into a single grouped report with clickable file:line references, optionally filtered by marker or path
+description: Collect TODO/FIXME markers into one grouped report with file:line references; filter by marker or path
 argument-hint: [marker | path]
 allowed-tools: Bash(rg*), Bash(git*), Bash(gh*), Bash(glab*), Grep, Glob, Read
 ---

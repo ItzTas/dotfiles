@@ -1,5 +1,5 @@
 ---
-description: Fetch the review comments on the current branch's PR (GitHub) and/or MR (GitLab), apply the requested fixes, push, and optionally reply to and resolve each thread
+description: Fetch this branch's PR/MR review comments, apply the fixes, push, and optionally reply/resolve each thread
 argument-hint: [pr/mr number or url]
 allowed-tools: Bash(gh*), Bash(glab*), Bash(git*), Read, Edit, Glob, Grep, mcp__github__pull_request_read, mcp__gitlab__mr_discussions, mcp__gitlab__resolve_merge_request_thread
 ---

@@ -1,5 +1,5 @@
 ---
-description: Get a freshly-cloned (or stale) project ready to develop — pin tools via proto, install deps, set up env files, run documented setup, and verify
+description: Get a fresh or stale clone ready to develop — proto tools, deps, env files, documented setup, verify
 argument-hint: [up]
 allowed-tools: Bash, Read, Glob, Grep
 ---

@@ -1,5 +1,5 @@
 ---
-description: Implement translations in the project — add/fill localized strings across every locale using whatever localization mechanism the repo uses (i18n or otherwise)
+description: Add/fill localized strings across every locale using the repo's localization mechanism
 argument-hint: [key] [text...]
 allowed-tools: Read, Edit, Write, Glob, Grep, Bash
 ---

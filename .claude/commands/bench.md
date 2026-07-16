@@ -1,5 +1,5 @@
 ---
-description: Run the project's benchmarks and compare them against a saved baseline, flagging regressions and improvements — detecting the toolchain (Rust/criterion, hyperfine, JS bench) automatically
+description: Run the project's benchmarks against a saved baseline and flag regressions/improvements, auto-detecting the toolchain
 argument-hint: [filter | --baseline <name>]
 allowed-tools: Bash(cargo*), Bash(critcmp*), Bash(hyperfine*), Bash(npm*), Bash(npx*), Bash(proto*), Read, Glob, Grep
 ---

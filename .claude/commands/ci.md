@@ -1,5 +1,5 @@
 ---
-description: Check the current branch's latest CI run/pipeline on GitHub and/or GitLab, summarize why it failed from the logs, and with --fix apply the fix locally and push so it re-runs
+description: Check this branch's latest CI on GitHub/GitLab and explain the failure from the logs; --fix applies the fix and pushes
 argument-hint: [run/pipeline id or url | --fix]
 allowed-tools: Bash(gh*), Bash(glab*), Bash(git*), Read, Edit, Glob, Grep, mcp__github__pull_request_read, mcp__gitlab__get_pipeline, mcp__gitlab__get_pipeline_job_output
 ---
