@@ -56,7 +56,7 @@ Gather from every source that applies:
 
 ## 5. Fix mode — migrate, preserving behavior
 Only when `--fix` was given:
-- **Branch safety** (per my `CLAUDE.md`): if I'm on a protected branch (`main`, `master`, `dev`,
+- **Branch safety** (per my `~/.claude/commands/git-conventions.md`): if I'm on a protected branch (`main`, `master`, `dev`,
   `develop`, `pre-homolog`), create a new branch first before editing.
 - **Deprecated API/function/feature usage** → rewrite it to the recommended non-deprecated equivalent
   in place, keeping identical behavior. Use the warning's guidance; if it's unclear, look up the
@@ -72,4 +72,4 @@ Only when `--fix` was given:
 - Re-run the build + tests, and re-scan for deprecation warnings. Confirm none remain — or list what's
   left and why (e.g. a library swap I declined, or one with no non-deprecated equivalent yet).
 - Summarize what changed. Leave committing to me (or `/commit`); if I ask, make it atomic per
-  migration following my commit rules.
+  migration following my commit rules (`~/.claude/commands/git-conventions.md`).

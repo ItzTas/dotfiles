@@ -14,10 +14,7 @@
 
 ## Code Style
 
-- **Prefer guard clauses.** Handle errors, validations, and early exits at the start of the function by returning early, instead of nesting the logic in `if`/`else` blocks.
-- **Run independent async requests concurrently, not sequentially.** When making multiple requests/async calls that don't depend on each other's results, never `await` them one by one in sequence — fire them all at once and resolve them together (e.g., `Promise.all`/`Promise.allSettled` in JS/TS, `asyncio.gather` in Python, or the language's equivalent). Only await sequentially when a call actually needs the previous call's result.
-- **With partial dependencies, parallelize the dependency chains — don't let independent calls wait behind them.** This case is very common: given `A`, `B`, `C` where `B` depends on `A`'s result and `C` depends on nothing, do NOT `await A`, then run `B` and `C` together — that makes `C` needlessly wait for `A`. Instead, treat `A → B` as one chain and start it concurrently with `C`, so `C` begins at the same moment `A` does: `const [b, c] = await Promise.all([a().then((resA) => b(resA)), c()])` — not `const resA = await a(); const [b, c] = await Promise.all([b(resA), c()])`. In general: group calls into their dependency chains, keep the order only within each chain, and run all chains concurrently.
-- **Prefer a map over a `switch`/`if/else`** when the code is just a key-to-value mapping.
+- **Whenever you're about to write or edit code, first load my code style rules from `~/.claude/commands/code-style.md`** (the `code-style` command/skill) and apply them. They cover: guard clauses, functions over `else` branches, running independent async calls concurrently (and parallelizing dependency chains), and maps / loops-with-hashmaps over `switch`/`if-else` chains.
 
 ## Tools
 
@@ -44,19 +41,10 @@ This creates `.yarn/sdks/` (commit it). A missing or stale `.yarn/sdks/` is the 
   - For Vue/Svelte SFCs, register the framework tsserver plugin as a `vtsls.tsserver.globalPlugins` entry with **`enableForWorkspaceTypeScriptVersions = true`** — TypeScript silently skips tsserver plugins under a *workspace* TS version (which the SDK is), so without this flag SFCs parse as raw TS.
 - **General rule:** if the SDK is present and the server still can't resolve modules, the server is running its own bundled TypeScript instead of the workspace SDK — force the workspace/PnP TS version. Do **not** "fix" it by setting `nodeLinker: node-modules` locally.
 
-## Docker
+## Linters
 
-- **Always run both `hadolint` and `trivy config` after editing or creating a Dockerfile.** Whenever you edit or create a Dockerfile, run `hadolint <file>` and `trivy config <file>` on it and fix any issues either one reports before considering the task complete.
+- **Whenever you edit or create a file with mandatory linters, load `~/.claude/commands/linters.md`** (the `linters` command/skill) and run the linters it lists for that file type, fixing what they report before considering the task complete. Currently covers Dockerfiles (`hadolint` + `trivy config`).
 
-## Branches
+## Git
 
-- **On shared/protected branches, create a new branch for changes.** If I'm on a `dev`, `main`, `master`, or `pre-homolog` branch and I ask for a change, create a new branch to implement it instead of working directly on the current branch. Exceptions where you should stay on the current branch: personal projects, projects only I work on, or projects without a sophisticated branching system (e.g., my Neovim dotfiles, which only have `main` because they're simple dotfiles that don't warrant extra branches).
-
-## Commits
-
-- **NEVER add co-authorship attribution to me when making commits on my behalf.** Do not include `Co-Authored-By: Claude ...` or any line indicating that you took part in the commit. The commit must appear as being solely mine.
-- **Always make atomic commits.** Separate each logical change into its own specific commit, instead of bundling unrelated changes into a single commit. If necessary, split the changes of a single file across different commits.
-- **Always follow the Conventional Commits standard.** Use the form `type(optional scope): description` (e.g., `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`), with the description in the imperative. Use `BREAKING CHANGE:` in the footer or `!` after the type/scope when there is an incompatible change.
-- **Don't overuse `feat:`.** `feat:` should not be used for a small piece of functionality that is part of a larger feature. In that case, `feat:` is reserved for the larger feature that incorporates the smaller one, while the smaller part uses `chore:`. Ideally there is only one `feat:` per branch/feature; only in very specific cases may there be more than one.
-- **`feat:` is only for new things in the end program itself.** Reserve `feat:` for new user-facing functionality in the end program. Plumbing or wiring work — such as connecting the database to something — is not a `feat:`; use `chore:` (or another appropriate type) instead.
-- **When in doubt, don't use `feat:`.** If you're not sure whether a commit deserves `feat:`, don't assign any `feat:` and let me set it manually.
+- **Before any git work (branching, committing, reverting, PRs/MRs), first load my git conventions from `~/.claude/commands/git-conventions.md`** (the `git-conventions` command/skill) and follow them. Non-negotiable highlights: never work directly on shared/protected branches (create a new branch); atomic Conventional Commits (`feat:` used sparingly); and **NEVER** add `Co-Authored-By: Claude ...` or any co-authorship attribution to me — commits must appear as solely mine.

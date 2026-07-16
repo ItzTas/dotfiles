@@ -40,7 +40,7 @@ Follow exactly these steps:
 
 ## 4. (Optional) fill the gaps — opt-in only
 - Offer, but do **not** do automatically: write tests for the most important uncovered paths. Only if
-  I say yes — and then follow my `CLAUDE.md` (new branch first if I'm on a protected branch), add the
+  I say yes — and then follow my `~/.claude/commands/git-conventions.md` (new branch first if I'm on a protected branch), add the
   tests, and re-run coverage to confirm they hit the target lines.
 
 ## 5. Hygiene

@@ -13,7 +13,7 @@ This command takes a single argument — the **name of the new branch** to creat
 before or after `/implement` (e.g. "`/implement feat-x` do this, that and the other" or "do this,
 that and the other `/implement feat-x`"). Treat all of that as the work to build on the new branch.
 
-This command exists precisely to honor my `CLAUDE.md` rule of never working directly on a
+This command exists precisely to honor my `~/.claude/commands/git-conventions.md` rule of never working directly on a
 protected branch: it always branches first. I plan to combine it with `/pr` in one prompt (e.g.
 `/implement feat-x do X /pr main`) to go from idea to PR in a single shot.
 
@@ -34,13 +34,13 @@ protected branch: it always branches first. I plan to combine it with `/pr` in o
 
 ### 3. Implement the request
 - Carry out everything I asked, on the new branch. Make the changes and **get them working**.
-- Follow my `CLAUDE.md` code style (guard clauses over nesting, a map over `switch`/`if-else` for
+- Follow my code style rules in `~/.claude/commands/code-style.md` (guard clauses over nesting, a map over `switch`/`if-else` for
   simple key→value) and any per-project conventions in the repo.
 
 ### 4. Commit the work
 - **If this same message also invokes `/pr` or `/commit`,** do the branching and implementation
   here and leave the committing/pushing/PR to that command — don't duplicate it.
-- **Otherwise,** commit the changes following my `CLAUDE.md` rules: atomic commits, Conventional
+- **Otherwise,** commit the changes following my `~/.claude/commands/git-conventions.md` rules: atomic commits, Conventional
   Commits in the imperative, **no** `Co-Authored-By` or any attribution to you, and `feat:` used
   sparingly. Do **not** push or open a PR unless `/pr` was also invoked.
 

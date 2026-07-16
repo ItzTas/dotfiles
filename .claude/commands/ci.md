@@ -53,7 +53,7 @@ Follow exactly these steps:
 
 ## 6. Report — and fix if asked
 - Always report: failing job(s), root cause, and the proposed fix.
-- If `--fix` was given (per my `CLAUDE.md`, new branch first if I'm on a protected branch):
+- If `--fix` was given (per my `~/.claude/commands/git-conventions.md`, new branch first if I'm on a protected branch):
   - Apply the fix locally and **reproduce the failing check locally** (run that lint/test/build) to
     confirm it's resolved — don't fix blind against CI.
   - Commit following my rules (atomic, Conventional Commits, no `Co-Authored-By`) and push so CI

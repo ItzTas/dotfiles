@@ -67,7 +67,7 @@ are not arguments — handle them as normal work.
 - Summarize the findings per tool: what passed clean and what has issues (with the key messages).
 
 ### 6. Fix
-- Fix the issues the tools reported, following my `CLAUDE.md` code style (guard clauses over
+- Fix the issues the tools reported, following my code style rules in `~/.claude/commands/code-style.md` (guard clauses over
   nesting, a map over `switch`/`if-else` for simple key→value, and any per-project conventions).
 - For safe auto-fixers (e.g. `eslint --fix`, `prettier -w`, `ruff --fix`, `gofmt -w`, `stylua`),
   apply them; for findings that need judgement (e.g. `trivy` security issues, type errors), fix

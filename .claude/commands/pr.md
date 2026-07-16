@@ -45,7 +45,7 @@ Follow exactly these steps:
 ## 3. Commit and push all changes
 - Make sure you are on the **source branch** determined in step 1 before committing.
 - Check the state with `git status` and `git diff`.
-- Commit **all** pending changes following the rules in my `CLAUDE.md`:
+- Commit **all** pending changes following the rules in my `~/.claude/commands/git-conventions.md`:
   atomic commits, Conventional Commits, imperative mood, **no** `Co-Authored-By` or any
   attribution to you (the commit is solely mine).
 - Run `git push` for the source branch (use `-u` if it has no upstream yet).

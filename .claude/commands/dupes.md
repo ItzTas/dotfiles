@@ -38,7 +38,7 @@ Follow exactly these steps:
 - If report-only, stop here.
 
 ## 4. Fix mode — refactor, preserving behavior
-Only when `--fix` was given (per my `CLAUDE.md`, create a new branch first if I'm on a protected
+Only when `--fix` was given (per my `~/.claude/commands/git-conventions.md`, create a new branch first if I'm on a protected
 branch: `main`/`master`/`dev`/`develop`/`pre-homolog`):
 - For each worthwhile cluster, propose the abstraction (extract a function / shared module / generic)
   and **show me the plan before editing**.

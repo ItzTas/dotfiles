@@ -44,13 +44,13 @@ Follow exactly these steps:
 ## 5. Revert
 - Run `git revert` for the target(s): `-m 1` for merges; `--no-commit` to combine a range into a
   single revert if I chose that.
-- Write the message per my `CLAUDE.md` (Conventional Commits, imperative, **no** `Co-Authored-By`),
+- Write the message per my `~/.claude/commands/git-conventions.md` (Conventional Commits, imperative, **no** `Co-Authored-By`),
   e.g. `revert: <original subject>` and reference the reverted SHA in the body.
 - If there are **conflicts**, guide me through resolving them, then `git revert --continue`. Never
   `--abort` silently — tell me if I need to bail.
 
 ## 6. Push
-- **Branch handling** (per my `CLAUDE.md`): if I'm on a protected branch (`main`/`master`/`dev`/
+- **Branch handling** (per my `~/.claude/commands/git-conventions.md`): if I'm on a protected branch (`main`/`master`/`dev`/
   `develop`/`pre-homolog`), ask whether to push the revert directly or open it via a branch + PR/MR —
   don't silently push to a protected branch.
 - Otherwise push the revert commit(s).
