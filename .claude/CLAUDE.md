@@ -15,8 +15,8 @@
 - **Whenever you're about to write an entity name for the first time, load
   `~/.claude/commands/entities.md`** (the `entities` command/skill) and follow it — in short: check
   the recorded names first, otherwise **ask me in choices** which name to use, then record the
-  decision in `.claude/entities/entities.md` (globally gitignored). **Reading that file is the only
-  exception** to the no-inference rule.
+  decision in `.claude/entities/entities.md`. **Reading that file is the only exception** to the
+  no-inference rule.
 
 ## Cross-project work
 

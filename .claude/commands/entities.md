@@ -46,23 +46,19 @@ inferring** — it's the only way you're allowed to have an entity name without 
 
 - **File: `.claude/entities/entities.md`** in the **project's** `.claude/` directory (the one at the
   current repo/project root, not `~/.claude`). Create the folder/file if needed.
-- It's **gitignored globally** by the `**/.claude/entities/**` pattern in `~/.config/git/ignore` —
-  same mechanism as `.claude/tasks/` (`/flow`) and `.claude/command-history/`
-  (`/command-history`). **Never** commit it, never add it to the repo's own `.gitignore`, and never
-  weaken the global pattern.
 - Format — one entry per entity, with the role it plays and where the name is used:
 
   ```markdown
   # Entities
 
   ## Owner
-  - **Name:** SECONV
+  - **Name:** Northwind Software Ltd.
   - **Used in:** LICENSE, README credits, package.json author
   - **Decided:** 2026-07-16
 
-  ## Data provider — IBGE
-  - **Name:** Instituto Brasileiro de Geografia e Estatística (IBGE)
-  - **Used in:** README "dados fornecidos por", app footer
+  ## Data provider — Open Data Foundation
+  - **Name:** Open Data Foundation (ODF)
+  - **Used in:** README attribution line, app footer
   - **Decided:** 2026-07-16
   ```
 
@@ -71,10 +67,8 @@ inferring** — it's the only way you're allowed to have an entity name without 
   spelling. Append the new usage site to its **Used in** line.
 - If the file records a name that **contradicts** what's in the code, don't silently pick a side —
   tell me and ask which one wins.
-- Also check `~/.claude/entities/entities.md` (the **global** file) as a fallback when the project
-  has no entry: same format, for entities that recur across my projects. When I pick a name, ask
-  nothing extra — record it in the **project** file, and also in the global one when I say it's a
-  recurring entity.
+- **A record only ever counts for its own project.** Another project's `entities.md` is not a
+  source — if this project has no entry, ask me (rule 2), even if a sibling repo has one.
 
 ## 4. When this applies
 
@@ -87,9 +81,9 @@ filling has a slot for one.
 
 Dispatch on `$ARGUMENTS`:
 
-- **`show`** (or empty) → print the entities currently recorded (project file, then global), with
-  their roles and usage sites. Don't ask or write anything.
-- **`forget <entity>`** → remove that entry from the project file (and the global one if it's there
-  too), after confirming which entry you're about to delete.
+- **`show`** (or empty) → print the entities currently recorded for this project, with their roles
+  and usage sites. Don't ask or write anything.
+- **`forget <entity>`** → remove that entry from the project file, after confirming which entry
+  you're about to delete.
 - **Anything else** → treat it as the context that needs a name, and follow the rules above:
   check the record, then ask if it's missing, then write and record.
