@@ -63,24 +63,14 @@ command** to run in the terminal **at the very end**, after all other work is fi
 
 ## Command history
 
-- Keep a **history of the commands I register**, in two files — one per scope, each inside a
-  **`command/` folder** (this skill's own folder) in the respective `.claude/` directory:
-  **`.claude/command/command-history.txt`** in the **project's** `.claude/` and
-  **`~/.claude/command/command-history.txt`** in the **global** one (create the folder/file if
-  needed). Every registered command that **runs successfully** is appended, as its own line, to
-  **both** files at the moment it runs.
-- **500-line cap per file.** After appending, if a file has more than **500 lines**, delete the
-  **oldest** entries (the top lines) until it's back at 500.
-- **Wrong commands are never recorded.** If a registered command turns out to be **wrong** — it
-  fails when run (typo, `command not found`, bad pathspec, etc.) — do **not** write it to the
-  history. Instead, **search both history files** for entries that resemble what I wrote and
-  **suggest** the closest match (e.g. "did you mean `yadm add commands && yadm_update`?"), waiting
-  for my confirmation before running the suggestion. **Always suggest — even if auto-accept/auto
-  mode is on**; a guessed correction never auto-runs without the `--auto` flag below.
-- **`auto` / `--auto` flag** (e.g. `/command --auto <cmd>`): skips the suggestion step. If the
-  command is wrong, find the closest match in the histories and **execute it directly** without
-  suggesting or waiting, then record the **corrected** command (the one that actually ran) in the
-  history. Like the other flags, `--auto` is stripped and is not part of the command.
+- Registered commands follow my general **command-history rules** — load
+  `~/.claude/commands/command-history.md` (the `command-history` command/skill) and apply them:
+  successful commands are recorded in `.claude/command-history/history.txt` (project and global,
+  500-line cap); a **wrong** command is never recorded — suggest the closest match from the
+  history instead, even in auto-accept mode.
+- **`auto` / `--auto` flag** (e.g. `/command --auto <cmd>`): per those rules, skips the suggestion
+  step — the closest history match runs directly and the corrected command is recorded. Like the
+  other flags, `--auto` is stripped and is not part of the command.
 
 ## On activation
 Confirm in one line that you've registered the command (echo it back) and say which kind it is:

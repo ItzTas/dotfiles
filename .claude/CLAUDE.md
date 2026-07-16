@@ -16,6 +16,10 @@
 
 - **Single-dash flags work for all my commands/skills.** Whenever one of my commands/skills (`~/.claude/commands/*.md`) documents a flag — `--fix`, `--durable`, `--auto`, `--final`, etc. — accept the single-dash form (`-fix`, `-durable`, `-auto`, `-final`, …) as exactly the same flag.
 
+## Shell commands
+
+- **Whenever I explicitly ask you to run a shell command, first load `~/.claude/commands/command-history.md`** (the `command-history` command/skill) and follow it — commands that run successfully get recorded in the history (500-line cap); a wrong/non-existent command is never recorded — search the history and suggest the closest match instead (with `auto`/`--auto`, run the match directly).
+
 ## Code Style
 
 - **Whenever you're about to write or edit code, first load my code style rules from `~/.claude/commands/code-style.md`** (the `code-style` command/skill) and apply them. They cover: guard clauses, functions over `else` branches, running independent async calls concurrently (and parallelizing dependency chains), and maps / loops-with-hashmaps over `switch`/`if-else` chains.
