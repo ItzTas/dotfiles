@@ -1,18 +1,10 @@
 {
-  "model": "opus[1m]",
-  "enabledPlugins": {
-    "frontend-design@claude-plugins-official": true,
-    "humanizer@humanizer": true
+  "permissions": {
+    "allow": [
+      "DesignSync"
+    ]
   },
-  "extraKnownMarketplaces": {
-    "humanizer": {
-      "source": {
-        "source": "github",
-        "repo": "blader/humanizer"
-      }
-    }
-  },
-  "effortLevel": "xhigh",
+  "model": "fable",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -25,5 +17,19 @@
         ]
       }
     ]
-  }
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "humanizer@humanizer": true,
+    "gopls-lsp@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "humanizer": {
+      "source": {
+        "source": "github",
+        "repo": "blader/humanizer"
+      }
+    }
+  },
+  "effortLevel": "xhigh"
 }

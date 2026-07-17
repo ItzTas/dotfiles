@@ -1,0 +1,68 @@
+---
+description: Generate an API client collection (Bruno, Insomnia, or Postman) from the endpoints this project's API actually exposes
+argument-hint: <bruno|insomnia|postman> [more targets ...]
+allowed-tools: Read, Glob, Grep, Bash(rg*), Bash(git*), Write, Edit
+---
+
+Generate ready-to-import request collections for my API client(s), based on the endpoints this
+project's API **actually exposes** — never invented ones.
+
+Arguments (`$ARGUMENTS`) — one or more **targets**. For now only these three are supported:
+
+- `bruno` — a Bruno collection: a `bruno/` folder in the repository with the endpoints as **YAML**
+  request files (Bruno's YAML format, not `.bru`) + `bruno.json` + environment files.
+- `insomnia` — an Insomnia export file (importable JSON/YAML).
+- `postman` — a Postman Collection v2.1 JSON (+ a Postman environment file).
+
+More than one target is fine — generate all of them from the same discovered endpoints. If **no
+target** is given, or a token isn't one of the three, **ask me** which target(s) to use instead of
+guessing.
+
+Separately, I may include **other requests** in the same message, before or after `/endpoints`.
+Those are not arguments — handle them as normal work.
+
+## Steps
+
+### 0. Handle any extra requests first
+- If I asked for other changes in the same message, do those and get them working first.
+
+### 1. Parse the arguments
+- Each token → a **target** (`bruno`, `insomnia`, `postman`). Validate every token; on an unknown
+  one, ask me — don't silently drop it or guess.
+
+### 2. Discover the real endpoints
+- **Prefer an existing spec**: if the repo has an OpenAPI/Swagger file (`openapi.*`, `swagger.*`,
+  or a generated one), use it as the source of truth.
+- Otherwise **read the routes from the code** — router registrations, controllers/handlers,
+  decorators — whatever the framework uses (Express/Fastify/NestJS, Go `net/http`/chi/gin/echo,
+  Laravel, Django/FastAPI, Rails, etc.).
+- For each endpoint collect: **method, path, path/query params, request body shape** (from
+  DTOs/validators/serializers when available), **auth requirements**, and expected content type.
+- **Ground everything in the code** — don't invent endpoints, params, or fields. If you infer a
+  body shape, say so.
+
+### 3. Build the collection(s)
+- **Group requests by resource/router** so the collection mirrors the API's structure.
+- Use an environment variable for the base URL (`{{baseUrl}}` or the target's equivalent) — never
+  hardcode host/port into each request. Derive the default value from the project's config
+  (`.env*`, config files, server setup); include a sensible local default (e.g.
+  `http://localhost:<port>`).
+- Put **auth** (bearer token, API key, etc.) in collection-level auth / environment variables, not
+  repeated per request. Use placeholder values — **never copy real secrets** into the collection.
+- Include a realistic **example body** for endpoints that take one, matching the actual fields.
+
+### 4. Write the output
+- **Check for an existing collection first** (a `bruno.json`/`.bru` folder, an Insomnia export, a
+  Postman collection already in the repo) — **update it in place** rather than creating a
+  duplicate, preserving anything I added by hand.
+- Otherwise use these defaults, telling me where things went:
+  - `bruno` → a `bruno/` directory at the repo root, with each endpoint as a YAML request file
+    (set the collection's format to YAML in `bruno.json`).
+  - `insomnia` → `insomnia.json` at the repo root.
+  - `postman` → `postman_collection.json` (+ `postman_environment.json`) at the repo root.
+
+### 5. Verify and report
+- Validate the output: JSON files must parse; Bruno's YAML request files must be valid YAML in
+  Bruno's schema; if the target's CLI is available (e.g. `bru`), use it to sanity-check.
+- Report a summary: how many endpoints per group, which target files were written/updated, and
+  anything you had to infer or leave out.
