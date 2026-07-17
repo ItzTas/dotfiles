@@ -42,6 +42,12 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
   each other, when it genuinely speeds up the work.
 - Keep the main thread **coordinating** and **updating the TODO list** as the subagents finish.
   Don't parallelize items that depend on one another or touch the same files.
+- The main thread is the **single owner** of task assignment: give each subagent the **specific,
+  disjoint** item(s) to work on in its prompt. Subagents must **not** scan `.claude/tasks/` to pick
+  work themselves — self-selection lets two agents grab the same task. If a pull model is ever
+  unavoidable, claiming a task must be **atomic**: `mv` it from a `pending/` to an `in-progress/`
+  subdir (rename is atomic; the loser's `mv` fails and it moves on) — never rely on a `status:` field
+  inside the file, since read-then-write isn't atomic.
 
 ### 5. Keep the TODO list visible and current
 - Keep the TODO list **continuously updated**: `pending` / `in progress` / `done`, so I can see
@@ -54,12 +60,19 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
   (and context) will have gone by, and details from the original request will be lost unless they're
   written down. When in doubt, err on the side of writing the file. Store these files under
   **`.claude/tasks/`** in the **project's** `.claude/` directory (the one at the current project/repo
-  root, not the global `~/.claude`), and **inside it in a subdirectory named after the current
-  session** (its id/number) — i.e. **`.claude/tasks/<session-id>/`**. Create those directories if
-  they don't exist, and put each task file there with a short kebab-case filename (e.g.
-  `.claude/tasks/<session-id>/refactor-auth.md`). Keep the file updated as you work and reference it
-  from the TODO entry. Only skip the file when the item is trivial or will be done right away —
-  don't create files for those.
+  root, not the global `~/.claude`), and **inside it in a subdirectory named after the real session
+  id** — take it from `$CLAUDE_CODE_SESSION_ID` (unique per process/terminal, and stable for the
+  whole session; if it's ever empty, generate one once with `uuidgen` / `mktemp -d
+  .claude/tasks/XXXXXXXX` and reuse it) — i.e. **`.claude/tasks/$CLAUDE_CODE_SESSION_ID/`**. Do
+  **not** name this folder with a made-up number or with a value derived from the date, branch, or
+  project name: two `claude` processes running in different terminals would compute the **same** name
+  and end up sharing the same task folder. **Always operate only inside your own session's folder** —
+  when listing or reading tasks, scan just your `$CLAUDE_CODE_SESSION_ID/` subdirectory, never the
+  whole `.claude/tasks/` tree, and never read or touch another session's subdirectory. Create those
+  directories if they don't exist, and put each task file there with a short kebab-case filename
+  (e.g. `.claude/tasks/$CLAUDE_CODE_SESSION_ID/refactor-auth.md`). Keep the file updated as you work
+  and reference it from the TODO entry. Only skip the file when the item is trivial or will be done
+  right away — don't create files for those.
 - **When you no longer need one of these task files** (the item is done and the details won't be
   needed anymore), you **may delete it**.
 
