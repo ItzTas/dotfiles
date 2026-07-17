@@ -64,5 +64,12 @@ Those are not arguments — handle them as normal work.
 ### 5. Verify and report
 - Validate the output: JSON files must parse; Bruno's YAML request files must be valid YAML in
   Bruno's schema; if the target's CLI is available (e.g. `bru`), use it to sanity-check.
+- **Check that the files actually integrate with the app without errors**: make sure each output
+  matches what the target app can really import/open — the collection loads as a whole (folder
+  structure, `bruno.json`, environments), the export/schema version is one the app accepts, and
+  no request would fail to load (bad references, malformed variables, wrong field names). Use the
+  target's CLI when available to actually exercise the collection; if you can't run the app,
+  validate against its import schema and say so. **Fix any integration error found** before
+  considering the task complete.
 - Report a summary: how many endpoints per group, which target files were written/updated, and
   anything you had to infer or leave out.
