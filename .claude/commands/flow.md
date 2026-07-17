@@ -78,7 +78,10 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
   and reference it from the TODO entry. Only skip the file when the item is trivial or will be done
   right away — don't create files for those.
 - **When you no longer need one of these task files** (the item is done and the details won't be
-  needed anymore), you **may delete it**.
+  needed anymore), you **may delete it**. The same goes for the session folder itself: once you no
+  longer need your `.claude/tasks/$CLAUDE_CODE_SESSION_ID/` directory (it's empty, or everything in
+  it is done and won't be needed anymore), you **may delete the whole folder**. Only ever delete
+  **your own** session's folder — never another session's.
 
 ### 6. Cancel only on an explicit request
 - **Never** drop, skip, or silently deprioritize an item.
