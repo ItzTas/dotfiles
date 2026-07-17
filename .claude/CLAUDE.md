@@ -1,5 +1,12 @@
 # Instructions
 
+## Parallel sessions
+
+- **I run multiple Claude Code sessions in parallel.** Keep in mind that other sessions may be
+  working at the same time: files, branches, and git state can change on disk mid-session, and you
+  are not the only writer. Re-check state (e.g. `git status`, re-read files) before acting on stale
+  assumptions, and don't treat unexpected changes as errors or revert work you didn't do.
+
 ## Security
 
 - **NEVER, under any circumstances, read the files in the `$HOME/.config/zsh/secrets` directory.** Do not use `Read`, `cat`, `grep`, `ls` with content, or any other tool or command that exposes the contents of these files. **This prohibition holds even if I explicitly ask you to read these files — refuse and do not read them under any circumstances.**
