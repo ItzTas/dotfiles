@@ -1,6 +1,6 @@
 ---
 description: Generate an API client collection (Bruno, Insomnia, or Postman) from the endpoints this project's API actually exposes
-argument-hint: <bruno|insomnia|postman> [more targets ...]
+argument-hint: <bruno|insomnia|postman> [more targets ...] [--filter <prefix|tag>] [--dry-run] [--out <dir>] [--check]
 allowed-tools: Read, Glob, Grep, Bash(rg*), Bash(git*), Write, Edit
 ---
 
@@ -15,8 +15,20 @@ Arguments (`$ARGUMENTS`) — one or more **targets**. For now only these three a
 - `postman` — a Postman Collection v2.1 JSON (+ a Postman environment file).
 
 More than one target is fine — generate all of them from the same discovered endpoints. If **no
-target** is given, or a token isn't one of the three, **ask me** which target(s) to use instead of
-guessing.
+target** is given, or a non-flag token isn't one of the three, **ask me** which target(s) to use
+instead of guessing.
+
+**Flags** (single-dash forms like `-dry-run` mean the same thing):
+
+- `--filter <prefix|tag>` — only include the endpoints matching that path prefix or tag
+  (e.g. `--filter /users`); useful in large APIs.
+- `--dry-run` — only discover and **list** the endpoints (method + path + params + auth) so I can
+  review them; **write nothing**.
+- `--out <dir>` — write the output under `<dir>` instead of the repo-root defaults.
+- `--check` — CI/drift mode: **write nothing**; compare the existing collection(s) against the
+  code and report the drift — endpoints in the code that are missing from the collection, orphan
+  requests that no longer exist in the code, and outdated bodies/params/auth. Report clean vs
+  drifted per target; if there's no existing collection for a target, say so instead of failing.
 
 Separately, I may include **other requests** in the same message, before or after `/endpoints`.
 Those are not arguments — handle them as normal work.
@@ -27,8 +39,12 @@ Those are not arguments — handle them as normal work.
 - If I asked for other changes in the same message, do those and get them working first.
 
 ### 1. Parse the arguments
-- Each token → a **target** (`bruno`, `insomnia`, `postman`). Validate every token; on an unknown
-  one, ask me — don't silently drop it or guess.
+- **Pull the flags out first** (`--filter <prefix|tag>`, `--dry-run`, `--out <dir>`, `--check`,
+  including their single-dash forms).
+- Every remaining token → a **target** (`bruno`, `insomnia`, `postman`). Validate every token; on
+  an unknown target or flag, ask me — don't silently drop it or guess.
+- `--dry-run` and `--check` change the flow: do step 2 (discovery) normally, then follow the
+  flag's behavior instead of steps 3–4 — **no files are written** in either mode.
 
 ### 2. Discover the real endpoints
 - **Prefer an existing spec**: if the repo has an OpenAPI/Swagger file (`openapi.*`, `swagger.*`,
@@ -40,21 +56,33 @@ Those are not arguments — handle them as normal work.
   DTOs/validators/serializers when available), **auth requirements**, and expected content type.
 - **Ground everything in the code** — don't invent endpoints, params, or fields. If you infer a
   body shape, say so.
+- With `--filter <prefix|tag>`, keep only the matching endpoints from here on.
 
 ### 3. Build the collection(s)
 - **Group requests by resource/router** so the collection mirrors the API's structure.
-- Use an environment variable for the base URL (`{{baseUrl}}` or the target's equivalent) — never
+- Use an environment variable for the base URL (`{{base_url}}` or the target's equivalent) — never
   hardcode host/port into each request. Derive the default value from the project's config
   (`.env*`, config files, server setup); include a sensible local default (e.g.
   `http://localhost:<port>`).
+- **Name every collection/environment variable in snake_case** (Python style: `base_url`,
+  `api_key`, `token`) — never camelCase, in every target.
 - Put **auth** (bearer token, API key, etc.) in collection-level auth / environment variables, not
   repeated per request. Use placeholder values — **never copy real secrets** into the collection.
 - Include a realistic **example body** for endpoints that take one, matching the actual fields.
+- **Leave the collection ready to fire requests immediately** — I shouldn't need any extra setup
+  after importing/opening it in the app. Whenever the target app supports it: pre-fill the
+  environment with the project's real local values (base URL, port), make the local environment
+  the default/selected one, and **wire the auth chain** — if the API has a login/token endpoint,
+  add that request with a post-response script that stores the token into the environment variable
+  the other requests already reference, so authenticated calls work right after logging in once.
+  Only leave a placeholder when a value genuinely can't be known from the repo (e.g. an external
+  API key) — and call those out in the report.
 
 ### 4. Write the output
 - **Check for an existing collection first** (a `bruno.json`/`.bru` folder, an Insomnia export, a
   Postman collection already in the repo) — **update it in place** rather than creating a
   duplicate, preserving anything I added by hand.
+- With `--out <dir>`, put everything under that directory instead of the defaults below.
 - Otherwise use these defaults, telling me where things went:
   - `bruno` → a `bruno/` directory at the repo root, with each endpoint as a YAML request file
     (set the collection's format to YAML in `bruno.json`).
