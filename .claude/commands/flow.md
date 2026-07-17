@@ -68,7 +68,11 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
   project name: two `claude` processes running in different terminals would compute the **same** name
   and end up sharing the same task folder. **Always operate only inside your own session's folder** —
   when listing or reading tasks, scan just your `$CLAUDE_CODE_SESSION_ID/` subdirectory, never the
-  whole `.claude/tasks/` tree, and never read or touch another session's subdirectory. Create those
+  whole `.claude/tasks/` tree, and never read or touch another session's subdirectory — **unless I
+  explicitly ask you to read it**: on my explicit request (and **only** then) you may **read**
+  another session's folder or the whole `.claude/tasks/` tree, never on your own initiative, and
+  even then it's **read-only** — never write to, move, or delete anything in another session's
+  folder. Create those
   directories if they don't exist, and put each task file there with a short kebab-case filename
   (e.g. `.claude/tasks/$CLAUDE_CODE_SESSION_ID/refactor-auth.md`). Keep the file updated as you work
   and reference it from the TODO entry. Only skip the file when the item is trivial or will be done
