@@ -66,6 +66,12 @@ Those are not arguments — handle them as normal work.
   `http://localhost:<port>`).
 - **Name every collection/environment variable in snake_case** (Python style: `base_url`,
   `api_key`, `token`) — never camelCase, in every target.
+- **Always create at least a `local` environment** — it's the mandatory minimum, meant for testing
+  against the locally running app: `base_url` pointing at localhost with the project's real port
+  (from `.env*`/config/server setup), plus whatever other variables local requests need. If the
+  repo makes **other environments** detectable (staging/production URLs in config or deploy
+  files), create those too — great to have — using placeholders for anything unknown or secret;
+  but never skip `local`.
 - Put **auth** (bearer token, API key, etc.) in collection-level auth / environment variables, not
   repeated per request. Use placeholder values — **never copy real secrets** into the collection.
 - Include a realistic **example body** for endpoints that take one, matching the actual fields.
