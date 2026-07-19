@@ -4,7 +4,7 @@
       "DesignSync"
     ]
   },
-  "model": "fable",
+  "model": "opus",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -13,16 +13,26 @@
             "type": "command",
             "command": "~/.claude/hooks/command-history.sh",
             "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/flow-tracker.sh",
+            "timeout": 10
           }
         ]
       }
     ]
   },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/hooks/statusline.sh"
+  },
   "enabledPlugins": {
     "frontend-design@claude-plugins-official": true,
     "humanizer@humanizer": true,
     "gopls-lsp@claude-plugins-official": true,
-    "caveman@caveman": true
+    "caveman@caveman": true,
+    "security-guidance@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "humanizer": {
