@@ -50,6 +50,10 @@
 - **If there is a `.prototools` file at the repository root, it contains the versions of some of the tools used.**
 - **Never change versions already set in `.prototools`.** If a tool/version is already declared in `.prototools`, do not modify, "upgrade", "downgrade", or "fix" it — treat those pinned versions as established and authoritative, even if they look inconsistent with the rest of the project. Only add a tool that is missing, or change a version if I explicitly ask for it.
 
+## Figma
+
+- **Whenever the Figma MCP isn't working (edit-access/permission errors, rate limits), first load `~/.claude/commands/figma-mcp.md`** (the `figma-mcp` command/skill) and follow it — in short: fall back to the Figma REST API using the `$FIGMA_CLAUDE_TOKEN` environment variable (ask me to export it if unset; never print its value).
+
 ## LSP under Yarn PnP
 
 - **When dealing with editor/language-server issues in a project that uses Yarn Plug'n'Play (`nodeLinker: pnp`, a `.pnp.cjs`, no `node_modules`), first load `~/.claude/commands/lsp-yarn-pnp.md`** (the `lsp-yarn-pnp` command/skill) — it has the working setup (Yarn SDKs, vtsls settings, SFC tsserver-plugin flags). Golden rule: point the editor at the Yarn SDK; **never** disable PnP.

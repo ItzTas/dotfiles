@@ -1,6 +1,6 @@
 ---
-description: Register a shell command to run after everything else (--durable persists it), or at the start of every session (--persistent)
-argument-hint: [--durable|--persistent] [--auto] <shell command, e.g. ls>
+description: Register a shell command to run after everything else (--durable persists it), at the start of every session (--persistent), or right away (--now)
+argument-hint: [--durable|--persistent] [--auto] [--now] <shell command, e.g. ls>
 allowed-tools: Task, Agent, Read, Edit, Write, Glob, Grep, Bash
 ---
 
@@ -9,11 +9,11 @@ command** to run in the terminal **at the very end**, after all other work is fi
 
 ## Rules
 
-- The argument is a **shell command**, not a natural-language instruction. **Do not run it now** and
-  **do not rewrite or "improve" it** — run it **verbatim** later. A leading **`--durable`**,
-  **`--persistent`**, or **`--auto`** (with or without the `--`) is a flag, not part of the command —
-  strip it and treat the rest as the command (see "Durable", "Persistent" and "Command history"
-  below).
+- The argument is a **shell command**, not a natural-language instruction. **Do not run it now**
+  (unless the **`--now`** flag is given — see "Now" below) and **do not rewrite or "improve" it** —
+  run it **verbatim**. A leading **`--durable`**, **`--persistent`**, **`--auto`**, or **`--now`**
+  (with or without the `--`) is a flag, not part of the command — strip it and treat the rest as the
+  command (see "Durable", "Persistent", "Now" and "Command history" below).
 - **If this arrives while you're mid-work** — thinking, executing another prompt, or with a subagent
   running — **do not interrupt** that work to run it, and don't run it right after that piece
   finishes either. Just register it and keep going; it runs **only at the very end of everything**.
@@ -61,6 +61,16 @@ command** to run in the terminal **at the very end**, after all other work is fi
 - **To stop a persistent command**, I remove its line from `.claude/flow-persistent-commands.txt`
   (or ask you to delete exactly that line and confirm). Never clear the file on your own.
 
+## Now (`--now`)
+- **With `--now`**, skip the deferral entirely: **run the command immediately via Bash**, verbatim,
+  and show me the output. Don't add it to the TODO list and don't register it as an end-of-session
+  step — running it now is the whole job.
+- Combined with **`--durable`**, running it now already fulfills the one-shot — **don't** write it to
+  `.claude/flow-durable-commands.txt`.
+- Combined with **`--persistent`**, store it per the "Persistent" rules as usual; `--now` just makes
+  explicit the immediate first run that persistent registration already does.
+- The **command-history rules** (below) still apply to a `--now` run.
+
 ## Command history
 
 - Registered commands follow my general **command-history rules** — load
@@ -75,6 +85,6 @@ command** to run in the terminal **at the very end**, after all other work is fi
 ## On activation
 Confirm in one line that you've registered the command (echo it back) and say which kind it is:
 **session-only** (runs once at the very end), **durable** (persisted one-shot; runs once at the end,
-then removed), or **persistent** (persisted; runs at the start **and** end of every session — and
-run it once now). Then continue with whatever else is in progress — don't run an end-of-session
-command until everything else is done.
+then removed), **persistent** (persisted; runs at the start **and** end of every session — and run
+it once now), or **now** (run immediately, nothing deferred). Then continue with whatever else is in
+progress — except for `--now`, don't run an end-of-session command until everything else is done.
