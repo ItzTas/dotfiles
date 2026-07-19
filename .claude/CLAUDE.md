@@ -52,11 +52,11 @@
 
 ## Figma
 
-- **Whenever the Figma MCP isn't working (edit-access/permission errors, rate limits), first load `~/.claude/commands/figma-mcp.md`** (the `figma-mcp` command/skill) and follow it — in short: fall back to the Figma REST API using the `$FIGMA_CLAUDE_TOKEN` environment variable (ask me to export it if unset; never print its value).
+- **Whenever you're about to work with Figma (any `mcp__figma__*` tool, a figma.com URL, design/FigJam work), first load `~/.claude/commands/figma.md`** (the `figma` command/skill) and follow it — it covers using the official Figma MCP (and its mandatory `/figma-*` skills) and the fallback to the Figma REST API via `$FIGMA_CLAUDE_TOKEN` when the MCP fails (never print the token).
 
-## LSP under Yarn PnP
+## LSP under PnP
 
-- **When dealing with editor/language-server issues in a project that uses Yarn Plug'n'Play (`nodeLinker: pnp`, a `.pnp.cjs`, no `node_modules`), first load `~/.claude/commands/lsp-yarn-pnp.md`** (the `lsp-yarn-pnp` command/skill) — it has the working setup (Yarn SDKs, vtsls settings, SFC tsserver-plugin flags). Golden rule: point the editor at the Yarn SDK; **never** disable PnP.
+- **When dealing with editor/language-server issues in a project that uses Plug'n'Play (a `.pnp.cjs`, no `node_modules` — e.g. Yarn's `nodeLinker: pnp`), first load `~/.claude/commands/lsp-pnp.md`** (the `lsp-pnp` command/skill) — it has the general PnP guidance plus a Yarn section with the working setup (Yarn SDKs, vtsls settings, SFC tsserver-plugin flags). Golden rule: point the editor at the PnP-patched tooling/SDK; **never** disable PnP.
 
 ## Linters
 

@@ -1,11 +1,32 @@
 ---
-description: Load my Yarn PnP LSP guide — fix editor/LSP module resolution in PnP projects (Yarn SDKs, vtsls); never disable PnP
+description: Load my PnP LSP guide — fix editor/LSP module resolution in Plug'n'Play projects (editor SDKs, vtsls, workspace TS); never disable PnP
 ---
 
-This is my guide for making editors/LSPs work in **Yarn Plug'n'Play** projects. Load it whenever
-you're dealing with editor or language-server issues in a project that uses PnP.
+This is my guide for making editors/LSPs work in **Plug'n'Play (PnP)** projects. Load it whenever
+you're dealing with editor or language-server issues in a project that uses PnP. Yarn is the main
+implementation (see the Yarn section below), but the principles apply to any PnP setup.
 
-## LSP under Yarn PnP
+## PnP in general
+
+PnP replaces `node_modules` resolution with a generated resolver manifest: a `.pnp.cjs` at the
+project root (often with `.pnp.data.json` / `.pnp.loader.mjs`) answers every `require`/`import`
+directly, and dependencies stay in compressed archives instead of an extracted `node_modules` tree.
+
+- **How to detect it:** a `.pnp.cjs` at the root and **no `node_modules`**.
+- **Why tools break:** any tool that resolves modules on its own — language servers, linters,
+  formatters, test runners, bundlers, plain `node script.js` — bypasses the PnP runtime and fails
+  with `Cannot find module 'x'` / TS `2307` even though the package is installed.
+- **General fixes:**
+  - Run Node scripts through the package manager's runner (e.g. `yarn node script.js`) or preload
+    the runtime: `node --require ./.pnp.cjs script.js`.
+  - Point each tool at the **PnP-patched copy** of its dependency (TypeScript, ESLint, Prettier, …)
+    instead of a bundled/global one — that's exactly what editor SDKs do.
+  - To open files inside zipped dependencies, the editor needs a zip filesystem layer (e.g. the
+    **ZipFS** extension in VSCode).
+- **Golden rule:** the fix is always to make the tool PnP-aware. **Never** "fix" it by disabling
+  PnP, extracting a `node_modules`, or switching the install linker.
+
+## Yarn (`nodeLinker: pnp`)
 
 When a project uses Yarn Plug'n'Play (`.yarnrc.yml` has `nodeLinker: pnp`, there is a `.pnp.cjs` and no `node_modules`), the editor's language server can't resolve packages on its own — it must go through Yarn's PnP-patched TypeScript. Symptoms of a broken setup: `Cannot find module 'x'` / TS `2307` on packages that are installed, missing types/intellisense, or (for Vue/Svelte SFCs) the template parsing as raw TS with `';' expected` errors. The fix is always: point the editor at the **Yarn SDK**, never disable PnP.
 
