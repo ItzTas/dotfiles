@@ -59,6 +59,9 @@ export STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
 # Storybook
 export STORYBOOK_DISABLE_TELEMETRY=1
 
+# Ssh
+export SSH_ASKPASS="/usr/lib/seahorse/ssh-askpas"
+
 # OTHER
 export NODE_OPTIONS="--max-old-space-size=8192"
 
