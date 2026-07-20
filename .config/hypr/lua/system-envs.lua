@@ -17,17 +17,6 @@ on("hyprland.start", function()
     env("XDG_CURRENT_DESKTOP", "Hyprland")
     env("XDG_SESSION_DESKTOP", "Hyprland")
 
-    if gpu.is_nvidia() then
-        env("GBM_BACKEND", "nvidia-drm")
-        env("DXVK_FILTER_DEVICE_NAME", "NVIDIA GeForce RTX 4060")
-        env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
-        env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
-
-        -- nvidia hardware VA-API hardware video acceleration
-        env("LIBVA_DRIVER_NAME", "nvidia")
-        env("NVD_BACKEND", "direct")
-    end
-
     -- proton
     env("PROTON_ENABLE_WAYLAND", "1")
     env("PROTON_ENABLE_HDR", "1")
@@ -38,4 +27,18 @@ on("hyprland.start", function()
 
     -- zsh home
     env("ZDOTDIR", home .. "/.config/zsh")
+
+    -- others
+    env("SSH_ASKPASS", "/usr/lib/seahorse/ssh-askpas")
+
+    if gpu.is_nvidia() then
+        env("GBM_BACKEND", "nvidia-drm")
+        env("DXVK_FILTER_DEVICE_NAME", "NVIDIA GeForce RTX 4060")
+        env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
+        env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+
+        -- nvidia hardware VA-API hardware video acceleration
+        env("LIBVA_DRIVER_NAME", "nvidia")
+        env("NVD_BACKEND", "direct")
+    end
 end)
