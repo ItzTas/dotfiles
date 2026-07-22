@@ -6,6 +6,7 @@ init() {
   C_DIM=$'\033[2m'
   C_PY=$'\033[38;5;220m'
   C_MODEL=$'\033[38;5;110m'
+  C_EFFORT=$'\033[38;5;141m'
   C_DIR=$'\033[38;5;150m'
   C_GIT=$'\033[38;5;180m'
   C_CAVEMAN=$'\033[38;5;172m'
@@ -42,6 +43,8 @@ venv_badge() {
 model_part() {
   [ -n "$1" ] || return 0
   printf '%s%s%s' "$C_MODEL" "$1" "$C_RESET"
+  [ -n "$2" ] || return 0
+  printf ' %s%s%s' "$C_EFFORT" "$2" "$C_RESET"
 }
 
 short_dir() {
@@ -127,13 +130,14 @@ join_parts() {
 
 main() {
   init
-  local input model dir parts=()
+  local input model effort dir parts=()
   input=$(read_input)
   model=$(json_field "$input" '.model.display_name // empty')
+  effort=$(json_field "$input" '.effort.level // empty')
   dir=$(json_field "$input" '.workspace.current_dir // .cwd // empty')
 
   add_part "$(venv_badge)"
-  add_part "$(model_part "$model")"
+  add_part "$(model_part "$model" "$effort")"
   add_part "$(dir_part "$dir")"
   add_part "$(git_branch "$dir")"
   add_part "$(caveman_badge)"
