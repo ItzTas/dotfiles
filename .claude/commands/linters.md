@@ -9,6 +9,7 @@ before considering the task complete.
 ## Dockerfiles
 
 - **Always run both `hadolint` and `trivy config` after editing or creating a Dockerfile.** Whenever you edit or create a Dockerfile, run `hadolint <file>` and `trivy config <file>` on it and fix any issues either one reports before considering the task complete.
+- **`DL3018` (pin versions in `apk add`) is OK to ignore when pinning risks breaking things.** Alpine drops old package versions from its repos on every bump, so a pinned `apk add pkg=<version>` makes future rebuilds fail with a "no such package" error — and for security-sensitive packages like `ca-certificates` you actually want the newest bundle, not a frozen one. In those cases don't pin: suppress the rule inline with `# hadolint ignore=DL3018` on the line above the `RUN`, and leave `apk add --no-cache <pkg>` unpinned. Only pin when reproducibility genuinely matters more than rebuild resilience.
 
 ## Go
 
