@@ -7,6 +7,7 @@ local mic = require("scripts.mic")
 local spotify = require("scripts.spotify")
 local print = require("scripts.print")
 local recording = require("scripts.recording")
+local noctalia = require("scripts.noctalia")
 
 local mm = binds.make_mod
 local bs = binds.bind_scratchpad
@@ -161,6 +162,6 @@ bind(mm("E", meh), exec(browser .. " https://translate.google.com/?sl=auto&tl=pt
 bind(mm("C", meh), exec("hyprpicker -a"))
 bind(mm("X", meh), exec("ddcutil setvcp 10 100"))
 bind(mm("W", meh), exec("alarm-clock-applet -s"))
-bind(mm("W", alt), exec('killall qs || qs -c noctalia-shell'))
+bind(mm("W", alt), noctalia.toggle)
 bind(mm("F5", { super, shift }), hl.dsp.exit())
 bind(mm("L", meh), exec("qs -c noctalia-shell ipc call lockScreen lock"))

@@ -1,5 +1,6 @@
 local gpu = require("functions.gpu")
 local ram = require("functions.ram")
+local noctalia = require("scripts.noctalia")
 
 local exec = hl.exec_cmd
 local on = hl.on
@@ -26,7 +27,7 @@ on("hyprland.start", function()
 
 	-- Desktop services
 	exec("gnome-keyring-daemon --start --daemonize --components=pkcs11,secrets,ssh")
-	exec("qs -c noctalia-shell")
+	noctalia.start()
 
 	-- Gitify
 	-- exec("sleep 11; gitify --password-store=gnome-libsecret")
