@@ -1,5 +1,5 @@
 ---
-description: Load my mandatory linter rules per file type.
+description: Load my mandatory linter rules per file type (Dockerfiles → hadolint + trivy config; Go → golangci-lint full standard set; Python → basedpyright; Kotlin → ktlint + detekt; Bash → shellcheck; Zsh → zsh -n)
 ---
 
 These are my mandatory linter rules, split per file type to keep context small. Whenever you edit
@@ -12,6 +12,7 @@ Do not read rule files for types you are not touching.
 | Dockerfiles | `~/.claude/commands/linters/dockerfile.md` |
 | Go (`.go`) | `~/.claude/commands/linters/go.md` |
 | Python (`.py`, `.pyi`) | `~/.claude/commands/linters/python.md` |
+| Kotlin (`.kt`, `.kts`) | `~/.claude/commands/linters/kotlin.md` |
 | Bash / POSIX sh (`.sh`, `.bash`, or a `bash`/`sh` shebang) | `~/.claude/commands/linters/bash.md` |
 | Zsh (`.zsh`, `.zshrc`/`.zshenv`, or a `zsh` shebang) | `~/.claude/commands/linters/zsh.md` |
 
