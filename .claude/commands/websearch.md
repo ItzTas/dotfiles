@@ -2,6 +2,7 @@
 description: Search the web for how to accomplish the request I pass in, then apply what you find
 argument-hint: [what to do...]
 allowed-tools: WebSearch, WebFetch, Read, Grep, Glob, Bash, Edit, Write
+effort: high
 ---
 
 Search the web for **how to do** whatever I ask below and, based on what you find, carry out the task.

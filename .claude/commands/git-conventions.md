@@ -9,6 +9,26 @@ branches, committing, reverting, opening PRs/MRs — load this file and follow e
 
 - **On shared/protected branches, create a new branch for changes.** If I'm on a `dev`, `main`, `master`, or `pre-homolog` branch and I ask for a change, create a new branch to implement it instead of working directly on the current branch. Exceptions where you should stay on the current branch: personal projects, projects only I work on, or projects without a sophisticated branching system (e.g., my Neovim dotfiles, which only have `main` because they're simple dotfiles that don't warrant extra branches).
 
+- **NEVER leave the current branch without asking me first.** This applies to *any* branch change: `git switch`/`git checkout` to an existing branch, `git switch -c`/`git checkout -b` to create a new one, `git worktree add`, or anything else that moves me off the branch I'm on. I work across many branches at once and forget to merge open PRs/MRs, so branches pile up — I need to decide each move consciously.
+
+  Before asking, gather the context so the decision is informed:
+  - `git branch --show-current` — where I am now.
+  - `git branch --sort=-committerdate --format='%(refname:short) %(committerdate:relative) [%(upstream:track)]'` — local branches, most recent first, with ahead/behind info.
+  - Open PRs/MRs, when a remote and CLI are available: `gh pr list --state open --json number,title,headRefName,baseRefName` and/or `glab mr list --state opened`.
+
+  Then **ask me with a multiple-choice question** (the `AskUserQuestion` tool), showing:
+  - what you want to do and why (e.g. "current branch `main` is protected, the change needs its own branch");
+  - the branches that already have **open, unmerged PRs/MRs**, so I can reuse one instead of opening yet another;
+  - options covering at least: **create the new branch you propose** (state the exact name), **switch to an existing branch with pending work** (list the relevant ones), and **stay on the current branch**.
+
+  If the `AskUserQuestion` tool isn't available, ask in plain text and wait for my answer. Either way: **do not switch, and do not start the work, until I answer.**
+
+  Exceptions — go ahead without asking:
+  - I already named the branch explicitly in my request; that *is* my answer.
+  - **`/implement`.** That command exists to branch first, so creating and switching to a new branch is exactly what I asked for — including when it derives the name itself. Just tell me the name you chose and move on.
+
+- **Report accumulated branches when you notice them.** If, while gathering the above, you find branches with open PRs/MRs or unpushed/unmerged commits that look forgotten, mention them in the question — briefly, one line each. Don't merge, close, or delete anything on your own.
+
 ## Commits
 
 - **NEVER add co-authorship attribution to me when making commits on my behalf.** Do not include `Co-Authored-By: Claude ...` or any line indicating that you took part in the commit. The commit must appear as being solely mine.

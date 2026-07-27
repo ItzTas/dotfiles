@@ -1,7 +1,7 @@
 ---
 description: Commit, push and open a PR (GitHub) and/or MR (GitLab) from the source branch to the target branch
 argument-hint: [target-branch] [source-branch]
-allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(yadm*), Read, Glob
+allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(yadm*), Read, Glob, AskUserQuestion
 ---
 
 Open a pull request (GitHub) and/or merge request (GitLab) from the source branch to the target
@@ -32,9 +32,22 @@ Follow exactly these steps:
 - **Source branch**: if a source branch was given as the second argument, use it as the branch the
   PR/MR is opened from. If it was omitted, use the current branch (`git branch --show-current`) as
   the source.
-- If a source branch was given and it differs from the current branch, **check it out first**
-  (`git switch <source>`) so that the commit and push land on the source branch. If the working tree
-  is dirty and switching would be unsafe, tell me instead of forcing it.
+- If a source branch was given and it differs from the current branch, it needs to be checked out
+  (`git switch <source>`) so that the commit and push land on the source branch — but **ask me
+  before switching**, per the branch rule in `~/.claude/commands/git-conventions.md`. Use
+  `AskUserQuestion` with at least: **switch to `<source>` as I asked**, **stay on the current branch
+  and open the PR/MR from it instead**, and any branch that already has an open PR/MR against the
+  same target (so I don't stack yet another one). Don't switch until I answer.
+- If the working tree is dirty and switching would be unsafe, tell me instead of forcing it.
+
+## 1b. Show me what's already open before creating anything new
+- Before opening a new PR/MR, list what is already open so I don't accumulate duplicates:
+  `gh pr list --state open --json number,title,headRefName,baseRefName` and/or
+  `glab mr list --state opened` (whichever remotes exist).
+- If there is **already an open PR/MR from this source branch**, do not create a second one — tell me
+  it exists, push the new commits to it, and show me the link.
+- If there are other open PRs/MRs that overlap with this change (same target, related branch),
+  mention them in one line each before creating the new one.
 
 ## 2. Detect the remotes (GitHub and GitLab)
 - Run `git remote -v` and identify which remotes point to `github.com` and/or `gitlab.com`
