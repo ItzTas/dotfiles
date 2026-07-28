@@ -1,6 +1,6 @@
 ---
-description: Commit everything as atomic Conventional Commits; flags: wip/quick/fast, fastest, detailed, verbose, push, pr
-argument-hint: [wip|quick|fast|fastest|quickest] [detailed|verbose] [push] [pr]
+description: Commit everything as atomic Conventional Commits; flags: wip/quick/fast, fastest, detailed, verbose, push, pr, merge
+argument-hint: [wip|quick|fast|fastest|quickest] [detailed|verbose] [push] [pr] [merge]
 allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(yadm*), Read, Glob
 ---
 
@@ -13,7 +13,8 @@ This command takes zero or more **flags** as arguments: `$ARGUMENTS`
 
 Flags may appear in **any order** and **more than one** may be given
 (e.g. `/commit wip push`, `/commit fast pr`, `/commit quick push pr`, `/commit fastest`,
-`/commit detailed`, `/commit detailed push`, `/commit verbose`, `/commit verbose pr`).
+`/commit detailed`, `/commit detailed push`, `/commit verbose`, `/commit verbose pr`,
+`/commit pr merge`).
 
 Separately, I may include **other requests** in the same message, either before or after the
 `/commit` invocation (e.g. "do this, that and the other `/commit`" or "`/commit` do this, that
@@ -57,6 +58,12 @@ and the other"). Those are **not** flags — they are work to do first.
   Asking for `verbose` is me wanting the full record, not a summary.
 - **`push`** — After committing, `git push` the current branch (use `-u` if it has no upstream).
 - **`pr`** — After committing (and pushing), open a PR/MR. Implies `push`.
+- **`merge`** — Only meaningful **together with `pr`**: after opening the PR/MR, **wait for its
+  checks to go fully green and then merge it**. "Fully green" means every required check has
+  completed successfully — no failures, no cancelled runs, and nothing still pending. Poll the
+  PR/MR status until it settles; if any check **fails**, **do not merge** — stop and report the
+  failing check(s) to me. If `merge` is given without `pr`, treat it as `pr merge` (open the PR/MR,
+  then merge it once green).
 
 If **none** of the fast modes is given, commit in the **normal, careful** mode: think about the
 best atomic split and the most accurate Conventional Commits messages.
@@ -74,13 +81,15 @@ every one it can.
 
 ### 1. Parse the flags
 - Read `$ARGUMENTS` and detect which of `wip`, `quick`, `fast`, `fastest`, `quickest`, `detailed`,
-  `verbose`, `push`, `pr` are present.
+  `verbose`, `push`, `pr`, `merge` are present.
 - `wip`, `quick` and `fast` select **fast mode**; `fastest` and `quickest` select **fastest mode**.
   If both are present, `fastest` wins. `detailed` selects **detailed-message mode**; `verbose`
   selects **verbose mode**. If both are present, `verbose` wins. `pr` implies `push`.
 - If a fast flag is combined with `detailed`/`verbose`, the message flag **wins** for message
   quality (see the flag descriptions). `verbose` additionally overrides the fast split — a
   `fastest verbose` request is contradictory, so honor `verbose` and commit carefully.
+- `merge` implies `pr` (and therefore `push`): if I wrote `merge` without `pr`, still open the
+  PR/MR and then merge it once green.
 - Match `fastest`/`quickest` before `fast`/`quick` so the superlative isn't read as the base flag.
 - Ignore unrecognized tokens (they were likely extra requests handled in step 0).
 
@@ -137,5 +146,22 @@ Follow the same procedure as my `/pr` command (see `~/.claude/commands/pr.md`):
   `glab mr create --target-branch <target> --source-branch <current-branch>`, with a Conventional
   Commits title. If both remotes exist, create both and show both links.
 
-### 5. Summary
-Show what was committed (list the commit messages), whether it was pushed, and any PR/MR link(s).
+### 5. Merge the PR/MR (if `merge`)
+Only when `merge` was given. After the PR/MR exists:
+- **Wait for the checks to finish.** GitHub: `gh pr checks --watch` (or poll
+  `gh pr checks <number>` / `gh pr view <number> --json statusCheckRollup`). GitLab:
+  poll `glab ci status` / `glab mr view <number>`. Keep waiting while anything is queued or
+  running — a not-yet-started pipeline is **not** green.
+- **Only merge when everything is green:** every required check succeeded, none failed, none was
+  cancelled, and nothing is still pending. If any check **fails or is cancelled**, **do not merge**
+  — report which check failed (and a link/short excerpt of the failure) and stop.
+- If the PR/MR is blocked for a non-CI reason (merge conflicts, missing approvals, branch
+  protection), don't try to force it — tell me what's blocking and stop.
+- Merge with `gh pr merge <number>` and/or `glab mr merge <number>`. Ask me which merge strategy
+  to use (merge commit / squash / rebase) unless the repo enforces only one — in that case use the
+  allowed one and say which.
+- If both a GitHub PR and a GitLab MR were created, apply the same rule to each.
+
+### 6. Summary
+Show what was committed (list the commit messages), whether it was pushed, any PR/MR link(s), and
+— if `merge` was given — whether it was merged or what blocked it.
