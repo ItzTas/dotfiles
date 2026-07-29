@@ -60,7 +60,7 @@
 
 ## Linters
 
-- **Whenever you edit or create a file with mandatory linters, load `~/.claude/commands/linters.md`** (the `linters` command/skill) and run the linters it lists for that file type, fixing what they report before considering the task complete. Currently covers Dockerfiles, Go, Bash, and Zsh.
+- **Whenever you edit or create a file with mandatory linters, load `~/.claude/commands/linters.md`** (the `linters` command/skill) and run the linters it lists for that file type, fixing what they report before considering the task complete. Currently covers Dockerfiles, Go, Python, Bash, and Zsh.
 
 ## Git
 

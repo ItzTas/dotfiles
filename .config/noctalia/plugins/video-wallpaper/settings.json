@@ -7,7 +7,7 @@
   "profile": "default",
   "volume": 1,
   "wallpapersFolder": "/home/talinux/Videos/Wallpapers",
-  "thumbCacheReady": false,
+  "thumbCacheReady": true,
   "enabled": false,
   "eDP-1": {
     "currentWallpaper": "/home/talinux/Videos/Wallpapers/red-eyes-anime-girl-4k_wallsflow-com.mp4",
