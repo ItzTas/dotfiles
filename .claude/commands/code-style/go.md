@@ -1,5 +1,10 @@
 # Go code style
 
+Rules specific to Go, on top of my general code style rules. Each section below is independent —
+read the ones that apply to what you're writing.
+
+## Concurrency — `errgroup`
+
 - **Prefer `errgroup` where it fits — it isn't the only allowed form of concurrency.** For a
   bounded set of goroutines that can fail and must all finish before the function continues,
   `golang.org/x/sync/errgroup` beats a hand-rolled `sync.WaitGroup` plus an error channel. Outside
