@@ -167,10 +167,11 @@ _install_pacman_packages() {
         "lib32-gamemode"
 
         # Docker
-        "lazydocker"
-        "docker-compose"
         "docker"
+        "lazydocker"
         "docker-buildx"
+        "docker-compose"
+        "docker-credential-secretservice"
 
         # Cursor & Fonts
         "bibata-cursor-theme"
