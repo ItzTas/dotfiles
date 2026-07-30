@@ -6,6 +6,19 @@ These are my personal code style rules. Whenever you are about to **write or edi
 project — load this file and apply every rule below. They complement (never replace) the
 conventions of the repository you're working in.
 
+## Per-language rules
+
+Some languages have extra rules of their own, split into separate files to keep context small.
+Whenever you write or edit a file of one of the types below, **read only the matching rule file**
+and apply it on top of the general rules here. Don't read rule files for types you're not touching.
+
+| File type | Rule file to read |
+|-----------|-------------------|
+| Go (`.go`) | `~/.claude/commands/code-style/go.md` |
+
+If a change touches several of these types, read each matching file. If a file type isn't listed
+here, only the general rules below apply.
+
 ## Error handling
 
 - **Whenever you're about to write or edit a `try`/`catch` block (in any language), or you're initializing a new project in a language whose main error mechanism is try/catch, load `~/.claude/commands/error-handling.md`** (the `error-handling` command/skill) and follow it — in short: for new projects, suggest a Result/errors-as-values alternative first; in existing try/catch codebases proceed normally, applying the try/catch hygiene rules (small `try` blocks, distinct error types, errors handled at boundaries).
