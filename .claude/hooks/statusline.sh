@@ -11,6 +11,7 @@ init() {
   C_GIT=$'\033[38;5;180m'
   C_CAVEMAN=$'\033[38;5;172m'
   C_FLOW=$'\033[38;5;44m'
+  C_ADVISE=$'\033[38;5;213m'
 }
 
 read_input() {
@@ -114,6 +115,14 @@ flow_badge() {
   esac
 }
 
+advise_badge() {
+  [ -n "$1" ] || return 0
+  local mode
+  mode=$(read_flag "$CONFIG_DIR/.advise-active-$1")
+  [ "$mode" = "active" ] || return 0
+  printf '%s[ADVISE]%s' "$C_ADVISE" "$C_RESET"
+}
+
 add_part() {
   [ -n "$1" ] || return 0
   parts+=("$1")
@@ -130,18 +139,20 @@ join_parts() {
 
 main() {
   init
-  local input model effort dir parts=()
+  local input model effort dir session parts=()
   input=$(read_input)
   model=$(json_field "$input" '.model.display_name // empty')
   effort=$(json_field "$input" '.effort.level // empty')
   dir=$(json_field "$input" '.workspace.current_dir // .cwd // empty')
+  session=$(session_id "$input")
 
   add_part "$(venv_badge)"
   add_part "$(model_part "$model" "$effort")"
   add_part "$(dir_part "$dir")"
   add_part "$(git_branch "$dir")"
   add_part "$(caveman_badge)"
-  add_part "$(flow_badge "$(session_id "$input")")"
+  add_part "$(flow_badge "$session")"
+  add_part "$(advise_badge "$session")"
 
   join_parts
 }

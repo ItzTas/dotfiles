@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+# UserPromptSubmit hook: tracks ADVISE MODE (~/.claude/commands/advise.md) state so
+# the statusline can show an [ADVISE] badge and guards/advise-guard.sh can block
+# writes.
+#
+# State lives in $CLAUDE_CONFIG_DIR/.advise-active-<session_id> — per session,
+# because two parallel Claude Code sessions can be in different modes.
+#
+# Must never block a prompt — always exits 0.
+
+CONFIG_DIR="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
+
+write_state() {
+  local file=$1 state=$2
+  [ -L "$file" ] && return 0
+  (
+    umask 077
+    printf '%s' "$state" >"$file.tmp"
+  ) 2>/dev/null || return 0
+  mv "$file.tmp" "$file" 2>/dev/null || rm -f "$file.tmp" 2>/dev/null
+}
+
+# Decide the new state from the prompt. Echoes: active | off | (empty for
+# "no change").
+classify() {
+  local p=$1
+
+  case "$p" in
+    # Explicit exits, slash form and plain words.
+    /advise\ end* | /advise\ out* | /advise\ off* | /advise\ stop* | /advise\ exit*)
+      printf 'off'
+      return 0
+      ;;
+    *"exit advise"* | *"end advise"* | *"leave advise"* | *"stop advise"* | *"sair do advise"* | *"encerrar advise"* | *"sair do modo advise"*)
+      printf 'off'
+      return 0
+      ;;
+    # Read-only subcommands: mode unchanged (and must not turn it on).
+    /advise\ status* | /advise\ help*) return 0 ;;
+    # Any other /advise invocation enters (or stays in) the mode.
+    /advise | /advise\ *)
+      printf 'active'
+      return 0
+      ;;
+  esac
+}
+
+main() {
+  local input prompt lower state session file
+  input=$(cat) || return 0
+  prompt=$(printf '%s' "$input" | jq -r '.prompt // empty' 2>/dev/null) || return 0
+  [ -n "$prompt" ] || return 0
+
+  lower=$(printf '%s' "$prompt" | tr '[:upper:]' '[:lower:]')
+  state=$(classify "$lower")
+  [ -n "$state" ] || return 0
+
+  session=$(printf '%s' "$input" | jq -r '.session_id // empty' 2>/dev/null | tr -cd 'a-zA-Z0-9-')
+  [ -n "$session" ] || return 0
+
+  # Sessions end without a shutdown hook, so old flags would pile up.
+  find "$CONFIG_DIR" -maxdepth 1 -name '.advise-active-*' -type f -mtime +7 -delete 2>/dev/null
+
+  file="$CONFIG_DIR/.advise-active-$session"
+  if [ "$state" = "off" ]; then
+    [ -L "$file" ] || rm -f "$file" 2>/dev/null
+    return 0
+  fi
+  write_state "$file" "$state"
+}
+
+main
+exit 0

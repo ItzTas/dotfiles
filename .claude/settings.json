@@ -4,7 +4,7 @@
       "DesignSync"
     ]
   },
-  "model": "opus[1m]",
+  "model": "opus",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -17,6 +17,23 @@
           {
             "type": "command",
             "command": "~/.claude/hooks/flow-tracker.sh",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/advise-tracker.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write|NotebookEdit|Update|ApplyPatch|DesignSync|Bash|mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/guards/advise-guard.sh",
             "timeout": 10
           }
         ]
