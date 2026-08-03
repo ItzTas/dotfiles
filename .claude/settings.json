@@ -4,7 +4,7 @@
       "DesignSync"
     ]
   },
-  "model": "claude/claude-fable-5",
+  "model": "free",
   "hooks": {
     "UserPromptSubmit": [
       {

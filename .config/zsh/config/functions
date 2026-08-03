@@ -660,7 +660,7 @@ if (( ${+commands[claude]} )); then
 
     ccr() {
         local token_key _i
-        token_key="$(cat "$HOME/.config/zsh/secrets/omnirouter-token")"
+        token_key="$(cat "$HOME/.config/zsh/secrets/omniroute-claude-key")"
 
         if ! __omniroute_up "$token_key"; then
             "$HOME/.local/bin/omniroute" serve --daemon --no-open --no-tray >/dev/null 2>&1

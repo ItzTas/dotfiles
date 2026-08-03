@@ -97,6 +97,10 @@ _install_pacman_packages() {
         "gufw"
         # "opensnitch"
 
+        # AI
+        "claude"
+        "omniroute-bin"
+
         # GTK
         "xdg-desktop-portal-gtk"
 
