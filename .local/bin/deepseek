@@ -1,16 +1,17 @@
 #!/bin/bash
-# Claude Code -> DeepSeek via gateway LiteLLM (socket-activated).
-# Gateway sobe no primeiro uso; para quando a última sessão encerra.
-# Fallback: se o gateway não responde, vai direto no endpoint Anthropic nativo da DeepSeek.
+# Claude Code -> relay local (socket-activated) com DeepSeek + Claude + Ollama.
+# Relay sobe no primeiro uso; para quando a última sessão encerra.
+# Sem ANTHROPIC_AUTH_TOKEN no caminho do relay: o OAuth da assinatura segue nos
+# headers e o relay repassa pros models claude-*; deepseek/ollama usam chave do
+# próprio relay.
+# Fallback: se o relay não responde, vai direto no endpoint Anthropic nativo da DeepSeek.
 
-GATEWAY="http://127.0.0.1:4000"
+RELAY="http://127.0.0.1:4000"
 
 f() {
-    MK="$(cat "$HOME/.config/litellm/master_key" 2>/dev/null || true)"
-
-    if [ -n "$MK" ] && curl -sf -m 30 -o /dev/null "$GATEWAY/v1/models" -H "Authorization: Bearer $MK"; then
-        export ANTHROPIC_BASE_URL="$GATEWAY"
-        export ANTHROPIC_AUTH_TOKEN="$MK"
+    if curl -sf -m 30 -o /dev/null "$RELAY/v1/models"; then
+        export ANTHROPIC_BASE_URL="$RELAY"
+        export CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1
         export ANTHROPIC_MODEL="anthropic/deepseek-v4-flash"
         export ANTHROPIC_DEFAULT_OPUS_MODEL="anthropic/deepseek-v4-pro"
         export ANTHROPIC_DEFAULT_SONNET_MODEL="anthropic/deepseek-v4-pro"
@@ -28,10 +29,10 @@ f() {
 
     claude "$@"
 
-    # Para o gateway se nenhuma outra sessão está conectada (paralelo-safe).
+    # Para o relay se nenhuma outra sessão está conectada (paralelo-safe).
     # O socket continua escutando; o próximo uso re-ativa o serviço.
-    if [ "$ANTHROPIC_BASE_URL" = "$GATEWAY" ] && ! ss -tnp 2>/dev/null | grep -q ':4000'; then
-        systemctl --user stop litellm.service 2>/dev/null || true
+    if [ "$ANTHROPIC_BASE_URL" = "$RELAY" ] && ! ss -tnp 2>/dev/null | grep -q ':4000'; then
+        systemctl --user stop relay.service 2>/dev/null || true
     fi
 }
 
