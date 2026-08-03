@@ -38,7 +38,13 @@ read_flag() {
 
 venv_badge() {
   [ -n "${VIRTUAL_ENV:-}" ] || return 0
-  printf '%s%s' "$C_PY" "$C_RESET"
+  local name glyph
+  name=$(basename "$VIRTUAL_ENV")
+  case "$name" in
+    .venv|venv|env|.env) name=$(basename "$(dirname "$VIRTUAL_ENV")") ;;
+  esac
+  glyph=$(printf '\xee\x88\xb5')
+  printf '%s%s %s%s' "$C_PY" "$glyph" "$name" "$C_RESET"
 }
 
 model_part() {

@@ -220,6 +220,11 @@ _install_pacman_packages() {
         "wl-clip-persist"
         "clipse"
 
+        # Images
+        "tesseract"
+        "tesseract-data-eng"
+        "tesseract-data-por"
+
         # File managers & extensions
         "yazi"
         "nemo"
