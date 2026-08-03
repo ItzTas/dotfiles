@@ -4,7 +4,7 @@
       "DesignSync"
     ]
   },
-  "model": "opus[1m]",
+  "model": "claude/claude-fable-5",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -65,5 +65,5 @@
       }
     }
   },
-  "effortLevel": "high"
+  "effortLevel": "xhigh"
 }

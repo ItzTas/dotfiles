@@ -670,7 +670,6 @@ if (( ${+commands[claude]} )); then
             done
         fi
 
-        # Discovery: sem isso o /model só lista os models nativos do Claude Code.
         CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1 \
         ANTHROPIC_BASE_URL="http://localhost:20128" \
         ANTHROPIC_AUTH_TOKEN="$token_key" \
