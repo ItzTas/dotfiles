@@ -42,7 +42,7 @@ Claude Code ── Anthropic /v1/messages ──▶ relay (127.0.0.1:4000)
 | Arquivo | Papel |
 |---|---|
 | `~/.local/bin/claude-relay` | relay (python; shebang aponta pro venv) |
-| `~/.local/bin/deepseek` | wrapper: sessão Claude Code apontada pro relay, default deepseek, fallback endpoint nativo, stop-on-idle |
+| função zsh `cct` (`~/.config/zsh/config/functions`) | sessão Claude Code apontada pro relay, stop-on-idle |
 | `~/.config/systemd/user/relay.socket` | socket 127.0.0.1:4000, `Accept=no` |
 | `~/.config/systemd/user/relay.service` | serviço socket-activated, `EnvironmentFile=~/.config/litellm/.env` |
 
@@ -93,9 +93,11 @@ configurar no relay: com o daemon de pé, os models entram no `/v1/models` como
 
 ## Uso
 
-- `deepseek` — sessão com relay: abre em DeepSeek, `/model` mostra e troca entre
-  Claude (assinatura), DeepSeek e Ollama.
+- `cct` — sessão com relay: `/model` mostra e troca entre Claude (assinatura),
+  DeepSeek e Ollama (quando o daemon estiver de pé).
 - `claude` — Claude real direto, intocado (sem relay).
+- Setup principal hoje é o OmniRoute (`ccr`, skill `omniroute-setup`); o relay
+  fica de fallback.
 
 ## Operação
 
