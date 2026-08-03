@@ -6,7 +6,7 @@ f() {
     export OPENAI_BASE_URL="https://api.deepseek.com/v1"
     export OPENAI_MODEL="deepseek-v4-flash"
 
-    openclaude
+    openclaude "$@"
 }
 
 f
