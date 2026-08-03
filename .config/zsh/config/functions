@@ -644,3 +644,21 @@ net-auto() {
     && sudo nmcli connection up "$connection" \
     && echo "✅ Automatic DHCP restored on \"$connection\""
 }
+
+# claude through the local relay: /model lists Claude + DeepSeek + Ollama
+# (gateway discovery). Relay down -> plain claude, untouched.
+if (( ${+commands[claude]} )); then
+    claude() {
+        if curl -sf -m 5 -o /dev/null http://127.0.0.1:4000/v1/models; then
+            ANTHROPIC_BASE_URL="http://127.0.0.1:4000" command claude "$@"
+        else
+            command claude "$@"
+        fi
+
+        # Stop the relay when the last session disconnects (parallel-safe);
+        # the socket keeps listening and the next use re-activates it.
+        if ! ss -tnp 2>/dev/null | grep -q ':4000'; then
+            systemctl --user stop relay.service 2>/dev/null
+        fi
+    }
+fi
