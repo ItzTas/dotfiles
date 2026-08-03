@@ -660,6 +660,14 @@ if (( ${+commands[claude]} )); then
 
     ccr() {
         local token_key _i
+        local -a model_args=()
+
+        # -d/--deepseek: abre a sessão já no DeepSeek (o /model troca depois).
+        if [[ "$1" == "-d" || "$1" == "--deepseek" ]]; then
+            model_args=(--model claude-deepseek-v4-pro)
+            shift
+        fi
+
         token_key="$(cat "$HOME/.config/zsh/secrets/omnirouter-token")"
 
         if ! __omniroute_up "$token_key"; then
