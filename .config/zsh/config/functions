@@ -645,20 +645,42 @@ net-auto() {
     && echo "✅ Automatic DHCP restored on \"$connection\""
 }
 
-# claude through the local relay: /model lists Claude + DeepSeek + Ollama
-# (gateway discovery). Relay down -> plain claude, untouched.
 if (( ${+commands[claude]} )); then
-    claude() {
+    cct() {
         if curl -sf -m 5 -o /dev/null http://127.0.0.1:4000/v1/models; then
             ANTHROPIC_BASE_URL="http://127.0.0.1:4000" command claude "$@"
         else
             command claude "$@"
         fi
 
-        # Stop the relay when the last session disconnects (parallel-safe);
-        # the socket keeps listening and the next use re-activates it.
         if ! ss -tnp 2>/dev/null | grep -q ':4000'; then
             systemctl --user stop relay.service 2>/dev/null
         fi
+    }
+
+    ccr() {
+        local token_key _i
+        token_key="$(cat "$HOME/.config/zsh/secrets/omnirouter-token")"
+
+        if ! __omniroute_up "$token_key"; then
+            "$HOME/.local/bin/omniroute" serve --daemon --no-open --no-tray >/dev/null 2>&1
+            for _i in {1..20}; do
+                __omniroute_up "$token_key" && break
+                sleep 1
+            done
+        fi
+
+        ANTHROPIC_BASE_URL="http://localhost:20128" \
+        ANTHROPIC_AUTH_TOKEN="$token_key" \
+        command claude "$@"
+
+        if ! ss -tn 2>/dev/null | grep -q ':20128'; then
+            "$HOME/.local/bin/omniroute" stop >/dev/null 2>&1
+        fi
+    }
+
+    __omniroute_up() {
+        curl -sf -m 2 -o /dev/null http://127.0.0.1:20128/v1/models \
+            -H "Authorization: Bearer $1"
     }
 fi
