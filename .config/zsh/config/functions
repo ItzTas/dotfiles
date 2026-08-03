@@ -659,29 +659,75 @@ if (( ${+commands[claude]} )); then
     }
 
     ccr() {
-        local token_key _i
-        token_key="$(cat "$HOME/.config/zsh/secrets/omniroute-claude-key")"
+        local key_file token_key
+        key_file="$HOME/.config/zsh/secrets/omniroute-claude-key"
+
+        if [[ ! -r "$key_file" ]]; then
+            echo "❌ omniroute key not readable: $key_file" >&2
+            return 1
+        fi
+
+        token_key="$(cat "$key_file")"
 
         if ! __omniroute_up "$token_key"; then
-            "$HOME/.local/bin/omniroute" serve --daemon --no-open --no-tray >/dev/null 2>&1
-            for _i in {1..20}; do
-                __omniroute_up "$token_key" && break
-                sleep 1
-            done
+            __omniroute_start || return 1
+
+            if ! __omniroute_wait "$token_key"; then
+                echo "❌ omniroute gateway did not come up on :20128" >&2
+                return 1
+            fi
         fi
 
         CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1 \
         ANTHROPIC_BASE_URL="http://localhost:20128" \
         ANTHROPIC_AUTH_TOKEN="$token_key" \
         command claude "$@"
-
-        if ! ss -tn 2>/dev/null | grep -q ':20128'; then
-            "$HOME/.local/bin/omniroute" stop >/dev/null 2>&1
-        fi
     }
 
+    # The gateway sporadically blocks for ~3s (periodic provider health checks
+    # stalling the Node event loop), so the timeout sits well above that. A
+    # genuinely dead port fails instantly with ECONNREFUSED, never waiting.
     __omniroute_up() {
-        curl -sf -m 2 -o /dev/null http://127.0.0.1:20128/v1/models \
+        curl -sf -m 8 -o /dev/null http://127.0.0.1:20128/v1/models \
             -H "Authorization: Bearer $1"
+    }
+
+    # Polls every 200ms and returns the moment the gateway answers. `local -F
+    # SECONDS` is a function-scoped float timer, so the deadline is real wall
+    # clock regardless of how long each probe takes to time out.
+    __omniroute_wait() {
+        local -F SECONDS=0
+
+        while (( SECONDS < 20 )); do
+            __omniroute_up "$1" && return 0
+            sleep 0.2
+        done
+
+        return 1
+    }
+
+    # The headless CLI daemonizes itself; the AUR `omniroute-bin` build is an
+    # Electron app with no `serve` subcommand, so it gets backgrounded instead.
+    __omniroute_start() {
+        local cli="$HOME/.local/bin/omniroute"
+
+        # A stalled gateway still holds the port. Bail out rather than race a
+        # second instance against the one that is already bound to :20128.
+        if ss -tln 2>/dev/null | grep -q ':20128'; then
+            return 0
+        fi
+
+        if [[ -x "$cli" ]]; then
+            "$cli" serve --daemon --no-open --no-tray >/dev/null 2>&1
+            return 0
+        fi
+
+        if (( ${+commands[omniroute]} )); then
+            command omniroute >/dev/null 2>&1 &!
+            return 0
+        fi
+
+        echo "❌ omniroute not found in ~/.local/bin or \$PATH" >&2
+        return 1
     }
 fi
