@@ -680,7 +680,7 @@ if (( ${+commands[claude]} )); then
 
         ANTHROPIC_BASE_URL="http://localhost:20128" \
         ANTHROPIC_AUTH_TOKEN="$token_key" \
-        command claude "$@"
+        command claude "${model_args[@]}" "$@"
 
         if ! ss -tn 2>/dev/null | grep -q ':20128'; then
             "$HOME/.local/bin/omniroute" stop >/dev/null 2>&1
