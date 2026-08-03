@@ -4,7 +4,7 @@
       "DesignSync"
     ]
   },
-  "model": "opus[1m]",
+  "model": "fable",
   "hooks": {
     "UserPromptSubmit": [
       {
