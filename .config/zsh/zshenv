@@ -43,6 +43,7 @@ export PNPM_HOME="/home/talinux/.local/share/pnpm"
 # Claude
 export CLAUDE_TELEMETRY_DISABLED=1
 export CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY=1
+export CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1
 
 # Telemetry
 export DISABLE_TELEMETRY=1
