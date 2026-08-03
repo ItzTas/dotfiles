@@ -1,16 +1,38 @@
 #!/bin/bash
+# Claude Code -> DeepSeek via gateway LiteLLM (socket-activated).
+# Gateway sobe no primeiro uso; para quando a última sessão encerra.
+# Fallback: se o gateway não responde, vai direto no endpoint Anthropic nativo da DeepSeek.
+
+GATEWAY="http://127.0.0.1:4000"
 
 f() {
-    export ANTHROPIC_BASE_URL="https://api.deepseek.com/anthropic"
-    export ANTHROPIC_AUTH_TOKEN="$DEEPSEEK_API_KEY"
+    MK="$(cat "$HOME/.config/litellm/master_key" 2>/dev/null || true)"
 
-    export ANTHROPIC_MODEL="deepseek-v4-flash"
-    export ANTHROPIC_DEFAULT_OPUS_MODEL="deepseek-v4-pro"
-    export ANTHROPIC_DEFAULT_SONNET_MODEL="deepseek-v4-pro"
-    export ANTHROPIC_DEFAULT_HAIKU_MODEL="deepseek-v4-flash"
-    export CLAUDE_CODE_SUBAGENT_MODEL="deepseek-v4-flash"
+    if [ -n "$MK" ] && curl -sf -m 30 -o /dev/null "$GATEWAY/v1/models" -H "Authorization: Bearer $MK"; then
+        export ANTHROPIC_BASE_URL="$GATEWAY"
+        export ANTHROPIC_AUTH_TOKEN="$MK"
+        export ANTHROPIC_MODEL="anthropic/deepseek-v4-flash"
+        export ANTHROPIC_DEFAULT_OPUS_MODEL="anthropic/deepseek-v4-pro"
+        export ANTHROPIC_DEFAULT_SONNET_MODEL="anthropic/deepseek-v4-pro"
+        export ANTHROPIC_DEFAULT_HAIKU_MODEL="anthropic/deepseek-v4-flash"
+        export CLAUDE_CODE_SUBAGENT_MODEL="anthropic/deepseek-v4-flash"
+    else
+        export ANTHROPIC_BASE_URL="https://api.deepseek.com/anthropic"
+        export ANTHROPIC_AUTH_TOKEN="$DEEPSEEK_API_KEY"
+        export ANTHROPIC_MODEL="deepseek-v4-flash"
+        export ANTHROPIC_DEFAULT_OPUS_MODEL="deepseek-v4-pro"
+        export ANTHROPIC_DEFAULT_SONNET_MODEL="deepseek-v4-pro"
+        export ANTHROPIC_DEFAULT_HAIKU_MODEL="deepseek-v4-flash"
+        export CLAUDE_CODE_SUBAGENT_MODEL="deepseek-v4-flash"
+    fi
 
     claude "$@"
+
+    # Para o gateway se nenhuma outra sessão está conectada (paralelo-safe).
+    # O socket continua escutando; o próximo uso re-ativa o serviço.
+    if [ "$ANTHROPIC_BASE_URL" = "$GATEWAY" ] && ! ss -tnp 2>/dev/null | grep -q ':4000'; then
+        systemctl --user stop litellm.service 2>/dev/null || true
+    fi
 }
 
 f "$@"
