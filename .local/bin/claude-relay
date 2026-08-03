@@ -1,0 +1,185 @@
+#!/home/talinux/.local/share/litellm-venv/bin/python3
+"""Relay transparente Anthropic<->DeepSeek<->Ollama para Claude Code.
+
+- model contendo "ollama/"   -> http://127.0.0.1:11434 (Ollama local, endpoint
+  Anthropic nativo, v0.14+; auth ignorada pelo daemon)
+- model contendo "deepseek"  -> https://api.deepseek.com/anthropic (usa DEEPSEEK_API_KEY do server)
+- qualquer outro model (claude-*) -> https://api.anthropic.com (repassa o token de
+  auth de entrada, ex. OAuth da assinatura claude.ai)
+- GET /v1/models -> lista todas as famílias (gateway discovery do Claude Code);
+  models do Ollama entram dinamicamente quando o daemon está de pé. Ids levam
+  prefixo "anthropic/" porque o filtro de discovery descarta o resto.
+
+Socket activation: systemd passa fd 3 (Accept=no).
+"""
+import json
+import os
+
+import httpx
+import uvicorn
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse, StreamingResponse
+
+ANTHROPIC_URL = "https://api.anthropic.com"
+DEEPSEEK_URL = "https://api.deepseek.com/anthropic"
+OLLAMA_URL = "http://127.0.0.1:11434"
+DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
+
+MODELS = [
+    {"id": "claude-opus-5", "display_name": "Claude Opus 5"},
+    {"id": "claude-sonnet-5", "display_name": "Claude Sonnet 5"},
+    {"id": "claude-haiku-4-5", "display_name": "Claude Haiku 4.5"},
+    {"id": "claude-fable-5", "display_name": "Claude Fable 5"},
+    {"id": "anthropic/deepseek-v4-flash", "display_name": "DeepSeek V4 Flash"},
+    {"id": "anthropic/deepseek-v4-pro", "display_name": "DeepSeek V4 Pro"},
+]
+
+app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
+client = httpx.AsyncClient(timeout=httpx.Timeout(600.0, connect=10.0))
+
+
+def _is_deepseek(model: str) -> bool:
+    return "deepseek" in model
+
+
+def _is_ollama(model: str) -> bool:
+    return "ollama/" in model
+
+
+def _route(model: str) -> tuple[str, str]:
+    """Retorna (upstream, model como o upstream espera).
+
+    Ollama antes de DeepSeek: um model local tipo "ollama/deepseek-r1" tem
+    "deepseek" no nome mas mora no Ollama.
+    """
+    if _is_ollama(model):
+        return OLLAMA_URL, model.split("ollama/", 1)[1]
+    if _is_deepseek(model):
+        return DEEPSEEK_URL, model.removeprefix("anthropic/")
+    return ANTHROPIC_URL, model
+
+
+def _upstream_headers(incoming: dict[str, str], upstream: str) -> dict[str, str]:
+    h: dict[str, str] = {}
+    for k in ("authorization", "x-api-key", "content-type"):
+        if k in incoming:
+            h[k] = incoming[k]
+    for k, v in incoming.items():
+        if k.startswith("anthropic-"):
+            h[k] = v
+    if upstream == DEEPSEEK_URL:
+        h.pop("x-api-key", None)
+        h["authorization"] = f"Bearer {DEEPSEEK_API_KEY}"
+    if upstream == OLLAMA_URL:
+        h.pop("x-api-key", None)
+        h["authorization"] = "Bearer ollama"  # exigido mas ignorado pelo daemon
+    return h
+
+
+async def _forward(req: Request, path: str):
+    body = await req.body()
+    payload: dict[str, object] | None = None
+    try:
+        parsed: object = json.loads(body)
+        if isinstance(parsed, dict):
+            payload = parsed
+    except Exception:
+        pass
+    raw_model = payload.get("model") if payload is not None else None
+    model = raw_model if isinstance(raw_model, str) else ""
+
+    # Upstreams só aceitam o nome puro; os prefixos existem só pro discovery
+    # do Claude Code.
+    upstream, upstream_model = _route(model)
+    if upstream_model != model and payload is not None:
+        payload["model"] = upstream_model
+        body = json.dumps(payload).encode()
+
+    # Ollama não implementa count_tokens (e pode travar o daemon) — estima local.
+    if upstream == OLLAMA_URL and path.endswith("/count_tokens"):
+        return JSONResponse({"input_tokens": max(1, len(body) // 4)})
+
+    headers = _upstream_headers(dict(req.headers), upstream)
+    has_auth = "authorization" in headers or "x-api-key" in headers
+    print(f"[relay] {req.method} {path} model={model!r} auth={'yes' if has_auth else 'NO'} -> {upstream}",
+          flush=True)
+
+    upstream_req = client.build_request(
+        req.method, upstream + path, headers=headers, content=body
+    )
+    try:
+        r = await client.send(upstream_req, stream=True)
+    except httpx.TransportError as e:
+        return JSONResponse(
+            {
+                "type": "error",
+                "error": {
+                    "type": "api_error",
+                    "message": f"upstream {upstream} indisponível: {e}",
+                },
+            },
+            status_code=502,
+        )
+    content_type = r.headers.get("content-type", "text/event-stream")
+
+    async def gen():
+        try:
+            async for chunk in r.aiter_bytes():
+                yield chunk
+        finally:
+            await r.aclose()
+
+    return StreamingResponse(
+        gen(), status_code=r.status_code, headers={"content-type": content_type}
+    )
+
+
+async def _ollama_models() -> list[dict[str, str]]:
+    """Models do Ollama local; lista vazia se o daemon não responde."""
+    try:
+        r = await client.get(f"{OLLAMA_URL}/api/tags", timeout=2.0)
+        parsed: object = r.json()
+    except Exception:
+        return []
+    if not isinstance(parsed, dict):
+        return []
+    tags = parsed.get("models")
+    if not isinstance(tags, list):
+        return []
+    out: list[dict[str, str]] = []
+    for tag in tags:
+        name = tag.get("name") if isinstance(tag, dict) else None
+        if isinstance(name, str):
+            out.append(
+                {"id": f"anthropic/ollama/{name}", "display_name": f"Ollama {name}"}
+            )
+    return out
+
+
+@app.get("/v1/models")
+async def models():
+    return JSONResponse({"data": MODELS + await _ollama_models(), "object": "list"})
+
+
+@app.api_route("/v1/messages", methods=["POST"])
+async def messages(req: Request):
+    return await _forward(req, "/v1/messages")
+
+
+@app.api_route("/v1/messages/count_tokens", methods=["POST"])
+async def count_tokens(req: Request):
+    return await _forward(req, "/v1/messages/count_tokens")
+
+
+@app.api_route("/{path:path}", methods=["GET", "POST", "PUT", "PATCH", "DELETE"])
+async def fallback(path: str, req: Request):
+    return await _forward(req, "/" + path)
+
+
+def main() -> None:
+    fd = int(os.environ.get("RELAY_FD", "3"))
+    uvicorn.run(app, fd=fd, log_level="warning", access_log=False)
+
+
+if __name__ == "__main__":
+    main()

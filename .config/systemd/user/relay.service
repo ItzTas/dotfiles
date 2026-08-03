@@ -1,0 +1,11 @@
+[Unit]
+Description=Claude relay (socket-activated)
+Requires=relay.socket
+After=relay.socket
+
+[Service]
+Type=simple
+WorkingDirectory=%h/.cache/litellm
+EnvironmentFile=%h/.config/litellm/.env
+ExecStart=%h/.local/bin/claude-relay
+Restart=no
