@@ -660,13 +660,6 @@ if (( ${+commands[claude]} )); then
 
     ccr() {
         local token_key _i
-        local -a model_args=()
-
-        if [[ "$1" == "-d" || "$1" == "--deepseek" ]]; then
-            model_args=(--model claude-deepseek-v4-pro)
-            shift
-        fi
-
         token_key="$(cat "$HOME/.config/zsh/secrets/omnirouter-token")"
 
         if ! __omniroute_up "$token_key"; then
@@ -677,9 +670,11 @@ if (( ${+commands[claude]} )); then
             done
         fi
 
+        # Discovery: sem isso o /model só lista os models nativos do Claude Code.
+        CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1 \
         ANTHROPIC_BASE_URL="http://localhost:20128" \
         ANTHROPIC_AUTH_TOKEN="$token_key" \
-        command claude "${model_args[@]}" "$@"
+        command claude "$@"
 
         if ! ss -tn 2>/dev/null | grep -q ':20128'; then
             "$HOME/.local/bin/omniroute" stop >/dev/null 2>&1

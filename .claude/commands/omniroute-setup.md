@@ -124,8 +124,8 @@ curl -s http://127.0.0.1:20128/v1/messages -H "Authorization: Bearer $KEY" \
 
 - **`ccr`** — sessão Claude Code via OmniRoute (token em
   `~/.config/zsh/secrets/omnirouter-token`); sobe o daemon se preciso, para no idle.
-- **`ccr -d`** / **`ccr --deepseek`** — mesma sessão abrindo direto no combo
-  `claude-deepseek-v4-pro`.
+  Exporta `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1`, então o `/model` lista
+  Claude (assinatura) e os combos `claude-deepseek-v4-flash|pro` no mesmo picker.
 - **`cct`** — sessão via relay leve (porta 4000, fallback manual).
 - Sessões gateway usam `ANTHROPIC_AUTH_TOKEN` → connectors do claude.ai ficam
   desabilitados nelas (warning esperado).
