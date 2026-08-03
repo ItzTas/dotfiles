@@ -662,7 +662,6 @@ if (( ${+commands[claude]} )); then
         local token_key _i
         local -a model_args=()
 
-        # -d/--deepseek: abre a sessão já no DeepSeek (o /model troca depois).
         if [[ "$1" == "-d" || "$1" == "--deepseek" ]]; then
             model_args=(--model claude-deepseek-v4-pro)
             shift
