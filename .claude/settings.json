@@ -4,7 +4,7 @@
       "DesignSync"
     ]
   },
-  "model": "claude/claude-sonnet-4-6-medium",
+  "model": "claude-gemini-3.1-flash-lite",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -65,5 +65,5 @@
       }
     }
   },
-  "effortLevel": "xhigh"
+  "effortLevel": "high"
 }
