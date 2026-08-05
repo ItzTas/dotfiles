@@ -19,3 +19,23 @@ Do not read rule files for types you are not touching.
 
 If a change touches several of these types, read each matching file. If a file type isn't listed
 here, there is no mandatory linter for it.
+
+## Before declaring a linter "not installed"
+
+**Most of these tools live in Neovim's Mason install, which is not on `PATH`.** Never conclude a
+linter is missing (and never fall back to a weaker check, skip the lint, or offer to install
+anything) until you've looked in the Mason bin directory:
+
+```bash
+ls ~/.local/share/nvim/mason/bin/
+```
+
+If the executable is there, run it from that path — e.g. `~/.local/share/nvim/mason/bin/hadolint
+<file>` — or prepend the directory for the whole lint pass:
+
+```bash
+PATH="$HOME/.local/share/nvim/mason/bin:$PATH" golangci-lint run ./...
+```
+
+Only after the tool is absent from both `PATH` and Mason does the rule file's "not installed"
+fallback apply. Same check before installing anything: don't install a tool Mason already has.
