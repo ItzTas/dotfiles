@@ -1,5 +1,5 @@
 ---
-description: Load my mandatory linter rules per file type (Dockerfiles → hadolint + trivy config; Go → golangci-lint full standard set; Python → basedpyright; Kotlin → ktlint + detekt; Bash → shellcheck; Zsh → zsh -n)
+description: Load my mandatory linter rules per file type (Dockerfiles → hadolint + trivy config; Go → golangci-lint full standard set; Python → basedpyright; Kotlin → ktlint + detekt; Bash → shellcheck; Zsh → zsh -n; Tailwind/UnoCSS utility classes → tailwindcss-language-server diagnostics verified against the project's real engine version)
 ---
 
 These are my mandatory linter rules, split per file type to keep context small. Whenever you edit
@@ -15,6 +15,7 @@ Do not read rule files for types you are not touching.
 | Kotlin (`.kt`, `.kts`) | `~/.claude/commands/linters/kotlin.md` |
 | Bash / POSIX sh (`.sh`, `.bash`, or a `bash`/`sh` shebang) | `~/.claude/commands/linters/bash.md` |
 | Zsh (`.zsh`, `.zshrc`/`.zshenv`, or a `zsh` shebang) | `~/.claude/commands/linters/zsh.md` |
+| Tailwind-style utility classes (Tailwind or UnoCSS `presetWind*`, in `.svelte`/`.html`/`.jsx`/`.tsx`/`.vue`/`.astro`) | `~/.claude/commands/linters/tailwind.md` |
 
 If a change touches several of these types, read each matching file. If a file type isn't listed
 here, there is no mandatory linter for it.
