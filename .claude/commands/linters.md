@@ -22,7 +22,8 @@ here, there is no mandatory linter for it.
 
 ## Before declaring a linter "not installed"
 
-**Most of these tools live in Neovim's Mason install, which is not on `PATH`.** Never conclude a
+**Most of these tools live in Neovim's Mason install, which may not be on the `PATH` of the shell
+you're running in (session shells can predate the `PATH` change in `zshenv`).** Never conclude a
 linter is missing (and never fall back to a weaker check, skip the lint, or offer to install
 anything) until you've looked in the Mason bin directory:
 
