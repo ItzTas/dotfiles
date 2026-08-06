@@ -1,4 +1,6 @@
+node = "latest"
+
 [settings]
-auto-install = true
-telemetry = false
-auto-clean = false
+    auto-clean   = false
+    auto-install = true
+    telemetry    = false
