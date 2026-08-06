@@ -4,7 +4,7 @@
       "DesignSync"
     ]
   },
-  "model": "opus[1m]",
+  "model": "sonnet",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -49,7 +49,8 @@
     "humanizer@humanizer": true,
     "gopls-lsp@claude-plugins-official": true,
     "caveman@caveman": true,
-    "security-guidance@claude-plugins-official": true
+    "security-guidance@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "humanizer": {
@@ -65,5 +66,5 @@
       }
     }
   },
-  "effortLevel": "xhigh"
+  "effortLevel": "high"
 }

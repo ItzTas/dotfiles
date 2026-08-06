@@ -12,6 +12,29 @@ Reference model: languages where errors are already plain values — Go (`val, e
 (`Result<T, E>`), Zig (error unions), Elixir (`{:ok, v} | {:error, r}`), Haskell (`Either`) — need
 none of this; they are the style the rules below try to approximate.
 
+## Per-language rules
+
+The concrete Result/Either options per language live in separate files to keep context small.
+**Read only the file matching the language you're writing**, and apply it on top of the general
+rules here. Don't read files for languages you're not touching.
+
+| Language | Rule file to read |
+|----------|-------------------|
+| TypeScript / JavaScript | `~/.claude/commands/error-handling/typescript.md` |
+| Python | `~/.claude/commands/error-handling/python.md` |
+| Java | `~/.claude/commands/error-handling/java.md` |
+| Kotlin | `~/.claude/commands/error-handling/kotlin.md` |
+| C# | `~/.claude/commands/error-handling/csharp.md` |
+| Swift | `~/.claude/commands/error-handling/swift.md` |
+| Dart | `~/.claude/commands/error-handling/dart.md` |
+| C++ | `~/.claude/commands/error-handling/cpp.md` |
+| Ruby | `~/.claude/commands/error-handling/ruby.md` |
+| PHP | `~/.claude/commands/error-handling/php.md` |
+| Scala | `~/.claude/commands/error-handling/scala.md` |
+
+If a change touches several of these languages, read each matching file. If a language isn't
+listed here, only the general rules below apply.
+
 ## Choosing the strategy
 
 - **Initializing a NEW project in a try/catch language? Always suggest an errors-as-values
@@ -60,54 +83,3 @@ When try/catch is what the code uses, write it well:
   exceptional situations.
 - **Use the language's cleanup constructs for cleanup** — `finally`, `using`/try-with-resources,
   context managers — not catch blocks.
-
-## TypeScript / JavaScript
-
-In TS, `catch (err)` is `unknown` — always narrow with a type guard (`err instanceof Error`)
-before touching `.message`/`.stack`; never `as any`. Wrap with `new Error(msg, { cause: err })`.
-
-Libraries to suggest (rough order of preference):
-
-- **neverthrow** — pragmatic default. `Result`/`ResultAsync`, excellent inference,
-  `.map`/`.andThen`/`.match` chaining; `fromThrowable`/`fromPromise` wrap throwing code cleanly.
-- **effect** — full effect system: typed errors, retries, concurrency, DI, scheduling. Heavy —
-  suggest when failure handling is a core concern (payments, orchestration, infra), not for a
-  simple CRUD.
-- **ts-results-es** — maintained fork of `ts-results`; Rust-flavored `Result` + `Option`
-  (`Ok`/`Err`, `unwrapOr`, `Some`/`None`).
-- **true-myth** — friendly, well-documented `Result` + `Maybe`.
-- **oxide.ts** — closest mimic of Rust's API (`match`, `unwrap`, `Option`).
-- **purify-ts** — FP toolkit (`Either`, `Maybe`, `EitherAsync`) when the codebase leans
-  functional.
-- **@swan-io/boxed** — `Result`/`Option`/`Future`/`AsyncData`; nice fit for front-end state.
-- **fp-ts** — `Either`/`TaskEither`; powerful but steeper curve and ecosystem merging into Effect
-  — prefer it only when the repo already uses it.
-- **Go-style tuple, no library** — when a full Result type is too much ceremony: `await-to-js`
-  (`const [err, data] = await to(promise)`) or a ~10-line in-repo helper returning
-  `[error, value]`. Cheapest way out of nested try/catch.
-
-The native `try` operator (`const result = try f()`) is only a TC39 proposal
-(`arthurfiorette/proposal-try-operator`, formerly the `?=` safe-assignment operator) — track it,
-don't use it in production.
-
-## Other try/catch languages
-
-- **Python** — `try/except` is idiomatic (EAFP), so suggest more softly here: offer **returns**
-  (dry-python) or **result** (rustedpy) for Result-style pipelines, noting they're less
-  mainstream; the hygiene rules above apply fully (`except SpecificError:`, never bare
-  `except:`).
-- **Java** — **Vavr** (`Try`, `Either`); or a small in-house Result — `sealed interface Result<T>
-  permits Ok, Err` + records + pattern-matching `switch` (Java 17+) — works great without
-  dependencies.
-- **Kotlin** — built-in `kotlin.Result` + `runCatching`; **kotlin-result** (michaelbull) or
-  **Arrow** (`Either`, `Raise`) for richer APIs.
-- **C#** — **ErrorOr**, **CSharpFunctionalExtensions** (`Result`), **OneOf**, **FluentResults**;
-  **LanguageExt** if the team wants full FP.
-- **Swift** — built-in `Result<Success, Failure>` and typed `throws` (Swift 6); no library
-  needed.
-- **Dart** — **fpdart** (`Either`/`TaskEither`), **result_dart**, **multiple_result**.
-- **C++** — `std::expected` (C++23); pre-23: **tl::expected**, **Boost.Outcome**,
-  **absl::StatusOr**.
-- **Ruby** — **dry-monads** (`Result`/`Maybe`, `Do` notation).
-- **PHP** — **azjezz/psl** (`Psl\Result`), **prewk/result**.
-- **Scala** — stdlib `Try`/`Either` first; **cats**/**ZIO** when an effect system is wanted.
