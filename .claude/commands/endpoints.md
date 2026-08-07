@@ -18,7 +18,8 @@ More than one target is fine — generate all of them from the same discovered e
 target** is given, or a non-flag token isn't one of the three, **ask me** which target(s) to use
 instead of guessing.
 
-**Flags** (single-dash forms like `-dry-run` mean the same thing):
+**Flags** — single-dash and single-letter forms are equivalent: `--filter` = `-filter` = `-f`,
+`--dry-run` = `-dry-run` = `-d`, `--out` = `-out` = `-o`, `--check` = `-check` = `-c`.
 
 - `--filter <prefix|tag>` — only include the endpoints matching that path prefix or tag
   (e.g. `--filter /users`); useful in large APIs.

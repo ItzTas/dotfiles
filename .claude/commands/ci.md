@@ -12,6 +12,7 @@ Argument (`$ARGUMENTS`):
 - **no argument** → report the latest run's status and, if failed, the diagnosis.
 - **`--fix`** (or `fix`) → also apply the fix locally, verify, and push so CI re-runs.
 - a **run/pipeline id or URL** → target that specific run instead of the branch's latest.
+- **Flag forms** — all equivalent: `--fix` = `-fix` = `-f` = bare `fix`.
 
 Separately, I may include **other requests** in the same message; those are not the argument — do
 them first, then check CI.

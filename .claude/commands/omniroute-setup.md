@@ -9,7 +9,7 @@ Configura o **OmniRoute** (gateway local, porta 20128) expondo **Claude
 Anthropic único, com start on-demand e stop-on-idle pelos wrappers. Convive com
 o relay leve (skill `relay-setup`), que fica como fallback.
 
-Use esta skill em máquina nova ou pra reconfigurar. Flags: `-setup` = `--setup`.
+Use esta skill em máquina nova ou pra reconfigurar. Flags — equivalentes: `--setup` = `-setup` = `-s`.
 
 ## Arquitetura
 

@@ -11,6 +11,7 @@ Optional argument (`$ARGUMENTS`):
 - no argument → run all benchmarks.
 - a **filter** → run only benchmarks matching it.
 - `--baseline <name>` → compare the run against a previously saved baseline by that name.
+- **Flag forms** — all equivalent: `--baseline` = `-baseline` = `-b`.
 
 Separately, I may include **other requests** in the same message; those are not arguments — do them
 first, then benchmark.

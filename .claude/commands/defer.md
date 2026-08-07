@@ -19,6 +19,8 @@ Everything I passed with the command: `$ARGUMENTS`
 - Instead of a duration, the first token may be the keyword **`final`** (or **`--final`**,
   **`afterall`**, **`--afterall`**, case-insensitive): that's not a time — it defers the prompt to
   the **end of the work queue** (see "Final mode" below).
+- **Flag forms** — all equivalent: `--durable` = `-durable` = `-d`, `--final` = `-final` = `-f` =
+  bare `final`, `--afterall` = `-afterall` = `-a` = bare `afterall`.
 
 ### Parsing the duration into total seconds (N)
 

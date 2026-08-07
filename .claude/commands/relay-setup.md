@@ -11,7 +11,7 @@ quando a última sessão encerra. Substitui o antigo gateway LiteLLM (skill
 `litellm-setup`, aposentada).
 
 Use esta skill em uma máquina nova (ou pra reconfigurar) e replique os passos.
-Convenções de flags: aceita `-setup` igual a `--setup`.
+Convenções de flags — equivalentes: `--setup` = `-setup` = `-s`.
 
 ## Arquitetura
 

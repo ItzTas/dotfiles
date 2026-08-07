@@ -11,9 +11,11 @@ command** to run in the terminal **at the very end**, after all other work is fi
 
 - The argument is a **shell command**, not a natural-language instruction. **Do not run it now**
   (unless the **`--now`** flag is given — see "Now" below) and **do not rewrite or "improve" it** —
-  run it **verbatim**. A leading **`--durable`**, **`--persistent`**, **`--auto`**, or **`--now`**
-  (with or without the `--`) is a flag, not part of the command — strip it and treat the rest as the
-  command (see "Durable", "Persistent", "Now" and "Command history" below).
+  run it **verbatim**. A leading **`--durable`**, **`--persistent`**, **`--auto`**, or **`--now`** is
+  a flag, not part of the command — strip it and treat the rest as the command (see "Durable",
+  "Persistent", "Now" and "Command history" below).
+- **Flag forms** — all equivalent: `--durable` = `-durable` = `-d`, `--persistent` = `-persistent` =
+  `-p`, `--auto` = `-auto` = `-a`, `--now` = `-now` = `-n`.
 - **If this arrives while you're mid-work** — thinking, executing another prompt, or with a subagent
   running — **do not interrupt** that work to run it, and don't run it right after that piece
   finishes either. Just register it and keep going; it runs **only at the very end of everything**.

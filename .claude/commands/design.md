@@ -14,6 +14,7 @@ Argument (`$ARGUMENTS`):
   `pull` (read remote files I name), `push` (sync local components up), `create` (new project).
   Default: infer the most useful action from my message; if nothing else is said, `list`.
 - an optional **`--project <uuid>`** target, and/or a **component or path** to scope the work to.
+- **Flag forms** — all equivalent: `--project` = `-project` = `-p`.
 
 Follow exactly these steps:
 

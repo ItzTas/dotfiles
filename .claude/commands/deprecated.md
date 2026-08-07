@@ -13,6 +13,7 @@ Argument (`$ARGUMENTS`):
   each. Change nothing.
 - **`--fix`** (or `fix`) → migrate the code to remove the deprecations, keeping the same logic.
 - an optional **lib or path** after the flag → scope the work to that library or that path only.
+- **Flag forms** — all equivalent: `--fix` = `-fix` = `-f` = bare `fix`.
 
 Separately, I may include **other requests** in the same message; those are not arguments — do them
 first, then run this.

@@ -11,6 +11,8 @@ This command takes optional arguments: `$ARGUMENTS`
 - The **base branch** to rebase onto. If none is given, detect it (see step 2).
 - The flag **`--all-branches`** (also accept `--all` or a bare `all-branches`): besides syncing the
   current branch as usual, fast-forward **every other local branch** to its upstream (see step 4b).
+- **Flag forms** — all equivalent: `--all-branches` = `-all-branches` = `-a` = `--all` = `-all` =
+  bare `all-branches`.
 
 Separately, I may include **other requests** in the same message, before or after `/sync`. Those
 are not the argument — handle them as normal work.

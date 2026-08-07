@@ -12,6 +12,7 @@ Argument (`$ARGUMENTS`):
 - **no argument** → report only.
 - **`--fix`** (or `fix`) → propose and (after I confirm) apply refactors.
 - an optional **path** → limit the scan to that path (default: whole repo).
+- **Flag forms** — all equivalent: `--fix` = `-fix` = `-f` = bare `fix`.
 
 Separately, I may include **other requests** in the same message; those are not arguments — do them
 first, then run this.

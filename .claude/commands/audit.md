@@ -14,6 +14,7 @@ Optional argument (`$ARGUMENTS`): a path to scan, or a scope flag:
 - `--staged` → scan only staged changes (use as a pre-commit gate).
 - `--history` → include the full git history (secrets often survive in old commits even after being
   removed from HEAD).
+- **Flag forms** — all equivalent: `--staged` = `-staged` = `-s`, `--history` = `-history` = `-h`.
 
 Separately, I may include **other requests** in the same message; those are not arguments — do them
 first, then run the audit.
