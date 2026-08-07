@@ -38,7 +38,7 @@ Follow exactly these steps:
 - If report-only, stop here.
 
 ## 4. Fix mode — correct carefully
-Only when `--fix` was given (per my `~/.claude/commands/git-conventions.md`, create a new branch first if I'm on a protected
+Only when `--fix` was given (per my `~/.claude/rules/git-conventions.md`, create a new branch first if I'm on a protected
 branch: `main`/`master`/`dev`/`develop`/`pre-homolog`):
 - **Safe to auto-apply**: typos in comments, docs, and string literals — apply them (`typos
   --write-changes` or targeted edits).

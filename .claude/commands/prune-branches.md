@@ -28,7 +28,7 @@ Follow exactly these steps:
   (fall back to `main`, then `master`). Tell me which base you picked; if you can't infer one, **ask me**.
 
 ## 2. Define what must never be deleted
-- **Protected branches** (per my `~/.claude/commands/git-conventions.md`): `main`, `master`, `dev`, `develop`, `pre-homolog`,
+- **Protected branches** (per my `~/.claude/rules/git-conventions.md`): `main`, `master`, `dev`, `develop`, `pre-homolog`,
   plus the chosen base branch.
 - **The current branch** — get it with `git branch --show-current` and always exclude it.
 - Anything in this set is off-limits no matter what the later steps find.

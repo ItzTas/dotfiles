@@ -1,7 +1,3 @@
----
-description: Load my cross-project rule — read the target repo's CLAUDE.md before changing another project
----
-
 This is my rule for working across projects. Whenever I ask you to work in a **different
 repository/project** than the one you're currently in, load this file and follow it.
 

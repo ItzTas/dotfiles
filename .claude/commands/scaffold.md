@@ -40,7 +40,7 @@ ConfirmDialog` a modal with confirm/cancel") — treat that as part of the spec.
   store modules, DI/providers, menu/nav entries, etc. Match exactly how an existing sibling is wired.
 
 ### 5. Follow conventions
-- Respect my code style rules in `~/.claude/commands/code-style.md` (guard clauses over nesting, a map over `switch`/`if-else` for
+- Respect my code style rules in `~/.claude/rules/code-style.md` (guard clauses over nesting, a map over `switch`/`if-else` for
   simple key→value) and any per-project conventions already in the codebase.
 
 ### 6. Verify

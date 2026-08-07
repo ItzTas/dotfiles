@@ -1,7 +1,3 @@
----
-description: Load my PnP LSP guide — fix editor/LSP module resolution in Plug'n'Play projects (editor SDKs, vtsls, workspace TS); never disable PnP
----
-
 This is my guide for making editors/LSPs work in **Plug'n'Play (PnP)** projects. Load it whenever
 you're dealing with editor or language-server issues in a project that uses PnP. Yarn is the main
 implementation (see the Yarn section below), but the principles apply to any PnP setup.

@@ -1,7 +1,3 @@
----
-description: Load my git conventions (branching and commit rules) before any git work
----
-
 These are my personal git conventions. Whenever you are about to do **any git work** — creating
 branches, committing, reverting, opening PRs/MRs — load this file and follow every rule below.
 

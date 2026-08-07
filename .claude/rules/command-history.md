@@ -1,7 +1,3 @@
----
-description: Load my shell-command history rules — record commands I explicitly ask to run; suggest corrections for wrong ones
----
-
 These are my rules for keeping a history of shell commands. They apply whenever I **explicitly ask
 you to run a shell command** — directly in a message ("run X"), through a registration like
 `/command` or a final-mode `/defer`, or when I run one myself with the **`!` prefix** in the input

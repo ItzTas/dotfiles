@@ -1,7 +1,3 @@
----
-description: Load my error-handling rules — when writing try/catch (any language) or starting a new project in a try/catch language; prefer Result/errors-as-values, plus try/catch hygiene
----
-
 These are my error-handling rules for **every language whose main error mechanism is
 `try`/`catch`** (or an equivalent: `try/except` in Python, `begin/rescue` in Ruby, `do/catch` in
 Swift, …). Load this file whenever you are about to **write or edit a `try`/`catch` block** or to
@@ -20,17 +16,17 @@ rules here. Don't read files for languages you're not touching.
 
 | Language | Rule file to read |
 |----------|-------------------|
-| TypeScript / JavaScript | `~/.claude/commands/error-handling/typescript.md` |
-| Python | `~/.claude/commands/error-handling/python.md` |
-| Java | `~/.claude/commands/error-handling/java.md` |
-| Kotlin | `~/.claude/commands/error-handling/kotlin.md` |
-| C# | `~/.claude/commands/error-handling/csharp.md` |
-| Swift | `~/.claude/commands/error-handling/swift.md` |
-| Dart | `~/.claude/commands/error-handling/dart.md` |
-| C++ | `~/.claude/commands/error-handling/cpp.md` |
-| Ruby | `~/.claude/commands/error-handling/ruby.md` |
-| PHP | `~/.claude/commands/error-handling/php.md` |
-| Scala | `~/.claude/commands/error-handling/scala.md` |
+| TypeScript / JavaScript | `~/.claude/rules/error-handling/typescript.md` |
+| Python | `~/.claude/rules/error-handling/python.md` |
+| Java | `~/.claude/rules/error-handling/java.md` |
+| Kotlin | `~/.claude/rules/error-handling/kotlin.md` |
+| C# | `~/.claude/rules/error-handling/csharp.md` |
+| Swift | `~/.claude/rules/error-handling/swift.md` |
+| Dart | `~/.claude/rules/error-handling/dart.md` |
+| C++ | `~/.claude/rules/error-handling/cpp.md` |
+| Ruby | `~/.claude/rules/error-handling/ruby.md` |
+| PHP | `~/.claude/rules/error-handling/php.md` |
+| Scala | `~/.claude/rules/error-handling/scala.md` |
 
 If a change touches several of these languages, read each matching file. If a language isn't
 listed here, only the general rules below apply.

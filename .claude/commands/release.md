@@ -49,7 +49,7 @@ through to the manual steps below if I explicitly say to.
 - Present: **new version**, the **changelog entry**, the **target** (which branch/remote), and the
   tag name. **Ask for my confirmation before committing, tagging, or publishing** — this is
   outward-facing and hard to undo.
-- **Branch handling** (per my `~/.claude/commands/git-conventions.md`): if I'm on a protected branch (`main`/`master`/`dev`/
+- **Branch handling** (per my `~/.claude/rules/git-conventions.md`): if I'm on a protected branch (`main`/`master`/`dev`/
   `develop`/`pre-homolog`), ask whether to cut the release directly here or via a release branch + PR
   — don't silently commit to a protected branch.
 

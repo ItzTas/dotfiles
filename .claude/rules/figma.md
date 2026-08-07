@@ -1,7 +1,3 @@
----
-description: Load my Figma guide — work with Figma via the official MCP (loading its mandatory /figma-* skills), falling back to the Figma REST API with $FIGMA_CLAUDE_TOKEN when the MCP fails
----
-
 This is my guide for working with Figma. Load it whenever you're about to touch Figma in any way —
 `mcp__figma__*` tools, a figma.com URL, design files, FigJam, design systems, or design↔code work.
 

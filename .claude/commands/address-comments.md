@@ -50,7 +50,7 @@ Follow exactly these steps:
 - After the edits, run the build/tests to confirm nothing broke.
 
 ## 5. Commit and push
-- Commit the fixes following my `~/.claude/commands/git-conventions.md` rules (atomic, Conventional Commits, imperative, **no**
+- Commit the fixes following my `~/.claude/rules/git-conventions.md` rules (atomic, Conventional Commits, imperative, **no**
   `Co-Authored-By`). Group by logical change; reference the review where it helps (e.g. what was
   addressed).
 - Push so the PR/MR updates.

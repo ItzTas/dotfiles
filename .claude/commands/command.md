@@ -74,7 +74,7 @@ command** to run in the terminal **at the very end**, after all other work is fi
 ## Command history
 
 - Registered commands follow my general **command-history rules** — load
-  `~/.claude/commands/command-history.md` (the `command-history` command/skill) and apply them:
+  `~/.claude/rules/command-history.md` (rule file) and apply them:
   successful commands are recorded in `.claude/command-history/history.txt` (project capped at
   500 lines, global at 1000); a **wrong** command is never recorded — suggest the most likely
   correction instead (from the history or another known command), even in auto-accept mode.

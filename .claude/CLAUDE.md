@@ -27,7 +27,7 @@
 
 ## Cross-project work
 
-- **When I ask you to work in a different repository/project than the one you're currently in, first load `~/.claude/commands/cross-project.md`** (the `cross-project` command/skill) and follow it — in short: read the target project's `CLAUDE.md` (and any relevant nested ones) before making changes there.
+- **When I ask you to work in a different repository/project than the one you're currently in, first load `~/.claude/rules/cross-project.md`** (rule file) and follow it — in short: read the target project's `CLAUDE.md` (and any relevant nested ones) before making changes there.
 
 ## Response Effort
 
@@ -39,11 +39,11 @@
 
 ## Shell commands
 
-- **Whenever I explicitly ask you to run a shell command, first load `~/.claude/commands/command-history.md`** (the `command-history` command/skill) and follow it — commands that run successfully get recorded in the history (capped: 500 lines project, 1000 global); a wrong/non-existent command is never recorded — suggest the most likely correction instead, from the history or another known command (with `auto`/`--auto`, run it directly).
+- **Whenever I explicitly ask you to run a shell command, first load `~/.claude/rules/command-history.md`** (rule file) and follow it — commands that run successfully get recorded in the history (capped: 500 lines project, 1000 global); a wrong/non-existent command is never recorded — suggest the most likely correction instead, from the history or another known command (with `auto`/`--auto`, run it directly).
 
 ## Code Style
 
-- **Whenever you're about to write or edit code, first load my code style rules from `~/.claude/commands/code-style.md`** (the `code-style` command/skill) and apply them. They cover: guard clauses, functions over `else` branches, running independent async calls concurrently (and parallelizing dependency chains), and maps / loops-with-hashmaps over `switch`/`if-else` chains.
+- **Whenever you're about to write or edit code, first load my code style rules from `~/.claude/rules/code-style.md`** (rule file) and apply them. They cover: guard clauses, functions over `else` branches, running independent async calls concurrently (and parallelizing dependency chains), and maps / loops-with-hashmaps over `switch`/`if-else` chains.
 
 ## Tools
 
@@ -54,23 +54,23 @@
 
 - **Whenever a package manager is in play (installing deps, lockfiles, a package-manager entry in
   `.prototools`, or editing shared docs/CI that mention one), first read
-  `~/.claude/rules/package-managers.md`** (plain rule file, not a command — read it with `Read`) and
-  follow it — in short: the package manager I run locally is *my* personal choice, so don't change the project's
-  documented one and don't rewrite shared docs/CI to match it unless I explicitly ask for the
-  migration; adding my tool's artifacts to ignore files is fine.
+  `~/.claude/rules/package-managers.md`** (rule file) and follow it — in short: the package manager
+  I run locally is *my* personal choice, so don't change the project's documented one and don't
+  rewrite shared docs/CI to match it unless I explicitly ask for the migration; adding my tool's
+  artifacts to ignore files is fine.
 
 ## Figma
 
-- **Whenever you're about to work with Figma (any `mcp__figma__*` tool, a figma.com URL, design/FigJam work), first load `~/.claude/commands/figma.md`** (the `figma` command/skill) and follow it
+- **Whenever you're about to work with Figma (any `mcp__figma__*` tool, a figma.com URL, design/FigJam work), first load `~/.claude/rules/figma.md`** (rule file) and follow it
 
 ## LSP under PnP
 
-- **When dealing with editor/language-server issues in a project that uses Plug'n'Play (a `.pnp.cjs`, no `node_modules` — e.g. Yarn's `nodeLinker: pnp`), first load `~/.claude/commands/lsp-pnp.md`** (the `lsp-pnp` command/skill) and follow it. Golden rule: point the editor at the PnP-patched tooling/SDK; **never** disable PnP.
+- **When dealing with editor/language-server issues in a project that uses Plug'n'Play (a `.pnp.cjs`, no `node_modules` — e.g. Yarn's `nodeLinker: pnp`), first load `~/.claude/rules/lsp-pnp.md`** (rule file) and follow it. Golden rule: point the editor at the PnP-patched tooling/SDK; **never** disable PnP.
 
 ## Linters
 
-- **Whenever you edit or create a file with mandatory linters, load `~/.claude/commands/linters.md`** (the `linters` command/skill) and run the linters it lists for that file type, fixing what they report before considering the task complete. Currently covers Dockerfiles, Go, Python, Kotlin, Bash, and Zsh.
+- **Whenever you edit or create a file with mandatory linters, load `~/.claude/rules/linters.md`** (rule file) and run the linters it lists for that file type, fixing what they report before considering the task complete. Currently covers Dockerfiles, Go, Python, Kotlin, Bash, and Zsh.
 
 ## Git
 
-- **Before any git work (branching, committing, reverting, PRs/MRs), first load my git conventions from `~/.claude/commands/git-conventions.md`** (the `git-conventions` command/skill) and follow them. Non-negotiable highlights: never work directly on shared/protected branches (create a new branch); atomic Conventional Commits (`feat:` used sparingly); and **NEVER** add `Co-Authored-By: Claude ...` or any co-authorship attribution to me — commits must appear as solely mine.
+- **Before any git work (branching, committing, reverting, PRs/MRs), first load my git conventions from `~/.claude/rules/git-conventions.md`** (rule file) and follow them. Non-negotiable highlights: never work directly on shared/protected branches (create a new branch); atomic Conventional Commits (`feat:` used sparingly); and **NEVER** add `Co-Authored-By: Claude ...` or any co-authorship attribution to me — commits must appear as solely mine.

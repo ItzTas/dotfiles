@@ -4,7 +4,7 @@ argument-hint: [wip|quick|fast|fastest|quickest] [detailed|verbose] [push] [pr] 
 allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(yadm*), Read, Glob
 ---
 
-Commit all pending changes following the commit rules in my `~/.claude/commands/git-conventions.md`
+Commit all pending changes following the commit rules in my `~/.claude/rules/git-conventions.md`
 (atomic commits, Conventional Commits `type(scope): description` in the imperative,
 **no** `Co-Authored-By` or any attribution to you — the commit is solely mine, and
 `feat:` used sparingly).

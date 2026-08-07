@@ -50,7 +50,7 @@ Follow exactly these steps:
   the source.
 - If a source branch was given and it differs from the current branch, it needs to be checked out
   (`git switch <source>`) so that the commit and push land on the source branch — but **ask me
-  before switching**, per the branch rule in `~/.claude/commands/git-conventions.md`. Use
+  before switching**, per the branch rule in `~/.claude/rules/git-conventions.md`. Use
   `AskUserQuestion` with at least: **switch to `<source>` as I asked**, **stay on the current branch
   and open the PR/MR from it instead**, and any branch that already has an open PR/MR against the
   same target (so I don't stack yet another one). Don't switch until I answer.
@@ -74,7 +74,7 @@ Follow exactly these steps:
 ## 3. Commit and push all changes
 - Make sure you are on the **source branch** determined in step 1 before committing.
 - Check the state with `git status` and `git diff`.
-- Commit **all** pending changes following the rules in my `~/.claude/commands/git-conventions.md`:
+- Commit **all** pending changes following the rules in my `~/.claude/rules/git-conventions.md`:
   atomic commits, Conventional Commits, imperative mood, **no** `Co-Authored-By` or any
   attribution to you (the commit is solely mine).
 - Run `git push` for the source branch (use `-u` if it has no upstream yet).
