@@ -12,17 +12,17 @@
           {
             "type": "command",
             "command": "~/.claude/hooks/command-history.sh",
-            "timeout": 10
+            "timeout": 15
           },
           {
             "type": "command",
             "command": "~/.claude/hooks/flow-tracker.sh",
-            "timeout": 10
+            "timeout": 15
           },
           {
             "type": "command",
             "command": "~/.claude/hooks/advise-tracker.sh",
-            "timeout": 10
+            "timeout": 15
           }
         ]
       }
@@ -34,7 +34,7 @@
           {
             "type": "command",
             "command": "~/.claude/guards/advise-guard.sh",
-            "timeout": 10
+            "timeout": 15
           }
         ]
       }
