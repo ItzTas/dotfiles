@@ -33,10 +33,6 @@
 
 - **Match thinking effort to the problem.** For simple or trivial questions, or whenever I ask for a quick answer, don't overthink — answer directly and concisely without spending time on extended reasoning. Reserve deeper thinking for genuinely complex or ambiguous problems.
 
-## Skills
-
-- **Single-dash flags work for all my commands/skills.** Whenever one of my commands/skills (`~/.claude/commands/*.md`) documents a flag — `--fix`, `--durable`, `--auto`, `--final`, etc. — accept the single-dash form (`-f`, `-d`, `-a`, `-f`, …) as exactly the same flag.
-
 ## Shell commands
 
 - **Whenever I explicitly ask you to run a shell command, first load `~/.claude/rules/command-history.md`** (rule file) and follow it — commands that run successfully get recorded in the history (capped: 500 lines project, 1000 global); a wrong/non-existent command is never recorded — suggest the most likely correction instead, from the history or another known command (with `auto`/`--auto`, run it directly).

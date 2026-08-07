@@ -123,7 +123,7 @@ curl -s http://127.0.0.1:20128/v1/messages -H "Authorization: Bearer $KEY" \
 ## Uso
 
 - **`ccr`** — sessão Claude Code via OmniRoute (token em
-  `~/.config/zsh/secrets/omnirouter-token`); sobe o daemon se preciso, para no idle.
+  `~/.config/zsh/secrets/omniroute-claude-key`); sobe o daemon se preciso, para no idle.
   Exporta `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1`, então o `/model` lista
   Claude (assinatura) e os combos `claude-deepseek-v4-flash|pro` no mesmo picker.
 - **`cct`** — sessão via relay leve (porta 4000, fallback manual).
@@ -135,4 +135,4 @@ curl -s http://127.0.0.1:20128/v1/messages -H "Authorization: Bearer $KEY" \
 
 Nunca commitar: `~/.omniroute/` inteiro (SQLite com credenciais criptografadas,
 `.env` com chaves de criptografia, `admin_password`, `cli_api_key`) e
-`~/.config/zsh/secrets/omnirouter-token`.
+`~/.config/zsh/secrets/omniroute-claude-key`.
