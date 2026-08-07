@@ -682,7 +682,7 @@ if (( ${+commands[claude]} )); then
 
     if (( ${+commands[omniroute]} )); then
         ccr() {
-            local key_file token_key
+            local key_file token_key __omniroute_log=""
             key_file="$HOME/.config/zsh/secrets/omniroute-claude-key"
 
             if [[ ! -r "$key_file" ]]; then
@@ -692,13 +692,16 @@ if (( ${+commands[claude]} )); then
 
             token_key="$(cat "$key_file")"
 
-            if ! __omniroute_up "$token_key"; then
+            if ! __omniroute_up; then
                 __omniroute_start || return 1
 
-                if ! __omniroute_wait "$token_key"; then
+                if ! __omniroute_wait; then
                     echo "❌ omniroute gateway did not come up on :20128" >&2
+                    __omniroute_dump_log
                     return 1
                 fi
+
+                [[ -n "$__omniroute_log" ]] && rm -f "$__omniroute_log"
             fi
 
             CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1 \
@@ -707,12 +710,13 @@ if (( ${+commands[claude]} )); then
                 command claude "$@"
         }
 
-        # The gateway sporadically blocks for ~3s (periodic provider health checks
-        # stalling the Node event loop), so the timeout sits well above that. A
-        # genuinely dead port fails instantly with ECONNREFUSED, never waiting.
+        # `/healthz` is a static 200 in ~5ms and needs no auth. Never probe
+        # `/v1/models`: it rebuilds the whole 2000+ model pool across every
+        # provider and takes 15s+ on a cold cache, so a perfectly healthy gateway
+        # reads as dead and drags the caller through a pointless restart wait.
+        # A genuinely dead port fails instantly with ECONNREFUSED.
         __omniroute_up() {
-            curl -sf -m 8 -o /dev/null http://127.0.0.1:20128/v1/models \
-                -H "Authorization: Bearer $1"
+            curl -sf -m 2 -o /dev/null http://127.0.0.1:20128/healthz
         }
 
         # Polls every 200ms and returns the moment the gateway answers. `local -F
@@ -722,7 +726,7 @@ if (( ${+commands[claude]} )); then
             local -F SECONDS=0
 
             while (( SECONDS < 20 )); do
-                __omniroute_up "$1" && return 0
+                __omniroute_up && return 0
                 sleep 0.2
             done
 
@@ -742,17 +746,47 @@ if (( ${+commands[claude]} )); then
             fi
 
             if [[ -x "$cli" ]]; then
-                "$cli" serve --daemon --no-open >/dev/null 2>&1
-                return 0
+                __omniroute_spawn "$cli" serve --daemon --no-open
+                return $?
             fi
 
             if (( ${+commands[omniroute]} )); then
-                command omniroute serve --daemon --no-open --no-tray >/dev/null 2>&1
-                return 0
+                __omniroute_spawn omniroute serve --daemon --no-open --no-tray
+                return $?
             fi
 
             echo "❌ omniroute not found in ~/.local/bin or \$PATH" >&2
             return 1
+        }
+
+        # The CLI is a `#!/usr/bin/env node` script, so it dies on the spot when
+        # the node version pinned in ~/.prototools isn't installed. Keep whatever
+        # it printed instead of swallowing it and then waiting 20s for a daemon
+        # that was never launched. Output goes to a file, not a pipe: a command
+        # substitution here would hang until the daemon closed its stdout.
+        __omniroute_spawn() {
+            local ret
+            __omniroute_log="${TMPDIR:-/tmp}/omniroute-start.$$.log"
+
+            command "$@" >|"$__omniroute_log" 2>&1
+            ret=$?
+
+            (( ret == 0 )) && return 0
+
+            echo "❌ omniroute failed to start (exit $ret)" >&2
+            __omniroute_dump_log
+
+            return $ret
+        }
+
+        # The CLI also exits 0 after doing nothing at all — the proto node shim
+        # prints `missing_executable` and gives up that way — so this log is the
+        # only clue left when the daemon never binds the port.
+        __omniroute_dump_log() {
+            [[ -s "$__omniroute_log" ]] || return 0
+
+            echo "$(<"$__omniroute_log")" >&2
+            rm -f "$__omniroute_log"
         }
 
     fi
