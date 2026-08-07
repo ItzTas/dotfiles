@@ -1,0 +1,157 @@
+#!/usr/bin/env python3
+"""3-way merge driver for .claude/settings.json under yadm.
+
+Claude Code rewrites "model" and "effortLevel" in ~/.claude/settings.json every
+time the model or the effort level is switched, on every machine. Combined with
+yadm's auto-commit that produces a conflict on those exact lines on nearly every
+sync between the desktop and the notebook.
+
+This driver neutralises only those keys: all three sides are rewritten to a
+single agreed value before merging, so they can no longer disagree. Everything
+else (hooks, plugins, statusLine, permissions) goes through a normal 3-way text
+merge and still reports real conflicts.
+
+Winner for the volatile keys: "theirs". During a rebase git labels the commit
+being replayed as "theirs", so the last replayed commit wins and the finished
+file carries the most recent choice made on this machine.
+
+Registered in ~/.gitattributes as:  .claude/settings.json merge=claude-settings
+"""
+
+import json
+import re
+import subprocess
+import sys
+from typing import cast
+
+VOLATILE = ("model", "effortLevel")
+
+Settings = dict[str, object]
+
+
+def read(path: str) -> str:
+    with open(path, encoding="utf-8") as handle:
+        return handle.read()
+
+
+def write(path: str, text: str) -> None:
+    with open(path, "w", encoding="utf-8") as handle:
+        _ = handle.write(text)
+
+
+def parsed(text: str) -> Settings | None:
+    try:
+        loaded: object = json.loads(text)
+    except ValueError:
+        return None
+
+    if not isinstance(loaded, dict):
+        return None
+
+    return cast("Settings", loaded)
+
+
+def line_pattern(key: str) -> re.Pattern[str]:
+    return re.compile(
+        r'^(?P<indent>[ \t]*)"' + re.escape(key) + r'"(?P<sep>[ \t]*:[ \t]*)'
+        r'(?P<value>"(?:[^"\\]|\\.)*"|true|false|null|-?[0-9][^,\n]*)'
+        r"(?P<tail>,?[ \t]*)$",
+        re.MULTILINE,
+    )
+
+
+def force(text: str, key: str, value: object) -> str:
+    """Rewrite key's line to value, leaving the rest of the file byte-identical."""
+    pattern = line_pattern(key)
+    if not pattern.search(text):
+        return text
+
+    encoded = json.dumps(value)
+
+    def replace(match: re.Match[str]) -> str:
+        return (
+            f'{match.group("indent")}"{key}"{match.group("sep")}'
+            f'{encoded}{match.group("tail")}'
+        )
+
+    return pattern.sub(replace, text, count=1)
+
+
+def winner(ours: Settings, theirs: Settings, key: str) -> object | None:
+    if key in theirs:
+        return theirs[key]
+    if key in ours:
+        return ours[key]
+    return None
+
+
+def merge_file(
+    base_path: str, ours_path: str, theirs_path: str, marker_size: str
+) -> int:
+    # git merge-file writes the merged result into its first argument.
+    return subprocess.run(
+        [
+            "git",
+            "merge-file",
+            f"--marker-size={marker_size}",
+            "-L",
+            "ours",
+            "-L",
+            "base",
+            "-L",
+            "theirs",
+            ours_path,
+            base_path,
+            theirs_path,
+        ],
+        check=False,
+    ).returncode
+
+
+def main(argv: list[str]) -> int:
+    if len(argv) < 4:
+        print(f"usage: {argv[0]} %O %A %B [%L] [%P]", file=sys.stderr)
+        return 2
+
+    base_path, ours_path, theirs_path = argv[1], argv[2], argv[3]
+    marker_size = argv[4] if len(argv) > 4 and argv[4].isdigit() else "7"
+
+    base_text = read(base_path)
+    ours_text = read(ours_path)
+    theirs_text = read(theirs_path)
+
+    ours = parsed(ours_text)
+    theirs = parsed(theirs_text)
+
+    # A side that is not valid JSON gives us nothing safe to normalise against,
+    # so fall back to the plain text merge git would have done anyway.
+    if ours is None or theirs is None:
+        return merge_file(base_path, ours_path, theirs_path, marker_size)
+
+    for key in VOLATILE:
+        value = winner(ours, theirs, key)
+        if value is None:
+            continue
+        base_text = force(base_text, key, value)
+        ours_text = force(ours_text, key, value)
+        theirs_text = force(theirs_text, key, value)
+
+    write(base_path, base_text)
+    write(ours_path, ours_text)
+    write(theirs_path, theirs_text)
+
+    status = merge_file(base_path, ours_path, theirs_path, marker_size)
+    if status != 0:
+        return status
+
+    # Never report a clean merge that Claude Code would refuse to parse.
+    if parsed(read(ours_path)) is None:
+        message = "merged result is not valid JSON, falling back to a conflict"
+        print(f"claude-settings-merge: {message}", file=sys.stderr)
+        return 1
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))

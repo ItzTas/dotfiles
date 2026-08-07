@@ -1,1 +1,7 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+
+# Claude Code rewrites model/effortLevel on every switch, on every machine.
+# The driver neutralises those keys so they stop conflicting; everything else
+# in the file still merges (and still conflicts) normally.
+# Driver registered per machine by bootstrap.x.d/set_up/claude_settings_merge.sh
+.claude/settings.json merge=claude-settings
