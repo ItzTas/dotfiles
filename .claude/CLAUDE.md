@@ -27,7 +27,7 @@
 
 ## Cross-project work
 
-- **When I ask you to work in a different repository/project than the one you're currently in, first load `~/.claude/rules/cross-project.md`** (rule file) and follow it — in short: read the target project's `CLAUDE.md` (and any relevant nested ones) before making changes there.
+- **When I ask you to work in a different repository/project than the one you're currently in, first load `~/.claude/rules/cross-project.md`** (rule file) and follow it — in short: read the target project's `CLAUDE.md` (and any relevant nested ones) before making changes there, and keep it in force for the whole time you work in that project, re-reading it as often as the harness re-injects a local `CLAUDE.md` (after compaction, when coming back to that project, before a new batch of edits).
 
 ## Response Effort
 
