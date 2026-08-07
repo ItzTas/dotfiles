@@ -35,7 +35,7 @@
 
 ## Skills
 
-- **Single-dash flags work for all my commands/skills.** Whenever one of my commands/skills (`~/.claude/commands/*.md`) documents a flag — `--fix`, `--durable`, `--auto`, `--final`, etc. — accept the single-dash form (`-fix`, `-durable`, `-auto`, `-final`, …) as exactly the same flag.
+- **Single-dash flags work for all my commands/skills.** Whenever one of my commands/skills (`~/.claude/commands/*.md`) documents a flag — `--fix`, `--durable`, `--auto`, `--final`, etc. — accept the single-dash form (`-f`, `-d`, `-a`, `-f`, …) as exactly the same flag.
 
 ## Shell commands
 
