@@ -77,6 +77,24 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
   (e.g. `.claude/tasks/$CLAUDE_CODE_SESSION_ID/refactor-auth.md`). Keep the file updated as you work
   and reference it from the TODO entry. Only skip the file when the item is trivial or will be done
   right away — don't create files for those.
+- **If the request came with an image, record its path in the task file.** This applies **only**
+  when you're actually writing a task `.md` under `.claude/tasks/$CLAUDE_CODE_SESSION_ID/` (per the
+  bullet above) — never create a file just to store an image path, and don't add paths to the short
+  TODO entry.
+  - Put them near the top of the file, in an `## Images` section, as **absolute** paths, one per
+    line, each with a one-line note on what it shows and why it matters for the item (e.g. `screen
+    with the broken spacing`, `reference layout to reproduce`). Absolute, because you may be in a
+    different working directory by the time you read it back.
+  - **Re-read the image when you pick the item up**, and whenever the visual detail matters — that's
+    the whole point of keeping the path: the image content is long gone from context by then, but
+    the file is still on disk.
+  - Only include images **actually related to that item**. If one image covers several items, repeat
+    its path in each of their files. If a message brings an image but no task file is warranted,
+    ignore this rule.
+  - **When the image has no path** (pasted inline into the prompt rather than dragged/attached from
+    disk, so there's no file on disk to point at), don't invent one: write a short **description** of
+    it in the `## Images` section instead, marked as `no path — pasted inline`, and tell me in one
+    line that saving it to a file would let you re-read it later.
 - **When you no longer need one of these task files** (the item is done and the details won't be
   needed anymore), you **may delete it**. The same goes for the session folder itself: once you no
   longer need your `.claude/tasks/$CLAUDE_CODE_SESSION_ID/` directory (it's empty, or everything in
