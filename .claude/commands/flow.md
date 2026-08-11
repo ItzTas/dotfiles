@@ -123,60 +123,11 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
 - Only treat it as a real contradiction when the requests are truly **incompatible**. Requests that
   merely add to or complement each other are **not** contradictions — just queue both.
 
-### 8. `taskfiles` mode — every item gets a file I can edit while you work
-This rule is **off by default** and only applies while `taskfiles` mode is **on** (turned on with
-`/flow taskfiles [on]`, at activation or at any point later; off again with `/flow taskfiles off`).
-The point of the mode: **every item lands on disk as a `.md` before you touch it**, so I can open
-that file and edit it — refine the spec, add constraints, cut scope — **while you're still
-working**, without sending you another message.
-
-- **Write a file for every item, no exceptions.** As soon as a request arrives and goes into the
-  TODO list, **immediately** create its `.md` under
-  `.claude/tasks/$CLAUDE_CODE_SESSION_ID/<kebab-case-name>.md` (same location, naming and
-  session-isolation rules as rule 5 — including the `## Images` handling). This holds **even for
-  trivial one-line items** and even for items you're about to start right away: rule 5's "only skip
-  the file when the item is trivial" carve-out **does not apply** in this mode.
-- **File first, work second.** Never start an item before its file exists on disk. For the item
-  you're starting immediately, write the file, then begin.
-- **Tell me the path** in one line when you create it (relative path is fine), so I can open it.
-- **Structure it so it's editable.** Keep it short but complete enough to be worked from later:
-
-  ```markdown
-  # <title>
-
-  ## Goal
-  <what I asked for, in my terms>
-
-  ## Context
-  <files, symbols, constraints, decisions already made>
-
-  ## Plan
-  - [ ] step
-  - [ ] step
-
-  ## My edits
-  <-- I write here; treat this section as authoritative -->
-
-  ## Notes
-  <what you learned while doing it>
-  ```
-
-- **Re-read the file right before you start the item**, and again at every natural checkpoint while
-  it's in progress (finishing a step, before a big edit, when coming back from a subagent). The file
-  on disk — not the original prompt in context — is the **source of truth** for that item.
-- **My edits win.** Anything I wrote in the file (especially under `## My edits`) overrides the
-  original request and your own plan. When you notice the file changed mid-work, say so in one line
-  ("`refactor-auth.md` changed — picking up the new constraint") and adapt. If my edit contradicts
-  work you already finished for that item, that's rule 7 — flag it and ask.
-- **Keep the file updated as you go** (tick the plan boxes, append to `## Notes`), but **never
-  overwrite or reword my `## My edits` section**, and never rewrite the whole file blind — I may
-  have it open. Prefer targeted edits over full rewrites.
-- **Subagents get the path, not just the text.** When you hand an item to a subagent, tell it to
-  read the task file first and re-read it at checkpoints, and to follow the same "don't touch
-  `## My edits`" rule.
-- **Don't delete task files while this mode is on**, even when the item is done — I may still be
-  reading or editing them. Rule 5's deletion permission is suspended until I turn the mode off or
-  exit FLOW MODE.
+### 8. `taskfiles` mode lives in its own command
+There's an optional add-on, **off by default**, that makes **every** item — trivial ones included —
+get its own `.md` **before** the work starts, re-read as you go, so I can edit it while you work.
+Its rules are in **`/flow:taskfiles`** (`~/.claude/commands/flow/taskfiles.md`): read that file when
+I turn it on, and treat its rules as sitting on top of these. Nothing here changes until I run it.
 
 ## Control subcommands
 These are run as `/flow <keyword> [args]` while in FLOW MODE. When the argument is one of these
@@ -198,12 +149,11 @@ stays active (except for the exit keywords).
 - **`/flow parallel [on|off]`** — Control rule 4's parallelism. `on` (also the default when bare)
   lets you spawn parallel subagents for independent items; `off` forces **serial** execution (one
   item at a time, no parallel subagents). The setting persists until I change it or exit the mode.
-- **`/flow taskfiles [on|off]`** — Control rule 8. `on` (also the default when bare) makes **every**
-  item — trivial ones included — get its own `.md` under `.claude/tasks/$CLAUDE_CODE_SESSION_ID/`,
-  written **before** the work starts and re-read as you go, so I can edit it while you work; `off`
-  goes back to rule 5's default (files only when the item warrants one). The setting persists until
-  I change it or exit the mode. When turning it **on** mid-session, **backfill**: write files for
-  every item still `pending` or `in progress` that doesn't have one yet, then report the paths.
+- **`/flow:taskfiles [on|off] [first request]`** — Rule 8's add-on, in its own command file. `on`
+  (also the default when bare) makes **every** item get its own `.md` before the work starts; `off`
+  goes back to rule 5's default. Read `~/.claude/commands/flow/taskfiles.md` for the full rules when
+  I run it. The setting persists until I change it or exit the mode. `/flow taskfiles ...` (space
+  instead of `:`) means the same thing — dispatch it to that file.
 - **`/flow defer <task>`** — **Deprioritize** the matching task: move it to the **end** of the
   queue without cancelling it (if it's `in progress`, hold it and pick it up later). If `<task>` is
   ambiguous or matches no queued item, ask me which one I mean.
@@ -233,9 +183,10 @@ Dispatch on `$ARGUMENTS` (first word, case-insensitive):
   `<task>` is ambiguous or matches no queued item, ask me which one I mean.
 - **A control keyword** (`status`, `recap`, `clear`, `pause`, `resume`, `parallel`, `taskfiles`,
   `defer`, `help`) → don't treat it as a new work item; carry out the matching action from "Control
-  subcommands" above. **`taskfiles` and `parallel` may also be followed by a first request** (e.g.
-  `/flow taskfiles fix the login redirect`, `/flow taskfiles on fix the login redirect`) → enter
-  FLOW MODE with that setting on and queue the rest of the argument as the first work item.
+  subcommands" above. For `taskfiles`, read `~/.claude/commands/flow/taskfiles.md` and follow its
+  own dispatch — it accepts a first request after the keyword (e.g.
+  `/flow:taskfiles fix the login redirect`), meaning: enter FLOW MODE with the add-on on and queue
+  the rest as the first work item.
 - **Otherwise** → confirm in one line that you've entered **FLOW MODE**, create the initial TODO
   list (including the first request if it came in `$ARGUMENTS`/this message), and start working.
   From then on, follow the rules above for everything I send.
