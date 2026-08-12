@@ -55,6 +55,15 @@
   rewrite shared docs/CI to match it unless I explicitly ask for the migration; adding my tool's
   artifacts to ignore files is fine.
 
+## Libraries / dependencies
+
+- **Before adding any third-party library to a project or recommending one to me, first load
+  `~/.claude/rules/libraries.md`** (rule file) and follow it — in short: **never** add or suggest a
+  library without checking first that it isn't deprecated, archived, or unmaintained (registry
+  deprecation flag, repo status, last release, successor, advisories); your knowledge cutoff is not
+  a source, so verify against the registry/repo, report what you found in one line, and if it's
+  dead, name the replacement and let me decide.
+
 ## Figma
 
 - **Whenever you're about to work with Figma (any `mcp__figma__*` tool, a figma.com URL, design/FigJam work), first load `~/.claude/rules/figma.md`** (rule file) and follow it
