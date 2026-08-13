@@ -17,10 +17,6 @@ Do not read rule files for types you are not touching.
 If a change touches several of these types, read each matching file. If a file type isn't listed
 here, there is no mandatory linter for it.
 
-**A diagnostic I paste in routes by its source tag too**, even when you weren't editing that file:
-`ts (…)` → `typescript.md` (tsserver/vtsls, including its hint-only `80xxx` codes),
-`tailwindcss (…)` → `tailwind.md`. Read the matching file before touching the code it points at.
-
 ## Before declaring a linter "not installed"
 
 **Most of these tools live in Neovim's Mason install, which may not be on the `PATH` of the shell
