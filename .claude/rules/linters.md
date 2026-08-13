@@ -6,6 +6,7 @@ Do not read rule files for types you are not touching.
 | File type                                                                                                             | Rule file to read                          |
 | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
 | Dockerfiles                                                                                                           | `~/.claude/rules/linters/dockerfile.md` |
+| TypeScript / JavaScript (`.ts`, `.tsx`, `.mts`, `.cts`, `.js`, `.jsx`, `<script lang="ts">` in `.svelte`/`.vue`)      | `~/.claude/rules/linters/typescript.md` |
 | Go (`.go`)                                                                                                            | `~/.claude/rules/linters/go.md`         |
 | Python (`.py`, `.pyi`)                                                                                                | `~/.claude/rules/linters/python.md`     |
 | Kotlin (`.kt`, `.kts`)                                                                                                | `~/.claude/rules/linters/kotlin.md`     |
@@ -15,6 +16,10 @@ Do not read rule files for types you are not touching.
 
 If a change touches several of these types, read each matching file. If a file type isn't listed
 here, there is no mandatory linter for it.
+
+**A diagnostic I paste in routes by its source tag too**, even when you weren't editing that file:
+`ts (…)` → `typescript.md` (tsserver/vtsls, including its hint-only `80xxx` codes),
+`tailwindcss (…)` → `tailwind.md`. Read the matching file before touching the code it points at.
 
 ## Before declaring a linter "not installed"
 
