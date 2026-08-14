@@ -1,3 +1,7 @@
 {
-    "code-runner.runInTerminal": true
+    "code-runner.runInTerminal": true,
+    "editor.lineNumbers": "relative",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    }
 }
