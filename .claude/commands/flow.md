@@ -93,11 +93,35 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
     its path in each of their files. If a message brings an image but no task file is warranted,
     ignore this rule.
   - **When the image has no path** (pasted inline into the prompt rather than dragged/attached from
-    disk, so there's no file on disk to point at), don't invent one: write a short **description** of
-    it in the `## Images` section instead, marked as `no path — pasted inline`, and tell me in one
-    line that saving it to a file would let you re-read it later.
+    disk, so there's no file on disk to point at), don't invent one and don't settle for a
+    description: **save the image to disk yourself** and point the `## Images` entry at what you
+    saved.
+    - Save it **in the same directory as the task file** — `.claude/tasks/$CLAUDE_CODE_SESSION_ID/`,
+      never anywhere else — with a kebab-case name tied to the item and the real extension (e.g.
+      `.claude/tasks/$CLAUDE_CODE_SESSION_ID/refactor-auth-broken-spacing.png`). Same session
+      isolation as the task files: only your own session's folder. Record it in `## Images` as an
+      **absolute** path, with the same one-line note as any other image.
+    - **Getting the bytes:** the image only exists in context as pixels, so pull it from the
+      clipboard — a just-pasted image is normally still there:
+
+      ```bash
+      wl-paste --type image/png > .claude/tasks/$CLAUDE_CODE_SESSION_ID/<name>.png   # Wayland
+      xclip -selection clipboard -t image/png -o > .claude/tasks/$CLAUDE_CODE_SESSION_ID/<name>.png   # X11
+      ```
+
+      `wl-paste --list-types` (or `xclip -selection clipboard -t TARGETS -o`) tells you which image
+      type is actually on the clipboard — use that one instead of assuming PNG.
+    - **Verify before recording the path.** The file must be non-empty and `file <path>` must report
+      an image; then **read the saved file back** and confirm it's the image I sent. The clipboard is
+      not a reliable channel — I may have copied something else since pasting, or pasted from a
+      screenshot tool that never touched it. A wrong image recorded as the item's reference is worse
+      than none.
+    - **Fallback when nothing usable lands on disk** (clipboard empty, stale, holds something else,
+      or no clipboard tool available): delete whatever you wrote, write a short **description** of
+      the image in `## Images` marked `no path — pasted inline, could not be saved`, and tell me in
+      one line so I can drag the file in.
 - **When you no longer need one of these task files** (the item is done and the details won't be
-  needed anymore), you **may delete it**. The same goes for the session folder itself: once you no
+  needed anymore), you **may delete it**, along with any image you saved next to it for that item. The same goes for the session folder itself: once you no
   longer need your `.claude/tasks/$CLAUDE_CODE_SESSION_ID/` directory (it's empty, or everything in
   it is done and won't be needed anymore), you **may delete the whole folder**. Only ever delete
   **your own** session's folder — never another session's.
