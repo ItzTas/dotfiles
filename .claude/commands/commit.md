@@ -1,6 +1,6 @@
 ---
-description: Commit everything as atomic Conventional Commits; flags: wip/quick/fast, fastest, detailed, verbose, push, pr, merge
-argument-hint: [wip|quick|fast|fastest|quickest] [detailed|verbose] [push] [pr] [merge]
+description: Commit everything as atomic Conventional Commits; flags: wip/quick/fast, fastest, detailed, verbose, push, pr, merge, force
+argument-hint: [wip|quick|fast|fastest|quickest] [detailed|verbose] [push] [pr] [merge] [force]
 allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(yadm*), Read, Glob
 ---
 
@@ -14,7 +14,7 @@ This command takes zero or more **flags** as arguments: `$ARGUMENTS`
 Flags may appear in **any order** and **more than one** may be given
 (e.g. `/commit wip push`, `/commit fast pr`, `/commit quick push pr`, `/commit fastest`,
 `/commit detailed`, `/commit detailed push`, `/commit verbose`, `/commit verbose pr`,
-`/commit pr merge`).
+`/commit pr merge`, `/commit pr force`).
 
 Separately, I may include **other requests** in the same message, either before or after the
 `/commit` invocation (e.g. "do this, that and the other `/commit`" or "`/commit` do this, that
@@ -64,6 +64,17 @@ and the other"). Those are **not** flags — they are work to do first.
   PR/MR status until it settles; if any check **fails**, **do not merge** — stop and report the
   failing check(s) to me. If `merge` is given without `pr`, treat it as `pr merge` (open the PR/MR,
   then merge it once green).
+- **`force`** — Only meaningful **together with `pr`/`merge`**: **merge even when CI is red.**
+  This is the deliberate override of `merge`'s green-only rule — don't wait for the checks, don't
+  refuse on a failure: open the PR/MR and merge it right away, whatever the pipeline says (failed,
+  cancelled, still queued or never started). Report afterwards which checks were red or pending at
+  merge time, so I know what I merged over. `force` implies `merge` (and therefore `pr` and
+  `push`): `/commit force` alone means "commit, push, open the PR/MR and merge it regardless of
+  CI". Accepted spellings: `force`, `-force`, `--force`, `force-merge`.
+  Non-CI blockers are **not** covered by `force`: merge conflicts, missing required approvals or
+  branch protection still stop the merge — report what's blocking instead of working around it. If
+  the only thing standing in the way is a branch-protection rule requiring green checks, and the
+  merge is otherwise clean, say so and ask me before reaching for `gh pr merge --admin`.
 
 If **none** of the fast modes is given, commit in the **normal, careful** mode: think about the
 best atomic split and the most accurate Conventional Commits messages.
@@ -81,7 +92,7 @@ every one it can.
 
 ### 1. Parse the flags
 - Read `$ARGUMENTS` and detect which of `wip`, `quick`, `fast`, `fastest`, `quickest`, `detailed`,
-  `verbose`, `push`, `pr`, `merge` are present.
+  `verbose`, `push`, `pr`, `merge`, `force` are present.
 - `wip`, `quick` and `fast` select **fast mode**; `fastest` and `quickest` select **fastest mode**.
   If both are present, `fastest` wins. `detailed` selects **detailed-message mode**; `verbose`
   selects **verbose mode**. If both are present, `verbose` wins. `pr` implies `push`.
@@ -90,6 +101,9 @@ every one it can.
   `fastest verbose` request is contradictory, so honor `verbose` and commit carefully.
 - `merge` implies `pr` (and therefore `push`): if I wrote `merge` without `pr`, still open the
   PR/MR and then merge it once green.
+- `force` (any of `force`, `-force`, `--force`, `force-merge`) implies `merge`, and therefore `pr`
+  and `push`. With `force` on, the green-only condition of `merge` is **off**: merge regardless of
+  the checks, without waiting for them.
 - Match `fastest`/`quickest` before `fast`/`quick` so the superlative isn't read as the base flag.
 - Ignore unrecognized tokens (they were likely extra requests handled in step 0).
 
@@ -147,7 +161,16 @@ Follow the same procedure as my `/pr` command (see `~/.claude/commands/pr.md`):
   Commits title. If both remotes exist, create both and show both links.
 
 ### 5. Merge the PR/MR (if `merge`)
-Only when `merge` was given. After the PR/MR exists:
+Only when `merge` was given. After the PR/MR exists.
+
+**If `force` was given, skip the waiting and the green check entirely:** merge the PR/MR
+immediately with `gh pr merge <number>` and/or `glab mr merge <number>`, whatever state CI is in.
+Grab the check status once (`gh pr checks <number>` / `glab ci status`) purely to report it — a
+failing or pending check does **not** stop the merge here. Non-CI blockers still do: on merge
+conflicts, missing approvals or branch protection, stop and tell me what's blocking (and ask before
+`gh pr merge --admin`). Then jump to step 6.
+
+Without `force`:
 - **Wait for the checks to finish.** GitHub: `gh pr checks --watch` (or poll
   `gh pr checks <number>` / `gh pr view <number> --json statusCheckRollup`). GitLab:
   poll `glab ci status` / `glab mr view <number>`. Keep waiting while anything is queued or
@@ -164,4 +187,5 @@ Only when `merge` was given. After the PR/MR exists:
 
 ### 6. Summary
 Show what was committed (list the commit messages), whether it was pushed, any PR/MR link(s), and
-— if `merge` was given — whether it was merged or what blocked it.
+— if `merge` was given — whether it was merged or what blocked it. With `force`, also list the
+checks that were failing or still pending when you merged.
