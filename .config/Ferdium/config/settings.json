@@ -23,6 +23,8 @@
   "spellcheckerLanguage": "en-us",
   "darkMode": true,
   "navigationBarManualActive": false,
+  "webviewPaddingSize": 6,
+  "serviceWebviewBorderRadius": 6,
   "splitMode": false,
   "splitColumns": 3,
   "fallbackLocale": "en-US",

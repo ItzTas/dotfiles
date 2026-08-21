@@ -1,0 +1,399 @@
+# Noctalia v5 — migrado de settings.json (v4, settingsVersion 59).
+# Ordem de carga: defaults embutidos → *.toml daqui → ~/.local/state/noctalia/settings.toml (GUI, vence).
+# Validar: noctalia config validate   |   recarregar: noctalia msg config-reload
+
+# ── Shell ─────────────────────────────────────────────────────────────────────
+
+[shell]
+font_family       = "JetBrainsMonoNL Nerd Font"   # ui.fontDefault
+avatar_path       = "/home/talinux/Pictures/Faces/ArchFatGuy.jpg" # general.avatarImage
+corner_radius_scale = 1.0                          # general.radiusRatio
+telemetry_enabled = false                          # general.telemetryEnabled
+show_location     = true                           # location.hideWeatherCityName = false
+settings_show_advanced = true
+
+[shell.animation]
+enabled = true                                     # general.animationDisabled = false
+speed   = 1.0                                      # general.animationSpeed
+
+[shell.shadow]
+direction = "down_right"                           # general.shadowDirection = bottom_right
+
+[shell.panel]
+control_center_placement = "attached"              # ui.panelsAttachedToBar
+open_near_click_control_center = true              # controlCenter.position = close_to_bar_button
+launcher_placement = "floating"                    # appLauncher.position = center
+launcher_position  = "center"
+
+[shell.launcher]
+categories    = true                               # appLauncher.showCategories
+sort_by_usage = true                               # appLauncher.sortByMostUsed
+app_grid      = false                              # appLauncher.viewMode = list
+pinned        = []                                 # appLauncher.pinnedApps
+# appLauncher.terminalCommand "kitty -e" → v5 usa $TERMINAL (sem "-e"): export TERMINAL=kitty
+
+[shell.mpris]
+blacklist = []                                     # audio.mprisBlacklist
+
+[shell.privacy]
+mic_filter_regex = ""                              # plugin privacy-indicator
+cam_filter_regex = ""
+
+# ── Sessão (sessionMenu) ──────────────────────────────────────────────────────
+
+[shell.session]
+grid           = false                             # largeButtonsLayout = single-row
+show_shortcuts = true                              # showKeybinds
+
+[[shell.session.actions]]
+action = "lock"
+shortcut = "1"
+countdown_seconds = 5                              # countdownDuration 5000 ms
+
+[[shell.session.actions]]
+action = "suspend"
+shortcut = "2"
+countdown_seconds = 5
+
+[[shell.session.actions]]                          # "hibernate" não é ação nativa no v5
+action = "command"
+label = "Hibernate"
+glyph = "moon"
+command = "systemctl hibernate"
+shortcut = "3"
+countdown_seconds = 5
+
+[[shell.session.actions]]
+action = "reboot"
+command = "hyprshutdown -t 'Restarting...' --post-cmd 'systemctl reboot'"
+shortcut = "4"
+countdown_seconds = 5
+
+[[shell.session.actions]]
+action = "logout"
+command = "hyprshutdown"
+shortcut = "5"
+countdown_seconds = 5
+
+[[shell.session.actions]]
+action = "shutdown"
+command = "hyprshutdown -t 'Shutting down...' --post-cmd 'systemctl poweroff'"
+shortcut = "6"
+countdown_seconds = 5
+variant = "destructive"
+
+[[shell.session.actions]]                          # rebootToUefi
+action = "command"
+label = "UEFI"
+glyph = "settings"
+command = "systemctl reboot --firmware-setup"
+shortcut = "7"
+countdown_seconds = 5
+
+# ── Tema ──────────────────────────────────────────────────────────────────────
+
+[theme]
+mode           = "dark"                            # colorSchemes.darkMode
+source         = "custom"                          # colorSchemes.predefinedScheme (esquema próprio)
+custom_palette = "Catppuccin Lavender"             # → palettes/Catppuccin Lavender.json
+pure_black_dark = false
+# colorSchemes.syncGsettings: sem equivalente direto; use templates gtk3/gtk4 abaixo se quiser.
+
+[theme.templates]
+enable_builtin_templates   = true
+builtin_ids                = []                    # templates.enableUserTheming = false
+enable_community_templates = true
+community_ids              = []
+
+# ── Wallpaper ─────────────────────────────────────────────────────────────────
+
+[wallpaper]
+enabled             = true
+directory           = "/home/talinux/Pictures/Wallpapers"
+fill_mode           = "crop"
+fill_color          = "#000000"
+transition          = ["fade", "disc", "stripes", "wipe", "honeycomb"]  # "pixelate" não existe no v5
+transition_duration = 1500
+edge_smoothness     = 0.05                         # transitionEdgeSmoothness
+transition_on_startup = true                       # skipStartupTransition = false
+
+[wallpaper.automation]
+enabled          = false                           # automationEnabled
+interval_seconds = 7200                            # randomIntervalSec
+order            = "random"                        # wallpaperChangeMode
+
+[backdrop]
+enabled        = false                             # wallpaper.overviewEnabled
+blur_intensity = 0.4                               # overviewBlur
+tint_intensity = 0.6                               # overviewTint
+
+# ── Barra ─────────────────────────────────────────────────────────────────────
+
+[bar.default]
+position           = "top"
+background_opacity = 0.0                           # bar.backgroundOpacity = 0
+radius             = 12                            # bar.frameRadius
+margin_edge        = 4                             # bar.marginVertical
+margin_ends        = 4                             # bar.marginHorizontal
+concave_edge_corners = false                       # exige margin_edge = 0
+padding            = 2                             # bar.contentPadding
+widget_spacing     = 6
+border_width       = 0.0                           # bar.showOutline = false
+shadow             = true                          # general.enableShadows
+auto_hide          = false                         # bar.displayMode = always_visible
+show_on_workspace_switch = true
+reserve_space      = true                          # bar.enableExclusionZoneInset
+capsule            = true                          # bar.showCapsule
+capsule_opacity    = 0.5                           # bar.capsuleOpacity
+capsule_fill       = "surface_variant"             # bar.capsuleColorKey = none → padrão
+
+start  = ["launcher", "clock", "temp", "cpu", "ram", "swap", "active_window", "media", "privacy"]
+center = ["workspaces"]
+end    = ["tray", "volume", "brightness", "network", "control-center", "notifications", "battery"]
+
+[bar.default.dead_zone.actions]
+right  = "panel-toggle control-center"            # bar.rightClickAction = controlCenter
+middle = "none"                                    # bar.middleClickAction = none
+
+# ── Widgets ───────────────────────────────────────────────────────────────────
+
+[widget.launcher]
+glyph = "rocket"                                   # Launcher.icon
+
+[widget.clock]
+format          = "{:%H:%M %a, %b %d}"             # Clock.formatHorizontal "HH:mm ddd, MMM dd"
+vertical_format = "{:%H %M - %d %m}"               # Clock.formatVertical
+tooltip_format  = "{:%H:%M %a, %b %d}"
+
+# SystemMonitor v4 (cpuTemp, cpuUsage, memoryUsage, swapUsage, compacto, fonte mono) → 4 sysmon
+[widget.temp]
+type          = "sysmon"
+stat          = "cpu_temp"
+visualization = "none"                             # compactMode
+font_family   = "monospace"                        # useMonospaceFont
+
+[widget.cpu]
+type          = "sysmon"
+stat          = "cpu_usage"
+visualization = "none"
+font_family   = "monospace"
+
+[widget.ram]
+type          = "sysmon"
+stat          = "ram_used"                         # showMemoryAsPercent = false
+visualization = "none"
+font_family   = "monospace"
+
+[widget.swap]
+type          = "sysmon"
+stat          = "swap_pct"
+visualization = "none"
+font_family   = "monospace"
+
+[widget.active_window]
+max_length   = 145                                 # ActiveWindow.maxWidth
+title_scroll = "on_hover"                          # scrollingMode = hover
+display      = "icon_and_text"                     # showIcon + showText
+
+[widget.media]
+max_length        = 145                            # MediaMini.maxWidth
+artist_first      = true                           # showArtistFirst
+title_scroll      = "on_hover"
+hide_when_no_media = true                          # hideMode = hidden
+
+[widget.privacy]                                   # plugin:privacy-indicator → widget nativo
+hide_inactive  = false
+icon_spacing   = 4
+active_color   = "primary"
+inactive_color = "outline"
+
+[widget.workspaces]
+label_source             = "id"                    # labelMode = index
+max_label_chars          = 2                       # characterCount
+labels_only_when_occupied = true                   # showLabelsOnlyWhenOccupied
+pill_scale               = 0.6                     # pillSize
+focused_color            = "primary"
+font_weight              = 700                     # fontWeight = bold
+hide_when_empty          = false                   # hideUnoccupied
+
+[widget.tray]
+pinned       = ["Arch-Update", "proton.vpn.app.gtk"]
+hidden       = []                                  # blacklist
+drawer       = true                                # drawerEnabled
+hide_passive = false                               # hidePassive
+
+[widget.volume]
+show_label = false                                 # displayMode = onhover
+
+[widget.volume.actions]
+middle = "exec pwvucontrol || pavucontrol"         # Volume.middleClickCommand
+
+[widget.brightness]
+show_label = false                                 # displayMode = onhover
+
+[widget.network]                                   # plugin:network-manager-vpn → widget nativo
+show_label     = false                             # displayMode = onhover
+vpn_status     = "replace"
+show_vpn_label = false
+
+[widget.control-center]
+glyph = "noctalia"                                 # ControlCenter.icon
+
+[widget.notifications]
+hide_when_no_unread = false                        # hideWhenZeroUnread
+
+[widget.battery]
+display_mode = "glyph"                             # displayMode = icon-always
+device       = "auto"                              # deviceNativePath = __default__
+
+# ── Control Center ────────────────────────────────────────────────────────────
+
+[control_center]
+show_session_button = true
+
+# v4: Network, Bluetooth, WallpaperSelector, NoctaliaPerformance | Notifications, PowerProfile, KeepAwake, NightLight
+# v5 mostra até 6; NoctaliaPerformance não existe. "wallpaper" ficou de fora — troque se preferir.
+[[control_center.shortcuts]]
+type = "wifi"
+[[control_center.shortcuts]]
+type = "bluetooth"
+[[control_center.shortcuts]]
+type = "notification"
+[[control_center.shortcuts]]
+type = "power_profile"
+[[control_center.shortcuts]]
+type = "caffeine"
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[control_center.calendar]
+show_events_card  = true                           # location.showCalendarEvents
+show_week_numbers = true                           # location.showWeekNumberInCalendar
+
+[calendar]
+enabled = true
+
+[weather]
+enabled = true                                     # location.weatherEnabled
+unit    = "metric"                                 # useFahrenheit = false
+effects = true                                     # weatherShowEffects
+
+[location]
+auto_locate = false
+address     = "Roraima"                            # location.name
+
+# ── Dock ──────────────────────────────────────────────────────────────────────
+
+[dock]
+enabled             = true
+position            = "bottom"
+auto_hide           = true                         # displayMode = auto_hide
+reserve_space       = false                        # não empurrar janelas (v4 não reservava espaço)
+background_opacity  = 1.0
+margin_edge         = 8                            # dockType = floating
+show_running        = true
+show_dots           = false                        # showDockIndicator
+launcher_position   = "start"                      # showLauncherIcon + launcherPosition
+active_monitor_only = true                         # onlySameOutput
+pinned              = []
+# launcherUseDistroLogo: sem equivalente; use launcher_custom_image = "/caminho/logo.svg"
+
+[desktop_widgets]
+enabled = true
+
+# ── Lock screen / idle ────────────────────────────────────────────────────────
+
+[lockscreen]
+enabled             = true
+fingerprint         = true                         # general.allowPasswordWithFprintd
+lock_before_suspend = true                         # general.lockOnSuspend
+blur_intensity      = 0.0                          # general.lockScreenBlur
+tint_intensity      = 0.0                          # general.lockScreenTint
+
+[idle]
+behavior_order          = ["lock", "screen-off", "suspend"]
+pre_action_fade_seconds = 5.0                      # idle.fadeDuration
+
+[idle.behavior.lock]
+action  = "lock"
+timeout = 360                                      # idle.lockTimeout
+enabled = true
+
+[idle.behavior.screen-off]
+action  = "screen_off"
+timeout = 400                                      # idle.screenOffTimeout
+enabled = true
+
+[idle.behavior.suspend]
+action  = "suspend"
+timeout = 2200                                     # idle.suspendTimeout
+enabled = true
+
+# ── Teclas de navegação interna (general.keybinds) ────────────────────────────
+
+[keybinds]
+validate = ["Return", "KP_Enter", "Ctrl+y"]
+cancel   = ["Escape"]
+left     = ["Left", "Ctrl+h"]
+right    = ["Right", "Ctrl+l"]
+up       = ["Up", "Ctrl+k"]
+down     = ["Down", "Ctrl+j"]
+delete   = ["Delete"]
+
+# ── Serviços ──────────────────────────────────────────────────────────────────
+
+[audio]
+enable_overdrive = false                           # audio.volumeOverdrive
+enable_sounds    = false                           # notifications.sounds.enabled / volumeFeedback
+
+[brightness]
+enable_ddcutil = true                              # brightness.enableDdcSupport
+
+[nightlight]
+enabled           = false
+force             = false
+temperature_day   = 6500
+temperature_night = 4000
+
+[notification]
+enable_daemon      = true
+position           = "top_right"
+layer              = "overlay"                     # notifications.overlayLayer
+background_opacity = 0.65
+
+[osd]
+enabled            = true
+position           = "top_right"
+background_opacity = 0.7
+
+[battery]
+warning_threshold = 20                             # systemMonitor.batteryWarningThreshold
+
+[system.monitor]
+cpu_usage_activity_threshold = 80.0                # *WarningThreshold → activity
+cpu_usage_critical_threshold = 90.0
+cpu_temp_activity_threshold  = 80.0
+cpu_temp_critical_threshold  = 90.0
+ram_pct_activity_threshold   = 80.0
+ram_pct_critical_threshold   = 90.0
+swap_pct_activity_threshold  = 80.0
+swap_pct_critical_threshold  = 90.0
+disk_used_pct_activity_threshold = 80.0
+disk_used_pct_critical_threshold = 90.0
+gpu_temp_activity_threshold  = 80.0
+gpu_temp_critical_threshold  = 90.0
+
+# ── Plugins ───────────────────────────────────────────────────────────────────
+# v4 → v5: kaomoji-provider → noctalia/kaomoji; video-wallpaper → noctalia/mpvpaper;
+# color-scheme-creator → decksters-lab/palette-creator; github-feed → raycursive/github-prs (só PRs, usa `gh`).
+# Sem equivalente: giphy-search. privacy-indicator e network-manager-vpn viraram widgets nativos (privacy / network).
+# linux-wallpaperengine-controller (desativado na v4) → tadomika_ari/w-engine, se quiser.
+
+[plugins]
+enabled = [
+  "noctalia/kaomoji",
+  "noctalia/mpvpaper",
+  "decksters-lab/palette-creator",
+  "raycursive/github-prs",
+]
+auto_update = "all"                                # plugins.autoUpdate
