@@ -1,40 +1,27 @@
 #!/bin/env bash
 
 _install_plugins() {
-    local plugins_dir="$HOME/.config/zsh/plugins/repos"
-    mkdir -p "$plugins_dir"
-    local plugins=(
-        "https://github.com/zsh-users/zsh-syntax-highlighting.git"
-        "https://github.com/zsh-users/zsh-autosuggestions.git"
-        "https://github.com/zsh-users/zsh-completions"
-    )
+    local antidote="/usr/share/zsh-antidote/antidote.zsh"
+    local bundle_file="$HOME/.config/zsh/.zsh_plugins.txt"
 
-    local plugin
-    for plugin in "${plugins[@]}"; do
-        local plugin_name
-        plugin_name=$(basename "$plugin" .git)
-        local target_dir="$plugins_dir/$plugin_name"
-
-        if [ ! -d "$target_dir/.git" ]; then
-            echo "Cloning plugin: $plugin_name... → $target_dir"
-            git clone "$plugin" "$target_dir" >/dev/null 2>&1 &
-        else
-            echo "Updating plugin: $plugin_name..."
-            git -C "$target_dir" pull >/dev/null 2>&1 &
-        fi
-    done
-
-    wait
-}
-
-_install_ohmyzsh() {
-    if [ ! -d "$HOME/.oh-my-zsh" ]; then
-        git clone https://github.com/ohmyzsh/ohmyzsh.git "$HOME/.oh-my-zsh"
+    if [ ! -f "$antidote" ]; then
+        echo "antidote is not installed. Skipping zsh plugin installation."
+        return
     fi
+
+    if [ ! -f "$bundle_file" ]; then
+        echo "No bundle file at $bundle_file. Skipping zsh plugin installation."
+        return
+    fi
+
+    # Clone every bundle without sourcing it, so the first interactive shell
+    # starts with the plugins already in $ANTIDOTE_HOME.
+    echo "Installing zsh plugins with antidote..."
+    ZDOTDIR="$HOME/.config/zsh" zsh -c \
+        "source '$antidote'; antidote bundle < '$bundle_file' >/dev/null"
 }
 
 _set_up() {
-    # _install_ohmyzsh
     _install_plugins
 }
 

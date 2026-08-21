@@ -1,6 +1,6 @@
 .zcompdump
 history
 .dircolors
-plugins/repos/
+.zsh_plugins.zsh
 completions/generated/
 /secrets/

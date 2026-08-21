@@ -271,6 +271,7 @@ _install_pacman_packages() {
         # Others
         "termpicker-bin"
         "zsh"
+        "zsh-antidote"
     )
 
     local installed=()

@@ -64,9 +64,10 @@ fi
 
 # -------------------------------------------------------
 
+# zsh-completions is appended to $fpath by antidote (see .zsh_plugins.txt), so
+# keeping $fpath here preserves it.
 fpath=(
     "$_GENERATED_COMPLETIONS_DIR"
     "$_MANUAL_COMPLETIONS_DIR"
-    "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins/repos/zsh-completions/src"
     $fpath
 )
