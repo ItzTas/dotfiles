@@ -45,7 +45,7 @@ keybind = ctrl+enter=unbind
 # background-opacity = 0.3
 
 # Ayu
-theme = Ayu
+theme = noctalia
 background-opacity = 0.43
 cursor-color =  #cccccc
 

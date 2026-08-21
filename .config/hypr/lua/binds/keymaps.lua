@@ -71,8 +71,8 @@ bs(mm("F", meh), 'kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/s
 bs(mm("G", meh), 'kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" file root')
 
 -- Menus and widgets
-bind(mm("SPACE", alt), exec('qs -c noctalia-shell ipc call launcher toggle'))
-bind(mm("X", alt), exec("qs -c noctalia-shell ipc call sessionMenu toggle"))
+bind(mm("SPACE", alt), exec(noctalia.msg("panel-toggle launcher")))
+bind(mm("X", alt), exec(noctalia.msg("panel-toggle session")))
 bind(mm("V", alt), exec("dex ~/.local/share/applications/hypr-terminal/hypr-clipse.desktop"))
 bind(mm("V", super), exec("clipse-gui"))
 bind(mm("SPACE", meh), exec('killall rofi; bash -c "~/.config/rofi/emoji/emoji.sh"'))
@@ -164,4 +164,4 @@ bind(mm("X", meh), exec("ddcutil setvcp 10 100"))
 bind(mm("W", meh), exec("alarm-clock-applet -s"))
 bind(mm("W", alt), noctalia.toggle)
 bind(mm("F5", { super, shift }), hl.dsp.exit())
-bind(mm("L", meh), exec("qs -c noctalia-shell ipc call lockScreen lock"))
+bind(mm("L", meh), exec(noctalia.msg("session lock")))

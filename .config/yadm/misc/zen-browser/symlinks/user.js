@@ -33,3 +33,4 @@ user_pref('toolkit.telemetry.unified', false); // Unified telemetry collection
 // ==== Network ====
 user_pref('network.dns.disablePrefetch', true); // DNS prefetching to avoid unintended lookups
 user_pref('network.prefetch-next', false); // Link prefetching
+user_pref("devtools.chrome.enabled", true);

@@ -10,3 +10,7 @@ require("services")
 require("binds")
 require("rules")
 require("plugins")
+
+
+-- For Noctalia Color templates
+require("noctalia").apply_theme()
