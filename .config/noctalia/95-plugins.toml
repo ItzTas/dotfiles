@@ -1,0 +1,8 @@
+[plugins]
+enabled = [
+  "noctalia/kaomoji",
+  "noctalia/mpvpaper",
+  "decksters-lab/palette-creator",
+  "raycursive/github-prs",
+]
+auto_update = "all"                                # plugins.autoUpdate

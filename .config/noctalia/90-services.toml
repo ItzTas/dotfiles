@@ -1,0 +1,41 @@
+[audio]
+enable_overdrive = false                           # audio.volumeOverdrive
+enable_sounds    = false                           # notifications.sounds.enabled / volumeFeedback
+
+[brightness]
+enable_ddcutil = true                              # brightness.enableDdcSupport
+
+[nightlight]
+enabled           = false
+force             = false
+temperature_day   = 6500
+temperature_night = 4000
+
+[notification]
+enable_daemon      = true
+position           = "top_right"
+layer              = "overlay"                     # notifications.overlayLayer
+background_opacity = 0.65
+
+[osd]
+enabled            = true
+position           = "top_right"
+background_opacity = 0.7
+
+[battery]
+warning_threshold = 20                             # systemMonitor.batteryWarningThreshold
+
+[system.monitor]
+cpu_usage_activity_threshold = 80.0                # *WarningThreshold → activity
+cpu_usage_critical_threshold = 90.0
+cpu_temp_activity_threshold  = 80.0
+cpu_temp_critical_threshold  = 90.0
+ram_pct_activity_threshold   = 80.0
+ram_pct_critical_threshold   = 90.0
+swap_pct_activity_threshold  = 80.0
+swap_pct_critical_threshold  = 90.0
+disk_used_pct_activity_threshold = 80.0
+disk_used_pct_critical_threshold = 90.0
+gpu_temp_activity_threshold  = 80.0
+gpu_temp_critical_threshold  = 90.0
+

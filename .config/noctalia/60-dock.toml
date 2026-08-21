@@ -1,0 +1,16 @@
+[dock]
+enabled             = true
+position            = "bottom"
+auto_hide           = true                         # displayMode = auto_hide
+reserve_space       = false                        # não empurrar janelas (v4 não reservava espaço)
+background_opacity  = 1.0
+margin_edge         = 8                            # dockType = floating
+show_running        = true
+show_dots           = false                        # showDockIndicator
+launcher_position   = "start"                      # showLauncherIcon + launcherPosition
+active_monitor_only = true                         # onlySameOutput
+pinned              = []
+
+[desktop_widgets]
+enabled = true
+

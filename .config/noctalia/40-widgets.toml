@@ -1,0 +1,89 @@
+[widget.launcher]
+glyph = "rocket"                                   # Launcher.icon
+
+[widget.clock]
+format          = "{:%H:%M %a, %b %d}"             # Clock.formatHorizontal "HH:mm ddd, MMM dd"
+vertical_format = "{:%H %M - %d %m}"               # Clock.formatVertical
+tooltip_format  = "{:%H:%M %a, %b %d}"
+
+# SystemMonitor v4 (cpuTemp, cpuUsage, memoryUsage, swapUsage, compacto, fonte mono) → 4 sysmon
+[widget.temp]
+type          = "sysmon"
+stat          = "cpu_temp"
+visualization = "none"                             # compactMode
+font_family   = "monospace"                        # useMonospaceFont
+
+[widget.cpu]
+type          = "sysmon"
+stat          = "cpu_usage"
+visualization = "none"
+font_family   = "monospace"
+
+[widget.ram]
+type          = "sysmon"
+stat          = "ram_used"                         # showMemoryAsPercent = false
+visualization = "none"
+font_family   = "monospace"
+
+[widget.swap]
+type          = "sysmon"
+stat          = "swap_pct"
+visualization = "none"
+font_family   = "monospace"
+
+[widget.active_window]
+max_length   = 145                                 # ActiveWindow.maxWidth
+title_scroll = "on_hover"                          # scrollingMode = hover
+display      = "icon_and_text"                     # showIcon + showText
+
+[widget.media]
+max_length        = 145                            # MediaMini.maxWidth
+artist_first      = true                           # showArtistFirst
+title_scroll      = "on_hover"
+hide_when_no_media = true                          # hideMode = hidden
+
+[widget.privacy]                                   # plugin:privacy-indicator → widget nativo
+hide_inactive  = false
+icon_spacing   = 4
+active_color   = "primary"
+inactive_color = "outline"
+
+[widget.workspaces]
+label_source             = "id"                    # labelMode = index
+max_label_chars          = 2                       # characterCount
+labels_only_when_occupied = true                   # showLabelsOnlyWhenOccupied
+pill_scale               = 0.6                     # pillSize
+focused_color            = "primary"
+font_weight              = 700                     # fontWeight = bold
+hide_when_empty          = false                   # hideUnoccupied
+
+[widget.tray]
+pinned       = ["Arch-Update", "proton.vpn.app.gtk"]
+hidden       = []                                  # blacklist
+drawer       = true                                # drawerEnabled
+hide_passive = false                               # hidePassive
+
+[widget.volume]
+show_label = false                                 # displayMode = onhover
+
+[widget.volume.actions]
+middle = "exec pwvucontrol || pavucontrol"         # Volume.middleClickCommand
+
+[widget.brightness]
+show_label = false                                 # displayMode = onhover
+
+[widget.network]                                   # plugin:network-manager-vpn → widget nativo
+show_label     = false                             # displayMode = onhover
+vpn_status     = "replace"
+show_vpn_label = false
+
+[widget.control-center]
+glyph = "noctalia"                                 # ControlCenter.icon
+
+[widget.notifications]
+hide_when_no_unread = false                        # hideWhenZeroUnread
+
+[widget.battery]
+display_mode = "glyph"                             # displayMode = icon-always
+device       = "auto"                              # deviceNativePath = __default__
+

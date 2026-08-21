@@ -1,0 +1,32 @@
+[control_center]
+show_session_button = true
+
+[[control_center.shortcuts]]
+type = "wifi"
+[[control_center.shortcuts]]
+type = "bluetooth"
+[[control_center.shortcuts]]
+type = "notification"
+[[control_center.shortcuts]]
+type = "power_profile"
+[[control_center.shortcuts]]
+type = "caffeine"
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[control_center.calendar]
+show_events_card  = true                           # location.showCalendarEvents
+show_week_numbers = true                           # location.showWeekNumberInCalendar
+
+[calendar]
+enabled = true
+
+[weather]
+enabled = true                                     # location.weatherEnabled
+unit    = "metric"                                 # useFahrenheit = false
+effects = true                                     # weatherShowEffects
+
+[location]
+auto_locate = false
+address     = "Roraima"                            # location.name
+

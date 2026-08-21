@@ -1,0 +1,26 @@
+[bar.default]
+position           = "top"
+background_opacity = 0.0                           # bar.backgroundOpacity = 0
+radius             = 12                            # bar.frameRadius
+margin_edge        = 4                             # bar.marginVertical
+margin_ends        = 4                             # bar.marginHorizontal
+concave_edge_corners = false                       # exige margin_edge = 0
+padding            = 2                             # bar.contentPadding
+widget_spacing     = 6
+border_width       = 0.0                           # bar.showOutline = false
+shadow             = true                          # general.enableShadows
+auto_hide          = false                         # bar.displayMode = always_visible
+show_on_workspace_switch = true
+reserve_space      = true                          # bar.enableExclusionZoneInset
+capsule            = true                          # bar.showCapsule
+capsule_opacity    = 0.5                           # bar.capsuleOpacity
+capsule_fill       = "surface_variant"             # bar.capsuleColorKey = none → padrão
+
+start  = ["launcher", "clock", "temp", "cpu", "ram", "swap", "active_window", "media", "privacy"]
+center = ["workspaces"]
+end    = ["tray", "volume", "brightness", "network", "control-center", "notifications", "battery"]
+
+[bar.default.dead_zone.actions]
+right  = "panel-toggle control-center"            # bar.rightClickAction = controlCenter
+middle = "none"                                   # bar.middleClickAction = none
+

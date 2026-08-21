@@ -1,0 +1,9 @@
+[keybinds]
+validate = ["Return", "KP_Enter", "Ctrl+y"]
+cancel   = ["Escape"]
+left     = ["Left", "Ctrl+h"]
+right    = ["Right", "Ctrl+l"]
+up       = ["Up", "Ctrl+k"]
+down     = ["Down", "Ctrl+j"]
+delete   = ["Delete"]
+

@@ -1,0 +1,86 @@
+[shell]
+font_family       = "JetBrainsMonoNL Nerd Font"   # ui.fontDefault
+avatar_path       = "/home/talinux/Pictures/Faces/ArchFatGuy.jpg" # general.avatarImage
+corner_radius_scale = 1.0                          # general.radiusRatio
+telemetry_enabled = false                          # general.telemetryEnabled
+show_location     = true                           # location.hideWeatherCityName = false
+settings_show_advanced = true
+
+[shell.animation]
+enabled = true                                     # general.animationDisabled = false
+speed   = 1.0                                      # general.animationSpeed
+
+[shell.shadow]
+direction = "down_right"                           # general.shadowDirection = bottom_right
+
+[shell.panel]
+control_center_placement = "attached"              # ui.panelsAttachedToBar
+open_near_click_control_center = true              # controlCenter.position = close_to_bar_button
+launcher_placement = "floating"                    # appLauncher.position = center
+launcher_position  = "center"
+
+[shell.launcher]
+categories    = true                               # appLauncher.showCategories
+sort_by_usage = true                               # appLauncher.sortByMostUsed
+app_grid      = false                              # appLauncher.viewMode = list
+pinned        = []                                 # appLauncher.pinnedApps
+# appLauncher.terminalCommand "kitty -e" → v5 usa $TERMINAL (sem "-e"): export TERMINAL=kitty
+
+[shell.mpris]
+blacklist = []                                     # audio.mprisBlacklist
+
+[shell.privacy]
+mic_filter_regex = ""                              # plugin privacy-indicator
+cam_filter_regex = ""
+
+# ── Sessão (sessionMenu) ──────────────────────────────────────────────────────
+
+[shell.session]
+grid           = false                             # largeButtonsLayout = single-row
+show_shortcuts = true                              # showKeybinds
+
+[[shell.session.actions]]
+action = "lock"
+shortcut = "1"
+countdown_seconds = 5                              # countdownDuration 5000 ms
+
+[[shell.session.actions]]
+action = "suspend"
+shortcut = "2"
+countdown_seconds = 5
+
+[[shell.session.actions]]                          # "hibernate" não é ação nativa no v5
+action = "command"
+label = "Hibernate"
+glyph = "moon"
+command = "systemctl hibernate"
+shortcut = "3"
+countdown_seconds = 5
+
+[[shell.session.actions]]
+action = "reboot"
+command = "hyprshutdown -t 'Restarting...' --post-cmd 'systemctl reboot'"
+shortcut = "4"
+countdown_seconds = 5
+
+[[shell.session.actions]]
+action = "logout"
+command = "hyprshutdown"
+shortcut = "5"
+countdown_seconds = 5
+
+[[shell.session.actions]]
+action = "shutdown"
+command = "hyprshutdown -t 'Shutting down...' --post-cmd 'systemctl poweroff'"
+shortcut = "6"
+countdown_seconds = 5
+variant = "destructive"
+
+[[shell.session.actions]]                          # rebootToUefi
+action = "command"
+label = "UEFI"
+glyph = "settings"
+command = "systemctl reboot --firmware-setup"
+shortcut = "7"
+countdown_seconds = 5
+

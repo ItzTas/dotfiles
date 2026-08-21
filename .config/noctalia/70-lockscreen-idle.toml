@@ -1,0 +1,26 @@
+[lockscreen]
+enabled             = true
+fingerprint         = true                         # general.allowPasswordWithFprintd
+lock_before_suspend = true                         # general.lockOnSuspend
+blur_intensity      = 0.0                          # general.lockScreenBlur
+tint_intensity      = 0.0                          # general.lockScreenTint
+
+[idle]
+behavior_order          = ["lock", "screen-off", "suspend"]
+pre_action_fade_seconds = 5.0                      # idle.fadeDuration
+
+[idle.behavior.lock]
+action  = "lock"
+timeout = 360                                      # idle.lockTimeout
+enabled = true
+
+[idle.behavior.screen-off]
+action  = "screen_off"
+timeout = 400                                      # idle.screenOffTimeout
+enabled = true
+
+[idle.behavior.suspend]
+action  = "suspend"
+timeout = 2200                                     # idle.suspendTimeout
+enabled = true
+

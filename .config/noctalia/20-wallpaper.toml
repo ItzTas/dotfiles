@@ -1,0 +1,20 @@
+[wallpaper]
+enabled             = true
+directory           = "/home/talinux/Pictures/Wallpapers"
+fill_mode           = "crop"
+fill_color          = "#000000"
+transition          = ["fade", "disc", "stripes", "wipe", "honeycomb"]  # "pixelate" não existe no v5
+transition_duration = 1500
+edge_smoothness     = 0.05                         # transitionEdgeSmoothness
+transition_on_startup = true                       # skipStartupTransition = false
+
+[wallpaper.automation]
+enabled          = false                           # automationEnabled
+interval_seconds = 7200                            # randomIntervalSec
+order            = "random"                        # wallpaperChangeMode
+
+[backdrop]
+enabled        = false                             # wallpaper.overviewEnabled
+blur_intensity = 0.4                               # overviewBlur
+tint_intensity = 0.6                               # overviewTint
+
