@@ -2,31 +2,31 @@
 gui:
   theme:
     activeBorderColor:
-      - "#dcbfcb"
+      - "#a5c8ff"
       - bold
     inactiveBorderColor:
-      - "#d2c2c8"
+      - "#b7c7e5"
     searchingActiveBorderColor:
-      - "#e3bfb1"
+      - "#ecb2fb"
       - bold
     optionsTextColor:
-      - "#d0c3c7"
+      - "#c2c6d1"
     selectedLineBgColor:
-      - "#d0c3c7"
+      - "#c2c6d1"
     inactiveViewSelectedLineBgColor:
       - bold
     cherryPickedCommitFgColor:
-      - "#d0c3c7"
+      - "#c2c6d1"
     cherryPickedCommitBgColor:
-      - "#e3bfb1"
+      - "#ecb2fb"
     markedBaseCommitFgColor:
-      - "#e3bfb1"
+      - "#ecb2fb"
     markedBaseCommitBgColor:
       - "#ffb4ab"
     unstagedChangesColor:
       - "#ffb4ab"
     defaultFgColor:
-      - "#e8e1e1"
+      - "#e2e2e8"
   authorColors: {}
   branchColorPatterns: {}
   customIcons:
@@ -55,31 +55,31 @@ gui:
   shortTimeFormat: 3:04PM
   theme:
     activeBorderColor:
-      - "#dcbfcb"
+      - "#a5c8ff"
       - bold
     inactiveBorderColor:
-      - "#d2c2c8"
+      - "#b7c7e5"
     searchingActiveBorderColor:
-      - "#e3bfb1"
+      - "#ecb2fb"
       - bold
     optionsTextColor:
-      - "#d0c3c7"
+      - "#c2c6d1"
     selectedLineBgColor:
-      - "#d0c3c7"
+      - "#c2c6d1"
     inactiveViewSelectedLineBgColor:
       - bold
     cherryPickedCommitFgColor:
-      - "#d0c3c7"
+      - "#c2c6d1"
     cherryPickedCommitBgColor:
-      - "#e3bfb1"
+      - "#ecb2fb"
     markedBaseCommitFgColor:
-      - "#e3bfb1"
+      - "#ecb2fb"
     markedBaseCommitBgColor:
       - "#ffb4ab"
     unstagedChangesColor:
       - "#ffb4ab"
     defaultFgColor:
-      - "#e8e1e1"
+      - "#e2e2e8"
   commitLength:
     show: true
   showListFooter: true

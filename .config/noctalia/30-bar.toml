@@ -8,7 +8,7 @@ concave_edge_corners = false                       # exige margin_edge = 0
 padding            = 2                             # bar.contentPadding
 widget_spacing     = 6
 border_width       = 0.0                           # bar.showOutline = false
-shadow             = true                          # general.enableShadows
+shadow             = false                          # general.enableShadows
 auto_hide          = false                         # bar.displayMode = always_visible
 show_on_workspace_switch = true
 reserve_space      = true                          # bar.enableExclusionZoneInset
