@@ -97,7 +97,7 @@ pure_black_dark = false
 
 [theme.templates]
 enable_builtin_templates   = true
-builtin_ids                = []                    # templates.enableUserTheming = false
+builtin_ids                = ["hyprland"]          # regenera ~/.config/hypr/noctalia.lua (hyprlua) a cada paleta
 enable_community_templates = true
 community_ids              = []
 
@@ -388,6 +388,11 @@ disk_used_pct_activity_threshold = 80.0
 disk_used_pct_critical_threshold = 90.0
 gpu_temp_activity_threshold  = 80.0
 gpu_temp_critical_threshold  = 90.0
+
+# ── Hooks ─────────────────────────────────────────────────────────────────────
+
+[hooks]
+colors_changed = "hyprctl reload"                  # aplica o noctalia.lua recém-gerado no Hyprland
 
 # ── Plugins ───────────────────────────────────────────────────────────────────
 # v4 → v5: kaomoji-provider → noctalia/kaomoji; video-wallpaper → noctalia/mpvpaper;
