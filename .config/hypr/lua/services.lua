@@ -71,7 +71,7 @@ on("hyprland.start", function()
 	end
 
 	if ram.has_above(8) then
-		exec("sleep 30 && protonvpn-app --start-minimized")
+		-- exec("sleep 30 && protonvpn-app --start-minimized")
 		exec("systemctl --user start gamemoded")
 		exec("easyeffects --gapplication-service")
 	end

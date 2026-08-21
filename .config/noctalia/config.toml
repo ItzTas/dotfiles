@@ -394,12 +394,6 @@ gpu_temp_critical_threshold  = 90.0
 [hooks]
 colors_changed = "hyprctl reload"                  # aplica o noctalia.lua recém-gerado no Hyprland
 
-# ── Plugins ───────────────────────────────────────────────────────────────────
-# v4 → v5: kaomoji-provider → noctalia/kaomoji; video-wallpaper → noctalia/mpvpaper;
-# color-scheme-creator → decksters-lab/palette-creator; github-feed → raycursive/github-prs (só PRs, usa `gh`).
-# Sem equivalente: giphy-search. privacy-indicator e network-manager-vpn viraram widgets nativos (privacy / network).
-# linux-wallpaperengine-controller (desativado na v4) → tadomika_ari/w-engine, se quiser.
-
 [plugins]
 enabled = [
   "noctalia/kaomoji",
