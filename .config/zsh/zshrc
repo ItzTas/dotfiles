@@ -16,16 +16,23 @@ stty susp undef
 # --------------------- Plugins ---------------------
 
 __source_zsh_plugins() {
-    local antidote="/usr/share/zsh-antidote/antidote.zsh"
-    if [[ ! -f "$antidote" ]]; then
-        return
-    fi
+    local candidates=(
+        "/usr/share/zsh-antidote/antidote.zsh"
+        "/usr/share/zsh/plugins/antidote/antidote.zsh"
+        "${HOMEBREW_PREFIX:-/opt/homebrew}/opt/antidote/share/antidote/antidote.zsh"
+        "${ZDOTDIR:-$HOME/.config/zsh}/.antidote/antidote.zsh"
+    )
 
-    # The plugin list lives in $ZDOTDIR/.zsh_plugins.txt. `antidote load` sources
-    # the generated $ZDOTDIR/.zsh_plugins.zsh, rebuilding it only when the list
-    # changes and cloning anything missing on first run.
-    source "$antidote"
-    antidote load
+    local antidote
+    for antidote in "${candidates[@]}"; do
+        if [[ -f "$antidote" ]]; then
+            source "$antidote"
+            antidote load
+            return
+        fi
+    done
+
+    print -ru2 -- "zshrc: antidote not found, zsh plugins are disabled."
 }
 
 __source_zsh_plugins
@@ -83,14 +90,6 @@ autoload -Uz compinit && compinit
 
 # -------------------- Main file specifics --------------------
 
-# PATH
-# `npm config get prefix` used to be prepended here, but it resolves to proto's
-# active node dir, which `proto activate` below already puts on $path. Spawning
-# node just to learn that cost ~105ms per shell.
-
-# nvm is lazy: sourcing nvm.sh + its completion costs ~500ms, and node/npm come
-# from proto, not nvm. Only the `nvm` command itself is stubbed, so proto's
-# binaries are never shadowed.
 export NVM_DIR="$HOME/.config/nvm"
 nvm() {
     unfunction nvm

@@ -1,17 +1,18 @@
 # vim: filetype=conf
-#
-# Plugin bundle file read by antidote (see the "Plugins" section of zshrc).
-# Order matters: each plugin's settings file is listed right before the plugin
-# itself, and zsh-syntax-highlighting stays last because it wraps ZLE widgets.
-#
-# Local paths are sourced as-is; user/repo entries are cloned into
-# $ANTIDOTE_HOME (${XDG_CACHE_HOME:-$HOME/.cache}/antidote) on first run.
-# Update every clone with `update_zsh_plugins` (config/functions).
 
-$ZDOTDIR/plugins/settings/zsh-autosuggestions/settings
+$ZDOTDIR/plugins/zsh-vi-mode/settings
+jeffreytse/zsh-vi-mode
+
+$ZDOTDIR/plugins/zsh-autosuggestions/settings
 zsh-users/zsh-autosuggestions
 
 zsh-users/zsh-completions kind:fpath path:src
 
-$ZDOTDIR/plugins/settings/zsh-syntax-highlighting/settings
+$ZDOTDIR/plugins/zsh-abbr/settings
+olets/zsh-abbr
+
+$ZDOTDIR/plugins/zsh-syntax-highlighting/settings
 zsh-users/zsh-syntax-highlighting
+
+$ZDOTDIR/plugins/zsh-history-substring-search/settings
+zsh-users/zsh-history-substring-search

@@ -1,6 +1,7 @@
 .zcompdump
 history
 .dircolors
+.antidote/
 .zsh_plugins.zsh
 completions/generated/
 /secrets/

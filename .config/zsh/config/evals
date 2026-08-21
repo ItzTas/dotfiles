@@ -27,16 +27,10 @@ if (( ${+commands[phpenv]} )); then
 fi
 
 # keychain
-# Running keychain unconditionally costs ~210ms (it's a Perl script). Reuse the
-# env file it already wrote and only call it when the agent has no keys loaded,
-# so just the first shell after a boot pays that.
 if (( ${+commands[keychain]} )); then
     local kcenv="$HOME/.keychain/${HOST}-sh"
     [[ -f $kcenv ]] && source "$kcenv"
 
-    # ssh-add exits 2 only when it can't reach an agent at all; exit 1 just
-    # means the agent is up with no identities loaded, which is the normal
-    # state here since keychain is called without key arguments.
     ssh-add -l &>/dev/null
     if (( $? == 2 )); then
         eval "$(keychain -q --eval)"

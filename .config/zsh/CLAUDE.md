@@ -18,7 +18,7 @@ A personal Zsh configuration rooted at `$ZDOTDIR` (`~/.config/zsh`). There is no
 `zshrc` is an orchestrator: it sources, in a deliberate sequence, small single-purpose files. Editing the wrong file or assuming the wrong order is the most common way to break things.
 
 1. `config/prompt` — oh-my-posh init (loaded first so the prompt exists immediately).
-2. **Plugins** via `__source_zsh_plugins`: for each name in the hardcoded list (`zsh-autosuggestions`, `zsh-syntax-highlighting`), it first sources its settings (either `plugins/settings/<name>` as a file *or* `plugins/settings/<name>/settings`), then sources `plugins/repos/<name>/<name>.zsh`.
+2. **Plugins** via `__source_zsh_plugins`: for each name in the hardcoded list (`zsh-autosuggestions`, `zsh-syntax-highlighting`), it first sources its settings (either `plugins/<name>` as a file *or* `plugins/<name>/settings`), then sources `plugins/repos/<name>/<name>.zsh`.
 3. **Config files** via `__source_zsh_config_files`, sourced in this exact order from `config/`: `envs → aliases → completions → functions → sources → setopt → binds → fzf → evals → zstyle`. The list is hardcoded in `zshrc`; a new `config/` file is dead until you add its name here.
 4. **Secrets** via `__source_zsh_secrets` (sources `secrets/tokens` — see the rule above).
 5. `compinit`, then main-shell-only setup that must run here rather than in a sourced file: npm prefix on `$path`, NVM, and `proto activate`.
@@ -34,7 +34,7 @@ A personal Zsh configuration rooted at `$ZDOTDIR` (`~/.config/zsh`). There is no
 - `config/completions` — creates `completions/{generated,manual}`, lazily generates completion files for installed tools (bootdev, eww, mdcat, git-bug, aws, and a remote-fetched `_claude`), and builds `fpath`.
 - `config/setopt`, `config/zstyle`, `config/fzf` — shell options, completion styling, and fzf defaults (Catppuccin colors, `fd`-backed sources, `__` completion trigger).
 - `plugins/repos/<name>/` — git clones of plugins (gitignored; update with `update_zsh_plugins`).
-- `plugins/settings/<name>` — per-plugin config sourced *before* the plugin (e.g. syntax-highlighting loads its `catppuccin-mocha` theme here).
+- `plugins/<name>` — per-plugin config sourced *before* the plugin (e.g. syntax-highlighting loads its `catppuccin-mocha` theme here).
 - `completions/generated/` — auto-generated, gitignored. `completions/manual/` — hand-written, committed.
 
 ## Conventions to follow when editing
