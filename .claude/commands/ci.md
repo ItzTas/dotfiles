@@ -12,9 +12,9 @@ Argument (`$ARGUMENTS`):
 - **no argument** → report the latest run's status and, if failed, the diagnosis.
 - **`--fix`** (or `fix`) → also apply the fix locally, verify, and push so CI re-runs.
 - a **run/pipeline id or URL** → target that specific run instead of the branch's latest.
-- **Flag forms** — all equivalent: `--fix` = `-fix` = `-f` = bare `fix`.
+- **Flag forms**, all equivalent: `--fix` = `-fix` = `-f` = bare `fix`.
 
-Separately, I may include **other requests** in the same message; those are not the argument — do
+Separately, I may include **other requests** in the same message; those are not the argument, so do
 them first, then check CI.
 
 Follow exactly these steps:
@@ -52,11 +52,11 @@ Follow exactly these steps:
 - Distinguish a **real failure** from a **flake / infra hiccup** (network, timeout, runner). Say which
   you think it is.
 
-## 6. Report — and fix if asked
+## 6. Report, and fix if asked
 - Always report: failing job(s), root cause, and the proposed fix.
 - If `--fix` was given (per my `~/.claude/rules/git-conventions.md`, new branch first if I'm on a protected branch):
   - Apply the fix locally and **reproduce the failing check locally** (run that lint/test/build) to
-    confirm it's resolved — don't fix blind against CI.
+    confirm it's resolved; don't fix blind against CI.
   - Commit following my rules (atomic, Conventional Commits, no `Co-Authored-By`) and push so CI
     re-runs.
   - If it was clearly a **flake/infra** issue, offer to just re-run instead: `gh run rerun <id>` /

@@ -1,15 +1,15 @@
-These are my personal git conventions. Whenever you are about to do **any git work** — creating
-branches, committing, reverting, opening PRs/MRs — load this file and follow every rule below.
+These are my personal git conventions. Whenever you are about to do **any git work** (creating
+branches, committing, reverting, opening PRs/MRs), load this file and follow every rule below.
 
 ## Branches
 
 - **On shared/protected branches, create a new branch for changes.** If I'm on a `dev`, `main`, `master`, or `pre-homolog` branch and I ask for a change, create a new branch to implement it instead of working directly on the current branch. Exceptions where you should stay on the current branch: personal projects, projects only I work on, or projects without a sophisticated branching system (e.g., my Neovim dotfiles, which only have `main` because they're simple dotfiles that don't warrant extra branches).
 
-- **NEVER leave the current branch without asking me first.** This applies to *any* branch change: `git switch`/`git checkout` to an existing branch, `git switch -c`/`git checkout -b` to create a new one, `git worktree add`, or anything else that moves me off the branch I'm on. I work across many branches at once and forget to merge open PRs/MRs, so branches pile up — I need to decide each move consciously.
+- **NEVER leave the current branch without asking me first.** This applies to *any* branch change: `git switch`/`git checkout` to an existing branch, `git switch -c`/`git checkout -b` to create a new one, `git worktree add`, or anything else that moves me off the branch I'm on. I work across many branches at once and forget to merge open PRs/MRs, so branches pile up, and I need to decide each move consciously.
 
   Before asking, gather the context so the decision is informed:
-  - `git branch --show-current` — where I am now.
-  - `git branch --sort=-committerdate --format='%(refname:short) %(committerdate:relative) [%(upstream:track)]'` — local branches, most recent first, with ahead/behind info.
+  - `git branch --show-current`: where I am now.
+  - `git branch --sort=-committerdate --format='%(refname:short) %(committerdate:relative) [%(upstream:track)]'`: local branches, most recent first, with ahead/behind info.
   - Open PRs/MRs, when a remote and CLI are available: `gh pr list --state open --json number,title,headRefName,baseRefName` and/or `glab mr list --state opened`.
 
   Then **ask me with a multiple-choice question** (the `AskUserQuestion` tool), showing:
@@ -19,11 +19,11 @@ branches, committing, reverting, opening PRs/MRs — load this file and follow e
 
   If the `AskUserQuestion` tool isn't available, ask in plain text and wait for my answer. Either way: **do not switch, and do not start the work, until I answer.**
 
-  Exceptions — go ahead without asking:
+  Exceptions where you go ahead without asking:
   - I already named the branch explicitly in my request; that *is* my answer.
-  - **`/implement`.** That command exists to branch first, so creating and switching to a new branch is exactly what I asked for — including when it derives the name itself. Just tell me the name you chose and move on.
+  - **`/implement`.** That command exists to branch first, so creating and switching to a new branch is exactly what I asked for, including when it derives the name itself. Just tell me the name you chose and move on.
 
-- **Report accumulated branches when you notice them.** If, while gathering the above, you find branches with open PRs/MRs or unpushed/unmerged commits that look forgotten, mention them in the question — briefly, one line each. Don't merge, close, or delete anything on your own.
+- **Report accumulated branches when you notice them.** If, while gathering the above, you find branches with open PRs/MRs or unpushed/unmerged commits that look forgotten, mention them in the question, briefly, one line each. Don't merge, close, or delete anything on your own.
 
 ## Commits
 
@@ -31,5 +31,5 @@ branches, committing, reverting, opening PRs/MRs — load this file and follow e
 - **Always make atomic commits.** Separate each logical change into its own specific commit, instead of bundling unrelated changes into a single commit. If necessary, split the changes of a single file across different commits.
 - **Always follow the Conventional Commits standard.** Use the form `type(optional scope): description` (e.g., `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`), with the description in the imperative. Use `BREAKING CHANGE:` in the footer or `!` after the type/scope when there is an incompatible change.
 - **Don't overuse `feat:`.** `feat:` should not be used for a small piece of functionality that is part of a larger feature. In that case, `feat:` is reserved for the larger feature that incorporates the smaller one, while the smaller part uses `chore:`. Ideally there is only one `feat:` per branch/feature; only in very specific cases may there be more than one.
-- **`feat:` is only for new things in the end program itself.** Reserve `feat:` for new user-facing functionality in the end program. Plumbing or wiring work — such as connecting the database to something — is not a `feat:`; use `chore:` (or another appropriate type) instead.
+- **`feat:` is only for new things in the end program itself.** Reserve `feat:` for new user-facing functionality in the end program. Plumbing or wiring work, such as connecting the database to something, is not a `feat:`; use `chore:` (or another appropriate type) instead.
 - **When in doubt, don't use `feat:`.** If you're not sure whether a commit deserves `feat:`, don't assign any `feat:` and let me set it manually.

@@ -4,7 +4,7 @@ argument-hint: [period | path]
 allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Glob
 ---
 
-Summarize what I've been working on lately by digesting my own commits into a readable work log —
+Summarize what I've been working on lately by digesting my own commits into a readable work log,
 the kind of thing I'd paste into a standup or a daily update.
 
 Optional argument (`$ARGUMENTS`):
@@ -13,8 +13,8 @@ Optional argument (`$ARGUMENTS`):
 - a **path** → a single repo, or a directory containing several repos to scan together.
 (You may receive both, e.g. `week ~/code`.)
 
-Separately, I may include **other requests** in the same message; those are not arguments — do them
-first, then build the log.
+Separately, I may include **other requests** in the same message; those are not arguments, so do
+them first, then build the log.
 
 Follow exactly these steps:
 
@@ -44,7 +44,7 @@ Map the period argument to a `--since` value (default `yesterday`):
 
 ## 5. Summarize into a work log
 - Group by **Conventional Commit type** (`feat`, `fix`, `refactor`, `docs`, `test`, `chore`, …),
-  since that's how I write commits — turn each into a short human-readable bullet, keeping the short
+  since that's how I write commits. Turn each into a short human-readable bullet, keeping the short
   hash for reference. When scanning several repos, group by repo first, then by type.
 - Aim for a readable narrative, not a raw hash dump: collapse trivial/related commits into one line
   where it reads better.
@@ -53,7 +53,7 @@ Map the period argument to a `--since` value (default `yesterday`):
 - Briefly list open PRs/MRs I authored as "in review", only if the corresponding remote exists:
   - GitHub: `gh pr list --author "@me"` (`@me` is valid here).
   - GitLab: `glab`'s `--author` takes a **username**, not `@me` (only `--assignee`/`--reviewer`
-    accept `@me`). Resolve my username first — `glab api user --jq .username` — and pass it:
+    accept `@me`). Resolve my username first with `glab api user --jq .username`, then pass it:
     `glab mr list --author=<username>`.
 
 ## 7. Output

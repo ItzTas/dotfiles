@@ -18,9 +18,9 @@ Instructions I passed with the command: `$ARGUMENTS`
 - Restate to yourself what needs to be done and identify what you **don't** know for sure or that may have changed (tool versions, APIs, syntax, current best practices).
 
 ### 2. Search the web
-- Use `WebSearch` to find out **how to do** what was asked — prefer official, recent sources (documentation, repositories, changelogs).
+- Use `WebSearch` to find out **how to do** what was asked. Prefer official, recent sources (documentation, repositories, changelogs).
 - Dig deeper with `WebFetch` on the most relevant pages to read the details (step-by-step, flags, examples, deprecation notices).
-- Run additional searches if the first ones aren't enough. Prefer current information over your memory — your knowledge base may be out of date.
+- Run additional searches if the first ones aren't enough. Prefer current information over your memory; your knowledge base may be out of date.
 
 ### 3. Execute
 - Apply what you learned to carry out the task in the current project/context, following my `CLAUDE.md` and the conventions already present in the repository.

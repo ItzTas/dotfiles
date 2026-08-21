@@ -1,5 +1,5 @@
 ---
-description: Get a fresh or stale clone ready to develop — proto tools, deps, env files, documented setup, verify
+description: Get a fresh or stale clone ready to develop: proto tools, deps, env files, documented setup, verify
 argument-hint: [up]
 allowed-tools: Bash, Read, Glob, Grep
 ---
@@ -9,11 +9,11 @@ for every ecosystem it uses, set up local env files, run any documented setup, a
 builds.
 
 This command takes an optional flag: `$ARGUMENTS`
-- **`up`** — also start local services (e.g. `docker compose up -d`) if the repo defines them.
-  Without it, don't start any long-running services — just report that they exist.
+- **`up`** also starts local services (e.g. `docker compose up -d`) if the repo defines them.
+  Without it, don't start any long-running services, just report that they exist.
 
 Separately, I may include **other requests** in the same message, before or after `/bootstrap`.
-Those are not the flag — handle them as normal work.
+Those are not the flag; handle them as normal work.
 
 ## Steps
 
@@ -23,14 +23,14 @@ Those are not the flag — handle them as normal work.
 ### 1. Survey the project
 - Look at the repo root for manifests, lockfiles, `.prototools`, `Makefile`/`justfile`/`Taskfile`,
   `docker-compose*.yml`, env examples, and the README's setup section. The repo may use **more
-  than one** ecosystem — handle each found.
+  than one** ecosystem, so handle each one you find.
 
 ### 2. Pin the tools (proto)
 - If a `.prototools` exists, install the pinned versions (`proto install` / `proto use`) so the
   right tool versions are active before anything else.
 
 ### 3. Install dependencies (per ecosystem)
-- JS/TS: pick the PM from the lockfile — `pnpm install` (`pnpm-lock.yaml`), `yarn install`,
+- JS/TS: pick the PM from the lockfile, `pnpm install` (`pnpm-lock.yaml`), `yarn install`,
   `npm install` (`package-lock.json`), `bun install`.
 - PHP: `composer install`. Go: `go mod download`. Rust: `cargo fetch`.
   Python: poetry/uv/`pip install -r requirements.txt`. Lua: `luarocks install`.
@@ -40,7 +40,7 @@ Those are not the flag — handle them as normal work.
 - For each `*.example`/`*.sample`/`*.dist` env template (e.g. `.env.example`, `.env.local.example`,
   `config.example.*`), **create the target only if it doesn't already exist** (e.g. copy
   `.env.example` → `.env`).
-- **Never overwrite an existing env file** — it may hold real secrets. Do not print the contents
+- **Never overwrite an existing env file.** It may hold real secrets. Do not print the contents
   of any env file; just report which ones you created and which already existed.
 - After creating one, point out any placeholder values I still need to fill in.
 

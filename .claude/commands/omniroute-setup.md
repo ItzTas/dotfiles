@@ -9,7 +9,7 @@ Configura o **OmniRoute** (gateway local, porta 20128) expondo **Claude
 Anthropic único, com start on-demand e stop-on-idle pelos wrappers. Convive com
 o relay leve (skill `relay-setup`), que fica como fallback.
 
-Use esta skill em máquina nova ou pra reconfigurar. Flags — equivalentes: `--setup` = `-setup` = `-s`.
+Use esta skill em máquina nova ou pra reconfigurar. Flags equivalentes: `--setup` = `-setup` = `-s`.
 
 ## Arquitetura
 
@@ -24,23 +24,23 @@ Fatos que regem o design (descobertos na prática, v3.8.49):
 
 - O picker `/model` do Claude Code (com `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1`)
   só mostra ids que começam com `claude`/`anthropic`. Ids do OmniRoute são
-  `prefixo/model` (ex. `deepseek/deepseek-v4-flash`) — não passam.
+  `prefixo/model` (ex. `deepseek/deepseek-v4-flash`), então não passam.
 - **Combos** são o truque: nome livre (ex. `claude-deepseek-v4-flash`), aparecem
   no `/v1/models` sem prefixo e roteiam pra qualquer model. **Aliases**
-  (`/api/models/alias`) resolvem mas NÃO aparecem no catálogo — inúteis pro picker.
+  (`/api/models/alias`) resolvem mas NÃO aparecem no catálogo, ou seja, inúteis pro picker.
 - Providers `openai`/`anthropic` têm endpoint **fixo** (campo `url` no
   `POST /api/providers` é descartado silenciosamente). Endpoint custom = **provider
   node** (`/api/provider-nodes`, tipo openai-compatible, com `prefix` + `apiType:
   "chat"` + `baseUrl`).
 - Credencial de um node resolve pela conexão cujo `provider` == `prefix` do node;
   a validação só aceita provider conhecido do catálogo (`deepseek` passa, `ollama`
-  não nesta versão — usar dashboard pro Ollama).
+  não nesta versão; usar dashboard pro Ollama).
 - `customHeaders` de node proíbe headers de auth.
 - CLI: flags globais `--api-key`/`--base-url` **colidem** com as flags homônimas
-  de subcommands (`setup`, `nodes add`) — pra essas operações, usar a REST API
+  de subcommands (`setup`, `nodes add`); pra essas operações, usar a REST API
   com cookie de admin.
 - O "test" de provider pode dar falso `Invalid API key` (validação local de
-  formato) — teste real é uma chamada `/v1/chat/completions`.
+  formato); o teste real é uma chamada `/v1/chat/completions`.
 
 ## Passos
 
@@ -51,7 +51,7 @@ NPM_CONFIG_PREFIX="$HOME/.local" npm install -g omniroute
 ```
 
 `~/.local/bin` já vem primeiro no PATH. (O pacote AUR `omniroute-bin` é só o app
-desktop Electron — não serve de daemon headless.)
+desktop Electron; não serve de daemon headless.)
 
 ### 2. Bootstrap (senha admin + API key local)
 
@@ -75,7 +75,7 @@ curl -s -b "$CJ" -X POST http://127.0.0.1:20128/api/v1/registered-keys \
 
 Dashboard `http://localhost:20128` → Providers → **Claude Code (OAuth)** (device
 flow), ou `omniroute oauth start --provider claude-code`. (Se o app desktop já
-foi usado, a conexão migra sozinha — verificar com `GET /api/providers`.)
+foi usado, a conexão migra sozinha; verificar com `GET /api/providers`.)
 
 ### 4. DeepSeek (node + conexão + combos)
 
@@ -107,7 +107,7 @@ done
 Instalar Ollama, puxar models, e no dashboard: node openai-compatible
 (`prefix: ollama`, `baseUrl: http://127.0.0.1:11434/v1`, apiType chat) +
 credencial (key qualquer, ex. `ollama`) + um combo `claude-ollama-<model>` por
-model. A REST rejeita `provider: ollama` na conexão nesta versão — dashboard
+model. A REST rejeita `provider: ollama` na conexão nesta versão; o dashboard
 resolve.
 
 ### 6. Testar
@@ -122,11 +122,11 @@ curl -s http://127.0.0.1:20128/v1/messages -H "Authorization: Bearer $KEY" \
 
 ## Uso
 
-- **`ccr`** — sessão Claude Code via OmniRoute (token em
+- **`ccr`** abre uma sessão Claude Code via OmniRoute (token em
   `~/.config/zsh/secrets/omniroute-claude-key`); sobe o daemon se preciso, para no idle.
   Exporta `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1`, então o `/model` lista
   Claude (assinatura) e os combos `claude-deepseek-v4-flash|pro` no mesmo picker.
-- **`cct`** — sessão via relay leve (porta 4000, fallback manual).
+- **`cct`** abre uma sessão via relay leve (porta 4000, fallback manual).
 - Sessões gateway usam `ANTHROPIC_AUTH_TOKEN` → connectors do claude.ai ficam
   desabilitados nelas (warning esperado).
 - Dashboard: `http://localhost:20128` (senha em `~/.omniroute/admin_password`).

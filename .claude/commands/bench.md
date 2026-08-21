@@ -4,17 +4,17 @@ argument-hint: [filter | --baseline <name>]
 allowed-tools: Bash(cargo*), Bash(critcmp*), Bash(hyperfine*), Bash(npm*), Bash(npx*), Bash(proto*), Read, Glob, Grep
 ---
 
-Run this project's benchmarks and tell me whether performance moved — comparing against a baseline
+Run this project's benchmarks and tell me whether performance moved, comparing against a baseline
 so I can see regressions and improvements, not just raw numbers.
 
 Optional argument (`$ARGUMENTS`):
 - no argument → run all benchmarks.
 - a **filter** → run only benchmarks matching it.
 - `--baseline <name>` → compare the run against a previously saved baseline by that name.
-- **Flag forms** — all equivalent: `--baseline` = `-baseline` = `-b`.
+- **Flag forms**, all equivalent: `--baseline` = `-baseline` = `-b`.
 
-Separately, I may include **other requests** in the same message; those are not arguments — do them
-first, then benchmark.
+Separately, I may include **other requests** in the same message; those are not arguments, so do
+them first, then benchmark.
 
 Follow exactly these steps:
 
@@ -28,7 +28,7 @@ Pick the right runner from what the repo contains (respect `.prototools`/proto f
   to compare criterion baselines.
 - **CLI binary** to time end-to-end → `hyperfine` (multiple runs, warmup, statistical summary).
 - **Node/TS** → a `bench` script in `package.json`, or `vitest bench` / a `tinybench`-based script.
-- If you can't find any benchmarks, tell me and stop — don't invent them.
+- If you can't find any benchmarks, tell me and stop; don't invent them.
 
 ## 2. Establish the comparison baseline
 - If `--baseline <name>` was given (or a saved baseline already exists), compare the new run against
@@ -37,7 +37,7 @@ Pick the right runner from what the repo contains (respect `.prototools`/proto f
   default name `base`), then tell me how to compare against it later.
 - To measure the effect of an **uncommitted change** end-to-end, you may offer to benchmark clean
   `HEAD` vs the working tree: save a baseline, `git stash`, bench, `git stash pop`, bench again, then
-  `critcmp`. Offer this — don't do it automatically (stashing touches my working tree).
+  `critcmp`. Offer this; don't do it automatically (stashing touches my working tree).
 
 ## 3. Run the benchmarks
 - Run the detected command, applying the filter argument if given.
@@ -47,7 +47,7 @@ Pick the right runner from what the repo contains (respect `.prototools`/proto f
 - Present a table: benchmark name · baseline · current · delta (%), regressions (slower) marked
   clearly and improvements too.
 - **Caveat about noise:** benchmarks are sensitive to background load, CPU scaling, and power state.
-  Don't call small deltas (within a few %) real — flag them as noise. If results look noisy,
+  Don't call small deltas (within a few %) real; flag them as noise. If results look noisy,
   recommend re-running on a quieter machine / consistent power with more samples.
 
 ## 5. Hygiene

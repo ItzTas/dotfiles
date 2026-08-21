@@ -1,7 +1,7 @@
 # Tailwind-style utility class linting
 
-Applies to any file carrying Tailwind-shaped class attributes — `.svelte`, `.html`, `.jsx`/`.tsx`,
-`.vue`, `.astro` — whether the engine is Tailwind itself or UnoCSS (`presetWind*`, `presetUno`).
+Applies to any file carrying Tailwind-shaped class attributes (`.svelte`, `.html`, `.jsx`/`.tsx`,
+`.vue`, `.astro`), whether the engine is Tailwind itself or UnoCSS (`presetWind*`, `presetUno`).
 
 ## Where the diagnostics come from
 
@@ -14,35 +14,34 @@ Planilha.svelte
   └╴W The class `break-words` can be written as `wrap-break-word`  (suggestCanonicalClasses) [1746, 38]
 ```
 
-The position is `[line, column]`, 1-based, from my buffer — re-read the line before editing, other
+The position is `[line, column]`, 1-based, from my buffer. Re-read the line before editing, other
 sessions may have shifted it.
 
 **The language server validates against the Tailwind version it bundles, not the one the project
-compiles with.** It also attaches to UnoCSS projects, which ship no Tailwind at all — lspconfig
-matches on filetype and the class syntax is Tailwind-shaped. Treat every version-sensitive
-suggestion as unverified until checked against the project's real engine.
+compiles with.** It also attaches to UnoCSS projects, which ship no Tailwind at all, because
+lspconfig matches on filetype and the class syntax is Tailwind-shaped. Treat every
+version-sensitive suggestion as unverified until checked against the project's real engine.
 
-## `cssConflict` — apply as-is
+## `cssConflict`: apply as-is
 
 Two utilities in the same class attribute set the same CSS property. Always real: the last one
 wins and the other is dead weight. Delete the losing utility (the one appearing *earlier* in the
 attribute), keep the one that takes effect.
 
-## `suggestCanonicalClasses` — never apply blindly
+## `suggestCanonicalClasses`: never apply blindly
 
 My `lsp.lua` sets this rule to `"ignore"` on roots that hold a `uno.config.*` **and** no Tailwind
 (no `tailwind.config.*`, no `tailwindcss` dependency), so on my UnoCSS-only projects it should
-never reach me. If one shows up there anyway, the LSP config regressed — say so instead of acting
+never reach me. If one shows up there anyway, the LSP config regressed. Say so instead of acting
 on the suggestion.
 
 On a root where both engines are installed the rule stays on, because nothing tells the server
 which engine compiles the file at hand. There the suggestion may well be right: verify against
 both engines before applying, and if they disagree, ask me which one owns that file.
 
-
-A rename suggestion, and the one that bites. Applying a newer-Tailwind name to an older engine
-silently produces **no CSS at all** — the class lands in the markup and generates nothing, with no
-build error. Verify first, then apply or reject.
+This is a rename suggestion, and the one that bites. Applying a newer-Tailwind name to an older
+engine silently produces **no CSS at all**: the class lands in the markup and generates nothing,
+with no build error. Verify first, then apply or reject.
 
 ### Verify on UnoCSS
 
@@ -60,10 +59,10 @@ import('@unocss/config').then(async ({ loadConfig }) => {
 })"
 ```
 
-Anything missing from `matched:` generates nothing — do not put it in the markup.
+Anything missing from `matched:` generates nothing, so do not put it in the markup.
 
 Known trap: `presetWind3` is Tailwind **v3**-compatible. Tailwind v4.1 names like `wrap-break-word`,
-`wrap-anywhere`, `wrap-normal` don't exist there — `break-words` remains correct.
+`wrap-anywhere` and `wrap-normal` don't exist there, so `break-words` remains correct.
 
 ### Verify on Tailwind
 
@@ -79,5 +78,5 @@ npx tailwindcss -i <project-css-entry> -o - --content /tmp/probe.html | grep -c 
 
 Keep the original class and say the suggestion was rejected as incompatible with the project's
 engine version. Do not leave the file in a half-applied state, and check whether the same bad
-rename already leaked into other files (`grep -rn '<bad-class>' src/`) — these apply silently, so
+rename already leaked into other files (`grep -rn '<bad-class>' src/`). These apply silently, so
 an earlier accepted suggestion can already be live and unnoticed.

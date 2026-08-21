@@ -4,7 +4,7 @@
   touched (use `./...` if the change is broad).
 
   - If the repo has a golangci-lint config (`.golangci.yml`/`.yaml`/`.toml`/`.json`), it is
-    authoritative — run it as-is:
+    authoritative. Run it as-is:
 
     ```bash
     golangci-lint run <pkg-dir>/...
@@ -17,7 +17,7 @@
     ```
 
   Fix every issue it reports in the code you touched before considering the task complete
-  (pre-existing findings in unrelated packages don't block the task — just mention them).
+  (pre-existing findings in unrelated packages don't block the task, just mention them).
   If `golangci-lint` is not installed, fall back to running `go vet <pkg>` plus the standalone
   `errcheck <pkg>` (and `staticcheck <pkg>` if available).
 
@@ -32,7 +32,7 @@
   Recent `gopls` versions also accept package patterns (`gopls check ./...`); if that errors,
   fall back to listing the file paths explicitly.
 
-  By default it only prints `warning` and above — to see the hint-level suggestions too:
+  By default it only prints `warning` and above. To see the hint-level suggestions too:
 
   ```bash
   gopls check -severity=hint <file>.go
@@ -42,9 +42,9 @@
   them when they're clearly right, otherwise mention them.
 
   - **If `gopls` is not installed, ask me whether to install it** (in choices, with the exact
-    install command — normally `go install golang.org/x/tools/gopls@latest`). Never install it
+    install command, normally `go install golang.org/x/tools/gopls@latest`). Never install it
     unprompted.
   - **If I say no, write that down in memory** as a `feedback` memory file (plus its one-line
-    `MEMORY.md` pointer) — then skip the `gopls` step from that point on and stop asking. Check
+    `MEMORY.md` pointer), then skip the `gopls` step from that point on and stop asking. Check
     memory for that decision *before* asking, so I'm only asked once.
   - If I say yes, install it, then run the check.

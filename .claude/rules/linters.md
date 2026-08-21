@@ -1,5 +1,5 @@
 These are my mandatory linter rules, split per file type to keep context small. Whenever you edit
-or create a file of one of the types below — in any project — **read only the matching rule file**,
+or create a file of one of the types below, in any project, **read only the matching rule file**,
 run the linters it lists, and fix any issues they report before considering the task complete.
 Do not read rule files for types you are not touching.
 
@@ -28,8 +28,8 @@ anything) until you've looked in the Mason bin directory:
 ls ~/.local/share/nvim/mason/bin/
 ```
 
-If the executable is there, run it from that path — e.g. `~/.local/share/nvim/mason/bin/hadolint
-<file>` — or prepend the directory for the whole lint pass:
+If the executable is there, run it from that path, e.g. `~/.local/share/nvim/mason/bin/hadolint
+<file>`, or prepend the directory for the whole lint pass:
 
 ```bash
 PATH="$HOME/.local/share/nvim/mason/bin:$PATH" golangci-lint run ./...

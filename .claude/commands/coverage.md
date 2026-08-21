@@ -4,12 +4,12 @@ argument-hint: [path]
 allowed-tools: Bash(cargo*), Bash(npm*), Bash(npx*), Bash(pnpm*), Bash(proto*), Read, Edit, Glob, Grep
 ---
 
-Measure how well the tests cover the code and show me where the holes are — the overall numbers plus
+Measure how well the tests cover the code and show me where the holes are: the overall numbers plus
 the exact uncovered lines/branches that matter most.
 
 Optional argument (`$ARGUMENTS`): a path or module to focus the report on (default: whole project).
 
-Separately, I may include **other requests** in the same message; those are not the argument — do
+Separately, I may include **other requests** in the same message; those are not the argument, so do
 them first, then run coverage.
 
 Follow exactly these steps:
@@ -33,14 +33,14 @@ Follow exactly these steps:
 
 ## 3. Report the gaps
 - Lead with the **overall numbers**: line, branch, and function coverage %.
-- List the **least-covered files** and, for each, the specific **uncovered `file:line` ranges** —
-  focus on meaningful gaps, not trivial getters/boilerplate.
-- Call out **risky** uncovered code specifically: error/`Err` paths, edge cases, early returns,
-  `unwrap`/`panic` branches — the stuff most likely to hide bugs.
+- List the **least-covered files** and, for each, the specific **uncovered `file:line` ranges**,
+  focusing on meaningful gaps, not trivial getters/boilerplate.
+- Call out **risky** uncovered code specifically: error/`Err` paths, edge cases, early returns and
+  `unwrap`/`panic` branches, the stuff most likely to hide bugs.
 
-## 4. (Optional) fill the gaps — opt-in only
+## 4. (Optional) fill the gaps, opt-in only
 - Offer, but do **not** do automatically: write tests for the most important uncovered paths. Only if
-  I say yes — and then follow my `~/.claude/rules/git-conventions.md` (new branch first if I'm on a protected branch), add the
+  I say yes, and then follow my `~/.claude/rules/git-conventions.md` (new branch first if I'm on a protected branch), add the
   tests, and re-run coverage to confirm they hit the target lines.
 
 ## 5. Hygiene

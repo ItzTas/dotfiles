@@ -8,4 +8,4 @@
   ```
 
   Fix every error it reports before considering the task complete. **Do not run shellcheck on
-  zsh files** — it doesn't support zsh and forcing `--shell=bash` produces false positives.
+  zsh files**: it doesn't support zsh, and forcing `--shell=bash` produces false positives.

@@ -1,5 +1,5 @@
 ---
-description: FLOW MODE add-on — every item gets a .md written before the work starts, so I can edit it while you work
+description: FLOW MODE add-on where every item gets a .md written before the work starts, so I can edit it while you work
 argument-hint: "[on|off] [first request]"
 allowed-tools: Task, Agent, Read, Edit, Write, Glob, Grep, Bash
 ---
@@ -7,19 +7,19 @@ allowed-tools: Task, Agent, Read, Edit, Write, Glob, Grep, Bash
 Turn **TASKFILES mode** on (or off) for **FLOW MODE** (`/flow`, `~/.claude/commands/flow.md`).
 
 It's an add-on to FLOW MODE, not a mode of its own: everything in `flow.md` still applies as
-written, and the rules below sit on top of it. **Off by default** — it's only active once I run this
+written, and the rules below sit on top of it. **Off by default**: it's only active once I run this
 command, and it stays active until I turn it off or leave FLOW MODE.
 
 The point: **every item lands on disk as a `.md` before you touch it**, so I can open that file and
-edit it — refine the spec, add constraints, cut scope — **while you're still working**, without
+edit it (refine the spec, add constraints, cut scope) **while you're still working**, without
 sending you another message.
 
 ## Dispatch on `$ARGUMENTS` (first word, case-insensitive)
 
-- **`off`** → turn the mode off: go back to flow.md rule 5's default (files only when the item
-  warrants one) and confirm in one line. Don't delete the files already written.
-- **`on`, or no argument** → turn it on (see below).
-- **Anything else** → turn it on **and** treat the whole argument as a **new work item**, queued per
+- **`off`**: turn the mode off, going back to flow.md rule 5's default (files only when the item
+  warrants one), and confirm in one line. Don't delete the files already written.
+- **`on`, or no argument**: turn it on (see below).
+- **Anything else**: turn it on **and** treat the whole argument as a **new work item**, queued per
   flow.md rule 1 (e.g. `/flow:taskfiles fix the login redirect`). `on` followed by a request does
   both too.
 
@@ -33,7 +33,7 @@ doesn't have one yet, then report the paths.
 
 - **Write a file for every item, no exceptions.** As soon as a request arrives and goes into the
   TODO list, **immediately** create its `.md` under
-  `.claude/tasks/$CLAUDE_CODE_SESSION_ID/<kebab-case-name>.md` — same location, naming and
+  `.claude/tasks/$CLAUDE_CODE_SESSION_ID/<kebab-case-name>.md`, with the same location, naming and
   session-isolation rules as flow.md rule 5, including the `## Images` handling. This holds **even
   for trivial one-line items** and even for items you're about to start right away: rule 5's "only
   skip the file when the item is trivial" carve-out **does not apply** here.
@@ -64,17 +64,17 @@ doesn't have one yet, then report the paths.
 
 - **Re-read the file right before you start the item**, and again at every natural checkpoint while
   it's in progress (finishing a step, before a big edit, when coming back from a subagent). The file
-  on disk — not the original prompt in context — is the **source of truth** for that item.
+  on disk, not the original prompt in context, is the **source of truth** for that item.
 - **My edits win.** Anything I wrote in the file (especially under `## My edits`) overrides the
   original request and your own plan. When you notice the file changed mid-work, say so in one line
-  ("`refactor-auth.md` changed — picking up the new constraint") and adapt. If my edit contradicts
-  work you already finished for that item, that's flow.md rule 7 — flag it and ask.
+  ("`refactor-auth.md` changed, picking up the new constraint") and adapt. If my edit contradicts
+  work you already finished for that item, that's flow.md rule 7: flag it and ask.
 - **Keep the file updated as you go** (tick the plan boxes, append to `## Notes`), but **never
-  overwrite or reword my `## My edits` section**, and never rewrite the whole file blind — I may
-  have it open. Prefer targeted edits over full rewrites.
+  overwrite or reword my `## My edits` section**, and never rewrite the whole file blind, since I
+  may have it open. Prefer targeted edits over full rewrites.
 - **Subagents get the path, not just the text.** When you hand an item to a subagent, tell it to
   read the task file first, re-read it at checkpoints, and follow the same "don't touch
   `## My edits`" rule.
-- **Don't delete task files while this mode is on**, even when the item is done — I may still be
-  reading or editing them. Rule 5's deletion permission is suspended until I turn the mode off or
+- **Don't delete task files while this mode is on**, even when the item is done, since I may still
+  be reading or editing them. Rule 5's deletion permission is suspended until I turn the mode off or
   exit FLOW MODE.
