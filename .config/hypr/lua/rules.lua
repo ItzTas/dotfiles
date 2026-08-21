@@ -335,6 +335,12 @@ rule({
 })
 
 rule({
+	name = "wezterm",
+	match = { class = "org.wezfurlong.wezterm" },
+	no_blur = true,
+})
+
+rule({
 	name = "kando",
 	match = { class = "^(kando)$" },
 	no_blur = true,

@@ -53,33 +53,6 @@ gui:
   language: auto
   timeFormat: 02 Jan 06
   shortTimeFormat: 3:04PM
-  theme:
-    activeBorderColor:
-      - "#c5c3e7"
-      - bold
-    inactiveBorderColor:
-      - "#c7c5d4"
-    searchingActiveBorderColor:
-      - "#e6bad3"
-      - bold
-    optionsTextColor:
-      - "#c8c5ce"
-    selectedLineBgColor:
-      - "#c8c5ce"
-    inactiveViewSelectedLineBgColor:
-      - bold
-    cherryPickedCommitFgColor:
-      - "#c8c5ce"
-    cherryPickedCommitBgColor:
-      - "#e6bad3"
-    markedBaseCommitFgColor:
-      - "#e6bad3"
-    markedBaseCommitBgColor:
-      - "#ffb4ab"
-    unstagedChangesColor:
-      - "#ffb4ab"
-    defaultFgColor:
-      - "#e5e1e4"
   commitLength:
     show: true
   showListFooter: true
@@ -115,5 +88,3 @@ gui:
   switchToFilesAfterStashPop: true
   switchToFilesAfterStashApply: true
   switchTabsWithPanelJumpKeys: false
-os:
-  shellFunctionsFile: ~/.config/zsh/config/aliases
