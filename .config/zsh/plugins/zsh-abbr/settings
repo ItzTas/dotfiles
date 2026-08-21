@@ -1,0 +1,16 @@
+#!/bin/env zsh
+# vim: filetype=zsh
+
+# Where `abbr add` / `abbr erase` persist abbreviations. Kept inside $ZDOTDIR so
+# yadm versions them along with the rest of the config.
+#
+# zsh-abbr REWRITES this file on every add/erase, so anything you put in it by
+# hand that is not an `abbr ...` line (comments included) gets dropped on the
+# next write. Edit it through the `abbr` command, not by hand.
+ABBR_USER_ABBREVIATIONS_FILE="${ZDOTDIR:-$HOME/.config/zsh}/abbreviations"
+
+# Default bindings: <Space> expands, <Ctrl-Space> inserts a literal space.
+ABBR_DEFAULT_BINDINGS=1
+
+# Don't print the "you could have used the abbreviation X" hints.
+ABBR_QUIET=1

@@ -1,0 +1,20 @@
+#!/bin/env zsh
+# vim: filetype=zsh
+
+# By default zsh-vi-mode defers zvm_init to precmd_functions, so it runs after
+# the whole zshrc and overwrites every bindkey set in config/binds. Sourcing
+# mode initializes it here instead, while the plugin file is being sourced.
+ZVM_INIT_MODE=sourcing
+
+# Same problem one level down: lazy keybindings postpone the vicmd and visual
+# keymaps to the first time normal mode is entered, which is again after
+# config/binds. Bind everything up front so config/binds wins.
+ZVM_LAZY_KEYBINDINGS=false
+
+# Catppuccin Mocha, matching the syntax-highlighting theme. Used for the
+# surround and visual-line highlights.
+ZVM_VI_HIGHLIGHT_FOREGROUND='#cdd6f4'
+ZVM_VI_HIGHLIGHT_BACKGROUND='#45475a'
+
+# Surround verbs read as `ci"` / `ya(` rather than `sci"` / `sya(`.
+ZVM_VI_SURROUND_BINDKEY='classic'

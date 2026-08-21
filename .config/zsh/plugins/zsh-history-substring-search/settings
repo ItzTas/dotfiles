@@ -1,0 +1,11 @@
+#!/bin/env zsh
+# vim: filetype=zsh
+
+# Cycle through each matching command once instead of repeating duplicates.
+HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
+
+# Catppuccin Mocha: surface0 background for a hit, red for a miss.
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=#cdd6f4,bg=#45475a,bold'
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=#f38ba8,bold'
+
+# The keybindings live in config/binds, which is sourced after every plugin.
