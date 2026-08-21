@@ -4,14 +4,14 @@ argument-hint: [n]
 allowed-tools: Bash(git*)
 ---
 
-Undo the last commit (or the last `n` commits) **without losing any work** — the changes stay in
+Undo the last commit (or the last `n` commits) **without losing any work**. The changes stay in
 the working tree so I can re-commit, edit, or split them.
 
-This command takes a single optional argument — how many commits to undo: `$ARGUMENTS`
+This command takes a single optional argument, how many commits to undo: `$ARGUMENTS`
 If no number is given, undo **one** commit.
 
 Separately, I may include **other requests** in the same message, before or after `/uncommit`. Those
-are not the argument — handle them as normal work.
+are not the argument; handle them as normal work.
 
 ## Steps
 
@@ -25,7 +25,7 @@ are not the argument — handle them as normal work.
 
 ### 3. Safety checks (warn, don't silently proceed)
 - If there are **fewer commits** than requested (e.g. undoing 3 but the branch has 2), or `HEAD`
-  would go past the **root commit**, stop and tell me — do not force it.
+  would go past the **root commit**, stop and tell me. Do not force it.
 - If any of the commit(s) to undo is a **merge commit**, point it out and ask me how to proceed
   before resetting.
 - If the commit(s) have **already been pushed** to the remote (compare `HEAD` against the tracking

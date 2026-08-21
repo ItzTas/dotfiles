@@ -14,8 +14,8 @@ Optional argument (`$ARGUMENTS`):
 (If the argument matches a known marker keyword, treat it as a marker filter; otherwise treat it as
 a path.)
 
-Separately, I may include **other requests** in the same message; those are not arguments — do them
-first, then run the scan.
+Separately, I may include **other requests** in the same message; those are not arguments, so do
+them first, then run the scan.
 
 ## Guardrail
 - **Never read or scan `$HOME/.config/zsh/secrets`** (per my `CLAUDE.md`). Exclude it from the scan.
@@ -45,16 +45,16 @@ Follow exactly these steps:
 
 ## 4. (Optional) add context for prioritization
 - For anything that looks stale or high-priority, you may add a light `git blame` note (who/when the
-  line was introduced) — but keep it brief; don't blame every single line.
+  line was introduced), but keep it brief; don't blame every single line.
 
-## 5. Report — grouped and clickable
+## 5. Report, grouped and clickable
 - Order by urgency: `FIXME`/`BUG`/`XXX` first, then `TODO`/`HACK`/`OPTIMIZE`, then `NOTE` last.
 - For each finding show the `file:line` reference (clickable) and the message; group by marker type
   (or by file if that reads better for the result set).
 - Start with a one-line summary of counts per marker (e.g. `3 FIXME · 12 TODO · 1 HACK`).
 - If nothing is found, say so plainly.
 
-## 6. (Optional) offer a follow-up — opt-in only
+## 6. (Optional) offer a follow-up, opt-in only
 - Offer, but do **not** do automatically: turn the important items into a task list, or open issues
-  for them — GitHub via `gh issue create`, GitLab via `glab issue create` (match whichever remote
+  for them, GitHub via `gh issue create` and GitLab via `glab issue create` (match whichever remote
   the repo has). Only create issues if I explicitly say yes.

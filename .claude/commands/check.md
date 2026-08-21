@@ -6,13 +6,13 @@ allowed-tools: Bash, Read, Glob, Grep, Edit
 
 Run quality/lint/validation checks against a target and **fix** what they report.
 
-Arguments — the first is **what** to check, the rest (optional) are **which tools** to use:
+Arguments: the first is **what** to check, the rest (optional) are **which tools** to use:
 `$ARGUMENTS`
 
 - **First argument = the target.** It can be:
   - a **file** (`Dockerfile`, `src/main.go`),
   - a **directory** (`src`),
-  - a **file type / language** — a bare extension or language name like `js`, `ts`, `py`, `go`,
+  - a **file type / language**: a bare extension or language name like `js`, `ts`, `py`, `go`,
     `lua`, `php`, `vue`, `sh`, `yaml` → every file of that type in the project,
   - a **glob / pattern** like `*.js`, `**/*.ts`, `src/**/*.py`,
   - or a **keyword**: `.` (whole project) or `diff`/`staged`/`changes` (only what changed).
@@ -20,7 +20,7 @@ Arguments — the first is **what** to check, the rest (optional) are **which to
   `shellcheck`). There may be **zero or more**; more than one is fine and they all run.
 
 Separately, I may include **other requests** in the same message, before or after `/check`. Those
-are not arguments — handle them as normal work.
+are not arguments; handle them as normal work.
 
 ## Steps
 
@@ -42,7 +42,7 @@ are not arguments — handle them as normal work.
 - **If tools were given, use exactly those** (don't second-guess or add others).
 - **If none were given, auto-detect** sensible checkers from the target's type / the project's
   config. Prefer tools the repo already configures (look for config files) and honor
-  `.prototools` for versions — run through `proto` when the tool is pinned there. Examples:
+  `.prototools` for versions, running through `proto` when the tool is pinned there. Examples:
   - Dockerfile → `hadolint`, `trivy config`
   - JS/TS → `eslint`, `tsc --noEmit`, `prettier --check`
   - Vue → `eslint`, `vue-tsc --noEmit`
@@ -58,7 +58,7 @@ are not arguments — handle them as normal work.
 
 ### 3. Verify availability
 - Before running each tool, confirm it's available (respecting `.prototools`/`proto`). If a
-  requested tool isn't installed, tell me clearly — don't silently skip it.
+  requested tool isn't installed, tell me clearly; don't silently skip it.
 
 ### 4. Run the checks
 - Run each selected tool against the target and capture its output.

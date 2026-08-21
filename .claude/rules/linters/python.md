@@ -18,7 +18,7 @@
     in the output are environment noise, not real findings.
 
   - If the repo configures it (`[tool.basedpyright]` or `[tool.pyright]` in `pyproject.toml`, or a
-    `pyrightconfig.json`), that config is authoritative — run it as-is, don't override
+    `pyrightconfig.json`), that config is authoritative. Run it as-is, don't override
     `typeCheckingMode` or individual rules on the command line.
 
   - Otherwise let basedpyright use its own default (`recommended`, stricter than pyright's
@@ -27,12 +27,12 @@
     those, and mention the remaining strict-mode findings instead of silencing them.
 
   Fix every error it reports in the code you touched before considering the task complete
-  (pre-existing findings in files you didn't touch don't block the task — just mention them).
+  (pre-existing findings in files you didn't touch don't block the task, just mention them).
   Exit code `0` = clean, `1` = diagnostics, `2` = fatal/config error.
 
 - **Suppress only with rule-specific comments.** When a finding genuinely must be ignored, use
   `# pyright: ignore[reportUnusedCallResult]` on the offending line, never a bare
-  `# pyright: ignore` or `# type: ignore` — basedpyright flags those itself
+  `# pyright: ignore` or `# type: ignore`, which basedpyright flags itself
   (`reportIgnoreCommentWithoutRule`). Prefer fixing the types over ignoring.
 
 - **Never write or update a baseline to make the run pass.** `--writebaseline` records current
@@ -41,5 +41,5 @@
   ask for it.
 
 - **Don't swap in a different type checker.** If the repo pins `pyright`, `mypy`, or `ty` in
-  `.prototools`/`pyproject.toml`/pre-commit, run that one too and keep it — basedpyright is what I
+  `.prototools`/`pyproject.toml`/pre-commit, run that one too and keep it. basedpyright is what I
   want added, not a replacement for a checker the project already depends on.

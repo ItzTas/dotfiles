@@ -11,7 +11,7 @@ answering side of `/pr`.
 Optional argument (`$ARGUMENTS`): a specific PR/MR number or URL. If omitted, detect it from the
 current branch.
 
-Separately, I may include **other requests** in the same message; those are not the argument — do
+Separately, I may include **other requests** in the same message; those are not the argument, so do
 them first, then address the review.
 
 Follow exactly these steps:
@@ -22,7 +22,7 @@ Follow exactly these steps:
 
 ## 1. Detect the PR/MR
 - Identify the hosts from `git remote -v` (`github.com` → GitHub, `gitlab.com`/self-hosted → GitLab),
-  the same way `/pr` does — there may be a GitHub PR, a GitLab MR, or both.
+  the same way `/pr` does. There may be a GitHub PR, a GitLab MR, or both.
 - Find the open PR/MR for the current branch (GitHub: `gh pr view`; GitLab: `glab mr view`), or use
   the number/URL I passed. If both hosts have one and it's ambiguous, ask which to address.
 - Make sure I'm on that PR/MR's branch (`git status`); if not, check it out. If it turns out I'm on a
@@ -33,7 +33,7 @@ Follow exactly these steps:
   (`gh api repos/{owner}/{repo}/pulls/{n}/comments`). Fallback: `mcp__github__pull_request_read`.
 - **GitLab**: read the discussion threads via `mcp__gitlab__mr_discussions` (or
   `glab api "projects/:id/merge_requests/:iid/discussions"`); `glab mr view` shows the summary.
-  (Note: `glab mr note` only *adds* notes — it's not for listing them.)
+  (Note: `glab mr note` only *adds* notes; it's not for listing them.)
 - Pull down the latest first (`git pull`) so I'm editing against the reviewed state.
 
 ## 3. Triage the feedback
@@ -43,7 +43,7 @@ Follow exactly these steps:
 - Skip already-resolved/outdated threads unless they still apply.
 
 ## 4. Apply the changes
-- For each **change requested**, make the focused edit that addresses exactly that comment — nothing
+- For each **change requested**, make the focused edit that addresses exactly that comment, nothing
   unrelated. Keep the reviewer's intent; if a request seems wrong or risky, note it for a reply
   instead of silently ignoring it.
 - For each **question**, draft a reply (don't invent a code change).
@@ -55,9 +55,9 @@ Follow exactly these steps:
   addressed).
 - Push so the PR/MR updates.
 
-## 6. Reply and resolve — outward-facing, confirm first
+## 6. Reply and resolve: outward-facing, confirm first
 - **Ask before posting anything.** Then, for each thread, reply briefly (e.g. `Done in <sha>` or the
-  answer to a question) and resolve it — GitHub: reply via `gh`/GraphQL and resolve with
+  answer to a question) and resolve it. GitHub: reply via `gh`/GraphQL and resolve with
   `resolveReviewThread`; GitLab: reply with `glab mr note <id> -m "…"` and resolve via
   `mcp__gitlab__resolve_merge_request_thread`.
 - Leave threads I disagreed with open, with a reply explaining why.

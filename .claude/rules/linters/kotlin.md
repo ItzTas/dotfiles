@@ -5,7 +5,7 @@
   analysis), and fix everything they report in the code you touched before considering the task
   complete.
 
-- **Prefer the project's Gradle tasks when they exist** — they carry the repo's own config,
+- **Prefer the project's Gradle tasks when they exist.** They carry the repo's own config,
   rulesets and baselines, so they are authoritative:
 
   ```bash
@@ -27,7 +27,7 @@
   `--config <path>` instead of relying on defaults. Honor `--baseline <detekt-baseline.xml>` when
   one exists so pre-existing findings don't drown the new ones.
 
-- **ktlint style comes from `.editorconfig`** — if the repo has one, it wins. Never hand-edit
+- **ktlint style comes from `.editorconfig`.** If the repo has one, it wins. Never hand-edit
   formatting that ktlint disagrees with; run the formatter instead:
 
   ```bash
@@ -41,6 +41,6 @@
   scope possible and say why in the response; don't add entries to the baseline file and don't
   loosen the shared config.
 
-- Pre-existing findings in files you didn't touch don't block the task — just mention them. If
+- Pre-existing findings in files you didn't touch don't block the task, just mention them. If
   neither tool is installed and there's no Gradle wrapper, mention that the lint was skipped rather
   than silently declaring the file clean.

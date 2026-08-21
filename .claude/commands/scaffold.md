@@ -5,14 +5,14 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 ---
 
 Create a new file / component / module that fits **this project's** conventions, by mirroring an
-existing example of the same kind — not a generic template.
+existing example of the same kind, not a generic template.
 
 Arguments: `$ARGUMENTS`
 - First token → the **type/kind** to create (e.g. `component`, `page`, `handler`, `service`,
   `model`, `route`, `store`, `hook`, `test`).
 - Following token(s) → the **name** (e.g. `UserCard`, `CreateOrder`).
 Any extra detail can also come from **the rest of my message** (e.g. "`/scaffold component
-ConfirmDialog` a modal with confirm/cancel") — treat that as part of the spec.
+ConfirmDialog` a modal with confirm/cancel"), and treat that as part of the spec.
 
 ## Steps
 
@@ -23,15 +23,15 @@ ConfirmDialog` a modal with confirm/cancel") — treat that as part of the spec.
 ### 2. Prefer the project's own generator, if any
 - If the repo has a scaffolding tool configured (e.g. `plop`, `hygen`, a framework CLI like
   `nest g` / `rails g` / `php artisan make:` / `vue` generators, or a `Makefile`/`just` target),
-  **use it** — that's the project's blessed path. Honor `.prototools`/`proto` for versions.
+  **use it**. That's the project's blessed path. Honor `.prototools`/`proto` for versions.
 
 ### 3. Otherwise, mirror a sibling
 - Find an **existing example of the same kind** in the repo and copy its shape:
   - the **full set of files** siblings come with (e.g. component + test + story + style), not just one,
   - **location** (put the new one where its siblings live),
-  - **naming/casing** (PascalCase component, kebab-case filename, etc. — match the repo),
+  - **naming/casing** (PascalCase component, kebab-case filename, and so on, matching the repo),
   - imports, boilerplate, section order, and code style.
-- Fill in the new name everywhere. Leave clear `TODO` markers for the parts that need real logic —
+- Fill in the new name everywhere. Leave clear `TODO` markers for the parts that need real logic;
   don't invent business behavior.
 - **Never overwrite an existing file.** If the target already exists, stop and tell me.
 

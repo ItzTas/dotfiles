@@ -11,7 +11,7 @@ quando a última sessão encerra. Substitui o antigo gateway LiteLLM (skill
 `litellm-setup`, aposentada).
 
 Use esta skill em uma máquina nova (ou pra reconfigurar) e replique os passos.
-Convenções de flags — equivalentes: `--setup` = `-setup` = `-s`.
+Convenções de flags, equivalentes: `--setup` = `-setup` = `-s`.
 
 ## Arquitetura
 
@@ -28,16 +28,16 @@ Claude Code ── Anthropic /v1/messages ──▶ relay (127.0.0.1:4000)
 - Ollama antes de DeepSeek na precedência: `ollama/deepseek-r1` local tem
   "deepseek" no nome mas mora no Ollama.
 - `GET /v1/models` lista Claude + DeepSeek estáticos e consulta
-  `127.0.0.1:11434/api/tags` (timeout 2s) — models do Ollama aparecem no `/model`
+  `127.0.0.1:11434/api/tags` (timeout 2s). Os models do Ollama aparecem no `/model`
   automaticamente quando o daemon está de pé.
-- `count_tokens` de models Ollama é respondido localmente (estimativa) — o daemon
+- `count_tokens` de models Ollama é respondido localmente (estimativa): o daemon
   não implementa e pode travar com esse endpoint.
 - Sem auth própria no relay (localhost only): claude-* repassa o token que chegou
   (OAuth da assinatura funciona), deepseek usa a chave do `.env` do serviço.
 - `StopWhenUnused=` NÃO existe no systemd 261 (`Unknown key`). O stop-on-idle é
   feito pelo wrapper `deepseek` (para o serviço quando a última sessão encerra).
 
-## Arquivos (já tracked no yadm — vêm no clone)
+## Arquivos (já tracked no yadm, vêm no clone)
 
 | Arquivo | Papel |
 |---|---|
@@ -55,7 +55,7 @@ python3 -m venv "$HOME/.local/share/litellm-venv"   # nome histórico; só o pyt
 "$HOME/.local/share/litellm-venv/bin/pip" install fastapi httpx uvicorn
 ```
 
-(Não precisa de litellm nem do pin `fastapi<0.116` — aquilo era do gateway antigo.)
+(Não precisa de litellm nem do pin `fastapi<0.116`; aquilo era do gateway antigo.)
 
 ### 2. Secret
 
@@ -93,9 +93,9 @@ configurar no relay: com o daemon de pé, os models entram no `/v1/models` como
 
 ## Uso
 
-- `cct` — sessão com relay: `/model` mostra e troca entre Claude (assinatura),
+- `cct` abre uma sessão com relay: `/model` mostra e troca entre Claude (assinatura),
   DeepSeek e Ollama (quando o daemon estiver de pé).
-- `claude` — Claude real direto, intocado (sem relay).
+- `claude` é o Claude real direto, intocado (sem relay).
 - Setup principal hoje é o OmniRoute (`ccr`, skill `omniroute-setup`); o relay
   fica de fallback.
 
@@ -110,5 +110,5 @@ configurar no relay: com o daemon de pé, os models entram no `/v1/models` como
 
 ## Secretas
 
-- `~/.config/litellm/.env` contém a chave DeepSeek — **nunca** adicionar ao
+- `~/.config/litellm/.env` contém a chave DeepSeek, então **nunca** adicionar ao
   yadm/git (`~/.gitignore` já cobre `.env` e o obsoleto `master_key`).
