@@ -24,7 +24,7 @@ categories    = true                               # appLauncher.showCategories
 sort_by_usage = true                               # appLauncher.sortByMostUsed
 app_grid      = false                              # appLauncher.viewMode = list
 pinned        = []                                 # appLauncher.pinnedApps
-# appLauncher.terminalCommand "kitty -e" → v5 usa $TERMINAL (sem "-e"): export TERMINAL=kitty
+# appLauncher.terminalCommand "kitty -e" → v5 uses $TERMINAL (without "-e"): export TERMINAL=kitty
 
 [shell.mpris]
 blacklist = []                                     # audio.mprisBlacklist
@@ -33,11 +33,20 @@ blacklist = []                                     # audio.mprisBlacklist
 mic_filter_regex = ""                              # plugin privacy-indicator
 cam_filter_regex = ""
 
-# ── Sessão (sessionMenu) ──────────────────────────────────────────────────────
+# ── Session (sessionMenu) ─────────────────────────────────────────────────────
 
 [shell.session]
 grid           = false                             # largeButtonsLayout = single-row
 show_shortcuts = true                              # showKeybinds
+
+# Global power command overrides: applied to the session panel, the /session
+# launcher provider, `noctalia msg session <action>`, idle actions and greeter
+# sync -- not just the panel buttons. Only suspend/reboot/shutdown exist here
+# (lock/logout/hibernate are rejected as "unknown setting").
+[shell.session.power]
+reboot   = "hyprshutdown -t 'Restarting...' --post-cmd 'systemctl reboot'"
+shutdown = "hyprshutdown -t 'Shutting down...' --post-cmd 'systemctl poweroff'"
+suspend  = "hyprshutdown -t 'Suspending...' --post-cmd 'systemctl suspend'"
 
 [[shell.session.actions]]
 action = "lock"
@@ -49,7 +58,7 @@ action = "suspend"
 shortcut = "2"
 countdown_seconds = 5
 
-[[shell.session.actions]]                          # "hibernate" não é ação nativa no v5
+[[shell.session.actions]]                          # "hibernate" is not a native v5 action
 action = "command"
 label = "Hibernate"
 glyph = "moon"

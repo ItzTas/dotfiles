@@ -1,9 +1,9 @@
 [theme]
 mode           = "dark"                            # colorSchemes.darkMode
-source         = "custom"                          # colorSchemes.predefinedScheme (esquema próprio)
+source         = "custom"                          # colorSchemes.predefinedScheme (own scheme)
 custom_palette = "Catppuccin Lavender"             # → palettes/Catppuccin Lavender.json
 pure_black_dark = false
-# colorSchemes.syncGsettings: sem equivalente direto; use templates gtk3/gtk4 abaixo se quiser.
+# colorSchemes.syncGsettings: no direct equivalent; use the gtk3/gtk4 templates below if you want.
 
 [theme.templates]
 enable_builtin_templates   = true

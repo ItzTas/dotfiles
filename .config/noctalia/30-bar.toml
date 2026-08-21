@@ -4,7 +4,7 @@ background_opacity = 0.0                           # bar.backgroundOpacity = 0
 radius             = 12                            # bar.frameRadius
 margin_edge        = 4                             # bar.marginVertical
 margin_ends        = 4                             # bar.marginHorizontal
-concave_edge_corners = false                       # exige margin_edge = 0
+concave_edge_corners = false                       # requires margin_edge = 0
 padding            = 2                             # bar.contentPadding
 widget_spacing     = 6
 border_width       = 0.0                           # bar.showOutline = false
@@ -14,7 +14,7 @@ show_on_workspace_switch = true
 reserve_space      = true                          # bar.enableExclusionZoneInset
 capsule            = true                          # bar.showCapsule
 capsule_opacity    = 0.5                           # bar.capsuleOpacity
-capsule_fill       = "surface_variant"             # bar.capsuleColorKey = none → padrão
+capsule_fill       = "surface_variant"             # bar.capsuleColorKey = none → default
 
 start  = ["launcher", "clock", "temp", "cpu", "ram", "swap", "active_window", "media", "privacy"]
 center = ["workspaces"]
