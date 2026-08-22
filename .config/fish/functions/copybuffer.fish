@@ -1,8 +1,10 @@
 function copybuffer
-    if command -q wl-copy
-        commandline | wl-copy
-    else
-        echo "wl-copy not found. Please make sure you have it installed"
+    if not command -q wl-copy
+        echo "wl-copy is not installed" >&2
+        commandline -f repaint
+        return 1
     end
+
+    commandline | wl-copy
     commandline -f repaint
 end

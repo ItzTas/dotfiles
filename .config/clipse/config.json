@@ -19,7 +19,7 @@
         "more": "?",
         "nextPage": "l",
         "prevPage": "h",
-        "preview": " ",
+        "preview": "space",
         "quit": "esc",
         "remove": "D",
         "selectDown": "shift+down",
@@ -31,9 +31,9 @@
         "yankFilter": "ctrl+s"
     },
     "imageDisplay": {
-        "type": "basic",
-        "scaleX": 9,
-        "scaleY": 9,
+        "type": "kitty",
+        "scaleX": 13,
+        "scaleY": 29,
         "heightCut": 2
     },
     "excludedApps": [

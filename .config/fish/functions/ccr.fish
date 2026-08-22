@@ -1,4 +1,9 @@
-function ccr
+function ccr --wraps claude
+    if not command -q claude
+        echo "claude is not installed" >&2
+        return 1
+    end
+
     set -l key_file "$__fish_config_dir/secrets/omniroute-claude-key"
     if not test -r "$key_file"
         set key_file "$HOME/.config/zsh/secrets/omniroute-claude-key"

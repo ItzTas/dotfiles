@@ -1,4 +1,9 @@
 function mkvenv
+    if not command -q python3
+        echo "python3 is not installed" >&2
+        return 1
+    end
+
     if test (count $argv) -eq 0
         echo "Please provide venv name"
         return 1

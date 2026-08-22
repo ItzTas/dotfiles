@@ -1,8 +1,4 @@
 #!/usr/bin/env fish
-# ~/.config/fish/config/completions.fish
-#
-# Completions are generated once and cached; generated/ is gitignored,
-# manual/ is hand-written and tracked.
 
 # --------------- Completions Directories ---------------
 
@@ -34,13 +30,16 @@ if command -q git-bug; and not test -f "$generated_dir/git-bug.fish"
     git-bug completion fish >"$generated_dir/git-bug.fish"
 end
 
-# aws completions: aws_completer speaks bash, so the generated file wraps it in
-# a subshell that hands it the current command line through COMP_LINE
+# aws completions
 if command -q aws_completer; and not test -f "$generated_dir/aws.fish"
     echo 'complete -c aws -f -a "(begin; set -lx COMP_SHELL fish; set -lx COMP_LINE (commandline); aws_completer | string trim; end)"' >"$generated_dir/aws.fish"
 end
 
+# claude completions
+if command -q claude; and not test -f "$generated_dir/claude.fish"
+    update_claude_completions
+end
+
 # -------------------------------------------------------
 
-# Appended, not replaced, so fish's own completions stay reachable
 set -gp fish_complete_path "$manual_dir" "$generated_dir"

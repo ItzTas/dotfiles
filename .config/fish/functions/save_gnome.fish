@@ -1,4 +1,9 @@
 function save_gnome
+    if not command -q dconf
+        echo "dconf is not installed" >&2
+        return 1
+    end
+
     set -l gnome_dir "$XDG_CONFIG_HOME/yadm/gnome"
     mkdir -p "$gnome_dir"
     set -l output_file "$gnome_dir/settings.ini"

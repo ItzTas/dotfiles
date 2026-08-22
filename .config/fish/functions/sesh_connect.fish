@@ -1,4 +1,11 @@
 function sesh_connect
+    for dep in sesh fzf-tmux
+        if not command -q $dep
+            echo "$dep is not installed" >&2
+            return 1
+        end
+    end
+
     set -l selection (
         sesh list --icons | fzf-tmux -p 90%,70% \
             --no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \

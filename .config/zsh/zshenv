@@ -61,7 +61,7 @@ export STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
 export STORYBOOK_DISABLE_TELEMETRY=1
 
 # Ssh
-export SSH_ASKPASS="/usr/lib/seahorse/ssh-askpas"
+export SSH_ASKPASS="/usr/lib/seahorse/ssh-askpass"
 
 # SearX
 export SEARXNG_URL=http://10.66.66.1:8888

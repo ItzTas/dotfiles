@@ -1,4 +1,11 @@
 function fsc
+    for dep in gh jq fzf sesh tmux
+        if not command -q $dep
+            echo "$dep is not installed" >&2
+            return 1
+        end
+    end
+
     set -l repo (gh repo list --limit 200 --json name,url \
         | jq -r '.[] | "\(.name)\t\(.url)"' \
         | fzf --delimiter='\t' --with-nth=1 \

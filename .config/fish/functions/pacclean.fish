@@ -1,4 +1,9 @@
 function pacclean
+    if not command -q pacman
+        echo "pacman is not installed" >&2
+        return 1
+    end
+
     set -l orphans (pacman -Qdtq)
 
     if test -z "$orphans"

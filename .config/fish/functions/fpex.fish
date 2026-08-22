@@ -1,4 +1,11 @@
 function fpex
+    for dep in podman fzf
+        if not command -q $dep
+            echo "$dep is not installed" >&2
+            return 1
+        end
+    end
+
     set -l lines (podman ps --format "id: {{.ID}}\t name: {{.Names}}\t img: {{.Image}}")
 
     set -l container (printf '%s\n' $lines | fzf --header "exec -it" \

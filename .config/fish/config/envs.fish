@@ -1,8 +1,4 @@
 #!/usr/bin/env fish
-# ~/.config/fish/config/envs.fish
-#
-# Interactive-only environment. Everything non-interactive shells also need
-# (XDG dirs, PATH, telemetry opt-outs) lives in conf.d/00-env.fish.
 
 # Virtualenv home
 set -gx VENV_HOME "$HOME/.virtualenvs"

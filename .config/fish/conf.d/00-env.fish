@@ -1,3 +1,6 @@
+#!/usr/bin/env fish
+
+# XDG base directories
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 set -gx XDG_CACHE_HOME "$HOME/.cache"
 set -gx XDG_DATA_HOME "$HOME/.local/share"
@@ -10,38 +13,53 @@ set -gx XDG_MUSIC_DIR "$HOME/Musics"
 set -gx XDG_PICTURES_DIR "$HOME/Pictures"
 set -gx XDG_VIDEOS_DIR "$HOME/Videos"
 
+# Wget and Curl config paths
 set -gx WGETRC "$XDG_CONFIG_HOME/wget/wgetrc"
 set -gx CURL_HOME "$XDG_CONFIG_HOME/curl"
 
+# BuildKit for Docker/Podman
 set -gx BUILDKIT 1
 
+# PTPython config path
 set -gx PTPYTHON_CONFIG_HOME "$XDG_CONFIG_HOME/ptpython"
 
+# Android
 set -gx ANDROID_HOME "$HOME/Android/Sdk"
 set -gx ANDROID_AVD_HOME "$HOME/.config/.android/avd"
 
+# Pnpm
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 
+# Claude
 set -gx CLAUDE_TELEMETRY_DISABLED 1
 set -gx CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY 1
 set -gx CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY 1
 
+# Telemetry
 set -gx DISABLE_TELEMETRY 1
 set -gx DISABLE_ERROR_REPORTING 1
 set -gx DISABLE_FEEDBACK_COMMAND 1
 set -gx DO_NOT_TRACK 1
 
+# Glab
 set -gx GLAB_SEND_TELEMETRY false
 
+# Streamlit
 set -gx STREAMLIT_BROWSER_GATHER_USAGE_STATS false
 
+# Storybook
 set -gx STORYBOOK_DISABLE_TELEMETRY 1
 
-set -gx SSH_ASKPASS /usr/lib/seahorse/ssh-askpas
+# Ssh
+set -gx SSH_ASKPASS /usr/lib/seahorse/ssh-askpass
 
+# SearX
 set -gx SEARXNG_URL http://10.66.66.1:8888
 
+# OTHER
 set -gx NODE_OPTIONS --max-old-space-size=8192
+
+# ---- PATH EXPORTS ----
 
 fish_add_path -g -p "$HOME/.local/bin" /usr/local/bin /usr/bin
 

@@ -1,4 +1,9 @@
 function millennium_skin_add
+    if not command -q yadm
+        echo "yadm is not installed" >&2
+        return 1
+    end
+
     set -l skins_dir "$HOME/.local/share/Steam/steamui/skins"
     mkdir -p "$skins_dir"
 

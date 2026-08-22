@@ -1,35 +1,53 @@
-for mode in default insert
-    bind -M $mode alt-g lsd_widget
-    bind -M $mode alt-y yazi_widget
-    bind -M $mode ctrl-o fe_widget
+#!/usr/bin/env fish
 
-    bind -M $mode ctrl-a beginning-of-line
-    bind -M $mode ctrl-e end-of-line
-    bind -M $mode ctrl-b yank
-    bind -M $mode ctrl-d delete-char
-    bind -M $mode ctrl-w backward-kill-word
-    bind -M $mode ctrl-h backward-kill-word
-    bind -M $mode alt-d kill-word
-    bind -M $mode alt-b backward-word
-    bind -M $mode alt-f forward-word
-    bind -M $mode ctrl-l clear-screen
-    bind -M $mode ctrl-k kill-line
-    bind -M $mode ctrl-right forward-word
-    bind -M $mode ctrl-left backward-word
-
-    bind -M $mode home beginning-of-line
-    bind -M $mode end end-of-line
-
-    bind -M $mode ctrl-y accept-autosuggestion
-    bind -M $mode tab complete
-    bind -M $mode shift-tab complete-and-search
-
-    bind -M $mode up history-search-backward
-    bind -M $mode down history-search-forward
-
-    bind -M $mode alt-. history-token-search-backward
-    bind -M $mode ctrl-x copybuffer
+function __bind -a modes
+    for mode in (string split , -- $modes)
+        bind -M $mode $argv[2..]
+    end
 end
 
-bind -M default k history-search-backward
-bind -M default j history-search-forward
+# Widgets
+__bind default,insert alt-g lsd_widget
+__bind default,insert alt-y yazi_widget
+__bind default,insert ctrl-o fe_widget
+
+if test -z "$TMUX"
+    command -q tmux; and __bind default,insert ctrl-g tmux_manager_widget
+    command -q sesh; and __bind default,insert ctrl-f sesh_connect_widget
+end
+
+# Line editing
+__bind default,insert,visual ctrl-c cancel_line_widget
+__bind default,insert ctrl-a beginning-of-line
+__bind default,insert ctrl-e end-of-line
+__bind default,insert ctrl-b yank
+__bind default,insert ctrl-d delete-char
+__bind default,insert ctrl-w backward-kill-word
+__bind default,insert ctrl-h backward-kill-word
+__bind default,insert alt-d kill-word
+__bind default,insert alt-b backward-word
+__bind default,insert alt-f forward-word
+__bind default,insert ctrl-l clear-screen
+__bind default,insert ctrl-k kill-line
+__bind default,insert ctrl-right forward-word
+__bind default,insert ctrl-left backward-word
+
+__bind default,insert home beginning-of-line
+__bind default,insert end end-of-line
+
+# Completion
+__bind default,insert ctrl-y accept-autosuggestion
+__bind default,insert tab complete
+__bind default,insert shift-tab complete-and-search
+
+# History
+__bind default,insert up history-search-backward
+__bind default,insert down history-search-forward
+
+__bind default,insert alt-. history-token-search-backward
+__bind default,insert ctrl-x copybuffer
+
+__bind default k history-search-backward
+__bind default j history-search-forward
+
+functions --erase __bind

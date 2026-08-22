@@ -1,4 +1,11 @@
 function fe
+    for dep in git fzf
+        if not command -q $dep
+            echo "$dep is not installed" >&2
+            return 1
+        end
+    end
+
     if not git rev-parse --is-inside-work-tree >/dev/null 2>&1
         echo "Error: not in a git directory"
         return 1

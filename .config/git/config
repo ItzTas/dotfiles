@@ -210,3 +210,8 @@
 	process = git-lfs filter-process
 	required = true
 
+[user]
+	email = t@e.com
+	name = t
+[init]
+	defaultBranch = main

@@ -1,8 +1,4 @@
 #!/usr/bin/env fish
-# ~/.config/fish/themes/catppuccin-mocha.fish
-#
-# Catppuccin Mocha palette for fish's built-in syntax highlighting.
-# Sourced from config/plugins.fish.
 
 set -g fish_color_normal cdd6f4
 set -g fish_color_param cdd6f4

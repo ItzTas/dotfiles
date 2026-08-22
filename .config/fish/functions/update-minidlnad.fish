@@ -1,4 +1,9 @@
 function update-minidlnad
+    if not command -q minidlnad
+        echo "minidlnad is not installed" >&2
+        return 1
+    end
+
     for d in Musics Pictures Videos
         set -l src "$HOME/$d/.minidlna"
         set -l dst "/opt/media/$d"

@@ -1,4 +1,9 @@
-function git
+function git --wraps git
+    if not command -q git
+        echo "git is not installed" >&2
+        return 1
+    end
+
     set -l args
     set -l has_diff false
     set -l no_pager false

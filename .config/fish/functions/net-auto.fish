@@ -10,6 +10,11 @@ function net-auto
         return 0
     end
 
+    if not command -q nmcli
+        echo "nmcli is not installed" >&2
+        return 1
+    end
+
     set -l connection "Wired connection 1"
     set -q _flag_connection; and set connection "$_flag_connection"
 

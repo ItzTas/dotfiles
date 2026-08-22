@@ -12,6 +12,11 @@ function net-rescue
         return 0
     end
 
+    if not command -q nmcli
+        echo "nmcli is not installed" >&2
+        return 1
+    end
+
     set -l octet 20
     set -q _flag_octet; and set octet "$_flag_octet"
 

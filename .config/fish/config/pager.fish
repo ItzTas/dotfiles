@@ -1,8 +1,4 @@
 #!/usr/bin/env fish
-# ~/.config/fish/config/pager.fish
-#
-# Catppuccin Mocha colors for the completion pager (what zsh dresses up
-# through zstyle).
 
 set -g fish_pager_color_progress 6c7086
 set -g fish_pager_color_prefix cba6f7 --bold

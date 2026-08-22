@@ -1,5 +1,8 @@
+#!/usr/bin/env fish
+
 set -gx FZF_ALT_C_COMMAND ""
 
+# Key bindings
 if command -q fzf
     if not test -f "$XDG_CACHE_HOME/fzf.fish"
         fzf --fish >"$XDG_CACHE_HOME/fzf.fish"
@@ -7,8 +10,11 @@ if command -q fzf
     source "$XDG_CACHE_HOME/fzf.fish"
 end
 
+# Sources
 set -gx FZF_DEFAULT_COMMAND "fd --hidden --strip-cwd-prefix --exclude .git"
 set -gx FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
+
+# Catppuccin Mocha
 set -gx FZF_DEFAULT_OPTS " \
     --ansi \
     --bind ctrl-y:accept \
@@ -19,5 +25,6 @@ set -gx FZF_DEFAULT_OPTS " \
     --color=border:#6C7086,label:#CDD6F4
 "
 
+# Previews
 set -gx FZF_CTRL_T_OPTS "--preview 'bat -n --color=always --line-range :500 {}'"
 set -gx FZF_ALT_C_OPTS "--preview 'lsd --icon always --tree --depth 2 -F {}'"
