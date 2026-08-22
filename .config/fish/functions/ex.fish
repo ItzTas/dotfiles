@@ -1,11 +1,18 @@
 function ex
-    argparse -N 1 -X 1 h/help -- $argv
+    argparse -X 1 h/help -- $argv
     or return 1
 
+    set -l usage "Usage: "(status current-function)" <archive>" \
+        "  extracts tar/gz/bz2/xz/zst/zip/rar/7z/Z/deb archives"
+
     if set -q _flag_help
-        printf '%s\n' "Usage: "(status current-function)" <archive>" \
-            "  extracts tar/gz/bz2/xz/zst/zip/rar/7z/Z/deb archives"
+        printf '%s\n' $usage
         return 0
+    end
+
+    if test (count $argv) -ne 1
+        printf '%s\n' $usage >&2
+        return 1
     end
 
     if not path is -f -- "$argv[1]"

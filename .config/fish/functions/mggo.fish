@@ -1,11 +1,18 @@
 function mggo
-    argparse -N 1 -X 1 h/help -- $argv
+    argparse -X 1 h/help -- $argv
     or return 1
 
+    set -l usage "Usage: "(status current-function)" <owner/repo>" \
+        "  opens https://github.com/<owner/repo> with miru"
+
     if set -q _flag_help
-        printf '%s\n' "Usage: "(status current-function)" <owner/repo>" \
-            "  opens https://github.com/<owner/repo> with miru"
+        printf '%s\n' $usage
         return 0
+    end
+
+    if test (count $argv) -ne 1
+        printf '%s\n' $usage >&2
+        return 1
     end
 
     if not command -q miru
