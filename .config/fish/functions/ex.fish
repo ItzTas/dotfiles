@@ -1,5 +1,14 @@
 function ex
-    if not test -f "$argv[1]"
+    argparse -N 1 -X 1 h/help -- $argv
+    or return 1
+
+    if set -q _flag_help
+        printf '%s\n' "Usage: "(status current-function)" <archive>" \
+            "  extracts tar/gz/bz2/xz/zst/zip/rar/7z/Z/deb archives"
+        return 0
+    end
+
+    if not path is -f -- "$argv[1]"
         echo "'$argv[1]' is not a valid file."
         return 1
     end

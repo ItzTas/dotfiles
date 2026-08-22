@@ -11,7 +11,7 @@ for candidate in \
     "$omp_root/general/my_amro_colors_1.toml" \
     "$omp_root/zsh/my_amro_colors_2.toml"
 
-    test -f "$candidate"; or continue
+    path is -f -- "$candidate"; or continue
 
     __cached_init oh-my-posh init fish --config "$candidate"
     return

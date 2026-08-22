@@ -1,2 +1,2 @@
-# Takes no arguments; -f keeps fish from offering the current directory.
 complete -c fsc -f
+complete -c fsc -s h -l help -d 'show usage'

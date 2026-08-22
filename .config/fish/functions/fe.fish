@@ -1,4 +1,13 @@
 function fe
+    argparse -X 0 h/help -- $argv
+    or return 1
+
+    if set -q _flag_help
+        printf '%s\n' "Usage: "(status current-function) \
+            "  picks a git branch with fzf; ctrl-y switches to it"
+        return 0
+    end
+
     for dep in git fzf
         if not command -q $dep
             echo "$dep is not installed" >&2

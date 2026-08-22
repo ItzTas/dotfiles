@@ -1,4 +1,13 @@
 function fsc
+    argparse -X 0 h/help -- $argv
+    or return 1
+
+    if set -q _flag_help
+        printf '%s\n' "Usage: "(status current-function) \
+            "  picks one of your GitHub repos with fzf and clones it into a sesh session"
+        return 0
+    end
+
     for dep in gh jq fzf sesh tmux
         if not command -q $dep
             echo "$dep is not installed" >&2

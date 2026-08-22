@@ -5,11 +5,11 @@ function ccr --wraps claude
     end
 
     set -l key_file "$__fish_config_dir/secrets/omniroute-claude-key"
-    if not test -r "$key_file"
+    if not path is -rf -- "$key_file"
         set key_file "$HOME/.config/zsh/secrets/omniroute-claude-key"
     end
 
-    if not test -r "$key_file"
+    if not path is -rf -- "$key_file"
         echo "❌ omniroute key not readable: $key_file" >&2
         return 1
     end

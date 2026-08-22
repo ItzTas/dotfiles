@@ -1,2 +1,2 @@
-# Takes no arguments; -f keeps fish from offering the current directory.
 complete -c ubw -f
+complete -c ubw -s h -l help -d 'show usage'

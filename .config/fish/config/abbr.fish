@@ -21,6 +21,46 @@ if command -q git
 
     abbr -a gds git diff --staged
     abbr -a gd 'git diff | diff-so-fancy'
+
+    abbr -a gcmm --set-cursor 'git commit -m "%"'
+end
+
+# git subcommands
+set -l git_subcommands \
+    "co checkout" \
+    "sw switch" \
+    "st status" \
+    "br branch" \
+    "cm commit" \
+    "ca commit --amend" \
+    "cane commit --amend --no-edit" \
+    "cp cherry-pick" \
+    "rb rebase" \
+    "rbi rebase --interactive" \
+    "rbc rebase --continue" \
+    "rba rebase --abort" \
+    "unstage restore --staged" \
+    "lg log --oneline --graph --decorate" \
+    "last log -1 HEAD" \
+    "d diff" \
+    "ds diff --staged" \
+    "p push" \
+    "pf push --force-with-lease" \
+    "pl pull" \
+    "f fetch --prune" \
+    "sh stash" \
+    "shp stash pop" \
+    "wt worktree" \
+    "bl blame"
+
+for tool in git yadm
+    command -q $tool; or continue
+
+    for entry in $git_subcommands
+        abbr -a --command $tool -- \
+            (string split -f1 -m1 ' ' -- $entry) \
+            (string split -f2 -m1 ' ' -- $entry)
+    end
 end
 
 # dotfiles
@@ -79,6 +119,18 @@ if command -q psql
     abbr -a spsql 'sudo systemctl start postgresql && sudo -u postgres psql'
     abbr -a kpsql sudo systemctl stop postgresql
 end
+
+# private shell
+abbr -a fpriv fish --private
+
+# anywhere in the line
+abbr -a nul --position anywhere '>/dev/null 2>&1'
+abbr -a nerr --position anywhere '2>/dev/null'
+abbr -a '!!' --position anywhere --function __last_command
+abbr -a '!$' --position anywhere --function __last_arg
+
+# multicd
+abbr -a multicd --regex '\.\.+' --function __multicd
 
 # odds and ends
 abbr -a chgra chmod +x gradlew

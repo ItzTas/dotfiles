@@ -1,4 +1,13 @@
 function sesh_connect
+    argparse -X 0 h/help -- $argv
+    or return 1
+
+    if set -q _flag_help
+        printf '%s\n' "Usage: "(status current-function) \
+            "  picks a sesh session with fzf-tmux and connects to it"
+        return 0
+    end
+
     for dep in sesh fzf-tmux
         if not command -q $dep
             echo "$dep is not installed" >&2

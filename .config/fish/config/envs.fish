@@ -2,7 +2,7 @@
 
 # Virtualenv home
 set -gx VENV_HOME "$HOME/.virtualenvs"
-test -d "$VENV_HOME"; or mkdir -p "$VENV_HOME"
+path is -d -- "$VENV_HOME"; or mkdir -p "$VENV_HOME"
 
 # Prompt/Project
 set -gx MY_PROJECT_PATH "$PWD"

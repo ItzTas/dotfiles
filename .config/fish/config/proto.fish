@@ -12,7 +12,7 @@ function __proto_cache_key
     set -l dir $PWD
 
     while true
-        test -f "$dir/.prototools"
+        path is -f -- "$dir/.prototools"
         and set -a parts "$dir/.prototools" (path mtime -- "$dir/.prototools")
 
         test "$dir" = /; and break
@@ -29,14 +29,14 @@ function __proto_apply
 
     set -l cache "$__proto_cache_dir/$key.fish"
 
-    if not test -f "$cache"
+    if not path is -f -- "$cache"
         mkdir -p "$__proto_cache_dir"
         proto activate fish --export >"$cache.tmp$fish_pid"
         and mv -f "$cache.tmp$fish_pid" "$cache"
         or rm -f "$cache.tmp$fish_pid"
     end
 
-    test -f "$cache"; and source "$cache"
+    path is -f -- "$cache"; and source "$cache"
 end
 
 set -gx __ORIG_PATH $PATH

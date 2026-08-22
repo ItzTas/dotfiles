@@ -4,7 +4,7 @@ set -gx FZF_ALT_C_COMMAND ""
 
 # Key bindings
 if command -q fzf
-    if not test -f "$XDG_CACHE_HOME/fzf.fish"
+    if not path is -f -- "$XDG_CACHE_HOME/fzf.fish"
         fzf --fish >"$XDG_CACHE_HOME/fzf.fish"
     end
     source "$XDG_CACHE_HOME/fzf.fish"

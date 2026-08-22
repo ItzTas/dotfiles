@@ -1,4 +1,13 @@
 function upgrady
+    argparse -X 0 h/help -- $argv
+    or return 1
+
+    if set -q _flag_help
+        printf '%s\n' "Usage: "(status current-function) \
+            "  updates AUR, flatpak, freshclam, hyprpm, snap and yadm, then prunes orphans"
+        return 0
+    end
+
     if command -q arch-update
         nohup arch-update --check >/dev/null 2>&1 &
         disown

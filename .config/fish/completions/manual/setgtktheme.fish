@@ -1,3 +1,3 @@
-# Installed GTK themes, user directory first. `find` rather than a glob so a
-# missing directory stays silent instead of erroring out.
-complete -c setgtktheme -f -a '(find ~/.themes ~/.local/share/themes /usr/share/themes -maxdepth 1 -mindepth 1 -type d -printf "%f\n" 2>/dev/null | sort -u)' -d theme
+complete -c setgtktheme -f
+complete -c setgtktheme -n __fish_is_first_arg -a '(path basename (path sort -u --key=basename (path filter -d -- ~/.themes/* ~/.local/share/themes/* /usr/share/themes/*)))' -d theme
+complete -c setgtktheme -s h -l help -d 'show usage'

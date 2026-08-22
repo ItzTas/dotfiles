@@ -1,2 +1,2 @@
-# Takes no arguments; -f keeps fish from offering the current directory.
 complete -c fpex -f
+complete -c fpex -s h -l help -d 'show usage'

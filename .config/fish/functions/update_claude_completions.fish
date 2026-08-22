@@ -1,4 +1,13 @@
 function update_claude_completions -d "Regenerate completions/generated/claude.fish from claude --help"
+    argparse -X 0 h/help -- $argv
+    or return 1
+
+    if set -q _flag_help
+        printf '%s\n' "Usage: "(status current-function) \
+            "  regenerates completions/generated/claude.fish from `claude --help`"
+        return 0
+    end
+
     if not command -q claude
         echo "update_claude_completions: claude is not installed" >&2
         return 1

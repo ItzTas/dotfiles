@@ -1,2 +1,2 @@
-# Takes no arguments; -f keeps fish from offering the current directory.
 complete -c tmux_manager -f
+complete -c tmux_manager -s h -l help -d 'show usage'

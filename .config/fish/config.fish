@@ -20,13 +20,14 @@ function __source_fish_config_files
         abbr \
         completions \
         sources \
+        cnf \
         setopt \
         fzf \
         pager
 
     for file in $files
         set -l config_file "$__fish_config_dir/config/$file.fish"
-        test -f "$config_file"; and source "$config_file"
+        path is -f -- "$config_file"; and source "$config_file"
     end
 end
 
@@ -38,7 +39,7 @@ function __source_fish_secrets
 
     for file in $files
         set -l secret_file "$__fish_config_dir/secrets/$file.fish"
-        test -f "$secret_file"; and source "$secret_file"
+        path is -f -- "$secret_file"; and source "$secret_file"
     end
 end
 

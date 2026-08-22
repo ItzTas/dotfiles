@@ -1,10 +1,12 @@
 function test_memory
-    set -l memory "$argv[1]"
+    argparse -N 1 -X 1 h/help -- $argv
+    or return 1
 
-    if test -z "$memory"
-        echo "usage test_memory <num>G"
-        return
+    if set -q _flag_help
+        printf '%s\n' "Usage: "(status current-function)" <size>" \
+            "  <size>  amount to allocate, e.g. 2G"
+        return 0
     end
 
-    head -c "$memory" </dev/zero | tail
+    head -c "$argv[1]" </dev/zero | tail
 end

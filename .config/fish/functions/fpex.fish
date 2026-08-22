@@ -1,4 +1,13 @@
 function fpex
+    argparse -X 0 h/help -- $argv
+    or return 1
+
+    if set -q _flag_help
+        printf '%s\n' "Usage: "(status current-function) \
+            "  picks a running podman container with fzf and opens a bash shell in it"
+        return 0
+    end
+
     for dep in podman fzf
         if not command -q $dep
             echo "$dep is not installed" >&2

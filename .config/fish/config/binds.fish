@@ -6,10 +6,17 @@ function __bind -a modes
     end
 end
 
+# Key sequences
+set -g fish_sequence_key_delay_ms 300
+
 # Widgets
 __bind default,insert alt-g lsd_widget
 __bind default,insert alt-y yazi_widget
 __bind default,insert ctrl-o fe_widget
+
+__bind default,insert alt-c dirh_widget
+__bind default,insert alt-left prevd_widget
+__bind default,insert alt-right nextd_widget
 
 if test -z "$TMUX"
     command -q tmux; and __bind default,insert ctrl-g tmux_manager_widget
@@ -45,7 +52,6 @@ __bind default,insert up history-search-backward
 __bind default,insert down history-search-forward
 
 __bind default,insert alt-. history-token-search-backward
-__bind default,insert ctrl-x copybuffer
 
 __bind default k history-search-backward
 __bind default j history-search-forward

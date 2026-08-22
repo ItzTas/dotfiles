@@ -1,2 +1,2 @@
-# Takes no arguments; -f keeps fish from offering the current directory.
 complete -c sesh_connect -f
+complete -c sesh_connect -s h -l help -d 'show usage'

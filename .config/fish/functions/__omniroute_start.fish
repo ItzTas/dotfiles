@@ -5,7 +5,7 @@ function __omniroute_start
         return 0
     end
 
-    if test -x "$cli"
+    if path is -x -- "$cli"
         __omniroute_spawn "$cli" serve --daemon --no-open
         return $status
     end

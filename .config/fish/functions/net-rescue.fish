@@ -1,14 +1,14 @@
 function net-rescue
-    argparse 'i/octet=' 'c/connection=' h/help -- $argv
+    argparse -X 0 'i/octet=' 'c/connection=' h/help -- $argv
     or begin
         echo "❌ Invalid flag. Use -h for help."
         return 1
     end
 
     if set -q _flag_help
-        echo "Usage: net-rescue [-i octet] [-c connection]"
-        echo "  -i  final octet (default: 20)"
-        echo "  -c  connection name (default: Wired connection 1)"
+        printf '%s\n' "Usage: "(status current-function)" [-i octet] [-c connection]" \
+            "  -i  final octet (default: 20)" \
+            "  -c  connection name (default: Wired connection 1)"
         return 0
     end
 
