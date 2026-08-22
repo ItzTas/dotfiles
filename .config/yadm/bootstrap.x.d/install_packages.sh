@@ -271,6 +271,7 @@ _install_pacman_packages() {
         # Others
         "termpicker-bin"
         "zsh"
+        "fish"
         "zsh-antidote"
     )
 

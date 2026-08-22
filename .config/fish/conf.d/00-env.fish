@@ -13,6 +13,20 @@ set -gx XDG_MUSIC_DIR "$HOME/Musics"
 set -gx XDG_PICTURES_DIR "$HOME/Pictures"
 set -gx XDG_VIDEOS_DIR "$HOME/Videos"
 
+# Data dirs
+test -n "$XDG_DATA_DIRS"; or set -gx XDG_DATA_DIRS /usr/local/share /usr/share
+set -gx --path XDG_DATA_DIRS $XDG_DATA_DIRS
+for dir in /var/lib/flatpak/exports/share "$HOME/.local/share/flatpak/exports/share"
+    contains -- $dir $XDG_DATA_DIRS; or set -gx --path XDG_DATA_DIRS $dir $XDG_DATA_DIRS
+end
+set -e dir
+
+# Qt platform theme
+set -gx QT_QPA_PLATFORMTHEME qt6ct
+
+# Zsh home
+set -gx ZDOTDIR "$XDG_CONFIG_HOME/zsh"
+
 # Wget and Curl config paths
 set -gx WGETRC "$XDG_CONFIG_HOME/wget/wgetrc"
 set -gx CURL_HOME "$XDG_CONFIG_HOME/curl"
