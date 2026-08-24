@@ -3,7 +3,6 @@ async                     = true
 enable_cursor_positioning = true
 final_space               = true
 shell_integration         = true
-streaming                 = 100
 version                   = 4
 
 [transient_prompt]
@@ -211,22 +210,11 @@ version                   = 4
         template   = '  '
         type       = 'lua'
 
-    # Daqui pra baixo cada segmento é um indicador de tipo de arquivo. O oh-my-posh
-    # não tem um type próprio pra esses, então um segmento de linguagem carrega o
-    # ícone e o override `extensions` decide quando ele aparece. `fetch_version =
-    # false` evita a chamada de versão, `display_mode = 'files'` limita a busca à
-    # pasta atual. A comparação é case-insensitive: `*.jpg` pega `FOTO.JPG`.
-
     [[blocks.segments]]
         foreground = '#F7DF1E'
         style      = 'plain'
         template   = ' '
         type       = 'node'
-
-        [blocks.segments.properties]
-            display_mode  = 'files'
-            extensions    = ['*.js', '*.mjs', '*.cjs', '*.jsx']
-            fetch_version = false
 
     [[blocks.segments]]
         foreground = '#100e23'
@@ -240,21 +228,11 @@ version                   = 4
         template   = '  '
         type       = 'node'
 
-        [blocks.segments.properties]
-            display_mode  = 'files'
-            extensions    = ['*.ts', '*.tsx', '*.mts', '*.cts']
-            fetch_version = false
-
     [[blocks.segments]]
         foreground = '#E5A50A'
         style      = 'plain'
         template   = '  '
         type       = 'node'
-
-        [blocks.segments.properties]
-            display_mode  = 'files'
-            extensions    = ['*.sh', '*.bash', '*.zsh', '*.fish']
-            fetch_version = false
 
     [[blocks.segments]]
         foreground = '#4479A1'
@@ -262,21 +240,11 @@ version                   = 4
         template   = '  '
         type       = 'node'
 
-        [blocks.segments.properties]
-            display_mode  = 'files'
-            extensions    = ['*.sql', '*.db', '*.sqlite', '*.sqlite3']
-            fetch_version = false
-
     [[blocks.segments]]
         foreground = '#0db7ed'
         style      = 'plain'
         template   = '  '
         type       = 'node'
-
-        [blocks.segments.properties]
-            display_mode  = 'files'
-            extensions    = ['Dockerfile', '*.dockerfile', 'Containerfile', 'compose.yml', 'compose.yaml', 'docker-compose.yml', 'docker-compose.yaml']
-            fetch_version = false
 
     [[blocks.segments]]
         foreground = '#ff79c6'
@@ -284,21 +252,11 @@ version                   = 4
         template   = '  '
         type       = 'node'
 
-        [blocks.segments.properties]
-            display_mode  = 'files'
-            extensions    = ['*.conf', '*.cfg', '*.ini', '*.toml']
-            fetch_version = false
-
     [[blocks.segments]]
         foreground = '#e34c26'
         style      = 'plain'
         template   = '  '
         type       = 'node'
-
-        [blocks.segments.properties]
-            display_mode  = 'files'
-            extensions    = ['*.html', '*.htm']
-            fetch_version = false
 
     [[blocks.segments]]
         foreground = '#563d7c'
@@ -306,21 +264,11 @@ version                   = 4
         template   = '  '
         type       = 'node'
 
-        [blocks.segments.properties]
-            display_mode  = 'files'
-            extensions    = ['*.css', '*.scss', '*.sass', '*.less']
-            fetch_version = false
-
     [[blocks.segments]]
         foreground = '#FFD700'
         style      = 'plain'
         template   = '  '
         type       = 'node'
-
-        [blocks.segments.properties]
-            display_mode  = 'files'
-            extensions    = ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.webp', '*.avif', '*.bmp', '*.svg']
-            fetch_version = false
 
     [[blocks.segments]]
         foreground = '#FF4500'
@@ -328,21 +276,11 @@ version                   = 4
         template   = ' 🎬 '
         type       = 'node'
 
-        [blocks.segments.properties]
-            display_mode  = 'files'
-            extensions    = ['*.mp4', '*.mkv', '*.webm', '*.mov', '*.avi', '*.m4v']
-            fetch_version = false
-
     [[blocks.segments]]
         foreground = '#2980B9'
         style      = 'plain'
-        template   = ' 󰎄 '
+        template   = '  '
         type       = 'node'
-
-        [blocks.segments.properties]
-            display_mode  = 'files'
-            extensions    = ['*.mp3', '*.flac', '*.wav', '*.ogg', '*.opus', '*.m4a']
-            fetch_version = false
 
     [[blocks.segments]]
         foreground = '#8E44AD'
@@ -350,32 +288,17 @@ version                   = 4
         template   = '  '
         type       = 'node'
 
-        [blocks.segments.properties]
-            display_mode  = 'files'
-            extensions    = ['*.zip', '*.tar', '*.gz', '*.tgz', '*.bz2', '*.xz', '*.zst', '*.7z', '*.rar']
-            fetch_version = false
-
     [[blocks.segments]]
         foreground = '#F39C12'
         style      = 'plain'
         template   = '  '
         type       = 'node'
 
-        [blocks.segments.properties]
-            display_mode  = 'files'
-            extensions    = ['*.ttf', '*.otf', '*.woff', '*.woff2']
-            fetch_version = false
-
     [[blocks.segments]]
         foreground = '#3B82F6'
         style      = 'plain'
         template   = '  '
         type       = 'node'
-
-        [blocks.segments.properties]
-            display_mode  = 'files'
-            extensions    = ['PKGBUILD', '.SRCINFO', '*.pkg.tar.zst']
-            fetch_version = false
 
     [[blocks.segments]]
         foreground = '#6A7FEA'
