@@ -6,5 +6,4 @@ for _, module in ipairs({ "settings", "keys", "statusbar" }) do
 	require("config." .. module).apply(config)
 end
 
-config.color_scheme = "Noctalia"
 return config

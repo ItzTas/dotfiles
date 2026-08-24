@@ -4,7 +4,7 @@
       "DesignSync"
     ]
   },
-  "model": "sonnet",
+  "model": "opus",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -66,5 +66,6 @@
       }
     }
   },
-  "effortLevel": "low"
+  "effortLevel": "high",
+  "tui": "fullscreen"
 }
