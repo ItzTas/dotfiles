@@ -4,7 +4,7 @@
       "DesignSync"
     ]
   },
-  "model": "claude-deepseek-v4-pro",
+  "model": "opus",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -66,6 +66,6 @@
       }
     }
   },
-  "effortLevel": "medium",
+  "effortLevel": "high",
   "tui": "fullscreen"
 }
