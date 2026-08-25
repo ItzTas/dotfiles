@@ -1,5 +1,5 @@
 ---
-description: Set up OmniRoute local (Claude assinatura + DeepSeek + Ollama num /model só, on-demand, porta 20128)
+description: Set up OmniRoute local
 ---
 
 # OmniRoute setup
