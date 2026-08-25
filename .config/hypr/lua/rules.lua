@@ -295,7 +295,6 @@ rule({
 	opacity = "0.97 0.8",
 	no_blur = true,
 	workspace = 9,
-	focus_on_activate = true,
 })
 
 rule({

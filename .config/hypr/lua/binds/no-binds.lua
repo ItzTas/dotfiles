@@ -2,7 +2,7 @@ local mods = require("envs.mods")
 local fb = require("functions.binds")
 
 local alt_l = mods.alt_l
-local super = mods.super
+-- local super = mods.super
 local meh = mods.meh
 
 local mm = fb.make_mod

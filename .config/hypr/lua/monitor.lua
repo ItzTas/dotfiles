@@ -3,7 +3,6 @@ local device = require("functions.device")
 local monitor = hl.monitor
 local rule = hl.workspace_rule
 
--- Debug/test monitors spawned by tooling: keep Hyprland from using them.
 monitor({ output = "claude-dbg", disabled = true })
 
 if device.is_laptop() then
