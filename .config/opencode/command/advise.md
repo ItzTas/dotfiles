@@ -1,7 +1,5 @@
 ---
 description: Read-only advisory mode: analysis, options and recommendations only; never writes or edits anything
-argument-hint: [question | subcommand]
-allowed-tools: Read, Glob, Grep, Bash, WebFetch, WebSearch, Task, Agent
 ---
 
 Enter **ADVISE MODE** and stay in it until the end of the session (or until I explicitly leave it;
@@ -91,40 +89,13 @@ Default to **short**. A shape that works:
 Drop any section with nothing in it. Don't restate my question back to me, don't pad, don't close
 with an offer to implement it.
 
-## LEARNING submode
-Turned on with `/advise learning on` (or `/advise learning <question>` for a one-off), off with
-`/advise learning off`. Default: **off**. It changes the **tone**, nothing else: every rule above
-still applies, the write ban included, and rule 3 still means prose unless `snippets` is on.
-
-With it on, I'm here to understand, not only to decide. So:
-
-- **Teach the concept behind the answer, not just the verdict.** Name it, say what problem it
-  exists to solve, and where else it shows up. The point is that I can handle the next case like
-  this one without asking you.
-- **Define the jargon on first use**, in one line, even when you think I know it. Acronyms,
-  pattern names, protocol terms, compiler and runtime vocabulary.
-- **Show the reasoning path.** What you read, in what order, what each finding ruled out. A
-  conclusion I can't reproduce teaches me nothing.
-- **State the general rule and then this specific case**, in that order, so the lesson transfers.
-- **Say where to read more**: the spec section, the man page, the doc page, the file in this repo
-  that's the best example of the pattern. Link or path, not "the docs".
-- **Explain the rejected options too.** Why they're tempting and what actually breaks is often the
-  more useful half.
-- Keep the answer's **first line still the answer**. Teaching comes after the recommendation,
-  never in place of it, and never buried under buildup.
-
-What it does **not** license: padding, cheerleading, quizzing me, recaps of what I just asked, or
-lecturing me on something I've clearly already got. Longer than default is fine when the explaining
-earns it; three paragraphs to say "it's a race condition" is not. If I say "short" or "quick",
-that wins over the submode for that answer.
-
 ## Control subcommands
 Run as `/advise <keyword> [args]` while in ADVISE MODE. When the argument is one of these keywords,
 **don't treat it as a question**; do the control action instead. The mode stays active (except for
 the exit keywords).
 
-- **`/advise status`**: report the state (active, snippets on/off, learning on/off) plus a one-line
-  recap of what we've covered so far.
+- **`/advise status`**: report the state (active, snippets on/off) plus a one-line recap of what
+  we've covered so far.
 - **`/advise options`**: re-present the alternatives for the last thing discussed, in the rule-4
   shape (useful when the answer came out as a single recommendation).
 - **`/advise deeper`**: go one level deeper on the last answer, reading more code, testing the
@@ -136,12 +107,6 @@ the exit keywords).
   after exiting.
 - **`/advise snippets on|off`**: allow or forbid illustrative code snippets in your answers
   (rule 3). Default: `off`. Persists until I change it or exit the mode.
-- **`/advise learning on|off`**: turn the LEARNING submode on or off (see the section above).
-  Default: `off`. Persists until I change it or exit the mode. Bare `/advise learning` turns it
-  **on**; `/advise learning <question>` answers that question in the teaching tone for that answer
-  only, leaving the flag as it was.
-- **`/advise explain`**: re-answer the last thing you said in LEARNING tone, whatever the flag is.
-  For when the short answer was right but I want to know why it's right. No new topic.
 - **`/advise help`**: list these subcommands with a one-line description each, plus the exit
   keywords. Print the list, change nothing.
 
