@@ -2,5 +2,8 @@
   "$schema": "https://opencode.ai/tui.json",
   "keybinds": {
     "permission.prompt.fullscreen": "ctrl+o"
-  }
+  },
+  "plugin": [
+    "oh-my-openagent"
+  ]
 }
