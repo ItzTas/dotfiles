@@ -32,10 +32,7 @@ export PTPYTHON_CONFIG_HOME="${XDG_CONFIG_HOME}/ptpython"
 # Android
 export ANDROID_HOME="$HOME/Android/Sdk"
 export ANDROID_AVD_HOME=$HOME/.config/.android/avd
-export PATH="$PATH:$HOME/Android/Sdk/emulator/emulator"
-
-# Android
-export ANDROID_HOME="$HOME/Android/Sdk"
+export PATH="$PATH:$ANDROID_HOME/emulator"
 
 # Pnpm
 export PNPM_HOME="/home/talinux/.local/share/pnpm"

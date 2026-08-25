@@ -3,7 +3,7 @@ async                     = true
 enable_cursor_positioning = true
 final_space               = true
 shell_integration         = true
-streaming                 = 100
+streaming                 = 200
 version                   = 4
 
 [transient_prompt]
