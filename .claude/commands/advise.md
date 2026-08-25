@@ -164,8 +164,8 @@ if this file has long since fallen out of your context.
 Dispatch on `$ARGUMENTS` (first word, case-insensitive):
 - **Exit keyword** (`end`, `out`, `off`, `stop`, `exit`): follow "Exiting ADVISE MODE" instead of
   entering.
-- **Control keyword** (`status`, `options`, `deeper`, `devil`, `plan`, `snippets`, `help`): carry
-  out the matching action from "Control subcommands".
+- **Control keyword** (`status`, `options`, `deeper`, `devil`, `plan`, `snippets`, `learning`,
+  `explain`, `help`): carry out the matching action from "Control subcommands".
 - **A question or topic**: confirm in one line that you're in ADVISE MODE, then answer it under the
   rules above.
 - **No arguments**: confirm the mode in one line and ask what I want to look at. Don't go read the
