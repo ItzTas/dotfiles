@@ -10,6 +10,8 @@ init() {
   C_DIR=$'\033[38;5;150m'
   C_GIT=$'\033[38;5;180m'
   C_CAVEMAN=$'\033[38;5;172m'
+  C_PONYTAIL=$'\033[38;5;108m'
+  C_PONYTAIL_ULTRA=$'\033[38;5;173m'
   C_FLOW=$'\033[38;5;44m'
   C_ADVISE=$'\033[38;5;213m'
 }
@@ -107,6 +109,27 @@ caveman_badge() {
   caveman_savings
 }
 
+ponytail_mode() {
+  local mode
+  mode=$(read_flag "$CONFIG_DIR/.ponytail-active")
+  case "$mode" in
+    lite|full|ultra) printf '%s' "$mode" ;;
+  esac
+}
+
+ponytail_badge() {
+  local mode color
+  mode=$(ponytail_mode)
+  [ -n "$mode" ] || return 0
+  color=$C_PONYTAIL
+  [ "$mode" = "ultra" ] && color=$C_PONYTAIL_ULTRA
+  [ "$mode" = "full" ] && {
+    printf '%s[PONYTAIL]%s' "$color" "$C_RESET"
+    return 0
+  }
+  printf '%s[PONYTAIL:%s]%s' "$color" "$(printf '%s' "$mode" | tr '[:lower:]' '[:upper:]')" "$C_RESET"
+}
+
 flow_badge() {
   [ -n "$1" ] || return 0
   local mode
@@ -153,6 +176,7 @@ main() {
   add_part "$(dir_part "$dir")"
   add_part "$(git_branch "$dir")"
   add_part "$(caveman_badge)"
+  add_part "$(ponytail_badge)"
   add_part "$(flow_badge "$session")"
   add_part "$(advise_badge "$session")"
 
