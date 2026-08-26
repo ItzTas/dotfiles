@@ -1,10 +1,15 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json",
   "[opencode]": {
-    "disabled_providers": ["deepseek"],
+    "disabled_providers": [
+      "deepseek"
+    ],
     "sisyphus_agent": {
       "replace_plan": false,
       "default_builder_enabled": true
     }
-  }
+  },
+  "_migrations": [
+    "2026-08-reasoning-unification"
+  ]
 }
