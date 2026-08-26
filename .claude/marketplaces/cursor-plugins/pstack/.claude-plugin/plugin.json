@@ -1,7 +1,7 @@
 {
   "name": "pstack",
   "version": "0.14.3",
-  "description": "if you want to go fast, go deep first. pstack helps you write less, but higher quality code. rigorous agent workflows you can parallelize with confidence.",
+  "description": "Trimmed local mirror of the pstack plugin from cursor/plugins, carrying only the unslop skill. See update.sh for the skills kept on refresh.",
   "author": {
     "name": "Lauren Tan"
   },
