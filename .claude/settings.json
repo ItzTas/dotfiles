@@ -51,7 +51,8 @@
     "caveman@caveman": true,
     "security-guidance@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
-    "ponytail@ponytail": true
+    "ponytail@ponytail": true,
+    "pstack@cursor-plugins": true
   },
   "extraKnownMarketplaces": {
     "humanizer": {
@@ -70,6 +71,12 @@
       "source": {
         "source": "github",
         "repo": "DietrichGebert/ponytail"
+      }
+    },
+    "cursor-plugins": {
+      "source": {
+        "source": "directory",
+        "path": "/home/talinux/.claude/marketplaces/cursor-plugins"
       }
     }
   },

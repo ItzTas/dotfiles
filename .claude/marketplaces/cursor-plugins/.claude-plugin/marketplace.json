@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "cursor-plugins",
+  "owner": {
+    "name": "Cursor",
+    "email": "plugins@cursor.com"
+  },
+  "metadata": {
+    "description": "Local bridge for the cursor/plugins marketplace. Upstream ships .cursor-plugin/marketplace.json, which Claude Code does not read; this file is a translation of that manifest into the .claude-plugin schema. Owner and plugin entries are transcribed verbatim from upstream."
+  },
+  "plugins": [
+    {
+      "name": "pstack",
+      "source": "./pstack",
+      "description": "if you want to go fast, go deep first. pstack helps you write less, but higher quality code. rigorous agent workflows you can parallelize with confidence.",
+      "category": "developer-tools"
+    }
+  ]
+}
