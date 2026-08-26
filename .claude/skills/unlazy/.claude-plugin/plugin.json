@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "unlazy",
+  "version": "2.1.0",
+  "description": "Anti-laziness skill for AI agents. Core: the Depth Tree method, which splits a task N layers deep and gives every leaf the full time budget of the whole task, so effort multiplies with depth.",
+  "author": {
+    "name": "Leonxlnx"
+  },
+  "repository": "https://github.com/Leonxlnx/unlazy",
+  "license": "MIT",
+  "skills": [
+    "./"
+  ]
+}
