@@ -113,7 +113,7 @@ ponytail_mode() {
   local mode
   mode=$(read_flag "$CONFIG_DIR/.ponytail-active")
   case "$mode" in
-    lite|full|ultra) printf '%s' "$mode" ;;
+    lite|full|ultra|review) printf '%s' "$mode" ;;
   esac
 }
 
@@ -123,10 +123,6 @@ ponytail_badge() {
   [ -n "$mode" ] || return 0
   color=$C_PONYTAIL
   [ "$mode" = "ultra" ] && color=$C_PONYTAIL_ULTRA
-  [ "$mode" = "full" ] && {
-    printf '%s[PONYTAIL]%s' "$color" "$C_RESET"
-    return 0
-  }
   printf '%s[PONYTAIL:%s]%s' "$color" "$(printf '%s' "$mode" | tr '[:lower:]' '[:upper:]')" "$C_RESET"
 }
 
