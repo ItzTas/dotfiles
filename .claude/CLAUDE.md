@@ -90,10 +90,6 @@
 
 - **Whenever you edit or create a file with mandatory linters, load `~/.claude/rules/linters.md`** (rule file) and run the linters it lists for that file type, fixing what they report before considering the task complete. Currently covers Dockerfiles, Go, Python, Kotlin, Bash, and Zsh.
 
-## Tests
-
-- **Whenever you're about to write, edit, or run tests, first load `~/.claude/rules/tests.md`** (rule file) and follow it.
-
 ## Git
 
 - **Before any git work (branching, committing, reverting, PRs/MRs), first load my git conventions from `~/.claude/rules/git-conventions.md`** (rule file) and follow them. Non-negotiable highlights: never work directly on shared/protected branches (create a new branch); atomic Conventional Commits (`feat:` used sparingly); and **NEVER** add `Co-Authored-By: Claude ...` or any co-authorship attribution to me, since commits must appear as solely mine.

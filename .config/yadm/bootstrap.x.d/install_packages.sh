@@ -137,6 +137,7 @@ _install_pacman_packages() {
         "brightnessctl"
         "ddcutil-service"
         "tree-sitter-cli"
+        "iris-autocomplete-bin"
 
         # Golang
         "gomodifytags"

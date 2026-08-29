@@ -15,11 +15,7 @@ if path is -x /usr/bin/lesspipe
     test -n "$lessopen"; and set -gx LESSOPEN "$lessopen"
 end
 
-__cached_init pay-respects fish --alias f
-__cached_init zoxide init fish --cmd cd
-__cached_init direnv hook fish
-__cached_init phpenv init - fish
-
+# keychain
 if command -q keychain
     set -l kcenv "$HOME/.keychain/$hostname-fish"
     path is -f -- "$kcenv"; and source "$kcenv"
@@ -30,6 +26,7 @@ if command -q keychain
     end
 end
 
+# dircolors
 if command -q dircolors
     set -l dcfile "$__fish_config_dir/.dircolors"
     path is -f -- "$dcfile"; or dircolors -p >"$dcfile"
@@ -45,3 +42,9 @@ if command -q dircolors
 
     path is -f -- "$cache"; and source "$cache"
 end
+
+__cached_init iris init fish
+__cached_init pay-respects fish --alias f
+__cached_init zoxide init fish --cmd cd
+__cached_init direnv hook fish
+__cached_init phpenv init - fish
