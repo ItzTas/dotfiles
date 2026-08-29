@@ -45,7 +45,7 @@
     hidden-files = true
 
     # enable inline ghost text
-    ghost-text = true
+    ghost-text = false
 
     # maximum suggestions to display
     max-suggestions = 100

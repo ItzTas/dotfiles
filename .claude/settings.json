@@ -1,4 +1,7 @@
 {
+  "env": {
+    "CLAUDE_CODE_SCROLL_SPEED": "3"
+  },
   "permissions": {
     "allow": [
       "DesignSync"
@@ -83,11 +86,8 @@
   "effortLevel": "high",
   "modelSettings": {
     "claude-opus-5": {
-      "effortLevel": "high"
+      "effortLevel": "xhigh"
     }
   },
-  "tui": "fullscreen",
-  "env": {
-    "CLAUDE_CODE_SCROLL_SPEED": "3"
-  }
+  "tui": "fullscreen"
 }
