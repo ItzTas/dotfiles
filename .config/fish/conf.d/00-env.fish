@@ -75,20 +75,27 @@ set -gx NODE_OPTIONS --max-old-space-size=8192
 
 # ---- PATH EXPORTS ----
 
-fish_add_path -g -p "$HOME/.local/bin" /usr/local/bin /usr/bin
+set -l prepend \
+    "$PNPM_HOME" \
+    "$HOME/.phpenv/bin" \
+    "$ANDROID_HOME/tools" \
+    "$ANDROID_HOME/platform-tools"
 
-if command -q yarn
-    fish_add_path -g -p "$HOME/.yarn/bin"
-end
+command -q yarn; and set -a prepend "$HOME/.yarn/bin"
 
-fish_add_path -g -p "$ANDROID_HOME/tools" "$ANDROID_HOME/platform-tools"
-fish_add_path -g -p "$HOME/.phpenv/bin"
-fish_add_path -g -p "$PNPM_HOME"
+set -a prepend \
+    "$HOME/.local/bin" \
+    /usr/local/bin \
+    /usr/bin
 
-fish_add_path -g -a "$HOME/.dotnet/tools"
-fish_add_path -g -a "$HOME/go/bin"
-fish_add_path -g -a /var/lib/snapd/snap/bin
-fish_add_path -g -a "$HOME/.config/yadm/bin"
-fish_add_path -g -a "$HOME/.local/share/nvim/mason/bin"
-fish_add_path -g -a "$ANDROID_HOME/emulator"
-fish_add_path -g -a "$HOME/.cargo/bin"
+set -l append \
+    "$HOME/.dotnet/tools" \
+    "$HOME/go/bin" \
+    /var/lib/snapd/snap/bin \
+    "$HOME/.config/yadm/bin" \
+    "$HOME/.local/share/nvim/mason/bin" \
+    "$ANDROID_HOME/emulator" \
+    "$HOME/.cargo/bin"
+
+fish_add_path -g -p $prepend
+fish_add_path -g -a $append
