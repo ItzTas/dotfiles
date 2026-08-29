@@ -179,11 +179,11 @@ _install_pacman_packages() {
         "docker-credential-secretservice"
 
         # Cursor & Fonts
-        "bibata-cursor-theme"
         "noto-fonts"
         "ttf-ms-fonts"
         "noto-fonts-cjk"
         "noto-fonts-emoji"
+        "bibata-cursor-theme"
         "ttf-nerd-fonts-symbols"
         "ttf-jetbrains-mono-nerd"
 
