@@ -171,11 +171,11 @@ _install_pacman_packages() {
         "gamemode"
         "lib32-gamemode"
 
-        # Docker
-        "docker"
+        # Containers
+        "podman"
         "lazydocker"
-        "docker-buildx"
-        "docker-compose"
+        "podman-docker"
+        "podman-desktop"
         "docker-credential-secretservice"
 
         # Cursor & Fonts

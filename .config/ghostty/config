@@ -63,3 +63,4 @@ cursor-color =  #cccccc
 # Zenbones dark
 # theme = zenbones_dark
 # background-opacity = 0.5
+theme = noctalia

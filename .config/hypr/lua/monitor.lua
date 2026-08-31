@@ -57,13 +57,30 @@ if device.is_laptop() then
 			default = true,
 		})
 	end
+
 	return
 end
 
+for i = 1, 10 do
+	rule({
+		workspace = tostring(i),
+		monitor = "DP-2",
+		default = true,
+	})
+end
+
+for i = 11, 20 do
+	rule({
+		workspace = tostring(i),
+		monitor = "HDMI-A-1",
+		default = true,
+	})
+end
+
 monitor({
-	output = "",
+	output = "DP-2",
 	mode = "preferred",
-	position = "auto",
+	position = "auto-right",
 	scale = 1,
 
 	-- vrr = 1,
@@ -81,4 +98,22 @@ monitor({
 	-- min_luminance = 0.005,
 	-- max_luminance = 1000,
 	-- max_avg_luminance = 600,
+})
+
+monitor({
+	output = "HDMI-A-1",
+	mode = "preferred",
+	position = "auto-left",
+	scale = 1,
+
+	bitdepth = 10,
+
+	cm = "srgb",
+	supports_hdr = 1,
+
+	sdrbrightness = 1,
+	sdrsaturation = 1.4,
+
+	sdr_min_luminance = 0.005,
+	sdr_max_luminance = 90,
 })
