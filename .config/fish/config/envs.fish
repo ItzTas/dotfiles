@@ -36,3 +36,7 @@ set -gx NEXT_TELEMETRY_DISABLED 1
 
 # Askpass
 set -gx SUDO_ASKPASS /usr/lib/seahorse/ssh-askpass
+
+if test -n "$XDG_RUNTIME_DIR"
+    set -gx DOCKER_HOST "unix://$XDG_RUNTIME_DIR/podman/podman.sock"
+end
