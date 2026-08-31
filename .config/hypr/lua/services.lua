@@ -24,7 +24,8 @@ on("hyprland.start", function()
 	exec("hyprctl setcursor Bibata-Modern-Classic 24")
 
 	-- Desktop services
-	exec("gnome-keyring-daemon --start --daemonize --components=pkcs11,secrets,ssh")
+	exec("rm -f $XDG_RUNTIME_DIR/ssh-agent.socket; ssh-agent -a $XDG_RUNTIME_DIR/ssh-agent.socket")
+	exec("gnome-keyring-daemon --start --daemonize --components=pkcs11,secrets")
 	noctalia.start()
 
 	-- Gitify

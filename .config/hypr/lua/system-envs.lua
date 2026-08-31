@@ -1,6 +1,7 @@
 local gpu = require("functions.gpu")
 
 local home = os.getenv("HOME")
+local runtime = os.getenv("XDG_RUNTIME_DIR")
 
 local env = hl.env
 local on = hl.on
@@ -28,8 +29,9 @@ on("hyprland.start", function()
 	-- zsh home
 	env("ZDOTDIR", home .. "/.config/zsh")
 
-	-- others
-	env("SSH_ASKPASS", "/usr/lib/seahorse/ssh-askpas")
+	-- ssh
+	env("SSH_AUTH_SOCK", runtime .. "/ssh-agent.socket")
+	env("SSH_ASKPASS", "/usr/lib/seahorse/ssh-askpass")
 
 	-- Terminal
 	env("TERMINAL", "kitty")

@@ -17,12 +17,15 @@ end
 
 # keychain
 if command -q keychain
-    set -l kcenv "$HOME/.keychain/$hostname-fish"
-    path is -f -- "$kcenv"; and source "$kcenv"
+    ssh-add -l >/dev/null 2>&1
 
-    if not path is -t socket -- "$SSH_AUTH_SOCK"
-        ssh-add -l >/dev/null 2>&1
-        test $status -eq 2; and keychain -q env --shell fish | source
+    if test $status -eq 2
+        keychain -q agent start >/dev/null 2>&1
+
+        for line in (keychain -q env --shell env 2>/dev/null)
+            set -l pair (string split -m1 -- = $line)
+            test (count $pair) -eq 2; and set -gx $pair[1] $pair[2]
+        end
     end
 end
 
