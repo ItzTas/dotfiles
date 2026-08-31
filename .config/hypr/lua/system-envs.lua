@@ -36,6 +36,9 @@ on("hyprland.start", function()
 	-- Terminal
 	env("TERMINAL", "kitty")
 
+	-- podman
+	env("DOCKER_HOST", "unix://" .. runtime .. "/podman/podman.sock")
+
 	if gpu.is_nvidia() then
 		env("GBM_BACKEND", "nvidia-drm")
 		env("DXVK_FILTER_DEVICE_NAME", "NVIDIA GeForce RTX 4060")
