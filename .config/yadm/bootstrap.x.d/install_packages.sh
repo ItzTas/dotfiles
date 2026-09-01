@@ -172,9 +172,11 @@ _install_pacman_packages() {
         "lib32-gamemode"
 
         # Containers
+        "crun"
         "podman"
         "lazydocker"
         "podman-docker"
+        "podman-compose"
         "podman-desktop"
         "docker-credential-secretservice"
 
