@@ -40,7 +40,7 @@ _install_pacman_packages() {
         "qt6ct"
         "nvibrant-bin"
         "catppuccin-gtk-theme-mocha"
-        "noctalia-shell"
+        "noctalia"
         "candy-icons-git"
         "swayosd-gtk3"
         "spicetify-cli"
