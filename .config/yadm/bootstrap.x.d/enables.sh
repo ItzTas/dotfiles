@@ -3,8 +3,8 @@
 _start_enables() {
     local enables=(
         "cronie"
-        "docker"
         "minidlna"
+        "podman.socket"
         "status systemd-oomd"
         "swayosd-libinput-backend.service"
     )
