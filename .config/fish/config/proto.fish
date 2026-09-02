@@ -7,12 +7,14 @@ end
 set -g __proto_bin (command -v proto)
 set -g __proto_cache_dir "$XDG_CACHE_HOME/proto-activate"
 
-function __proto_cache_key
+function __proto_cache_id
+    set -l dirs
     set -l parts (path mtime -- $__proto_bin)
     set -l dir $PWD
 
     while true
         if path is -f -- "$dir/.prototools"
+            set -a dirs "$dir"
             set -a parts "$dir/.prototools" (path mtime -- "$dir/.prototools")
 
             for envfile in (string replace -rf '^\s*file\s*=\s*"?([^"]+)"?\s*$' '$1' <"$dir/.prototools")
@@ -25,19 +27,29 @@ function __proto_cache_key
         set dir (path dirname -- $dir)
     end
 
-    string join -- : $parts | string replace -ra '[^A-Za-z0-9._-]' _
+    string join -- : $__proto_bin $dirs | string replace -ra '[^A-Za-z0-9._-]' _
+    string join -- : $parts
 end
 
 function __proto_apply
-    set -l key (__proto_cache_key)
+    set -l id (__proto_cache_id)
+    set -l slug $id[1]
+    set -l key $id[2]
+
     test "$key" = "$__proto_last_key"; and return
     set -g __proto_last_key $key
 
-    set -l cache "$__proto_cache_dir/$key.fish"
+    set -l cache "$__proto_cache_dir/$slug.fish"
 
-    if not path is -f -- "$cache"
+    set -l stamp
+    path is -f -- "$cache"; and read stamp <"$cache"
+
+    if test "$stamp" != "# $key"
         mkdir -p "$__proto_cache_dir"
-        proto activate fish --export >"$cache.tmp$fish_pid"
+        begin
+            echo "# $key"
+            proto activate fish --export
+        end >"$cache.tmp$fish_pid"
         and mv -f "$cache.tmp$fish_pid" "$cache"
         or rm -f "$cache.tmp$fish_pid"
     end
