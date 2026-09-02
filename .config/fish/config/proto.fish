@@ -12,8 +12,14 @@ function __proto_cache_key
     set -l dir $PWD
 
     while true
-        path is -f -- "$dir/.prototools"
-        and set -a parts "$dir/.prototools" (path mtime -- "$dir/.prototools")
+        if path is -f -- "$dir/.prototools"
+            set -a parts "$dir/.prototools" (path mtime -- "$dir/.prototools")
+
+            for envfile in (string replace -rf '^\s*file\s*=\s*"?([^"]+)"?\s*$' '$1' <"$dir/.prototools")
+                path is -f -- "$dir/$envfile"
+                and set -a parts "$envfile" (path mtime -- "$dir/$envfile")
+            end
+        end
 
         test "$dir" = /; and break
         set dir (path dirname -- $dir)
