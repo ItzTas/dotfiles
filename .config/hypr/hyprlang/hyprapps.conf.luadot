@@ -1,0 +1,26 @@
+<%# luadot: hyprlang %><% local ram_gb = require("utils.machine").ram_gb() -%>
+# Terminal
+# kitty
+exec-once = [workspace 1 silent] kitty -e bash -c 'sleep 0.5 && fastfetch && bash --login'
+
+# Zen-browser
+exec-once = [workspace 2 silent] zen-browser
+<% if ram_gb > 8 then -%>
+
+# Email
+exec-once = protonmail-bridge --no-window
+exec-once = [workspace 6 silent] sleep 40 && hyprctl dispatch exec "[workspace 6 silent] thunderbird"
+<% end -%>
+<% if ram_gb > 12 then -%>
+
+# Todoist
+exec-once = [workspace 10 silent] sleep 5 && todoist
+
+# Ferdium
+exec-once = [workspace 7 silent] ferdium
+<% end -%>
+<% if ram_gb > 16 then -%>
+
+# Spotify
+exec-once = [workspace 9] bash ~/.config/hypr/scripts/spotify/open_play_silent.sh
+<% end -%>

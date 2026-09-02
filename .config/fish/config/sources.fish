@@ -46,7 +46,7 @@ if command -q dircolors
     path is -f -- "$cache"; and source "$cache"
 end
 
-__cached_init iris init fish
+# __cached_init iris init fish
 __cached_init pay-respects fish --alias f
 __cached_init zoxide init fish --cmd cd
 __cached_init direnv hook fish
