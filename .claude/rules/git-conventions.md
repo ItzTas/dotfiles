@@ -37,8 +37,7 @@ branches, committing, reverting, opening PRs/MRs), load this file and follow eve
     homologation branch, and never switch away from it, recreate it, or delete it — including for
     `/implement`. Then **save it to memory** as a `feedback` memory for that project (plus its
     `MEMORY.md` pointer): the branch name, the target branch of the MRs, and the fact that it's a
-    standing branch. Model it on the existing `chore-staging-is-the-working-branch` memory in
-    `wodefin-android`.
+    standing branch.
   - **If I say no:** fall back to the normal rules above (branch per change, ask before switching).
 
 - **Report accumulated branches when you notice them.** If, while gathering the above, you find branches with open PRs/MRs or unpushed/unmerged commits that look forgotten, mention them in the question, briefly, one line each. Don't merge, close, or delete anything on your own.
