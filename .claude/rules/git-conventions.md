@@ -23,6 +23,24 @@ branches, committing, reverting, opening PRs/MRs), load this file and follow eve
   - I already named the branch explicitly in my request; that *is* my answer.
   - **`/implement`.** That command exists to branch first, so creating and switching to a new branch is exactly what I asked for, including when it derives the name itself. Just tell me the name you chose and move on.
 
+- **A repo that looks shared may still be mine alone, with one standing working branch.** Even on a
+  project with a `dev`/`main`/`pre-homolog` setup and a full branching model, I'm often the only one
+  touching it. In that case I create a **single long-lived branch** and keep working on it, opening
+  MRs/PRs from it into homologation, instead of piling up one branch per change.
+
+  So before creating a branch (or before applying the "protected branch, branch first" rule), **ask
+  me whether the branch I'm currently on is that kind of standing working branch**, with
+  `AskUserQuestion`. Check memory first: if a memory already records the answer for this repo, don't
+  ask again, just follow it.
+
+  - **If I say yes:** stay on that branch, commit directly to it, MR/PR from it into the
+    homologation branch, and never switch away from it, recreate it, or delete it — including for
+    `/implement`. Then **save it to memory** as a `feedback` memory for that project (plus its
+    `MEMORY.md` pointer): the branch name, the target branch of the MRs, and the fact that it's a
+    standing branch. Model it on the existing `chore-staging-is-the-working-branch` memory in
+    `wodefin-android`.
+  - **If I say no:** fall back to the normal rules above (branch per change, ask before switching).
+
 - **Report accumulated branches when you notice them.** If, while gathering the above, you find branches with open PRs/MRs or unpushed/unmerged commits that look forgotten, mention them in the question, briefly, one line each. Don't merge, close, or delete anything on your own.
 
 ## Commits
