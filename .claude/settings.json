@@ -7,7 +7,7 @@
       "DesignSync"
     ]
   },
-  "model": "opus",
+  "model": "sonnet",
   "hooks": {
     "UserPromptSubmit": [
       {
