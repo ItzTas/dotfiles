@@ -1,7 +1,7 @@
 local mods = require("envs.mods")
 local apps = require("envs.apps")
 local binds = require("functions.binds")
-local devices = require("settings.devices")
+local devices = require("functions.devices")
 
 local volume = require("scripts.volume")
 local mic = require("scripts.mic")
