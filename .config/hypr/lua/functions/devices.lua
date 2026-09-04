@@ -38,10 +38,12 @@ function M.toggle(device, opts)
     spec.enabled = enabled
     hl.device(spec)
 
+    local icon = opts.icon and string.format(' -i "%s"', opts.icon) or ""
+
     utils.run_async_cmd(
         string.format(
-            'notify-send -e -i "%s" -r %d "%s: %s"',
-            opts.icon or "input-mouse",
+            'notify-send -e%s -r %d "%s: %s"',
+            icon,
             notify.REPLACE_ID,
             opts.label or name,
             enabled and "Enabled" or "Disabled"
