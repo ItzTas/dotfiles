@@ -1,6 +1,7 @@
 local mods = require("envs.mods")
 local apps = require("envs.apps")
 local binds = require("functions.binds")
+local devices = require("settings.devices")
 
 local volume = require("scripts.volume")
 local mic = require("scripts.mic")
@@ -157,6 +158,11 @@ bind(mm("PRINT", super), exec("flameshot gui"))
 -- Browsing
 bind(mm("R", meh), exec(browser .. " https://www.startpage.com"))
 bind(mm("E", meh), exec(browser .. " https://translate.google.com/?sl=auto&tl=pt"))
+
+-- Devices
+bind(mm("T", meh), function()
+    devices.toggle("asue1200:00-04f3:3288-touchpad", { label = "Touchpad", icon = "input-touchpad" })
+end)
 
 -- Others
 bind(mm("C", meh), exec("hyprpicker -a"))
