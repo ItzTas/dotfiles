@@ -5,6 +5,12 @@
   "permissions": {
     "allow": [
       "DesignSync"
+    ],
+    "ask": [
+      "mcp__signoz-seconv-vps__signoz_delete_alert",
+      "mcp__signoz-seconv-vps__signoz_delete_dashboard",
+      "mcp__signoz-seconv-vps__signoz_delete_view",
+      "mcp__signoz-seconv-vps__signoz_delete_notification_channel"
     ]
   },
   "model": "opus",
