@@ -11,6 +11,7 @@ and apply it on top of the general rules here. Don't read rule files for types y
 | File type | Rule file to read |
 |-----------|-------------------|
 | Go (`.go`) | `~/.claude/rules/code-style/go.md` |
+| Python (`.py`, `.pyi`) | `~/.claude/rules/code-style/python.md` |
 
 If a change touches several of these types, read each matching file. If a file type isn't listed
 here, only the general rules below apply.
@@ -23,6 +24,9 @@ here, only the general rules below apply.
 
 - **Prefer guard clauses.** Handle errors, validations, and early exits at the start of the function by returning early, instead of nesting the logic in `if`/`else` blocks.
 - **Prefer extracting functions over `else` branches when the code stays readable that way.** If the branching logic can be expressed by splitting it into well-named functions (combined with guard clauses/early returns) instead of `if`/`else` blocks, and the result is readable, prefer the functions.
+  - **Don't overdo it.** The point is readability, not splitting everything into tiny functions. Extracting a helper for every branch scatters trivial logic across the file and makes it harder to follow, not easier.
+  - **A one-line body that won't be reused can stay inline.** In that case a separate function usually adds indirection for nothing. It's a judgment call in the moment: extract it when a good name genuinely explains the branch better than the line itself, otherwise leave it inline.
+- **Avoid unnecessary checks.** Validate what can actually vary at runtime (user input, I/O, external data, function arguments from other callers), not values that are fixed by construction. A constant defined in the code at build time (a literal, a hardcoded map, a compile-time config value) doesn't need a nil/empty/range check before use: it can't change under you, and the check is dead code that suggests a failure mode that doesn't exist. This is a judgment call: keep the check when the "constant" can really change behind your back (overridden by build flags or env, generated, shared with code you don't control) or when a wrong value would fail silently and be hard to trace, but even so it's a judgment call.
 - **Run independent async requests concurrently, not sequentially.** When making multiple requests/async calls that don't depend on each other's results, never `await` them one by one in sequence. Fire them all at once and resolve them together (e.g., `Promise.all`/`Promise.allSettled` in JS/TS, `asyncio.gather` in Python, or the language's equivalent). Only await sequentially when a call actually needs the previous call's result.
 - **With partial dependencies, parallelize the dependency chains; don't let independent calls wait behind them.** This case is very common: given `A`, `B`, `C` where `B` depends on `A`'s result and `C` depends on nothing, do NOT `await A`, then run `B` and `C` together, because that makes `C` needlessly wait for `A`. Instead, treat `A → B` as one chain and start it concurrently with `C`, so `C` begins at the same moment `A` does: `const [b, c] = await Promise.all([a().then((resA) => b(resA)), c()])`, not `const resA = await a(); const [b, c] = await Promise.all([b(resA), c()])`. In general: group calls into their dependency chains, keep the order only within each chain, and run all chains concurrently.
 - **Prefer a map over a `switch`/`if/else`** when the code is just a key-to-value mapping.
