@@ -23,6 +23,27 @@ here, only the general rules below apply.
 ## Code Style
 
 - **Prefer guard clauses.** Handle errors, validations, and early exits at the start of the function by returning early, instead of nesting the logic in `if`/`else` blocks.
+  - **Put the shorter branch inside the `if` and let the longer one run at the base level.** When the two outcomes are both legitimate paths (not an error bailing out of a long body), the early `return` should close the branch with fewer lines, so the bulkier one isn't indented. Invert the condition if that's what it takes.
+
+    ```python
+    # Preferred: one-line branch inside the if, the multi-line one flat below
+    def save(doc: Doc) -> None:
+        if doc.is_valid():
+            store.write(doc)
+            return
+        message = f"invalid doc: {doc.id}"
+        log.warning(message)
+        notify(message)
+
+    # Avoid: the three-line branch nested, the one-liner left at the bottom
+    def save(doc: Doc) -> None:
+        if not doc.is_valid():
+            message = f"invalid doc: {doc.id}"
+            log.warning(message)
+            notify(message)
+            return
+        store.write(doc)
+    ```
 - **Prefer extracting functions over `else` branches when the code stays readable that way.** If the branching logic can be expressed by splitting it into well-named functions (combined with guard clauses/early returns) instead of `if`/`else` blocks, and the result is readable, prefer the functions.
   - **Don't overdo it.** The point is readability, not splitting everything into tiny functions. Extracting a helper for every branch scatters trivial logic across the file and makes it harder to follow, not easier.
   - **A one-line body that won't be reused can stay inline.** In that case a separate function usually adds indirection for nothing. It's a judgment call in the moment: extract it when a good name genuinely explains the branch better than the line itself, otherwise leave it inline.
