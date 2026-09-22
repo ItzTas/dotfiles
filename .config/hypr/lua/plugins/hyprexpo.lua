@@ -1,16 +1,18 @@
 local plugins = require("functions.plugins")
 
-if not plugins.ensure_plugin("hyprexpo") then return end
+if not plugins.ensure_plugin("hyprexpo") then
+	return
+end
 
 hl.config({
-    plugin = {
-        hyprexpo = {
-            columns  = 4,
-            gap_size = 2,
-            bg_col   = "rgb(111111)",
+	plugin = {
+		hyprexpo = {
+			columns = 4,
+			gap_size = 2,
+			bg_col = "rgb(111111)",
 
-            -- [center/first] [workspace]
-            workspace_method = "first 1",
-        },
-    },
+			-- [center/first] [workspace]
+			workspace_method = "first 1",
+		},
+	},
 })

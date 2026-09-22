@@ -1,7 +1,9 @@
 local plugins = require("functions.plugins")
 
 local hymission = plugins.ensure_plugin("hymission")
-if not hymission then return end
+if not hymission then
+	return
+end
 
 local binds = require("functions.binds")
 local mods = require("envs.mods")
@@ -15,10 +17,10 @@ local super_l = mods.super_l
 local bind = hl.bind
 
 bind(mm("A", alt), function()
-    hymission.toggle("forceall")
+	hymission.toggle("forceall")
 end)
 bind(mm("S", super), function()
-    hymission.open("onlycurrentworkspace")
+	hymission.open("onlycurrentworkspace")
 end)
 bind(mm("Escape", super), hymission.close)
 
@@ -27,21 +29,21 @@ local close_bind
 local enable_close_bind
 
 local function enable_open_bind()
-    open_bind = bind(super_l, function()
-        open_bind:remove()
-        enable_close_bind()
-        hymission.open()
-    end, {
-        long_press = true,
-    })
+	open_bind = bind(super_l, function()
+		open_bind:remove()
+		enable_close_bind()
+		hymission.open()
+	end, {
+		long_press = true,
+	})
 end
 
 function enable_close_bind()
-    close_bind = bind(super_l, function()
-        close_bind:remove()
-        enable_open_bind()
-        hymission.close()
-    end)
+	close_bind = bind(super_l, function()
+		close_bind:remove()
+		enable_open_bind()
+		hymission.close()
+	end)
 end
 
 enable_open_bind()
