@@ -13,7 +13,7 @@
       "mcp__signoz-seconv-vps__signoz_delete_notification_channel"
     ]
   },
-  "model": "sonnet",
+  "model": "opus",
   "hooks": {
     "UserPromptSubmit": [
       {

@@ -1,5 +1,4 @@
 local ram = require("functions.ram")
-local utils = require("functions.utils")
 local spotify = require("scripts.spotify")
 
 local exec = hl.exec_cmd
@@ -17,9 +16,9 @@ on("hyprland.start", function()
         -- Email
         exec("protonmail-bridge --no-window")
 
-        utils.defer(function()
-            exec("thunderbird", { workspace = "6 silent" })
-        end, 40000)
+        -- Delay in the shell, not in hl.timer: a pending Lua timer is dropped on
+        -- any config reload, which kills the launch before it happens.
+        exec("sleep 40 && exec thunderbird", { workspace = "6 silent" })
     end
 
     if ram.has_above(12) then
@@ -27,9 +26,7 @@ on("hyprland.start", function()
         exec("ferdium", { workspace = "7 silent" })
 
         -- Todoist
-        -- utils.defer(function()
-        --     exec("todoist", { workspace = "10 silent" })
-        -- end, 5000)
+        -- exec("sleep 5 && exec todoist", { workspace = "10 silent" })
     end
 
     if ram.has_above(16) then
