@@ -17,6 +17,6 @@ hl.config({
 
         special_fallthrough = true,
 
-        sensitivity = 0.39, -- -1.0 - 1.0, 0 means no modification.
+        sensitivity = 0.3, -- -1.0 - 1.0, 0 means no modification.
     },
 })
