@@ -43,13 +43,17 @@ open_on() {
     local title="$3"
     local body="$4"
     local path="$5"
+    local ocr="$6"
+
+    local actions=(
+        --action="copy_path,copy path"
+        --action="default,open"
+        --action="copy,copy"
+    )
+    [[ "$ocr" == "ocr" ]] && actions+=(--action="copy_text,copy text")
 
     local action
-    action=$(dunstify -a "$app" -I "$icon" \
-        --action="copy_path,copy path" \
-        --action="default,open" \
-        --action="copy,copy" \
-        "$title" "$body")
+    action=$(dunstify -a "$app" -I "$icon" "${actions[@]}" "$title" "$body")
 
     case "$action" in
     "default" | "open")
@@ -61,7 +65,32 @@ open_on() {
     "copy")
         wl-copy --type "$(file -b --mime-type "$path")" < "$path"
         ;;
+    "copy_text")
+        copy_text "$app" "$icon" "$path"
+        ;;
     esac
+}
+]=]
+end
+
+---@return string
+function M.copy_text()
+	return [=[
+copy_text() {
+    local app="$1"
+    local icon="$2"
+    local path="$3"
+
+    local text
+    text=$(tesseract "$path" - -l por+eng 2>/dev/null | sed -e 's/[[:space:]]*$//' | sed -e '/./,$!d')
+
+    if [[ -z "${text//[[:space:]]/}" ]]; then
+        dunstify -a "$app" -I "$icon" -u low "No text found" "OCR found no text in the screenshot"
+        return
+    fi
+
+    printf '%s' "$text" | wl-copy
+    dunstify -a "$app" -I "$icon" "Text copied" "$(printf '%s' "$text" | head -c 200)"
 }
 ]=]
 end
