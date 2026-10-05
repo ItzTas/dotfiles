@@ -39,7 +39,9 @@ function M.toggle()
             wf-recorder -o "$monitor" -f "$output"
         }
 
-        if pgrep -x gpu-screen-recorder >/dev/null || pgrep -x wf-recorder >/dev/null; then
+        # pidof, not pgrep -x: the kernel truncates process names to 15 characters, so
+        # pgrep -x never matches "gpu-screen-recorder".
+        if pidof -q gpu-screen-recorder || pidof -q wf-recorder; then
             killall -q -s INT gpu-screen-recorder
             killall -q -s INT wf-recorder
             exit 0
