@@ -28,5 +28,5 @@ if command -v phpenv &>/dev/null; then
 fi
 
 if command -v keychain &>/dev/null; then
-    eval "$(keychain -q --eval)"
+	eval "$(SHELL="$BASH" keychain -q --eval)"
 fi
