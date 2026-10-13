@@ -1,0 +1,241 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+readonly default_host=seconv-srv
+readonly default_ttl=900
+readonly max_attempts=3
+
+usage() {
+    cat <<-EOF
+		Usage: ${0##*/} [-H HOST] [-s] [-n] COMMAND...
+		       ${0##*/} [-H HOST] --forget
+
+		Runs COMMAND under sudo on a remote host over SSH. The password is typed into a
+		graphical prompt on this machine and fed to sudo through the SSH connection's
+		stdin, so no TTY is needed and the password is never stored on disk.
+
+		  -H, --host HOST  host to connect to (default: \$SSUDO_HOST, else $default_host)
+		  -s, --shell      run COMMAND as a shell command line, so \`;\`, \`|\`, \`&&\`,
+		                   redirections and loops stay under sudo instead of splitting
+		                   the sudo invocation
+		  -n, --no-cache   neither read nor write the cached password
+		      --forget     drop the cached password for HOST and exit
+		  -h, --help       show this help
+
+		The prompt is \$SUDO_ASKPASS or \$SSH_ASKPASS when either is set, otherwise
+		zenity or rofi, otherwise a hidden prompt in the terminal. A wrong password is
+		detected and re-prompted, up to $max_attempts times.
+
+		Without -s, COMMAND is quoted the same way ssh quotes it: the words are joined
+		with spaces and the remote shell parses the result, so quote anything the local
+		shell should not expand. Only the first command of a \`;\`-separated list would
+		run under sudo, which is what -s exists to fix.
+
+		The password is cached in the kernel's user keyring (memory only, never
+		swapped, readable only by this uid) for \$SSUDO_CACHE_TTL seconds, default
+		$default_ttl. Set SSUDO_CACHE=0 to disable caching entirely, or use --forget to
+		drop it early.
+
+		stdin is forwarded to COMMAND when it is not a terminal, so pipes into the
+		remote command work: \`cat dump.sql | ${0##*/} -s 'psql -U x db'\`.
+	EOF
+}
+
+die() {
+    printf '%s: %s\n' "${0##*/}" "$1" >&2
+    exit "${2:-1}"
+}
+
+# The password lives in the kernel user keyring: memory only, never written to
+# disk or swapped, scoped to this uid, and self-expiring through keyctl timeout.
+
+cache_enabled() {
+    [[ ${SSUDO_CACHE:-1} != 0 && $use_cache == 1 ]] && command -v keyctl >/dev/null 2>&1
+}
+
+cache_id() {
+    keyctl search @u user "ssudo:$1" 2>/dev/null
+}
+
+cache_get() {
+    local id
+    cache_enabled || return 1
+    id=$(cache_id "$1") || return 1
+    keyctl pipe "$id" 2>/dev/null
+}
+
+cache_clear() {
+    local id
+    command -v keyctl >/dev/null 2>&1 || return 0
+    id=$(cache_id "$1") || return 0
+    keyctl unlink "$id" @u >/dev/null 2>&1 || true
+}
+
+cache_put() {
+    local id
+    cache_enabled || return 0
+    cache_clear "$1"
+    id=$(printf '%s' "$2" | keyctl padd user "ssudo:$1" @u 2>/dev/null) || return 0
+    keyctl timeout "$id" "${SSUDO_CACHE_TTL:-$default_ttl}" >/dev/null 2>&1 || true
+}
+
+ask_password() {
+    local prompt=$1 helper password
+
+    for helper in "${SUDO_ASKPASS:-}" "${SSH_ASKPASS:-}"; do
+        if [[ -n $helper && -x $helper ]]; then
+            "$helper" "$prompt"
+            return
+        fi
+    done
+
+    if command -v zenity >/dev/null 2>&1; then
+        zenity --password --title="$prompt" 2>/dev/null
+        return
+    fi
+
+    if command -v rofi >/dev/null 2>&1; then
+        rofi -dmenu -password -lines 0 -p "$prompt" </dev/null
+        return
+    fi
+
+    read -rsp "$prompt: " password
+    printf '\n' >&2
+    printf '%s\n' "$password"
+}
+
+shell_quote() {
+    printf "'%s'" "${1//\'/\'\\\'\'}"
+}
+
+# `sudo -S -- true` costs one round trip (cheap over the shared ControlMaster)
+# and tells a rejected password apart from a failing COMMAND, which a single
+# combined run cannot: both exit 1.
+password_rejected() {
+    local output=$1
+    [[ $output == *"incorrect password"* ||
+        $output == *"Sorry, try again"* ||
+        $output == *"no password was provided"* ||
+        $output == *"password is required"* ||
+        $output == *"authentication failure"* ]]
+}
+
+validate_password() {
+    local host=$1 password=$2 output status=0
+
+    output=$(printf '%s\n' "$password" |
+        ssh "${ssh_opts[@]}" "$host" "sudo -S -p '' -- true" 2>&1 >/dev/null) || status=$?
+
+    ((status == 0)) && return 0
+    password_rejected "$output" && return 1
+
+    printf '%s\n' "$output" >&2
+    die "cannot reach sudo on $host" "$status"
+}
+
+host=${SSUDO_HOST:-$default_host}
+shell_mode=0
+use_cache=1
+forget=0
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+    -h | --help)
+        usage
+        exit 0
+        ;;
+    -H | --host)
+        [[ $# -ge 2 ]] || die "--host needs a value" 2
+        host=$2
+        shift 2
+        ;;
+    --host=*)
+        host=${1#--host=}
+        shift
+        ;;
+    -s | --shell)
+        shell_mode=1
+        shift
+        ;;
+    -n | --no-cache)
+        use_cache=0
+        shift
+        ;;
+    --forget)
+        forget=1
+        shift
+        ;;
+    --)
+        shift
+        break
+        ;;
+    *)
+        break
+        ;;
+    esac
+done
+
+if ((forget)); then
+    cache_clear "$host"
+    exit 0
+fi
+
+[[ $# -gt 0 ]] || die "no command given; see ${0##*/} --help" 2
+
+# The multiplexing master is started detached, with its own stdio, because a
+# master spawned by ControlMaster=auto inherits this script's descriptors and
+# holds the pipe open for the whole ControlPersist window: the caller then
+# blocks long after the remote command has finished.
+ssh_opts=()
+if [[ -n ${XDG_RUNTIME_DIR:-} && -d ${XDG_RUNTIME_DIR:-} ]]; then
+    control_path="$XDG_RUNTIME_DIR/ssudo-%r@%h:%p"
+    if ! ssh -O check -o "ControlPath=$control_path" "$host" >/dev/null 2>&1; then
+        ssh -MNf -o "ControlPath=$control_path" -o ControlPersist=60 "$host" \
+            </dev/null >/dev/null 2>&1 || true
+    fi
+    ssh_opts+=(-o ControlMaster=no -o "ControlPath=$control_path")
+fi
+
+if ((shell_mode)); then
+    remote_command="sudo -S -p '' -- bash -c $(shell_quote "$*")"
+else
+    remote_command="sudo -S -p '' -- $*"
+fi
+
+password=""
+for ((attempt = 1; attempt <= max_attempts; attempt++)); do
+    if ((attempt == 1)) && password=$(cache_get "$host") && [[ -n $password ]]; then
+        validate_password "$host" "$password" && break
+        cache_clear "$host"
+    fi
+
+    password=$(ask_password "sudo password for $host") ||
+        die "password prompt failed or was cancelled"
+    [[ -n $password ]] || die "cancelled"
+
+    if validate_password "$host" "$password"; then
+        cache_put "$host" "$password"
+        break
+    fi
+
+    printf '%s: wrong password for %s (attempt %d/%d)\n' \
+        "${0##*/}" "$host" "$attempt" "$max_attempts" >&2
+    password=""
+done
+
+[[ -n $password ]] || die "authentication failed on $host"
+
+status=0
+# SC2029: $remote_command is built here on purpose; it must expand client side.
+# shellcheck disable=SC2029
+if [[ -t 0 ]]; then
+    printf '%s\n' "$password" | ssh "${ssh_opts[@]}" "$host" "$remote_command" || status=$?
+else
+    {
+        printf '%s\n' "$password"
+        cat
+    } | ssh "${ssh_opts[@]}" "$host" "$remote_command" || status=$?
+fi
+
+exit "$status"
