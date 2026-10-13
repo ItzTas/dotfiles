@@ -135,27 +135,25 @@ rule({
 	float = true,
 })
 
-local thunderbird_activate = rule({
-	name = "thunderbird",
-	match = { class = "^(org.mozilla.Thunderbird)$" },
-	focus_on_activate = true,
-})
+do
+	local thunderbird_activate = rule({
+		name = "thunderbird",
+		match = { class = "^(org.mozilla.Thunderbird)$" },
+		focus_on_activate = true,
+	})
 
--- Thunderbird asks for activation as soon as its first window maps, which
--- would pull focus to its workspace on every launch. Keep the rule off until
--- it has settled. A reload during the wait drops the timer, but then the
--- window already exists and the rule simply stays on.
-if #hl.get_windows({ class = "org.mozilla.Thunderbird" }) == 0 then
-	thunderbird_activate:set_enabled(false)
+	if #hl.get_windows({ class = "org.mozilla.Thunderbird" }) == 0 then
+		thunderbird_activate:set_enabled(false)
 
-	hl.on("window.open", function(window)
-		if window.class ~= "org.mozilla.Thunderbird" then
-			return
-		end
-		hl.timer(function()
-			thunderbird_activate:set_enabled(true)
-		end, { timeout = 15000, type = "oneshot" })
-	end)
+		hl.on("window.open", function(window)
+			if window.class ~= "org.mozilla.Thunderbird" then
+				return
+			end
+			hl.timer(function()
+				thunderbird_activate:set_enabled(true)
+			end, { timeout = 15000, type = "oneshot" })
+		end)
+	end
 end
 
 rule({
