@@ -104,5 +104,6 @@
       "effortLevel": "low"
     }
   },
-  "tui": "fullscreen"
+  "tui": "fullscreen",
+  "autoMemoryEnabled": false
 }
