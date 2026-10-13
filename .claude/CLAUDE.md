@@ -35,9 +35,11 @@
 
 ## User-facing text
 
-- **Run the `/humanizer:humanizer` skill on any prose a human will read**: docs, PR/MR bodies,
-  issues, changelog entries, UI copy, error messages, and your replies to me, before it lands in a
-  file or reaches me. Short text counts too.
+- **Run the `/humanizer:humanizer` skill on prose written for people other than me**: UI copy and
+  error messages shown to an app's users, emails, documents (e.g. ones filed in SEI), docs, PR/MR
+  bodies, issues, changelog entries, before it lands in a file or gets sent. Short text counts too.
+- **Never run it on your replies to me.** Chat answers, status updates, explanations and questions
+  addressed to me in the session are not "user-facing text"; don't load the skill for them.
 - **Optional for commit messages.** Run it if the body is long enough to read like prose, but
   don't feel obliged to.
 - **Skip it for** code, identifiers, config, structured data, quoted error strings, and command
