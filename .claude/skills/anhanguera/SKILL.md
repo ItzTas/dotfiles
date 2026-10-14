@@ -1,101 +1,102 @@
 ---
 name: anhanguera
-description: Levanta no AVA da Anhanguera (via Playwright) tudo o que falta fazer nas disciplinas em andamento (exercícios de unidade, atividades práticas, trabalhos, provas), com prazos e pesos, e monta um plano de estudos priorizado. Use quando o usuário pedir para ver pendências, prazos, notas ou um plano de estudos da faculdade.
+description: Uses Playwright to scan the Anhanguera AVA (student portal) for everything still pending in the in-progress subjects (unit quizzes, practical activities, assignments, exams), with deadlines and grade weights, and builds a prioritized study plan. Use when the user asks about pending coursework, deadlines, grades, or a study plan for college.
 ---
 
-# Plano de estudos: AVA Anhanguera
+# Study plan: Anhanguera AVA
 
-Objetivo: descobrir o que está pendente em cada disciplina em andamento, com prazo e peso na
-nota, e devolver um plano de estudos priorizado. **Só leitura.**
+Goal: find what is pending in each in-progress subject, with its deadline and grade weight, and
+return a prioritized study plan. **Read-only.**
 
-## Regras invioláveis
+## Hard rules
 
-- **Nunca clique em nada que inicie ou envie uma avaliação**: "Fazer exercício", "Fazer
-  atividade", "Iniciar prova", "Treinar agora", "Enviar", "Refazer". O usuário faz tudo ele mesmo.
-  Abrir páginas de disciplina, de notas e expandir unidades pode.
-- **Nunca preencha nem toque nos campos de login.** O usuário faz login sozinho na janela do
-  navegador.
-- **Nunca leia, imprima ou salve headers, cookies, tokens ou `localStorage`.** O script de coleta
-  não precisa de nada disso: ele só escuta as respostas que o próprio site já carrega.
-- **Não grave dados pessoais em arquivo** (nome, matrícula, IDs de curso/matrícula, notas). O
-  resultado fica só na conversa. Não salve snapshots/respostas em arquivo sem necessidade; se
-  salvar algo para depurar, apague no fim. Não edite esta skill com dados reais: exemplos usam
-  valores fictícios.
+- **Never click anything that starts or submits an assessment**: "Fazer exercício", "Fazer
+  atividade", "Iniciar prova", "Treinar agora", "Enviar", "Refazer". The user does all of them
+  personally. Opening subject pages, grade pages and expanding units is fine.
+- **Never fill in or touch the login fields.** The user logs in alone in the browser window.
+- **Never read, print or save headers, cookies, tokens or `localStorage`.** The collector script
+  doesn't need any of that: it only listens to responses the site already loads.
+- **Don't write personal data to files** (name, student ID, course/enrollment IDs, grades). Results
+  stay in the conversation. Don't save snapshots or responses to files unless needed; if you save
+  something for debugging, delete it at the end. Never edit this skill with real data: examples use
+  fictitious values.
 
-## Passo a passo
+## Steps
 
-1. **Abrir o login.** Carregue as ferramentas do Playwright MCP (`ToolSearch` com
+1. **Open the login page.** Load the Playwright MCP tools (`ToolSearch` with
    `select:mcp__playwright__browser_navigate,mcp__playwright__browser_run_code_unsafe,mcp__playwright__browser_wait_for,mcp__playwright__browser_snapshot`)
-   e navegue para `https://www.anhanguera.com/aluno/ava/login`. Se a página já cair na home
-   logada (URL com `/aluno/home/...`), pule para o passo 3.
+   and navigate to `https://www.anhanguera.com/aluno/ava/login`. If it lands on the logged-in home
+   (URL with `/aluno/home/...`), skip to step 3.
 
-2. **Esperar o login.** Peça para o usuário fazer login na janela do navegador (captcha/2FA
-   inclusos) e avisar quando terminar. Não continue antes disso.
+2. **Wait for the login.** Ask the user to log in in the browser window (captcha/2FA included) and
+   to tell you when done. Don't continue before that.
 
-3. **Garantir que está na home do curso.** A URL precisa ter o formato
-   `https://www.anhanguera.com/aluno/home/<tipo>/<id-do-curso>`, por exemplo
+3. **Make sure you're on the course home.** The URL must look like
+   `https://www.anhanguera.com/aluno/home/<type>/<course-id>`, e.g.
    `https://www.anhanguera.com/aluno/home/tecnologo/KRT-00000000-0000-0000-0000-000000000000`
-   (fictício). Se o usuário tiver mais de um curso e cair na seleção de curso, pergunte qual usar.
+   (fictitious). If the user has more than one course and lands on the course picker, ask which one.
 
-4. **Coletar.** Rode o script desta skill com `browser_run_code_unsafe`, passando o caminho
-   **absoluto** em `filename` (expanda o `~`):
+4. **Collect.** Run this skill's script with `browser_run_code_unsafe`, passing the **absolute**
+   path in `filename` (expand the `~`):
 
    ```
-   filename: ~/.claude/skills/anhanguera/coletar.js
+   filename: ~/.claude/skills/anhanguera/collect.js
    ```
 
-   Ele abre a página de cada disciplina em andamento (em abas paralelas que fecha sozinho), captura
-   as respostas GraphQL que o site carrega e devolve um JSON resumido. Retornos especiais:
-   - `{ precisaLogin: true }`: sessão expirou, volte ao passo 1.
-   - `{ erro: ... }`: leia a mensagem; normalmente é por não estar na home do curso.
-   - `faltouCapturar` não vazio numa disciplina: a página demorou; rode de novo uma vez. Se
-     persistir, abra a página da disciplina manualmente e confira pela interface.
+   It opens each in-progress subject's page (in parallel tabs it closes itself), captures the
+   GraphQL responses the site loads and returns a compact JSON. Special results:
+   - `{ needsLogin: true }`: session expired, go back to step 1.
+   - `{ error: ... }`: read the message; usually it means you weren't on the course home.
+   - non-empty `missingCaptures` on a subject: the page was slow even after the script's own
+     retry; run it again once. If it persists, open that subject's page manually and check through
+     the UI.
 
-5. **Interpretar** (regras abaixo) e **responder com o plano** (formato abaixo).
+5. **Interpret** (rules below) and **reply with the plan** (format below).
 
-## Como interpretar o JSON
+## Reading the JSON
 
-Campos por disciplina: `avaliacoes` (trabalhos `ASSIGNMENT` e provas `EXAM`), `unidades` (cada
-uma com `exercicios`, que são os `QUIZ`, e `atividadesPraticas`), `calendario` (períodos oficiais),
-`pesos`, `notaMinima`, `notaFinal` (pontuação atual), `progresso` (`TIPO feitos/total`).
+Per subject: `assessments` (assignments `ASSIGNMENT` and exams `EXAM`), `units` (each with
+`quizzes` and `practicalActivities`), `calendar` (official periods), `weights`, `passingScore`,
+`currentScore`, `progress` (`TYPE done/total`).
 
-- **Nota zerada não quer dizer pendência.** Pode ser item em correção ou nota ainda não
-  liberada. O critério de pendente é: **lista `tentativas` vazia** e `status` diferente de
-  `DONE`. Item com tentativa registrada conta como feito, mesmo com nota 0.
-- **Exercício de unidade**: pendente quando `tentativas` está vazio. Se foi feito com nota baixa
-  e ainda sobra tentativa (`tentativasPermitidas` > número de tentativas), sugira refazer, citando
-  a nota que tirou.
-- **Atividade prática**: o site lista a atividade em `unidades[].atividadesPraticas` e a entrega em
-  `avaliacoes` do tipo `ASSIGNMENT` (normalmente uma por atividade prática, mas a API não liga as
-  duas explicitamente). Entrega sem tentativa = atividade não entregue.
-- **Disciplinas de projeto** (extensão, projeto integrado) costumam ter só um `ASSIGNMENT` valendo
-  100: é o trabalho inteiro, sem questões.
-- **Prazo efetivo**: use sempre a data **mais cedo** entre o `prazo` do item e o período
-  correspondente no `calendario`. O calendário costuma fechar antes. Exemplo: trabalho com prazo
-  22/12 na avaliação, mas "Período de Trabalho" até 12/12; vale 12/12.
-- **Período de estudo** (`calendario`, título "Período de estudo"): é o prazo para assistir às aulas
-  (pontos de "Progresso em Aula", ver `ATTENDANCE` em `progresso`). Avise se faltam aulas e o
-  período está acabando.
-- **Provas**: 1ª chamada no "Período de prova"; existem "Segunda Chamada" e "Recuperação"
-  (a recuperação só depois de fazer a 1ª ou 2ª chamada). Planeje para a 1ª chamada; cite a 2ª só
-  como plano B.
-- **Matemática da nota**: com os `pesos`, calcule quanto cada disciplina já tem, quanto ainda dá
-  para ganhar e se os 60 pontos estão em risco. Exercícios rendem poucos pontos e são rápidos;
-  trabalho e prova pesam mais.
-- Compare tudo com `hoje` (vem no JSON) e calcule os dias restantes.
+- **A zero grade does not mean pending.** The item may be awaiting grading or the grade may not be
+  released yet. The pending criterion is: **empty `attempts` list** and `status` other than
+  `DONE`. An item with a recorded attempt counts as done, even with grade 0.
+- **Unit quiz** ("exercício de unidade"): pending when `attempts` is empty. If it was done with a
+  low grade and attempts remain (`allowedAttempts` > number of attempts), suggest retaking it,
+  citing the grade.
+- **Practical activity** ("atividade prática"): the site lists the activity in
+  `units[].practicalActivities` and its submission in `assessments` of type `ASSIGNMENT` (usually
+  one per practical activity, but the API doesn't link them explicitly). Submission with no attempt
+  = activity not delivered.
+- **Project subjects** (extension project, integrated project) usually have a single `ASSIGNMENT`
+  worth 100: that's the whole work, no quizzes.
+- **Effective deadline**: always use the **earliest** date between the item's `due` and the matching
+  period in `calendar`. The calendar usually closes first. Example: an assignment due 22/12 in
+  `assessments`, but "Período de Trabalho" ends 12/12; 12/12 is the real deadline.
+- **Study period** (`calendar` entry "Período de estudo"): deadline for watching lessons (the
+  "Progresso em Aula" points, see `ATTENDANCE` in `progress`). Warn if lessons are missing and the
+  period is ending.
+- **Exams**: first sitting in "Período de prova"; there are also "Segunda Chamada" (second sitting)
+  and "Recuperação" (make-up, only after taking the first or second sitting). Plan for the first
+  sitting; mention the second only as a fallback.
+- **Grade math**: using `weights`, compute what each subject already has, how much is still
+  available and whether the passing score is at risk. Quizzes give few points and are quick;
+  assignments and exams weigh more.
+- Compare everything against `today` (in the JSON) and compute days left.
 
-## Formato da resposta
+## Reply format
 
-Em português, direto, sem enrolação. Datas em `dd/mm` com dia da semana quando for próximo.
+Reply in the user's language, direct, no filler. Dates as `dd/mm`, with weekday when close.
 
-1. **Urgente (próximos 7 dias)**: o que vence ou abre logo, com data e dias restantes.
-2. **Próximas semanas**: provas e entregas seguintes, em ordem cronológica.
-3. **Pendências por disciplina**: exercícios (por unidade), atividades práticas, trabalhos e
-   provas, com prazo efetivo, mais pontuação atual e quanto ainda dá para ganhar.
-4. **Onde focar**: 3 a 5 prioridades justificadas (prazo mais próximo, maior peso, disciplina com
-   aprovação em risco, itens rápidos que garantem pontos).
-5. **Sugestão de semana**: distribuição leve por dia até a próxima prova/entrega importante. Pergunte
-   ao usuário quanto tempo por dia ele tem, se ainda não souber, e ajuste.
+1. **Urgent (next 7 days)**: what is due or opens soon, with date and days left.
+2. **Coming weeks**: upcoming exams and deadlines, in chronological order.
+3. **Pending per subject**: quizzes (per unit), practical activities, assignments and exams, with the
+   effective deadline, plus current score and how many points are still available.
+4. **Where to focus**: 3 to 5 justified priorities (closest deadline, highest weight, subject at
+   risk of failing, quick items that secure points).
+5. **Suggested week**: a light per-day distribution up to the next important exam/deadline. Ask how
+   much time per day the user has, if not known yet, and adjust.
 
-Se o usuário pedir algo para guardar ou compartilhar (um calendário, uma página), ofereça um
-artifact; não publique por conta própria.
+If the user wants something to keep or share (a calendar, a page), offer an artifact; don't publish
+on your own.
