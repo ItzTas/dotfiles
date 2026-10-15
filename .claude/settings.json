@@ -105,5 +105,6 @@
     }
   },
   "tui": "fullscreen",
-  "autoMemoryEnabled": false
+  "autoMemoryEnabled": false,
+  "outputStyle": "ADHD"
 }
