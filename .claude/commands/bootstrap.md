@@ -21,25 +21,29 @@ Those are not the flag; handle them as normal work.
 - If I asked for other changes in the same message, do those first.
 
 ### 1. Survey the project
-- Look at the repo root for manifests, lockfiles, `.prototools`, `Makefile`/`justfile`/`Taskfile`,
-  `docker-compose*.yml`, env examples, and the README's setup section. The repo may use **more
-  than one** ecosystem, so handle each one you find.
+- Run `~/.claude/scripts/stack-detect.py`. It reports the ecosystems with their package manager
+  (from the lockfile, the `packageManager` field or pyproject), the `.prototools` pins, task runners
+  with their targets (`Makefile`/`justfile`/`Taskfile`/`package.json` scripts), compose files, env
+  templates (with their target and whether it already exists), git hooks (husky/lefthook/
+  pre-commit) and which tools are installed. The repo may use **more than one** ecosystem, so handle
+  each one.
+- Still read the README's setup section; the script doesn't see documented manual steps.
 
 ### 2. Pin the tools (proto)
 - If a `.prototools` exists, install the pinned versions (`proto install` / `proto use`) so the
   right tool versions are active before anything else.
 
 ### 3. Install dependencies (per ecosystem)
-- JS/TS: pick the PM from the lockfile, `pnpm install` (`pnpm-lock.yaml`), `yarn install`,
-  `npm install` (`package-lock.json`), `bun install`.
+- JS/TS: use the detected `package_manager` (`pnpm install`, `yarn install`, `npm install`,
+  `bun install`). If it has `lockfile_pm`, the two sources disagree; ask which to use.
 - PHP: `composer install`. Go: `go mod download`. Rust: `cargo fetch`.
   Python: poetry/uv/`pip install -r requirements.txt`. Lua: `luarocks install`.
-- If a required tool isn't available, say so clearly instead of skipping silently.
+- If a required tool is `null` in the script's `tools`, say so clearly instead of skipping
+  silently.
 
 ### 4. Set up env files
-- For each `*.example`/`*.sample`/`*.dist` env template (e.g. `.env.example`, `.env.local.example`,
-  `config.example.*`), **create the target only if it doesn't already exist** (e.g. copy
-  `.env.example` → `.env`).
+- For each entry in the script's `env_templates`, **create the target only if `target_exists` is
+  false** (e.g. copy `.env.example` → `.env`). Re-check existence right before copying.
 - **Never overwrite an existing env file.** It may hold real secrets. Do not print the contents
   of any env file; just report which ones you created and which already existed.
 - After creating one, point out any placeholder values I still need to fill in.

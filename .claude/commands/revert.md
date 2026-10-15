@@ -1,7 +1,7 @@
 ---
 description: Revert a pushed commit, range, or PR/MR merge via revert commits (no history rewriting), pushing only after I confirm
 argument-hint: [commit sha | range | PR/MR number | last]
-allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Read, Glob, Grep
+allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(~/.claude/scripts/forge-detect.sh*), Read, Glob, Grep
 ---
 
 Undo a change that's **already been pushed** by creating a revert commit, the safe way, without
@@ -24,7 +24,9 @@ Follow exactly these steps:
 
 ## 1. Resolve the target
 - Turn the argument into concrete commit(s): a SHA, a range, `HEAD`, or, for a PR/MR number, find
-  its **merge commit** (GitHub: `gh pr view <n> --json mergeCommit`; GitLab: `glab mr view <n>`).
+  its **merge commit** on the forge reported by `~/.claude/scripts/forge-detect.sh` (GitHub:
+  `gh pr view <n> --json mergeCommit`; GitLab: `glab mr view <n>`). If both forges are present,
+  ask which one the number refers to.
 
 ## 2. Inspect before acting
 - Show what will be undone: `git show --stat <target>` (or `git log --oneline <range>`).

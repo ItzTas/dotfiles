@@ -21,6 +21,9 @@ part of this; only commands I asked for explicitly.
   `command not found`, bad pathspec, etc.), **delete that entry** from both history files (the
   last matching line). Likewise for any already-recorded command that later proves wrong: a
   failing command must not stay in the history.
+- **Use `~/.claude/scripts/command-history.sh`** for these edits: `add <cmd>`, `remove-last <cmd>`
+  (both files, caps applied), and `search <words…>` for the closest history entries. Put
+  `--project <project root>` before the subcommand; `$CLAUDE_PROJECT_DIR` isn't set in Bash calls.
 
 ## Wrong / non-existent commands
 

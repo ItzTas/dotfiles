@@ -29,17 +29,17 @@ are not arguments; handle them as normal work.
 - Detect the mode (`audit` default), any named packages, and the `major` flag from `$ARGUMENTS`.
 
 ### 2. Detect the package manager(s)
-- Look for manifests/lockfiles. The repo may use **more than one** ecosystem; handle each found.
-  Honor `.prototools` and run the tools through `proto` when versions are pinned there.
-  - JS/TS: `package.json` → pick the PM from the lockfile, `pnpm-lock.yaml`→pnpm,
-    `yarn.lock`→yarn, `package-lock.json`→npm, `bun.lockb`→bun.
-  - PHP: `composer.json` → composer.
-  - Go: `go.mod` → go modules (+ `govulncheck` for vulns).
-  - Rust: `Cargo.toml` → cargo (+ `cargo audit`).
-  - Python: `pyproject.toml`/`requirements.txt` → poetry/uv/pip (+ `pip-audit`).
-  - Lua: `*.rockspec` → luarocks.
-- If a needed tool (e.g. `pnpm`, `govulncheck`, `cargo-audit`, `pip-audit`) isn't installed, say
-  so; don't silently skip that check.
+- Run `~/.claude/scripts/stack-detect.py`. It prints JSON with every ecosystem found (manifest dir,
+  lockfile, `package_manager` and where it came from), the `.prototools` pins, and which relevant
+  tools are installed (`tools`: path or `null`). The repo may use **more than one** ecosystem;
+  handle each.
+- If an ecosystem has `lockfile_pm` (the lockfile and `packageManager` disagree), the lockfile may
+  be my personal local tool (see `~/.claude/rules/package-managers.md`); ask which one to use.
+- Honor the `.prototools` pins and run the tools through `proto` when they're pinned there.
+- Tools per ecosystem: JS/TS → the detected PM; PHP → composer; Go → go modules (+ `govulncheck`);
+  Rust → cargo (+ `cargo audit`); Python → poetry/uv/pip (+ `pip-audit`); Lua → luarocks.
+- If a needed tool (e.g. `pnpm`, `govulncheck`, `cargo-audit`, `pip-audit`) is `null` in `tools`,
+  say so; don't silently skip that check.
 
 ### 3. Audit (always, since this is the reporting part)
 - For each ecosystem, list **outdated** packages and **known vulnerabilities**, e.g.

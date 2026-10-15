@@ -41,8 +41,10 @@ are not arguments; handle them as normal work.
 ### 2. Decide which tools to run
 - **If tools were given, use exactly those** (don't second-guess or add others).
 - **If none were given, auto-detect** sensible checkers from the target's type / the project's
-  config. Prefer tools the repo already configures (look for config files) and honor
-  `.prototools` for versions, running through `proto` when the tool is pinned there. Examples:
+  config. Run `~/.claude/scripts/stack-detect.py`: `linter_configs` maps each tool the repo
+  configures to its config file(s), `prototools.pins` has the pinned versions and `tools` says
+  what's installed. Prefer the configured tools and run through `proto` when the tool is pinned
+  there. Examples:
   - Dockerfile → `hadolint`, `trivy config`
   - JS/TS → `eslint`, `tsc --noEmit`, `prettier --check`
   - Vue → `eslint`, `vue-tsc --noEmit`
@@ -57,8 +59,9 @@ are not arguments; handle them as normal work.
   guessing wildly.
 
 ### 3. Verify availability
-- Before running each tool, confirm it's available (respecting `.prototools`/`proto`). If a
-  requested tool isn't installed, tell me clearly; don't silently skip it.
+- Before running each tool, confirm it's available (the script's `tools` map, `command -v`, and
+  the Mason bin dir, respecting `.prototools`/`proto`). If a requested tool isn't installed, tell
+  me clearly; don't silently skip it.
 
 ### 4. Run the checks
 - Run each selected tool against the target and capture its output.

@@ -1,7 +1,7 @@
 ---
 description: Find deprecated code, APIs, and libraries; --fix migrates to the recommended equivalents preserving behavior
 argument-hint: [--fix] [lib|path]
-allowed-tools: Bash(cargo*), Bash(npm*), Bash(npx*), Bash(pnpm*), Bash(tsc*), Bash(rg*), Bash(proto*), Bash(git*), Read, Edit, Glob, Grep, WebFetch, mcp__context7__resolve-library-id, mcp__context7__query-docs
+allowed-tools: Bash(cargo*), Bash(npm*), Bash(npx*), Bash(pnpm*), Bash(tsc*), Bash(rg*), Bash(proto*), Bash(git*), Bash(~/.claude/scripts/stack-detect.py*), Read, Edit, Glob, Grep, WebFetch, mcp__context7__resolve-library-id, mcp__context7__query-docs
 ---
 
 Find everything **deprecated** the project depends on: deprecated APIs/functions/language features
@@ -34,8 +34,9 @@ Follow exactly these steps:
   library/path scope. Default scope is the whole repo.
 
 ## 2. Detect the toolchain
-- Identify the stack from the repo (respect `.prototools`/proto for tool versions): Rust
-  (`Cargo.toml`), Node/TS (`package.json`, `tsconfig.json`), etc.
+- Run `~/.claude/scripts/stack-detect.py`: it reports the ecosystems (Rust, Node/TS, …), their
+  package manager, the `.prototools` pins (respect them, via proto) and the linter configs (e.g.
+  `tsc`, `eslint`) that can surface deprecation warnings.
 
 ## 3. Find the deprecations
 Gather from every source that applies:

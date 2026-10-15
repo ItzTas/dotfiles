@@ -1,7 +1,7 @@
 ---
 description: Create a well-structured issue (GitHub, GitLab, or Linear) from a short description, using the repo's template and drafting title/body/labels first
 argument-hint: [github|gitlab|linear] <description>
-allowed-tools: Bash(gh*), Bash(glab*), Bash(git*), Read, Glob, mcp__github__issue_write, mcp__gitlab__create_issue, mcp__linear__authenticate, mcp__linear__complete_authentication, mcp__linear__*
+allowed-tools: Bash(gh*), Bash(glab*), Bash(git*), Bash(~/.claude/scripts/forge-detect.sh*), Read, Glob, mcp__github__issue_write, mcp__gitlab__create_issue, mcp__linear__authenticate, mcp__linear__complete_authentication, mcp__linear__*
 ---
 
 Turn a short description into a well-structured issue on the right tracker: **GitHub**, **GitLab**,
@@ -19,8 +19,9 @@ Follow exactly these steps:
 
 ## 1. Determine the destination
 - If I named one (`github` / `gitlab` / `linear`), use it.
-- Otherwise infer from the repo's remotes (`git remote -v`): `github.com` → GitHub,
-  `gitlab.com` (or self-hosted GitLab) → GitLab. If **both** exist, ask me which one.
+- Otherwise run `~/.claude/scripts/forge-detect.sh`: its `github`/`gitlab` arrays list the
+  remotes on each forge (with `slug` = owner/repo or group/project). If **both** have entries, ask
+  me which one.
 - **Linear** isn't tied to a git remote, so use it only when I name it, or when my description clearly
   targets a Linear team/project. If it's still ambiguous, ask me.
 

@@ -1,7 +1,7 @@
 ---
 description: Run the project's benchmarks against a saved baseline and flag regressions/improvements, auto-detecting the toolchain
 argument-hint: [filter | --baseline <name>]
-allowed-tools: Bash(cargo*), Bash(critcmp*), Bash(hyperfine*), Bash(npm*), Bash(npx*), Bash(proto*), Read, Glob, Grep
+allowed-tools: Bash(cargo*), Bash(critcmp*), Bash(hyperfine*), Bash(npm*), Bash(npx*), Bash(proto*), Bash(~/.claude/scripts/stack-detect.py*), Read, Glob, Grep
 ---
 
 Run this project's benchmarks and tell me whether performance moved, comparing against a baseline
@@ -23,7 +23,9 @@ Follow exactly these steps:
   get them working before benchmarking.
 
 ## 1. Detect the toolchain and bench tool
-Pick the right runner from what the repo contains (respect `.prototools`/proto for tool versions):
+Run `~/.claude/scripts/stack-detect.py` first: it lists the ecosystems, `package.json` scripts (a
+`bench` script shows up under `task_runners`), proto pins, and whether `hyperfine`/`critcmp` are
+installed. Then pick the right runner (respect `.prototools`/proto for tool versions):
 - **Rust** (`Cargo.toml` with benches / criterion) → `cargo bench`. If `critcmp` is available, use it
   to compare criterion baselines.
 - **CLI binary** to time end-to-end → `hyperfine` (multiple runs, warmup, statistical summary).

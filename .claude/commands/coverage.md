@@ -1,7 +1,7 @@
 ---
 description: Run test coverage, report the least-covered files with their uncovered lines, and optionally add tests for key gaps
 argument-hint: [path]
-allowed-tools: Bash(cargo*), Bash(npm*), Bash(npx*), Bash(pnpm*), Bash(proto*), Read, Edit, Glob, Grep
+allowed-tools: Bash(cargo*), Bash(npm*), Bash(npx*), Bash(pnpm*), Bash(proto*), Bash(~/.claude/scripts/stack-detect.py*), Read, Edit, Glob, Grep
 ---
 
 Measure how well the tests cover the code and show me where the holes are: the overall numbers plus
@@ -20,7 +20,9 @@ Follow exactly these steps:
 
 ## 1. Determine scope and toolchain
 - Resolve the argument to a scope (default: whole project).
-- Detect the stack and its coverage tool (respect `.prototools`/proto for versions):
+- Detect the stack with `~/.claude/scripts/stack-detect.py` (ecosystems, package manager,
+  `package.json` scripts under `task_runners`, proto pins, installed tools), then pick the coverage
+  tool (respect `.prototools`/proto for versions):
   - **Rust** → `cargo llvm-cov` (fallback `cargo tarpaulin`).
   - **Node/TS** → a `coverage` script in `package.json`, or `vitest --coverage` / `jest --coverage`
     / `c8`.
