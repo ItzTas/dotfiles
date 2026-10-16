@@ -109,7 +109,7 @@ shell_quote() {
     printf "'%s'" "${1//\'/\'\\\'\'}"
 }
 
-# `sudo -S -- true` costs one round trip (cheap over the shared ControlMaster)
+# `sudo -k -S -- true` costs one round trip (cheap over the shared ControlMaster)
 # and tells a rejected password apart from a failing COMMAND, which a single
 # combined run cannot: both exit 1.
 password_rejected() {
@@ -125,7 +125,7 @@ validate_password() {
     local host=$1 password=$2 output status=0
 
     output=$(printf '%s\n' "$password" |
-        ssh "${ssh_opts[@]}" "$host" "sudo -S -p '' -- true" 2>&1 >/dev/null) || status=$?
+        ssh "${ssh_opts[@]}" "$host" "sudo -k -S -p '' -- true" 2>&1 >/dev/null) || status=$?
 
     ((status == 0)) && return 0
     password_rejected "$output" && return 1
@@ -197,10 +197,12 @@ if [[ -n ${XDG_RUNTIME_DIR:-} && -d ${XDG_RUNTIME_DIR:-} ]]; then
     ssh_opts+=(-o ControlMaster=no -o "ControlPath=$control_path")
 fi
 
+# -k makes sudo ignore cached credentials, so it always consumes the password
+# line on stdin and that line never leaks into what COMMAND reads.
 if ((shell_mode)); then
-    remote_command="sudo -S -p '' -- bash -c $(shell_quote "$*")"
+    remote_command="sudo -k -S -p '' -- bash -c $(shell_quote "$*")"
 else
-    remote_command="sudo -S -p '' -- $*"
+    remote_command="sudo -k -S -p '' -- $*"
 fi
 
 password=""

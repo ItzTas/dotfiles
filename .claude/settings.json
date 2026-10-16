@@ -89,6 +89,7 @@
       }
     }
   },
+  "outputStyle": "ADHD",
   "effortLevel": "high",
   "modelSettings": {
     "claude-opus-5": {
@@ -105,6 +106,5 @@
     }
   },
   "tui": "fullscreen",
-  "autoMemoryEnabled": false,
-  "outputStyle": "ADHD"
+  "autoMemoryEnabled": false
 }
