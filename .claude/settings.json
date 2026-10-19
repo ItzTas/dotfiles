@@ -106,5 +106,34 @@
     }
   },
   "tui": "fullscreen",
-  "autoMemoryEnabled": false
+  "autoMemoryEnabled": false,
+  "autoMode": {
+    "environment": [
+      "### Org-wide",
+      "**Organization**: None configured",
+      "**Cloud provider(s)**: None configured",
+      "**Repository visibility**: unknown — no git remotes configured in this repo (/home/talinux has 0 tracked files); gh lookup not queryable; assume private until a remote exists",
+      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: None configured — note, `~/.config/zsh/secrets` is a personal directory the user's global CLAUDE.md says Claude must never read under any circumstances, even if asked",
+      "**Default / protected branches**: unknown — no remote, default branch unset (origin/HEAD unset)",
+      "**CI/CD deploy targets**: None configured",
+      "**Network posture**: None configured",
+      "**Host containment**: None configured — assume Claude Code runs on an ordinary developer machine with open internet",
+      "**Source control**: no remotes configured in this repo; nothing to scope trust to beyond the local working tree",
+      "**Trusted internal domains**: None configured",
+      "**Trusted cloud buckets**: None configured — the config-scan bucket list (npm-registry-packages-npm-production, npm-registry-packages, etc.) consists of generic/placeholder or public-registry names found via repo-wide file scan, not usage-corroborated upload destinations; not adopted",
+      "**Key internal services**: None configured",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: any file or store holding personal data, confidential business data, credentials, regulated data, or similarly sensitive material; preserve exact handles when known and share only with audiences cleared at the [named+specifics] bar — notably `~/.config/zsh/secrets` (explicitly off-limits), `.claude/.credentials.json`, `.aws/credentials`, `.streamlit/credentials.toml`, `.omniroute/.env`, `.config/bruno/secrets.json`, and similar credential files surfaced by the filename scan",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment",
+      "**Protected deployment namespaces / environments**: None configured — fall back to the Sensitive remote targets heuristic",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development, plus general personal/system administration (dotfiles via yadm, Hyprland/Arch desktop management, shell scripting) — this project (/home/talinux) appears to be the user's personal dotfiles/home directory rather than a conventional software repo",
+      "**Trusted repo**: the working directory /home/talinux itself — it has no tracked files and no git remotes configured, so there is no remote to scope trust to; treat as a local-only personal checkout (likely yadm-managed dotfiles)",
+      "**Org-specific CLIs**: None configured — frequent personal CLIs observed include yadm/yadm_update (dotfiles manager), hyprctl, udisksctl, journalctl, paru, pacman, protonvpn, snapper, bootdev, secret-tool",
+      "**routine under <user>/ prefix**: none identified — no org or username prefix evidenced"
+    ]
+  }
 }
