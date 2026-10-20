@@ -145,7 +145,7 @@ capsule_fill       = "surface_variant"             # bar.capsuleColorKey = none 
 
 start  = ["launcher", "clock", "temp", "cpu", "ram", "swap", "active_window", "media", "privacy"]
 center = ["workspaces"]
-end    = ["tray", "volume", "brightness", "network", "github-prs", "video-wallpaper", "palette-creator", "control-center", "notifications", "battery"]
+end    = ["tray", "status", "volume", "brightness", "network", "github-prs", "video-wallpaper", "palette-creator", "control-center", "notifications", "battery"]
 
 [bar.default.dead_zone.actions]
 right  = "panel-toggle control-center"            # bar.rightClickAction = controlCenter
@@ -251,6 +251,9 @@ type = "noctalia/mpvpaper:mpvpaper"                # plugin:video-wallpaper
 
 [widget.palette-creator]
 type = "decksters-lab/palette-creator:toggle"      # plugin:color-scheme-creator
+
+[widget.status]
+type = "davemhammer/tailscale:status"
 
 # ── Control Center ────────────────────────────────────────────────────────────
 
@@ -400,5 +403,6 @@ enabled = [
   "noctalia/mpvpaper",
   "decksters-lab/palette-creator",
   "raycursive/github-prs",
+  "davemhammer/tailscale",
 ]
 auto_update = "all"                                # plugins.autoUpdate
