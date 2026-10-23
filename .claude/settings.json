@@ -13,7 +13,7 @@
       "mcp__signoz-seconv-vps__signoz_delete_notification_channel"
     ]
   },
-  "model": "opus",
+  "model": "sonnet",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -99,7 +99,7 @@
       "effortLevel": "low"
     },
     "claude-opus-5-5": {
-      "effortLevel": "high"
+      "effortLevel": "xhigh"
     },
     "claude-sonnet-5-5": {
       "effortLevel": "low"
