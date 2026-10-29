@@ -19,7 +19,8 @@ usage() {
 		  -s, --shell      run COMMAND as a shell command line, so \`;\`, \`|\`, \`&&\`,
 		                   redirections and loops stay under sudo instead of splitting
 		                   the sudo invocation
-		  -n, --no-cache   neither read nor write the cached password
+		  -n, --no-cache   neither read nor write the cached password (only matters
+		                   with SSUDO_CACHE=1)
 		      --forget     drop the cached password for HOST and exit
 		  -h, --help       show this help
 
@@ -32,10 +33,10 @@ usage() {
 		shell should not expand. Only the first command of a \`;\`-separated list would
 		run under sudo, which is what -s exists to fix.
 
-		The password is cached in the kernel's user keyring (memory only, never
-		swapped, readable only by this uid) for \$SSUDO_CACHE_TTL seconds, default
-		$default_ttl. Set SSUDO_CACHE=0 to disable caching entirely, or use --forget to
-		drop it early.
+		The password is not cached by default, so every run prompts for it. Set
+		SSUDO_CACHE=1 to cache it in the kernel's user keyring for \$SSUDO_CACHE_TTL
+		seconds, default $default_ttl. Any process running as this uid can read the
+		cached password, so leave it off unless the convenience is worth that.
 
 		stdin is forwarded to COMMAND when it is not a terminal, so pipes into the
 		remote command work: \`cat dump.sql | ${0##*/} -s 'psql -U x db'\`.
@@ -51,7 +52,7 @@ die() {
 # disk or swapped, scoped to this uid, and self-expiring through keyctl timeout.
 
 cache_enabled() {
-    [[ ${SSUDO_CACHE:-1} != 0 && $use_cache == 1 ]] && command -v keyctl >/dev/null 2>&1
+    [[ ${SSUDO_CACHE:-0} == 1 && $use_cache == 1 ]] && command -v keyctl >/dev/null 2>&1
 }
 
 cache_id() {

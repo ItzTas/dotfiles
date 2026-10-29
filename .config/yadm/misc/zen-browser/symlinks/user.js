@@ -34,3 +34,7 @@ user_pref('toolkit.telemetry.unified', false); // Unified telemetry collection
 user_pref('network.dns.disablePrefetch', true); // DNS prefetching to avoid unintended lookups
 user_pref('network.prefetch-next', false); // Link prefetching
 user_pref("devtools.chrome.enabled", true);
+
+// ==== Local network (.lan) ====
+user_pref('browser.fixup.domainsuffixwhitelist.lan', true); // Treat *.lan as an address, not a search
+user_pref('network.trr.excluded-domains', 'localhost,local,lan'); // Resolve *.lan via system DNS (Pi-hole), not DoH
