@@ -21,7 +21,6 @@ on("hyprland.start", function()
 	-- Core services
 	exec("dbus-update-activation-environment --systemd HYPRLAND_INSTANCE_SIGNATURE WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 	exec("hypridle")
-	exec("hyprctl setcursor Bibata-Modern-Classic 24")
 
 	-- Desktop services
 	exec("rm -f $XDG_RUNTIME_DIR/ssh-agent.socket; ssh-agent -a $XDG_RUNTIME_DIR/ssh-agent.socket")
