@@ -48,7 +48,7 @@ main() {
 
 	body="${prompt:+“$prompt”}"
 	body+="${prompt:+$'\n'}${project:-?}${where:+ · tmux $where}"
-	args=(--transient --expire-time=3000 --app-name="Claude Code" --icon=dialog-information
+	args=(--transient --expire-time=6000 --app-name="Claude Code" --icon=dialog-information
 		"Claude terminou: ${title:-sessão sem título}" "$body")
 
 	if [[ -z $TMUX_PANE ]]; then
