@@ -120,11 +120,24 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
       or no clipboard tool available): delete whatever you wrote, write a short **description** of
       the image in `## Images` marked `no path, pasted inline, could not be saved`, and tell me in
       one line so I can drag the file in.
-- **When you no longer need one of these task files** (the item is done and the details won't be
-  needed anymore), you **may delete it**, along with any image you saved next to it for that item. The same goes for the session folder itself: once you no
-  longer need your `.claude/tasks/$CLAUDE_CODE_SESSION_ID/` directory (it's empty, or everything in
-  it is done and won't be needed anymore), you **may delete the whole folder**. Only ever delete
-  **your own** session's folder, never another session's.
+- **Your session's folder is yours to manage however you like.** Inside
+  `.claude/tasks/$CLAUDE_CODE_SESSION_ID/` you have **full permission**: create, edit, rename and
+  move files; create subdirectories (e.g. `done/`, `notes/`, one per item) and reorganize the layout
+  whenever it helps; keep scratch notes, logs or helper files there; delete any file, image or
+  subdirectory at any time, and delete the whole folder once you no longer need it. No need to ask
+  first or justify it. Two limits only:
+  - **Scope**: this covers **your own** session's folder and nothing else. Other sessions' folders
+    and the `.claude/tasks/` directory itself stay off-limits, as described above.
+  - **`taskfiles` mode** (rule 8) still suspends deletion of task files while it's on, since I may
+    be editing them. Moving them into a subdirectory is fine, but tell me the new path.
+- **Permission prompts**: the PreToolUse hook `~/.claude/hooks/flow-tasks-allow.sh` auto-approves
+  writes inside your session's folder, since `.claude/` is a protected path that settings allow
+  rules can't pre-approve. It covers `Write`/`Edit`/`MultiEdit`/`NotebookEdit` and Bash running
+  **one** plain `mkdir`/`rm`/`rmdir`/`mv`/`cp`/`touch` (every path argument inside the folder) or
+  the clipboard save (`wl-paste`/`xclip … > <file in the folder>`). Anything else still prompts as
+  usual: command chaining (`;`, `&&`, `|`), quotes, globs, `$VAR`/`~` expansions. So write the
+  paths out in full (no `$CLAUDE_CODE_SESSION_ID`, no `*`) and run one command per Bash call when
+  managing the folder.
 
 ### 6. Cancel only on an explicit request
 - **Never** drop, skip, or silently deprioritize an item.
