@@ -7,33 +7,33 @@ local REPLACE_ID = notify.REPLACE_ID
 local M = {}
 
 function M.next()
-    utils.run_async_cmd("playerctl -p spotify next")
+    utils.run_async_cmd("playerctl -p spotifast next")
 end
 
 function M.prev()
-    utils.run_async_cmd("playerctl -p spotify previous")
+    utils.run_async_cmd("playerctl -p spotifast previous")
 end
 
 function M.open_play()
-    hl.exec_cmd("spotify", { workspace = 9 })
+    hl.exec_cmd("spotifast", { workspace = 9 })
     utils.defer(function()
-        utils.run_cmd("playerctl -p spotify play")
+        utils.run_cmd("playerctl -p spotifast play")
     end, 800)
 end
 
 function M.open_play_silent()
-    hl.exec_cmd("spotify", {
+    hl.exec_cmd("spotifast", {
         workspace = "9 silent",
     })
 
     utils.defer(function()
         utils.run_cmd(
             "count=0; "
-            .. 'until playerctl -l 2>/dev/null | grep -q spotify || [ "$count" -ge 20 ]; do '
+            .. 'until playerctl -l 2>/dev/null | grep -q spotifast || [ "$count" -ge 20 ]; do '
             .. "sleep 0.5; count=$((count+1)); done; "
             .. "sleep 2; "
-            .. "playerctl -p spotify volume 0 2>/dev/null; "
-            .. "playerctl -p spotify play 2>/dev/null"
+            .. "playerctl -p spotifast volume 0 2>/dev/null; "
+            .. "playerctl -p spotifast play 2>/dev/null"
         )
     end)
 end
@@ -45,11 +45,11 @@ local function adjust_volume(delta)
 
     utils.run_async_cmd(
         string.format(
-            "status=$(playerctl -p spotify status 2>&1);"
+            "status=$(playerctl -p spotifast status 2>&1);"
             .. ' if echo "$status" | grep -q "No players found" || [ -z "$status" ]; then exit 0; fi;'
-            .. " current=$(playerctl -p spotify volume);"
+            .. " current=$(playerctl -p spotifast volume);"
             .. " new=$(awk -v v=\"$current\" 'BEGIN { v=v%s%s; if(v>1) v=1; if(v<0) v=0; print v }');"
-            .. ' playerctl -p spotify volume "$new";'
+            .. ' playerctl -p spotifast volume "$new";'
             .. " vol=$(awk -v v=\"$new\" 'BEGIN { print int(v*100 + 0.5) }');"
             .. ' notify-send -e -h "int:value:$vol" -i "%s/volume.svg" -t 500 -r %d "Spotify: $vol%%"',
             sign,

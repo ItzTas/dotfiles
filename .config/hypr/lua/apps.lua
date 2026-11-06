@@ -22,15 +22,15 @@ on("hyprland.start", function()
     end
 
     if ram.has_above(12) then
-        -- Ferdium
-        exec("ferdium", { workspace = "7 silent" })
+        -- Zapfast
+        exec("zapfast", { workspace = "7 silent" })
 
         -- Todoist
         -- exec("sleep 5 && exec todoist", { workspace = "10 silent" })
     end
 
     if ram.has_above(16) then
-        -- Spotify
+        -- Spotifast
         spotify.open_play_silent()
     end
 end)

@@ -162,7 +162,7 @@ _install_pacman_packages() {
         "qbittorrent"
         "bitwarden"
         "spotify"
-        "ferdium"
+        "zapfast-bin"
         "clamtk"
 
         # Games
