@@ -23,7 +23,7 @@ on("hyprland.start", function()
 
     if ram.has_above(12) then
         -- Zapfast
-        exec("zapfast", { workspace = "7 silent" })
+        exec("sleep 3 && exec zapfast --start-hidden", { workspace = "7 silent" })
 
         -- Todoist
         -- exec("sleep 5 && exec todoist", { workspace = "10 silent" })
