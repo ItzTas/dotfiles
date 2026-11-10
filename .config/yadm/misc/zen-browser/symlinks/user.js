@@ -38,3 +38,6 @@ user_pref("devtools.chrome.enabled", true);
 // ==== Local network (.lan) ====
 user_pref('browser.fixup.domainsuffixwhitelist.lan', true); // Treat *.lan as an address, not a search
 user_pref('network.trr.excluded-domains', 'localhost,local,lan'); // Resolve *.lan via system DNS (Pi-hole), not DoH
+
+// ==== DNS ====
+user_pref('network.trr.mode', 5); // DoH off: every lookup goes through system DNS (Pi-hole), so its blocklists apply

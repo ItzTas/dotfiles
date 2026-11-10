@@ -81,7 +81,8 @@
     "security-guidance@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "ponytail@ponytail": true,
-    "pstack@cursor-plugins": true
+    "pstack@cursor-plugins": true,
+    "superpowers@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "humanizer": {
@@ -119,7 +120,7 @@
       "effortLevel": "low"
     },
     "claude-opus-5-5": {
-      "effortLevel": "high"
+      "effortLevel": "medium"
     },
     "claude-sonnet-5-5": {
       "effortLevel": "low"

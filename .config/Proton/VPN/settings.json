@@ -1,5 +1,5 @@
 {
-    "protocol": "wireguard",
+    "protocol": "protun-smart",
     "killswitch": 0,
     "custom_dns": {
         "enabled": true,
@@ -10,7 +10,7 @@
             }
         ]
     },
-    "ipv6": true,
+    "ipv6": false,
     "anonymous_crash_reports": false,
     "features": {
         "netshield": 0,
@@ -55,5 +55,5 @@
             }
         }
     },
-    "telemetry": true
+    "telemetry": false
 }
