@@ -21,8 +21,6 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
   the queue**, **not** a replacement for what you're currently doing.
 - As soon as a request arrives, **add it to your TODO list immediately** (use the TODO list) before
   continuing, so nothing gets lost.
-- **Never make me repeat myself.** Once I've asked for something, it's in the queue and it will get
-  done.
 
 ### 2. Work until the queue is empty
 - Work through the items until you've **completed them all**. When you finish an item, **move on to
@@ -78,6 +76,11 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
   and reference it from the TODO entry. Only skip the file when the item is trivial or will be done
   right away; don't create files for those (**unless `taskfiles` mode is on**, per rule 8, which
   removes that carve-out and makes the file mandatory for **every** item).
+- **`write` is on by default: every item gets its task file.** While it's on, write the task file
+  described above for **every** item, trivial ones and ones you're about to start right away
+  included, **before** you start working on it, and tell me its path in one line. The "only skip
+  the file when the item is trivial" carve-out above applies only after I turn it off with
+  **`/flow write off`**; **`/flow write on`** turns it back on.
 - **If the request came with an image, record its path in the task file.** This applies **only**
   when you're actually writing a task `.md` under `.claude/tasks/$CLAUDE_CODE_SESSION_ID/` (per the
   bullet above). Never create a file just to store an image path, and don't add paths to the short
@@ -186,6 +189,10 @@ stays active (except for the exit keywords).
 - **`/flow parallel [on|off]`** controls rule 4's parallelism. `on` (also the default when bare)
   lets you spawn parallel subagents for independent items; `off` forces **serial** execution (one
   item at a time, no parallel subagents). The setting persists until I change it or exit the mode.
+- **`/flow write [on|off]`** controls rule 5's mandatory task file. `on` (the default when FLOW
+  MODE starts, and when bare) makes every item get its task file before the work starts; `off` goes
+  back to writing one only when the item warrants it. The setting persists until I change it or
+  exit the mode.
 - **`/flow:taskfiles [on|off] [first request]`** is rule 8's add-on, in its own command file. `on`
   (also the default when bare) makes **every** item get its own `.md` before the work starts; `off`
   goes back to rule 5's default. Read `~/.claude/commands/flow/taskfiles.md` for the full rules when
@@ -218,10 +225,10 @@ Dispatch on `$ARGUMENTS` (first word, case-insensitive):
   rule 6: find the item the `<task>` refers to, remove it from the queue (if it's already in
   progress, stop it), tell me it was cancelled, and **carry on** with the rest of the queue. If
   `<task>` is ambiguous or matches no queued item, ask me which one I mean.
-- **A control keyword** (`status`, `recap`, `clear`, `pause`, `resume`, `parallel`, `taskfiles`,
-  `defer`, `help`): don't treat it as a new work item; carry out the matching action from "Control
-  subcommands" above. For `taskfiles`, read `~/.claude/commands/flow/taskfiles.md` and follow its
-  own dispatch; it accepts a first request after the keyword (e.g.
+- **A control keyword** (`status`, `recap`, `clear`, `pause`, `resume`, `parallel`, `write`,
+  `taskfiles`, `defer`, `help`): don't treat it as a new work item; carry out the matching action
+  from "Control subcommands" above. For `taskfiles`, read `~/.claude/commands/flow/taskfiles.md` and
+  follow its own dispatch; it accepts a first request after the keyword (e.g.
   `/flow:taskfiles fix the login redirect`), meaning: enter FLOW MODE with the add-on on and queue
   the rest as the first work item.
 - **Otherwise**: confirm in one line that you've entered **FLOW MODE**, create the initial TODO

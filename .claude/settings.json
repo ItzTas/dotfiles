@@ -11,7 +11,8 @@
       "mcp__signoz-seconv-vps__signoz_delete_dashboard",
       "mcp__signoz-seconv-vps__signoz_delete_view",
       "mcp__signoz-seconv-vps__signoz_delete_notification_channel"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "model": "opus",
   "hooks": {
@@ -120,7 +121,7 @@
       "effortLevel": "low"
     },
     "claude-opus-5-5": {
-      "effortLevel": "medium"
+      "effortLevel": "high"
     },
     "claude-sonnet-5-5": {
       "effortLevel": "low"
@@ -128,6 +129,7 @@
   },
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
+  "editorMode": "vim",
   "autoMode": {
     "environment": [
       "### Org-wide",
