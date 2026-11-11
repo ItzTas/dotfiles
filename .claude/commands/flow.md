@@ -27,6 +27,9 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
   the next pending one automatically**, and don't stop for approval after each item.
 - Only stop when the backlog is **empty**. Then give a short summary of what was done and say you're
   ready for more (the mode stays active).
+- **Asking me about an ambiguous item is not "stopping".** "Don't stop for approval" means don't
+  wait for a go-ahead on finished work; it never means guess instead of asking. Questions follow
+  rule 8: park the item, ask, keep the rest of the queue moving.
 
 ### 3. Order is your choice
 - You may do the items **consecutively (in the order they arrived)** or **in whatever order you
@@ -48,7 +51,7 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
   inside the file, since read-then-write isn't atomic.
 
 ### 5. Keep the TODO list visible and current
-- Keep the TODO list **continuously updated**: `pending` / `in progress` / `done`, so I can see
+- Keep the TODO list **continuously updated**: `pending` / `blocked: question` / `in progress` / `done`, so I can see
   what's queued and what's already out.
 - Mark an item done **the moment** you finish it.
 - **When the short TODO entry may not be enough**, write the item's full details (plan, sub-steps,
@@ -74,7 +77,7 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
   directories if they don't exist, and put each task file there with a short kebab-case filename
   (e.g. `.claude/tasks/$CLAUDE_CODE_SESSION_ID/refactor-auth.md`). Keep the file updated as you work
   and reference it from the TODO entry. Only skip the file when the item is trivial or will be done
-  right away; don't create files for those (**unless `taskfiles` mode is on**, per rule 8, which
+  right away; don't create files for those (**unless `taskfiles` mode is on**, per rule 9, which
   removes that carve-out and makes the file mandatory for **every** item).
 - **`write` is on by default: every item gets its task file.** While it's on, write the task file
   described above for **every** item, trivial ones and ones you're about to start right away
@@ -131,7 +134,7 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
   first or justify it. Two limits only:
   - **Scope**: this covers **your own** session's folder and nothing else. Other sessions' folders
     and the `.claude/tasks/` directory itself stay off-limits, as described above.
-  - **`taskfiles` mode** (rule 8) still suspends deletion of task files while it's on, since I may
+  - **`taskfiles` mode** (rule 9) still suspends deletion of task files while it's on, since I may
     be editing them. Moving them into a subdirectory is fine, but tell me the new path.
 - **Permission prompts**: the PreToolUse hook `~/.claude/hooks/flow-tasks-allow.sh` auto-approves
   writes inside your session's folder, since `.claude/` is a protected path that settings allow
@@ -161,9 +164,24 @@ The first request may come with the invocation: `$ARGUMENTS` (and/or in the rest
   me** (clearly, with the alternatives) if I *haven't* already clarified. If possible, **keep
   working through the rest of the queue** while you wait for my answer.
 - Only treat it as a real contradiction when the requests are truly **incompatible**. Requests that
-  merely add to or complement each other are **not** contradictions; just queue both.
+  merely add to or complement each other are **not** contradictions; just queue both. A request
+  that isn't contradictory but is **unclear** falls under rule 8.
 
-### 8. `taskfiles` mode lives in its own command
+### 8. Ambiguity: park and ask, don't guess
+- If an item has a decision that is genuinely **mine** to make (scope, UX/visual choice, naming,
+  behavior change, anything hard to undo), **don't pick for me**. Mark the item
+  `blocked: question` in the TODO list, ask me with `AskUserQuestion` (concrete options, each
+  question self-contained since I may only see the dialog), and **keep working on the other items**
+  while you wait. Once I answer, unblock the item and do it.
+- Only decide yourself when the choice is **reversible and has an obvious conventional default**.
+  Even then, list it in that item's summary under **"Decisions I made"** so I can revert it.
+- Batch questions when several are pending, instead of interrupting me once per item.
+- **Subagents get the same rule.** If a decision isn't settled in the prompt you give them, they
+  must return the question to you instead of guessing; you then ask me. Settle what you can in
+  the prompt before dispatching.
+- A blocked item is not a dropped one (rule 6): it stays in the queue until I answer or cancel it.
+
+### 9. `taskfiles` mode lives in its own command
 There's an optional add-on, **off by default**, that makes **every** item, trivial ones included,
 get its own `.md` **before** the work starts, re-read as you go, so I can edit it while you work.
 Its rules are in **`/flow:taskfiles`** (`~/.claude/commands/flow/taskfiles.md`): read that file when
@@ -174,7 +192,7 @@ These are run as `/flow <keyword> [args]` while in FLOW MODE. When the argument 
 keywords, **don't treat it as a new work item**; carry out the control action instead. The mode
 stays active (except for the exit keywords).
 
-- **`/flow status`** shows the current queue grouped as `pending` / `in progress` / `done`. Just
+- **`/flow status`** shows the current queue grouped as `pending` / `blocked: question` / `in progress` / `done`. Just
   report it; don't add or run anything.
 - **`/flow recap`** summarizes what's been **completed** so far (the `done` items), in a short
   readable list. Don't add or run anything.
@@ -193,7 +211,7 @@ stays active (except for the exit keywords).
   MODE starts, and when bare) makes every item get its task file before the work starts; `off` goes
   back to writing one only when the item warrants it. The setting persists until I change it or
   exit the mode.
-- **`/flow:taskfiles [on|off] [first request]`** is rule 8's add-on, in its own command file. `on`
+- **`/flow:taskfiles [on|off] [first request]`** is rule 9's add-on, in its own command file. `on`
   (also the default when bare) makes **every** item get its own `.md` before the work starts; `off`
   goes back to rule 5's default. Read `~/.claude/commands/flow/taskfiles.md` for the full rules when
   I run it. The setting persists until I change it or exit the mode. `/flow taskfiles ...` (space
