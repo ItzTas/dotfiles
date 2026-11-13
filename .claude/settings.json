@@ -116,6 +116,12 @@
         "source": "github",
         "repo": "Leonxlnx/taste-skill"
       }
+    },
+    "creative-writing-skills": {
+      "source": {
+        "source": "github",
+        "repo": "haowjy/creative-writing-skills"
+      }
     }
   },
   "outputStyle": "ADHD",
@@ -128,13 +134,13 @@
       "effortLevel": "low"
     },
     "claude-opus-5-5": {
-      "effortLevel": "medium"
+      "effortLevel": "xhigh"
     },
     "claude-sonnet-5-5": {
       "effortLevel": "low"
     },
     "claude-fable-5-2": {
-      "effortLevel": "medium"
+      "effortLevel": "high"
     }
   },
   "tui": "fullscreen",
