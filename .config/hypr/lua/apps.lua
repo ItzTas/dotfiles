@@ -12,6 +12,10 @@ on("hyprland.start", function()
     -- Zen-browser
     exec("zen-browser", { workspace = "2" })
 
+
+    -- Zapfast
+    exec("sleep 3 && exec zapfast --start-hidden", { workspace = "7 silent" })
+
     if ram.has_above(8) then
         -- Email
         exec("protonmail-bridge --no-window")
@@ -21,13 +25,10 @@ on("hyprland.start", function()
         exec("sleep 40 && exec thunderbird", { workspace = "6 silent" })
     end
 
-    if ram.has_above(12) then
-        -- Zapfast
-        exec("sleep 3 && exec zapfast --start-hidden", { workspace = "7 silent" })
-
-        -- Todoist
-        -- exec("sleep 5 && exec todoist", { workspace = "10 silent" })
-    end
+    -- if ram.has_above(12) then
+    --     Todoist
+    --     exec("sleep 5 && exec todoist", { workspace = "10 silent" })
+    -- end
 
     if ram.has_above(16) then
         -- Spotifast
