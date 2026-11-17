@@ -17,6 +17,25 @@ to other people. A wrong claim there costs me credibility and wastes other peopl
 - **Use current data.** If you worked from a cache, a previous load, or a local copy, re-check
   against the live source before the claim leaves the session, and state the as-of date.
 
+## Read the sources you already have
+
+- **Inventory the sources before concluding.** List what's reachable for the question:
+  databases, spreadsheets, APIs, and **links and documents inside the data itself** (a URL
+  column, an attached file, a process number a public search can resolve). Note which claims
+  each source can settle, and read the most direct one for each claim.
+- **A link in the data is a source to open, not a value to count.** If a record carries a URL
+  to the primary document, open it and read the part that settles the claim. Checking that the
+  link exists proves nothing about what it says.
+- **"Not available" has to be proven per item.** Before saying a source can't be reached, try
+  it for that specific item and the obvious alternatives (search the system by the id or number,
+  another field, the public portal). One item without a link doesn't make the others
+  unreachable.
+- **A verification I asked for doesn't expire.** If I asked you to check something against a
+  source and the check got interrupted (another request, a fix, a compaction), resume it before
+  stating anything that depends on it. Never list it as "pending" at the end of a reply that
+  delivers the conclusions it would confirm or refute, and never hand the check to the
+  recipient ("the maintainer can check that") while you still have the source in hand.
+
 ## Know what the words mean
 
 - **Don't use a term you can't define in this domain.** Before writing a domain term (in public
@@ -82,3 +101,12 @@ claim:
 Prefer steps I can follow in the tools I and the recipient already use (the spreadsheet, the
 system's UI, the panel) over steps that only work with your scripts. List separately any claim
 you could **not** verify, with the reason.
+
+A `Stop` hook in `~/.claude/settings.json` checks this: a reply that presents an analysis without
+"Como conferir", or with a pending verification its conclusions depend on, gets sent back.
+
+## `/analise` for analyses that go to other people
+
+When I run `/analise`, follow `~/.claude/commands/analise.md`: source inventory, investigation,
+a numbered claim list, and an independent check by the `fact-checker` agent before anything is
+delivered.

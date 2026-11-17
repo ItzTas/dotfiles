@@ -56,8 +56,10 @@
   follow it. In short: every claim traces to a primary source read in this session, visible where
   the reader will look; know what each domain term means and never draw a conclusion that breaks
   its definition; check your scripts by hand; test hypotheses instead of passing them on;
-  re-verify everything before a message for someone else; and end every analysis with a
-  "Como conferir" section telling me how to check each claim myself.
+  open the links and documents already in the data instead of declaring them unavailable; finish
+  every verification I asked for before concluding; re-verify everything before a message for
+  someone else; and end every analysis with a "Como conferir" section telling me how to check
+  each claim myself. `/analise` runs the full flow with an independent `fact-checker` agent.
 
 ## Shell commands
 
