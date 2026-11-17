@@ -48,9 +48,13 @@ its result. Its brief has:
 - the source inventory, with access details (paths, URLs, where credentials live, never the
   secret values);
 - what the recipient can see;
-- the scratchpad directory it can use.
+- the scratchpad directory it can use;
+- **the project rules it must follow**, restated: it starts without any `CLAUDE.md`, so copy the
+  ones that matter for the check (sensitive data that must never be printed, how to reach the
+  database, read-only systems).
 
-Don't send it your hypotheses as claims, and don't tell it what you expect it to find.
+Don't send it your hypotheses as claims, and don't tell it what you expect it to find. Keep the
+brief lean: give paths and URLs instead of pasting file contents or query results.
 
 ## 6. Reconcile
 
