@@ -17,6 +17,25 @@ to other people. A wrong claim there costs me credibility and wastes other peopl
 - **Use current data.** If you worked from a cache, a previous load, or a local copy, re-check
   against the live source before the claim leaves the session, and state the as-of date.
 
+## Know what the words mean
+
+- **Don't use a term you can't define in this domain.** Before writing a domain term (in public
+  finance, for example: empenho, liquidação, estorno, natureza de despesa, funcional
+  programática, the version of an emenda), make sure you know what it means *here*: its
+  definition, the rules it carries, and how it relates to the other terms. Sources: the project's
+  docs and `CLAUDE.md`, schema and column comments, the source system's documentation, or me.
+- **Conclusions must respect the rules a term carries.** If an empenho has a fixed value, no
+  analysis may split it proportionally or say it "grew". If `.03` in `2026.316.03` is a version,
+  those rows are versions, not fractions. A conclusion that breaks a term's definition is wrong
+  even when the arithmetic adds up.
+- **Don't guess a meaning from how a word looks** or from a similar word in another context (an
+  id suffix, a column name, a status label). Check how the source defines it.
+- **Say so when you're unsure.** If you couldn't confirm what a term means, say it, and mark every
+  claim that depends on it as *inferred*.
+- **Use the recipient's vocabulary with the recipient's meaning.** In text for someone else, use
+  the terms the way their field uses them, and don't invent labels ("fração", "item") they'll
+  read as something else.
+
 ## Get the numbers right before interpreting them
 
 - **Settle the semantics first**: gross or net (reversals, cancellations, refunds), which version

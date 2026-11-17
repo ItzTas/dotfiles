@@ -54,7 +54,8 @@
 - **Before investigating data/systems to answer a factual question, and always before drafting
   text that states facts for someone else, load `~/.claude/rules/analysis.md`** (rule file) and
   follow it. In short: every claim traces to a primary source read in this session, visible where
-  the reader will look; check your scripts by hand; test hypotheses instead of passing them on;
+  the reader will look; know what each domain term means and never draw a conclusion that breaks
+  its definition; check your scripts by hand; test hypotheses instead of passing them on;
   re-verify everything before a message for someone else; and end every analysis with a
   "Como conferir" section telling me how to check each claim myself.
 
