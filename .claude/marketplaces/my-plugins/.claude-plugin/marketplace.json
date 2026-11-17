@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "my-plugins",
+  "owner": {
+    "name": "ItzTas"
+  },
+  "metadata": {
+    "description": "Personal plugins kept in the dotfiles. Local directory marketplace, not published anywhere."
+  },
+  "plugins": [
+    {
+      "name": "analysis-check",
+      "source": "./analysis-check",
+      "description": "Stop hook that sends back an analysis reply missing a how-to-check section, with a pending verification, or stating a guess as fact.",
+      "category": "productivity"
+    }
+  ]
+}

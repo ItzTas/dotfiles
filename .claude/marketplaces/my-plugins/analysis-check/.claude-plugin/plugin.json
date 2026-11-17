@@ -1,0 +1,5 @@
+{
+  "name": "analysis-check",
+  "version": "1.0.0",
+  "description": "Stop hook that sends back an analysis reply missing a how-to-check section, with a pending verification, or stating a guess as fact. Companion to ~/.claude/rules/analysis.md and /analise."
+}

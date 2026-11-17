@@ -1,0 +1,16 @@
+{
+  "description": "Checks analysis replies before the session stops (see ~/.claude/rules/analysis.md).",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "You review the final reply of a Claude Code session before it ends. Hook input JSON: $ARGUMENTS\n\nIf stop_hook_active is true, respond {\"ok\": true}.\n\nRead last_assistant_message and decide whether it presents an ANALYSIS: factual conclusions about data, records, numbers, documents, or how a system behaves (a diagnosis, audit, reconciliation, divergence, cause, or total), or a message drafted for another person that states such facts. These are NOT analyses: status updates, summaries of code or config changes, plans, questions to the user, explanations of how a tool works, short answers with no factual claim about data.\n\nIf it is not an analysis, respond {\"ok\": true}.\n\nIf it is an analysis, respond {\"ok\": false, \"reason\": \"...\"} when ANY of these holds:\n1. It has no \"How to check\" section (under any heading, in the reply's language) that tells the user, for each main claim, where to look (system, file, tab, row, link) and what they should see there.\n2. It delivers conclusions while saying that a verification the user asked for is still pending, interrupted, or left to someone else, and those conclusions depend on it (for example: \"still pending: the SEI check\" next to claims that check would settle).\n3. It states as fact something it also calls a guess or a possibility (\"may be A or B\") inside text meant for another person.\n\nThe reason must say exactly what to add, finish, or relabel. Otherwise respond {\"ok\": true}. Respond with JSON only.",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

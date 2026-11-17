@@ -102,8 +102,9 @@ Prefer steps I can follow in the tools I and the recipient already use (the spre
 system's UI, the panel) over steps that only work with your scripts. List separately any claim
 you could **not** verify, with the reason.
 
-A `Stop` hook in `~/.claude/settings.json` checks this: a reply that presents an analysis without
-"Como conferir", or with a pending verification its conclusions depend on, gets sent back.
+A `Stop` hook in the `analysis-check` plugin (`~/.claude/marketplaces/my-plugins/`) checks this
+when the plugin is enabled: a reply that presents an analysis without "Como conferir", or with a
+pending verification its conclusions depend on, gets sent back.
 
 ## `/analise` for analyses that go to other people
 
