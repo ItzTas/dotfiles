@@ -49,6 +49,15 @@
   its `CLAUDE.md`, `CONTRIBUTING.md`, or similar), follow those instead. The project's rules win,
   and there's no need to run the skill on top of them.
 
+## Analyses and factual claims
+
+- **Before investigating data/systems to answer a factual question, and always before drafting
+  text that states facts for someone else, load `~/.claude/rules/analysis.md`** (rule file) and
+  follow it. In short: every claim traces to a primary source read in this session, visible where
+  the reader will look; check your scripts by hand; test hypotheses instead of passing them on;
+  re-verify everything before a message for someone else; and end every analysis with a
+  "Como conferir" section telling me how to check each claim myself.
+
 ## Shell commands
 
 - **Whenever I explicitly ask you to run a shell command, first load `~/.claude/rules/command-history.md`** (rule file) and follow it. Commands that run successfully get recorded in the history (capped: 500 lines project, 1000 global); a wrong/non-existent command is never recorded, so suggest the most likely correction instead, from the history or another known command (with `auto`/`--auto`, run it directly).

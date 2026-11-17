@@ -14,6 +14,7 @@ init() {
   C_PONYTAIL_ULTRA=$'\033[38;5;173m'
   C_FLOW=$'\033[38;5;44m'
   C_ADVISE=$'\033[38;5;213m'
+  C_AGENT=$'\033[38;5;245m'
 }
 
 read_input() {
@@ -144,6 +145,14 @@ advise_badge() {
   printf '%s[ADVISE]%s' "$C_ADVISE" "$C_RESET"
 }
 
+agent_part() {
+  local name=$1 session=$2 label
+  [ -n "$session" ] || return 0
+  label="id:${session:0:8}"
+  [ -n "$name" ] && label="${name} ${label}"
+  printf '%s%s%s' "$C_AGENT" "$label" "$C_RESET"
+}
+
 add_part() {
   [ -n "$1" ] || return 0
   parts+=("$1")
@@ -160,12 +169,13 @@ join_parts() {
 
 main() {
   init
-  local input model effort dir session parts=()
+  local input model effort dir session agent parts=()
   input=$(read_input)
   model=$(json_field "$input" '.model.display_name // empty')
   effort=$(json_field "$input" '.effort.level // empty')
   dir=$(json_field "$input" '.workspace.current_dir // .cwd // empty')
   session=$(session_id "$input")
+  agent=$(json_field "$input" '.agent.name // empty' | tr -d '\000-\037')
 
   add_part "$(venv_badge)"
   add_part "$(model_part "$model" "$effort")"
@@ -175,6 +185,7 @@ main() {
   add_part "$(ponytail_badge)"
   add_part "$(flow_badge "$session")"
   add_part "$(advise_badge "$session")"
+  add_part "$(agent_part "$agent" "$session")"
 
   join_parts
 }
