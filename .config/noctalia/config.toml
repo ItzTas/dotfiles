@@ -141,7 +141,7 @@ show_on_workspace_switch = true
 reserve_space      = true                          # bar.enableExclusionZoneInset
 capsule            = true                          # bar.showCapsule
 capsule_opacity    = 0.5                           # bar.capsuleOpacity
-capsule_fill       = "surface_variant"             # bar.capsuleColorKey = none → padrão
+capsule_fill       = "surface_container"           # bar.capsuleColorKey = none → padrão
 
 start  = ["launcher", "clock", "temp", "cpu", "ram", "swap", "active_window", "media", "privacy"]
 center = ["workspaces"]
@@ -201,7 +201,7 @@ hide_when_no_media = true                          # hideMode = hidden
 hide_inactive  = false
 icon_spacing   = 4
 active_color   = "primary"
-inactive_color = "outline"
+inactive_color = "outline_variant"
 
 [widget.workspaces]
 label_source             = "id"                    # labelMode = index

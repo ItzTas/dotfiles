@@ -72,6 +72,7 @@ _install_pacman_packages() {
         "debtap"
         "gnome-keyring"
         "xdg-user-dirs"
+        "mime-guardian-bin"
         "keychain"
         "numlockx"
         "tidy"

@@ -34,6 +34,9 @@ on("hyprland.start", function()
 	exec("wl-clip-persist --clipboard regular")
 	exec("clipse -listen")
 
+	-- Default applications (mimeapps.list guard)
+	exec("mmg watch")
+
 	-- Updates
 	exec("sleep 10; arch-update --tray")
 	exec("sleep 10; systemctl --user start arch-update.timer")
