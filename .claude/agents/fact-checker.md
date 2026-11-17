@@ -2,7 +2,7 @@
 name: fact-checker
 description: Independently verifies a numbered list of factual claims against their primary sources and tries to refute each one. Used by /analise before an analysis is delivered. Receives claims and a source inventory, never the author's reasoning. Read-only.
 disallowedTools: Write, Edit, NotebookEdit, Agent
-model: inherit
+model: sonnet
 omitClaudeMd: true
 maxTurns: 40
 ---
