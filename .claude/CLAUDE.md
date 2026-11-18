@@ -59,7 +59,7 @@
   open the links and documents already in the data instead of declaring them unavailable; finish
   every verification I asked for before concluding; re-verify everything before a message for
   someone else; and end every analysis with a "Como conferir" section telling me how to check
-  each claim myself. `/analise` runs the full flow with an independent `fact-checker` agent.
+  each claim myself. `/analysis` runs the full flow with an independent `fact-checker` agent.
 
 ## Shell commands
 

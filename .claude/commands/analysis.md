@@ -26,7 +26,7 @@ recipient can see. If a source is blocked, say what you tried, item by item.
 
 ## 3. Investigation
 
-Investigate following the rule. Save every script under `<scratchpad>/analise/` and keep it
+Investigate following the rule. Save every script under `<scratchpad>/analysis/` and keep it
 there, because the "Como conferir" section points to it. Check 2–3 rows of each script's output
 by hand.
 

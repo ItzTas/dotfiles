@@ -141,13 +141,13 @@
       "effortLevel": "low"
     },
     "claude-opus-5-5": {
-      "effortLevel": "xhigh"
+      "effortLevel": "medium"
     },
     "claude-sonnet-5-5": {
       "effortLevel": "low"
     },
     "claude-fable-5-2": {
-      "effortLevel": "high"
+      "effortLevel": "medium"
     }
   },
   "tui": "fullscreen",

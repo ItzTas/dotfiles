@@ -106,8 +106,8 @@ A `Stop` hook in the `analysis-check` plugin (`~/.claude/marketplaces/my-plugins
 when the plugin is enabled: a reply that presents an analysis without "Como conferir", or with a
 pending verification its conclusions depend on, gets sent back.
 
-## `/analise` for analyses that go to other people
+## `/analysis` for analyses that go to other people
 
-When I run `/analise`, follow `~/.claude/commands/analise.md`: source inventory, investigation,
+When I run `/analysis`, follow `~/.claude/commands/analysis.md`: source inventory, investigation,
 a numbered claim list, and an independent check by the `fact-checker` agent before anything is
 delivered.
