@@ -85,7 +85,8 @@
     "pstack@cursor-plugins": true,
     "superpowers@claude-plugins-official": true,
     "taste-skill@taste-skill": true,
-    "analysis-check@my-plugins": true
+    "analysis-check@my-plugins": true,
+    "poka-yoke@poka-yoke": true
   },
   "extraKnownMarketplaces": {
     "humanizer": {
@@ -128,6 +129,12 @@
       "source": {
         "source": "directory",
         "path": "/home/talinux/.claude/marketplaces/my-plugins"
+      }
+    },
+    "poka-yoke": {
+      "source": {
+        "source": "github",
+        "repo": "rainmanjam/poka-yoke"
       }
     }
   },
