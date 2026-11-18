@@ -145,10 +145,20 @@ advise_badge() {
   printf '%s[ADVISE]%s' "$C_ADVISE" "$C_RESET"
 }
 
+peer_name() {
+  [ -n "$1" ] || return 0
+  local files
+  mapfile -t files < <(grep -lF "\"$1\"" "$CONFIG_DIR"/sessions/*.json 2>/dev/null)
+  [ "${#files[@]}" -gt 0 ] || return 0
+  jq -rs 'map(select(.name)) | sort_by(.updatedAt) | last | .name // empty' "${files[@]}" 2>/dev/null \
+    | tr -cd 'a-zA-Z0-9._-'
+}
+
 agent_part() {
-  local name=$1 session=$2 label
+  local name=$1 session=$2 peer=$3 label
   [ -n "$session" ] || return 0
   label="id:${session:0:8}"
+  [ -n "$peer" ] && label="@${peer} ${label}"
   [ -n "$name" ] && label="${name} ${label}"
   printf '%s%s%s' "$C_AGENT" "$label" "$C_RESET"
 }
@@ -185,7 +195,7 @@ main() {
   add_part "$(ponytail_badge)"
   add_part "$(flow_badge "$session")"
   add_part "$(advise_badge "$session")"
-  add_part "$(agent_part "$agent" "$session")"
+  add_part "$(agent_part "$agent" "$session" "$(peer_name "$session")")"
 
   join_parts
 }
