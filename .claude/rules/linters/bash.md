@@ -1,3 +1,9 @@
+---
+paths:
+  - "**/*.sh"
+  - "**/*.bash"
+---
+
 # Bash / POSIX sh linters
 
 - **Always run shellcheck after editing or creating a bash/sh script** (`.sh`, `.bash`, or any

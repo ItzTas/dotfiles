@@ -69,6 +69,10 @@
 
 - **Whenever you're about to write or edit code, first load my code style rules from `~/.claude/rules/code-style.md`** (rule file) and apply them. They cover: guard clauses, functions over `else` branches, running independent async calls concurrently (and parallelizing dependency chains), and maps / loops-with-hashmaps over `switch`/`if-else` chains.
 
+## Tests
+
+- **Whenever you're about to write, edit, or delete tests, first load `~/.claude/rules/tests.md`** (rule file) and follow it. In short: tests describe current behavior, never the absence of an old one (no "ghost tests"); when a feature changes, rewrite its tests from the current behavior; drop tests another test already covers implicitly.
+
 ## Tools
 
 - **If there is a `.prototools` file at the repository root, it contains the versions of some of the tools used.**

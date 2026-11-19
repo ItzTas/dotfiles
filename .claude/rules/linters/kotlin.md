@@ -1,3 +1,8 @@
+---
+paths:
+  - "**/*.{kt,kts}"
+---
+
 # Kotlin linters
 
 - **Always run both `ktlint` and `detekt` after editing or creating a Kotlin file** (`.kt`, `.kts`),

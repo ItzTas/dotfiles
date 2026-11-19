@@ -1,3 +1,8 @@
+---
+paths:
+  - "**/*.{py,pyi}"
+---
+
 # Python linters
 
 - **Always run basedpyright after editing or creating a `.py`/`.pyi` file**, scoped to the files or

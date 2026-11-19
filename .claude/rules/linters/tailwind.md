@@ -1,3 +1,8 @@
+---
+paths:
+  - "**/*.{svelte,html,jsx,tsx,vue,astro}"
+---
+
 # Tailwind-style utility class linting
 
 Applies to any file carrying Tailwind-shaped class attributes (`.svelte`, `.html`, `.jsx`/`.tsx`,

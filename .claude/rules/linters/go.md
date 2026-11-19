@@ -1,3 +1,8 @@
+---
+paths:
+  - "**/*.go"
+---
+
 # Go linters
 
 - **Always run golangci-lint after editing or creating a `.go` file**, scoped to the packages you

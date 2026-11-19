@@ -1,3 +1,8 @@
+---
+paths:
+  - "**/*.go"
+---
+
 # Go code style
 
 Rules specific to Go, on top of my general code style rules. Each section below is independent;

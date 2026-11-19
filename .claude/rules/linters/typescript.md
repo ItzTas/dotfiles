@@ -1,3 +1,8 @@
+---
+paths:
+  - "**/*.{ts,tsx,mts,cts,js,jsx,mjs,cjs,svelte,vue}"
+---
+
 # TypeScript / JavaScript linters (tsserver via vtsls)
 
 Covers `.ts`, `.tsx`, `.mts`, `.cts`, `.js`, `.jsx`, `.mjs`, `.cjs`, and the `<script lang="ts">`

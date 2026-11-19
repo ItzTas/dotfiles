@@ -1,3 +1,12 @@
+---
+paths:
+  - "**/*.zsh"
+  - "**/.zshrc"
+  - "**/.zshenv"
+  - "**/.zprofile"
+  - "**/.zlogin"
+---
+
 # Zsh linters
 
 - **Always syntax-check zsh scripts** (`.zsh`, zsh dotfiles like `.zshrc`/`.zshenv`, or any file

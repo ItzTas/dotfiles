@@ -1,3 +1,10 @@
+---
+paths:
+  - "**/Dockerfile*"
+  - "**/*.dockerfile"
+  - "**/Containerfile*"
+---
+
 # Dockerfile linters
 
 - **Always run both `hadolint` and `trivy config` after editing or creating a Dockerfile.** Whenever you edit or create a Dockerfile, run `hadolint <file>` and `trivy config <file>` on it and fix any issues either one reports before considering the task complete.

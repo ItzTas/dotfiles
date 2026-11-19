@@ -14,7 +14,7 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "sonnet",
+  "model": "opus",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -86,7 +86,8 @@
     "superpowers@claude-plugins-official": true,
     "taste-skill@taste-skill": true,
     "analysis-check@my-plugins": true,
-    "poka-yoke@poka-yoke": true
+    "poka-yoke@poka-yoke": true,
+    "42crunch-api-security-testing@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "humanizer": {
@@ -148,7 +149,7 @@
       "effortLevel": "low"
     },
     "claude-opus-5-5": {
-      "effortLevel": "xhigh"
+      "effortLevel": "high"
     },
     "claude-sonnet-5-5": {
       "effortLevel": "low"
@@ -188,5 +189,9 @@
       "**Org-specific CLIs**: None configured — frequent personal CLIs observed include yadm/yadm_update (dotfiles manager), hyprctl, udisksctl, journalctl, paru, pacman, protonvpn, snapper, bootdev, secret-tool",
       "**routine under <user>/ prefix**: none identified — no org or username prefix evidenced"
     ]
-  }
+  },
+  "claudeMdExcludes": [
+    "/home/talinux/.claude/rules/*.md",
+    "/home/talinux/.claude/rules/error-handling/**"
+  ]
 }
