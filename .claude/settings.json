@@ -87,7 +87,7 @@
     "taste-skill@taste-skill": true,
     "analysis-check@my-plugins": true,
     "poka-yoke@poka-yoke": true,
-    "42crunch-api-security-testing@claude-plugins-official": true
+    "42crunch-api-security-testing@claude-plugins-official": false
   },
   "extraKnownMarketplaces": {
     "humanizer": {

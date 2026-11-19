@@ -4,7 +4,7 @@ function upgrady
 
     if set -q _flag_help
         printf '%s\n' "Usage: "(status current-function) \
-            "  updates AUR, flatpak, freshclam, hyprpm, snap and yadm, then prunes orphans"
+            "  updates AUR, flatpak, freshclam, hyprpm, snap, Claude skills and yadm, then prunes orphans"
         return 0
     end
 
@@ -44,6 +44,12 @@ function upgrady
 
     if command -q snap
         sudo snap refresh
+    end
+
+    # Skills installed with the `skills` CLI (e.g. Cloudflare's security-audit).
+    # Runs before yadm_update so refreshed skill files get committed.
+    if command -q npx
+        npx --yes skills update -g
     end
 
     if command -q yadm
