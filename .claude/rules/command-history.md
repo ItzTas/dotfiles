@@ -15,7 +15,8 @@ part of this; only commands I asked for explicitly.
   more than its cap, delete the **oldest** entries (the top lines) until it's back at the cap.
 - **`!` commands are recorded automatically.** Commands I run with the `!` prefix are appended by
   the `UserPromptSubmit` hook (`~/.claude/hooks/command-history.sh`) at submission time, so don't
-  record those manually a second time.
+  record those manually a second time. The hook already skips commands whose name zsh doesn't
+  know (`command not found`); other failures still need the removal below.
 - **Remove entries that turn out to fail.** The hook records a `!` command at **submission**,
   before it runs, so when you see in its output that it **errored** (non-zero exit,
   `command not found`, bad pathspec, etc.), **delete that entry** from both history files (the

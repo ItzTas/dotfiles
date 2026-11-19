@@ -1,7 +1,7 @@
 ---
 name: command
 description: Register a shell command to run after everything else (--durable persists it), at the start of every session (--persistent), or right away (--now)
-argument-hint: [--durable|--persistent] [--auto] [--now] <shell command, e.g. ls>
+argument-hint: "[--durable|--persistent] [--auto] [--now] <shell command, e.g. ls>"
 allowed-tools: Task, Agent, Read, Edit, Write, Glob, Grep, Bash, Bash(~/.claude/skills/command/scripts/*), Bash(~/.claude/scripts/command-history.sh*)
 ---
 

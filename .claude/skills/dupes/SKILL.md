@@ -1,7 +1,7 @@
 ---
 name: dupes
 description: Find duplicated-code clusters; optionally refactor each into a shared abstraction, preserving behavior
-argument-hint: [--fix] [path]
+argument-hint: "[--fix] [path]"
 allowed-tools: Bash(jscpd*), Bash(npx*), Bash(rg*), Bash(git*), Read, Edit, Glob, Grep, Bash(~/.claude/skills/dupes/scripts/*)
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: typos
 description: Spellcheck comments, docs, strings, and identifiers; --fix applies safe corrections, allowlisting domain terms
-argument-hint: [--fix] [path]
+argument-hint: "[--fix] [path]"
 allowed-tools: Bash(typos*), Bash(codespell*), Bash(rg*), Bash(git*), Read, Edit, Glob, Bash(~/.claude/skills/typos/scripts/*)
 ---
 

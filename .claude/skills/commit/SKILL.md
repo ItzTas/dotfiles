@@ -1,7 +1,7 @@
 ---
 name: commit
-description: Commit everything as atomic Conventional Commits; flags: wip/quick/fast, fastest, detailed, verbose, push, pr, merge, force
-argument-hint: [wip|quick|fast|fastest|quickest] [detailed|verbose] [push] [pr] [merge] [force]
+description: "Commit everything as atomic Conventional Commits; flags: wip/quick/fast, fastest, detailed, verbose, push, pr, merge, force"
+argument-hint: "[wip|quick|fast|fastest|quickest] [detailed|verbose] [push] [pr] [merge] [force]"
 allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(yadm*), Read, Glob, Bash(~/.claude/skills/commit/scripts/*), Bash(~/.claude/skills/pr/scripts/*), Bash(~/.claude/scripts/forge-checks.sh*)
 ---
 

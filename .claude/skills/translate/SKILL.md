@@ -1,7 +1,7 @@
 ---
 name: translate
 description: Add/fill localized strings across every locale using the repo's localization mechanism
-argument-hint: [key] [text...]
+argument-hint: "[key] [text...]"
 allowed-tools: Read, Edit, Write, Glob, Grep, Bash, Bash(~/.claude/skills/translate/scripts/*)
 ---
 

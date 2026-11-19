@@ -1,7 +1,7 @@
 ---
 name: defer
 description: Wait a specified amount of time, then run the prompt I give you
-argument-hint: [--durable] <time e.g. 10 | 10min | 10 minutes | hour, or final|afterall> <prompt to run afterwards>
+argument-hint: "[--durable] <time e.g. 10 | 10min | 10 minutes | hour, or final|afterall> <prompt to run afterwards>"
 ---
 
 Defer a task: wait the amount of time I specify, then carry out the prompt I give you.

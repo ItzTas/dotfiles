@@ -1,7 +1,7 @@
 ---
 name: pr
 description: Commit, push and open a PR (GitHub) and/or MR (GitLab) from the source branch to the target branch; merge waits for green CI and merges
-argument-hint: [target-branch] [source-branch] [merge]
+argument-hint: "[target-branch] [source-branch] [merge]"
 allowed-tools: Bash(git*), Bash(gh*), Bash(glab*), Bash(yadm*), Read, Glob, AskUserQuestion, Bash(~/.claude/skills/pr/scripts/*), Bash(~/.claude/scripts/forge-checks.sh*)
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: sync
 description: Fetch with prune and rebase the current branch onto its base, handling dirty tree and conflicts; --all-branches fast-forwards the rest
-argument-hint: [base-branch] [--all-branches]
+argument-hint: "[base-branch] [--all-branches]"
 allowed-tools: Bash(git*), Bash(~/.claude/skills/sync/scripts/*)
 ---
 
