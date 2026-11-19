@@ -19,7 +19,10 @@ on("hyprland.start", function()
 	cleanup()
 
 	-- Core services
-	exec("dbus-update-activation-environment --systemd HYPRLAND_INSTANCE_SIGNATURE WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+	exec(
+		"dbus-update-activation-environment --systemd HYPRLAND_INSTANCE_SIGNATURE WAYLAND_DISPLAY XDG_CURRENT_DESKTOP && "
+			.. "systemctl --user restart selflowd.service"
+	)
 	exec("hypridle")
 
 	-- Desktop services
