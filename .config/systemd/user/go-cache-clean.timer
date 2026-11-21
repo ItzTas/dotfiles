@@ -1,0 +1,9 @@
+[Unit]
+Description=Monthly cleanup of the Go build cache
+
+[Timer]
+OnCalendar=monthly
+Persistent=true
+
+[Install]
+WantedBy=timers.target

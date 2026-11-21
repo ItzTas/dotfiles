@@ -1,0 +1,6 @@
+[Unit]
+Description=Clean the Go build cache
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rm -rf %h/.cache/go-build
