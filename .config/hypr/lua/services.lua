@@ -44,6 +44,9 @@ on("hyprland.start", function()
 	exec("sleep 10; arch-update --tray")
 	exec("sleep 10; systemctl --user start arch-update.timer")
 
+	-- Cache cleanup
+	exec("systemctl --user start go-cache-clean.timer")
+
 	-- Audio
 	exec("systemctl --user start pipewire")
 	exec("systemctl --user start pipewire-pulse")
