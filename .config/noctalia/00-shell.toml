@@ -44,9 +44,10 @@ show_shortcuts = true                              # showKeybinds
 # sync -- not just the panel buttons. Only suspend/reboot/shutdown exist here
 # (lock/logout/hibernate are rejected as "unknown setting").
 [shell.session.power]
-reboot   = "hyprshutdown -t 'Restarting...' --post-cmd 'systemctl reboot'"
-shutdown = "hyprshutdown -t 'Shutting down...' --post-cmd 'systemctl poweroff'"
-suspend  = "hyprshutdown -t 'Suspending...' --post-cmd 'systemctl suspend'"
+# reboot/shutdown: hyprshutdown with a systemctl fallback (see the script)
+reboot   = "setsid -f /home/talinux/.config/noctalia/scripts/session-power.sh reboot"
+shutdown = "setsid -f /home/talinux/.config/noctalia/scripts/session-power.sh poweroff"
+suspend  = "systemctl suspend"
 
 [[shell.session.actions]]
 action = "lock"
@@ -68,7 +69,7 @@ countdown_seconds = 5
 
 [[shell.session.actions]]
 action = "reboot"
-command = "hyprshutdown -t 'Restarting...' --post-cmd 'systemctl reboot'"
+command = "setsid -f /home/talinux/.config/noctalia/scripts/session-power.sh reboot"
 shortcut = "4"
 countdown_seconds = 5
 
@@ -80,7 +81,7 @@ countdown_seconds = 5
 
 [[shell.session.actions]]
 action = "shutdown"
-command = "hyprshutdown -t 'Shutting down...' --post-cmd 'systemctl poweroff'"
+command = "setsid -f /home/talinux/.config/noctalia/scripts/session-power.sh poweroff"
 shortcut = "6"
 countdown_seconds = 5
 variant = "destructive"

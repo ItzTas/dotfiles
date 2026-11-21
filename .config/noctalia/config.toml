@@ -61,7 +61,7 @@ countdown_seconds = 5
 
 [[shell.session.actions]]
 action = "reboot"
-command = "hyprshutdown -t 'Restarting...' --post-cmd 'systemctl reboot'"
+command = "setsid -f /home/talinux/.config/noctalia/scripts/session-power.sh reboot"
 shortcut = "4"
 countdown_seconds = 5
 
@@ -73,7 +73,7 @@ countdown_seconds = 5
 
 [[shell.session.actions]]
 action = "shutdown"
-command = "hyprshutdown -t 'Shutting down...' --post-cmd 'systemctl poweroff'"
+command = "setsid -f /home/talinux/.config/noctalia/scripts/session-power.sh poweroff"
 shortcut = "6"
 countdown_seconds = 5
 variant = "destructive"
