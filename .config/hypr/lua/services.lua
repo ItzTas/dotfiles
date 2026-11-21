@@ -46,6 +46,7 @@ on("hyprland.start", function()
 
 	-- Cache cleanup
 	exec("systemctl --user start go-cache-clean.timer")
+	exec("systemctl --user start cargo-sweep.timer")
 
 	-- Audio
 	exec("systemctl --user start pipewire")

@@ -143,6 +143,9 @@ _install_pacman_packages() {
         # Golang
         "gomodifytags"
 
+        # Rust
+        "cargo-sweep"
+
         # Cli file utils
         "unzip"
         "zip"

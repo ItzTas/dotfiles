@@ -1,0 +1,9 @@
+[Unit]
+Description=Weekly sweep of stale Rust build artifacts
+
+[Timer]
+OnCalendar=weekly
+Persistent=true
+
+[Install]
+WantedBy=timers.target
