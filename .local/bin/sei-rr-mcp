@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Starts the mcp-seipro MCP server against SEI-RR (sei.rr.gov.br), órgão SECONV.
+# Credentials come from the GNOME keyring, never from this file:
+#   username: service=sei-rr-usuario (or $SEI_USUARIO, if already set)
+#   password: service=sei-rr
+set -euo pipefail
+
+keyring() {
+	local value
+	if ! value="$(secret-tool lookup service "$1")" || [[ -z "$value" ]]; then
+		echo "sei-rr-mcp: keyring item service=$1 not found" >&2
+		exit 1
+	fi
+	printf '%s' "$value"
+}
+
+SEI_USUARIO="${SEI_USUARIO:-$(keyring sei-rr-usuario)}"
+SEI_SENHA="$(keyring sei-rr)"
+
+export SEI_USUARIO SEI_SENHA
+export SEI_URL="https://sei.rr.gov.br/sei/modulos/wssei/controlador_ws.php/api/v2"
+export SEI_ORGAO="63"
+
+# mcp-seipro imports mcp.server.fastmcp, which mcp 2.x removed
+exec uvx --with 'mcp<2' mcp-seipro "$@"
