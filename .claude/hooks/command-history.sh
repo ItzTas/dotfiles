@@ -44,7 +44,6 @@ append_capped() {
 main() {
 	local input prompt cmd project_file global_file
 	input=$(cat) || return 0
-	printf '%s\n' "$input" >>/tmp/claude-1000/-home-talinux--claude/fd2f7436-b600-4755-a6de-a3dc59e8b190/scratchpad/hook-input.log # DEBUG: remover
 	prompt=$(printf '%s' "$input" | jq -r '.prompt // empty' 2>/dev/null) || return 0
 
 	case "$prompt" in
