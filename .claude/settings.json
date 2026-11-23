@@ -193,5 +193,6 @@
       "**Org-specific CLIs**: None configured — frequent personal CLIs observed include yadm/yadm_update (dotfiles manager), hyprctl, udisksctl, journalctl, paru, pacman, protonvpn, snapper, bootdev, secret-tool",
       "**routine under <user>/ prefix**: none identified — no org or username prefix evidenced"
     ]
-  }
+  },
+  "description": "Impeccable design detector: immediate-tier checks after Edit/Write on UI files, full-rule deep pass on Stop."
 }
