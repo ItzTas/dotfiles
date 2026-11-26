@@ -56,6 +56,16 @@
             "command": "~/.claude/hooks/flow-tasks-allow.sh"
           }
         ]
+      },
+      {
+        "matcher": "mcp__.*__sei_enviar_processo",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -I ~/.claude/hooks/sei-enviar-guard.py",
+            "timeout": 30
+          }
+        ]
       }
     ],
     "Stop": [
