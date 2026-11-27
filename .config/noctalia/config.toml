@@ -26,7 +26,6 @@ categories    = true                               # appLauncher.showCategories
 sort_by_usage = true                               # appLauncher.sortByMostUsed
 app_grid      = false                              # appLauncher.viewMode = list
 pinned        = []                                 # appLauncher.pinnedApps
-# appLauncher.terminalCommand "kitty -e" → v5 usa $TERMINAL (sem "-e"): export TERMINAL=kitty
 
 [shell.mpris]
 blacklist = []                                     # audio.mprisBlacklist
@@ -101,11 +100,10 @@ mode           = "dark"                            # colorSchemes.darkMode
 source         = "custom"                          # colorSchemes.predefinedScheme (esquema próprio)
 custom_palette = "Catppuccin Lavender"             # → palettes/Catppuccin Lavender.json
 pure_black_dark = false
-# colorSchemes.syncGsettings: sem equivalente direto; use templates gtk3/gtk4 abaixo se quiser.
 
 [theme.templates]
 enable_builtin_templates   = true
-builtin_ids                = ["hyprland"]          # regenera ~/.config/hypr/noctalia.lua (hyprlua) a cada paleta
+builtin_ids                = ["hyprland"]          
 enable_community_templates = true
 community_ids              = []
 
@@ -169,7 +167,6 @@ format          = "{:%H:%M %a, %b %d}"             # Clock.formatHorizontal "HH:
 vertical_format = "{:%H %M - %d %m}"               # Clock.formatVertical
 tooltip_format  = "{:%H:%M %a, %b %d}"
 
-# SystemMonitor v4 (cpuTemp, cpuUsage, memoryUsage, swapUsage, compacto, fonte mono) → 4 sysmon
 [widget.temp]
 type          = "sysmon"
 stat          = "cpu_temp"
@@ -250,7 +247,6 @@ hide_when_no_unread = false                        # hideWhenZeroUnread
 display_mode = "glyph"                             # displayMode = icon-always
 device       = "auto"                              # deviceNativePath = __default__
 
-# Widgets de plugin (mesma posição da v4: github-feed, video-wallpaper, color-scheme-creator)
 [widget.github-prs]
 type = "raycursive/github-prs:bar"                 # plugin:github-feed
 
@@ -268,8 +264,6 @@ type = "davemhammer/tailscale:status"
 [control_center]
 show_session_button = true
 
-# v4: Network, Bluetooth, WallpaperSelector, NoctaliaPerformance | Notifications, PowerProfile, KeepAwake, NightLight
-# v5 mostra até 6; NoctaliaPerformance não existe. "wallpaper" ficou de fora — troque se preferir.
 [[control_center.shortcuts]]
 type = "wifi"
 [[control_center.shortcuts]]
@@ -305,7 +299,7 @@ address     = "Roraima"                            # location.name
 enabled             = true
 position            = "bottom"
 auto_hide           = true                         # displayMode = auto_hide
-reserve_space       = false                        # não empurrar janelas (v4 não reservava espaço)
+reserve_space       = false                       
 background_opacity  = 1.0
 margin_edge         = 8                            # dockType = floating
 show_running        = true
@@ -313,7 +307,6 @@ show_dots           = false                        # showDockIndicator
 launcher_position   = "start"                      # showLauncherIcon + launcherPosition
 active_monitor_only = true                         # onlySameOutput
 pinned              = []
-# launcherUseDistroLogo: sem equivalente; use launcher_custom_image = "/caminho/logo.svg"
 
 [desktop_widgets]
 enabled = true
@@ -403,7 +396,7 @@ gpu_temp_critical_threshold  = 90.0
 # ── Hooks ─────────────────────────────────────────────────────────────────────
 
 [hooks]
-colors_changed = "hyprctl reload"                  # aplica o noctalia.lua recém-gerado no Hyprland
+colors_changed = "hyprctl reload"                  
 
 [plugins]
 enabled = [
