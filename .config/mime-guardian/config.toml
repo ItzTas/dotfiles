@@ -112,6 +112,7 @@
 "x-scheme-handler/unknown" = "zen.desktop"
 "x-scheme-handler/webcal" = "userapp-Thunderbird-OSAYP3.desktop"
 "x-scheme-handler/webcals" = "userapp-Thunderbird-OSAYP3.desktop"
+"image/*" = "org.gnome.gthumb.desktop"
 
 [guard]
 notify = true
