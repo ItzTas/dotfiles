@@ -3,7 +3,8 @@
 # when hyprshutdown dies before reaching --post-cmd (e.g. it aborts in initEGL
 # after an NVIDIA driver upgrade, while the old kernel module is still loaded).
 #
-# Usage: session-power.sh reboot|poweroff
+# Usage: session-power.sh reboot|poweroff [systemctl args...]
+#   e.g. session-power.sh reboot --boot-loader-entry=auto-windows
 # Callers should launch it with `setsid -f` so it survives Hyprland exiting.
 set -u
 
@@ -11,15 +12,17 @@ declare -A labels=([reboot]='Restarting...' [poweroff]='Shutting down...')
 action=${1:-}
 label=${labels[$action]:-}
 if [[ -z $label ]]; then
-	echo "usage: ${0##*/} reboot|poweroff" >&2
+	echo "usage: ${0##*/} reboot|poweroff [systemctl args...]" >&2
 	exit 2
 fi
+extra=("${@:2}")
 
 # tmux kill-server first: lingering tmux panes otherwise stall shutdown ~90s
 post="tmux kill-server; systemctl $action"
+((${#extra[@]})) && post+=$(printf ' %q' "${extra[@]}")
 
 hyprshutdown --no-fork -t "$label" --post-cmd "$post" && exit 0
 
 logger -t session-power "hyprshutdown failed (exit $?), running systemctl $action directly"
 tmux kill-server
-systemctl "$action"
+systemctl "$action" "${extra[@]}"
