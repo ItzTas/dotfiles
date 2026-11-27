@@ -90,7 +90,7 @@ Recomendado model com contexto >= 32k pra Claude Code.
 - `cct` abre uma sessão com relay: `/model` mostra e troca entre Claude (assinatura),
   DeepSeek e Ollama (quando o daemon estiver de pé).
 - `claude` é o Claude real direto, intocado (sem relay).
-- Setup principal hoje é o OmniRoute (`ccr`, skill `omniroute-setup`); o relay
+- Setup principal hoje é o OmniRoute (`ccr`); o relay
   fica de fallback.
 
 ## Operação
