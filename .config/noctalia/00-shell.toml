@@ -94,3 +94,11 @@ command = "systemctl reboot --firmware-setup"
 shortcut = "7"
 countdown_seconds = 5
 
+[[shell.session.actions]]                          # one-shot reboot into Windows (systemd-boot)
+action = "command"
+label = "Windows"
+glyph = "brand-windows"
+command = "setsid -f /home/talinux/.config/noctalia/scripts/session-power.sh reboot --boot-loader-entry=auto-windows"
+shortcut = "8"
+countdown_seconds = 5
+
