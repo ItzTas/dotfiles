@@ -50,3 +50,10 @@ branches, committing, reverting, opening PRs/MRs), load this file and follow eve
 - **Don't overuse `feat:`.** `feat:` should not be used for a small piece of functionality that is part of a larger feature. In that case, `feat:` is reserved for the larger feature that incorporates the smaller one, while the smaller part uses `chore:`. Ideally there is only one `feat:` per branch/feature; only in very specific cases may there be more than one.
 - **`feat:` is only for new things in the end program itself.** Reserve `feat:` for new user-facing functionality in the end program. Plumbing or wiring work, such as connecting the database to something, is not a `feat:`; use `chore:` (or another appropriate type) instead.
 - **When in doubt, don't use `feat:`.** If you're not sure whether a commit deserves `feat:`, don't assign any `feat:` and let me set it manually.
+
+## Pre-release section
+
+- **Before creating a tag or a long-lived branch, or opening a PR/MR, check the repo's `CLAUDE.md`
+  for a `<!-- prerelease:start -->` block.** If it has one, run the **Check** steps of
+  `~/.claude/skills/prerelease/SKILL.md` for that action: when its `prerelease:remove-when`
+  condition is met, tell me and remove the block as part of the same change.

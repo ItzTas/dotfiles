@@ -69,6 +69,13 @@ Pass my arguments as-is (it pulls `merge` out from anywhere; the rest is target 
 - `forges.github` / `forges.gitlab` say whether there's **only GitHub**, **only GitLab**, or
   **both**. If both exist, you will create **a PR on GitHub AND an MR on GitLab**.
 
+## 2b. Pre-release section
+- If the repo's `CLAUDE.md` (or `.claude/CLAUDE.md`, and a mirroring `AGENTS.md`) has a
+  `<!-- prerelease:start -->` block, run the **Check** steps of
+  `~/.claude/skills/prerelease/SKILL.md` for "open PR/MR from `<source>` into `<target>`".
+- If its condition is met, tell me, remove the block (its **Off** steps) on the source branch, and
+  commit the removal in step 3 so it ships in this PR/MR. Mention it in the PR/MR body.
+
 ## 3. Commit and push all changes
 - Make sure you are on the **source branch** before committing; check `git status` and `git diff`.
 - Commit **all** pending changes following the rules in my `~/.claude/rules/git-conventions.md`:
