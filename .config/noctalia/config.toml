@@ -34,7 +34,7 @@ blacklist = []                                     # audio.mprisBlacklist
 mic_filter_regex = ""                              # plugin privacy-indicator
 cam_filter_regex = ""
 
-# ── Sessão (sessionMenu) ──────────────────────────────────────────────────────
+# ── SessionMenu ──────────────────────────────────────────────────────
 
 [shell.session]
 grid           = false                             # largeButtonsLayout = single-row
