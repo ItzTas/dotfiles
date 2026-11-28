@@ -1,3 +1,5 @@
+local rules = require("lib.rules")
+
 local rule = hl.window_rule
 
 rule({
@@ -42,7 +44,7 @@ rule({
 
 rule({
     name = "hyprpwmenu",
-    match = { class = "title:hyprpwmenu" },
+    match = { title = "hyprpwmenu" },
     fullscreen = true,
 })
 
@@ -60,7 +62,7 @@ rule({
 
 rule({
     name = "wlogout",
-    match = { class = "title:wlogout" },
+    match = { title = "wlogout" },
     fullscreen = true,
 })
 
@@ -75,12 +77,14 @@ rule({
     name = "wonderlands",
     match = { class = "wonderlands\\.exe" },
     fullscreen = true,
+    immediate = true,
 })
 
 rule({
     name = "rimworld",
     match = { class = "RimWorldLinux" },
     fullscreen = true,
+    immediate = true,
 })
 
 rule({
@@ -125,13 +129,32 @@ rule({
 
 rule({
     name = "dialogs",
-    match = { class = "confirm|dialog|error|splash|notification|download|file_progress" },
+    match = {
+        class = rules.any({
+            "confirm",
+            "dialog",
+            "error",
+            "splash",
+            "notification",
+            "download",
+            "file_progress",
+        }),
+    },
     float = true,
 })
 
 rule({
     name = "file-managers",
-    match = { class = "[Nn]emo|nautilus|org.gnome.Nautilus|dolphin|thunar|Pcmanfm" },
+    match = {
+        class = rules.any({
+            "[Nn]emo",
+            "nautilus",
+            "org.gnome.Nautilus",
+            "dolphin",
+            "thunar",
+            "Pcmanfm",
+        }),
+    },
     float = true,
 })
 
@@ -167,15 +190,36 @@ rule({
 
 rule({
     name = "image-viewers",
-    match = { class = "org.kde.gwenview|org.gnome.gThumb|imv|viewnior" },
+    match = {
+        class = rules.any({
+            "org.kde.gwenview",
+            "org.gnome.gThumb",
+            "imv",
+            "viewnior",
+        }),
+    },
     float = true,
 })
 
 rule({
     name = "misc-apps",
     match = {
-        class =
-        "Lxappearance|ncmpcpp|Rofi|pavucontrol-qt|gucharmap|gnome-font|org.gnome.Settings|file-roller|obs|wdisplays|keepassxc|imFile|clipse-gui|confirmreset",
+        class = rules.any({
+            "Lxappearance",
+            "ncmpcpp",
+            "Rofi",
+            "pavucontrol-qt",
+            "gucharmap",
+            "gnome-font",
+            "org.gnome.Settings",
+            "file-roller",
+            "obs",
+            "wdisplays",
+            "keepassxc",
+            "imFile",
+            "clipse-gui",
+            "confirmreset",
+        }),
     },
     float = true,
 })
