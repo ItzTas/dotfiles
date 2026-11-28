@@ -51,9 +51,23 @@ that stay still describe the present behavior, and coverage of the feature stays
 - **The same rule applies to them.** Write security tests against the current state of the feature:
   this input is rejected, this route requires this permission, this payload is escaped. Not "the
   old hole is closed".
-- **The exception is genuinely fragile ground**: something that has already broken more than once,
-  a subtle bug that's easy to reintroduce, a security fix in tricky code. There a targeted
-  regression test earns its place.
+- **The default is no dedicated regression test.** Fixing a bug or closing a hole is not, by
+  itself, a reason to add a test pinned to that bug. Treat the fix like any other change to the
+  feature (see "When changing an existing feature"): cover its current behavior as a whole. If the
+  input that triggered the bug is a meaningful case of that behavior, it goes in as an ordinary
+  case, named after what the code does ("rejects a path containing `../`"), not after the bug
+  ("regression for #123"), and not as an extra test appended on top of the suite.
+- **The exception is rare and needs evidence you can point to, not a feeling.** A targeted
+  regression test is allowed only when at least one of these is true:
+  - git history shows this same behavior has already broken and been fixed more than once (earlier
+    fix commits, `git log -S` / `git log -L` on the code, a reopened issue);
+  - I explicitly asked for a regression test;
+  - the repository's own conventions require one for every fix.
+- **"Subtle", "tricky", "security-related" or "could come back" don't qualify on their own.** Every
+  bug you just fixed looks like that from up close, which is exactly why this exception used to
+  fire every single time. Without one of the three conditions above, you're not in the exception.
+- **When you do use the exception, tell me which condition applies**, with the evidence (the
+  commits, the issue, my message). If you can't name it, don't write the test.
 - **Even then, write it as a positive statement about current behavior.** "Rejects a path
   containing `../`" is a real test. "Doesn't have CVE-XXXX anymore" is a ghost test. Link the
   history in a comment if the context helps; keep it out of the assertion.

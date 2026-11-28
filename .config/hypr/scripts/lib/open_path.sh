@@ -1,5 +1,4 @@
 # shellcheck shell=bash
-# Opens a path in $FILE_MANAGER on the focused workspace.
 
 open_path() {
 	local path="$1"

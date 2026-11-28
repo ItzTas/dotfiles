@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Starts recording the focused monitor, or stops the recording in progress.
 # @use open_on
 
 focused_monitor() {
@@ -24,8 +23,6 @@ record_gpu() {
 
 	gpu-screen-recorder -w "$monitor" -c mp4 -f 60 -a default_output -o "$output" && return 0
 
-	# A non-zero exit with a written file means it recorded and then died on
-	# shutdown; only a missing/empty file is a real startup failure.
 	[[ -s "$output" ]]
 }
 
@@ -36,8 +33,6 @@ record_wf() {
 	wf-recorder -o "$monitor" -f "$output"
 }
 
-# pidof, not pgrep -x: the kernel truncates process names to 15 characters, so
-# pgrep -x never matches "gpu-screen-recorder".
 if pidof -q gpu-screen-recorder || pidof -q wf-recorder; then
 	killall -q -s INT gpu-screen-recorder
 	killall -q -s INT wf-recorder

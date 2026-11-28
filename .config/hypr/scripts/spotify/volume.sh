@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Changes Spotifast's own volume by $1 (e.g. 0.05 or -0.05), clamped to 0-1.
 
 delta="$1"
 

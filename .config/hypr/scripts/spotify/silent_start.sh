@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# Keeps a freshly started Spotifast muted until it is playing on this device at
-# volume 0, then unmutes its output stream.
 
 out=""
 count=0

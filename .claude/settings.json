@@ -14,7 +14,7 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "opus",
+  "model": "sonnet",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -162,7 +162,7 @@
       "effortLevel": "high"
     },
     "claude-sonnet-5-5": {
-      "effortLevel": "high"
+      "effortLevel": "low"
     },
     "claude-fable-5-2": {
       "effortLevel": "medium"

@@ -1,13 +1,3 @@
--- Runs the bash scripts kept in ~/.config/hypr/scripts.
---
--- A script lists the shared function libraries it needs in a header line:
---
---     # @use open_on copy_text
---
--- Each name maps to scripts/lib/<name>.sh. The loader sources those libraries (and
--- the ones they @use themselves, dependencies first) before the script, and sets the
--- variables below so scripts don't hardcode values that live in the Lua config.
-
 local file = require("lib.file")
 local apps = require("const.apps")
 local notify = require("const.notify")
@@ -22,13 +12,12 @@ local function quote(value)
 	return "'" .. tostring(value):gsub("'", "'\\''") .. "'"
 end
 
----@param name string path relative to scripts/, without the .sh extension
+---@param name string
 ---@return string
 function M.path(name)
 	return string.format("%s/%s.sh", M.DIR, name)
 end
 
----Appends the libraries a file @uses to `out`, each one after its own dependencies.
 ---@param path string
 ---@param out string[]
 ---@param seen table<string, boolean>
@@ -51,11 +40,10 @@ local function collect_uses(path, out, seen)
 end
 
 ---@class ShellRunOpts
----@field args? (string|number)[] positional arguments, seen by the script as $1, $2, …
----@field vars? table<string, string|number> extra variables for this run only
+---@field args? (string|number)[]
+---@field vars? table<string, string|number>
 
----Runs scripts/<name>.sh in the background, with its libraries and variables injected.
----@param name string path relative to scripts/, without the .sh extension
+---@param name string
 ---@param opts? ShellRunOpts
 function M.run(name, opts)
 	opts = opts or {}

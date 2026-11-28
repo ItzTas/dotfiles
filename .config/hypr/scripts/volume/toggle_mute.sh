@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Toggles mute on the default sink and notifies the new state.
 
 wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 muted=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $3}')

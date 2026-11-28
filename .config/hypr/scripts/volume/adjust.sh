@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Changes the default sink volume by $1 percent (e.g. 5 or -5), capped at 100%.
 
 step="$1"
 

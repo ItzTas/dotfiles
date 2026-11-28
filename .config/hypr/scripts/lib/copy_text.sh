@@ -1,5 +1,4 @@
 # shellcheck shell=bash
-# Copies the text OCR finds in an image to the clipboard.
 
 copy_text() {
 	local app="$1"

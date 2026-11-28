@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Changes the external monitor brightness (DDC/CI VCP 10) by $1, clamped to 0-100.
 
 delta="$1"
 

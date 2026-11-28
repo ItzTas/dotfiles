@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Toggles mute on the default source and notifies the new state.
 
 wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 

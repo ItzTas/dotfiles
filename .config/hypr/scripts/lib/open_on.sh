@@ -1,5 +1,4 @@
 # shellcheck shell=bash
-# Shows a notification with actions to open or copy a saved file.
 # @use open_path copy_text
 
 open_on() {
