@@ -1,5 +1,5 @@
-local mods = require("envs.mods")
-local binds = require("functions.binds")
+local mods = require("const.mods")
+local binds = require("binds.builder")
 
 local mm = binds.make_mod
 

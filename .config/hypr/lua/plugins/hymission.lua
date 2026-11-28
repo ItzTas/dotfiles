@@ -1,12 +1,12 @@
-local plugins = require("functions.plugins")
+local plugins = require("lib.plugins")
 
 local hymission = plugins.ensure_plugin("hymission")
 if not hymission then
 	return
 end
 
-local binds = require("functions.binds")
-local mods = require("envs.mods")
+local binds = require("binds.builder")
+local mods = require("const.mods")
 
 local mm = binds.make_mod
 

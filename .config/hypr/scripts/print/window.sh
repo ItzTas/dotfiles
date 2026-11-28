@@ -1,47 +1,22 @@
-#!/bin/env bash
+#!/usr/bin/env bash
+# @use open_on
 
-open() {
-    local path="$1"
-    local id
+filename="screenshot_$(date '+%Y-%m-%d_%H-%M-%S-%3N').png"
+path="$(xdg-user-dir PICTURES)/screenshots"
+fullpath="$path/$filename"
 
-    id=$(hyprctl activeworkspace -j | jq -r '.id')
+mkdir -p "$path"
 
-    if [[ -n "$id" && "$id" != "null" ]]; then
-        hyprctl dispatch exec "[workspace $id] nemo \"$path\"" || nemo "$path"
-        return
-    fi
-    nemo "$path"
-}
+hyprshot -m window -s -o "$path" -f "$filename"
 
-print_window() {
-    local filename path fullpath
+max_retries=20
+retry_interval=0.1
+for ((i = 1; i <= max_retries; i++)); do
+	if [ -f "$fullpath" ]; then
+		sleep 0.6
+		break
+	fi
+	sleep "$retry_interval"
+done
 
-    filename="screenshot_$(date '+%Y-%m-%d_%H-%M-%S-%3N').png"
-    path="$(xdg-user-dir PICTURES)/screenshots"
-    fullpath="$path/$filename"
-
-    mkdir -p "$path"
-
-    hyprshot -m window -s -o "$path" -f "$filename"
-
-    local max_retries=20
-    local retry_interval=0.1
-    for ((i = 1; i <= max_retries; i++)); do
-        if [ -f "$fullpath" ]; then
-            sleep 0.6
-            break
-        fi
-        sleep "$retry_interval"
-    done
-
-    local ACTION
-    ACTION=$(dunstify -a "sys_print" -I "$fullpath" --action="default,open" "Screenshot saved" "Image saved in $fullpath")
-
-    case "$ACTION" in
-    "default")
-        open "$fullpath"
-        ;;
-    esac
-}
-
-print_window
+open_on "sys_print" "$fullpath" "Screenshot saved" "Image saved in $fullpath" "$fullpath" "ocr"

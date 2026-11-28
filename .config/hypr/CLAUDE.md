@@ -8,40 +8,42 @@ This is a personal Hyprland (Wayland compositor) configuration, version-controll
 >
 > If `hyprctl` instead fails with an error about not being able to connect to the Hyprland socket, that happens rarely when modifying the Hyprland config and can be ignored.
 
-## Two parallel config systems (this is the key thing to understand)
+## Config layout
 
-The same configuration exists twice, written two different ways:
-
-1. **`lua/`** — the **active, preferred** source, using Hyprland's newer **hyprlua** API. Entry point `hyprland.lua` sets `package.path` and `require`s every module.
-2. **`hyprlang/*.conf`** — the **legacy** path, using classic Hyprland config syntax. Entry point `hyprland.conf` `source`s every `.conf` file.
-
-The two are near 1:1 mirrors of each other (e.g. `lua/settings/misc.lua` ↔ `hyprlang/settings/hyprmisc.conf`). **When changing settings, edit the Lua side.** The `.conf` files are kept around as legacy; only touch them if explicitly asked, and then keep both in sync to avoid drift.
+Hyprland 0.57 dropped the legacy `hyprland.conf` (hyprlang) format, so the config is **Lua only** (the hyprlua API). Entry point `hyprland.lua` sets `package.path` and `require`s every module. The other `*.conf` files at the root (`hypridle.conf`, `hyprpaper.conf`, `hyprlock/`, …) belong to separate Hypr tools that still use hyprlang; they stay at the root because those tools look for them there.
 
 All Lua modules access the compositor through the global `hl` (declared as a known global in `.luarc.json`).
 
 ### Core `hl` API patterns
 
-- `hl.config{ section = { key = val } }` — declarative settings, mirrors `.conf` sections (`misc`, `dwindle`, `master`, `plugin.<name>`, …).
+- `hl.config{ section = { key = val } }` — declarative settings (`misc`, `dwindle`, `master`, `plugin.<name>`, …).
 - `hl.bind(key, dispatcher, opts)` with `hl.dsp.*` dispatchers (`window`, `exec_cmd`, `focus`, `workspace`, `layout`). See `lua/binds/keymaps.lua`.
 - `hl.on("hyprland.start" | "hyprland.shutdown" | "config.reloaded", fn)` — event hooks; `hyprland.start` is the `exec-once` equivalent (see `lua/apps.lua`, `lua/services.lua`, `lua/system-envs.lua`).
 - `hl.exec_cmd(cmd, { workspace = N })`, `hl.env`, `hl.monitor`, `hl.window_rule`, `hl.workspace_rule`, `hl.timer`.
 - `hl.plugin.<name>` — truthy guard; plugin modules early-`return` if the plugin isn't loaded (see `lua/plugins/hyprexpo.lua`).
 
-## yadm ESH templating
-
-Files named `<target>##template.esh` are yadm **alternate templates** rendered by `yadm alt` into the gitignored target (`hyprapps.conf`, `hyprmonitor.conf`, `hyprenvs.conf`, `hyprservices.conf` — see `hyprlang/.gitignore`). `yadm alt` also runs automatically on `hyprland.start` via `lua/services.lua`.
-
-The `.esh` templates use shell `<% … %>` blocks to branch on hardware at render time (total RAM, GPU vendor). **The Lua path achieves the same conditionals at runtime** via the detection helpers in `lua/functions/` (`ram.has_above`, `gpu.is_nvidia`, `device.is_laptop`) — so hardware-conditional behavior must be updated in both places when both are in play.
+Hardware-conditional behavior (RAM, GPU vendor, laptop vs desktop) is decided at runtime with the helpers in `lua/hw/`.
 
 ## Lua module layout
 
-- `lua/functions/` — pure helpers. Hardware detection (`gpu`, `ram`, `device`) uses multi-strategy fallback chains and is `memoize`d. `utils` has the command runners (`run_cmd`, `run_async_cmd`, `defer`, `memoize`); `binds` builds keybindings (`make_mod`, `bind_scratchpad`, `bind_hold`); `file` is small IO; `shell` injects reusable shell function snippets.
-- `lua/envs/` — constants only: `apps` (terminal/browser/file-manager), `mods` (modifier aliases), `notify` (dunst icon dir + notification replace-id).
-- `lua/scripts/` — Lua **action** modules (`volume`, `mic`, `spotify`, `print`, `recording`, `ddc`) bound to keys. They assemble shell one-liners and run them async with notifications. These supersede the standalone bash files in the top-level `scripts/` dir, which belong to the legacy `.conf` path.
+- `lua/const/` — constants only: `apps` (terminal/browser/file-manager), `mods` (modifier aliases), `notify` (dunst icon dir + notification replace-id).
+- `lua/lib/` — generic helpers: `utils` (`run_cmd`, `run_async_cmd`, `defer`, `memoize`), `file` (small IO), `plugins` (plugin guards), `shell` (the bash script loader, see below).
+- `lua/hw/` — hardware detection (`gpu.is_nvidia`, `ram.has_above`, `form_factor.is_laptop`), multi-strategy fallback chains, `memoize`d.
+- `lua/binds/` — keybindings: `keymaps`, `resize`, `no-binds`, plus `builder` (`make_mod`, `bind_scratchpad`, `bind_hold`) and `input_toggle` (enable/disable an input device with a notification).
+- `lua/actions/` — what keybinds trigger (`volume`, `mic`, `spotify`, `print`, `recording`, `ddc`, `noctalia`). Anything longer than a one-liner lives in a bash file under `scripts/` and is run through `lib.shell`.
 - `lua/types/` — LuaLS type/enum annotations (e.g. the `Mods` enum).
 - `lua/settings/`, `lua/binds/`, `lua/plugins/` — each has an `init.lua` that `require`s its siblings.
+- `noctalia.lua` (root) is generated by Noctalia's theme templates; don't move or hand-edit it.
 
-## Modifier convention (`lua/envs/mods.lua`)
+## Bash scripts (`scripts/`)
+
+Shell logic is kept in real `.sh` files so it gets editor support, `shellcheck` and `shfmt`. Lua runs them with `require("lib.shell").run(name, { args = {…}, vars = {…} })`, where `name` is the path under `scripts/` without `.sh` (e.g. `"print/area"`); `shell.path(name)` returns the absolute path for commands that call a script directly (e.g. `fzf/fzf_explorer` in a kitty scratchpad).
+
+- `scripts/lib/<name>.sh` holds shared shell functions. A script (or another lib) asks for them with a header line `# @use name1 name2`; the loader sources them, dependencies first, before the script.
+- The loader always sets `ICON_DIR`, `REPLACE_ID` and `FILE_MANAGER` (from `lua/const/`), plus any `vars` passed for that run. `args` arrive as `$1`, `$2`, …
+- Lib files have no shebang and start with `# shellcheck shell=bash`; runnable scripts start with `#!/usr/bin/env bash`. Run `shellcheck -x` and `shfmt -d` on any script you touch.
+
+## Modifier convention (`lua/const/mods.lua`)
 
 `alt` is the primary mod, `super` the secondary. `meh` = `ALT+SHIFT+CTRL`, `hyper` = `ALT+SUPER+SHIFT+CTRL`. Workspaces 1–10 are on `alt`, 11–20 on `super` (the loops at the bottom of `keymaps.lua`).
 
@@ -49,7 +51,6 @@ The `.esh` templates use shell `<% … %>` blocks to branch on hardware at rende
 
 - `hyprctl reload` — apply config changes to the running compositor (always do this after edits).
 - `hyprctl configerrors` — check the running config for errors. **Run this after every change (following `hyprctl reload`) and fix anything it reports before considering the task done.**
-- `yadm alt` — re-render the `.esh` templates after editing them.
 - `hyprctl systeminfo` / `hyprctl version` — inspect the live session; useful when debugging the hardware-detection helpers.
 - Lua editing is checked by `lua-language-server` per `.luarc.json` (globals: `hl`; library: `/usr/share/hypr/stubs` + this config's `lua/`). There are no unit tests.
 

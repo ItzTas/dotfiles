@@ -1,14 +1,15 @@
-local mods = require("envs.mods")
-local apps = require("envs.apps")
-local binds = require("functions.binds")
-local devices = require("functions.devices")
+local mods = require("const.mods")
+local apps = require("const.apps")
+local binds = require("binds.builder")
+local devices = require("binds.input_toggle")
+local shell = require("lib.shell")
 
-local volume = require("scripts.volume")
-local mic = require("scripts.mic")
-local spotify = require("scripts.spotify")
-local print = require("scripts.print")
-local recording = require("scripts.recording")
-local noctalia = require("scripts.noctalia")
+local volume = require("actions.volume")
+local mic = require("actions.mic")
+local spotify = require("actions.spotify")
+local print = require("actions.print")
+local recording = require("actions.recording")
+local noctalia = require("actions.noctalia")
 
 local mm = binds.make_mod
 local bs = binds.bind_scratchpad
@@ -66,10 +67,11 @@ bind(mm("P", meh), exec("dex ~/.local/share/applications/hypr-terminal/hypr-ncdu
 bind(mm("H", meh), exec("dex ~/.local/share/applications/hypr-terminal/hypr-btop.desktop"))
 bs(mm("A", alt), "kitty -o background_opacity=0.9 -e yazi", { no_blur = false })
 bs(mm("O", meh), "kitty -o background_opacity=1 -e gping google.com")
-bs(mm("S", meh), 'kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh"')
-bs(mm("A", meh), 'kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" root')
-bs(mm("F", meh), 'kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" file')
-bs(mm("G", meh), 'kitty -o background_opacity=0.65 -e bash "$HOME/.config/hypr/scripts/fzf/fzf_explorer.sh" file root')
+local fzf = 'kitty -o background_opacity=0.65 -e bash "' .. shell.path("fzf/fzf_explorer") .. '"'
+bs(mm("S", meh), fzf)
+bs(mm("A", meh), fzf .. " root")
+bs(mm("F", meh), fzf .. " file")
+bs(mm("G", meh), fzf .. " file root")
 
 -- Menus and widgets
 bind(mm("SPACE", alt), exec(noctalia.msg("panel-toggle launcher")))
@@ -152,7 +154,7 @@ bind(mm("PRINT", alt), print.window)
 bind(mm("PRINT", super), exec("flameshot gui"))
 
 -- Scripts
--- local hdr = require("scripts.hdr")
+-- local hdr = require("actions.hdr")
 -- bind(mm("T", hyperMod), hdr.toggle)
 
 -- Browsing

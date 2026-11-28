@@ -1,4 +1,4 @@
-local gpu = require("functions.gpu")
+local gpu = require("hw.gpu")
 
 local home = os.getenv("HOME")
 local runtime = os.getenv("XDG_RUNTIME_DIR")

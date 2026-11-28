@@ -1,4 +1,4 @@
-local device = require("functions.device")
+local device = require("hw.form_factor")
 
 local monitor = hl.monitor
 local rule = hl.workspace_rule

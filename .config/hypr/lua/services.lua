@@ -1,6 +1,6 @@
-local gpu = require("functions.gpu")
-local ram = require("functions.ram")
-local noctalia = require("scripts.noctalia")
+local gpu = require("hw.gpu")
+local ram = require("hw.ram")
+local noctalia = require("actions.noctalia")
 
 local exec = hl.exec_cmd
 local on = hl.on

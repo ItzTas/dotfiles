@@ -1,5 +1,5 @@
-local mods = require("envs.mods")
-local fb = require("functions.binds")
+local mods = require("const.mods")
+local fb = require("binds.builder")
 
 local alt_l = mods.alt_l
 -- local super = mods.super

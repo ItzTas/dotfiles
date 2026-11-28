@@ -1,5 +1,5 @@
-local ram = require("functions.ram")
-local spotify = require("scripts.spotify")
+local ram = require("hw.ram")
+local spotify = require("actions.spotify")
 
 local exec = hl.exec_cmd
 local on = hl.on

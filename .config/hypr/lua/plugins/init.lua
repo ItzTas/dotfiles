@@ -1,4 +1,4 @@
-local plugins = require("functions.plugins")
+local plugins = require("lib.plugins")
 
 if not plugins.has_any_plugin() then return end
 

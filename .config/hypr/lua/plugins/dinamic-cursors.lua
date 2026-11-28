@@ -1,4 +1,4 @@
-local plugins = require("functions.plugins")
+local plugins = require("lib.plugins")
 
 if not plugins.ensure_plugin("dynamic_cursors") then
 	return
