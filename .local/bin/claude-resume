@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Turns off the pause set by claude-pause. Paused sessions stay idle until they get a new message.
+
+rm -rf ~/.claude/state/pause ~/.claude/state/pause.d
+echo 'Pausa desligada. As sessões pausadas continuam paradas até você mandar "continua" em cada uma.'

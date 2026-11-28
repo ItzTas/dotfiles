@@ -39,6 +39,15 @@
     ],
     "PreToolUse": [
       {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/pause-guard.sh",
+            "timeout": 10
+          }
+        ]
+      },
+      {
         "matcher": "Edit|MultiEdit|Write|NotebookEdit|Update|ApplyPatch|DesignSync|Bash|mcp__.*",
         "hooks": [
           {

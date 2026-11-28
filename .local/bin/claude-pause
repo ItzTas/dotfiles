@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# Makes every Claude Code session stop at its next tool call (see ~/.claude/hooks/pause-guard.sh).
+# --wait: blocks until no session is busy, then says it is safe to shut down.
+# Undo with claude-resume.
+
+set -euo pipefail
+
+# PIDs of this process and its parents, so a session running claude-pause doesn't wait on itself.
+ancestors() {
+	local pid=$$
+	while ((pid > 1)); do
+		echo "$pid"
+		pid=$(ps -o ppid= -p "$pid" | tr -d ' ')
+	done
+}
+
+busy_sessions() {
+	local file pid
+	local skip
+	skip=$(ancestors)
+	for file in ~/.claude/sessions/*.json; do
+		pid=$(basename "$file" .json)
+		grep -qx "$pid" <<<"$skip" && continue
+		kill -0 "$pid" 2>/dev/null || continue
+		jq -r 'select(.status == "busy") | .name' "$file"
+	done
+}
+
+mkdir -p ~/.claude/state
+touch ~/.claude/state/pause
+echo "Pausa ligada: cada sessão para na próxima ação. Desfaça com claude-resume."
+
+[[ ${1:-} == --wait ]] || exit 0
+
+while busy=$(busy_sessions) && [[ -n $busy ]]; do
+	printf '\r\033[KAinda trabalhando: %s' "$(paste -sd ' ' <<<"$busy")"
+	sleep 3
+done
+printf '\r\033[KNenhuma sessão trabalhando. Pode desligar.\n'
