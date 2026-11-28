@@ -1,6 +1,0 @@
-require("binds.keymaps.apps")
-require("binds.keymaps.windows")
-require("binds.keymaps.workspaces")
-require("binds.keymaps.media")
-require("binds.keymaps.capture")
-require("binds.keymaps.system")
