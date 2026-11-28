@@ -10,7 +10,10 @@ end
 
 function M.exists(path)
     local f = io.open(path, "r")
-    if f then f:close() return true end
+    if f then
+        f:close()
+        return true
+    end
     return false
 end
 

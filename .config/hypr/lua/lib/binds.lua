@@ -86,8 +86,6 @@ function M.bind_scratchpad(key, cmd, opts)
     hl.bind(key, hl.dsp.exec_cmd(cmd, merged))
 end
 
-
-
 ---@class HoldActions
 ---@field tap? any
 ---@field hold? any

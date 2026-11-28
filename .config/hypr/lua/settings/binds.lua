@@ -1,8 +1,8 @@
 hl.config({
     binds = {
-        scroll_event_delay        = 0,
-        pass_mouse_when_bound     = false,
-        workspace_back_and_forth  = true,
-        allow_workspace_cycles    = true,
+        scroll_event_delay       = 0,
+        pass_mouse_when_bound    = false,
+        workspace_back_and_forth = true,
+        allow_workspace_cycles   = true,
     },
 })

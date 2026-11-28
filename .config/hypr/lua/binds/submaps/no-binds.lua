@@ -1,5 +1,5 @@
 local mods = require("const.mods")
-local fb = require("binds.builder")
+local fb = require("lib.binds")
 
 local alt_l = mods.alt_l
 -- local super = mods.super

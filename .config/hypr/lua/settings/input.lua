@@ -1,23 +1,23 @@
 hl.config({
-	input = {
-		kb_layout = "br",
-		kb_variant = "",
-		kb_model = "",
-		kb_options = "",
-		kb_rules = "",
+    input = {
+        kb_layout = "br",
+        kb_variant = "",
+        kb_model = "",
+        kb_options = "",
+        kb_rules = "",
 
-		numlock_by_default = true,
+        numlock_by_default = true,
 
-		follow_mouse = 1,
+        follow_mouse = 1,
 
-		touchpad = {
-			disable_while_typing = true,
-			natural_scroll = true,
-		},
+        touchpad = {
+            disable_while_typing = true,
+            natural_scroll = true,
+        },
 
-		special_fallthrough = true,
+        special_fallthrough = true,
 
-		accel_profile = "flat",
-		sensitivity = 0.3, -- -1.0 - 1.0, 0 means no modification.
-	},
+        accel_profile = "flat",
+        sensitivity = 0.3, -- -1.0 - 1.0, 0 means no modification.
+    },
 })

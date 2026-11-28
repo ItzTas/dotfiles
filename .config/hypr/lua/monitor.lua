@@ -6,114 +6,114 @@ local rule = hl.workspace_rule
 monitor({ output = "claude-dbg", disabled = true })
 
 if device.is_laptop() then
-	monitor({
-		output = "eDP-1",
-		mode = "preferred",
-		position = "auto-right",
-		scale = 1,
+    monitor({
+        output = "eDP-1",
+        mode = "preferred",
+        position = "auto-right",
+        scale = 1,
 
-		bitdepth = 10,
+        bitdepth = 10,
 
-		cm = "srgb",
-		supports_hdr = 1,
+        cm = "srgb",
+        supports_hdr = 1,
 
-		sdrbrightness = 1,
-		sdrsaturation = 1.15,
+        sdrbrightness = 1,
+        sdrsaturation = 1.15,
 
-		sdr_min_luminance = 0.005,
-		sdr_max_luminance = 90,
-	})
+        sdr_min_luminance = 0.005,
+        sdr_max_luminance = 90,
+    })
 
-	monitor({
-		output = "HDMI-A-1",
-		mode = "preferred",
-		position = "auto-left",
-		scale = 1,
+    monitor({
+        output = "HDMI-A-1",
+        mode = "preferred",
+        position = "auto-left",
+        scale = 1,
 
-		bitdepth = 10,
+        bitdepth = 10,
 
-		cm = "srgb",
-		supports_hdr = 1,
+        cm = "srgb",
+        supports_hdr = 1,
 
-		sdrbrightness = 1,
-		sdrsaturation = 1.4,
+        sdrbrightness = 1,
+        sdrsaturation = 1.4,
 
-		sdr_min_luminance = 0.005,
-		sdr_max_luminance = 90,
-	})
+        sdr_min_luminance = 0.005,
+        sdr_max_luminance = 90,
+    })
 
-	for i = 1, 10 do
-		rule({
-			workspace = tostring(i),
-			monitor = "HDMI-A-1",
-			default = true,
-		})
-	end
+    for i = 1, 10 do
+        rule({
+            workspace = tostring(i),
+            monitor = "HDMI-A-1",
+            default = true,
+        })
+    end
 
-	for i = 11, 20 do
-		rule({
-			workspace = tostring(i),
-			monitor = "eDP-1",
-			default = true,
-		})
-	end
+    for i = 11, 20 do
+        rule({
+            workspace = tostring(i),
+            monitor = "eDP-1",
+            default = true,
+        })
+    end
 
-	return
+    return
 end
 
 for i = 1, 10 do
-	rule({
-		workspace = tostring(i),
-		monitor = "DP-2",
-		default = true,
-	})
+    rule({
+        workspace = tostring(i),
+        monitor = "DP-2",
+        default = true,
+    })
 end
 
 for i = 11, 20 do
-	rule({
-		workspace = tostring(i),
-		monitor = "HDMI-A-1",
-		default = true,
-	})
+    rule({
+        workspace = tostring(i),
+        monitor = "HDMI-A-1",
+        default = true,
+    })
 end
 
 monitor({
-	output = "DP-2",
-	mode = "preferred",
-	position = "auto-right",
-	scale = 1,
+    output = "DP-2",
+    mode = "preferred",
+    position = "auto-right",
+    scale = 1,
 
-	-- vrr = 1,
-	bitdepth = 10,
+    -- vrr = 1,
+    bitdepth = 10,
 
-	cm = "srgb",
-	supports_hdr = 1,
+    cm = "srgb",
+    supports_hdr = 1,
 
-	sdrbrightness = 1,
-	sdrsaturation = 1.15,
+    sdrbrightness = 1,
+    sdrsaturation = 1.15,
 
-	sdr_min_luminance = 0.005,
-	sdr_max_luminance = 90,
+    sdr_min_luminance = 0.005,
+    sdr_max_luminance = 90,
 
-	-- min_luminance = 0.005,
-	-- max_luminance = 1000,
-	-- max_avg_luminance = 600,
+    -- min_luminance = 0.005,
+    -- max_luminance = 1000,
+    -- max_avg_luminance = 600,
 })
 
 monitor({
-	output = "HDMI-A-1",
-	mode = "preferred",
-	position = "auto-left",
-	scale = 1,
+    output = "HDMI-A-1",
+    mode = "preferred",
+    position = "auto-left",
+    scale = 1,
 
-	bitdepth = 10,
+    bitdepth = 10,
 
-	cm = "srgb",
-	supports_hdr = 1,
+    cm = "srgb",
+    supports_hdr = 1,
 
-	sdrbrightness = 1,
-	sdrsaturation = 1.4,
+    sdrbrightness = 1,
+    sdrsaturation = 1.4,
 
-	sdr_min_luminance = 0.005,
-	sdr_max_luminance = 90,
+    sdr_min_luminance = 0.005,
+    sdr_max_luminance = 90,
 })

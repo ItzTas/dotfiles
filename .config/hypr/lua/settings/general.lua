@@ -5,7 +5,7 @@ hl.config({
         border_size = 2,
         layout      = "dwindle",
 
-        snap = {
+        snap        = {
             enabled = true,
         },
     },
