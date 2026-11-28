@@ -20,7 +20,7 @@ All Lua modules access the compositor through the global `hl` (declared as a kno
 - `hl.bind(key, dispatcher, opts)` with `hl.dsp.*` dispatchers (`window`, `exec_cmd`, `focus`, `workspace`, `layout`). See `lua/binds/`.
 - `hl.on("hyprland.start" | "hyprland.shutdown" | "config.reloaded", fn)` — event hooks; `hyprland.start` is the `exec-once` equivalent (see `lua/apps.lua`, `lua/services.lua`, `lua/system-envs.lua`).
 - `hl.exec_cmd(cmd, { workspace = N })`, `hl.env`, `hl.monitor`, `hl.window_rule`, `hl.workspace_rule`, `hl.timer`.
-- `hl.plugin.<name>` — truthy guard; plugin modules early-`return` if the plugin isn't loaded (see `lua/plugins/hyprexpo.lua`).
+- Plugin guards (`lib.plugins`): modules that only set config early-`return` unless `plugins.is_loaded(name)` finds the plugin in `hl.get_loaded_plugins()` (name as in `hyprctl plugin list`, e.g. `"hypr-edgehover"`; see `lua/plugins/hypr-edgehover.lua`). `hl.plugin.<name>` only holds plugins that expose a Lua API, so use `plugins.ensure_plugin(name)` only when the module calls that API (see `lua/plugins/hymission.lua`).
 
 Hardware-conditional behavior (RAM, GPU vendor, laptop vs desktop) is decided at runtime with the helpers in `lua/hw/`.
 
@@ -75,4 +75,4 @@ Shell logic is kept in real `.sh` files so it gets editor support, `shellcheck` 
 ## References
 
 - 📖 [Hyprland Wiki](https://wiki.hypr.land) — official docs for config options, dispatchers, window/workspace rules, and the Hypr ecosystem tools (hypridle, hyprshutdown, hyprlock, …).
-- 🧩 [Hyprland Plugins](https://hypr.land/plugins) — official plugin catalog (relevant for `lua/plugins/`, e.g. hyprexpo).
+- 🧩 [Hyprland Plugins](https://hypr.land/plugins) — official plugin catalog (relevant for `lua/plugins/`).

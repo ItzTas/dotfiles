@@ -1,6 +1,6 @@
 local plugins = require("lib.plugins")
 
-if not plugins.ensure_plugin("darkwindow") then
+if not plugins.is_loaded("Hypr-DarkWindow") then
     return
 end
 

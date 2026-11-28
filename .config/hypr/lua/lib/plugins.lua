@@ -6,14 +6,11 @@ function M.ensure_plugin(name)
     return hl.plugin[name] or nil
 end
 
----@param names? string[]
+---@param name string
 ---@return boolean
-function M.has_any_plugin(names)
-    if not names then
-        return next(hl.plugin) ~= nil
-    end
-    for _, name in ipairs(names) do
-        if hl.plugin[name] then
+function M.is_loaded(name)
+    for _, plugin in ipairs(hl.get_loaded_plugins()) do
+        if plugin.name == name then
             return true
         end
     end

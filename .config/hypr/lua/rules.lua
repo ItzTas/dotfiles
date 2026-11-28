@@ -1,136 +1,12 @@
 local rules = require("lib.rules")
 
+local any, icase, literal = rules.any, rules.icase, rules.literal
+
 local rule = hl.window_rule
 
-rule({
-    name = "all-windows",
-    match = { class = ".*" },
-})
-
-rule({
-    name = "empty-xwayland",
-    match = {
-        class = "^$",
-        title = "^$",
-        xwayland = true,
-        float = true,
-        fullscreen = false,
-        pin = false,
-    },
-    no_focus = true,
-})
-
-rule({
-    name = "mpv",
-    match = { class = "mpv" },
-    fullscreen = true,
-})
-
-rule({
-    name = "parsec",
-    match = {
-        class = "parsecd",
-        title = "[Pp]arsec",
-        fullscreen = true,
-    },
-    immediate = true,
-})
-
-rule({
-    name = "vlc",
-    match = { class = "vlc" },
-    fullscreen = true,
-})
-
-rule({
-    name = "hyprpwmenu",
-    match = { title = "hyprpwmenu" },
-    fullscreen = true,
-})
-
-rule({
-    name = "zathura",
-    match = { class = "zathura" },
-    fullscreen = true,
-})
-
-rule({
-    name = "zathura-org",
-    match = { class = "org.pwmt.zathura" },
-    fullscreen = true,
-})
-
-rule({
-    name = "wlogout",
-    match = { title = "wlogout" },
-    fullscreen = true,
-})
-
-rule({
-    name = "steam-games",
-    match = { class = "(steam_app_)(.*)" },
-    fullscreen = true,
-    immediate = true,
-})
-
-rule({
-    name = "wonderlands",
-    match = { class = "wonderlands\\.exe" },
-    fullscreen = true,
-    immediate = true,
-})
-
-rule({
-    name = "rimworld",
-    match = { class = "RimWorldLinux" },
-    fullscreen = true,
-    immediate = true,
-})
-
-rule({
-    name = "hyprnav",
-    match = { class = "hyprnav" },
-    float = true,
-})
-
-rule({
-    name = "gameconqueror",
-    match = { class = "^([Gg]ame[Cc]onqueror.py)$" },
-    float = true,
-})
-
-rule({
-    name = "screenshot-gui",
-    match = { class = "^(screenshot-gui)$" },
-    float = true,
-})
-
-rule({
-    name = "steam-friends-pt",
-    match = {
-        class = "[Ss]team",
-        title = "^(Lista de amigos)$",
-    },
-    float = true,
-    opacity = "1.0 0.5 override",
-    no_blur = true,
-})
-
-rule({
-    name = "steam-friends-en",
-    match = {
-        class = "^([Ss]team)$",
-        title = "^([Ff]riends [Ll]ist)$",
-    },
-    float = true,
-    opacity = "1.0 0.5 override",
-    no_blur = true,
-})
-
-rule({
-    name = "dialogs",
-    match = {
-        class = rules.any({
+rules.each("float", {
+    dialogs = {
+        class = any({
             "confirm",
             "dialog",
             "error",
@@ -140,14 +16,9 @@ rule({
             "file_progress",
         }),
     },
-    float = true,
-})
-
-rule({
-    name = "file-managers",
-    match = {
-        class = rules.any({
-            "[Nn]emo",
+    ["file-managers"] = {
+        class = any({
+            icase("nemo"),
             "nautilus",
             "org.gnome.Nautilus",
             "dolphin",
@@ -155,56 +26,16 @@ rule({
             "Pcmanfm",
         }),
     },
-    float = true,
-})
-
-do
-    local thunderbird_activate = rule({
-        name = "thunderbird",
-        match = { class = "^(org.mozilla.Thunderbird)$" },
-        focus_on_activate = true,
-    })
-
-    if #hl.get_windows({ class = "org.mozilla.Thunderbird" }) == 0 then
-        thunderbird_activate:set_enabled(false)
-
-        hl.on("window.open", function(window)
-            if window.class ~= "org.mozilla.Thunderbird" then
-                return
-            end
-            hl.timer(function()
-                thunderbird_activate:set_enabled(true)
-            end, { timeout = 15000, type = "oneshot" })
-        end)
-    end
-end
-
-rule({
-    name = "thunderbird-new-message",
-    match = {
-        class = "^(org.mozilla.Thunderbird)$",
-        title = "(?i)^(escrever|write):(.*)",
-    },
-    workspace = 6,
-})
-
-rule({
-    name = "image-viewers",
-    match = {
-        class = rules.any({
+    ["image-viewers"] = {
+        class = any({
             "org.kde.gwenview",
             "org.gnome.gThumb",
             "imv",
             "viewnior",
         }),
     },
-    float = true,
-})
-
-rule({
-    name = "misc-apps",
-    match = {
-        class = rules.any({
+    apps = {
+        class = any({
             "Lxappearance",
             "ncmpcpp",
             "Rofi",
@@ -219,85 +50,180 @@ rule({
             "imFile",
             "clipse-gui",
             "confirmreset",
+            "hyprnav",
+            icase(literal("GameConqueror.py")),
+            "screenshot-gui",
+            icase("gitk"),
+            "GitAhead",
+            "zoom",
+            "xdg-desktop-portal-gtk",
         }),
     },
-    float = true,
-})
+    titles = {
+        title = any({
+            "Media viewer",
+            "Transmission",
+            "Volume Control",
+            "Picture-in-Picture",
+            "Winetricks.*",
+            literal("Steam Achievement Notifier (V1.9): Notification"),
+        }),
+    },
+    whatsapp = {
+        class = "electron",
+        title = literal("blob:https://web.whatsapp.com/") .. ".*",
+    },
+    filelight = {
+        class = literal("org.kde.filelight"),
+        title = "Filelight",
+    },
+    ["flameshot-save"] = {
+        class = "flameshot",
+        title = icase("save screenshot"),
+    },
+    meld = {
+        class = "org.gnome.Meld",
+        title = "Meld",
+    },
+}, { float = true })
+
+rules.each("fullscreen", {
+    players = { class = any({ "mpv", "vlc" }) },
+    zathura = { class = any({ "zathura", "org.pwmt.zathura" }) },
+    menus = { title = any({ "hyprpwmenu", "wlogout" }) },
+}, { fullscreen = true })
+
+rules.each("game", {
+    steam = { class = "steam_app_.*" },
+    wonderlands = { class = literal("wonderlands.exe") },
+    rimworld = { class = "RimWorldLinux" },
+    ["until-then"] = { class = "Until Then" },
+    ["dome-keeper"] = {
+        class = "Dome Keeper",
+        title = "Dome Keeper",
+    },
+}, { fullscreen = true, immediate = true })
 
 rule({
-    name = "git-apps",
-    match = { class = "[Gg]itk|GitAhead" },
-    float = true,
-})
-
-rule({
-    name = "zoom",
-    match = { class = "zoom" },
-    float = true,
-})
-
-rule({
-    name = "xdg-portal-gtk-open",
+    name = "game-persona-5-royal",
     match = {
-        class = "^xdg-desktop-portal-gtk$",
-        title = "^Open Files$",
+        class = "steam_app_.*",
+        title = "Persona 5 Royal",
+    },
+    workspace = 4,
+    focus_on_activate = false,
+})
+
+---@param title string
+---@return string
+local function zen(title)
+    return icase(literal(title .. " — Zen Browser"))
+end
+
+rules.each("private", {
+    bitwarden = { class = icase("bitwarden") },
+    ["proton-pass"] = {
+        class = "Proton Pass",
+        title = "Proton Pass",
+    },
+    ["proton-authenticator"] = {
+        class = "proton-authenticator",
+        title = "Proton Authenticator",
+    },
+    binance = {
+        class = "Binance",
+        title = "Binance Desktop",
+    },
+    exodus = {
+        class = icase("exodus"),
+        title = icase("exodus [0-9]+\\.[0-9]+\\.[0-9]+"),
+    },
+    ["steam-pagseguro"] = {
+        class = icase("steam"),
+        title = icase("pagseguro"),
+    },
+    ["steam-apm"] = {
+        class = icase("steam"),
+        title = "APM Adapter",
+    },
+    ["zen-bitwarden"] = {
+        class = "zen",
+        title = zen("Extension: (Bitwarden Password Manager) - Bitwarden"),
+    },
+    ["zen-amazon"] = {
+        class = "zen",
+        title = zen("Faça seu pedido — finalização da compra na Amazon"),
+    },
+    ["zen-inter"] = {
+        class = "zen",
+        title = zen("Internet Banking Inter"),
+    },
+    ["zen-proton-wallet"] = {
+        class = "zen",
+        title = zen("Proton Wallet"),
+    },
+}, { no_screen_share = true })
+
+rule({
+    name = "steam-friends",
+    match = {
+        class = icase("steam"),
+        title = any({ "Lista de amigos", icase("friends list") }),
     },
     float = true,
+    opacity = "1.0 0.5 override",
+    no_blur = true,
 })
 
 rule({
-    name = "media-titles",
+    name = "steam-main",
     match = {
-        title =
-        "^(Media viewer)$|^(Transmission)$|^(Volume Control)$|^(Picture-in-Picture)$|^(Winetricks)(.*)?$|^(Steam Achievement Notifier \\(V1\\.9\\): Notification)$",
+        class = icase("steam"),
+        title = icase("steam"),
     },
-    float = true,
+    opacity = "1.0 0.95 override",
+    no_blur = true,
+})
+
+rule({
+    name = "steam-empty",
+    match = {
+        class = icase("steam"),
+        title = "^$",
+    },
+    opacity = "1.0 0.8 override",
+})
+
+rule({
+    name = "nemo",
+    match = { class = icase("nemo") },
+    opacity = "1.0 0.4 override",
+    no_blur = true,
+    size = "(monitor_w*0.4) (monitor_h*0.60)",
+    center = true,
+})
+
+rule({
+    name = "nemo-screenshots",
+    match = {
+        class = icase("nemo"),
+        title = "screenshots",
+    },
+    opacity = "1.0 0.3 override",
 })
 
 rule({
     name = "file-roller",
-    match = { class = "org.gnome.FileRoller" },
+    match = { class = icase(literal("org.gnome.FileRoller")) },
     float = true,
-})
-
-rule({
-    name = "whatsapp-electron",
-    match = {
-        class = "electron",
-        title = "blob:https://web.whatsapp.com/(.*)",
-    },
-    float = true,
-})
-
-rule({
-    name = "xdg-portal",
-    match = { class = "xdg-desktop-portal-gtk" },
-    float = true,
-})
-
-rule({
-    name = "filelight",
-    match = {
-        class = "org\\.kde\\.filelight",
-        title = "Filelight",
-    },
-    float = true,
-})
-
-rule({
-    name = "flameshot-save",
-    match = {
-        class = "flameshot",
-        title = "^([Ss]ave screenshot)$",
-    },
-    float = true,
+    opacity = "1.0 0.4 override",
 })
 
 rule({
     name = "zathura-print",
     match = {
         class = "org.pwmt.zathura",
-        title = "^([Pp]rint)$",
+        title = icase("print"),
     },
     float = true,
     opacity = "1 0.6",
@@ -308,38 +234,10 @@ rule({
 
 rule({
     name = "alarm-clock",
-    match = { class = "^(alarm-clock-applet)$" },
+    match = { class = "alarm-clock-applet" },
     float = true,
     size = "900 700",
     center = true,
-})
-
-rule({
-    name = "meld",
-    match = {
-        class = "^(org.gnome.Meld)$",
-        title = "^(Meld)$",
-    },
-    float = true,
-})
-
-rule({
-    name = "steam-main",
-    match = {
-        class = "^([Ss]team)$",
-        title = "^([Ss]team)$",
-    },
-    opacity = "1.0 0.95 override",
-    no_blur = true,
-})
-
-rule({
-    name = "steam-empty",
-    match = {
-        class = "^([Ss]team)$",
-        title = "^()$",
-    },
-    opacity = "1.0 0.8 override",
 })
 
 rule({
@@ -352,133 +250,23 @@ rule({
 
 rule({
     name = "spotify",
-    match = { class = "[Ss]potify" },
+    match = { class = icase("spotify") },
     opacity = "0.97 0.8",
     no_blur = true,
     workspace = 9,
 })
 
 rule({
-    name = "nemo",
-    match = { class = "^([Nn]emo)$" },
-    opacity = "1.0 0.4 override",
+    name = "no-blur",
+    match = {
+        class = any({
+            "com.mitchellh.ghostty",
+            "kitty",
+            "org.wezfurlong.wezterm",
+            "kando",
+        }),
+    },
     no_blur = true,
-    size = "(monitor_w*0.4) (monitor_h*0.60)",
-    center = true,
-})
-
-rule({
-    name = "nemo-screenshots",
-    match = {
-        class = "^([Nn]emo)$",
-        title = "^(screenshots)$",
-    },
-    opacity = "1.0 0.3 override",
-})
-
-rule({
-    name = "fileroller",
-    match = { class = "^(org.gnome.[Ff]ile[Rr]oller)$" },
-    opacity = "1.0 0.4 override",
-})
-
-rule({
-    name = "ghostty",
-    match = { class = "^(com.mitchellh.ghostty)$" },
-    no_blur = true,
-})
-
-rule({
-    name = "kitty",
-    match = { class = "^(kitty)$" },
-    no_blur = true,
-})
-
-rule({
-    name = "wezterm",
-    match = { class = "org.wezfurlong.wezterm" },
-    no_blur = true,
-})
-
-rule({
-    name = "kando",
-    match = { class = "^(kando)$" },
-    no_blur = true,
-})
-
-rule({
-    name = "bitwarden",
-    match = { class = "^([Bb]itwarden)$" },
-    no_screen_share = true,
-})
-
-rule({
-    name = "steam-pagseguro",
-    match = {
-        class = "^([Ss]team)$",
-        title = "^([Pp]ag[Ss]eguro)$",
-    },
-    no_screen_share = true,
-})
-
-rule({
-    name = "steam-apm",
-    match = {
-        class = "^([Ss]team)$",
-        title = "^(APM Adapter)$",
-    },
-    no_screen_share = true,
-})
-
-rule({
-    name = "zen-bitwarden",
-    match = {
-        class = "^(zen)$",
-        title = "^([Ee]xtension: \\([Bb]itwarden [Pp]assword [Mm]anager\\) - [Bb]itwarden — [Zz]en [Bb]rowser)$",
-    },
-    no_screen_share = true,
-})
-
-rule({
-    name = "zen-amazon",
-    match = {
-        class = "^(zen)$",
-        title = "^(Faça seu pedido — finalização da compra na Amazon — [Zz]en [Bb]rowser)$",
-    },
-    no_screen_share = true,
-})
-
-rule({
-    name = "zen",
-    match = { class = "^(zen)$" },
-    focus_on_activate = true,
-})
-
-rule({
-    name = "zen-inter",
-    match = {
-        class = "^(zen)$",
-        title = "^(Internet Banking Inter — [Zz]en [Bb]rowser)$",
-    },
-    no_screen_share = true,
-})
-
-rule({
-    name = "ferdium",
-    match = {
-        class = "^([Ff]erdium)$",
-        title = "^([Ff]erdium)(.*)",
-    },
-    focus_on_activate = true,
-})
-
-rule({
-    name = "p3r",
-    match = {
-        title = "P3R(.*)",
-        class = "steam_app_(.*)",
-    },
-    immediate = true,
 })
 
 rule({
@@ -496,15 +284,90 @@ rule({
 
 rule({
     name = "volume-control",
-    match = { title = "^(Volume Control)$" },
+    match = { title = "Volume Control" },
     size = "800 600",
     move = "(monitor_w*0.75) (monitor_h*0.44)",
 })
 
 rule({
+    name = "gitify",
+    match = {
+        class = "gitify",
+        title = icase("gitify"),
+    },
+    move = "(monitor_w*0.705) (monitor_h*0.045)",
+    no_initial_focus = true,
+})
+
+rule({
+    name = "kando-menu",
+    match = {
+        title = icase("kando menu"),
+        float = true,
+    },
+    pin = true,
+})
+
+rule({
+    name = "parsec",
+    match = {
+        class = "parsecd",
+        title = icase("parsec"),
+        fullscreen = true,
+    },
+    immediate = true,
+})
+
+rules.each("activate", {
+    zen = { class = "zen" },
+    ferdium = {
+        class = icase("ferdium"),
+        title = icase("ferdium.*"),
+    },
+    hydralauncher = {
+        class = "hydralauncher",
+        title = icase("hydra launcher"),
+    },
+}, { focus_on_activate = true })
+
+local thunderbird = "org.mozilla.Thunderbird"
+
+rules.enable_after_open(
+    rule({
+        name = "thunderbird",
+        match = { class = literal(thunderbird) },
+        focus_on_activate = true,
+    }),
+    thunderbird,
+    15000
+)
+
+rule({
+    name = "thunderbird-new-message",
+    match = {
+        class = literal(thunderbird),
+        title = icase("(escrever|write):.*"),
+    },
+    workspace = 6,
+})
+
+rule({
+    name = "empty-xwayland",
+    match = {
+        class = "^$",
+        title = "^$",
+        xwayland = true,
+        float = true,
+        fullscreen = false,
+        pin = false,
+    },
+    no_focus = true,
+})
+
+rule({
     name = "floating",
     match = {
-        class = "(.*)",
+        class = ".*",
         float = true,
     },
     decorate = false,
@@ -519,116 +382,4 @@ rule({
     },
     move = "onscreen (monitor_w*0.95) (monitor_h*0.10)",
     no_initial_focus = true,
-})
-
-rule({
-    name = "gitify",
-    match = {
-        class = "^(gitify)$",
-        title = "^([Gg]itify)$",
-    },
-    move = "(monitor_w*0.705) (monitor_h*0.045)",
-    no_initial_focus = true,
-})
-
-rule({
-    name = "kando-menu",
-    match = {
-        title = "[Kk]ando [Mm]enu",
-        float = true,
-    },
-    pin = true,
-})
-
-rule({
-    name = "timeshift",
-    match = { class = "(Timeshift-gtk)" },
-})
-
-rule({
-    name = "flameshot-config",
-    match = {
-        class = "^(flameshot)$",
-        title = "Configuration",
-    },
-})
-
-rule({
-    name = "persona-5-royal",
-    match = {
-        class = "steam_app_(.*)",
-        title = "^(Persona 5 Royal)$",
-    },
-    workspace = 4,
-    focus_on_activate = false,
-    fullscreen = true,
-})
-
-rule({
-    name = "proton-authenticator",
-    match = {
-        class = "^(proton-authenticator)$",
-        title = "^(Proton Authenticator)$",
-    },
-    no_screen_share = true,
-})
-
-rule({
-    name = "proton-wallet-zen",
-    match = {
-        class = "zen",
-        title = "Proton Wallet — Zen Browser",
-    },
-    no_screen_share = true,
-})
-
-rule({
-    name = "proton-pass",
-    match = {
-        class = "^(Proton Pass)$",
-        title = "^(Proton Pass)$",
-    },
-    no_screen_share = true,
-})
-
-rule({
-    name = "until-then",
-    match = { class = "^(Until Then)$" },
-    fullscreen = true,
-})
-
-rule({
-    name = "binance-desktop",
-    match = {
-        class = "^(Binance)$",
-        title = "^(Binance Desktop)$",
-    },
-    no_screen_share = true,
-})
-
-rule({
-    name = "exodus",
-    match = {
-        class = "[Ee]xodus",
-        title = "^[Ee][Xx][Oo][Dd][Uu][Ss] [0-9]+\\.[0-9]+\\.[0-9]+$",
-    },
-    no_screen_share = true,
-})
-
-rule({
-    name = "hydralauncher",
-    match = {
-        class = "^(hydralauncher)$",
-        title = "^([Hh]ydra [Ll]auncher)$",
-    },
-    focus_on_activate = true,
-})
-
-rule({
-    name = "dome-keeper",
-    match = {
-        class = "^(Dome Keeper)$",
-        title = "^(Dome Keeper)$",
-    },
-    fullscreen = true,
 })

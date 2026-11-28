@@ -76,4 +76,36 @@ function M.memoize(fn)
     end
 end
 
+---@param value any
+---@return boolean
+local function is_map(value)
+    return type(value) == "table" and value[1] == nil
+end
+
+---@param base table
+---@param overrides table
+---@return table
+local function deep_merge(base, overrides)
+    local merged = {}
+    for key, value in pairs(base) do
+        merged[key] = is_map(value) and deep_merge(value, {}) or value
+    end
+    for key, value in pairs(overrides) do
+        local current = merged[key]
+        merged[key] = is_map(value) and deep_merge(is_map(current) and current or {}, value) or value
+    end
+    return merged
+end
+
+---@generic T: table
+---@param base table
+---@param type_name? `T`
+---@return fun(overrides: T): T
+---@diagnostic disable-next-line: unused-local
+function M.with_defaults(base, type_name)
+    return function(overrides)
+        return deep_merge(base, overrides)
+    end
+end
+
 return M

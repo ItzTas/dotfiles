@@ -9,11 +9,8 @@ local shift = mods.shift
 
 local bind = hl.bind
 local window = hl.dsp.window
-local exec = hl.dsp.exec_cmd
 local focus = hl.dsp.focus
 local workspace = hl.dsp.workspace
-
-bind(mm("T", super), exec("hyprctl dispatch hyprexpo:expo toggle"))
 
 -- Switch workspaces with mainMod + numbers
 for i = 1, 10 do

@@ -9,6 +9,7 @@ _set_up() {
         "https://github.com/virtcode/hypr-dynamic-cursors"
         "https://github.com/micha4w/Hypr-DarkWindow"
         "https://github.com/gfhdhytghd/hymission"
+        "https://github.com/gfhdhytghd/hypr-edgehover"
     )
 
     for plugin in "${plugins[@]}"; do
@@ -18,8 +19,8 @@ _set_up() {
     local enables=(
         "dynamic-cursors"
         "Hypr-DarkWindow"
-        "hyprexpo"
         "hymission"
+        "hypr-edgehover"
     )
 
     for enable in "${enables[@]}"; do
