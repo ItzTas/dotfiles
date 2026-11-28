@@ -16,14 +16,11 @@
 - **The same applies to any other entity being credited**: "data provided by `<entity>`", sponsors,
   partners, dataset/API sources. Ask me too.
 - **Whenever you're about to write an entity name for the first time, load
-  `~/.claude/commands/entities.md`** (the `entities` command/skill) and follow it. In short: check
-  the recorded names first, otherwise **ask me in choices** which name to use, then record the
-  decision in `.claude/entities/entities.md`. **Reading that file is the only exception** to the
-  no-inference rule.
+  `~/.claude/commands/entities.md`** (the `entities` command/skill) and follow it.
 
 ## Cross-project work
 
-- **When I ask you to work in a different repository/project than the one you're currently in, first load `~/.claude/rules/cross-project.md`** (rule file) and follow it. In short: read the target project's `CLAUDE.md` (and any relevant nested ones) before making changes there, and keep it in force for the whole time you work in that project, re-reading it as often as the harness re-injects a local `CLAUDE.md` (after compaction, when coming back to that project, before a new batch of edits).
+- **When I ask you to work in a different repository/project than the one you're currently in, first load `~/.claude/rules/cross-project.md`** (rule file) and follow it.
 
 ## Response Effort
 
@@ -49,25 +46,23 @@
 
 - **Before investigating data/systems to answer a factual question, and always before drafting
   text that states facts for someone else, load `~/.claude/rules/analysis.md`** (rule file) and
-  follow it. In short: every claim traces to a primary source read in this session, visible where
-  the reader will look; know what each domain term means and never draw a conclusion that breaks
-  its definition; check your scripts by hand; test hypotheses instead of passing them on;
-  open the links and documents already in the data instead of declaring them unavailable; finish
-  every verification I asked for before concluding; re-verify everything before a message for
-  someone else; and end every analysis with a "Como conferir" section telling me how to check
-  each claim myself. `/analysis` runs the full flow with an independent `fact-checker` agent.
+  follow it. `/analysis` runs the full flow with an independent `fact-checker` agent.
 
 ## Shell commands
 
-- **Whenever I explicitly ask you to run a shell command, first load `~/.claude/rules/command-history.md`** (rule file) and follow it. Commands that run successfully get recorded in the history (capped: 500 lines project, 1000 global); a wrong/non-existent command is never recorded, so suggest the most likely correction instead, from the history or another known command (with `auto`/`--auto`, run it directly).
+- **Whenever I explicitly ask you to run a shell command, first load `~/.claude/rules/command-history.md`** (rule file) and follow it.
 
 ## Code Style
 
-- **Whenever you're about to write or edit code, first load my code style rules from `~/.claude/rules/code-style.md`** (rule file) and apply them. They cover: guard clauses, functions over `else` branches, running independent async calls concurrently (and parallelizing dependency chains), and maps / loops-with-hashmaps over `switch`/`if-else` chains.
+- **Whenever you're about to write or edit code, first load my code style rules from `~/.claude/rules/code-style.md`** (rule file) and apply them.
+
+## Error handling
+
+- **Before writing or editing a `try`/`catch` block (or `try/except`, `begin/rescue`, `do/catch`, …), or initializing/scaffolding a new project in a try/catch language, first load `~/.claude/rules/error-handling.md`** (rule file) and follow it.
 
 ## Tests
 
-- **Whenever you're about to write, edit, or delete tests, first load `~/.claude/rules/tests.md`** (rule file) and follow it. In short: tests describe current behavior, never the absence of an old one (no "ghost tests"); when a feature changes, rewrite its tests from the current behavior; drop tests another test already covers implicitly.
+- **Whenever you're about to write, edit, or delete tests, first load `~/.claude/rules/tests.md`** (rule file) and follow it.
 
 ## Tools
 
@@ -78,32 +73,25 @@
 
 - **Whenever a package manager is in play (installing deps, lockfiles, a package-manager entry in
   `.prototools`, or editing shared docs/CI that mention one), first read
-  `~/.claude/rules/package-managers.md`** (rule file) and follow it. In short: the package manager
-  I run locally is *my* personal choice, so don't change the project's documented one and don't
-  rewrite shared docs/CI to match it unless I explicitly ask for the migration; adding my tool's
-  artifacts to ignore files is fine.
+  `~/.claude/rules/package-managers.md`** (rule file) and follow it.
 
 ## Libraries / dependencies
 
 - **Before adding any third-party library to a project or recommending one to me, first load
-  `~/.claude/rules/libraries.md`** (rule file) and follow it. In short: **never** add or suggest a
-  library without checking first that it isn't deprecated, archived, or unmaintained (registry
-  deprecation flag, repo status, last release, successor, advisories); your knowledge cutoff is not
-  a source, so verify against the registry/repo, report what you found in one line, and if it's
-  dead, name the replacement and let me decide.
+  `~/.claude/rules/libraries.md`** (rule file) and follow it.
 
 ## Figma
 
-- **Whenever you're about to work with Figma (any `mcp__figma__*` tool, a figma.com URL, design/FigJam work), first load `~/.claude/rules/figma.md`** (rule file) and follow it
+- **Whenever you're about to work with Figma (any `mcp__figma__*` tool, a figma.com URL, design/FigJam work), first load `~/.claude/rules/figma.md`** (rule file) and follow it.
 
 ## LSP under PnP
 
-- **When dealing with editor/language-server issues in a project that uses Plug'n'Play (a `.pnp.cjs`, no `node_modules`, e.g. Yarn's `nodeLinker: pnp`), first load `~/.claude/rules/lsp-pnp.md`** (rule file) and follow it. Golden rule: point the editor at the PnP-patched tooling/SDK; **never** disable PnP.
+- **When dealing with editor/language-server issues in a project that uses Plug'n'Play (a `.pnp.cjs`, no `node_modules`, e.g. Yarn's `nodeLinker: pnp`), first load `~/.claude/rules/lsp-pnp.md`** (rule file) and follow it.
 
 ## Linters
 
-- **Whenever you edit or create a file with mandatory linters, load `~/.claude/rules/linters.md`** (rule file) and run the linters it lists for that file type, fixing what they report before considering the task complete. Currently covers Dockerfiles, Go, Python, Kotlin, Bash, and Zsh.
+- **Whenever you edit or create a file with mandatory linters, load `~/.claude/rules/linters.md`** (rule file) and run the linters it lists for that file type, fixing what they report before considering the task complete.
 
 ## Git
 
-- **Before any git work (branching, committing, reverting, PRs/MRs), first load my git conventions from `~/.claude/rules/git-conventions.md`** (rule file) and follow them. Non-negotiable highlights: never work directly on shared/protected branches (create a new branch); atomic Conventional Commits (`feat:` used sparingly); and **NEVER** add `Co-Authored-By: Claude ...` or any co-authorship attribution to me, since commits must appear as solely mine.
+- **Before any git work (branching, committing, reverting, PRs/MRs), first load my git conventions from `~/.claude/rules/git-conventions.md`** (rule file) and follow them. **NEVER** add `Co-Authored-By: Claude ...` or any co-authorship attribution to me, since commits must appear as solely mine.

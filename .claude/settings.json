@@ -171,8 +171,7 @@
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
   "claudeMdExcludes": [
-    "/home/talinux/.claude/rules/*.md",
-    "/home/talinux/.claude/rules/error-handling/**"
+    "/home/talinux/.claude/rules/*.md"
   ],
   "editorMode": "vim",
   "autoMode": {

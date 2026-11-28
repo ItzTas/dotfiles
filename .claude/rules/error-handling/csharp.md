@@ -1,3 +1,8 @@
+---
+paths:
+  - "**/*.cs"
+---
+
 # C# error handling
 
 - **ErrorOr**, **CSharpFunctionalExtensions** (`Result`), **OneOf**, **FluentResults**.

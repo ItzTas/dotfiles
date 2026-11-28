@@ -1,7 +1,10 @@
 These are my mandatory linter rules, split per file type to keep context small. Whenever you edit
-or create a file of one of the types below, in any project, **read only the matching rule file**,
-run the linters it lists, and fix any issues they report before considering the task complete.
-Do not read rule files for types you are not touching.
+or create a file of one of the types below, in any project, run the linters its rule file lists and
+fix any issues they report before considering the task complete. Each rule file has `paths:`
+frontmatter, so Claude Code loads it automatically when you read or edit a matching file inside the
+working directory. If it isn't in context yet (e.g. the file lives outside the working directory),
+**read only the matching rule file** from the table. Do not read rule files for types you are not
+touching.
 
 | File type                                                                                                             | Rule file to read                          |
 | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |

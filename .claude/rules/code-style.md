@@ -5,8 +5,10 @@ conventions of the repository you're working in.
 ## Per-language rules
 
 Some languages have extra rules of their own, split into separate files to keep context small.
-Whenever you write or edit a file of one of the types below, **read only the matching rule file**
-and apply it on top of the general rules here. Don't read rule files for types you're not touching.
+Each one has `paths:` frontmatter, so Claude Code loads it automatically when you read or edit a
+matching file inside the working directory. If it isn't in context yet (e.g. the file lives outside
+the working directory), **read only the matching rule file** from the table and apply it on top of
+the general rules here. Don't read rule files for types you're not touching.
 
 | File type | Rule file to read |
 |-----------|-------------------|

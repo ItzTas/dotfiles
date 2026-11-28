@@ -1,3 +1,8 @@
+---
+paths:
+  - "**/*.rb"
+---
+
 # Ruby error handling
 
 **dry-monads** (`Result`/`Maybe`, `Do` notation). `begin/rescue` hygiene rules apply as written:

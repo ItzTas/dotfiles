@@ -11,8 +11,10 @@ Rust (`Result<T, E>`), Zig (error unions), Elixir (`{:ok, v} | {:error, r}`) and
 ## Per-language rules
 
 The concrete Result/Either options per language live in separate files to keep context small.
-**Read only the file matching the language you're writing**, and apply it on top of the general
-rules here. Don't read files for languages you're not touching.
+Each one has `paths:` frontmatter, so Claude Code loads it automatically when you read or edit a
+matching file inside the working directory. If it isn't in context yet (e.g. the file lives outside
+the working directory), **read only the file matching the language you're writing** from the table
+and apply it on top of the general rules here. Don't read files for languages you're not touching.
 
 | Language | Rule file to read |
 |----------|-------------------|

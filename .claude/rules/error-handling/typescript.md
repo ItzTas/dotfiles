@@ -1,3 +1,8 @@
+---
+paths:
+  - "**/*.{ts,tsx,mts,cts,js,jsx,mjs,cjs,svelte,vue}"
+---
+
 # TypeScript / JavaScript error handling
 
 In TS, `catch (err)` is `unknown`, so always narrow with a type guard (`err instanceof Error`)

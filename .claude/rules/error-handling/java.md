@@ -1,3 +1,8 @@
+---
+paths:
+  - "**/*.java"
+---
+
 # Java error handling
 
 - **Vavr** (`Try`, `Either`) when a library is fine.

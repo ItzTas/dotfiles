@@ -1,3 +1,8 @@
+---
+paths:
+  - "**/*.{kt,kts}"
+---
+
 # Kotlin error handling
 
 - Built-in `kotlin.Result` + `runCatching`. No dependency needed.

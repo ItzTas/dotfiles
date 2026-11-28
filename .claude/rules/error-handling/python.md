@@ -1,3 +1,8 @@
+---
+paths:
+  - "**/*.{py,pyi}"
+---
+
 # Python error handling
 
 `try/except` is idiomatic (EAFP), so suggest an alternative more softly here: offer **result**
