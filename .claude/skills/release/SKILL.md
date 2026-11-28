@@ -46,6 +46,12 @@ unless I say otherwise. Exit 1: nothing since the last tag, tell me. Relay `warn
   `Cargo.toml` (+ `Cargo.lock`), `package.json` (+ lockfile), etc.
 - Update `CHANGELOG.md` from `commits`: `git-cliff` if available, otherwise by type (Features / Fixes
   / …) under the new version heading with the date.
+- **First release only** (`last_tag` is null): if the repo's `CLAUDE.md` (or `.claude/CLAUDE.md`,
+  and a mirroring `AGENTS.md`) has a block between `<!-- prerelease:start -->` and
+  `<!-- prerelease:end -->`, follow the **Off** steps of `~/.claude/skills/prerelease/SKILL.md`
+  as part of the release commit, and list the removal and its follow-ups in the plan of step 4.
+  If there are no markers but a section says to remove it at the first release, point it out in
+  the plan and ask.
 
 ## 4. Show the plan and confirm (outward-facing)
 - Present: **new version**, the **changelog entry**, the **target** (which branch/remote), and the
