@@ -1,7 +1,7 @@
 ---
 name: prerelease
 description: Write or remove a project-specific pre-release section in the project's CLAUDE.md that allows large rewrites and removals while the project has no users, with a removal condition I choose
-argument-hint: "[on [condition] | off | when <condition> | check <action>]"
+argument-hint: "[on [condition] | off | when [condition] | check <action>]"
 disable-model-invocation: true
 allowed-tools: Read, Edit, Write, Grep, Glob, AskUserQuestion, Bash(git*), Bash(ls*), Bash(find*), Bash(sed -n*)
 ---
@@ -13,8 +13,10 @@ The section goes away when its **removal condition** is met, and I choose that c
 
 Arguments (`$ARGUMENTS`):
 - `on [condition]` writes the section. Anything after `on` is the removal condition, in my words.
+  Without one, you recommend a condition from what the repo shows and ask me.
 - `off` removes it.
-- `when <condition>` replaces the removal condition of an existing section.
+- `when [condition]` replaces the removal condition of an existing section. Without a condition,
+  you recommend one and ask.
 - `check <action>` says whether an action about to happen (e.g. "open MR dev -> main", "create
   tag v0.1.0", "create branch dev") meets the condition, and removes the section if it does.
 - No argument: toggle. Write it if missing, remove it if present, and tell me which one happened.
@@ -72,11 +74,22 @@ Read the rest of `CLAUDE.md` and look at the repo enough to answer:
   and when the last PR/MR between them was opened.
 
 ### 3. Settle the removal condition
-- If I gave one after `on`, use it, rewritten as checkable events if it's vague (show me the
-  rewrite).
-- Otherwise ask me with `AskUserQuestion`, offering options from step 2 that fit the repo, e.g.
-  `first version tag`, `first PR/MR from dev into main`, `first long-lived branch besides main`,
-  `first production deploy`, each with why it fits (e.g. "no PR from dev into main since <date>").
+- **I gave one** after `on`: use it, rewritten as checkable events if it's vague (show me the
+  rewrite). If step 2 shows it can't happen or already happened (e.g. "first PR from dev into
+  main" in a repo with no `dev`, or a tag already exists), say so and suggest a fitting one.
+- **I gave none**: recommend one. Pick the event from step 2 that marks this repo leaving its
+  no-users phase, based on what it does today, e.g.:
+  - no tags yet → `first version tag`;
+  - `dev` and `main` exist but nothing went from `dev` into `main` for a long time →
+    `first PR/MR from dev into main`;
+  - only `main` → `first version tag or first long-lived branch besides main`;
+  - deploys without tags or PRs (e.g. pushes straight to a deployed branch) →
+    `first production deploy`.
+  Ask me with `AskUserQuestion`: the recommendation first, marked "(Recommended)", with the
+  evidence behind it (e.g. "no PR from dev into main since <date>"), then one or two other fitting
+  options. I can also type my own.
+- **No signal** in the repo to base a recommendation on: ask me an open question instead of
+  guessing, with the generic options above as examples.
 
 ### 4. Write the section
 Use the file's language and its heading style. Keep it short: a heading, one paragraph, and one
@@ -134,8 +147,10 @@ Print the section you wrote and the file, and say what in step 2 each claim came
 
 ## When
 
-Replace the condition in the `prerelease:remove-when` line (settled as in **On** step 3) and
-rewrite the bold removal line to match, in the file's language. Change nothing else.
+Replace the condition in the `prerelease:remove-when` line and rewrite the bold removal line to
+match, in the file's language. Change nothing else. Settle the condition as in **On** step 3
+(learning the release and branch flow from step 2 first): with no condition after `when`,
+recommend one and ask.
 
 ## Check
 
